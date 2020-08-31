@@ -1,4 +1,4 @@
-# ionos-cloud-sdk-python
+# ionos-cloud-sdk
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
 The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -25,7 +25,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import ionos_cloud_sdk_python
+import ionos_cloud_sdk
 ```
 
 ### Setuptools
@@ -39,7 +39,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import ionos_cloud_sdk_python
+import ionos_cloud_sdk
 ```
 
 ## Getting Started
@@ -50,13 +50,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 from __future__ import print_function
 
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -66,13 +66,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -83,9 +83,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.BackupUnitApi(api_client)
+    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup Unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)

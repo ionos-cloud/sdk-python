@@ -1,4 +1,4 @@
-# ionos_cloud_sdk_python.LabelApi
+# ionos_cloud_sdk.LabelApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
@@ -46,12 +46,12 @@ This will remove a label from the data center.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -61,13 +61,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -77,9 +77,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -98,12 +98,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -113,13 +113,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -129,9 +129,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -190,12 +190,12 @@ This will retrieve the properties of a associated label to a data center.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -205,13 +205,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -221,9 +221,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -242,12 +242,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -257,13 +257,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -273,9 +273,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -334,12 +334,12 @@ You can retrieve a list of all labels associated with a data center
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -349,13 +349,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -365,9 +365,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -385,12 +385,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -400,13 +400,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -416,9 +416,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -475,12 +475,12 @@ This will add a label to the data center.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -490,13 +490,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -506,11 +506,11 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -527,12 +527,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -542,13 +542,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -558,11 +558,11 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -619,12 +619,12 @@ This will modify the value of the label on a data center.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -634,13 +634,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -650,12 +650,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -672,12 +672,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -687,13 +687,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -703,12 +703,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Data Center
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -766,12 +766,12 @@ This will remove a label from the server.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -781,13 +781,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -797,9 +797,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 key = 'key_example' # str | The key of the Label
@@ -819,12 +819,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -834,13 +834,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -850,9 +850,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 key = 'key_example' # str | The key of the Label
@@ -913,12 +913,12 @@ This will retrieve the properties of a associated label to a server.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -928,13 +928,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -944,9 +944,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 key = 'key_example' # str | The key of the Label
@@ -966,12 +966,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -981,13 +981,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -997,9 +997,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 key = 'key_example' # str | The key of the Label
@@ -1060,12 +1060,12 @@ You can retrieve a list of all labels associated with a server
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1075,13 +1075,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1091,9 +1091,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -1112,12 +1112,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1127,13 +1127,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1143,9 +1143,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -1204,12 +1204,12 @@ This will add a label to the server.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1219,13 +1219,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1235,12 +1235,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1257,12 +1257,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1272,13 +1272,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1288,12 +1288,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1351,12 +1351,12 @@ This will modify the value of the label on a server.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1366,13 +1366,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1382,13 +1382,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1405,12 +1405,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1420,13 +1420,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1436,13 +1436,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1501,12 +1501,12 @@ This will remove a label from the volume.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1516,13 +1516,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1532,9 +1532,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 key = 'key_example' # str | The key of the Label
@@ -1554,12 +1554,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1569,13 +1569,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1585,9 +1585,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 key = 'key_example' # str | The key of the Label
@@ -1648,12 +1648,12 @@ This will retrieve the properties of a associated label to a volume.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1663,13 +1663,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1679,9 +1679,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 key = 'key_example' # str | The key of the Label
@@ -1701,12 +1701,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1716,13 +1716,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1732,9 +1732,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 key = 'key_example' # str | The key of the Label
@@ -1795,12 +1795,12 @@ You can retrieve a list of all labels associated with a volume
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1810,13 +1810,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1826,9 +1826,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -1847,12 +1847,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1862,13 +1862,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1878,9 +1878,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -1939,12 +1939,12 @@ This will add a label to the volume.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1954,13 +1954,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -1970,12 +1970,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1992,12 +1992,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2007,13 +2007,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2023,12 +2023,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -2086,12 +2086,12 @@ This will modify the value of the label on a volume.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2101,13 +2101,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2117,13 +2117,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -2140,12 +2140,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2155,13 +2155,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2171,13 +2171,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -2236,12 +2236,12 @@ This will remove a label from the Ip Block.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2251,13 +2251,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2267,9 +2267,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -2288,12 +2288,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2303,13 +2303,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2319,9 +2319,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -2380,12 +2380,12 @@ This will retrieve the properties of a associated label to a Ip Block.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2395,13 +2395,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2411,9 +2411,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -2432,12 +2432,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2447,13 +2447,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2463,9 +2463,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -2524,12 +2524,12 @@ You can retrieve a list of all labels associated with a IP Block
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2539,13 +2539,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2555,9 +2555,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -2575,12 +2575,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2590,13 +2590,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2606,9 +2606,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -2665,12 +2665,12 @@ This will add a label to the Ip Block.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2680,13 +2680,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2696,11 +2696,11 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -2717,12 +2717,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2732,13 +2732,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2748,11 +2748,11 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -2809,12 +2809,12 @@ This will modify the value of the label on a Ip Block.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2824,13 +2824,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2840,12 +2840,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -2862,12 +2862,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2877,13 +2877,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2893,12 +2893,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the Ip Block
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -2956,12 +2956,12 @@ You can retrieve the details of a specific label using its URN. A URN is for uni
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -2971,13 +2971,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -2987,9 +2987,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     labelurn = 'labelurn_example' # str | The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -3007,12 +3007,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3022,13 +3022,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3038,9 +3038,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     labelurn = 'labelurn_example' # str | The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -3097,12 +3097,12 @@ You can retrieve a complete list of labels that you have access to.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3112,13 +3112,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3128,9 +3128,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -3147,12 +3147,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3162,13 +3162,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3178,9 +3178,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -3235,12 +3235,12 @@ This will remove a label from the snapshot.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3250,13 +3250,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3266,9 +3266,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -3287,12 +3287,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3302,13 +3302,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3318,9 +3318,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -3379,12 +3379,12 @@ This will retrieve the properties of a associated label to a snapshot.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3394,13 +3394,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3410,9 +3410,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -3431,12 +3431,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3446,13 +3446,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3462,9 +3462,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
 key = 'key_example' # str | The key of the Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -3523,12 +3523,12 @@ You can retrieve a list of all labels associated with a snapshot
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3538,13 +3538,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3554,9 +3554,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -3574,12 +3574,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3589,13 +3589,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3605,9 +3605,9 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -3664,12 +3664,12 @@ This will add a label to the snapshot.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3679,13 +3679,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3695,11 +3695,11 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -3716,12 +3716,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3731,13 +3731,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3747,11 +3747,11 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Label to be added
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Label to be added
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -3808,12 +3808,12 @@ This will modify the value of the label on a snapshot.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3823,13 +3823,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3839,12 +3839,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -3861,12 +3861,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.rest import ApiException
+import ionos_cloud_sdk
+from ionos_cloud_sdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -3876,13 +3876,13 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # satisfies your auth use case.
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk_python.Configuration(
+configuration = ionos_cloud_sdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5",
     api_key = {
         'Token Authentication': 'YOUR_API_KEY'
@@ -3892,12 +3892,12 @@ configuration = ionos_cloud_sdk_python.Configuration(
 # configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk_python.ApiClient(configuration) as api_client:
+with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk_python.LabelApi(api_client)
+    api_instance = ionos_cloud_sdk.LabelApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
 key = 'key_example' # str | The key of the Label
-label = ionos_cloud_sdk_python.LabelResource() # LabelResource | Modified Label
+label = ionos_cloud_sdk.LabelResource() # LabelResource | Modified Label
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)

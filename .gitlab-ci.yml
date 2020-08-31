@@ -8,7 +8,7 @@ stages:
   script:
    - pip install -r requirements.txt
    - pip install -r test-requirements.txt
-   - pytest --cov=ionos_cloud_sdk_python
+   - pytest --cov=ionos_cloud_sdk
 
 nosetest-2.7:
   extends: .nosetest
