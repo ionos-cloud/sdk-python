@@ -102,12 +102,13 @@ class ApiKeyError(OpenApiException, KeyError):
 
 class ApiException(OpenApiException):
 
-    def __init__(self, status=None, reason=None, http_resp=None):
+    def __init__(self, status=None, reason=None, http_resp=None, url=None):
         if http_resp:
             self.status = http_resp.status
             self.reason = http_resp.reason
             self.body = http_resp.data
             self.headers = http_resp.getheaders()
+            self.url = url
         else:
             self.status = status
             self.reason = reason
@@ -127,6 +128,25 @@ class ApiException(OpenApiException):
 
         return error_message
 
+class ApiTimeout(OpenApiException):
+    def __init__(self, message, request_id=None):
+        """
+        Args:
+            msg (str): the exception message
+            request_id (str): the request id if any
+        """
+        self.message = message
+        self.request_id = request_id
+
+class ApiFailedRequest(OpenApiException):
+    def __init__(self, message, request_id=None):
+        """
+        Args:
+            msg (str): the exception message
+            request_id (str): the request id if any
+        """
+        self.message = message
+        self.request_id = request_id
 
 def render_path(path_to_item):
     """Returns a string representation of a path"""

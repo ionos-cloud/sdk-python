@@ -224,8 +224,8 @@ conf = ionos_cloud_sdk.Configuration(
         self.retries = None
         """Adding retries to override urllib3 default value 3
         """
-        # Disable client side validation
-        self.client_side_validation = True
+        # Enable client side validation
+        self.client_side_validation = False
 
     def __deepcopy__(self, memo):
         cls = self.__class__

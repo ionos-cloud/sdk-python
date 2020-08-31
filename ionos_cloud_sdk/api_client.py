@@ -19,6 +19,9 @@ from multiprocessing.pool import ThreadPool
 import os
 import re
 import tempfile
+import logging
+import time
+import sys
 
 # python 2 and python 3 compatibility library
 import six
@@ -27,7 +30,36 @@ from six.moves.urllib.parse import quote
 from ionos_cloud_sdk.configuration import Configuration
 import ionos_cloud_sdk.models
 from ionos_cloud_sdk import rest
-from ionos_cloud_sdk.exceptions import ApiValueError, ApiException
+from ionos_cloud_sdk.exceptions import ApiValueError, ApiException, ApiFailedRequest, ApiTimeout
+
+# Copyright 2015-2017 IONOS
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+class ICRequestError(Exception):
+    """Base error for request failures"""
+    def __init__(self, msg, request_id):  # pylint: disable=super-init-not-called
+        self.msg = msg
+        self.request_id = request_id
+
+
+class ICFailedRequest(ICRequestError):
+    """Raised when a provisioning request failed."""
+
+
+class ICTimeoutError(ICRequestError):
+    """Raised when a request does not finish in the given time span."""
 
 
 class ApiClient(object):
@@ -188,6 +220,7 @@ class ApiClient(object):
                 _request_timeout=_request_timeout)
         except ApiException as e:
             e.body = e.body.decode('utf-8') if six.PY3 else e.body
+            e.url = url
             raise e
 
         content_type = response_data.getheader('content-type')
@@ -689,3 +722,112 @@ class ApiClient(object):
             if klass_name:
                 instance = self.__deserialize(data, klass_name)
         return instance
+
+    @staticmethod
+    def wait_for_completion(get_request_method, response, timeout=3600, initial_wait=5, scaleup=10):
+        """
+        Poll resource request status until resource is provisioned.
+
+        :param      response: A response dict, which needs to have a 'requestId' item.
+        :type       response: ``dict``
+
+        :param      timeout: Maximum waiting time in seconds. None means infinite waiting time.
+        :type       timeout: ``int``
+
+        :param      initial_wait: Initial polling interval in seconds.
+        :type       initial_wait: ``int``
+
+        :param      scaleup: Double polling interval every scaleup steps, which will be doubled.
+        :type       scaleup: ``int``
+
+        """
+        if not response:
+            return
+        logger = logging.getLogger(__name__)
+        wait_period = initial_wait
+        next_increase = time.time() + wait_period * scaleup
+        if timeout:
+            timeout = time.time() + timeout
+        while True:
+            request = get_request_method(request_id=response['requestId'], status=True)
+
+            if request['metadata']['status'] == 'DONE':
+                break
+            elif request['metadata']['status'] == 'FAILED':
+                raise ApiFailedRequest(
+                    message='Request {0} failed to complete: {1}'.format(response['requestId'], request['metadata']['message']),
+                    request_id=response['requestId']
+                )
+
+            current_time = time.time()
+            if timeout and current_time > timeout:
+                raise ApiTimeout(
+                    message='Timed out waiting for request {0}.'.format(response['requestId']),
+                    request_id=response['requestId']
+                )
+
+            if current_time > next_increase:
+                wait_period *= 2
+                next_increase = time.time() + wait_period * scaleup
+                scaleup *= 2
+
+            logger.info("Request %s is in state '%s'. Sleeping for %i seconds...",
+                        response['requestId'], request['metadata']['status'], wait_period)
+            time.sleep(wait_period)
+
+    @staticmethod
+    def wait_for(fn_check, fn_request, timeout=3600, initial_wait=5, scaleup=10, console_print=None):
+        """
+        Poll resource request status until resource is provisioned.
+
+        :param      fn_check: Function used to check the response
+        :type       fn_check: ``function``
+
+        :param      fn_request: Function used to perform the request
+        :type       fn_request: ``function``
+
+        :param      timeout: Maximum waiting time in seconds. None means infinite waiting time.
+        :type       timeout: ``int``
+
+        :param      initial_wait: Initial polling interval in seconds.
+        :type       initial_wait: ``int``
+
+        :param      scaleup: Double polling interval every scaleup steps, which will be doubled.
+        :type       scaleup: ``int``
+
+        """
+        logger = logging.getLogger(__name__)
+        wait_period = initial_wait
+        next_increase = time.time() + wait_period * scaleup
+        if timeout:
+            timeout = time.time() + timeout
+        while True:
+            if console_print is not None:
+                sys.stdout.write(console_print)
+                sys.stdout.flush()
+
+            resp = fn_request()
+            check_response = fn_check(resp)
+
+            if check_response:
+                break
+
+            current_time = time.time()
+            if timeout and current_time > timeout:
+                raise ApiTimeout(
+                    message='Timed out waiting for request {0}.'.format(resp['requestId']),
+                    request_id=resp['requestId']
+                )
+
+            if current_time > next_increase:
+                wait_period *= 2
+                next_increase = time.time() + wait_period * scaleup
+                scaleup *= 2
+
+            logger.info("Sleeping for %i seconds...", wait_period)
+            time.sleep(wait_period)
+
+        if console_print is not None:
+            print('')
+
+        return resp
