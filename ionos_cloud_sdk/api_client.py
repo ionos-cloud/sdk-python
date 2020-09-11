@@ -724,12 +724,12 @@ class ApiClient(object):
                 instance = self.__deserialize(data, klass_name)
         return instance
 
-    def wait_for_completion(self,request_id, timeout=3600, initial_wait=5, scaleup=10):
+    def wait_for_completion(self, request_id, timeout=3600, initial_wait=5, scaleup=10):
         """
         Poll resource request status until resource is provisioned.
 
-        :param      request_id: A response dict, which needs to have a 'request_id' item.
-        :type       request_id: ``dict``
+        :param      request_id: Request id of the action.
+        :type       request_id: ``str``
 
         :param      timeout: Maximum waiting time in seconds. None means infinite waiting time.
         :type       timeout: ``int``
