@@ -23,6 +23,7 @@ import logging
 import time
 import sys
 
+
 # python 2 and python 3 compatibility library
 import six
 from six.moves.urllib.parse import quote
@@ -31,7 +32,7 @@ from ionos_cloud_sdk.configuration import Configuration
 import ionos_cloud_sdk.models
 from ionos_cloud_sdk import rest
 from ionos_cloud_sdk.exceptions import ApiValueError, ApiException, ApiFailedRequest, ApiTimeout
-
+import ionos_cloud_sdk
 # Copyright 2015-2017 IONOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -723,13 +724,12 @@ class ApiClient(object):
                 instance = self.__deserialize(data, klass_name)
         return instance
 
-    @staticmethod
-    def wait_for_completion(get_request_method, response, timeout=3600, initial_wait=5, scaleup=10):
+    def wait_for_completion(self,request_id, timeout=3600, initial_wait=5, scaleup=10):
         """
         Poll resource request status until resource is provisioned.
 
-        :param      response: A response dict, which needs to have a 'requestId' item.
-        :type       response: ``dict``
+        :param      request_id: A response dict, which needs to have a 'request_id' item.
+        :type       request_id: ``dict``
 
         :param      timeout: Maximum waiting time in seconds. None means infinite waiting time.
         :type       timeout: ``int``
@@ -741,7 +741,7 @@ class ApiClient(object):
         :type       scaleup: ``int``
 
         """
-        if not response:
+        if not request_id:
             return
         logger = logging.getLogger(__name__)
         wait_period = initial_wait
@@ -749,21 +749,21 @@ class ApiClient(object):
         if timeout:
             timeout = time.time() + timeout
         while True:
-            request = get_request_method(request_id=response['requestId'], status=True)
+            request = ionos_cloud_sdk.RequestApi(self).requests_status_get(request_id, response_type='object')
 
             if request['metadata']['status'] == 'DONE':
                 break
             elif request['metadata']['status'] == 'FAILED':
                 raise ApiFailedRequest(
-                    message='Request {0} failed to complete: {1}'.format(response['requestId'], request['metadata']['message']),
-                    request_id=response['requestId']
+                    message='Request {0} failed to complete: {1}'.format(request_id, request['metadata']['message']),
+                    request_id=request_id
                 )
 
             current_time = time.time()
             if timeout and current_time > timeout:
                 raise ApiTimeout(
-                    message='Timed out waiting for request {0}.'.format(response['requestId']),
-                    request_id=response['requestId']
+                    message='Timed out waiting for request {0}.'.format(request_id),
+                    request_id=request_id
                 )
 
             if current_time > next_increase:
@@ -772,7 +772,7 @@ class ApiClient(object):
                 scaleup *= 2
 
             logger.info("Request %s is in state '%s'. Sleeping for %i seconds...",
-                        response['requestId'], request['metadata']['status'], wait_period)
+                        request_id, request['metadata']['status'], wait_period)
             time.sleep(wait_period)
 
     @staticmethod
