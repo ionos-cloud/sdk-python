@@ -11,9 +11,11 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
+import os
+import codecs
 
-NAME = "ionos-cloud-sdk"
-VERSION = "1.0.0"
+NAME = "ionoscloud"
+VERSION = "0.0.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -23,18 +25,38 @@ VERSION = "1.0.0"
 
 REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
 
+here = os.path.abspath(os.path.dirname(__file__))
+
+def read(*parts):
+    return codecs.open(os.path.join(here, *parts), 'r', 'utf-8').read()
+
+if os.path.isfile("README.md"):
+    long_desc = read('README.md')
+else:
+    long_desc = "Ionos Enterprise API Client Library for Python"
+
 setup(
     name=NAME,
     version=VERSION,
-    description="CLOUD API",
-    author="OpenAPI Generator community",
-    author_email="team@openapitools.org",
-    url="",
+    description="CLOUD API - EXPERIMENTAL version used for testing",
+    author='Ionos Enterprise',
+    author_email='sdk@cloud.ionos.com',
+    long_description=long_desc,
+    long_description_content_type='text/markdown',
+    url="https://github.com/ionos-cloud/ionos-cloud-sdk-python",
     keywords=["OpenAPI", "OpenAPI-Generator", "CLOUD API"],
     install_requires=REQUIRES,
-    packages=find_packages(exclude=["test", "tests"]),
+    packages=['ionos_cloud_sdk'],
     include_package_data=True,
-    long_description="""\
-    An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \&quot;Data Center Designer\&quot; (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.  # noqa: E501
-    """
+    classifiers=[
+         'Natural Language :: English',
+         'Environment :: Web Environment',
+         'Intended Audience :: Developers',
+         'License :: OSI Approved :: Apache Software License',
+         'Operating System :: POSIX',
+         'Programming Language :: Python',
+         'Programming Language :: Python :: 3',
+         'Topic :: Software Development :: Libraries :: Python Modules',
+         'Topic :: Software Development :: Libraries :: Application Frameworks',
+         'Topic :: Internet :: WWW/HTTP']
 )
