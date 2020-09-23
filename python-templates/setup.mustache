@@ -2,7 +2,9 @@
 
 {{>partial_header}}
 
-from setuptools import setup, find_packages  # noqa: H301
+from setuptools import setup  # noqa: H301
+import os
+import codecs
 
 NAME = "{{{projectName}}}"
 VERSION = "{{packageVersion}}"
@@ -24,21 +26,40 @@ REQUIRES.append("aiohttp >= 3.0.0")
 REQUIRES.append("tornado>=4.2,<5")
 {{/tornado}}
 
+here = os.path.abspath(os.path.dirname(__file__))
+
+def read(*parts):
+    return codecs.open(os.path.join(here, *parts), 'r', 'utf-8').read()
+
+if os.path.isfile("README.md"):
+    long_desc = read('README.md')
+else:
+    long_desc = "Ionos Enterprise API Client Library for Python"
+
 setup(
     name=NAME,
     version=VERSION,
-    description="{{appName}}",
-    author="{{#infoName}}{{infoName}}{{/infoName}}{{^infoName}}OpenAPI Generator community{{/infoName}}",
-    author_email="{{#infoEmail}}{{infoEmail}}{{/infoEmail}}{{^infoEmail}}team@openapitools.org{{/infoEmail}}",
-    url="{{packageUrl}}",
+    description="CLOUD API - EXPERIMENTAL version used for testing",
+    author='Ionos Enterprise',
+    author_email='sdk@cloud.ionos.com',
+    long_description=long_desc,
+    long_description_content_type='text/markdown',
+    url="https://github.com/ionos-cloud/ionos-cloud-sdk-python",
     keywords=["OpenAPI", "OpenAPI-Generator", "{{{appName}}}"],
     install_requires=REQUIRES,
-    packages=find_packages(exclude=["test", "tests"]),
+    packages=['ionos_cloud_sdk'],
     include_package_data=True,
-    {{#licenseInfo}}license="{{licenseInfo}}",
-    {{/licenseInfo}}long_description="""\
-    {{appDescription}}  # noqa: E501
-    """
+    classifiers=[
+         'Natural Language :: English',
+         'Environment :: Web Environment',
+         'Intended Audience :: Developers',
+         'License :: OSI Approved :: Apache Software License',
+         'Operating System :: POSIX',
+         'Programming Language :: Python',
+         'Programming Language :: Python :: 3',
+         'Topic :: Software Development :: Libraries :: Python Modules',
+         'Topic :: Software Development :: Libraries :: Application Frameworks',
+         'Topic :: Internet :: WWW/HTTP']
 )
 {{/hasMore}}
 {{/apis}}

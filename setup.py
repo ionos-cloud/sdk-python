@@ -10,12 +10,12 @@
 """
 
 
-from setuptools import setup, find_packages  # noqa: H301
+from setuptools import setup  # noqa: H301
 import os
 import codecs
 
-NAME = "ionoscloud"
-VERSION = "0.0.0"
+NAME = "ionos-cloud-sdk"
+VERSION = "1.0.0"
 # To install the library, run the following
 #
 # python setup.py install
