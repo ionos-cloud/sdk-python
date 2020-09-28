@@ -13974,3 +13974,1689 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
+
+---
+
+## Documentation For Models
+
+ - [AttachedVolumes](docs/AttachedVolumes.md)
+ - [BackupUnit](docs/BackupUnit.md)
+ - [BackupUnitProperties](docs/BackupUnitProperties.md)
+ - [BackupUnitSSO](docs/BackupUnitSSO.md)
+ - [BackupUnits](docs/BackupUnits.md)
+ - [BalancedNics](docs/BalancedNics.md)
+ - [Cdroms](docs/Cdroms.md)
+ - [ConnectableDatacenter](docs/ConnectableDatacenter.md)
+ - [Contract](docs/Contract.md)
+ - [ContractProperties](docs/ContractProperties.md)
+ - [Datacenter](docs/Datacenter.md)
+ - [DatacenterElementMetadata](docs/DatacenterElementMetadata.md)
+ - [DatacenterEntities](docs/DatacenterEntities.md)
+ - [DatacenterProperties](docs/DatacenterProperties.md)
+ - [Datacenters](docs/Datacenters.md)
+ - [Error](docs/Error.md)
+ - [ErrorMessage](docs/ErrorMessage.md)
+ - [FirewallRule](docs/FirewallRule.md)
+ - [FirewallRules](docs/FirewallRules.md)
+ - [FirewallruleProperties](docs/FirewallruleProperties.md)
+ - [Group](docs/Group.md)
+ - [GroupEntities](docs/GroupEntities.md)
+ - [GroupMembers](docs/GroupMembers.md)
+ - [GroupProperties](docs/GroupProperties.md)
+ - [GroupShare](docs/GroupShare.md)
+ - [GroupShareProperties](docs/GroupShareProperties.md)
+ - [GroupShares](docs/GroupShares.md)
+ - [GroupUsers](docs/GroupUsers.md)
+ - [Groups](docs/Groups.md)
+ - [IPFailover](docs/IPFailover.md)
+ - [Image](docs/Image.md)
+ - [ImageProperties](docs/ImageProperties.md)
+ - [Images](docs/Images.md)
+ - [Info](docs/Info.md)
+ - [IpBlock](docs/IpBlock.md)
+ - [IpBlockProperties](docs/IpBlockProperties.md)
+ - [IpBlocks](docs/IpBlocks.md)
+ - [IpConsumer](docs/IpConsumer.md)
+ - [KubernetesAutoScaling](docs/KubernetesAutoScaling.md)
+ - [KubernetesCluster](docs/KubernetesCluster.md)
+ - [KubernetesClusterEntities](docs/KubernetesClusterEntities.md)
+ - [KubernetesClusterProperties](docs/KubernetesClusterProperties.md)
+ - [KubernetesClusters](docs/KubernetesClusters.md)
+ - [KubernetesConfig](docs/KubernetesConfig.md)
+ - [KubernetesConfigProperties](docs/KubernetesConfigProperties.md)
+ - [KubernetesMaintenanceWindow](docs/KubernetesMaintenanceWindow.md)
+ - [KubernetesNode](docs/KubernetesNode.md)
+ - [KubernetesNodeMetadata](docs/KubernetesNodeMetadata.md)
+ - [KubernetesNodePool](docs/KubernetesNodePool.md)
+ - [KubernetesNodePoolAnnotation](docs/KubernetesNodePoolAnnotation.md)
+ - [KubernetesNodePoolForPut](docs/KubernetesNodePoolForPut.md)
+ - [KubernetesNodePoolLabel](docs/KubernetesNodePoolLabel.md)
+ - [KubernetesNodePoolLan](docs/KubernetesNodePoolLan.md)
+ - [KubernetesNodePoolProperties](docs/KubernetesNodePoolProperties.md)
+ - [KubernetesNodePoolPropertiesForPut](docs/KubernetesNodePoolPropertiesForPut.md)
+ - [KubernetesNodePools](docs/KubernetesNodePools.md)
+ - [KubernetesNodeProperties](docs/KubernetesNodeProperties.md)
+ - [KubernetesNodes](docs/KubernetesNodes.md)
+ - [Label](docs/Label.md)
+ - [LabelProperties](docs/LabelProperties.md)
+ - [LabelResource](docs/LabelResource.md)
+ - [LabelResourceProperties](docs/LabelResourceProperties.md)
+ - [LabelResources](docs/LabelResources.md)
+ - [Labels](docs/Labels.md)
+ - [Lan](docs/Lan.md)
+ - [LanEntities](docs/LanEntities.md)
+ - [LanNics](docs/LanNics.md)
+ - [LanPost](docs/LanPost.md)
+ - [LanProperties](docs/LanProperties.md)
+ - [LanPropertiesPost](docs/LanPropertiesPost.md)
+ - [Lans](docs/Lans.md)
+ - [Loadbalancer](docs/Loadbalancer.md)
+ - [LoadbalancerEntities](docs/LoadbalancerEntities.md)
+ - [LoadbalancerProperties](docs/LoadbalancerProperties.md)
+ - [Loadbalancers](docs/Loadbalancers.md)
+ - [Location](docs/Location.md)
+ - [LocationProperties](docs/LocationProperties.md)
+ - [Locations](docs/Locations.md)
+ - [Nic](docs/Nic.md)
+ - [NicEntities](docs/NicEntities.md)
+ - [NicProperties](docs/NicProperties.md)
+ - [Nics](docs/Nics.md)
+ - [NoStateMetaData](docs/NoStateMetaData.md)
+ - [Peer](docs/Peer.md)
+ - [PrivateCrossConnect](docs/PrivateCrossConnect.md)
+ - [PrivateCrossConnectProperties](docs/PrivateCrossConnectProperties.md)
+ - [PrivateCrossConnects](docs/PrivateCrossConnects.md)
+ - [Request](docs/Request.md)
+ - [RequestMetadata](docs/RequestMetadata.md)
+ - [RequestProperties](docs/RequestProperties.md)
+ - [RequestStatus](docs/RequestStatus.md)
+ - [RequestStatusMetadata](docs/RequestStatusMetadata.md)
+ - [RequestTarget](docs/RequestTarget.md)
+ - [Requests](docs/Requests.md)
+ - [Resource](docs/Resource.md)
+ - [ResourceEntities](docs/ResourceEntities.md)
+ - [ResourceGroups](docs/ResourceGroups.md)
+ - [ResourceLimits](docs/ResourceLimits.md)
+ - [ResourceProperties](docs/ResourceProperties.md)
+ - [ResourceReference](docs/ResourceReference.md)
+ - [Resources](docs/Resources.md)
+ - [ResourcesUsers](docs/ResourcesUsers.md)
+ - [S3Key](docs/S3Key.md)
+ - [S3KeyMetadata](docs/S3KeyMetadata.md)
+ - [S3KeyProperties](docs/S3KeyProperties.md)
+ - [S3Keys](docs/S3Keys.md)
+ - [S3ObjectStorageSSO](docs/S3ObjectStorageSSO.md)
+ - [Server](docs/Server.md)
+ - [ServerEntities](docs/ServerEntities.md)
+ - [ServerProperties](docs/ServerProperties.md)
+ - [Servers](docs/Servers.md)
+ - [Snapshot](docs/Snapshot.md)
+ - [SnapshotProperties](docs/SnapshotProperties.md)
+ - [Snapshots](docs/Snapshots.md)
+ - [Type](docs/Type.md)
+ - [User](docs/User.md)
+ - [UserMetadata](docs/UserMetadata.md)
+ - [UserProperties](docs/UserProperties.md)
+ - [Users](docs/Users.md)
+ - [UsersEntities](docs/UsersEntities.md)
+ - [Volume](docs/Volume.md)
+ - [VolumeProperties](docs/VolumeProperties.md)
+ - [Volumes](docs/Volumes.md)
+
+
+---
+
+# AttachedVolumes
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Volume]**](Volume.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# BackupUnit
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | **str** | The type of object that has been created | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**BackupUnitProperties**](BackupUnitProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# BackupUnitProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource (only alphanumeric characters are acceptable) | 
+**password** | **str** | the password associated to that resource | [optional] 
+**email** | **str** | The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user. | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# BackupUnitSSO
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**sso_url** | **str** | The backup unit single sign on url | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# BackupUnits
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | **str** | The type of object that has been created | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[BackupUnit]**](BackupUnit.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# BalancedNics
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Nic]**](Nic.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Cdroms
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Image]**](Image.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ConnectableDatacenter
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
+**location** | **str** |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Contract
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**properties** | [**ContractProperties**](ContractProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ContractProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**contract_number** | **int** | contract number | [optional] [readonly] 
+**owner** | **str** | owner of the contract | [optional] [readonly] 
+**status** | **str** | status of the contract | [optional] [readonly] 
+**reg_domain** | **str** | Registration domain of the contract | [optional] [readonly] 
+**resource_limits** | [**ResourceLimits**](ResourceLimits.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Datacenter
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**DatacenterProperties**](DatacenterProperties.md) |  | 
+**entities** | [**DatacenterEntities**](DatacenterEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# DatacenterElementMetadata
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **str** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] 
+**created_date** | **datetime** | The last time the resource was created | [optional] [readonly] 
+**created_by** | **str** | The user who created the resource. | [optional] [readonly] 
+**created_by_user_id** | **str** | The user id of the user who has created the resource. | [optional] [readonly] 
+**last_modified_date** | **datetime** | The last time the resource has been modified | [optional] [readonly] 
+**last_modified_by** | **str** | The user who last modified the resource. | [optional] [readonly] 
+**last_modified_by_user_id** | **str** | The user id of the user who has last modified the resource. | [optional] [readonly] 
+**state** | **str** | State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# DatacenterEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**servers** | [**Servers**](Servers.md) |  | [optional] 
+**volumes** | [**Volumes**](Volumes.md) |  | [optional] 
+**loadbalancers** | [**Loadbalancers**](Loadbalancers.md) |  | [optional] 
+**lans** | [**Lans**](Lans.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# DatacenterProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**description** | **str** | A description for the datacenter, e.g. staging, production | [optional] 
+**location** | **str** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests) | 
+**version** | **int** | The version of that Data Center. Gets incremented with every change | [optional] 
+**features** | **list[str]** | List of features supported by the location this data center is part of | [optional] [readonly] 
+**sec_auth_protection** | **bool** | Boolean value representing if the data center requires extra protection e.g. two factor protection | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Datacenters
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Datacenter]**](Datacenter.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Error
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**http_status** | **int** | HTTP status code of the operation | [optional] [readonly] 
+**messages** | [**list[ErrorMessage]**](ErrorMessage.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ErrorMessage
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**error_code** | **str** | Application internal error code | [optional] [readonly] 
+**message** | **str** | Human readable message | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# FirewallRule
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**FirewallruleProperties**](FirewallruleProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# FirewallRules
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[FirewallRule]**](FirewallRule.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# FirewallruleProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**protocol** | **str** | The protocol for the rule. Property cannot be modified after creation (disallowed in update requests) | 
+**source_mac** | **str** | Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source MAC address | [optional] 
+**source_ip** | **str** | Only traffic originating from the respective IPv4 address is allowed. Value null allows all source IPs | [optional] 
+**target_ip** | **str** | In case the target NIC has multiple IP addresses, only traffic directed to the respective IP address of the NIC is allowed. Value null allows all target IPs | [optional] 
+**icmp_code** | **int** | Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes | [optional] 
+**icmp_type** | **int** | Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types | [optional] 
+**port_range_start** | **int** | Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports | [optional] 
+**port_range_end** | **int** | Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Group
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**properties** | [**GroupProperties**](GroupProperties.md) |  | 
+**entities** | [**GroupEntities**](GroupEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# GroupEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**users** | [**GroupMembers**](GroupMembers.md) |  | [optional] 
+**resources** | [**ResourceGroups**](ResourceGroups.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# GroupMembers
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[User]**](User.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# GroupProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**create_data_center** | **bool** | create data center privilege | [optional] 
+**create_snapshot** | **bool** | create snapshot privilege | [optional] 
+**reserve_ip** | **bool** | reserve ip block privilege | [optional] 
+**access_activity_log** | **bool** | activity log access privilege | [optional] 
+**create_pcc** | **bool** | create pcc privilege | [optional] 
+**s3_privilege** | **bool** | S3 privilege | [optional] 
+**create_backup_unit** | **bool** | create backup unit privilege | [optional] 
+**create_internet_access** | **bool** | create internet access privilege | [optional] 
+**create_k8s_cluster** | **bool** | create kubernetes cluster privilege | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# GroupShare
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | resource as generic type | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**properties** | [**GroupShareProperties**](GroupShareProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# GroupShareProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**edit_privilege** | **bool** | edit privilege on a resource | [optional] 
+**share_privilege** | **bool** | share privilege on a resource | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# GroupShares
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | Share representing groups and resource relationship | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[GroupShare]**](GroupShare.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# GroupUsers
+
+collection of groups a user is member of
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Group]**](Group.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Groups
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Group]**](Group.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# IPFailover
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ip** | **str** |  | [optional] 
+**nic_uuid** | **str** |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Image
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**ImageProperties**](ImageProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ImageProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**description** | **str** | Human readable description | [optional] 
+**location** | **str** | Location of that image/snapshot.  | [optional] [readonly] 
+**size** | **float** | The size of the image in GB | [optional] [readonly] 
+**cpu_hot_plug** | **bool** | Is capable of CPU hot plug (no reboot required) | [optional] 
+**cpu_hot_unplug** | **bool** | Is capable of CPU hot unplug (no reboot required) | [optional] 
+**ram_hot_plug** | **bool** | Is capable of memory hot plug (no reboot required) | [optional] 
+**ram_hot_unplug** | **bool** | Is capable of memory hot unplug (no reboot required) | [optional] 
+**nic_hot_plug** | **bool** | Is capable of nic hot plug (no reboot required) | [optional] 
+**nic_hot_unplug** | **bool** | Is capable of nic hot unplug (no reboot required) | [optional] 
+**disc_virtio_hot_plug** | **bool** | Is capable of Virt-IO drive hot plug (no reboot required) | [optional] 
+**disc_virtio_hot_unplug** | **bool** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
+**disc_scsi_hot_plug** | **bool** | Is capable of SCSI drive hot plug (no reboot required) | [optional] 
+**disc_scsi_hot_unplug** | **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
+**licence_type** | **str** | OS type of this Image | 
+**image_type** | **str** | This indicates the type of image | [optional] [readonly] 
+**public** | **bool** | Indicates if the image is part of the public repository or not | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Images
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Image]**](Image.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Info
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**href** | **str** | API entry point | [optional] [readonly] 
+**name** | **str** | Name of the API | [optional] [readonly] 
+**version** | **str** | Version of the API | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# IpBlock
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**IpBlockProperties**](IpBlockProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# IpBlockProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ips** | **list[str]** | A collection of IPs associated with the IP Block | [optional] [readonly] 
+**location** | **str** | Location of that IP Block. Property cannot be modified after creation (disallowed in update requests) | 
+**size** | **int** | The size of the IP block | 
+**name** | **str** | A name of that resource | [optional] 
+**ip_consumers** | [**list[IpConsumer]**](IpConsumer.md) | Read-Only attribute. Lists consumption detail of an individual ip | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# IpBlocks
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[IpBlock]**](IpBlock.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# IpConsumer
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ip** | **str** |  | [optional] 
+**mac** | **str** |  | [optional] 
+**nic_id** | **str** |  | [optional] 
+**server_id** | **str** |  | [optional] 
+**server_name** | **str** |  | [optional] 
+**datacenter_id** | **str** |  | [optional] 
+**datacenter_name** | **str** |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesAutoScaling
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**min_node_count** | **int** | The minimum number of worker nodes that the managed node group can scale in. Should be set together with &#39;maxNodeCount&#39;. Value for this attribute must be greater than equal to 1 and less than equal to maxNodeCount. | [optional] 
+**max_node_count** | **int** | The maximum number of worker nodes that the managed node pool can scale-out. Should be set together with &#39;minNodeCount&#39;. Value for this attribute must be greater than equal to 1 and minNodeCount. | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesCluster
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly] 
+**type** | **str** | The type of object | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**KubernetesClusterProperties**](KubernetesClusterProperties.md) |  | 
+**entities** | [**KubernetesClusterEntities**](KubernetesClusterEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesClusterEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**nodepools** | [**KubernetesNodePools**](KubernetesNodePools.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesClusterProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A Kubernetes Cluster Name. Valid Kubernetes Cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+**k8s_version** | **str** | The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
+**maintenance_window** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesClusters
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | Unique representation for Kubernetes Cluster as a collection on a resource. | [optional] [readonly] 
+**type** | **str** | The type of resource within a collection | [optional] [readonly] 
+**href** | **str** | URL to the collection representation (absolute path) | [optional] [readonly] 
+**items** | [**list[KubernetesCluster]**](KubernetesCluster.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesConfig
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly] 
+**type** | **str** | The type of object | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**properties** | [**KubernetesConfigProperties**](KubernetesConfigProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesConfigProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**kubeconfig** | **str** | A Kubernetes Config file data | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesMaintenanceWindow
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**day_of_the_week** | **str** | The day of the week for a maintenance window. | [optional] 
+**time** | **str** | The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\&quot;Z\&quot;; HH:mm:ssZ. This time may varies by 15 minutes. | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNode
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly] 
+**type** | **str** | The type of object | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**KubernetesNodeMetadata**](KubernetesNodeMetadata.md) |  | [optional] 
+**properties** | [**KubernetesNodeProperties**](KubernetesNodeProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodeMetadata
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **str** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] 
+**created_date** | **datetime** | The last time the resource was created | [optional] [readonly] 
+**last_modified_date** | **datetime** | The last time the resource has been modified | [optional] [readonly] 
+**state** | **str** | State of the resource. | [optional] [readonly] 
+**last_software_updated_date** | **datetime** | The last time the software updated on node. | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePool
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly] 
+**type** | **str** | The type of object | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**KubernetesNodePoolProperties**](KubernetesNodePoolProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePoolAnnotation
+
+map of annotations attached to node pool
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **str** | Key of the annotation. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. | [optional] 
+**value** | **str** | Value of the annotation. | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePoolForPut
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly] 
+**type** | **str** | The type of object | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**KubernetesNodePoolPropertiesForPut**](KubernetesNodePoolPropertiesForPut.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePoolLabel
+
+map of labels attached to node pool
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **str** | Key of the label. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. | [optional] 
+**value** | **str** | Value of the label. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePoolLan
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **int** | The LAN ID of an existing LAN at the related datacenter | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePoolProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+**datacenter_id** | **str** | A valid uuid of the datacenter on which user has access | 
+**node_count** | **int** | Number of nodes part of the Node Pool | 
+**cpu_family** | **str** | A valid cpu family name | 
+**cores_count** | **int** | Number of cores for node | 
+**ram_size** | **int** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
+**availability_zone** | **str** | The availability zone in which the server should exist | 
+**storage_type** | **str** | Hardware type of the volume | 
+**storage_size** | **int** | The size of the volume in GB. The size should be greater than 10GB. | 
+**k8s_version** | **str** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
+**maintenance_window** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] 
+**auto_scaling** | [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional] 
+**lans** | [**list[KubernetesNodePoolLan]**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes | [optional] 
+**labels** | [**KubernetesNodePoolLabel**](KubernetesNodePoolLabel.md) |  | [optional] 
+**annotations** | [**KubernetesNodePoolAnnotation**](KubernetesNodePoolAnnotation.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePoolPropertiesForPut
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+**datacenter_id** | **str** | A valid uuid of the datacenter on which user has access | 
+**node_count** | **int** | Number of nodes part of the Node Pool | 
+**cpu_family** | **str** | A valid cpu family name | 
+**cores_count** | **int** | Number of cores for node | 
+**ram_size** | **int** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
+**availability_zone** | **str** | The availability zone in which the server should exist | 
+**storage_type** | **str** | Hardware type of the volume | 
+**storage_size** | **int** | The size of the volume in GB. The size should be greater than 10GB. | 
+**k8s_version** | **str** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
+**maintenance_window** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] 
+**auto_scaling** | [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional] 
+**lans** | [**list[KubernetesNodePoolLan]**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePools
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | Unique representation for Kubernetes Node Pool as a collection on a resource. | [optional] [readonly] 
+**type** | **str** | The type of resource within a collection | [optional] [readonly] 
+**href** | **str** | URL to the collection representation (absolute path) | [optional] [readonly] 
+**items** | [**list[KubernetesNodePool]**](KubernetesNodePool.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodeProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A Kubernetes Node Name. | 
+**public_ip** | **str** | A valid public IP. | 
+**k8s_version** | **str** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodes
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | Unique representation for Kubernetes Node Pool as a collection on a resource. | [optional] [readonly] 
+**type** | **str** | The type of resource within a collection | [optional] [readonly] 
+**href** | **str** | URL to the collection representation (absolute path) | [optional] [readonly] 
+**items** | [**list[KubernetesNode]**](KubernetesNode.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Label
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | Label is identified using standard URN. | [optional] [readonly] 
+**type** | **str** | The type of object that has been created | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**NoStateMetaData**](NoStateMetaData.md) |  | [optional] 
+**properties** | [**LabelProperties**](LabelProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LabelProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **str** | A Label Key | [optional] 
+**value** | **str** | A Label Value | [optional] 
+**resource_id** | **str** | The id of the resource | [optional] 
+**resource_type** | **str** | The type of the resource on which the label is applied. | [optional] 
+**resource_href** | **str** | URL to the Resource (absolute path) on which the label is applied. | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LabelResource
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | Label on a resource is identified using label key. | [optional] [readonly] 
+**type** | **str** | The type of object that has been created | [optional] [readonly] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**NoStateMetaData**](NoStateMetaData.md) |  | [optional] 
+**properties** | [**LabelResourceProperties**](LabelResourceProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LabelResourceProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **str** | A Label Key | [optional] 
+**value** | **str** | A Label Value | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LabelResources
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | Unique representation for Label as a collection on a resource. | [optional] [readonly] 
+**type** | **str** | The type of resource within a collection | [optional] [readonly] 
+**href** | **str** | URL to the collection representation (absolute path) | [optional] [readonly] 
+**items** | [**list[LabelResource]**](LabelResource.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Labels
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | Unique representation for Label as a collection of resource. | [optional] [readonly] 
+**type** | **str** | The type of resource within a collection | [optional] [readonly] 
+**href** | **str** | URL to the collection representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Label]**](Label.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Lan
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**LanProperties**](LanProperties.md) |  | 
+**entities** | [**LanEntities**](LanEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LanEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**nics** | [**LanNics**](LanNics.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LanNics
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Nic]**](Nic.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LanPost
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**entities** | [**LanEntities**](LanEntities.md) |  | [optional] 
+**properties** | [**LanPropertiesPost**](LanPropertiesPost.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LanProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**ip_failover** | [**list[IPFailover]**](IPFailover.md) | IP failover configurations for lan | [optional] 
+**pcc** | **str** | Unique identifier of the private cross connect the given LAN is connected to if any | [optional] 
+**public** | **bool** | Does this LAN faces the public Internet or not | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LanPropertiesPost
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**public** | **bool** | Does this LAN faces the public Internet or not | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Lans
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Lan]**](Lan.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Loadbalancer
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**LoadbalancerProperties**](LoadbalancerProperties.md) |  | 
+**entities** | [**LoadbalancerEntities**](LoadbalancerEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LoadbalancerEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**balancednics** | [**BalancedNics**](BalancedNics.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LoadbalancerProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**ip** | **str** | IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically | [optional] 
+**dhcp** | **bool** | Indicates if the loadbalancer will reserve an IP using DHCP | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Loadbalancers
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Loadbalancer]**](Loadbalancer.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Location
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**LocationProperties**](LocationProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# LocationProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**features** | **list[str]** | List of features supported by the location | [optional] [readonly] 
+**image_aliases** | **list[str]** | List of image aliases available for the location | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Locations
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Location]**](Location.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Nic
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**NicProperties**](NicProperties.md) |  | 
+**entities** | [**NicEntities**](NicEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# NicEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**firewallrules** | [**FirewallRules**](FirewallRules.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# NicProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**mac** | **str** | The MAC address of the NIC | [optional] [readonly] 
+**ips** | **list[str]** | Collection of IP addresses assigned to a nic. Explicitly assigned public IPs need to come from reserved IP blocks, Passing value null or empty array will assign an IP address automatically. | [optional] 
+**dhcp** | **bool** | Indicates if the nic will reserve an IP using DHCP | [optional] 
+**lan** | **int** | The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created | 
+**firewall_active** | **bool** | Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports. | [optional] 
+**nat** | **bool** | Indicates if NAT is enabled on this NIC | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Nics
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Nic]**](Nic.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# NoStateMetaData
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **str** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] 
+**created_date** | **datetime** | The time the Resource was created | [optional] [readonly] 
+**created_by** | **str** | The user who has created the resource. | [optional] [readonly] 
+**created_by_user_id** | **str** | The user id of the user who has created the resource. | [optional] [readonly] 
+**last_modified_date** | **datetime** | The last time the resource has been modified | [optional] [readonly] 
+**last_modified_by** | **str** | The user who last modified the resource. | [optional] [readonly] 
+**last_modified_by_user_id** | **str** | The user id of the user who has last modified the resource. | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Peer
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** |  | [optional] 
+**name** | **str** |  | [optional] 
+**datacenter_id** | **str** |  | [optional] 
+**datacenter_name** | **str** |  | [optional] 
+**location** | **str** |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# PrivateCrossConnect
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# PrivateCrossConnectProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**description** | **str** | Human readable description | [optional] 
+**peers** | [**list[Peer]**](Peer.md) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect | [optional] [readonly] 
+**connectable_datacenters** | [**list[ConnectableDatacenter]**](ConnectableDatacenter.md) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# PrivateCrossConnects
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[PrivateCrossConnect]**](PrivateCrossConnect.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Request
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**RequestMetadata**](RequestMetadata.md) |  | [optional] 
+**properties** | [**RequestProperties**](RequestProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# RequestMetadata
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**created_date** | **datetime** | The last time the resource was created | [optional] [readonly] 
+**created_by** | **str** | The user who created the resource. | [optional] [readonly] 
+**etag** | **str** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] 
+**request_status** | [**RequestStatus**](RequestStatus.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# RequestProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**method** | **str** |  | [optional] 
+**headers** | **dict(str, str)** |  | [optional] 
+**body** | **str** |  | [optional] 
+**url** | **str** |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# RequestStatus
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**RequestStatusMetadata**](RequestStatusMetadata.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# RequestStatusMetadata
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**status** | **str** |  | [optional] 
+**message** | **str** |  | [optional] 
+**etag** | **str** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] 
+**targets** | [**list[RequestTarget]**](RequestTarget.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# RequestTarget
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**target** | [**ResourceReference**](ResourceReference.md) |  | [optional] 
+**status** | **str** |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Requests
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Request]**](Request.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Resource
+
+datacenter resource representation
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**ResourceProperties**](ResourceProperties.md) |  | [optional] 
+**entities** | [**ResourceEntities**](ResourceEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ResourceEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**groups** | [**ResourceGroups**](ResourceGroups.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ResourceGroups
+
+Resources assigned to this group.
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Resource]**](Resource.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ResourceLimits
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**cores_per_server** | **int** | maximum number of cores per server | 
+**cores_per_contract** | **int** | maximum cores per contract | 
+**cores_provisioned** | **int** | number of cores provisioned | 
+**ram_per_server** | **int** | maximum ram per server | 
+**ram_per_contract** | **int** | maximum ram per contract | 
+**ram_provisioned** | **int** | ram provisioned | 
+**hdd_limit_per_volume** | **int** | hdd limit per volume | 
+**hdd_limit_per_contract** | **int** | hdd limit per contract | 
+**hdd_volume_provisioned** | **int** | hdd volume provisioned | 
+**ssd_limit_per_volume** | **int** | ssd limit per volume | 
+**ssd_limit_per_contract** | **int** | ssd limit per contract | 
+**ssd_volume_provisioned** | **int** | ssd volume provisioned | 
+**reservable_ips** | **int** | total reservable ip limit of the customer | 
+**reserved_ips_on_contract** | **int** | reserved ips on a contract | 
+**reserved_ips_in_use** | **int** | reserved ips in use | 
+**k8s_cluster_limit_total** | **int** | k8s clusters total limit | 
+**k8s_clusters_provisioned** | **int** | k8s clusters provisioned | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ResourceProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | name of the resource | [optional] 
+**sec_auth_protection** | **bool** | Boolean value representing if the resource is multi factor protected or not e.g. using two factor protection. Currently only Data Centers and Snapshots are allowed to be multi factor protected, The value of attribute if null is intentional and it means that the resource doesn&#39;t support multi factor protection at all. | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ResourceReference
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Resources
+
+Collection to represent the resource
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Resource]**](Resource.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ResourcesUsers
+
+Resources owned by a user.
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Resource]**](Resource.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# S3Key
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**S3KeyMetadata**](S3KeyMetadata.md) |  | [optional] 
+**properties** | [**S3KeyProperties**](S3KeyProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# S3KeyMetadata
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **str** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] 
+**created_date** | **datetime** | The time the S3 key was created | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# S3KeyProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**secret_key** | **str** | secret of the s3 key | [optional] [readonly] 
+**active** | **bool** | denotes if the s3 key is active or not | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# S3Keys
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of the resource | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[S3Key]**](S3Key.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# S3ObjectStorageSSO
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**sso_url** | **str** | The S3 object storage single sign on url | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Server
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**ServerProperties**](ServerProperties.md) |  | 
+**entities** | [**ServerEntities**](ServerEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ServerEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**cdroms** | [**Cdroms**](Cdroms.md) |  | [optional] 
+**volumes** | [**AttachedVolumes**](AttachedVolumes.md) |  | [optional] 
+**nics** | [**Nics**](Nics.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# ServerProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**cores** | **int** | The total number of cores for the server | 
+**ram** | **int** | The amount of memory for the server in MB, e.g. 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. | 
+**availability_zone** | **str** | The availability zone in which the server should exist | [optional] 
+**vm_state** | **str** | Status of the virtual Machine | [optional] [readonly] 
+**boot_cdrom** | [**ResourceReference**](ResourceReference.md) |  | [optional] 
+**boot_volume** | [**ResourceReference**](ResourceReference.md) |  | [optional] 
+**cpu_family** | **str** | Cpu family of pserver | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Servers
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Server]**](Server.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Snapshot
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**SnapshotProperties**](SnapshotProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# SnapshotProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**description** | **str** | Human readable description | [optional] 
+**location** | **str** | Location of that image/snapshot.  | [optional] [readonly] 
+**size** | **float** | The size of the image in GB | [optional] [readonly] 
+**sec_auth_protection** | **bool** | Boolean value representing if the snapshot requires extra protection e.g. two factor protection | [optional] 
+**cpu_hot_plug** | **bool** | Is capable of CPU hot plug (no reboot required) | [optional] 
+**cpu_hot_unplug** | **bool** | Is capable of CPU hot unplug (no reboot required) | [optional] 
+**ram_hot_plug** | **bool** | Is capable of memory hot plug (no reboot required) | [optional] 
+**ram_hot_unplug** | **bool** | Is capable of memory hot unplug (no reboot required) | [optional] 
+**nic_hot_plug** | **bool** | Is capable of nic hot plug (no reboot required) | [optional] 
+**nic_hot_unplug** | **bool** | Is capable of nic hot unplug (no reboot required) | [optional] 
+**disc_virtio_hot_plug** | **bool** | Is capable of Virt-IO drive hot plug (no reboot required) | [optional] 
+**disc_virtio_hot_unplug** | **bool** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
+**disc_scsi_hot_plug** | **bool** | Is capable of SCSI drive hot plug (no reboot required) | [optional] 
+**disc_scsi_hot_unplug** | **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
+**licence_type** | **str** | OS type of this Snapshot | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Snapshots
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Snapshot]**](Snapshot.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Type
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# User
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**UserMetadata**](UserMetadata.md) |  | [optional] 
+**properties** | [**UserProperties**](UserProperties.md) |  | 
+**entities** | [**UsersEntities**](UsersEntities.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# UserMetadata
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **str** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] 
+**created_date** | **datetime** | time of creation of the user | [optional] [readonly] 
+**last_login** | **datetime** | time of last login by the user | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# UserProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**firstname** | **str** | first name of the user | [optional] 
+**lastname** | **str** | last name of the user | [optional] 
+**email** | **str** | email address of the user | [optional] 
+**administrator** | **bool** | indicates if the user has admin rights or not | [optional] 
+**force_sec_auth** | **bool** | indicates if secure authentication should be forced on the user or not | [optional] 
+**sec_auth_active** | **bool** | indicates if secure authentication is active for the user or not | [optional] 
+**s3_canonical_user_id** | **str** | Canonical (S3) id of the user for a given identity | [optional] 
+**password** | **str** | User password | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Users
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[User]**](User.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# UsersEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**owns** | [**ResourcesUsers**](ResourcesUsers.md) |  | [optional] 
+**groups** | [**GroupUsers**](GroupUsers.md) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Volume
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
+**properties** | [**VolumeProperties**](VolumeProperties.md) |  | 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# VolumeProperties
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **str** | A name of that resource | [optional] 
+**type** | **str** | Hardware type of the volume. | [optional] 
+**size** | **float** | The size of the volume in GB | 
+**availability_zone** | **str** | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront | [optional] 
+**image** | **str** | Image or snapshot ID to be used as template for this volume | [optional] 
+**image_alias** | **str** |  | [optional] 
+**image_password** | **str** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9 | [optional] 
+**ssh_keys** | **list[str]** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. | [optional] 
+**bus** | **str** | The bus type of the volume. Default is VIRTIO | [optional] 
+**licence_type** | **str** | OS type of this volume | [optional] [readonly] 
+**cpu_hot_plug** | **bool** | Is capable of CPU hot plug (no reboot required) | [optional] 
+**ram_hot_plug** | **bool** | Is capable of memory hot plug (no reboot required) | [optional] 
+**nic_hot_plug** | **bool** | Is capable of nic hot plug (no reboot required) | [optional] 
+**nic_hot_unplug** | **bool** | Is capable of nic hot unplug (no reboot required) | [optional] 
+**disc_virtio_hot_plug** | **bool** | Is capable of Virt-IO drive hot plug (no reboot required) | [optional] 
+**disc_virtio_hot_unplug** | **bool** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
+**device_number** | **int** | The LUN ID of the storage volume. Null for volumes not mounted to any VM | [optional] [readonly] 
+**backupunit_id** | **str** | The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provied either public image or imageAlias in conjunction with this property. | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# Volumes
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **str** | The resource&#39;s unique identifier | [optional] [readonly] 
+**type** | [**Type**](Type.md) | The type of object that has been created | [optional] 
+**href** | **str** | URL to the object representation (absolute path) | [optional] [readonly] 
+**items** | [**list[Volume]**](Volume.md) | Array of items in that collection | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+
