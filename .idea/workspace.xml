@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b162e3a9-8cc4-4006-b1cb-9f179adb7635" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/BackupUnitApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/BackupUnitApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ContractApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ContractApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/DataCenterApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DataCenterApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/IPBlocksApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/IPBlocksApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ImageApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ImageApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/KubernetesApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/KubernetesApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LabelApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LabelApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LanApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LanApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LoadBalancerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LoadBalancerApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/LocationApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LocationApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/NicApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NicApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/PrivateCrossConnectApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PrivateCrossConnectApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/RequestApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RequestApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/ServerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ServerApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SnapshotApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SnapshotApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/UserManagementApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/UserManagementApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/VolumeApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/VolumeApi.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/python-templates/README.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/python-templates/README.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python-templates/api_doc.mustache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/python-templates/python_doc_auth_partial.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/python-templates/python_doc_auth_partial.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +57,17 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="776" y="310" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1601029576381" />
-    <state x="684" y="291" width="688" height="522" key="find.popup" timestamp="1601288752129">
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1601293459688">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="684" y="291" width="688" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601288752129" />
+    <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1601293459688" />
+    <state x="684" y="291" width="688" height="522" key="find.popup" timestamp="1601293846028">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="684" y="291" width="688" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601293846028" />
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1601293592358">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="656" y="257" width="672" height="678" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601293592358" />
   </component>
 </project>

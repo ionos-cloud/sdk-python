@@ -57,24 +57,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -109,24 +98,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -201,24 +179,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -253,24 +220,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -345,24 +301,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -396,24 +341,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -486,24 +420,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -538,24 +461,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -630,24 +542,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -683,24 +584,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -777,24 +667,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -830,24 +709,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -924,24 +792,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -977,24 +834,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1071,24 +917,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1123,24 +958,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1215,24 +1039,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1268,24 +1081,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1362,24 +1164,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1416,24 +1207,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1512,24 +1292,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1565,24 +1334,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1659,24 +1417,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1712,24 +1459,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1806,24 +1542,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1858,24 +1583,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -1950,24 +1664,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2003,24 +1706,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2097,24 +1789,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2151,24 +1832,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2247,24 +1917,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2299,24 +1958,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2391,24 +2039,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2443,24 +2080,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2535,24 +2161,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2586,24 +2201,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2676,24 +2280,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2728,24 +2321,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2820,24 +2402,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2873,24 +2444,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -2967,24 +2527,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3018,24 +2567,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3108,24 +2646,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3158,24 +2685,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3246,24 +2762,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3298,24 +2803,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3390,24 +2884,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3442,24 +2925,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3534,24 +3006,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3585,24 +3046,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3675,24 +3125,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3727,24 +3166,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3819,24 +3247,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:
@@ -3872,24 +3289,13 @@ configuration = ionos_cloud_sdk.Configuration(
 
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
+# Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionos_cloud_sdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Configure API key authorization: Token Authentication
-configuration = ionos_cloud_sdk.Configuration(
-    host = "https://api.ionos.com/cloudapi/v5",
-    api_key = {
-        'Token Authentication': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Token Authentication'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with ionos_cloud_sdk.ApiClient(configuration) as api_client:

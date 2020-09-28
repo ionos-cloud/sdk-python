@@ -126,14 +126,9 @@ Method | HTTP request | Description
 {{#authMethods}}
 {{#isBasic}}
 {{#isBasicBasic}}
-* Basic Authentication ({{name}}):
-{{/isBasicBasic}}
-{{#isBasicBearer}}
-* Bearer{{#bearerFormat}} ({{{.}}}){{/bearerFormat}} Authentication ({{name}}):
-{{/isBasicBearer}}
-{{/isBasic}}
-
 {{> api_doc_example }}
+{{/isBasicBasic}}
+{{/isBasic}}
 {{/authMethods}}
 {{/hasAuthMethods}}
 {{^hasAuthMethods}}
@@ -150,9 +145,6 @@ Name | Type | Description  | Notes
 
 {{#returnType}}{{#returnTypeIsPrimitive}}**{{{returnType}}}**{{/returnTypeIsPrimitive}}{{^returnTypeIsPrimitive}}[**{{{returnType}}}**]({{returnBaseType}}.md){{/returnTypeIsPrimitive}}{{/returnType}}{{^returnType}}void (empty response body){{/returnType}}
 
-### Authorization
-
-{{^authMethods}}No authorization required{{/authMethods}}{{#authMethods}}[{{{name}}}](../README.md#{{{name}}}){{^-last}}, {{/-last}}{{/authMethods}}
 
 ### HTTP request headers
 
@@ -168,7 +160,7 @@ Name | Type | Description  | Notes
 {{/responses}}
 {{/responses.0}}
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to API list]](#{{documentation-for-api-endpoints}}) [[Back to Model list]](../README.md#documentation-for-models)
 
 {{/operation}}
 {{/operations}}
