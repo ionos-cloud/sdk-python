@@ -331,13 +331,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**backupunits_delete**](BackupUnitApi.md#backupunits_delete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit
-[**backupunits_find_by_id**](BackupUnitApi.md#backupunits_find_by_id) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit
-[**backupunits_get**](BackupUnitApi.md#backupunits_get) | **GET** /backupunits | List Backup Units 
-[**backupunits_patch**](BackupUnitApi.md#backupunits_patch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit
-[**backupunits_post**](BackupUnitApi.md#backupunits_post) | **POST** /backupunits | Create a Backup Unit
-[**backupunits_put**](BackupUnitApi.md#backupunits_put) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit
-[**backupunits_ssourl_get**](BackupUnitApi.md#backupunits_ssourl_get) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit.
+[**backupunits_delete**](#backupunits_delete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit
+[**backupunits_find_by_id**](#backupunits_find_by_id) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit
+[**backupunits_get**](#backupunits_get) | **GET** /backupunits | List Backup Units 
+[**backupunits_patch**](#backupunits_patch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit
+[**backupunits_post**](#backupunits_post) | **POST** /backupunits | Create a Backup Unit
+[**backupunits_put**](#backupunits_put) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit
+[**backupunits_ssourl_get**](#backupunits_ssourl_get) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit.
 
 
 # **backupunits_delete**
@@ -413,7 +413,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#backupunits_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_find_by_id**
 > BackupUnit backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#backupunits_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_get**
 > BackupUnits backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#backupunits_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_patch**
 > BackupUnit backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -638,7 +638,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#backupunits_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_post**
 > BackupUnit backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -713,7 +713,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#backupunits_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_put**
 > BackupUnit backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -790,7 +790,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#backupunits_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_ssourl_get**
 > BackupUnitSSO backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
@@ -863,7 +863,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#backupunits_ssourl_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -875,7 +875,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contracts_get**](ContractApi.md#contracts_get) | **GET** /contracts | Retrieve a Contract
+[**contracts_get**](#contracts_get) | **GET** /contracts | Retrieve a Contract
 
 
 # **contracts_get**
@@ -949,7 +949,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#contracts_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -961,12 +961,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacenters_delete**](DataCenterApi.md#datacenters_delete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center
-[**datacenters_find_by_id**](DataCenterApi.md#datacenters_find_by_id) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center
-[**datacenters_get**](DataCenterApi.md#datacenters_get) | **GET** /datacenters | List Data Centers under your account
-[**datacenters_patch**](DataCenterApi.md#datacenters_patch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center
-[**datacenters_post**](DataCenterApi.md#datacenters_post) | **POST** /datacenters | Create a Data Center
-[**datacenters_put**](DataCenterApi.md#datacenters_put) | **PUT** /datacenters/{datacenterId} | Modify a Data Center
+[**datacenters_delete**](#datacenters_delete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center
+[**datacenters_find_by_id**](#datacenters_find_by_id) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center
+[**datacenters_get**](#datacenters_get) | **GET** /datacenters | List Data Centers under your account
+[**datacenters_patch**](#datacenters_patch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center
+[**datacenters_post**](#datacenters_post) | **POST** /datacenters | Create a Data Center
+[**datacenters_put**](#datacenters_put) | **PUT** /datacenters/{datacenterId} | Modify a Data Center
 
 
 # **datacenters_delete**
@@ -1042,7 +1042,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_find_by_id**
 > Datacenter datacenters_find_by_id(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1117,7 +1117,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_get**
 > Datacenters datacenters_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1190,7 +1190,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_patch**
 > Datacenter datacenters_patch(datacenter_id, datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1267,7 +1267,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_post**
 > Datacenter datacenters_post(datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1342,7 +1342,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_put**
 > Datacenter datacenters_put(datacenter_id, datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1419,7 +1419,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -1431,12 +1431,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ipblocks_delete**](IPBlocksApi.md#ipblocks_delete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block
-[**ipblocks_find_by_id**](IPBlocksApi.md#ipblocks_find_by_id) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block
-[**ipblocks_get**](IPBlocksApi.md#ipblocks_get) | **GET** /ipblocks | List IP Blocks 
-[**ipblocks_patch**](IPBlocksApi.md#ipblocks_patch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block
-[**ipblocks_post**](IPBlocksApi.md#ipblocks_post) | **POST** /ipblocks | Reserve IP Block
-[**ipblocks_put**](IPBlocksApi.md#ipblocks_put) | **PUT** /ipblocks/{ipblockId} | Modify IP Block
+[**ipblocks_delete**](#ipblocks_delete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block
+[**ipblocks_find_by_id**](#ipblocks_find_by_id) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block
+[**ipblocks_get**](#ipblocks_get) | **GET** /ipblocks | List IP Blocks 
+[**ipblocks_patch**](#ipblocks_patch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block
+[**ipblocks_post**](#ipblocks_post) | **POST** /ipblocks | Reserve IP Block
+[**ipblocks_put**](#ipblocks_put) | **PUT** /ipblocks/{ipblockId} | Modify IP Block
 
 
 # **ipblocks_delete**
@@ -1512,7 +1512,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_find_by_id**
 > IpBlock ipblocks_find_by_id(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1587,7 +1587,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_get**
 > IpBlocks ipblocks_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1660,7 +1660,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_patch**
 > IpBlock ipblocks_patch(ipblock_id, ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1737,7 +1737,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_post**
 > IpBlock ipblocks_post(ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1812,7 +1812,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_put**
 > IpBlock ipblocks_put(ipblock_id, ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1889,7 +1889,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -1901,11 +1901,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**images_delete**](ImageApi.md#images_delete) | **DELETE** /images/{imageId} | Delete an Image
-[**images_find_by_id**](ImageApi.md#images_find_by_id) | **GET** /images/{imageId} | Retrieve an Image
-[**images_get**](ImageApi.md#images_get) | **GET** /images | List Images 
-[**images_patch**](ImageApi.md#images_patch) | **PATCH** /images/{imageId} | Partially modify an Image
-[**images_put**](ImageApi.md#images_put) | **PUT** /images/{imageId} | Modify an Image
+[**images_delete**](#images_delete) | **DELETE** /images/{imageId} | Delete an Image
+[**images_find_by_id**](#images_find_by_id) | **GET** /images/{imageId} | Retrieve an Image
+[**images_get**](#images_get) | **GET** /images | List Images 
+[**images_patch**](#images_patch) | **PATCH** /images/{imageId} | Partially modify an Image
+[**images_put**](#images_put) | **PUT** /images/{imageId} | Modify an Image
 
 
 # **images_delete**
@@ -1981,7 +1981,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#images_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **images_find_by_id**
 > Image images_find_by_id(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2056,7 +2056,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#images_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **images_get**
 > Images images_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2129,7 +2129,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#images_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **images_patch**
 > Image images_patch(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2206,7 +2206,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#images_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **images_put**
 > Image images_put(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2283,7 +2283,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#images_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -2295,24 +2295,24 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**k8s_delete**](KubernetesApi.md#k8s_delete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
-[**k8s_find_by_clusterid**](KubernetesApi.md#k8s_find_by_clusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
-[**k8s_get**](KubernetesApi.md#k8s_get) | **GET** /k8s | List Kubernetes Clusters
-[**k8s_kubeconfig_get**](KubernetesApi.md#k8s_kubeconfig_get) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
-[**k8s_nodepools_delete**](KubernetesApi.md#k8s_nodepools_delete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
-[**k8s_nodepools_find_by_id**](KubernetesApi.md#k8s_nodepools_find_by_id) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool
-[**k8s_nodepools_get**](KubernetesApi.md#k8s_nodepools_get) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools
-[**k8s_nodepools_nodes_delete**](KubernetesApi.md#k8s_nodepools_nodes_delete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node
-[**k8s_nodepools_nodes_find_by_id**](KubernetesApi.md#k8s_nodepools_nodes_find_by_id) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node
-[**k8s_nodepools_nodes_get**](KubernetesApi.md#k8s_nodepools_nodes_get) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.
-[**k8s_nodepools_nodes_replace_post**](KubernetesApi.md#k8s_nodepools_nodes_replace_post) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node
-[**k8s_nodepools_post**](KubernetesApi.md#k8s_nodepools_post) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool
-[**k8s_nodepools_put**](KubernetesApi.md#k8s_nodepools_put) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool
-[**k8s_post**](KubernetesApi.md#k8s_post) | **POST** /k8s | Create Kubernetes Cluster
-[**k8s_put**](KubernetesApi.md#k8s_put) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster
-[**k8s_versions_compatibilities_get**](KubernetesApi.md#k8s_versions_compatibilities_get) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-[**k8s_versions_default_get**](KubernetesApi.md#k8s_versions_default_get) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.
-[**k8s_versions_get**](KubernetesApi.md#k8s_versions_get) | **GET** /k8s/versions | Retrieve available Kubernetes versions
+[**k8s_delete**](#k8s_delete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
+[**k8s_find_by_clusterid**](#k8s_find_by_clusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
+[**k8s_get**](#k8s_get) | **GET** /k8s | List Kubernetes Clusters
+[**k8s_kubeconfig_get**](#k8s_kubeconfig_get) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
+[**k8s_nodepools_delete**](#k8s_nodepools_delete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
+[**k8s_nodepools_find_by_id**](#k8s_nodepools_find_by_id) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool
+[**k8s_nodepools_get**](#k8s_nodepools_get) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools
+[**k8s_nodepools_nodes_delete**](#k8s_nodepools_nodes_delete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node
+[**k8s_nodepools_nodes_find_by_id**](#k8s_nodepools_nodes_find_by_id) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node
+[**k8s_nodepools_nodes_get**](#k8s_nodepools_nodes_get) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.
+[**k8s_nodepools_nodes_replace_post**](#k8s_nodepools_nodes_replace_post) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node
+[**k8s_nodepools_post**](#k8s_nodepools_post) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool
+[**k8s_nodepools_put**](#k8s_nodepools_put) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool
+[**k8s_post**](#k8s_post) | **POST** /k8s | Create Kubernetes Cluster
+[**k8s_put**](#k8s_put) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster
+[**k8s_versions_compatibilities_get**](#k8s_versions_compatibilities_get) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
+[**k8s_versions_default_get**](#k8s_versions_default_get) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.
+[**k8s_versions_get**](#k8s_versions_get) | **GET** /k8s/versions | Retrieve available Kubernetes versions
 
 
 # **k8s_delete**
@@ -2388,7 +2388,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_find_by_clusterid**
 > KubernetesCluster k8s_find_by_clusterid(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2463,7 +2463,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_find_by_clusterid) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_get**
 > KubernetesClusters k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2536,7 +2536,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_kubeconfig_get**
 > KubernetesConfig k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2611,7 +2611,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_kubeconfig_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_delete**
 > object k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2688,7 +2688,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_find_by_id**
 > KubernetesNodePool k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2765,7 +2765,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_get**
 > KubernetesNodePools k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2840,7 +2840,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_nodes_delete**
 > object k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2919,7 +2919,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_nodes_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_nodes_find_by_id**
 > KubernetesNode k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2998,7 +2998,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_nodes_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_nodes_get**
 > KubernetesNodes k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3075,7 +3075,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_nodes_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_nodes_replace_post**
 > object k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3154,7 +3154,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_nodes_replace_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_post**
 > KubernetesNodePool k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3231,7 +3231,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_put**
 > KubernetesNodePoolForPut k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3310,7 +3310,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_nodepools_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_post**
 > KubernetesCluster k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3385,7 +3385,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_put**
 > KubernetesCluster k8s_put(k8s_cluster_id, kubernetescluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3462,7 +3462,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_versions_compatibilities_get**
 > list[str] k8s_versions_compatibilities_get(cluster_version)
@@ -3531,7 +3531,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_versions_compatibilities_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_versions_default_get**
 > str k8s_versions_default_get()
@@ -3596,7 +3596,7 @@ This endpoint does not need any parameter.
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_versions_default_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_versions_get**
 > list[str] k8s_versions_get()
@@ -3661,7 +3661,7 @@ This endpoint does not need any parameter.
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#k8s_versions_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -3673,33 +3673,33 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacenters_labels_delete**](LabelApi.md#datacenters_labels_delete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center
-[**datacenters_labels_find_by_key**](LabelApi.md#datacenters_labels_find_by_key) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center
-[**datacenters_labels_get**](LabelApi.md#datacenters_labels_get) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels
-[**datacenters_labels_post**](LabelApi.md#datacenters_labels_post) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center
-[**datacenters_labels_put**](LabelApi.md#datacenters_labels_put) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center
-[**datacenters_servers_labels_delete**](LabelApi.md#datacenters_servers_labels_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server
-[**datacenters_servers_labels_find_by_key**](LabelApi.md#datacenters_servers_labels_find_by_key) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server
-[**datacenters_servers_labels_get**](LabelApi.md#datacenters_servers_labels_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels
-[**datacenters_servers_labels_post**](LabelApi.md#datacenters_servers_labels_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server
-[**datacenters_servers_labels_put**](LabelApi.md#datacenters_servers_labels_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server
-[**datacenters_volumes_labels_delete**](LabelApi.md#datacenters_volumes_labels_delete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume
-[**datacenters_volumes_labels_find_by_key**](LabelApi.md#datacenters_volumes_labels_find_by_key) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume
-[**datacenters_volumes_labels_get**](LabelApi.md#datacenters_volumes_labels_get) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels
-[**datacenters_volumes_labels_post**](LabelApi.md#datacenters_volumes_labels_post) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume
-[**datacenters_volumes_labels_put**](LabelApi.md#datacenters_volumes_labels_put) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume
-[**ipblocks_labels_delete**](LabelApi.md#ipblocks_labels_delete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block
-[**ipblocks_labels_find_by_key**](LabelApi.md#ipblocks_labels_find_by_key) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block
-[**ipblocks_labels_get**](LabelApi.md#ipblocks_labels_get) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
-[**ipblocks_labels_post**](LabelApi.md#ipblocks_labels_post) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
-[**ipblocks_labels_put**](LabelApi.md#ipblocks_labels_put) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
-[**labels_find_by_labelurn**](LabelApi.md#labels_find_by_labelurn) | **GET** /labels/{labelurn} | Returns the label by its URN.
-[**labels_get**](LabelApi.md#labels_get) | **GET** /labels | List Labels 
-[**snapshots_labels_delete**](LabelApi.md#snapshots_labels_delete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
-[**snapshots_labels_find_by_key**](LabelApi.md#snapshots_labels_find_by_key) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
-[**snapshots_labels_get**](LabelApi.md#snapshots_labels_get) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels
-[**snapshots_labels_post**](LabelApi.md#snapshots_labels_post) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot
-[**snapshots_labels_put**](LabelApi.md#snapshots_labels_put) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot
+[**datacenters_labels_delete**](#datacenters_labels_delete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center
+[**datacenters_labels_find_by_key**](#datacenters_labels_find_by_key) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center
+[**datacenters_labels_get**](#datacenters_labels_get) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels
+[**datacenters_labels_post**](#datacenters_labels_post) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center
+[**datacenters_labels_put**](#datacenters_labels_put) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center
+[**datacenters_servers_labels_delete**](#datacenters_servers_labels_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server
+[**datacenters_servers_labels_find_by_key**](#datacenters_servers_labels_find_by_key) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server
+[**datacenters_servers_labels_get**](#datacenters_servers_labels_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels
+[**datacenters_servers_labels_post**](#datacenters_servers_labels_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server
+[**datacenters_servers_labels_put**](#datacenters_servers_labels_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server
+[**datacenters_volumes_labels_delete**](#datacenters_volumes_labels_delete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume
+[**datacenters_volumes_labels_find_by_key**](#datacenters_volumes_labels_find_by_key) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume
+[**datacenters_volumes_labels_get**](#datacenters_volumes_labels_get) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels
+[**datacenters_volumes_labels_post**](#datacenters_volumes_labels_post) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume
+[**datacenters_volumes_labels_put**](#datacenters_volumes_labels_put) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume
+[**ipblocks_labels_delete**](#ipblocks_labels_delete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block
+[**ipblocks_labels_find_by_key**](#ipblocks_labels_find_by_key) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block
+[**ipblocks_labels_get**](#ipblocks_labels_get) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
+[**ipblocks_labels_post**](#ipblocks_labels_post) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
+[**ipblocks_labels_put**](#ipblocks_labels_put) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
+[**labels_find_by_labelurn**](#labels_find_by_labelurn) | **GET** /labels/{labelurn} | Returns the label by its URN.
+[**labels_get**](#labels_get) | **GET** /labels | List Labels 
+[**snapshots_labels_delete**](#snapshots_labels_delete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
+[**snapshots_labels_find_by_key**](#snapshots_labels_find_by_key) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
+[**snapshots_labels_get**](#snapshots_labels_get) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels
+[**snapshots_labels_post**](#snapshots_labels_post) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot
+[**snapshots_labels_put**](#snapshots_labels_put) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot
 
 
 # **datacenters_labels_delete**
@@ -3777,7 +3777,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_labels_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_labels_find_by_key**
 > LabelResource datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3854,7 +3854,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_labels_find_by_key) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_labels_get**
 > LabelResources datacenters_labels_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3929,7 +3929,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_labels_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_labels_post**
 > LabelResource datacenters_labels_post(datacenter_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4006,7 +4006,7 @@ Name | Type | Description  | Notes
 **201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_labels_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_labels_put**
 > LabelResource datacenters_labels_put(datacenter_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4085,7 +4085,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_labels_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_delete**
 > object datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4164,7 +4164,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_labels_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_find_by_key**
 > LabelResource datacenters_servers_labels_find_by_key(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4243,7 +4243,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_labels_find_by_key) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_get**
 > LabelResources datacenters_servers_labels_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4320,7 +4320,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_labels_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_post**
 > LabelResource datacenters_servers_labels_post(datacenter_id, server_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4399,7 +4399,7 @@ Name | Type | Description  | Notes
 **201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_labels_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_put**
 > LabelResource datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4480,7 +4480,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_labels_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_delete**
 > object datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4559,7 +4559,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_labels_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_find_by_key**
 > LabelResource datacenters_volumes_labels_find_by_key(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4638,7 +4638,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_labels_find_by_key) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_get**
 > LabelResources datacenters_volumes_labels_get(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4715,7 +4715,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_labels_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_post**
 > LabelResource datacenters_volumes_labels_post(datacenter_id, volume_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4794,7 +4794,7 @@ Name | Type | Description  | Notes
 **201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_labels_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_put**
 > LabelResource datacenters_volumes_labels_put(datacenter_id, volume_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4875,7 +4875,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_labels_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_delete**
 > object ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -4952,7 +4952,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_labels_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_find_by_key**
 > LabelResource ipblocks_labels_find_by_key(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5029,7 +5029,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_labels_find_by_key) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_get**
 > LabelResources ipblocks_labels_get(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5104,7 +5104,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_labels_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_post**
 > LabelResource ipblocks_labels_post(ipblock_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5181,7 +5181,7 @@ Name | Type | Description  | Notes
 **201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_labels_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_put**
 > LabelResource ipblocks_labels_put(ipblock_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5260,7 +5260,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#ipblocks_labels_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **labels_find_by_labelurn**
 > Label labels_find_by_labelurn(labelurn, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5335,7 +5335,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#labels_find_by_labelurn) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **labels_get**
 > Labels labels_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5408,7 +5408,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#labels_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_delete**
 > object snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5485,7 +5485,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_labels_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_find_by_key**
 > LabelResource snapshots_labels_find_by_key(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5562,7 +5562,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_labels_find_by_key) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_get**
 > LabelResources snapshots_labels_get(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5637,7 +5637,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_labels_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_post**
 > LabelResource snapshots_labels_post(snapshot_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5714,7 +5714,7 @@ Name | Type | Description  | Notes
 **201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_labels_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_put**
 > LabelResource snapshots_labels_put(snapshot_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5793,7 +5793,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_labels_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -5805,15 +5805,15 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacenters_lans_delete**](LanApi.md#datacenters_lans_delete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan.
-[**datacenters_lans_find_by_id**](LanApi.md#datacenters_lans_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan
-[**datacenters_lans_get**](LanApi.md#datacenters_lans_get) | **GET** /datacenters/{datacenterId}/lans | List Lans
-[**datacenters_lans_nics_find_by_id**](LanApi.md#datacenters_lans_nics_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan
-[**datacenters_lans_nics_get**](LanApi.md#datacenters_lans_nics_get) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members 
-[**datacenters_lans_nics_post**](LanApi.md#datacenters_lans_nics_post) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic
-[**datacenters_lans_patch**](LanApi.md#datacenters_lans_patch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan
-[**datacenters_lans_post**](LanApi.md#datacenters_lans_post) | **POST** /datacenters/{datacenterId}/lans | Create a Lan
-[**datacenters_lans_put**](LanApi.md#datacenters_lans_put) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan
+[**datacenters_lans_delete**](#datacenters_lans_delete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan.
+[**datacenters_lans_find_by_id**](#datacenters_lans_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan
+[**datacenters_lans_get**](#datacenters_lans_get) | **GET** /datacenters/{datacenterId}/lans | List Lans
+[**datacenters_lans_nics_find_by_id**](#datacenters_lans_nics_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan
+[**datacenters_lans_nics_get**](#datacenters_lans_nics_get) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members 
+[**datacenters_lans_nics_post**](#datacenters_lans_nics_post) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic
+[**datacenters_lans_patch**](#datacenters_lans_patch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan
+[**datacenters_lans_post**](#datacenters_lans_post) | **POST** /datacenters/{datacenterId}/lans | Create a Lan
+[**datacenters_lans_put**](#datacenters_lans_put) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan
 
 
 # **datacenters_lans_delete**
@@ -5891,7 +5891,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_find_by_id**
 > Lan datacenters_lans_find_by_id(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -5968,7 +5968,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_get**
 > Lans datacenters_lans_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6043,7 +6043,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_nics_find_by_id**
 > Nic datacenters_lans_nics_find_by_id(datacenter_id, lan_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6122,7 +6122,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_nics_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_nics_get**
 > LanNics datacenters_lans_nics_get(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6199,7 +6199,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_nics_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_nics_post**
 > Nic datacenters_lans_nics_post(datacenter_id, lan_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6278,7 +6278,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_nics_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_patch**
 > Lan datacenters_lans_patch(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6357,7 +6357,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_post**
 > LanPost datacenters_lans_post(datacenter_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6434,7 +6434,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_put**
 > Lan datacenters_lans_put(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6513,7 +6513,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_lans_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -6525,16 +6525,16 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacenters_loadbalancers_balancednics_delete**](LoadBalancerApi.md#datacenters_loadbalancers_balancednics_delete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
-[**datacenters_loadbalancers_balancednics_find_by_nic**](LoadBalancerApi.md#datacenters_loadbalancers_balancednics_find_by_nic) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
-[**datacenters_loadbalancers_balancednics_get**](LoadBalancerApi.md#datacenters_loadbalancers_balancednics_get) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
-[**datacenters_loadbalancers_balancednics_post**](LoadBalancerApi.md#datacenters_loadbalancers_balancednics_post) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
-[**datacenters_loadbalancers_delete**](LoadBalancerApi.md#datacenters_loadbalancers_delete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
-[**datacenters_loadbalancers_find_by_id**](LoadBalancerApi.md#datacenters_loadbalancers_find_by_id) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer
-[**datacenters_loadbalancers_get**](LoadBalancerApi.md#datacenters_loadbalancers_get) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers
-[**datacenters_loadbalancers_patch**](LoadBalancerApi.md#datacenters_loadbalancers_patch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer
-[**datacenters_loadbalancers_post**](LoadBalancerApi.md#datacenters_loadbalancers_post) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer
-[**datacenters_loadbalancers_put**](LoadBalancerApi.md#datacenters_loadbalancers_put) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer
+[**datacenters_loadbalancers_balancednics_delete**](#datacenters_loadbalancers_balancednics_delete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
+[**datacenters_loadbalancers_balancednics_find_by_nic**](#datacenters_loadbalancers_balancednics_find_by_nic) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
+[**datacenters_loadbalancers_balancednics_get**](#datacenters_loadbalancers_balancednics_get) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
+[**datacenters_loadbalancers_balancednics_post**](#datacenters_loadbalancers_balancednics_post) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
+[**datacenters_loadbalancers_delete**](#datacenters_loadbalancers_delete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
+[**datacenters_loadbalancers_find_by_id**](#datacenters_loadbalancers_find_by_id) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer
+[**datacenters_loadbalancers_get**](#datacenters_loadbalancers_get) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers
+[**datacenters_loadbalancers_patch**](#datacenters_loadbalancers_patch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer
+[**datacenters_loadbalancers_post**](#datacenters_loadbalancers_post) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer
+[**datacenters_loadbalancers_put**](#datacenters_loadbalancers_put) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer
 
 
 # **datacenters_loadbalancers_balancednics_delete**
@@ -6614,7 +6614,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_balancednics_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_balancednics_find_by_nic**
 > Nic datacenters_loadbalancers_balancednics_find_by_nic(datacenter_id, loadbalancer_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6693,7 +6693,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_balancednics_find_by_nic) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_balancednics_get**
 > BalancedNics datacenters_loadbalancers_balancednics_get(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6770,7 +6770,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_balancednics_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_balancednics_post**
 > Nic datacenters_loadbalancers_balancednics_post(datacenter_id, loadbalancer_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6849,7 +6849,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_balancednics_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_delete**
 > object datacenters_loadbalancers_delete(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -6926,7 +6926,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_find_by_id**
 > Loadbalancer datacenters_loadbalancers_find_by_id(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7003,7 +7003,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_get**
 > Loadbalancers datacenters_loadbalancers_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7078,7 +7078,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_patch**
 > Loadbalancer datacenters_loadbalancers_patch(datacenter_id, loadbalancer_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7157,7 +7157,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_post**
 > Loadbalancer datacenters_loadbalancers_post(datacenter_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7234,7 +7234,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_put**
 > Loadbalancer datacenters_loadbalancers_put(datacenter_id, loadbalancer_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7313,7 +7313,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_loadbalancers_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -7325,9 +7325,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**locations_find_by_region**](LocationApi.md#locations_find_by_region) | **GET** /locations/{regionId} | List Locations within a region
-[**locations_find_by_region_and_id**](LocationApi.md#locations_find_by_region_and_id) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location
-[**locations_get**](LocationApi.md#locations_get) | **GET** /locations | List Locations
+[**locations_find_by_region**](#locations_find_by_region) | **GET** /locations/{regionId} | List Locations within a region
+[**locations_find_by_region_and_id**](#locations_find_by_region_and_id) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location
+[**locations_get**](#locations_get) | **GET** /locations | List Locations
 
 
 # **locations_find_by_region**
@@ -7403,7 +7403,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#locations_find_by_region) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **locations_find_by_region_and_id**
 > Location locations_find_by_region_and_id(region_id, location_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7480,7 +7480,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#locations_find_by_region_and_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **locations_get**
 > Locations locations_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7553,7 +7553,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#locations_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -7565,18 +7565,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacenters_servers_nics_delete**](NicApi.md#datacenters_servers_nics_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
-[**datacenters_servers_nics_find_by_id**](NicApi.md#datacenters_servers_nics_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
-[**datacenters_servers_nics_firewallrules_delete**](NicApi.md#datacenters_servers_nics_firewallrules_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule
-[**datacenters_servers_nics_firewallrules_find_by_id**](NicApi.md#datacenters_servers_nics_firewallrules_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule
-[**datacenters_servers_nics_firewallrules_get**](NicApi.md#datacenters_servers_nics_firewallrules_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules 
-[**datacenters_servers_nics_firewallrules_patch**](NicApi.md#datacenters_servers_nics_firewallrules_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule
-[**datacenters_servers_nics_firewallrules_post**](NicApi.md#datacenters_servers_nics_firewallrules_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule
-[**datacenters_servers_nics_firewallrules_put**](NicApi.md#datacenters_servers_nics_firewallrules_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule
-[**datacenters_servers_nics_get**](NicApi.md#datacenters_servers_nics_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics 
-[**datacenters_servers_nics_patch**](NicApi.md#datacenters_servers_nics_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic
-[**datacenters_servers_nics_post**](NicApi.md#datacenters_servers_nics_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic
-[**datacenters_servers_nics_put**](NicApi.md#datacenters_servers_nics_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic
+[**datacenters_servers_nics_delete**](#datacenters_servers_nics_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
+[**datacenters_servers_nics_find_by_id**](#datacenters_servers_nics_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
+[**datacenters_servers_nics_firewallrules_delete**](#datacenters_servers_nics_firewallrules_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule
+[**datacenters_servers_nics_firewallrules_find_by_id**](#datacenters_servers_nics_firewallrules_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule
+[**datacenters_servers_nics_firewallrules_get**](#datacenters_servers_nics_firewallrules_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules 
+[**datacenters_servers_nics_firewallrules_patch**](#datacenters_servers_nics_firewallrules_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule
+[**datacenters_servers_nics_firewallrules_post**](#datacenters_servers_nics_firewallrules_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule
+[**datacenters_servers_nics_firewallrules_put**](#datacenters_servers_nics_firewallrules_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule
+[**datacenters_servers_nics_get**](#datacenters_servers_nics_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics 
+[**datacenters_servers_nics_patch**](#datacenters_servers_nics_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic
+[**datacenters_servers_nics_post**](#datacenters_servers_nics_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic
+[**datacenters_servers_nics_put**](#datacenters_servers_nics_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic
 
 
 # **datacenters_servers_nics_delete**
@@ -7656,7 +7656,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_find_by_id**
 > Nic datacenters_servers_nics_find_by_id(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7735,7 +7735,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_delete**
 > object datacenters_servers_nics_firewallrules_delete(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7816,7 +7816,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_firewallrules_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_find_by_id**
 > FirewallRule datacenters_servers_nics_firewallrules_find_by_id(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7897,7 +7897,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_firewallrules_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_get**
 > FirewallRules datacenters_servers_nics_firewallrules_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -7976,7 +7976,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_firewallrules_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_patch**
 > FirewallRule datacenters_servers_nics_firewallrules_patch(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8059,7 +8059,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_firewallrules_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_post**
 > FirewallRule datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8140,7 +8140,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_firewallrules_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_put**
 > FirewallRule datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8223,7 +8223,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_firewallrules_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_get**
 > Nics datacenters_servers_nics_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8300,7 +8300,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_patch**
 > Nic datacenters_servers_nics_patch(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8381,7 +8381,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_post**
 > Nic datacenters_servers_nics_post(datacenter_id, server_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8460,7 +8460,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_put**
 > Nic datacenters_servers_nics_put(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8541,7 +8541,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_nics_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -8553,11 +8553,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pccs_delete**](PrivateCrossConnectApi.md#pccs_delete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect
-[**pccs_find_by_id**](PrivateCrossConnectApi.md#pccs_find_by_id) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect
-[**pccs_get**](PrivateCrossConnectApi.md#pccs_get) | **GET** /pccs | List Private Cross-Connects 
-[**pccs_patch**](PrivateCrossConnectApi.md#pccs_patch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect
-[**pccs_post**](PrivateCrossConnectApi.md#pccs_post) | **POST** /pccs | Create a Private Cross-Connect
+[**pccs_delete**](#pccs_delete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect
+[**pccs_find_by_id**](#pccs_find_by_id) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect
+[**pccs_get**](#pccs_get) | **GET** /pccs | List Private Cross-Connects 
+[**pccs_patch**](#pccs_patch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect
+[**pccs_post**](#pccs_post) | **POST** /pccs | Create a Private Cross-Connect
 
 
 # **pccs_delete**
@@ -8633,7 +8633,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#pccs_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **pccs_find_by_id**
 > PrivateCrossConnect pccs_find_by_id(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8708,7 +8708,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#pccs_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **pccs_get**
 > PrivateCrossConnects pccs_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8781,7 +8781,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#pccs_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **pccs_patch**
 > PrivateCrossConnect pccs_patch(pcc_id, pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8858,7 +8858,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#pccs_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **pccs_post**
 > PrivateCrossConnect pccs_post(pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -8933,7 +8933,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#pccs_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -8945,9 +8945,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**requests_find_by_id**](RequestApi.md#requests_find_by_id) | **GET** /requests/{requestId} | Retrieve a Request
-[**requests_get**](RequestApi.md#requests_get) | **GET** /requests | List Requests
-[**requests_status_get**](RequestApi.md#requests_status_get) | **GET** /requests/{requestId}/status | Retrieve Request Status
+[**requests_find_by_id**](#requests_find_by_id) | **GET** /requests/{requestId} | Retrieve a Request
+[**requests_get**](#requests_get) | **GET** /requests | List Requests
+[**requests_status_get**](#requests_status_get) | **GET** /requests/{requestId}/status | Retrieve Request Status
 
 
 # **requests_find_by_id**
@@ -9023,7 +9023,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#requests_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **requests_get**
 > Requests requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, filter_url=filter_url, filter_created_date=filter_created_date, filter_method=filter_method, filter_body=filter_body)
@@ -9110,7 +9110,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#requests_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **requests_status_get**
 > RequestStatus requests_status_get(request_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9185,7 +9185,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#requests_status_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -9197,24 +9197,24 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacenters_servers_cdroms_delete**](ServerApi.md#datacenters_servers_cdroms_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM
-[**datacenters_servers_cdroms_find_by_id**](ServerApi.md#datacenters_servers_cdroms_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM
-[**datacenters_servers_cdroms_get**](ServerApi.md#datacenters_servers_cdroms_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs 
-[**datacenters_servers_cdroms_post**](ServerApi.md#datacenters_servers_cdroms_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM
-[**datacenters_servers_delete**](ServerApi.md#datacenters_servers_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server
-[**datacenters_servers_find_by_id**](ServerApi.md#datacenters_servers_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server
-[**datacenters_servers_get**](ServerApi.md#datacenters_servers_get) | **GET** /datacenters/{datacenterId}/servers | List Servers 
-[**datacenters_servers_patch**](ServerApi.md#datacenters_servers_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server
-[**datacenters_servers_post**](ServerApi.md#datacenters_servers_post) | **POST** /datacenters/{datacenterId}/servers | Create a Server
-[**datacenters_servers_put**](ServerApi.md#datacenters_servers_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server
-[**datacenters_servers_reboot_post**](ServerApi.md#datacenters_servers_reboot_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server
-[**datacenters_servers_start_post**](ServerApi.md#datacenters_servers_start_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server
-[**datacenters_servers_stop_post**](ServerApi.md#datacenters_servers_stop_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server
-[**datacenters_servers_upgrade_post**](ServerApi.md#datacenters_servers_upgrade_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server
-[**datacenters_servers_volumes_delete**](ServerApi.md#datacenters_servers_volumes_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume
-[**datacenters_servers_volumes_find_by_id**](ServerApi.md#datacenters_servers_volumes_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume
-[**datacenters_servers_volumes_get**](ServerApi.md#datacenters_servers_volumes_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes
-[**datacenters_servers_volumes_post**](ServerApi.md#datacenters_servers_volumes_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume
+[**datacenters_servers_cdroms_delete**](#datacenters_servers_cdroms_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM
+[**datacenters_servers_cdroms_find_by_id**](#datacenters_servers_cdroms_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM
+[**datacenters_servers_cdroms_get**](#datacenters_servers_cdroms_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs 
+[**datacenters_servers_cdroms_post**](#datacenters_servers_cdroms_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM
+[**datacenters_servers_delete**](#datacenters_servers_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server
+[**datacenters_servers_find_by_id**](#datacenters_servers_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server
+[**datacenters_servers_get**](#datacenters_servers_get) | **GET** /datacenters/{datacenterId}/servers | List Servers 
+[**datacenters_servers_patch**](#datacenters_servers_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server
+[**datacenters_servers_post**](#datacenters_servers_post) | **POST** /datacenters/{datacenterId}/servers | Create a Server
+[**datacenters_servers_put**](#datacenters_servers_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server
+[**datacenters_servers_reboot_post**](#datacenters_servers_reboot_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server
+[**datacenters_servers_start_post**](#datacenters_servers_start_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server
+[**datacenters_servers_stop_post**](#datacenters_servers_stop_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server
+[**datacenters_servers_upgrade_post**](#datacenters_servers_upgrade_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server
+[**datacenters_servers_volumes_delete**](#datacenters_servers_volumes_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume
+[**datacenters_servers_volumes_find_by_id**](#datacenters_servers_volumes_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume
+[**datacenters_servers_volumes_get**](#datacenters_servers_volumes_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes
+[**datacenters_servers_volumes_post**](#datacenters_servers_volumes_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume
 
 
 # **datacenters_servers_cdroms_delete**
@@ -9294,7 +9294,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_cdroms_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_cdroms_find_by_id**
 > Image datacenters_servers_cdroms_find_by_id(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9373,7 +9373,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_cdroms_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_cdroms_get**
 > Cdroms datacenters_servers_cdroms_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9450,7 +9450,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_cdroms_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_cdroms_post**
 > Image datacenters_servers_cdroms_post(datacenter_id, server_id, cdrom, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9529,7 +9529,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_cdroms_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_delete**
 > object datacenters_servers_delete(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9606,7 +9606,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_find_by_id**
 > Server datacenters_servers_find_by_id(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9683,7 +9683,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_get**
 > Servers datacenters_servers_get(datacenter_id, pretty=pretty, depth=depth, upgrade_needed=upgrade_needed, x_contract_number=x_contract_number)
@@ -9760,7 +9760,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_patch**
 > Server datacenters_servers_patch(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9839,7 +9839,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_post**
 > Server datacenters_servers_post(datacenter_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9916,7 +9916,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_put**
 > Server datacenters_servers_put(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -9995,7 +9995,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_reboot_post**
 > object datacenters_servers_reboot_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10072,7 +10072,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_reboot_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_start_post**
 > object datacenters_servers_start_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10149,7 +10149,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_start_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_stop_post**
 > object datacenters_servers_stop_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10226,7 +10226,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_stop_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_upgrade_post**
 > object datacenters_servers_upgrade_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10303,7 +10303,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_upgrade_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_volumes_delete**
 > object datacenters_servers_volumes_delete(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10382,7 +10382,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_volumes_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_volumes_find_by_id**
 > Volume datacenters_servers_volumes_find_by_id(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10461,7 +10461,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_volumes_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_volumes_get**
 > AttachedVolumes datacenters_servers_volumes_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10538,7 +10538,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_volumes_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_volumes_post**
 > Volume datacenters_servers_volumes_post(datacenter_id, server_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10617,7 +10617,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_servers_volumes_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -10629,11 +10629,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**snapshots_delete**](SnapshotApi.md#snapshots_delete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot
-[**snapshots_find_by_id**](SnapshotApi.md#snapshots_find_by_id) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid.
-[**snapshots_get**](SnapshotApi.md#snapshots_get) | **GET** /snapshots | List Snapshots 
-[**snapshots_patch**](SnapshotApi.md#snapshots_patch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot
-[**snapshots_put**](SnapshotApi.md#snapshots_put) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot
+[**snapshots_delete**](#snapshots_delete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot
+[**snapshots_find_by_id**](#snapshots_find_by_id) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid.
+[**snapshots_get**](#snapshots_get) | **GET** /snapshots | List Snapshots 
+[**snapshots_patch**](#snapshots_patch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot
+[**snapshots_put**](#snapshots_put) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot
 
 
 # **snapshots_delete**
@@ -10709,7 +10709,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_find_by_id**
 > Snapshot snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10784,7 +10784,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_get**
 > Snapshots snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10857,7 +10857,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_patch**
 > Snapshot snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -10934,7 +10934,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_put**
 > Snapshot snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11011,7 +11011,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#snapshots_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -11023,36 +11023,36 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**um_groups_delete**](UserManagementApi.md#um_groups_delete) | **DELETE** /um/groups/{groupId} | Delete a Group
-[**um_groups_find_by_id**](UserManagementApi.md#um_groups_find_by_id) | **GET** /um/groups/{groupId} | Retrieve a Group
-[**um_groups_get**](UserManagementApi.md#um_groups_get) | **GET** /um/groups | List All Groups.
-[**um_groups_post**](UserManagementApi.md#um_groups_post) | **POST** /um/groups | Create a Group
-[**um_groups_put**](UserManagementApi.md#um_groups_put) | **PUT** /um/groups/{groupId} | Modify a group
-[**um_groups_resources_get**](UserManagementApi.md#um_groups_resources_get) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
-[**um_groups_shares_delete**](UserManagementApi.md#um_groups_shares_delete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
-[**um_groups_shares_find_by_resource**](UserManagementApi.md#um_groups_shares_find_by_resource) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
-[**um_groups_shares_get**](UserManagementApi.md#um_groups_shares_get) | **GET** /um/groups/{groupId}/shares | List Group Shares 
-[**um_groups_shares_post**](UserManagementApi.md#um_groups_shares_post) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
-[**um_groups_shares_put**](UserManagementApi.md#um_groups_shares_put) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
-[**um_groups_users_delete**](UserManagementApi.md#um_groups_users_delete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group
-[**um_groups_users_get**](UserManagementApi.md#um_groups_users_get) | **GET** /um/groups/{groupId}/users | List Group Members 
-[**um_groups_users_post**](UserManagementApi.md#um_groups_users_post) | **POST** /um/groups/{groupId}/users | Add a user to a group
-[**um_resources_find_by_type**](UserManagementApi.md#um_resources_find_by_type) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type.
-[**um_resources_find_by_type_and_id**](UserManagementApi.md#um_resources_find_by_type_and_id) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.
-[**um_resources_get**](UserManagementApi.md#um_resources_get) | **GET** /um/resources | List All Resources.
-[**um_users_delete**](UserManagementApi.md#um_users_delete) | **DELETE** /um/users/{userId} | Delete a User
-[**um_users_find_by_id**](UserManagementApi.md#um_users_find_by_id) | **GET** /um/users/{userId} | Retrieve a User
-[**um_users_get**](UserManagementApi.md#um_users_get) | **GET** /um/users | List all Users 
-[**um_users_groups_get**](UserManagementApi.md#um_users_groups_get) | **GET** /um/users/{userId}/groups | Retrieve a User&#39;s group resources
-[**um_users_owns_get**](UserManagementApi.md#um_users_owns_get) | **GET** /um/users/{userId}/owns | Retrieve a User&#39;s own resources
-[**um_users_post**](UserManagementApi.md#um_users_post) | **POST** /um/users | Create a user
-[**um_users_put**](UserManagementApi.md#um_users_put) | **PUT** /um/users/{userId} | Modify a user
-[**um_users_s3keys_delete**](UserManagementApi.md#um_users_s3keys_delete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
-[**um_users_s3keys_find_by_key**](UserManagementApi.md#um_users_s3keys_find_by_key) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
-[**um_users_s3keys_get**](UserManagementApi.md#um_users_s3keys_get) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
-[**um_users_s3keys_post**](UserManagementApi.md#um_users_s3keys_post) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user
-[**um_users_s3keys_put**](UserManagementApi.md#um_users_s3keys_put) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
-[**um_users_s3ssourl_get**](UserManagementApi.md#um_users_s3ssourl_get) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user
+[**um_groups_delete**](#um_groups_delete) | **DELETE** /um/groups/{groupId} | Delete a Group
+[**um_groups_find_by_id**](#um_groups_find_by_id) | **GET** /um/groups/{groupId} | Retrieve a Group
+[**um_groups_get**](#um_groups_get) | **GET** /um/groups | List All Groups.
+[**um_groups_post**](#um_groups_post) | **POST** /um/groups | Create a Group
+[**um_groups_put**](#um_groups_put) | **PUT** /um/groups/{groupId} | Modify a group
+[**um_groups_resources_get**](#um_groups_resources_get) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
+[**um_groups_shares_delete**](#um_groups_shares_delete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
+[**um_groups_shares_find_by_resource**](#um_groups_shares_find_by_resource) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
+[**um_groups_shares_get**](#um_groups_shares_get) | **GET** /um/groups/{groupId}/shares | List Group Shares 
+[**um_groups_shares_post**](#um_groups_shares_post) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
+[**um_groups_shares_put**](#um_groups_shares_put) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
+[**um_groups_users_delete**](#um_groups_users_delete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group
+[**um_groups_users_get**](#um_groups_users_get) | **GET** /um/groups/{groupId}/users | List Group Members 
+[**um_groups_users_post**](#um_groups_users_post) | **POST** /um/groups/{groupId}/users | Add a user to a group
+[**um_resources_find_by_type**](#um_resources_find_by_type) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type.
+[**um_resources_find_by_type_and_id**](#um_resources_find_by_type_and_id) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.
+[**um_resources_get**](#um_resources_get) | **GET** /um/resources | List All Resources.
+[**um_users_delete**](#um_users_delete) | **DELETE** /um/users/{userId} | Delete a User
+[**um_users_find_by_id**](#um_users_find_by_id) | **GET** /um/users/{userId} | Retrieve a User
+[**um_users_get**](#um_users_get) | **GET** /um/users | List all Users 
+[**um_users_groups_get**](#um_users_groups_get) | **GET** /um/users/{userId}/groups | Retrieve a User&#39;s group resources
+[**um_users_owns_get**](#um_users_owns_get) | **GET** /um/users/{userId}/owns | Retrieve a User&#39;s own resources
+[**um_users_post**](#um_users_post) | **POST** /um/users | Create a user
+[**um_users_put**](#um_users_put) | **PUT** /um/users/{userId} | Modify a user
+[**um_users_s3keys_delete**](#um_users_s3keys_delete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
+[**um_users_s3keys_find_by_key**](#um_users_s3keys_find_by_key) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
+[**um_users_s3keys_get**](#um_users_s3keys_get) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
+[**um_users_s3keys_post**](#um_users_s3keys_post) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user
+[**um_users_s3keys_put**](#um_users_s3keys_put) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
+[**um_users_s3ssourl_get**](#um_users_s3ssourl_get) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user
 
 
 # **um_groups_delete**
@@ -11128,7 +11128,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_find_by_id**
 > Group um_groups_find_by_id(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11203,7 +11203,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_get**
 > Groups um_groups_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11276,7 +11276,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_post**
 > Group um_groups_post(group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11351,7 +11351,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_put**
 > Group um_groups_put(group_id, group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11428,7 +11428,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_resources_get**
 > ResourceGroups um_groups_resources_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11501,7 +11501,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_resources_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_delete**
 > object um_groups_shares_delete(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11578,7 +11578,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_shares_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_find_by_resource**
 > GroupShare um_groups_shares_find_by_resource(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11655,7 +11655,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_shares_find_by_resource) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_get**
 > GroupShares um_groups_shares_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11730,7 +11730,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_shares_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_post**
 > GroupShare um_groups_shares_post(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11809,7 +11809,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_shares_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_put**
 > GroupShare um_groups_shares_put(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11888,7 +11888,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_shares_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_users_delete**
 > object um_groups_users_delete(group_id, user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -11965,7 +11965,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_users_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_users_get**
 > GroupMembers um_groups_users_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12040,7 +12040,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_users_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_users_post**
 > User um_groups_users_post(group_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12117,7 +12117,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_groups_users_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_resources_find_by_type**
 > Resources um_resources_find_by_type(resource_type, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12192,7 +12192,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_resources_find_by_type) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_resources_find_by_type_and_id**
 > Resource um_resources_find_by_type_and_id(resource_type, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12269,7 +12269,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_resources_find_by_type_and_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_resources_get**
 > Resources um_resources_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12342,7 +12342,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_resources_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_delete**
 > object um_users_delete(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12417,7 +12417,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_find_by_id**
 > User um_users_find_by_id(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12492,7 +12492,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_get**
 > Users um_users_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12565,7 +12565,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_groups_get**
 > ResourceGroups um_users_groups_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12640,7 +12640,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_groups_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_owns_get**
 > ResourcesUsers um_users_owns_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12715,7 +12715,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_owns_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_post**
 > User um_users_post(user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12790,7 +12790,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_put**
 > User um_users_put(user_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12867,7 +12867,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_delete**
 > object um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -12944,7 +12944,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_s3keys_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_find_by_key**
 > S3Key um_users_s3keys_find_by_key(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13021,7 +13021,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_s3keys_find_by_key) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_get**
 > S3Keys um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13096,7 +13096,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_s3keys_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_post**
 > S3Key um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13171,7 +13171,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_s3keys_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_put**
 > S3Key um_users_s3keys_put(user_id, key_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13250,7 +13250,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_s3keys_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3ssourl_get**
 > S3ObjectStorageSSO um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
@@ -13323,7 +13323,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#um_users_s3ssourl_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
 
@@ -13335,14 +13335,14 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacenters_volumes_create_snapshot_post**](VolumeApi.md#datacenters_volumes_create_snapshot_post) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot
-[**datacenters_volumes_delete**](VolumeApi.md#datacenters_volumes_delete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume
-[**datacenters_volumes_find_by_id**](VolumeApi.md#datacenters_volumes_find_by_id) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume
-[**datacenters_volumes_get**](VolumeApi.md#datacenters_volumes_get) | **GET** /datacenters/{datacenterId}/volumes | List Volumes 
-[**datacenters_volumes_patch**](VolumeApi.md#datacenters_volumes_patch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume
-[**datacenters_volumes_post**](VolumeApi.md#datacenters_volumes_post) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume
-[**datacenters_volumes_put**](VolumeApi.md#datacenters_volumes_put) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume
-[**datacenters_volumes_restore_snapshot_post**](VolumeApi.md#datacenters_volumes_restore_snapshot_post) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot
+[**datacenters_volumes_create_snapshot_post**](#datacenters_volumes_create_snapshot_post) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot
+[**datacenters_volumes_delete**](#datacenters_volumes_delete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume
+[**datacenters_volumes_find_by_id**](#datacenters_volumes_find_by_id) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume
+[**datacenters_volumes_get**](#datacenters_volumes_get) | **GET** /datacenters/{datacenterId}/volumes | List Volumes 
+[**datacenters_volumes_patch**](#datacenters_volumes_patch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume
+[**datacenters_volumes_post**](#datacenters_volumes_post) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume
+[**datacenters_volumes_put**](#datacenters_volumes_put) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume
+[**datacenters_volumes_restore_snapshot_post**](#datacenters_volumes_restore_snapshot_post) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot
 
 
 # **datacenters_volumes_create_snapshot_post**
@@ -13428,7 +13428,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_create_snapshot_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_delete**
 > object datacenters_volumes_delete(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13505,7 +13505,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_delete) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_find_by_id**
 > Volume datacenters_volumes_find_by_id(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13582,7 +13582,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_find_by_id) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_get**
 > Volumes datacenters_volumes_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13657,7 +13657,7 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_get) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_patch**
 > Volume datacenters_volumes_patch(datacenter_id, volume_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13736,7 +13736,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_patch) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_post**
 > Volume datacenters_volumes_post(datacenter_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13813,7 +13813,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_put**
 > Volume datacenters_volumes_put(datacenter_id, volume_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -13892,7 +13892,7 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_put) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_restore_snapshot_post**
 > object datacenters_volumes_restore_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, snapshot_id=snapshot_id)
@@ -13971,6 +13971,6 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-[[Back to top]](#) [[Back to API list]](#) [[Back to Model list]](../README.md#documentation-for-models)
+[[Back to resource methods]](#datacenters_volumes_restore_snapshot_post) [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
