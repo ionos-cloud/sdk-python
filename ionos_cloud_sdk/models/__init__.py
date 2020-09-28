@@ -13,7 +13,7 @@
 
 from __future__ import absolute_import
 
-# import models into model package - test new template 1243
+# import models into model package
 from ionos_cloud_sdk.models.attached_volumes import AttachedVolumes
 from ionos_cloud_sdk.models.backup_unit import BackupUnit
 from ionos_cloud_sdk.models.backup_unit_properties import BackupUnitProperties

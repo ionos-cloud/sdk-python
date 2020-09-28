@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b162e3a9-8cc4-4006-b1cb-9f179adb7635" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/python-templates/README.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/python-templates/README.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +41,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="167" y="125" width="1653" height="855" key="com.intellij.history.integration.ui.views.FileHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1601293459688" />
-    <state x="684" y="291" width="688" height="522" key="find.popup" timestamp="1601296539119">
+    <state x="684" y="291" width="738" height="522" key="find.popup" timestamp="1601298261345">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="684" y="291" width="688" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601296539119" />
+    <state x="684" y="291" width="738" height="522" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1601298261345" />
     <state x="656" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1601293592358">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
