@@ -82,14 +82,14 @@ with {{{packageName}}}.ApiClient(configuration) as api_client:
 All URIs are relative to *{{basePath}}*
 
 {{#apiInfo}}
-    {{#apis}}
-        {{classname}}
-        {{#operations}}
-            {{#operation}}
-                [{{operationId}}!]({{apiDocPath}}{{classname}}.md#{{operationIdLowerCase}}) ({{#summary}}{{summary}}{{/summary}})
-            {{/operation}}
-        {{/operations}}
-    {{/apis}}
+{{#apis}}
+####{{classname}}
+{{#operations}}
+{{#operation}}
+- [{{#summary}}{{summary}}{{/summary}}]({{apiDocPath}}{{classname}}.md#{{operationIdLowerCase}})
+{{/operation}}
+{{/operations}}
+{{/apis}}
 {{/apiInfo}}
 
 ## Documentation For Models
