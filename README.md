@@ -361,6 +361,7 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -411,7 +412,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling BackupUnitApi->backupunits_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -502,6 +503,7 @@ You can retrieve the details of an specific backup unit.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -552,7 +554,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling BackupUnitApi->backupunits_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -643,6 +645,7 @@ You can retrieve a complete list of backup Units that you have access to.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -692,7 +695,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling BackupUnitApi->backupunits_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -781,6 +784,7 @@ You can use update a backup Unit properties
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -832,7 +836,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling BackupUnitApi->backupunits_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -925,6 +929,7 @@ Create a Backup Unit. A Backup Unit is considered a resource like a virtual data
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -975,7 +980,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling BackupUnitApi->backupunits_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1066,6 +1071,7 @@ You can use update a backup Unit properties
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1117,7 +1123,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling BackupUnitApi->backupunits_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1210,6 +1216,7 @@ Returns a single signon URL for the specified backup Unit.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1259,7 +1266,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling BackupUnitApi->backupunits_ssourl_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1361,6 +1368,7 @@ Retrieves the attributes of user's contract.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1410,7 +1418,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ContractApi->contracts_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1517,6 +1525,7 @@ Will remove all objects within the datacenter and remove the datacenter object i
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1567,7 +1576,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling DataCenterApi->datacenters_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1658,6 +1667,7 @@ You can retrieve a data center by using the resource's ID. This value can be fou
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1708,7 +1718,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling DataCenterApi->datacenters_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1799,6 +1809,7 @@ You can retrieve a complete list of data centers provisioned under your account
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1848,7 +1859,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling DataCenterApi->datacenters_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1937,6 +1948,7 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -1988,7 +2000,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling DataCenterApi->datacenters_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2081,6 +2093,7 @@ Virtual data centers are the foundation of the platform. They act as logical con
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2131,7 +2144,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling DataCenterApi->datacenters_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2222,6 +2235,7 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2273,7 +2287,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling DataCenterApi->datacenters_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2384,6 +2398,7 @@ Removes the specific IP Block
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2434,7 +2449,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling IPBlocksApi->ipblocks_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2525,6 +2540,7 @@ Retrieves the attributes of a given IP Block.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2575,7 +2591,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling IPBlocksApi->ipblocks_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2666,6 +2682,7 @@ Retrieve a list of all reserved IP Blocks
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2715,7 +2732,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling IPBlocksApi->ipblocks_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2804,6 +2821,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2855,7 +2873,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling IPBlocksApi->ipblocks_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2948,6 +2966,7 @@ This will reserve a new IP Block
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -2998,7 +3017,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling IPBlocksApi->ipblocks_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3089,6 +3108,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3140,7 +3160,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling IPBlocksApi->ipblocks_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3250,6 +3270,7 @@ Deletes the specified image. This operation is permitted on private image only.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3300,7 +3321,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ImageApi->images_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3391,6 +3412,7 @@ Retrieves the attributes of a given image.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3441,7 +3463,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ImageApi->images_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3532,6 +3554,7 @@ Retrieve a list of images within the datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3581,7 +3604,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ImageApi->images_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3670,6 +3693,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3721,7 +3745,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ImageApi->images_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3814,6 +3838,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3865,7 +3890,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ImageApi->images_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -3988,6 +4013,7 @@ This will remove a Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4038,7 +4064,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4129,6 +4155,7 @@ This will retrieve a single Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4179,7 +4206,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_find_by_clusterid: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4270,6 +4297,7 @@ You can retrieve a list of all kubernetes clusters associated with a contract
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4319,7 +4347,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4408,6 +4436,7 @@ You can retrieve kubernetes configuration file for the kubernetes cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4458,7 +4487,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_kubeconfig_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4549,6 +4578,7 @@ This will remove a Kubernetes Node Pool.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4600,7 +4630,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4693,6 +4723,7 @@ You can retrieve a single Kubernetes Node Pool.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4744,7 +4775,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4837,6 +4868,7 @@ You can retrieve a list of all kubernetes node pools part of kubernetes cluster
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4887,7 +4919,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -4978,6 +5010,7 @@ This will remove a Kubernetes node.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5030,7 +5063,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_nodes_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5125,6 +5158,7 @@ You can retrieve a single Kubernetes Node.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5177,7 +5211,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_nodes_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5272,6 +5306,7 @@ You can retrieve all nodes of Kubernetes Node Pool.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5323,7 +5358,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_nodes_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5416,6 +5451,7 @@ You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5468,7 +5504,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_nodes_replace_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5563,6 +5599,7 @@ This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5614,7 +5651,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5707,6 +5744,7 @@ This will modify the Kubernetes Node Pool.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5759,7 +5797,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_nodepools_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5854,6 +5892,7 @@ This will create a new Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5904,7 +5943,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -5995,6 +6034,7 @@ This will modify the Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6046,7 +6086,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling KubernetesApi->k8s_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6139,6 +6179,7 @@ You can retrieve a list of available kubernetes versions for nodepools depending
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6186,7 +6227,7 @@ with ionos_cloud_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling KubernetesApi->k8s_versions_compatibilities_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6271,6 +6312,7 @@ You can retrieve the current default kubernetes version for clusters and nodepoo
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6317,7 +6359,7 @@ with ionos_cloud_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling KubernetesApi->k8s_versions_default_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6398,6 +6440,7 @@ You can retrieve a list of available kubernetes versions
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6444,7 +6487,7 @@ with ionos_cloud_sdk.ApiClient(configuration) as api_client:
         print("Exception when calling KubernetesApi->k8s_versions_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6564,6 +6607,7 @@ This will remove a label from the data center.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6615,7 +6659,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_labels_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6708,6 +6752,7 @@ This will retrieve the properties of a associated label to a data center.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6759,7 +6804,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_labels_find_by_key: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6852,6 +6897,7 @@ You can retrieve a list of all labels associated with a data center
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6902,7 +6948,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_labels_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -6993,6 +7039,7 @@ This will add a label to the data center.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7044,7 +7091,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_labels_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7137,6 +7184,7 @@ This will modify the value of the label on a data center.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7189,7 +7237,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_labels_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7284,6 +7332,7 @@ This will remove a label from the server.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7336,7 +7385,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_servers_labels_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7431,6 +7480,7 @@ This will retrieve the properties of a associated label to a server.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7483,7 +7533,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_servers_labels_find_by_key: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7578,6 +7628,7 @@ You can retrieve a list of all labels associated with a server
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7629,7 +7680,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_servers_labels_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7722,6 +7773,7 @@ This will add a label to the server.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7774,7 +7826,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_servers_labels_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7869,6 +7921,7 @@ This will modify the value of the label on a server.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -7922,7 +7975,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_servers_labels_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8019,6 +8072,7 @@ This will remove a label from the volume.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8071,7 +8125,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_volumes_labels_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8166,6 +8220,7 @@ This will retrieve the properties of a associated label to a volume.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8218,7 +8273,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_volumes_labels_find_by_key: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8313,6 +8368,7 @@ You can retrieve a list of all labels associated with a volume
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8364,7 +8420,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_volumes_labels_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8457,6 +8513,7 @@ This will add a label to the volume.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8509,7 +8566,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_volumes_labels_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8604,6 +8661,7 @@ This will modify the value of the label on a volume.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8657,7 +8715,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->datacenters_volumes_labels_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8754,6 +8812,7 @@ This will remove a label from the Ip Block.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8805,7 +8864,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->ipblocks_labels_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8898,6 +8957,7 @@ This will retrieve the properties of a associated label to a Ip Block.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -8949,7 +9009,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->ipblocks_labels_find_by_key: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9042,6 +9102,7 @@ You can retrieve a list of all labels associated with a IP Block
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9092,7 +9153,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->ipblocks_labels_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9183,6 +9244,7 @@ This will add a label to the Ip Block.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9234,7 +9296,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->ipblocks_labels_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9327,6 +9389,7 @@ This will modify the value of the label on a Ip Block.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9379,7 +9442,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->ipblocks_labels_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9474,6 +9537,7 @@ You can retrieve the details of a specific label using its URN. A URN is for uni
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9524,7 +9588,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->labels_find_by_labelurn: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9615,6 +9679,7 @@ You can retrieve a complete list of labels that you have access to.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9664,7 +9729,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->labels_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9753,6 +9818,7 @@ This will remove a label from the snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9804,7 +9870,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->snapshots_labels_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9897,6 +9963,7 @@ This will retrieve the properties of a associated label to a snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -9948,7 +10015,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->snapshots_labels_find_by_key: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10041,6 +10108,7 @@ You can retrieve a list of all labels associated with a snapshot
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10091,7 +10159,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->snapshots_labels_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10182,6 +10250,7 @@ This will add a label to the snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10233,7 +10302,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->snapshots_labels_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10326,6 +10395,7 @@ This will modify the value of the label on a snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10378,7 +10448,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LabelApi->snapshots_labels_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10494,6 +10564,7 @@ Removes the specific Lan
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10545,7 +10616,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10638,6 +10709,7 @@ Retrieves the attributes of a given LAN
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10689,7 +10761,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10782,6 +10854,7 @@ Retrieve a list of LANs within the datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10832,7 +10905,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10923,6 +10996,7 @@ This will retrieve the properties of an attached nic.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -10975,7 +11049,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_nics_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11070,6 +11144,7 @@ You can retrieve a list of nics attached to a lan
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11121,7 +11196,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_nics_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11214,6 +11289,7 @@ This will attach a pre-existing nic to a lan.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11266,7 +11342,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_nics_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11361,6 +11437,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11413,7 +11490,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11508,6 +11585,7 @@ Creates a LAN within the datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11559,7 +11637,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11652,6 +11730,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11704,7 +11783,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LanApi->datacenters_lans_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11821,6 +11900,7 @@ This will remove a nic from Load Balancer
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11873,7 +11953,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_balancednics_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -11968,6 +12048,7 @@ This will retrieve the properties of an attached nic.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12020,7 +12101,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_balancednics_find_by_nic: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12115,6 +12196,7 @@ You can retrieve a list of nics attached to a Load Balancer
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12166,7 +12248,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_balancednics_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12259,6 +12341,7 @@ This will attach a pre-existing nic to a Load Balancer.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12311,7 +12394,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_balancednics_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12406,6 +12489,7 @@ Removes the specific Loadbalancer
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12457,7 +12541,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12550,6 +12634,7 @@ Retrieves the attributes of a given Loadbalancer
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12601,7 +12686,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12694,6 +12779,7 @@ Retrieve a list of Load Balancers within the datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12744,7 +12830,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12835,6 +12921,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12887,7 +12974,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -12982,6 +13069,7 @@ Creates a Loadbalancer within the datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13033,7 +13121,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13126,6 +13214,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13178,7 +13267,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13288,6 +13377,7 @@ Retrieve a list of Locations within a world's region
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13338,7 +13428,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LocationApi->locations_find_by_region: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13429,6 +13519,7 @@ Retrieves the attributes of a given location
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13480,7 +13571,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LocationApi->locations_find_by_region_and_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13573,6 +13664,7 @@ Retrieve a list of Locations. This list represents where you can provision your 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13622,7 +13714,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling LocationApi->locations_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13735,6 +13827,7 @@ Deletes the specified NIC.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13787,7 +13880,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13882,6 +13975,7 @@ Retrieves the attributes of a given NIC
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -13934,7 +14028,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14029,6 +14123,7 @@ Removes the specific Firewall Rule
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14082,7 +14177,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14179,6 +14274,7 @@ Retrieves the attributes of a given Firewall Rule.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14232,7 +14328,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14329,6 +14425,7 @@ Retrieves a list of firewall rules associated with a particular NIC
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14381,7 +14478,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14476,6 +14573,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14530,7 +14628,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14629,6 +14727,7 @@ This will add a Firewall Rule to the NIC
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14682,7 +14781,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14779,6 +14878,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14833,7 +14933,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14932,6 +15032,7 @@ Retrieves a list of NICs.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -14983,7 +15084,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15076,6 +15177,7 @@ You can use update attributes of a Nic
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15129,7 +15231,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15226,6 +15328,7 @@ Adds a NIC to the target server. Combine count of Nics and volumes attached to t
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15278,7 +15381,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15373,6 +15476,7 @@ You can use update attributes of a Nic
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15426,7 +15530,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling NicApi->datacenters_servers_nics_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15540,6 +15644,7 @@ Delete a private cross-connect if no datacenters are joined to the given PCC
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15590,7 +15695,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling PrivateCrossConnectApi->pccs_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15681,6 +15786,7 @@ You can retrieve a private cross-connect by using the resource's ID. This value 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15731,7 +15837,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling PrivateCrossConnectApi->pccs_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15822,6 +15928,7 @@ You can retrieve a complete list of private cross-connects provisioned under you
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15871,7 +15978,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling PrivateCrossConnectApi->pccs_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -15960,6 +16067,7 @@ You can use update private cross-connect to re-name or update its description
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16011,7 +16119,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling PrivateCrossConnectApi->pccs_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16104,6 +16212,7 @@ You can use this POST method to create a private cross-connect
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16154,7 +16263,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling PrivateCrossConnectApi->pccs_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16260,6 +16369,7 @@ Retrieves the attributes of a given request.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16310,7 +16420,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling RequestApi->requests_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16401,6 +16511,7 @@ Retrieve a list of API requests.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16457,7 +16568,7 @@ filter_body = 'filter_body_example' # str | Url filter (optional)
         print("Exception when calling RequestApi->requests_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16560,6 +16671,7 @@ Retrieves the status of a given request.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16610,7 +16722,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling RequestApi->requests_status_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16731,6 +16843,7 @@ This will detach a CD-ROM from the server
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16783,7 +16896,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_cdroms_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16878,6 +16991,7 @@ You can retrieve a specific CD-ROM attached to the server
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -16930,7 +17044,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_cdroms_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17025,6 +17139,7 @@ You can retrieve a list of CD-ROMs attached to the server.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17076,7 +17191,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_cdroms_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17169,6 +17284,7 @@ You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17221,7 +17337,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_cdroms_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17316,6 +17432,7 @@ This will remove a server from your datacenter; however, it will not remove the 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17367,7 +17484,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17460,6 +17577,7 @@ Returns information about a server such as its configuration, provisioning statu
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17511,7 +17629,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17604,6 +17722,7 @@ You can retrieve a list of servers within a datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17655,7 +17774,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17748,6 +17867,7 @@ You can use update attributes of a server
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17800,7 +17920,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17895,6 +18015,7 @@ Creates a server within an existing datacenter. You can configure the boot volum
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -17946,7 +18067,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18039,6 +18160,7 @@ Allows to modify the attributes of a Server. From v5 onwards 'allowReboot' attri
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18091,7 +18213,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18186,6 +18308,7 @@ This will force a hard reboot of the server. Do not use this method if you want 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18237,7 +18360,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_reboot_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18330,6 +18453,7 @@ This will start a server. If the server's public IP was deallocated then a new I
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18381,7 +18505,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_start_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18474,6 +18598,7 @@ This will stop a server. The machine will be forcefully powered off, billing wil
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18525,7 +18650,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_stop_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18618,6 +18743,7 @@ This will upgrade the version of the server, if needed. To verify if there is an
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18669,7 +18795,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_upgrade_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18762,6 +18888,7 @@ This will detach the volume from the server. This will not delete the volume fro
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18814,7 +18941,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_volumes_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18909,6 +19036,7 @@ This will retrieve the properties of an attached volume.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -18961,7 +19089,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling ServerApi->datacenters_servers_volumes_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19056,6 +19184,7 @@ You can retrieve a list of volumes attached to the server
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19138,6 +19267,7 @@ This will attach a pre-existing storage volume to the server. It is also possibl
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19239,6 +19369,7 @@ Deletes the specified Snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19289,7 +19420,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling SnapshotApi->snapshots_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19380,6 +19511,7 @@ Retrieves the attributes of a given Snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19430,7 +19562,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling SnapshotApi->snapshots_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19521,6 +19653,7 @@ Retrieve a list of available snapshots.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19570,7 +19703,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling SnapshotApi->snapshots_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19659,6 +19792,7 @@ You can use this method to update attributes of a Snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19710,7 +19844,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling SnapshotApi->snapshots_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19803,6 +19937,7 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19854,7 +19989,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling SnapshotApi->snapshots_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -19989,6 +20124,7 @@ Delete a group
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20039,7 +20175,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20130,6 +20266,7 @@ You can retrieve a group by using the group ID. This value can be found in the r
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20180,7 +20317,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20271,6 +20408,7 @@ You can retrieve a complete list of all groups that you have access to
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20320,7 +20458,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20409,6 +20547,7 @@ You can use this POST method to create a group
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20459,7 +20598,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20550,6 +20689,7 @@ You can use this method to update properties of the group.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20601,7 +20741,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20692,6 +20832,7 @@ Retrieve resources assigned to a group
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20742,7 +20883,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_resources_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20833,6 +20974,7 @@ This will remove a resource from a group
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20884,7 +21026,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_shares_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -20977,6 +21119,7 @@ This will retrieve the properties of a group share.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21028,7 +21171,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_shares_find_by_resource: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21121,6 +21264,7 @@ You can retrieve a list of all resources along with their permissions of the gro
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21171,7 +21315,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_shares_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21262,6 +21406,7 @@ This will add a resource to the group.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21314,7 +21459,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_shares_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21409,6 +21554,7 @@ You can use update resource permissions of a group. If empty body will be provid
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21461,7 +21607,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_shares_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21556,6 +21702,7 @@ This will remove a user from a group
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21607,7 +21754,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_users_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21700,6 +21847,7 @@ You can retrieve a list of users who are members of the group
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21750,7 +21898,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_users_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21841,6 +21989,7 @@ This will attach a pre-existing user to a group.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21892,7 +22041,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_groups_users_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -21985,6 +22134,7 @@ You can retrieve a list of resources by using the type. Allowed values are { dat
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22035,7 +22185,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_resources_find_by_type: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22126,6 +22276,7 @@ You can retrieve a resource by using the type and its uuid. Allowed values for t
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22177,7 +22328,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_resources_find_by_type_and_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22270,6 +22421,7 @@ You can retrieve a complete list of all resources that you have access to
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22319,7 +22471,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_resources_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22408,6 +22560,7 @@ Delete a user
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22458,7 +22611,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22549,6 +22702,7 @@ You can retrieve user details by using the users ID. This value can be found in 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22599,7 +22753,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22690,6 +22844,7 @@ You can retrieve a complete list of users under your account
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22739,7 +22894,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22828,6 +22983,7 @@ You can retrieve group resources of user by using the users ID. This value can b
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22878,7 +23034,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_groups_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -22969,6 +23125,7 @@ You can retrieve resources owned by using the users ID. This value can be found 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23019,7 +23176,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_owns_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23110,6 +23267,7 @@ You can use this POST method to create a user
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23160,7 +23318,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23251,6 +23409,7 @@ You can use update attributes of a User
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23302,7 +23461,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23395,6 +23554,7 @@ Delete a S3 key
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23446,7 +23606,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_s3keys_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23539,6 +23699,7 @@ You can retrieve S3 key belonging to the given User. This user Id can be found i
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23590,7 +23751,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_s3keys_find_by_key: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23683,6 +23844,7 @@ You can retrieve S3 keys owned by a user by using the users ID. This user Id can
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23733,7 +23895,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_s3keys_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23824,6 +23986,7 @@ Creates a S3 key for the given user. This user Id can be found in the response b
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23874,7 +24037,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_s3keys_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -23965,6 +24128,7 @@ You can enable or disable a given S3 key
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24017,7 +24181,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_s3keys_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24112,6 +24276,7 @@ You can retrieve S3 object storage single signon URL for the given user. This us
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24161,7 +24326,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling UserManagementApi->um_users_s3ssourl_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24270,6 +24435,7 @@ Creates a snapshot of a volume within the datacenter. You can use a snapshot to 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24325,7 +24491,7 @@ licence_type = 'licence_type_example' # str | The OS type of this Snapshot (opti
         print("Exception when calling VolumeApi->datacenters_volumes_create_snapshot_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24426,6 +24592,7 @@ Deletes the specified volume. This will result in the volume being removed from 
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24477,7 +24644,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling VolumeApi->datacenters_volumes_delete: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24570,6 +24737,7 @@ Retrieves the attributes of a given Volume
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24621,7 +24789,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling VolumeApi->datacenters_volumes_find_by_id: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24714,6 +24882,7 @@ Retrieves a list of Volumes.
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24764,7 +24933,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling VolumeApi->datacenters_volumes_get: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24855,6 +25024,7 @@ You can use update attributes of a Volume
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -24907,7 +25077,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling VolumeApi->datacenters_volumes_patch: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -25002,6 +25172,7 @@ Creates a volume within the datacenter. This will not attach the volume to a ser
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -25053,7 +25224,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling VolumeApi->datacenters_volumes_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -25146,6 +25317,7 @@ You can use update attributes of a Volume
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -25198,7 +25370,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
         print("Exception when calling VolumeApi->datacenters_volumes_put: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -25293,6 +25465,7 @@ This will restore a snapshot onto a volume. A snapshot is created as just anothe
 ### Example
 
 * Basic Authentication (Basic Authentication):
+
 ```python
 from __future__ import print_function
 import time
@@ -25345,7 +25518,7 @@ snapshot_id = 'snapshot_id_example' # str | This is the ID of the snapshot (opti
         print("Exception when calling VolumeApi->datacenters_volumes_restore_snapshot_post: %s\n" % e)
 ```
 
-* Api Key Authentication (Token Authentication):
+
 ```python
 from __future__ import print_function
 import time

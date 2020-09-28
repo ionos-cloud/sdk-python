@@ -132,12 +132,7 @@ Method | HTTP request | Description
 * Bearer{{#bearerFormat}} ({{{.}}}){{/bearerFormat}} Authentication ({{name}}):
 {{/isBasicBearer}}
 {{/isBasic}}
-{{#isApiKey}}
-* Api Key Authentication ({{name}}):
-{{/isApiKey }}
-{{#isOAuth}}
-* OAuth Authentication ({{name}}):
-{{/isOAuth }}
+
 {{> api_doc_example }}
 {{/authMethods}}
 {{/hasAuthMethods}}
