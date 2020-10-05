@@ -154,6 +154,9 @@ class ApiClient(object):
     def user_agent(self, value):
         self.default_headers['User-Agent'] = value
 
+    """Default maximum number of api call retries"""
+    max_retries = 3
+
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
 
@@ -223,12 +226,20 @@ class ApiClient(object):
             url = _host + resource_path
 
         try:
-            # perform request and return response
-            response_data = {{#asyncio}}await {{/asyncio}}{{#tornado}}yield {{/tornado}}self.request(
-                method, url, query_params=query_params, headers=header_params,
-                post_params=post_params, body=body,
-                _preload_content=_preload_content,
-                _request_timeout=_request_timeout)
+            number_of_calls = 0
+            while True:
+                # perform request and return response
+                response_data = {{#asyncio}}await {{/asyncio}}{{#tornado}}yield {{/tornado}}self.request(
+                    method, url, query_params=query_params, headers=header_params,
+                    post_params=post_params, body=body,
+                    _preload_content=_preload_content,
+                    _request_timeout=_request_timeout)
+                number_of_calls += 1
+                retry_after_value = response_data.getheader('retry-after')
+                if retry_after_value is None or number_of_calls >= self.max_retries:
+                    break
+                else:
+                    time.sleep(int(retry_after_value))
         except ApiException as e:
             e.body = e.body.decode('utf-8') if six.PY3 else e.body
             e.url = url

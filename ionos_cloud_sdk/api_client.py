@@ -229,9 +229,7 @@ class ApiClient(object):
                 if retry_after_value is None or number_of_calls >= self.max_retries:
                     break
                 else:
-                    time.sleep(retry_after_value)
-
-
+                    time.sleep(int(retry_after_value))
         except ApiException as e:
             e.body = e.body.decode('utf-8') if six.PY3 else e.body
             e.url = url
