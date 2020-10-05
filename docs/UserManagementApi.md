@@ -3397,7 +3397,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **um_users_s3keys_put**
-> S3Key um_users_s3keys_put(user_id, key_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> S3Key um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a S3 key having the given key id
 
@@ -3434,14 +3434,14 @@ with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     api_instance = ionos_cloud_sdk.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | 
 key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-user = ionos_cloud_sdk.S3Key() # S3Key | Modified user
+s3_key = ionos_cloud_sdk.S3Key() # S3Key | Modified S3Key
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
 
     try:
         # Modify a S3 key having the given key id
-        api_response = api_instance.um_users_s3keys_put(user_id, key_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_s3keys_put: %s\n" % e)
@@ -3476,14 +3476,14 @@ with ionos_cloud_sdk.ApiClient(configuration) as api_client:
     api_instance = ionos_cloud_sdk.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | 
 key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-user = ionos_cloud_sdk.S3Key() # S3Key | Modified user
+s3_key = ionos_cloud_sdk.S3Key() # S3Key | Modified S3Key
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
 
     try:
         # Modify a S3 key having the given key id
-        api_response = api_instance.um_users_s3keys_put(user_id, key_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_s3keys_put: %s\n" % e)
@@ -3495,7 +3495,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **str**|  | 
  **key_id** | **str**| The unique access key ID of the S3 key | 
- **user** | [**S3Key**](S3Key.md)| Modified user | 
+ **s3_key** | [**S3Key**](S3Key.md)| Modified S3Key | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] 

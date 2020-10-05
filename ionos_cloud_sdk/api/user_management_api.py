@@ -4657,22 +4657,22 @@ class UserManagementApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def um_users_s3keys_put(self, user_id, key_id, user, **kwargs):  # noqa: E501
+    def um_users_s3keys_put(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
         """Modify a S3 key having the given key id  # noqa: E501
 
         You can enable or disable a given S3 key  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.um_users_s3keys_put(user_id, key_id, user, async_req=True)
+        >>> thread = api.um_users_s3keys_put(user_id, key_id, s3_key, async_req=True)
         >>> result = thread.get()
 
         :param user_id: (required)
         :type user_id: str
         :param key_id: The unique access key ID of the S3 key (required)
         :type key_id: str
-        :param user: Modified user (required)
-        :type user: S3Key
+        :param s3_key: Modified S3Key (required)
+        :type s3_key: S3Key
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -4695,24 +4695,24 @@ class UserManagementApi(object):
         :rtype: S3Key
         """
         kwargs['_return_http_data_only'] = True
-        return self.um_users_s3keys_put_with_http_info(user_id, key_id, user, **kwargs)  # noqa: E501
+        return self.um_users_s3keys_put_with_http_info(user_id, key_id, s3_key, **kwargs)  # noqa: E501
 
-    def um_users_s3keys_put_with_http_info(self, user_id, key_id, user, **kwargs):  # noqa: E501
+    def um_users_s3keys_put_with_http_info(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
         """Modify a S3 key having the given key id  # noqa: E501
 
         You can enable or disable a given S3 key  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.um_users_s3keys_put_with_http_info(user_id, key_id, user, async_req=True)
+        >>> thread = api.um_users_s3keys_put_with_http_info(user_id, key_id, s3_key, async_req=True)
         >>> result = thread.get()
 
         :param user_id: (required)
         :type user_id: str
         :param key_id: The unique access key ID of the S3 key (required)
         :type key_id: str
-        :param user: Modified user (required)
-        :type user: S3Key
+        :param s3_key: Modified S3Key (required)
+        :type s3_key: S3Key
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -4747,7 +4747,7 @@ class UserManagementApi(object):
         all_params = [
             'user_id',
             'key_id',
-            'user',
+            's3_key',
             'pretty',
             'depth',
             'x_contract_number'
@@ -4779,10 +4779,10 @@ class UserManagementApi(object):
         if self.api_client.client_side_validation and ('key_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['key_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `key_id` when calling `um_users_s3keys_put`")  # noqa: E501
-        # verify the required parameter 'user' is set
-        if self.api_client.client_side_validation and ('user' not in local_var_params or  # noqa: E501
-                                                        local_var_params['user'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `user` when calling `um_users_s3keys_put`")  # noqa: E501
+        # verify the required parameter 's3_key' is set
+        if self.api_client.client_side_validation and ('s3_key' not in local_var_params or  # noqa: E501
+                                                        local_var_params['s3_key'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `s3_key` when calling `um_users_s3keys_put`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `um_users_s3keys_put`, must be a value less than or equal to `10`")  # noqa: E501
@@ -4810,8 +4810,8 @@ class UserManagementApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'user' in local_var_params:
-            body_params = local_var_params['user']
+        if 's3_key' in local_var_params:
+            body_params = local_var_params['s3_key']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
