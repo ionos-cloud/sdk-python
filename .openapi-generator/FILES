@@ -1,7 +1,7 @@
 .gitignore
 .gitlab-ci.yml
 .travis.yml
-Overview.md
+DOCS.md
 README.md
 docs/AttachedVolumes.md
 docs/BackupUnit.md
