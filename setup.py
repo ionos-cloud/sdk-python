@@ -60,7 +60,6 @@ setup(
          'Topic :: Software Development :: Libraries :: Application Frameworks',
          'Topic :: Internet :: WWW/HTTP'],
     project_urls={
-        'Documentation': 'https://github.com/ionos-cloud/ionos-cloud-sdk-python/blob/master/DOCS.md',
-        'Source Code': 'https://github.com/ionos-cloud/ionos-cloud-sdk-python'
+        'Documentation': 'https://github.com/ionos-cloud/ionos-cloud-sdk-python/blob/master/DOCS.md'
     }
 )
