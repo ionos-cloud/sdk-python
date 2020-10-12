@@ -15,7 +15,7 @@ import os
 import codecs
 
 NAME = "ionos-cloud-sdk"
-VERSION = "1.0.0"
+VERSION = "0.0.1"
 # To install the library, run the following
 #
 # python setup.py install
