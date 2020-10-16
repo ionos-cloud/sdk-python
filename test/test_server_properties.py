@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.server_properties import ServerProperties  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.server_properties import ServerProperties  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestServerProperties(unittest.TestCase):
     """ServerProperties unit test stubs"""
@@ -33,7 +33,7 @@ class TestServerProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.server_properties.ServerProperties()  # noqa: E501
+        # model = ionossdk.models.server_properties.ServerProperties()  # noqa: E501
         if include_optional :
             return ServerProperties(
                 name = 'My resource', 
@@ -41,11 +41,11 @@ class TestServerProperties(unittest.TestCase):
                 ram = 4096, 
                 availability_zone = 'AUTO', 
                 vm_state = 'RUNNING', 
-                boot_cdrom = ionos_cloud_sdk_python.models.resource_reference.ResourceReference(
+                boot_cdrom = ionossdk.models.resource_reference.ResourceReference(
                     id = '0', 
                     type = "resource", 
                     href = '<RESOURCE-URI>', ), 
-                boot_volume = ionos_cloud_sdk_python.models.resource_reference.ResourceReference(
+                boot_volume = ionossdk.models.resource_reference.ResourceReference(
                     id = '0', 
                     type = "resource", 
                     href = '<RESOURCE-URI>', ), 

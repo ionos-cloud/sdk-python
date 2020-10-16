@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.label_resources import LabelResources  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.label_resources import LabelResources  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestLabelResources(unittest.TestCase):
     """LabelResources unit test stubs"""
@@ -33,18 +33,18 @@ class TestLabelResources(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.label_resources.LabelResources()  # noqa: E501
+        # model = ionossdk.models.label_resources.LabelResources()  # noqa: E501
         if include_optional :
             return LabelResources(
                 id = 'labels', 
                 type = 'collection', 
                 href = '<RESOURCE-URI>', 
                 items = [
-                    ionos_cloud_sdk_python.models.label_resource.LabelResource(
+                    ionossdk.models.label_resource.LabelResource(
                         id = 'environment', 
                         type = 'label', 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.no_state_meta_data.NoStateMetaData(
+                        metadata = ionossdk.models.no_state_meta_data.NoStateMetaData(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
@@ -52,7 +52,7 @@ class TestLabelResources(unittest.TestCase):
                             last_modified_date = '2015-12-04T14:34:09.809Z', 
                             last_modified_by = 'user@example.com', 
                             last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', ), 
-                        properties = ionos_cloud_sdk_python.models.label_resource_properties.LabelResourceProperties(
+                        properties = ionossdk.models.label_resource_properties.LabelResourceProperties(
                             key = 'environment', 
                             value = 'production', ), )
                     ]

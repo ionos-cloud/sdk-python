@@ -111,7 +111,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'ionos-cloud-sdk-python/5.2.0'
+        self.user_agent = 'ionos-cloud-sdk-python/5.2.3'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
@@ -760,7 +760,7 @@ class ApiClient(object):
         if timeout:
             timeout = time.time() + timeout
         while True:
-            request = ionos_cloud_sdk.RequestApi(self).requests_status_get(request_id, response_type='object')
+            request = ionossdk.RequestApi(self).requests_status_get(request_id, response_type='object')
 
             if request['metadata']['status'] == 'DONE':
                 break

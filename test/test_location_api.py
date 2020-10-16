@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.api.location_api import LocationApi  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.api.location_api import LocationApi  # noqa: E501
+from ionossdk.rest import ApiException
 
 
 class TestLocationApi(unittest.TestCase):
     """LocationApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionos_cloud_sdk_python.api.location_api.LocationApi()  # noqa: E501
+        self.api = ionossdk.api.location_api.LocationApi()  # noqa: E501
 
     def tearDown(self):
         pass

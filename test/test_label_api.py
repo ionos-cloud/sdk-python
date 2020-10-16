@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.api.label_api import LabelApi  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.api.label_api import LabelApi  # noqa: E501
+from ionossdk.rest import ApiException
 
 
 class TestLabelApi(unittest.TestCase):
     """LabelApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionos_cloud_sdk_python.api.label_api.LabelApi()  # noqa: E501
+        self.api = ionossdk.api.label_api.LabelApi()  # noqa: E501
 
     def tearDown(self):
         pass

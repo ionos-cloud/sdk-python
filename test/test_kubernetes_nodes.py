@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.kubernetes_nodes import KubernetesNodes  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.kubernetes_nodes import KubernetesNodes  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestKubernetesNodes(unittest.TestCase):
     """KubernetesNodes unit test stubs"""
@@ -33,24 +33,24 @@ class TestKubernetesNodes(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.kubernetes_nodes.KubernetesNodes()  # noqa: E501
+        # model = ionossdk.models.kubernetes_nodes.KubernetesNodes()  # noqa: E501
         if include_optional :
             return KubernetesNodes(
                 id = '1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools', 
                 type = 'collection', 
                 href = '<RESOURCE-URI>', 
                 items = [
-                    ionos_cloud_sdk_python.models.kubernetes_node.KubernetesNode(
+                    ionossdk.models.kubernetes_node.KubernetesNode(
                         id = '1e072e52-2ed3-492f-b6b6-c6b116907527', 
                         type = 'nodepool', 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.kubernetes_node_metadata.KubernetesNodeMetadata(
+                        metadata = ionossdk.models.kubernetes_node_metadata.KubernetesNodeMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             last_modified_date = '2015-12-04T14:34:09.809Z', 
                             state = 'AVAILABLE', 
                             last_software_updated_date = '2015-12-04T14:34:09.809Z', ), 
-                        properties = ionos_cloud_sdk_python.models.kubernetes_node_properties.KubernetesNodeProperties(
+                        properties = ionossdk.models.kubernetes_node_properties.KubernetesNodeProperties(
                             name = 'k8s-node', 
                             public_ip = '192.168.23.2', 
                             k8s_version = '1.15.4', ), )

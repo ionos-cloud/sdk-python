@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.contract_properties import ContractProperties  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.contract_properties import ContractProperties  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestContractProperties(unittest.TestCase):
     """ContractProperties unit test stubs"""
@@ -33,14 +33,14 @@ class TestContractProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.contract_properties.ContractProperties()  # noqa: E501
+        # model = ionossdk.models.contract_properties.ContractProperties()  # noqa: E501
         if include_optional :
             return ContractProperties(
                 contract_number = 56, 
                 owner = '0', 
                 status = '0', 
                 reg_domain = '0', 
-                resource_limits = ionos_cloud_sdk_python.models.resource_limits.ResourceLimits(
+                resource_limits = ionossdk.models.resource_limits.ResourceLimits(
                     cores_per_server = 56, 
                     cores_per_contract = 56, 
                     cores_provisioned = 56, 

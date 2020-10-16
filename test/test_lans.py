@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.lans import Lans  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.lans import Lans  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestLans(unittest.TestCase):
     """Lans unit test stubs"""
@@ -33,18 +33,18 @@ class TestLans(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.lans.Lans()  # noqa: E501
+        # model = ionossdk.models.lans.Lans()  # noqa: E501
         if include_optional :
             return Lans(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "collection", 
                 href = '<RESOURCE-URI>', 
                 items = [
-                    ionos_cloud_sdk_python.models.lan.Lan(
+                    ionossdk.models.lan.Lan(
                         id = '5', 
                         type = "lan", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                        metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
@@ -53,13 +53,13 @@ class TestLans(unittest.TestCase):
                             last_modified_by = 'user@example.com', 
                             last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                             state = 'AVAILABLE', ), 
-                        properties = ionos_cloud_sdk_python.models.lan_properties.LanProperties(
+                        properties = ionossdk.models.lan_properties.LanProperties(
                             name = 'My resource', 
                             ip_failover = { "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }, 
                             pcc = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', 
                             public = True, ), 
-                        entities = ionos_cloud_sdk_python.models.lan_entities.LanEntities(
-                            nics = ionos_cloud_sdk_python.models.lan_nics.LanNics(
+                        entities = ionossdk.models.lan_entities.LanEntities(
+                            nics = ionossdk.models.lan_nics.LanNics(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "collection", 
                                 href = '<RESOURCE-URI>', ), ), )

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.request import Request  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.request import Request  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestRequest(unittest.TestCase):
     """Request unit test stubs"""
@@ -33,33 +33,33 @@ class TestRequest(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.request.Request()  # noqa: E501
+        # model = ionossdk.models.request.Request()  # noqa: E501
         if include_optional :
             return Request(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "request", 
                 href = '<RESOURCE-URI>', 
-                metadata = ionos_cloud_sdk_python.models.request_metadata.RequestMetadata(
+                metadata = ionossdk.models.request_metadata.RequestMetadata(
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
-                    request_status = ionos_cloud_sdk_python.models.request_status.RequestStatus(
+                    request_status = ionossdk.models.request_status.RequestStatus(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "request-status", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.request_status_metadata.RequestStatusMetadata(
+                        metadata = ionossdk.models.request_status_metadata.RequestStatusMetadata(
                             status = 'QUEUED', 
                             message = '0', 
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             targets = [
-                                ionos_cloud_sdk_python.models.request_target.RequestTarget(
-                                    target = ionos_cloud_sdk_python.models.resource_reference.ResourceReference(
+                                ionossdk.models.request_target.RequestTarget(
+                                    target = ionossdk.models.resource_reference.ResourceReference(
                                         id = '0', 
                                         type = "resource", 
                                         href = '<RESOURCE-URI>', ), 
                                     status = 'QUEUED', )
                                 ], ), ), ), 
-                properties = ionos_cloud_sdk_python.models.request_properties.RequestProperties(
+                properties = ionossdk.models.request_properties.RequestProperties(
                     method = '0', 
                     headers = {
                         'key' : '0'
@@ -69,7 +69,7 @@ class TestRequest(unittest.TestCase):
             )
         else :
             return Request(
-                properties = ionos_cloud_sdk_python.models.request_properties.RequestProperties(
+                properties = ionossdk.models.request_properties.RequestProperties(
                     method = '0', 
                     headers = {
                         'key' : '0'

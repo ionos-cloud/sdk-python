@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.kubernetes_maintenance_window import KubernetesMaintenanceWindow  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.kubernetes_maintenance_window import KubernetesMaintenanceWindow  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestKubernetesMaintenanceWindow(unittest.TestCase):
     """KubernetesMaintenanceWindow unit test stubs"""
@@ -33,7 +33,7 @@ class TestKubernetesMaintenanceWindow(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow()  # noqa: E501
+        # model = ionossdk.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow()  # noqa: E501
         if include_optional :
             return KubernetesMaintenanceWindow(
                 day_of_the_week = 'Monday', 

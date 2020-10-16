@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.api.nic_api import NicApi  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.api.nic_api import NicApi  # noqa: E501
+from ionossdk.rest import ApiException
 
 
 class TestNicApi(unittest.TestCase):
     """NicApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionos_cloud_sdk_python.api.nic_api.NicApi()  # noqa: E501
+        self.api = ionossdk.api.nic_api.NicApi()  # noqa: E501
 
     def tearDown(self):
         pass

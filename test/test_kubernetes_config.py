@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.kubernetes_config import KubernetesConfig  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.kubernetes_config import KubernetesConfig  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestKubernetesConfig(unittest.TestCase):
     """KubernetesConfig unit test stubs"""
@@ -33,18 +33,18 @@ class TestKubernetesConfig(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.kubernetes_config.KubernetesConfig()  # noqa: E501
+        # model = ionossdk.models.kubernetes_config.KubernetesConfig()  # noqa: E501
         if include_optional :
             return KubernetesConfig(
                 id = '1e072e52-2ed3-492f-b6b6-c6b116907527', 
                 type = 'kubeconfig', 
                 href = '<RESOURCE-URI>', 
-                properties = ionos_cloud_sdk_python.models.kubernetes_config_properties.KubernetesConfigProperties(
+                properties = ionossdk.models.kubernetes_config_properties.KubernetesConfigProperties(
                     kubeconfig = '<FILE>', )
             )
         else :
             return KubernetesConfig(
-                properties = ionos_cloud_sdk_python.models.kubernetes_config_properties.KubernetesConfigProperties(
+                properties = ionossdk.models.kubernetes_config_properties.KubernetesConfigProperties(
                     kubeconfig = '<FILE>', ),
         )
 

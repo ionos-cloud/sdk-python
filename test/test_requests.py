@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.requests import Requests  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.requests import Requests  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestRequests(unittest.TestCase):
     """Requests unit test stubs"""
@@ -33,26 +33,26 @@ class TestRequests(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.requests.Requests()  # noqa: E501
+        # model = ionossdk.models.requests.Requests()  # noqa: E501
         if include_optional :
             return Requests(
                 id = 'requests', 
                 type = "collection", 
                 href = '<RESOURCE-URI>', 
                 items = [
-                    ionos_cloud_sdk_python.models.request.Request(
+                    ionossdk.models.request.Request(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "request", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.request_metadata.RequestMetadata(
+                        metadata = ionossdk.models.request_metadata.RequestMetadata(
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
-                            request_status = ionos_cloud_sdk_python.models.request_status.RequestStatus(
+                            request_status = ionossdk.models.request_status.RequestStatus(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "request-status", 
                                 href = '<RESOURCE-URI>', ), ), 
-                        properties = ionos_cloud_sdk_python.models.request_properties.RequestProperties(
+                        properties = ionossdk.models.request_properties.RequestProperties(
                             method = '0', 
                             headers = {
                                 'key' : '0'

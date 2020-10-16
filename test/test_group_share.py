@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.group_share import GroupShare  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.group_share import GroupShare  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestGroupShare(unittest.TestCase):
     """GroupShare unit test stubs"""
@@ -33,19 +33,19 @@ class TestGroupShare(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.group_share.GroupShare()  # noqa: E501
+        # model = ionossdk.models.group_share.GroupShare()  # noqa: E501
         if include_optional :
             return GroupShare(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "resource", 
                 href = 'https://<API_HOST>/cloudapi/v5/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c/shares/17faab13-13abc-4efc-a8ad-ef1fb31a481b', 
-                properties = ionos_cloud_sdk_python.models.group_share_properties.GroupShareProperties(
+                properties = ionossdk.models.group_share_properties.GroupShareProperties(
                     edit_privilege = True, 
                     share_privilege = True, )
             )
         else :
             return GroupShare(
-                properties = ionos_cloud_sdk_python.models.group_share_properties.GroupShareProperties(
+                properties = ionossdk.models.group_share_properties.GroupShareProperties(
                     edit_privilege = True, 
                     share_privilege = True, ),
         )

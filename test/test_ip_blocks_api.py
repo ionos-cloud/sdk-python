@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.api.ip_blocks_api import IPBlocksApi  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.api.ip_blocks_api import IPBlocksApi  # noqa: E501
+from ionossdk.rest import ApiException
 
 
 class TestIPBlocksApi(unittest.TestCase):
     """IPBlocksApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionos_cloud_sdk_python.api.ip_blocks_api.IPBlocksApi()  # noqa: E501
+        self.api = ionossdk.api.ip_blocks_api.IPBlocksApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.kubernetes_node_pool_properties_for_put import KubernetesNodePoolPropertiesForPut  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.kubernetes_node_pool_properties_for_put import KubernetesNodePoolPropertiesForPut  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestKubernetesNodePoolPropertiesForPut(unittest.TestCase):
     """KubernetesNodePoolPropertiesForPut unit test stubs"""
@@ -33,7 +33,7 @@ class TestKubernetesNodePoolPropertiesForPut(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.kubernetes_node_pool_properties_for_put.KubernetesNodePoolPropertiesForPut()  # noqa: E501
+        # model = ionossdk.models.kubernetes_node_pool_properties_for_put.KubernetesNodePoolPropertiesForPut()  # noqa: E501
         if include_optional :
             return KubernetesNodePoolPropertiesForPut(
                 name = 'k8s-node-pool', 
@@ -46,14 +46,14 @@ class TestKubernetesNodePoolPropertiesForPut(unittest.TestCase):
                 storage_type = 'HDD', 
                 storage_size = 100, 
                 k8s_version = '1.15.4', 
-                maintenance_window = ionos_cloud_sdk_python.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
+                maintenance_window = ionossdk.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                     day_of_the_week = 'Monday', 
                     time = '13:00:00', ), 
-                auto_scaling = ionos_cloud_sdk_python.models.kubernetes_auto_scaling.KubernetesAutoScaling(
+                auto_scaling = ionossdk.models.kubernetes_auto_scaling.KubernetesAutoScaling(
                     min_node_count = 1, 
                     max_node_count = 1, ), 
                 lans = [
-                    ionos_cloud_sdk_python.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
+                    ionossdk.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
                         id = 3, )
                     ]
             )

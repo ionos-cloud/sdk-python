@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.attached_volumes import AttachedVolumes  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.attached_volumes import AttachedVolumes  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestAttachedVolumes(unittest.TestCase):
     """AttachedVolumes unit test stubs"""
@@ -33,18 +33,18 @@ class TestAttachedVolumes(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.attached_volumes.AttachedVolumes()  # noqa: E501
+        # model = ionossdk.models.attached_volumes.AttachedVolumes()  # noqa: E501
         if include_optional :
             return AttachedVolumes(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "collection", 
                 href = '<RESOURCE-URI>', 
                 items = [
-                    ionos_cloud_sdk_python.models.volume.Volume(
+                    ionossdk.models.volume.Volume(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "volume", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                        metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
@@ -53,7 +53,7 @@ class TestAttachedVolumes(unittest.TestCase):
                             last_modified_by = 'user@example.com', 
                             last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                             state = 'AVAILABLE', ), 
-                        properties = ionos_cloud_sdk_python.models.volume_properties.VolumeProperties(
+                        properties = ionossdk.models.volume_properties.VolumeProperties(
                             name = 'My resource', 
                             type = 'HDD', 
                             size = 100.0, 

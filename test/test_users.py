@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.users import Users  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.users import Users  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestUsers(unittest.TestCase):
     """Users unit test stubs"""
@@ -33,22 +33,22 @@ class TestUsers(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.users.Users()  # noqa: E501
+        # model = ionossdk.models.users.Users()  # noqa: E501
         if include_optional :
             return Users(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "collection", 
                 href = '<RESOURCE-URI>', 
                 items = [
-                    ionos_cloud_sdk_python.models.user.User(
+                    ionossdk.models.user.User(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "user", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.user_metadata.UserMetadata(
+                        metadata = ionossdk.models.user_metadata.UserMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             last_login = '2015-12-04T14:34:09.809Z', ), 
-                        properties = ionos_cloud_sdk_python.models.user_properties.UserProperties(
+                        properties = ionossdk.models.user_properties.UserProperties(
                             firstname = '0', 
                             lastname = '0', 
                             email = '0', 
@@ -57,18 +57,18 @@ class TestUsers(unittest.TestCase):
                             sec_auth_active = True, 
                             s3_canonical_user_id = '0', 
                             password = '0', ), 
-                        entities = ionos_cloud_sdk_python.models.users_entities.UsersEntities(
-                            owns = ionos_cloud_sdk_python.models.resources_users.ResourcesUsers(
+                        entities = ionossdk.models.users_entities.UsersEntities(
+                            owns = ionossdk.models.resources_users.ResourcesUsers(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "collection", 
                                 href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/owns', 
                                 items = [
-                                    ionos_cloud_sdk_python.models.resource.Resource(
+                                    ionossdk.models.resource.Resource(
                                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                         type = "group", 
                                         href = 'https://<API_HOST>/cloudapi/v5/um/resources/datacenter/15f67991-0f51-4efc-a8ad-ef1fb31a480c', )
                                     ], ), 
-                            groups = ionos_cloud_sdk_python.models.group_users.GroupUsers(
+                            groups = ionossdk.models.group_users.GroupUsers(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "groups", 
                                 href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/groups', ), ), )

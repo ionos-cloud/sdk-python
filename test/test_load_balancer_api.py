@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.api.load_balancer_api import LoadBalancerApi  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.api.load_balancer_api import LoadBalancerApi  # noqa: E501
+from ionossdk.rest import ApiException
 
 
 class TestLoadBalancerApi(unittest.TestCase):
     """LoadBalancerApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionos_cloud_sdk_python.api.load_balancer_api.LoadBalancerApi()  # noqa: E501
+        self.api = ionossdk.api.load_balancer_api.LoadBalancerApi()  # noqa: E501
 
     def tearDown(self):
         pass

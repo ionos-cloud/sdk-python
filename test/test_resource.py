@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.resource import Resource  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.resource import Resource  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestResource(unittest.TestCase):
     """Resource unit test stubs"""
@@ -33,13 +33,13 @@ class TestResource(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.resource.Resource()  # noqa: E501
+        # model = ionossdk.models.resource.Resource()  # noqa: E501
         if include_optional :
             return Resource(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "group", 
                 href = 'https://<API_HOST>/cloudapi/v5/um/resources/datacenter/15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
@@ -48,20 +48,20 @@ class TestResource(unittest.TestCase):
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                     state = 'AVAILABLE', ), 
-                properties = ionos_cloud_sdk_python.models.resource_properties.ResourceProperties(
+                properties = ionossdk.models.resource_properties.ResourceProperties(
                     name = '0', 
                     sec_auth_protection = True, ), 
-                entities = ionos_cloud_sdk_python.models.resource_entities.ResourceEntities(
-                    groups = ionos_cloud_sdk_python.models.resource_groups.ResourceGroups(
+                entities = ionossdk.models.resource_entities.ResourceEntities(
+                    groups = ionossdk.models.resource_groups.ResourceGroups(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "collection", 
                         href = 'https://<API_HOST>/cloudapi/v5/um/groups/30740c22-1def-11e7-aac9-d7a3646ca7fd/resources', 
                         items = [
-                            ionos_cloud_sdk_python.models.resource.Resource(
+                            ionossdk.models.resource.Resource(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "group", 
                                 href = 'https://<API_HOST>/cloudapi/v5/um/resources/datacenter/15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                                metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                     created_date = '2015-12-04T14:34:09.809Z', 
                                     created_by = 'user@example.com', 
@@ -70,7 +70,7 @@ class TestResource(unittest.TestCase):
                                     last_modified_by = 'user@example.com', 
                                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                     state = 'AVAILABLE', ), 
-                                properties = ionos_cloud_sdk_python.models.resource_properties.ResourceProperties(
+                                properties = ionossdk.models.resource_properties.ResourceProperties(
                                     name = '0', 
                                     sec_auth_protection = True, ), )
                             ], ), )

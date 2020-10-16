@@ -15,7 +15,7 @@ import os
 import codecs
 
 NAME = "ionossdk"
-VERSION = "5.2.0"
+VERSION = "5.2.3"
 # To install the library, run the following
 #
 # python setup.py install
@@ -46,7 +46,7 @@ setup(
     url="https://github.com/ionos-cloud/ionos-cloud-sdk-python",
     keywords=["OpenAPI", "OpenAPI-Generator", "CLOUD API"],
     install_requires=REQUIRES,
-    packages=['ionos_cloud_sdk'],
+    packages=['ionossdk'],
     include_package_data=True,
     classifiers=[
          'Natural Language :: English',

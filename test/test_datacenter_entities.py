@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.datacenter_entities import DatacenterEntities  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.datacenter_entities import DatacenterEntities  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestDatacenterEntities(unittest.TestCase):
     """DatacenterEntities unit test stubs"""
@@ -33,19 +33,19 @@ class TestDatacenterEntities(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.datacenter_entities.DatacenterEntities()  # noqa: E501
+        # model = ionossdk.models.datacenter_entities.DatacenterEntities()  # noqa: E501
         if include_optional :
             return DatacenterEntities(
-                servers = ionos_cloud_sdk_python.models.servers.Servers(
+                servers = ionossdk.models.servers.Servers(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionos_cloud_sdk_python.models.server.Server(
+                        ionossdk.models.server.Server(
                             id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                             type = "server", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -54,45 +54,45 @@ class TestDatacenterEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionos_cloud_sdk_python.models.server_properties.ServerProperties(
+                            properties = ionossdk.models.server_properties.ServerProperties(
                                 name = 'My resource', 
                                 cores = 4, 
                                 ram = 4096, 
                                 availability_zone = 'AUTO', 
                                 vm_state = 'RUNNING', 
-                                boot_cdrom = ionos_cloud_sdk_python.models.resource_reference.ResourceReference(
+                                boot_cdrom = ionossdk.models.resource_reference.ResourceReference(
                                     id = '0', 
                                     type = "resource", 
                                     href = '<RESOURCE-URI>', ), 
-                                boot_volume = ionos_cloud_sdk_python.models.resource_reference.ResourceReference(
+                                boot_volume = ionossdk.models.resource_reference.ResourceReference(
                                     id = '0', 
                                     type = "resource", 
                                     href = '<RESOURCE-URI>', ), 
                                 cpu_family = 'AMD_OPTERON', ), 
-                            entities = ionos_cloud_sdk_python.models.server_entities.ServerEntities(
-                                cdroms = ionos_cloud_sdk_python.models.cdroms.Cdroms(
+                            entities = ionossdk.models.server_entities.ServerEntities(
+                                cdroms = ionossdk.models.cdroms.Cdroms(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', ), 
-                                volumes = ionos_cloud_sdk_python.models.attached_volumes.AttachedVolumes(
+                                volumes = ionossdk.models.attached_volumes.AttachedVolumes(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', ), 
-                                nics = ionos_cloud_sdk_python.models.nics.Nics(
+                                nics = ionossdk.models.nics.Nics(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', ), ), )
                         ], ), 
-                volumes = ionos_cloud_sdk_python.models.volumes.Volumes(
+                volumes = ionossdk.models.volumes.Volumes(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionos_cloud_sdk_python.models.volume.Volume(
+                        ionossdk.models.volume.Volume(
                             id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                             type = "volume", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -101,7 +101,7 @@ class TestDatacenterEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionos_cloud_sdk_python.models.volume_properties.VolumeProperties(
+                            properties = ionossdk.models.volume_properties.VolumeProperties(
                                 name = 'My resource', 
                                 type = 'HDD', 
                                 size = 100.0, 
@@ -121,16 +121,16 @@ class TestDatacenterEntities(unittest.TestCase):
                                 device_number = 3, 
                                 backupunit_id = '25f67991-0f51-4efc-a8ad-ef1fb31a481c', ), )
                         ], ), 
-                loadbalancers = ionos_cloud_sdk_python.models.loadbalancers.Loadbalancers(
+                loadbalancers = ionossdk.models.loadbalancers.Loadbalancers(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionos_cloud_sdk_python.models.loadbalancer.Loadbalancer(
+                        ionossdk.models.loadbalancer.Loadbalancer(
                             id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                             type = "loadbalancer", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -139,26 +139,26 @@ class TestDatacenterEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionos_cloud_sdk_python.models.loadbalancer_properties.LoadbalancerProperties(
+                            properties = ionossdk.models.loadbalancer_properties.LoadbalancerProperties(
                                 name = 'My resource', 
                                 ip = '22.231.113.64', 
                                 dhcp = True, ), 
-                            entities = ionos_cloud_sdk_python.models.loadbalancer_entities.LoadbalancerEntities(
-                                balancednics = ionos_cloud_sdk_python.models.balanced_nics.BalancedNics(
+                            entities = ionossdk.models.loadbalancer_entities.LoadbalancerEntities(
+                                balancednics = ionossdk.models.balanced_nics.BalancedNics(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', ), ), )
                         ], ), 
-                lans = ionos_cloud_sdk_python.models.lans.Lans(
+                lans = ionossdk.models.lans.Lans(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionos_cloud_sdk_python.models.lan.Lan(
+                        ionossdk.models.lan.Lan(
                             id = '5', 
                             type = "lan", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -167,13 +167,13 @@ class TestDatacenterEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionos_cloud_sdk_python.models.lan_properties.LanProperties(
+                            properties = ionossdk.models.lan_properties.LanProperties(
                                 name = 'My resource', 
                                 ip_failover = { "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }, 
                                 pcc = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', 
                                 public = True, ), 
-                            entities = ionos_cloud_sdk_python.models.lan_entities.LanEntities(
-                                nics = ionos_cloud_sdk_python.models.lan_nics.LanNics(
+                            entities = ionossdk.models.lan_entities.LanEntities(
+                                nics = ionossdk.models.lan_nics.LanNics(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', ), ), )

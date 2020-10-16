@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.kubernetes_node_pools import KubernetesNodePools  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.kubernetes_node_pools import KubernetesNodePools  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestKubernetesNodePools(unittest.TestCase):
     """KubernetesNodePools unit test stubs"""
@@ -33,18 +33,18 @@ class TestKubernetesNodePools(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.kubernetes_node_pools.KubernetesNodePools()  # noqa: E501
+        # model = ionossdk.models.kubernetes_node_pools.KubernetesNodePools()  # noqa: E501
         if include_optional :
             return KubernetesNodePools(
                 id = '1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools', 
                 type = 'collection', 
                 href = '<RESOURCE-URI>', 
                 items = [
-                    ionos_cloud_sdk_python.models.kubernetes_node_pool.KubernetesNodePool(
+                    ionossdk.models.kubernetes_node_pool.KubernetesNodePool(
                         id = '1e072e52-2ed3-492f-b6b6-c6b116907527', 
                         type = 'nodepool', 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                        metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
@@ -53,7 +53,7 @@ class TestKubernetesNodePools(unittest.TestCase):
                             last_modified_by = 'user@example.com', 
                             last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                             state = 'AVAILABLE', ), 
-                        properties = ionos_cloud_sdk_python.models.kubernetes_node_pool_properties.KubernetesNodePoolProperties(
+                        properties = ionossdk.models.kubernetes_node_pool_properties.KubernetesNodePoolProperties(
                             name = 'k8s-node-pool', 
                             datacenter_id = '1e072e52-2ed3-492f-b6b6-c6b116907521', 
                             node_count = 2, 
@@ -64,20 +64,20 @@ class TestKubernetesNodePools(unittest.TestCase):
                             storage_type = 'HDD', 
                             storage_size = 100, 
                             k8s_version = '1.15.4', 
-                            maintenance_window = ionos_cloud_sdk_python.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
+                            maintenance_window = ionossdk.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                                 day_of_the_week = 'Monday', 
                                 time = '13:00:00', ), 
-                            auto_scaling = ionos_cloud_sdk_python.models.kubernetes_auto_scaling.KubernetesAutoScaling(
+                            auto_scaling = ionossdk.models.kubernetes_auto_scaling.KubernetesAutoScaling(
                                 min_node_count = 1, 
                                 max_node_count = 1, ), 
                             lans = [
-                                ionos_cloud_sdk_python.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
+                                ionossdk.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
                                     id = 3, )
                                 ], 
-                            labels = ionos_cloud_sdk_python.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
+                            labels = ionossdk.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
                                 key = '0', 
                                 value = '0', ), 
-                            annotations = ionos_cloud_sdk_python.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
+                            annotations = ionossdk.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
                                 key = '0', 
                                 value = '0', ), ), )
                     ]

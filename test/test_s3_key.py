@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.s3_key import S3Key  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.s3_key import S3Key  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestS3Key(unittest.TestCase):
     """S3Key unit test stubs"""
@@ -33,22 +33,22 @@ class TestS3Key(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.s3_key.S3Key()  # noqa: E501
+        # model = ionossdk.models.s3_key.S3Key()  # noqa: E501
         if include_optional :
             return S3Key(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "group", 
                 href = 'https://<API_HOST>/cloudapi/v5/um/users/15f67991-0f51-4efc-a8ad-ef1fb31a480c/s3keys/78fa888e106456c1482d', 
-                metadata = ionos_cloud_sdk_python.models.s3_key_metadata.S3KeyMetadata(
+                metadata = ionossdk.models.s3_key_metadata.S3KeyMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', ), 
-                properties = ionos_cloud_sdk_python.models.s3_key_properties.S3KeyProperties(
+                properties = ionossdk.models.s3_key_properties.S3KeyProperties(
                     secret_key = 'tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG', 
                     active = True, )
             )
         else :
             return S3Key(
-                properties = ionos_cloud_sdk_python.models.s3_key_properties.S3KeyProperties(
+                properties = ionossdk.models.s3_key_properties.S3KeyProperties(
                     secret_key = 'tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG', 
                     active = True, ),
         )

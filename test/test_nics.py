@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.nics import Nics  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.nics import Nics  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestNics(unittest.TestCase):
     """Nics unit test stubs"""
@@ -33,18 +33,18 @@ class TestNics(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.nics.Nics()  # noqa: E501
+        # model = ionossdk.models.nics.Nics()  # noqa: E501
         if include_optional :
             return Nics(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "collection", 
                 href = '<RESOURCE-URI>', 
                 items = [
-                    ionos_cloud_sdk_python.models.nic.Nic(
+                    ionossdk.models.nic.Nic(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "nic", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                        metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
@@ -53,7 +53,7 @@ class TestNics(unittest.TestCase):
                             last_modified_by = 'user@example.com', 
                             last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                             state = 'AVAILABLE', ), 
-                        properties = ionos_cloud_sdk_python.models.nic_properties.NicProperties(
+                        properties = ionossdk.models.nic_properties.NicProperties(
                             name = 'My resource', 
                             mac = '00:0a:95:9d:68:16', 
                             ips = [
@@ -63,17 +63,17 @@ class TestNics(unittest.TestCase):
                             lan = 2, 
                             firewall_active = False, 
                             nat = True, ), 
-                        entities = ionos_cloud_sdk_python.models.nic_entities.NicEntities(
-                            firewallrules = ionos_cloud_sdk_python.models.firewall_rules.FirewallRules(
+                        entities = ionossdk.models.nic_entities.NicEntities(
+                            firewallrules = ionossdk.models.firewall_rules.FirewallRules(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "collection", 
                                 href = '<RESOURCE-URI>', 
                                 items = [
-                                    ionos_cloud_sdk_python.models.firewall_rule.FirewallRule(
+                                    ionossdk.models.firewall_rule.FirewallRule(
                                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                         type = "firewall-rule", 
                                         href = '<RESOURCE-URI>', 
-                                        properties = ionos_cloud_sdk_python.models.firewallrule_properties.FirewallruleProperties(
+                                        properties = ionossdk.models.firewallrule_properties.FirewallruleProperties(
                                             name = 'My resource', 
                                             protocol = 'TCP', 
                                             source_mac = '00:0a:95:9d:68:16', 

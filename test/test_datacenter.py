@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionos_cloud_sdk_python
-from ionos_cloud_sdk_python.models.datacenter import Datacenter  # noqa: E501
-from ionos_cloud_sdk_python.rest import ApiException
+import ionossdk
+from ionossdk.models.datacenter import Datacenter  # noqa: E501
+from ionossdk.rest import ApiException
 
 class TestDatacenter(unittest.TestCase):
     """Datacenter unit test stubs"""
@@ -33,13 +33,13 @@ class TestDatacenter(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionos_cloud_sdk_python.models.datacenter.Datacenter()  # noqa: E501
+        # model = ionossdk.models.datacenter.Datacenter()  # noqa: E501
         if include_optional :
             return Datacenter(
                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                 type = "datacenter", 
                 href = '<RESOURCE-URI>', 
-                metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
@@ -48,24 +48,24 @@ class TestDatacenter(unittest.TestCase):
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                     state = 'AVAILABLE', ), 
-                properties = ionos_cloud_sdk_python.models.datacenter_properties.DatacenterProperties(
+                properties = ionossdk.models.datacenter_properties.DatacenterProperties(
                     name = 'My resource', 
                     description = 'My Production Datacenter', 
                     location = 'us/las', 
                     version = 8, 
                     features = [SSD], 
                     sec_auth_protection = True, ), 
-                entities = ionos_cloud_sdk_python.models.datacenter_entities.DatacenterEntities(
-                    servers = ionos_cloud_sdk_python.models.servers.Servers(
+                entities = ionossdk.models.datacenter_entities.DatacenterEntities(
+                    servers = ionossdk.models.servers.Servers(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "collection", 
                         href = '<RESOURCE-URI>', 
                         items = [
-                            ionos_cloud_sdk_python.models.server.Server(
+                            ionossdk.models.server.Server(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "server", 
                                 href = '<RESOURCE-URI>', 
-                                metadata = ionos_cloud_sdk_python.models.datacenter_element_metadata.DatacenterElementMetadata(
+                                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
                                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                     created_date = '2015-12-04T14:34:09.809Z', 
                                     created_by = 'user@example.com', 
@@ -74,51 +74,51 @@ class TestDatacenter(unittest.TestCase):
                                     last_modified_by = 'user@example.com', 
                                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                     state = 'AVAILABLE', ), 
-                                properties = ionos_cloud_sdk_python.models.server_properties.ServerProperties(
+                                properties = ionossdk.models.server_properties.ServerProperties(
                                     name = 'My resource', 
                                     cores = 4, 
                                     ram = 4096, 
                                     availability_zone = 'AUTO', 
                                     vm_state = 'RUNNING', 
-                                    boot_cdrom = ionos_cloud_sdk_python.models.resource_reference.ResourceReference(
+                                    boot_cdrom = ionossdk.models.resource_reference.ResourceReference(
                                         id = '0', 
                                         type = "resource", 
                                         href = '<RESOURCE-URI>', ), 
-                                    boot_volume = ionos_cloud_sdk_python.models.resource_reference.ResourceReference(
+                                    boot_volume = ionossdk.models.resource_reference.ResourceReference(
                                         id = '0', 
                                         type = "resource", 
                                         href = '<RESOURCE-URI>', ), 
                                     cpu_family = 'AMD_OPTERON', ), 
-                                entities = ionos_cloud_sdk_python.models.server_entities.ServerEntities(
-                                    cdroms = ionos_cloud_sdk_python.models.cdroms.Cdroms(
+                                entities = ionossdk.models.server_entities.ServerEntities(
+                                    cdroms = ionossdk.models.cdroms.Cdroms(
                                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                         type = "collection", 
                                         href = '<RESOURCE-URI>', ), 
-                                    volumes = ionos_cloud_sdk_python.models.attached_volumes.AttachedVolumes(
+                                    volumes = ionossdk.models.attached_volumes.AttachedVolumes(
                                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                         type = "collection", 
                                         href = '<RESOURCE-URI>', ), 
-                                    nics = ionos_cloud_sdk_python.models.nics.Nics(
+                                    nics = ionossdk.models.nics.Nics(
                                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                         type = "collection", 
                                         href = '<RESOURCE-URI>', ), ), )
                             ], ), 
-                    volumes = ionos_cloud_sdk_python.models.volumes.Volumes(
+                    volumes = ionossdk.models.volumes.Volumes(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "collection", 
                         href = '<RESOURCE-URI>', ), 
-                    loadbalancers = ionos_cloud_sdk_python.models.loadbalancers.Loadbalancers(
+                    loadbalancers = ionossdk.models.loadbalancers.Loadbalancers(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "collection", 
                         href = '<RESOURCE-URI>', ), 
-                    lans = ionos_cloud_sdk_python.models.lans.Lans(
+                    lans = ionossdk.models.lans.Lans(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "collection", 
                         href = '<RESOURCE-URI>', ), )
             )
         else :
             return Datacenter(
-                properties = ionos_cloud_sdk_python.models.datacenter_properties.DatacenterProperties(
+                properties = ionossdk.models.datacenter_properties.DatacenterProperties(
                     name = 'My resource', 
                     description = 'My Production Datacenter', 
                     location = 'us/las', 
