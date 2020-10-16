@@ -14,8 +14,8 @@ from setuptools import setup  # noqa: H301
 import os
 import codecs
 
-NAME = "IONOS Cloud SDK for Python"
-VERSION = "0.0.2"
+NAME = "ionossdk"
+VERSION = "5.2.0"
 # To install the library, run the following
 #
 # python setup.py install
@@ -58,9 +58,5 @@ setup(
          'Programming Language :: Python :: 3',
          'Topic :: Software Development :: Libraries :: Python Modules',
          'Topic :: Software Development :: Libraries :: Application Frameworks',
-         'Topic :: Internet :: WWW/HTTP',
-         project_urls={
-            'Documentation': 'https://github.com/ionos-cloud/ionos-cloud-sdk-python/blob/master/DOCS.md'
-         }
-    ]
+         'Topic :: Internet :: WWW/HTTP']
 )

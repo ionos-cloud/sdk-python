@@ -1,4 +1,4 @@
-# ionos_cloud_sdk.VolumeApi
+# ionossdk.VolumeApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
@@ -27,12 +27,12 @@ Creates a snapshot of a volume within the datacenter. You can use a snapshot to 
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -41,15 +41,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -72,12 +72,12 @@ licence_type = 'licence_type_example' # str | The OS type of this Snapshot (opti
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -86,15 +86,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -161,12 +161,12 @@ Deletes the specified volume. This will result in the volume being removed from 
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -175,15 +175,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -202,12 +202,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -216,15 +216,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -283,12 +283,12 @@ Retrieves the attributes of a given Volume
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -297,15 +297,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -324,12 +324,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -338,15 +338,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -405,12 +405,12 @@ Retrieves a list of Volumes.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -419,15 +419,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -445,12 +445,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -459,15 +459,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -524,12 +524,12 @@ You can use update attributes of a Volume
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -538,18 +538,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
-volume = ionos_cloud_sdk.VolumeProperties() # VolumeProperties | Modified properties of Volume
+volume = ionossdk.VolumeProperties() # VolumeProperties | Modified properties of Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -566,12 +566,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -580,18 +580,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
-volume = ionos_cloud_sdk.VolumeProperties() # VolumeProperties | Modified properties of Volume
+volume = ionossdk.VolumeProperties() # VolumeProperties | Modified properties of Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -649,12 +649,12 @@ Creates a volume within the datacenter. This will not attach the volume to a ser
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -663,17 +663,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-volume = ionos_cloud_sdk.Volume() # Volume | Volume to be created
+volume = ionossdk.Volume() # Volume | Volume to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -690,12 +690,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -704,17 +704,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-volume = ionos_cloud_sdk.Volume() # Volume | Volume to be created
+volume = ionossdk.Volume() # Volume | Volume to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -771,12 +771,12 @@ You can use update attributes of a Volume
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -785,18 +785,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
-volume = ionos_cloud_sdk.Volume() # Volume | Modified Volume
+volume = ionossdk.Volume() # Volume | Modified Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -813,12 +813,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -827,18 +827,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
-volume = ionos_cloud_sdk.Volume() # Volume | Modified Volume
+volume = ionossdk.Volume() # Volume | Modified Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -896,12 +896,12 @@ This will restore a snapshot onto a volume. A snapshot is created as just anothe
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -910,15 +910,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -938,12 +938,12 @@ snapshot_id = 'snapshot_id_example' # str | This is the ID of the snapshot (opti
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -952,15 +952,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.VolumeApi(api_client)
+    api_instance = ionossdk.VolumeApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 volume_id = 'volume_id_example' # str | The unique ID of the Volume
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)

@@ -1,4 +1,4 @@
-# ionos_cloud_sdk.NicApi
+# ionossdk.NicApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
@@ -31,12 +31,12 @@ Deletes the specified NIC.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -45,15 +45,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -73,12 +73,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -87,15 +87,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -156,12 +156,12 @@ Retrieves the attributes of a given NIC
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -170,15 +170,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -198,12 +198,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -212,15 +212,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -281,12 +281,12 @@ Removes the specific Firewall Rule
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -295,15 +295,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -324,12 +324,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -338,15 +338,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -409,12 +409,12 @@ Retrieves the attributes of a given Firewall Rule.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -423,15 +423,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -452,12 +452,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -466,15 +466,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -537,12 +537,12 @@ Retrieves a list of firewall rules associated with a particular NIC
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -551,15 +551,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -579,12 +579,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -593,15 +593,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -662,12 +662,12 @@ You can use update attributes of a resource
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -676,20 +676,20 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
 firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-firewallrule = ionos_cloud_sdk.FirewallruleProperties() # FirewallruleProperties | Modified Firewall Rule
+firewallrule = ionossdk.FirewallruleProperties() # FirewallruleProperties | Modified Firewall Rule
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -706,12 +706,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -720,20 +720,20 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
 firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-firewallrule = ionos_cloud_sdk.FirewallruleProperties() # FirewallruleProperties | Modified Firewall Rule
+firewallrule = ionossdk.FirewallruleProperties() # FirewallruleProperties | Modified Firewall Rule
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -793,12 +793,12 @@ This will add a Firewall Rule to the NIC
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -807,19 +807,19 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule = ionos_cloud_sdk.FirewallRule() # FirewallRule | Firewall Rule to be created
+firewallrule = ionossdk.FirewallRule() # FirewallRule | Firewall Rule to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -836,12 +836,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -850,19 +850,19 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule = ionos_cloud_sdk.FirewallRule() # FirewallRule | Firewall Rule to be created
+firewallrule = ionossdk.FirewallRule() # FirewallRule | Firewall Rule to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -921,12 +921,12 @@ You can use update attributes of a resource
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -935,20 +935,20 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
 firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-firewallrule = ionos_cloud_sdk.FirewallRule() # FirewallRule | Modified Firewall Rule
+firewallrule = ionossdk.FirewallRule() # FirewallRule | Modified Firewall Rule
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -965,12 +965,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -979,20 +979,20 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
 firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-firewallrule = ionos_cloud_sdk.FirewallRule() # FirewallRule | Modified Firewall Rule
+firewallrule = ionossdk.FirewallRule() # FirewallRule | Modified Firewall Rule
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1052,12 +1052,12 @@ Retrieves a list of NICs.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1066,15 +1066,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -1093,12 +1093,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1107,15 +1107,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -1174,12 +1174,12 @@ You can use update attributes of a Nic
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1188,19 +1188,19 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
-nic = ionos_cloud_sdk.NicProperties() # NicProperties | Modified properties of Nic
+nic = ionossdk.NicProperties() # NicProperties | Modified properties of Nic
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1217,12 +1217,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1231,19 +1231,19 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
-nic = ionos_cloud_sdk.NicProperties() # NicProperties | Modified properties of Nic
+nic = ionossdk.NicProperties() # NicProperties | Modified properties of Nic
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1302,12 +1302,12 @@ Adds a NIC to the target server. Combine count of Nics and volumes attached to t
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1316,18 +1316,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
-nic = ionos_cloud_sdk.Nic() # Nic | Nic to be created
+nic = ionossdk.Nic() # Nic | Nic to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1344,12 +1344,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1358,18 +1358,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
-nic = ionos_cloud_sdk.Nic() # Nic | Nic to be created
+nic = ionossdk.Nic() # Nic | Nic to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1427,12 +1427,12 @@ You can use update attributes of a Nic
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1441,19 +1441,19 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
-nic = ionos_cloud_sdk.Nic() # Nic | Modified Nic
+nic = ionossdk.Nic() # Nic | Modified Nic
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1470,12 +1470,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1484,19 +1484,19 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.NicApi(api_client)
+    api_instance = ionossdk.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 server_id = 'server_id_example' # str | The unique ID of the Server
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
-nic = ionos_cloud_sdk.Nic() # Nic | Modified Nic
+nic = ionossdk.Nic() # Nic | Modified Nic
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)

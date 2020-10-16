@@ -1,4 +1,4 @@
-# ionos_cloud_sdk.LoadBalancerApi
+# ionossdk.LoadBalancerApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
@@ -29,12 +29,12 @@ This will remove a nic from Load Balancer
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -43,15 +43,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -71,12 +71,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -85,15 +85,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -154,12 +154,12 @@ This will retrieve the properties of an attached nic.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -168,15 +168,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -196,12 +196,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -210,15 +210,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 nic_id = 'nic_id_example' # str | The unique ID of the NIC
@@ -279,12 +279,12 @@ You can retrieve a list of nics attached to a Load Balancer
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -293,15 +293,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -320,12 +320,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -334,15 +334,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -401,12 +401,12 @@ This will attach a pre-existing nic to a Load Balancer.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -415,18 +415,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
-nic = ionos_cloud_sdk.Nic() # Nic | Nic id to be attached
+nic = ionossdk.Nic() # Nic | Nic id to be attached
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -443,12 +443,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -457,18 +457,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
-nic = ionos_cloud_sdk.Nic() # Nic | Nic id to be attached
+nic = ionossdk.Nic() # Nic | Nic id to be attached
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -526,12 +526,12 @@ Removes the specific Loadbalancer
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -540,15 +540,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -567,12 +567,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -581,15 +581,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -648,12 +648,12 @@ Retrieves the attributes of a given Loadbalancer
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -662,15 +662,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -689,12 +689,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -703,15 +703,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
@@ -770,12 +770,12 @@ Retrieve a list of Load Balancers within the datacenter
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -784,15 +784,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -810,12 +810,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -824,15 +824,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -889,12 +889,12 @@ You can use update attributes of a resource
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -903,18 +903,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
-loadbalancer = ionos_cloud_sdk.LoadbalancerProperties() # LoadbalancerProperties | Modified Loadbalancer
+loadbalancer = ionossdk.LoadbalancerProperties() # LoadbalancerProperties | Modified Loadbalancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -931,12 +931,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -945,18 +945,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
-loadbalancer = ionos_cloud_sdk.LoadbalancerProperties() # LoadbalancerProperties | Modified Loadbalancer
+loadbalancer = ionossdk.LoadbalancerProperties() # LoadbalancerProperties | Modified Loadbalancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1014,12 +1014,12 @@ Creates a Loadbalancer within the datacenter
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1028,17 +1028,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-loadbalancer = ionos_cloud_sdk.Loadbalancer() # Loadbalancer | Loadbalancer to be created
+loadbalancer = ionossdk.Loadbalancer() # Loadbalancer | Loadbalancer to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1055,12 +1055,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1069,17 +1069,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-loadbalancer = ionos_cloud_sdk.Loadbalancer() # Loadbalancer | Loadbalancer to be created
+loadbalancer = ionossdk.Loadbalancer() # Loadbalancer | Loadbalancer to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1136,12 +1136,12 @@ You can use update attributes of a resource
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1150,18 +1150,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
-loadbalancer = ionos_cloud_sdk.Loadbalancer() # Loadbalancer | Modified Loadbalancer
+loadbalancer = ionossdk.Loadbalancer() # Loadbalancer | Modified Loadbalancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1178,12 +1178,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -1192,18 +1192,18 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.LoadBalancerApi(api_client)
+    api_instance = ionossdk.LoadBalancerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
 loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer
-loadbalancer = ionos_cloud_sdk.Loadbalancer() # Loadbalancer | Modified Loadbalancer
+loadbalancer = ionossdk.Loadbalancer() # Loadbalancer | Modified Loadbalancer
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)

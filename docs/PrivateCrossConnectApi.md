@@ -1,4 +1,4 @@
-# ionos_cloud_sdk.PrivateCrossConnectApi
+# ionossdk.PrivateCrossConnectApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
@@ -24,12 +24,12 @@ Delete a private cross-connect if no datacenters are joined to the given PCC
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -38,15 +38,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
     pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -64,12 +64,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -78,15 +78,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
     pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -143,12 +143,12 @@ You can retrieve a private cross-connect by using the resource's ID. This value 
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -157,15 +157,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
     pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -183,12 +183,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -197,15 +197,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
     pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -262,12 +262,12 @@ You can retrieve a complete list of private cross-connects provisioned under you
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -276,15 +276,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -301,12 +301,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -315,15 +315,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -378,12 +378,12 @@ You can use update private cross-connect to re-name or update its description
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -392,17 +392,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
     pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
-pcc = ionos_cloud_sdk.PrivateCrossConnectProperties() # PrivateCrossConnectProperties | Modified properties of private cross-connect
+pcc = ionossdk.PrivateCrossConnectProperties() # PrivateCrossConnectProperties | Modified properties of private cross-connect
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -419,12 +419,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -433,17 +433,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
     pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
-pcc = ionos_cloud_sdk.PrivateCrossConnectProperties() # PrivateCrossConnectProperties | Modified properties of private cross-connect
+pcc = ionossdk.PrivateCrossConnectProperties() # PrivateCrossConnectProperties | Modified properties of private cross-connect
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -500,12 +500,12 @@ You can use this POST method to create a private cross-connect
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -514,16 +514,16 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
-    pcc = ionos_cloud_sdk.PrivateCrossConnect() # PrivateCrossConnect | Private Cross-Connect to be created
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
+    pcc = ionossdk.PrivateCrossConnect() # PrivateCrossConnect | Private Cross-Connect to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -540,12 +540,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -554,16 +554,16 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.PrivateCrossConnectApi(api_client)
-    pcc = ionos_cloud_sdk.PrivateCrossConnect() # PrivateCrossConnect | Private Cross-Connect to be created
+    api_instance = ionossdk.PrivateCrossConnectApi(api_client)
+    pcc = ionossdk.PrivateCrossConnect() # PrivateCrossConnect | Private Cross-Connect to be created
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)

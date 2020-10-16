@@ -1,4 +1,4 @@
-# ionos_cloud_sdk.BackupUnitApi
+# ionossdk.BackupUnitApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
@@ -26,12 +26,12 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -40,15 +40,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup Unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -66,12 +66,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -80,15 +80,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup Unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -145,12 +145,12 @@ You can retrieve the details of an specific backup unit.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -159,15 +159,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -185,12 +185,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -199,15 +199,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
@@ -264,12 +264,12 @@ You can retrieve a complete list of backup Units that you have access to.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -278,15 +278,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -303,12 +303,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -317,15 +317,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -380,12 +380,12 @@ You can use update a backup Unit properties
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -394,17 +394,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
-backup_unit_properties = ionos_cloud_sdk.BackupUnitProperties() # BackupUnitProperties | Modified backup Unit properties
+backup_unit_properties = ionossdk.BackupUnitProperties() # BackupUnitProperties | Modified backup Unit properties
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -421,12 +421,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -435,17 +435,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
-backup_unit_properties = ionos_cloud_sdk.BackupUnitProperties() # BackupUnitProperties | Modified backup Unit properties
+backup_unit_properties = ionossdk.BackupUnitProperties() # BackupUnitProperties | Modified backup Unit properties
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -502,12 +502,12 @@ Create a Backup Unit. A Backup Unit is considered a resource like a virtual data
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -516,16 +516,16 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
-    backup_unit = ionos_cloud_sdk.BackupUnit() # BackupUnit | Payload containing data to create a new Backup Unit
+    api_instance = ionossdk.BackupUnitApi(api_client)
+    backup_unit = ionossdk.BackupUnit() # BackupUnit | Payload containing data to create a new Backup Unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -542,12 +542,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -556,16 +556,16 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
-    backup_unit = ionos_cloud_sdk.BackupUnit() # BackupUnit | Payload containing data to create a new Backup Unit
+    api_instance = ionossdk.BackupUnitApi(api_client)
+    backup_unit = ionossdk.BackupUnit() # BackupUnit | Payload containing data to create a new Backup Unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -621,12 +621,12 @@ You can use update a backup Unit properties
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -635,17 +635,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
-backup_unit = ionos_cloud_sdk.BackupUnit() # BackupUnit | Modified backup Unit
+backup_unit = ionossdk.BackupUnit() # BackupUnit | Modified backup Unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -662,12 +662,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -676,17 +676,17 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
-backup_unit = ionos_cloud_sdk.BackupUnit() # BackupUnit | Modified backup Unit
+backup_unit = ionossdk.BackupUnit() # BackupUnit | Modified backup Unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -743,12 +743,12 @@ Returns a single signon URL for the specified backup Unit.
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -757,15 +757,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique UUID of the backup unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -782,12 +782,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 ```python
 from __future__ import print_function
 import time
-import ionos_cloud_sdk
-from ionos_cloud_sdk.rest import ApiException
+import ionossdk
+from ionossdk.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
 # See configuration.py for a list of all supported configuration parameters.
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
@@ -796,15 +796,15 @@ configuration = ionos_cloud_sdk.Configuration(
 # Examples with auth method are provided below
 
 # Configure HTTP basic authorization: Basic Authentication
-configuration = ionos_cloud_sdk.Configuration(
+configuration = ionossdk.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 
 # Enter a context with an instance of the API client
-with ionos_cloud_sdk.ApiClient(configuration) as api_client:
+with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionos_cloud_sdk.BackupUnitApi(api_client)
+    api_instance = ionossdk.BackupUnitApi(api_client)
     backupunit_id = 'backupunit_id_example' # str | The unique UUID of the backup unit
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
