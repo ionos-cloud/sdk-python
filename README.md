@@ -46,4 +46,6 @@ Then import the package:
 ```python
 import ionos_cloud_sdk
 ```
-## [Our latest, most up to date documentation is available here](https://github.com/ionos-cloud/ionos-cloud-sdk-python/blob/SDK-71/DOCS.md)
+### Documentation
+
+Our latest, most up to date documentation is available [here](https://github.com/ionos-cloud/ionos-cloud-sdk-python/blob/SDK-71/DOCS.md)
