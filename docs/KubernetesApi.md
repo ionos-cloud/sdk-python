@@ -1358,7 +1358,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **k8s_nodepools_post**
-> KubernetesNodePool k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> KubernetesNodePool k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Kubernetes Node Pool
 
@@ -1394,14 +1394,14 @@ with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionossdk.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-kubernetes_node_pool_properties = ionossdk.KubernetesNodePoolProperties() # KubernetesNodePoolProperties | Details of Kubernetes Node Pool
+kubernetes_node_pool = ionossdk.KubernetesNodePool() # KubernetesNodePool | Details of Kubernetes Node Pool
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
 
     try:
         # Create a Kubernetes Node Pool
-        api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_post: %s\n" % e)
@@ -1435,14 +1435,14 @@ with ionossdk.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionossdk.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-kubernetes_node_pool_properties = ionossdk.KubernetesNodePoolProperties() # KubernetesNodePoolProperties | Details of Kubernetes Node Pool
+kubernetes_node_pool = ionossdk.KubernetesNodePool() # KubernetesNodePool | Details of Kubernetes Node Pool
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
 
     try:
         # Create a Kubernetes Node Pool
-        api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_post: %s\n" % e)
@@ -1453,7 +1453,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster | 
- **kubernetes_node_pool_properties** | [**KubernetesNodePoolProperties**](KubernetesNodePoolProperties.md)| Details of Kubernetes Node Pool | 
+ **kubernetes_node_pool** | [**KubernetesNodePool**](KubernetesNodePool.md)| Details of Kubernetes Node Pool | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] 

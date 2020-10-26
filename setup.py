@@ -15,7 +15,7 @@ import os
 import codecs
 
 NAME = "ionossdk"
-VERSION = "5.2.6"
+VERSION = "5.3.0"
 # To install the library, run the following
 #
 # python setup.py install
