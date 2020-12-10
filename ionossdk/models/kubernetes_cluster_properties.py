@@ -35,16 +35,20 @@ class KubernetesClusterProperties(object):
     openapi_types = {
         'name': 'str',
         'k8s_version': 'str',
-        'maintenance_window': 'KubernetesMaintenanceWindow'
+        'maintenance_window': 'KubernetesMaintenanceWindow',
+        'available_upgrade_versions': 'list[str]',
+        'viable_node_pool_versions': 'list[str]'
     }
 
     attribute_map = {
         'name': 'name',
         'k8s_version': 'k8sVersion',
-        'maintenance_window': 'maintenanceWindow'
+        'maintenance_window': 'maintenanceWindow',
+        'available_upgrade_versions': 'availableUpgradeVersions',
+        'viable_node_pool_versions': 'viableNodePoolVersions'
     }
 
-    def __init__(self, name=None, k8s_version=None, maintenance_window=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, k8s_version=None, maintenance_window=None, available_upgrade_versions=None, viable_node_pool_versions=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesClusterProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -53,6 +57,8 @@ class KubernetesClusterProperties(object):
         self._name = None
         self._k8s_version = None
         self._maintenance_window = None
+        self._available_upgrade_versions = None
+        self._viable_node_pool_versions = None
         self.discriminator = None
 
         self.name = name
@@ -60,6 +66,10 @@ class KubernetesClusterProperties(object):
             self.k8s_version = k8s_version
         if maintenance_window is not None:
             self.maintenance_window = maintenance_window
+        if available_upgrade_versions is not None:
+            self.available_upgrade_versions = available_upgrade_versions
+        if viable_node_pool_versions is not None:
+            self.viable_node_pool_versions = viable_node_pool_versions
 
     @property
     def name(self):
@@ -129,6 +139,52 @@ class KubernetesClusterProperties(object):
         """
 
         self._maintenance_window = maintenance_window
+
+    @property
+    def available_upgrade_versions(self):
+        """Gets the available_upgrade_versions of this KubernetesClusterProperties.  # noqa: E501
+
+        List of available versions for upgrading the cluster  # noqa: E501
+
+        :return: The available_upgrade_versions of this KubernetesClusterProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._available_upgrade_versions
+
+    @available_upgrade_versions.setter
+    def available_upgrade_versions(self, available_upgrade_versions):
+        """Sets the available_upgrade_versions of this KubernetesClusterProperties.
+
+        List of available versions for upgrading the cluster  # noqa: E501
+
+        :param available_upgrade_versions: The available_upgrade_versions of this KubernetesClusterProperties.  # noqa: E501
+        :type available_upgrade_versions: list[str]
+        """
+
+        self._available_upgrade_versions = available_upgrade_versions
+
+    @property
+    def viable_node_pool_versions(self):
+        """Gets the viable_node_pool_versions of this KubernetesClusterProperties.  # noqa: E501
+
+        List of versions that may be used for node pools under this cluster  # noqa: E501
+
+        :return: The viable_node_pool_versions of this KubernetesClusterProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._viable_node_pool_versions
+
+    @viable_node_pool_versions.setter
+    def viable_node_pool_versions(self, viable_node_pool_versions):
+        """Sets the viable_node_pool_versions of this KubernetesClusterProperties.
+
+        List of versions that may be used for node pools under this cluster  # noqa: E501
+
+        :param viable_node_pool_versions: The viable_node_pool_versions of this KubernetesClusterProperties.  # noqa: E501
+        :type viable_node_pool_versions: list[str]
+        """
+
+        self._viable_node_pool_versions = viable_node_pool_versions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -45,7 +45,10 @@ class KubernetesNodePoolPropertiesForPut(object):
         'k8s_version': 'str',
         'maintenance_window': 'KubernetesMaintenanceWindow',
         'auto_scaling': 'KubernetesAutoScaling',
-        'lans': 'list[KubernetesNodePoolLan]'
+        'lans': 'list[KubernetesNodePoolLan]',
+        'labels': 'KubernetesNodePoolLabel',
+        'annotations': 'KubernetesNodePoolAnnotation',
+        'public_ips': 'list[str]'
     }
 
     attribute_map = {
@@ -61,10 +64,13 @@ class KubernetesNodePoolPropertiesForPut(object):
         'k8s_version': 'k8sVersion',
         'maintenance_window': 'maintenanceWindow',
         'auto_scaling': 'autoScaling',
-        'lans': 'lans'
+        'lans': 'lans',
+        'labels': 'labels',
+        'annotations': 'annotations',
+        'public_ips': 'publicIps'
     }
 
-    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, public_ips=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolPropertiesForPut - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -83,6 +89,9 @@ class KubernetesNodePoolPropertiesForPut(object):
         self._maintenance_window = None
         self._auto_scaling = None
         self._lans = None
+        self._labels = None
+        self._annotations = None
+        self._public_ips = None
         self.discriminator = None
 
         self.name = name
@@ -102,6 +111,12 @@ class KubernetesNodePoolPropertiesForPut(object):
             self.auto_scaling = auto_scaling
         if lans is not None:
             self.lans = lans
+        if labels is not None:
+            self.labels = labels
+        if annotations is not None:
+            self.annotations = annotations
+        if public_ips is not None:
+            self.public_ips = public_ips
 
     @property
     def name(self):
@@ -427,6 +442,71 @@ class KubernetesNodePoolPropertiesForPut(object):
         """
 
         self._lans = lans
+
+    @property
+    def labels(self):
+        """Gets the labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+
+        :return: The labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: KubernetesNodePoolLabel
+        """
+        return self._labels
+
+    @labels.setter
+    def labels(self, labels):
+        """Sets the labels of this KubernetesNodePoolPropertiesForPut.
+
+
+        :param labels: The labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type labels: KubernetesNodePoolLabel
+        """
+
+        self._labels = labels
+
+    @property
+    def annotations(self):
+        """Gets the annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+
+        :return: The annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: KubernetesNodePoolAnnotation
+        """
+        return self._annotations
+
+    @annotations.setter
+    def annotations(self, annotations):
+        """Sets the annotations of this KubernetesNodePoolPropertiesForPut.
+
+
+        :param annotations: The annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type annotations: KubernetesNodePoolAnnotation
+        """
+
+        self._annotations = annotations
+
+    @property
+    def public_ips(self):
+        """Gets the public_ips of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.  # noqa: E501
+
+        :return: The public_ips of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._public_ips
+
+    @public_ips.setter
+    def public_ips(self, public_ips):
+        """Sets the public_ips of this KubernetesNodePoolPropertiesForPut.
+
+        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.  # noqa: E501
+
+        :param public_ips: The public_ips of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type public_ips: list[str]
+        """
+
+        self._public_ips = public_ips
 
     def to_dict(self):
         """Returns the model properties as a dict"""

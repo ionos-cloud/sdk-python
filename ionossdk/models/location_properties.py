@@ -106,13 +106,6 @@ class LocationProperties(object):
         :type features: list[str]
         """
         allowed_values = ["SSD", "SSD_STORAGE_ZONING"]  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                not set(features).issubset(set(allowed_values))):  # noqa: E501
-            raise ValueError(
-                "Invalid values for `features` [{0}], must be a subset of [{1}]"  # noqa: E501
-                .format(", ".join(map(str, set(features) - set(allowed_values))),  # noqa: E501
-                        ", ".join(map(str, allowed_values)))
-            )
 
         self._features = features
 

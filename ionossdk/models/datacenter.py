@@ -38,7 +38,7 @@ class Datacenter(object):
         'href': 'str',
         'metadata': 'DatacenterElementMetadata',
         'properties': 'DatacenterProperties',
-        'entities': 'DatacenterEntities'
+        'entities': 'DataCenterEntities'
     }
 
     attribute_map = {
@@ -66,7 +66,8 @@ class Datacenter(object):
 
         if id is not None:
             self.id = id
-        self.type = type
+        if type is not None:
+            self.type = type
         if href is not None:
             self.href = href
         if metadata is not None:
@@ -194,7 +195,7 @@ class Datacenter(object):
 
 
         :return: The entities of this Datacenter.  # noqa: E501
-        :rtype: DatacenterEntities
+        :rtype: DataCenterEntities
         """
         return self._entities
 
@@ -204,7 +205,7 @@ class Datacenter(object):
 
 
         :param entities: The entities of this Datacenter.  # noqa: E501
-        :type entities: DatacenterEntities
+        :type entities: DataCenterEntities
         """
 
         self._entities = entities

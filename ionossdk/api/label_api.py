@@ -379,6 +379,10 @@ class LabelApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -415,6 +419,10 @@ class LabelApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -444,7 +452,9 @@ class LabelApi(object):
             'datacenter_id',
             'pretty',
             'depth',
-            'x_contract_number'
+            'x_contract_number',
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -474,6 +484,12 @@ class LabelApi(object):
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_labels_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_labels_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `datacenters_labels_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_labels_get`, must be a value less than or equal to `10000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_labels_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -485,6 +501,10 @@ class LabelApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:
@@ -1271,6 +1291,10 @@ class LabelApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1309,6 +1333,10 @@ class LabelApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1339,7 +1367,9 @@ class LabelApi(object):
             'server_id',
             'pretty',
             'depth',
-            'x_contract_number'
+            'x_contract_number',
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -1373,6 +1403,12 @@ class LabelApi(object):
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_servers_labels_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_servers_labels_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `datacenters_servers_labels_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_servers_labels_get`, must be a value less than or equal to `10000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_servers_labels_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1386,6 +1422,10 @@ class LabelApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:
@@ -2194,6 +2234,10 @@ class LabelApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2232,6 +2276,10 @@ class LabelApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2262,7 +2310,9 @@ class LabelApi(object):
             'volume_id',
             'pretty',
             'depth',
-            'x_contract_number'
+            'x_contract_number',
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -2296,6 +2346,12 @@ class LabelApi(object):
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_volumes_labels_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_volumes_labels_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `datacenters_volumes_labels_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_volumes_labels_get`, must be a value less than or equal to `10000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_volumes_labels_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -2309,6 +2365,10 @@ class LabelApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:
@@ -3599,14 +3659,14 @@ class LabelApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def labels_find_by_labelurn(self, labelurn, **kwargs):  # noqa: E501
+    def labels_find_by_urn(self, labelurn, **kwargs):  # noqa: E501
         """Returns the label by its URN.  # noqa: E501
 
         You can retrieve the details of a specific label using its URN. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.labels_find_by_labelurn(labelurn, async_req=True)
+        >>> thread = api.labels_find_by_urn(labelurn, async_req=True)
         >>> result = thread.get()
 
         :param labelurn: The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key> (required)
@@ -3633,16 +3693,16 @@ class LabelApi(object):
         :rtype: Label
         """
         kwargs['_return_http_data_only'] = True
-        return self.labels_find_by_labelurn_with_http_info(labelurn, **kwargs)  # noqa: E501
+        return self.labels_find_by_urn_with_http_info(labelurn, **kwargs)  # noqa: E501
 
-    def labels_find_by_labelurn_with_http_info(self, labelurn, **kwargs):  # noqa: E501
+    def labels_find_by_urn_with_http_info(self, labelurn, **kwargs):  # noqa: E501
         """Returns the label by its URN.  # noqa: E501
 
         You can retrieve the details of a specific label using its URN. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.labels_find_by_labelurn_with_http_info(labelurn, async_req=True)
+        >>> thread = api.labels_find_by_urn_with_http_info(labelurn, async_req=True)
         >>> result = thread.get()
 
         :param labelurn: The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key> (required)
@@ -3699,19 +3759,19 @@ class LabelApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method labels_find_by_labelurn" % key
+                    " to method labels_find_by_urn" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'labelurn' is set
         if self.api_client.client_side_validation and ('labelurn' not in local_var_params or  # noqa: E501
                                                         local_var_params['labelurn'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `labelurn` when calling `labels_find_by_labelurn`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `labelurn` when calling `labels_find_by_urn`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `labels_find_by_labelurn`, must be a value less than or equal to `10`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `labels_find_by_urn`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `labels_find_by_labelurn`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `labels_find_by_urn`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}

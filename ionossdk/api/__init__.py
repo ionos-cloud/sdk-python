@@ -20,3 +20,4 @@ from ionossdk.api.server_api import ServerApi
 from ionossdk.api.snapshot_api import SnapshotApi
 from ionossdk.api.user_management_api import UserManagementApi
 from ionossdk.api.volume_api import VolumeApi
+from ionossdk.api.__api import Api

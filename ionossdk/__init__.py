@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "5.3.4"
+__version__ = "ionossdk"
 
 # import apis into sdk package
 from ionossdk.api.backup_unit_api import BackupUnitApi
@@ -34,6 +34,7 @@ from ionossdk.api.server_api import ServerApi
 from ionossdk.api.snapshot_api import SnapshotApi
 from ionossdk.api.user_management_api import UserManagementApi
 from ionossdk.api.volume_api import VolumeApi
+from ionossdk.api.__api import Api
 
 # import ApiClient
 from ionossdk.api_client import ApiClient
@@ -55,9 +56,9 @@ from ionossdk.models.cdroms import Cdroms
 from ionossdk.models.connectable_datacenter import ConnectableDatacenter
 from ionossdk.models.contract import Contract
 from ionossdk.models.contract_properties import ContractProperties
+from ionossdk.models.data_center_entities import DataCenterEntities
 from ionossdk.models.datacenter import Datacenter
 from ionossdk.models.datacenter_element_metadata import DatacenterElementMetadata
-from ionossdk.models.datacenter_entities import DatacenterEntities
 from ionossdk.models.datacenter_properties import DatacenterProperties
 from ionossdk.models.datacenters import Datacenters
 from ionossdk.models.error import Error
@@ -87,6 +88,7 @@ from ionossdk.models.kubernetes_auto_scaling import KubernetesAutoScaling
 from ionossdk.models.kubernetes_cluster import KubernetesCluster
 from ionossdk.models.kubernetes_cluster_entities import KubernetesClusterEntities
 from ionossdk.models.kubernetes_cluster_properties import KubernetesClusterProperties
+from ionossdk.models.kubernetes_cluster_properties_for_post_and_put import KubernetesClusterPropertiesForPostAndPut
 from ionossdk.models.kubernetes_clusters import KubernetesClusters
 from ionossdk.models.kubernetes_config import KubernetesConfig
 from ionossdk.models.kubernetes_config_properties import KubernetesConfigProperties
@@ -99,6 +101,7 @@ from ionossdk.models.kubernetes_node_pool_for_put import KubernetesNodePoolForPu
 from ionossdk.models.kubernetes_node_pool_label import KubernetesNodePoolLabel
 from ionossdk.models.kubernetes_node_pool_lan import KubernetesNodePoolLan
 from ionossdk.models.kubernetes_node_pool_properties import KubernetesNodePoolProperties
+from ionossdk.models.kubernetes_node_pool_properties_for_post import KubernetesNodePoolPropertiesForPost
 from ionossdk.models.kubernetes_node_pool_properties_for_put import KubernetesNodePoolPropertiesForPut
 from ionossdk.models.kubernetes_node_pools import KubernetesNodePools
 from ionossdk.models.kubernetes_node_properties import KubernetesNodeProperties
@@ -128,6 +131,7 @@ from ionossdk.models.nic_entities import NicEntities
 from ionossdk.models.nic_properties import NicProperties
 from ionossdk.models.nics import Nics
 from ionossdk.models.no_state_meta_data import NoStateMetaData
+from ionossdk.models.pagination_links import PaginationLinks
 from ionossdk.models.peer import Peer
 from ionossdk.models.private_cross_connect import PrivateCrossConnect
 from ionossdk.models.private_cross_connect_properties import PrivateCrossConnectProperties

@@ -178,14 +178,14 @@ class KubernetesApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def k8s_find_by_clusterid(self, k8s_cluster_id, **kwargs):  # noqa: E501
+    def k8s_find_by_s_cluster_id(self, k8s_cluster_id, **kwargs):  # noqa: E501
         """Retrieve Kubernetes Cluster  # noqa: E501
 
         This will retrieve a single Kubernetes Cluster.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_find_by_clusterid(k8s_cluster_id, async_req=True)
+        >>> thread = api.k8s_find_by_s_cluster_id(k8s_cluster_id, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
@@ -212,16 +212,16 @@ class KubernetesApi(object):
         :rtype: KubernetesCluster
         """
         kwargs['_return_http_data_only'] = True
-        return self.k8s_find_by_clusterid_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
+        return self.k8s_find_by_s_cluster_id_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
 
-    def k8s_find_by_clusterid_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
+    def k8s_find_by_s_cluster_id_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
         """Retrieve Kubernetes Cluster  # noqa: E501
 
         This will retrieve a single Kubernetes Cluster.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_find_by_clusterid_with_http_info(k8s_cluster_id, async_req=True)
+        >>> thread = api.k8s_find_by_s_cluster_id_with_http_info(k8s_cluster_id, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
@@ -278,19 +278,19 @@ class KubernetesApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_find_by_clusterid" % key
+                    " to method k8s_find_by_s_cluster_id" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['k8s_cluster_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `k8s_cluster_id` when calling `k8s_find_by_clusterid`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `k8s_cluster_id` when calling `k8s_find_by_s_cluster_id`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_find_by_clusterid`, must be a value less than or equal to `10`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_find_by_s_cluster_id`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_find_by_clusterid`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_find_by_s_cluster_id`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -2052,22 +2052,22 @@ class KubernetesApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def k8s_nodepools_put(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool_properties, **kwargs):  # noqa: E501
+    def k8s_nodepools_put(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs):  # noqa: E501
         """Modify Kubernetes Node Pool  # noqa: E501
 
         This will modify the Kubernetes Node Pool.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool_properties, async_req=True)
+        >>> thread = api.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
         :param nodepool_id: The unique ID of the Kubernetes Node Pool (required)
         :type nodepool_id: str
-        :param kubernetes_node_pool_properties: Details of the Kubernetes Node Pool (required)
-        :type kubernetes_node_pool_properties: KubernetesNodePoolPropertiesForPut
+        :param kubernetes_node_pool: Details of the Kubernetes Node Pool (required)
+        :type kubernetes_node_pool: KubernetesNodePool
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2090,24 +2090,24 @@ class KubernetesApi(object):
         :rtype: KubernetesNodePoolForPut
         """
         kwargs['_return_http_data_only'] = True
-        return self.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool_properties, **kwargs)  # noqa: E501
+        return self.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs)  # noqa: E501
 
-    def k8s_nodepools_put_with_http_info(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool_properties, **kwargs):  # noqa: E501
+    def k8s_nodepools_put_with_http_info(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs):  # noqa: E501
         """Modify Kubernetes Node Pool  # noqa: E501
 
         This will modify the Kubernetes Node Pool.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool_properties, async_req=True)
+        >>> thread = api.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
         :param nodepool_id: The unique ID of the Kubernetes Node Pool (required)
         :type nodepool_id: str
-        :param kubernetes_node_pool_properties: Details of the Kubernetes Node Pool (required)
-        :type kubernetes_node_pool_properties: KubernetesNodePoolPropertiesForPut
+        :param kubernetes_node_pool: Details of the Kubernetes Node Pool (required)
+        :type kubernetes_node_pool: KubernetesNodePool
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2142,7 +2142,7 @@ class KubernetesApi(object):
         all_params = [
             'k8s_cluster_id',
             'nodepool_id',
-            'kubernetes_node_pool_properties',
+            'kubernetes_node_pool',
             'pretty',
             'depth',
             'x_contract_number'
@@ -2174,10 +2174,10 @@ class KubernetesApi(object):
         if self.api_client.client_side_validation and ('nodepool_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['nodepool_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `nodepool_id` when calling `k8s_nodepools_put`")  # noqa: E501
-        # verify the required parameter 'kubernetes_node_pool_properties' is set
-        if self.api_client.client_side_validation and ('kubernetes_node_pool_properties' not in local_var_params or  # noqa: E501
-                                                        local_var_params['kubernetes_node_pool_properties'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `kubernetes_node_pool_properties` when calling `k8s_nodepools_put`")  # noqa: E501
+        # verify the required parameter 'kubernetes_node_pool' is set
+        if self.api_client.client_side_validation and ('kubernetes_node_pool' not in local_var_params or  # noqa: E501
+                                                        local_var_params['kubernetes_node_pool'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `kubernetes_node_pool` when calling `k8s_nodepools_put`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_nodepools_put`, must be a value less than or equal to `10`")  # noqa: E501
@@ -2205,8 +2205,8 @@ class KubernetesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'kubernetes_node_pool_properties' in local_var_params:
-            body_params = local_var_params['kubernetes_node_pool_properties']
+        if 'kubernetes_node_pool' in local_var_params:
+            body_params = local_var_params['kubernetes_node_pool']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -2404,20 +2404,20 @@ class KubernetesApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def k8s_put(self, k8s_cluster_id, kubernetescluster, **kwargs):  # noqa: E501
+    def k8s_put(self, k8s_cluster_id, kubernetes_cluster, **kwargs):  # noqa: E501
         """Modify Kubernetes Cluster  # noqa: E501
 
         This will modify the Kubernetes Cluster.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_put(k8s_cluster_id, kubernetescluster, async_req=True)
+        >>> thread = api.k8s_put(k8s_cluster_id, kubernetes_cluster, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
-        :param kubernetescluster: Details of of the Kubernetes Cluster (required)
-        :type kubernetescluster: KubernetesCluster
+        :param kubernetes_cluster: Properties of the Kubernetes Cluster (required)
+        :type kubernetes_cluster: KubernetesCluster
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2440,22 +2440,22 @@ class KubernetesApi(object):
         :rtype: KubernetesCluster
         """
         kwargs['_return_http_data_only'] = True
-        return self.k8s_put_with_http_info(k8s_cluster_id, kubernetescluster, **kwargs)  # noqa: E501
+        return self.k8s_put_with_http_info(k8s_cluster_id, kubernetes_cluster, **kwargs)  # noqa: E501
 
-    def k8s_put_with_http_info(self, k8s_cluster_id, kubernetescluster, **kwargs):  # noqa: E501
+    def k8s_put_with_http_info(self, k8s_cluster_id, kubernetes_cluster, **kwargs):  # noqa: E501
         """Modify Kubernetes Cluster  # noqa: E501
 
         This will modify the Kubernetes Cluster.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_put_with_http_info(k8s_cluster_id, kubernetescluster, async_req=True)
+        >>> thread = api.k8s_put_with_http_info(k8s_cluster_id, kubernetes_cluster, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
-        :param kubernetescluster: Details of of the Kubernetes Cluster (required)
-        :type kubernetescluster: KubernetesCluster
+        :param kubernetes_cluster: Properties of the Kubernetes Cluster (required)
+        :type kubernetes_cluster: KubernetesCluster
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2489,7 +2489,7 @@ class KubernetesApi(object):
 
         all_params = [
             'k8s_cluster_id',
-            'kubernetescluster',
+            'kubernetes_cluster',
             'pretty',
             'depth',
             'x_contract_number'
@@ -2517,10 +2517,10 @@ class KubernetesApi(object):
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['k8s_cluster_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `k8s_cluster_id` when calling `k8s_put`")  # noqa: E501
-        # verify the required parameter 'kubernetescluster' is set
-        if self.api_client.client_side_validation and ('kubernetescluster' not in local_var_params or  # noqa: E501
-                                                        local_var_params['kubernetescluster'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `kubernetescluster` when calling `k8s_put`")  # noqa: E501
+        # verify the required parameter 'kubernetes_cluster' is set
+        if self.api_client.client_side_validation and ('kubernetes_cluster' not in local_var_params or  # noqa: E501
+                                                        local_var_params['kubernetes_cluster'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `kubernetes_cluster` when calling `k8s_put`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_put`, must be a value less than or equal to `10`")  # noqa: E501
@@ -2546,8 +2546,8 @@ class KubernetesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'kubernetescluster' in local_var_params:
-            body_params = local_var_params['kubernetescluster']
+        if 'kubernetes_cluster' in local_var_params:
+            body_params = local_var_params['kubernetes_cluster']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

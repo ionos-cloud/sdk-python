@@ -403,6 +403,10 @@ class ServerApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -441,6 +445,10 @@ class ServerApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -471,7 +479,9 @@ class ServerApi(object):
             'server_id',
             'pretty',
             'depth',
-            'x_contract_number'
+            'x_contract_number',
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -505,6 +515,12 @@ class ServerApi(object):
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_servers_cdroms_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_servers_cdroms_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `datacenters_servers_cdroms_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_servers_cdroms_get`, must be a value less than or equal to `10000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_servers_cdroms_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -518,6 +534,10 @@ class ServerApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:
@@ -1106,6 +1126,10 @@ class ServerApi(object):
         :type upgrade_needed: bool
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1144,6 +1168,10 @@ class ServerApi(object):
         :type upgrade_needed: bool
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1174,7 +1202,9 @@ class ServerApi(object):
             'pretty',
             'depth',
             'upgrade_needed',
-            'x_contract_number'
+            'x_contract_number',
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -1204,6 +1234,12 @@ class ServerApi(object):
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_servers_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_servers_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `datacenters_servers_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_servers_get`, must be a value less than or equal to `10000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_servers_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1217,6 +1253,10 @@ class ServerApi(object):
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
         if 'upgrade_needed' in local_var_params and local_var_params['upgrade_needed'] is not None:  # noqa: E501
             query_params.append(('upgradeNeeded', local_var_params['upgrade_needed']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:
@@ -2151,7 +2191,7 @@ class ServerApi(object):
     def datacenters_servers_stop_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
         """Stop a Server  # noqa: E501
 
-        This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for CoreVPS servers.  # noqa: E501
+        This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2189,7 +2229,7 @@ class ServerApi(object):
     def datacenters_servers_stop_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
         """Stop a Server  # noqa: E501
 
-        This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for CoreVPS servers.  # noqa: E501
+        This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2878,6 +2918,10 @@ class ServerApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2916,6 +2960,10 @@ class ServerApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -2946,7 +2994,9 @@ class ServerApi(object):
             'server_id',
             'pretty',
             'depth',
-            'x_contract_number'
+            'x_contract_number',
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -2980,6 +3030,12 @@ class ServerApi(object):
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_servers_volumes_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `datacenters_servers_volumes_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `datacenters_servers_volumes_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_servers_volumes_get`, must be a value less than or equal to `10000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `datacenters_servers_volumes_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -2993,6 +3049,10 @@ class ServerApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:

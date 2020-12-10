@@ -38,8 +38,8 @@ class VolumeProperties(object):
         'size': 'float',
         'availability_zone': 'str',
         'image': 'str',
-        'image_alias': 'str',
         'image_password': 'str',
+        'image_alias': 'str',
         'ssh_keys': 'list[str]',
         'bus': 'str',
         'licence_type': 'str',
@@ -59,8 +59,8 @@ class VolumeProperties(object):
         'size': 'size',
         'availability_zone': 'availabilityZone',
         'image': 'image',
-        'image_alias': 'imageAlias',
         'image_password': 'imagePassword',
+        'image_alias': 'imageAlias',
         'ssh_keys': 'sshKeys',
         'bus': 'bus',
         'licence_type': 'licenceType',
@@ -74,7 +74,7 @@ class VolumeProperties(object):
         'backupunit_id': 'backupunitId'
     }
 
-    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_alias=None, image_password=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, backupunit_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, backupunit_id=None, local_vars_configuration=None):  # noqa: E501
         """VolumeProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -85,8 +85,8 @@ class VolumeProperties(object):
         self._size = None
         self._availability_zone = None
         self._image = None
-        self._image_alias = None
         self._image_password = None
+        self._image_alias = None
         self._ssh_keys = None
         self._bus = None
         self._licence_type = None
@@ -109,10 +109,10 @@ class VolumeProperties(object):
             self.availability_zone = availability_zone
         if image is not None:
             self.image = image
-        if image_alias is not None:
-            self.image_alias = image_alias
         if image_password is not None:
             self.image_password = image_password
+        if image_alias is not None:
+            self.image_alias = image_alias
         if ssh_keys is not None:
             self.ssh_keys = ssh_keys
         if bus is not None:
@@ -266,27 +266,6 @@ class VolumeProperties(object):
         self._image = image
 
     @property
-    def image_alias(self):
-        """Gets the image_alias of this VolumeProperties.  # noqa: E501
-
-
-        :return: The image_alias of this VolumeProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._image_alias
-
-    @image_alias.setter
-    def image_alias(self, image_alias):
-        """Sets the image_alias of this VolumeProperties.
-
-
-        :param image_alias: The image_alias of this VolumeProperties.  # noqa: E501
-        :type image_alias: str
-        """
-
-        self._image_alias = image_alias
-
-    @property
     def image_password(self):
         """Gets the image_password of this VolumeProperties.  # noqa: E501
 
@@ -308,6 +287,27 @@ class VolumeProperties(object):
         """
 
         self._image_password = image_password
+
+    @property
+    def image_alias(self):
+        """Gets the image_alias of this VolumeProperties.  # noqa: E501
+
+
+        :return: The image_alias of this VolumeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._image_alias
+
+    @image_alias.setter
+    def image_alias(self, image_alias):
+        """Sets the image_alias of this VolumeProperties.
+
+
+        :param image_alias: The image_alias of this VolumeProperties.  # noqa: E501
+        :type image_alias: str
+        """
+
+        self._image_alias = image_alias
 
     @property
     def ssh_keys(self):

@@ -47,7 +47,9 @@ class KubernetesNodePoolProperties(object):
         'auto_scaling': 'KubernetesAutoScaling',
         'lans': 'list[KubernetesNodePoolLan]',
         'labels': 'KubernetesNodePoolLabel',
-        'annotations': 'KubernetesNodePoolAnnotation'
+        'annotations': 'KubernetesNodePoolAnnotation',
+        'public_ips': 'list[str]',
+        'available_upgrade_versions': 'list[str]'
     }
 
     attribute_map = {
@@ -65,10 +67,12 @@ class KubernetesNodePoolProperties(object):
         'auto_scaling': 'autoScaling',
         'lans': 'lans',
         'labels': 'labels',
-        'annotations': 'annotations'
+        'annotations': 'annotations',
+        'public_ips': 'publicIps',
+        'available_upgrade_versions': 'availableUpgradeVersions'
     }
 
-    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, public_ips=None, available_upgrade_versions=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -89,6 +93,8 @@ class KubernetesNodePoolProperties(object):
         self._lans = None
         self._labels = None
         self._annotations = None
+        self._public_ips = None
+        self._available_upgrade_versions = None
         self.discriminator = None
 
         self.name = name
@@ -112,6 +118,10 @@ class KubernetesNodePoolProperties(object):
             self.labels = labels
         if annotations is not None:
             self.annotations = annotations
+        if public_ips is not None:
+            self.public_ips = public_ips
+        if available_upgrade_versions is not None:
+            self.available_upgrade_versions = available_upgrade_versions
 
     @property
     def name(self):
@@ -479,6 +489,52 @@ class KubernetesNodePoolProperties(object):
         """
 
         self._annotations = annotations
+
+    @property
+    def public_ips(self):
+        """Gets the public_ips of this KubernetesNodePoolProperties.  # noqa: E501
+
+        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.  # noqa: E501
+
+        :return: The public_ips of this KubernetesNodePoolProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._public_ips
+
+    @public_ips.setter
+    def public_ips(self, public_ips):
+        """Sets the public_ips of this KubernetesNodePoolProperties.
+
+        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.  # noqa: E501
+
+        :param public_ips: The public_ips of this KubernetesNodePoolProperties.  # noqa: E501
+        :type public_ips: list[str]
+        """
+
+        self._public_ips = public_ips
+
+    @property
+    def available_upgrade_versions(self):
+        """Gets the available_upgrade_versions of this KubernetesNodePoolProperties.  # noqa: E501
+
+        List of available versions for upgrading the node pool  # noqa: E501
+
+        :return: The available_upgrade_versions of this KubernetesNodePoolProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._available_upgrade_versions
+
+    @available_upgrade_versions.setter
+    def available_upgrade_versions(self, available_upgrade_versions):
+        """Sets the available_upgrade_versions of this KubernetesNodePoolProperties.
+
+        List of available versions for upgrading the node pool  # noqa: E501
+
+        :param available_upgrade_versions: The available_upgrade_versions of this KubernetesNodePoolProperties.  # noqa: E501
+        :type available_upgrade_versions: list[str]
+        """
+
+        self._available_upgrade_versions = available_upgrade_versions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

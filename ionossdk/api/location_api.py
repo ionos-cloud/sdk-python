@@ -17,14 +17,14 @@ class LocationApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def locations_find_by_region(self, region_id, **kwargs):  # noqa: E501
+    def locations_find_by_region_id(self, region_id, **kwargs):  # noqa: E501
         """List Locations within a region  # noqa: E501
 
         Retrieve a list of Locations within a world's region  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.locations_find_by_region(region_id, async_req=True)
+        >>> thread = api.locations_find_by_region_id(region_id, async_req=True)
         >>> result = thread.get()
 
         :param region_id: (required)
@@ -51,16 +51,16 @@ class LocationApi(object):
         :rtype: Locations
         """
         kwargs['_return_http_data_only'] = True
-        return self.locations_find_by_region_with_http_info(region_id, **kwargs)  # noqa: E501
+        return self.locations_find_by_region_id_with_http_info(region_id, **kwargs)  # noqa: E501
 
-    def locations_find_by_region_with_http_info(self, region_id, **kwargs):  # noqa: E501
+    def locations_find_by_region_id_with_http_info(self, region_id, **kwargs):  # noqa: E501
         """List Locations within a region  # noqa: E501
 
         Retrieve a list of Locations within a world's region  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.locations_find_by_region_with_http_info(region_id, async_req=True)
+        >>> thread = api.locations_find_by_region_id_with_http_info(region_id, async_req=True)
         >>> result = thread.get()
 
         :param region_id: (required)
@@ -117,19 +117,19 @@ class LocationApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method locations_find_by_region" % key
+                    " to method locations_find_by_region_id" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'region_id' is set
         if self.api_client.client_side_validation and ('region_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['region_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `region_id` when calling `locations_find_by_region`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `region_id` when calling `locations_find_by_region_id`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `locations_find_by_region`, must be a value less than or equal to `10`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `locations_find_by_region_id`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `locations_find_by_region`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `locations_find_by_region_id`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -178,14 +178,14 @@ class LocationApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def locations_find_by_region_and_id(self, region_id, location_id, **kwargs):  # noqa: E501
+    def locations_find_by_region_id_and_id(self, region_id, location_id, **kwargs):  # noqa: E501
         """Retrieve a Location  # noqa: E501
 
         Retrieves the attributes of a given location  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.locations_find_by_region_and_id(region_id, location_id, async_req=True)
+        >>> thread = api.locations_find_by_region_id_and_id(region_id, location_id, async_req=True)
         >>> result = thread.get()
 
         :param region_id: (required)
@@ -214,16 +214,16 @@ class LocationApi(object):
         :rtype: Location
         """
         kwargs['_return_http_data_only'] = True
-        return self.locations_find_by_region_and_id_with_http_info(region_id, location_id, **kwargs)  # noqa: E501
+        return self.locations_find_by_region_id_and_id_with_http_info(region_id, location_id, **kwargs)  # noqa: E501
 
-    def locations_find_by_region_and_id_with_http_info(self, region_id, location_id, **kwargs):  # noqa: E501
+    def locations_find_by_region_id_and_id_with_http_info(self, region_id, location_id, **kwargs):  # noqa: E501
         """Retrieve a Location  # noqa: E501
 
         Retrieves the attributes of a given location  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.locations_find_by_region_and_id_with_http_info(region_id, location_id, async_req=True)
+        >>> thread = api.locations_find_by_region_id_and_id_with_http_info(region_id, location_id, async_req=True)
         >>> result = thread.get()
 
         :param region_id: (required)
@@ -283,23 +283,23 @@ class LocationApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method locations_find_by_region_and_id" % key
+                    " to method locations_find_by_region_id_and_id" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'region_id' is set
         if self.api_client.client_side_validation and ('region_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['region_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `region_id` when calling `locations_find_by_region_and_id`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `region_id` when calling `locations_find_by_region_id_and_id`")  # noqa: E501
         # verify the required parameter 'location_id' is set
         if self.api_client.client_side_validation and ('location_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['location_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `location_id` when calling `locations_find_by_region_and_id`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `location_id` when calling `locations_find_by_region_id_and_id`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `locations_find_by_region_and_id`, must be a value less than or equal to `10`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `locations_find_by_region_id_and_id`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `locations_find_by_region_and_id`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `locations_find_by_region_id_and_id`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}

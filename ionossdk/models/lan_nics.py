@@ -36,17 +36,23 @@ class LanNics(object):
         'id': 'str',
         'type': 'Type',
         'href': 'str',
-        'items': 'list[Nic]'
+        'items': 'list[Nic]',
+        'offset': 'float',
+        'limit': 'float',
+        'links': 'PaginationLinks'
     }
 
     attribute_map = {
         'id': 'id',
         'type': 'type',
         'href': 'href',
-        'items': 'items'
+        'items': 'items',
+        'offset': 'offset',
+        'limit': 'limit',
+        'links': '_links'
     }
 
-    def __init__(self, id=None, type=None, href=None, items=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, type=None, href=None, items=None, offset=None, limit=None, links=None, local_vars_configuration=None):  # noqa: E501
         """LanNics - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -56,6 +62,9 @@ class LanNics(object):
         self._type = None
         self._href = None
         self._items = None
+        self._offset = None
+        self._limit = None
+        self._links = None
         self.discriminator = None
 
         if id is not None:
@@ -66,6 +75,12 @@ class LanNics(object):
             self.href = href
         if items is not None:
             self.items = items
+        if offset is not None:
+            self.offset = offset
+        if limit is not None:
+            self.limit = limit
+        if links is not None:
+            self.links = links
 
     @property
     def id(self):
@@ -158,6 +173,73 @@ class LanNics(object):
         """
 
         self._items = items
+
+    @property
+    def offset(self):
+        """Gets the offset of this LanNics.  # noqa: E501
+
+        the offset (if specified in the request)  # noqa: E501
+
+        :return: The offset of this LanNics.  # noqa: E501
+        :rtype: float
+        """
+        return self._offset
+
+    @offset.setter
+    def offset(self, offset):
+        """Sets the offset of this LanNics.
+
+        the offset (if specified in the request)  # noqa: E501
+
+        :param offset: The offset of this LanNics.  # noqa: E501
+        :type offset: float
+        """
+
+        self._offset = offset
+
+    @property
+    def limit(self):
+        """Gets the limit of this LanNics.  # noqa: E501
+
+        the limit (if specified in the request)  # noqa: E501
+
+        :return: The limit of this LanNics.  # noqa: E501
+        :rtype: float
+        """
+        return self._limit
+
+    @limit.setter
+    def limit(self, limit):
+        """Sets the limit of this LanNics.
+
+        the limit (if specified in the request)  # noqa: E501
+
+        :param limit: The limit of this LanNics.  # noqa: E501
+        :type limit: float
+        """
+
+        self._limit = limit
+
+    @property
+    def links(self):
+        """Gets the links of this LanNics.  # noqa: E501
+
+
+        :return: The links of this LanNics.  # noqa: E501
+        :rtype: PaginationLinks
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """Sets the links of this LanNics.
+
+
+        :param links: The links of this LanNics.  # noqa: E501
+        :type links: PaginationLinks
+        """
+
+        self._links = links
 
     def to_dict(self):
         """Returns the model properties as a dict"""

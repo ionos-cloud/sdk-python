@@ -34,26 +34,36 @@ class LanPropertiesPost(object):
     """
     openapi_types = {
         'name': 'str',
+        'ip_failover': 'list[IPFailover]',
+        'pcc': 'str',
         'public': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
+        'ip_failover': 'ipFailover',
+        'pcc': 'pcc',
         'public': 'public'
     }
 
-    def __init__(self, name=None, public=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, ip_failover=None, pcc=None, public=None, local_vars_configuration=None):  # noqa: E501
         """LanPropertiesPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._name = None
+        self._ip_failover = None
+        self._pcc = None
         self._public = None
         self.discriminator = None
 
         if name is not None:
             self.name = name
+        if ip_failover is not None:
+            self.ip_failover = ip_failover
+        if pcc is not None:
+            self.pcc = pcc
         if public is not None:
             self.public = public
 
@@ -79,6 +89,52 @@ class LanPropertiesPost(object):
         """
 
         self._name = name
+
+    @property
+    def ip_failover(self):
+        """Gets the ip_failover of this LanPropertiesPost.  # noqa: E501
+
+        IP failover configurations for lan  # noqa: E501
+
+        :return: The ip_failover of this LanPropertiesPost.  # noqa: E501
+        :rtype: list[IPFailover]
+        """
+        return self._ip_failover
+
+    @ip_failover.setter
+    def ip_failover(self, ip_failover):
+        """Sets the ip_failover of this LanPropertiesPost.
+
+        IP failover configurations for lan  # noqa: E501
+
+        :param ip_failover: The ip_failover of this LanPropertiesPost.  # noqa: E501
+        :type ip_failover: list[IPFailover]
+        """
+
+        self._ip_failover = ip_failover
+
+    @property
+    def pcc(self):
+        """Gets the pcc of this LanPropertiesPost.  # noqa: E501
+
+        Unique identifier of the private cross connect the given LAN is connected to if any  # noqa: E501
+
+        :return: The pcc of this LanPropertiesPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._pcc
+
+    @pcc.setter
+    def pcc(self, pcc):
+        """Sets the pcc of this LanPropertiesPost.
+
+        Unique identifier of the private cross connect the given LAN is connected to if any  # noqa: E501
+
+        :param pcc: The pcc of this LanPropertiesPost.  # noqa: E501
+        :type pcc: str
+        """
+
+        self._pcc = pcc
 
     @property
     def public(self):

@@ -225,7 +225,7 @@ class NicProperties(object):
     def nat(self):
         """Gets the nat of this NicProperties.  # noqa: E501
 
-        Indicates if NAT is enabled on this NIC  # noqa: E501
+        Indicates if NAT is enabled on this NIC. This is now deprecated.  # noqa: E501
 
         :return: The nat of this NicProperties.  # noqa: E501
         :rtype: bool
@@ -236,7 +236,7 @@ class NicProperties(object):
     def nat(self, nat):
         """Sets the nat of this NicProperties.
 
-        Indicates if NAT is enabled on this NIC  # noqa: E501
+        Indicates if NAT is enabled on this NIC. This is now deprecated.  # noqa: E501
 
         :param nat: The nat of this NicProperties.  # noqa: E501
         :type nat: bool

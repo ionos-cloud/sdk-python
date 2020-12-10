@@ -200,14 +200,10 @@ class RequestApi(object):
         :type filter_created_after: str
         :param filter_created_before: Filter all the requests before the created date
         :type filter_created_before: str
-        :param filter_url: Url filter
-        :type filter_url: str
-        :param filter_created_date: Created date filter
-        :type filter_created_date: str
-        :param filter_method: Method filter
-        :type filter_method: str
-        :param filter_body: Url filter
-        :type filter_body: str
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -248,14 +244,10 @@ class RequestApi(object):
         :type filter_created_after: str
         :param filter_created_before: Filter all the requests before the created date
         :type filter_created_before: str
-        :param filter_url: Url filter
-        :type filter_url: str
-        :param filter_created_date: Created date filter
-        :type filter_created_date: str
-        :param filter_method: Method filter
-        :type filter_method: str
-        :param filter_body: Url filter
-        :type filter_body: str
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -288,10 +280,8 @@ class RequestApi(object):
             'filter_status',
             'filter_created_after',
             'filter_created_before',
-            'filter_url',
-            'filter_created_date',
-            'filter_method',
-            'filter_body'
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -317,6 +307,12 @@ class RequestApi(object):
             raise ApiValueError("Invalid value for parameter `depth` when calling `requests_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `requests_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `requests_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `requests_get`, must be a value less than or equal to `10000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `requests_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -332,14 +328,10 @@ class RequestApi(object):
             query_params.append(('filter.createdAfter', local_var_params['filter_created_after']))  # noqa: E501
         if 'filter_created_before' in local_var_params and local_var_params['filter_created_before'] is not None:  # noqa: E501
             query_params.append(('filter.createdBefore', local_var_params['filter_created_before']))  # noqa: E501
-        if 'filter_url' in local_var_params and local_var_params['filter_url'] is not None:  # noqa: E501
-            query_params.append(('filter.url', local_var_params['filter_url']))  # noqa: E501
-        if 'filter_created_date' in local_var_params and local_var_params['filter_created_date'] is not None:  # noqa: E501
-            query_params.append(('filter.createdDate', local_var_params['filter_created_date']))  # noqa: E501
-        if 'filter_method' in local_var_params and local_var_params['filter_method'] is not None:  # noqa: E501
-            query_params.append(('filter.method', local_var_params['filter_method']))  # noqa: E501
-        if 'filter_body' in local_var_params and local_var_params['filter_body'] is not None:  # noqa: E501
-            query_params.append(('filter.body', local_var_params['filter_body']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:

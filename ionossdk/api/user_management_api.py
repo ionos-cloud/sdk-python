@@ -1161,14 +1161,14 @@ class UserManagementApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def um_groups_shares_find_by_resource(self, group_id, resource_id, **kwargs):  # noqa: E501
+    def um_groups_shares_find_by_resource_id(self, group_id, resource_id, **kwargs):  # noqa: E501
         """Retrieve a group share  # noqa: E501
 
         This will retrieve the properties of a group share.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.um_groups_shares_find_by_resource(group_id, resource_id, async_req=True)
+        >>> thread = api.um_groups_shares_find_by_resource_id(group_id, resource_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
@@ -1197,16 +1197,16 @@ class UserManagementApi(object):
         :rtype: GroupShare
         """
         kwargs['_return_http_data_only'] = True
-        return self.um_groups_shares_find_by_resource_with_http_info(group_id, resource_id, **kwargs)  # noqa: E501
+        return self.um_groups_shares_find_by_resource_id_with_http_info(group_id, resource_id, **kwargs)  # noqa: E501
 
-    def um_groups_shares_find_by_resource_with_http_info(self, group_id, resource_id, **kwargs):  # noqa: E501
+    def um_groups_shares_find_by_resource_id_with_http_info(self, group_id, resource_id, **kwargs):  # noqa: E501
         """Retrieve a group share  # noqa: E501
 
         This will retrieve the properties of a group share.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.um_groups_shares_find_by_resource_with_http_info(group_id, resource_id, async_req=True)
+        >>> thread = api.um_groups_shares_find_by_resource_id_with_http_info(group_id, resource_id, async_req=True)
         >>> result = thread.get()
 
         :param group_id: (required)
@@ -1266,23 +1266,23 @@ class UserManagementApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_shares_find_by_resource" % key
+                    " to method um_groups_shares_find_by_resource_id" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['group_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `group_id` when calling `um_groups_shares_find_by_resource`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `group_id` when calling `um_groups_shares_find_by_resource_id`")  # noqa: E501
         # verify the required parameter 'resource_id' is set
         if self.api_client.client_side_validation and ('resource_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['resource_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `resource_id` when calling `um_groups_shares_find_by_resource`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `resource_id` when calling `um_groups_shares_find_by_resource_id`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `um_groups_shares_find_by_resource`, must be a value less than or equal to `10`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `um_groups_shares_find_by_resource_id`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `um_groups_shares_find_by_resource`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `um_groups_shares_find_by_resource_id`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -4163,14 +4163,14 @@ class UserManagementApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def um_users_s3keys_find_by_key(self, user_id, key_id, **kwargs):  # noqa: E501
+    def um_users_s3keys_find_by_key_id(self, user_id, key_id, **kwargs):  # noqa: E501
         """Retrieve given S3 key belonging to the given User  # noqa: E501
 
         You can retrieve S3 key belonging to the given User. This user Id can be found in the response body when a user is created or when you GET a list of users. The key Id can be found in the response body when a S3 key is created or when you GET a list of all S3 keys of a user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.um_users_s3keys_find_by_key(user_id, key_id, async_req=True)
+        >>> thread = api.um_users_s3keys_find_by_key_id(user_id, key_id, async_req=True)
         >>> result = thread.get()
 
         :param user_id: The unique ID of the user (required)
@@ -4199,16 +4199,16 @@ class UserManagementApi(object):
         :rtype: S3Key
         """
         kwargs['_return_http_data_only'] = True
-        return self.um_users_s3keys_find_by_key_with_http_info(user_id, key_id, **kwargs)  # noqa: E501
+        return self.um_users_s3keys_find_by_key_id_with_http_info(user_id, key_id, **kwargs)  # noqa: E501
 
-    def um_users_s3keys_find_by_key_with_http_info(self, user_id, key_id, **kwargs):  # noqa: E501
+    def um_users_s3keys_find_by_key_id_with_http_info(self, user_id, key_id, **kwargs):  # noqa: E501
         """Retrieve given S3 key belonging to the given User  # noqa: E501
 
         You can retrieve S3 key belonging to the given User. This user Id can be found in the response body when a user is created or when you GET a list of users. The key Id can be found in the response body when a S3 key is created or when you GET a list of all S3 keys of a user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.um_users_s3keys_find_by_key_with_http_info(user_id, key_id, async_req=True)
+        >>> thread = api.um_users_s3keys_find_by_key_id_with_http_info(user_id, key_id, async_req=True)
         >>> result = thread.get()
 
         :param user_id: The unique ID of the user (required)
@@ -4268,23 +4268,23 @@ class UserManagementApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_s3keys_find_by_key" % key
+                    " to method um_users_s3keys_find_by_key_id" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['user_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `user_id` when calling `um_users_s3keys_find_by_key`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `user_id` when calling `um_users_s3keys_find_by_key_id`")  # noqa: E501
         # verify the required parameter 'key_id' is set
         if self.api_client.client_side_validation and ('key_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['key_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `key_id` when calling `um_users_s3keys_find_by_key`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `key_id` when calling `um_users_s3keys_find_by_key_id`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `um_users_s3keys_find_by_key`, must be a value less than or equal to `10`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `um_users_s3keys_find_by_key_id`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `um_users_s3keys_find_by_key`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `um_users_s3keys_find_by_key_id`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -4671,7 +4671,7 @@ class UserManagementApi(object):
         :type user_id: str
         :param key_id: The unique access key ID of the S3 key (required)
         :type key_id: str
-        :param s3_key: Modified S3Key (required)
+        :param s3_key: Modified s3 key (required)
         :type s3_key: S3Key
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
@@ -4711,7 +4711,7 @@ class UserManagementApi(object):
         :type user_id: str
         :param key_id: The unique access key ID of the S3 key (required)
         :type key_id: str
-        :param s3_key: Modified S3Key (required)
+        :param s3_key: Modified s3 key (required)
         :type s3_key: S3Key
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
