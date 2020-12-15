@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.contract_api import ContractApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.contract_api import ContractApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestContractApi(unittest.TestCase):
     """ContractApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.contract_api.ContractApi()  # noqa: E501
+        self.api = ionoscloud.api.contract_api.ContractApi()  # noqa: E501
 
     def tearDown(self):
         pass

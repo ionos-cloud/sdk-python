@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.request_status import RequestStatus  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.request_status import RequestStatus  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestRequestStatus(unittest.TestCase):
     """RequestStatus unit test stubs"""
@@ -33,20 +33,20 @@ class TestRequestStatus(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.request_status.RequestStatus()  # noqa: E501
+        # model = ionoscloud.models.request_status.RequestStatus()  # noqa: E501
         if include_optional :
             return RequestStatus(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                type = "request-status", 
-                href = '<RESOURCE-URI>', 
-                metadata = ionossdk.models.request_status_metadata.RequestStatusMetadata(
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
+                type = "request-status"
+                href = '<RESOURCE-URI>'
+                metadata = ionoscloud.models.request_status_metadata.RequestStatusMetadata(
                     status = 'QUEUED', 
-                    message = '0', 
+                    message = '', 
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     targets = [
-                        ionossdk.models.request_target.RequestTarget(
-                            target = ionossdk.models.resource_reference.ResourceReference(
-                                id = '0', 
+                        ionoscloud.models.request_target.RequestTarget(
+                            target = ionoscloud.models.resource_reference.ResourceReference(
+                                id = '', 
                                 type = "resource", 
                                 href = '<RESOURCE-URI>', ), 
                             status = 'QUEUED', )

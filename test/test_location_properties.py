@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.location_properties import LocationProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.location_properties import LocationProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestLocationProperties(unittest.TestCase):
     """LocationProperties unit test stubs"""
@@ -33,13 +33,13 @@ class TestLocationProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.location_properties.LocationProperties()  # noqa: E501
+        # model = ionoscloud.models.location_properties.LocationProperties()  # noqa: E501
         if include_optional :
             return LocationProperties(
-                name = 'My resource', 
-                features = [SSD], 
+                name = 'My resource'
+                features = [SSD]
                 image_aliases = [
-                    '0'
+                    ''
                     ]
             )
         else :

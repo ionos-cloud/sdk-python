@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.user_properties import UserProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.user_properties import UserProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestUserProperties(unittest.TestCase):
     """UserProperties unit test stubs"""
@@ -33,17 +33,17 @@ class TestUserProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.user_properties.UserProperties()  # noqa: E501
+        # model = ionoscloud.models.user_properties.UserProperties()  # noqa: E501
         if include_optional :
             return UserProperties(
-                firstname = '0', 
-                lastname = '0', 
-                email = '0', 
-                administrator = True, 
-                force_sec_auth = True, 
-                sec_auth_active = True, 
-                s3_canonical_user_id = '0', 
-                password = '0'
+                firstname = ''
+                lastname = ''
+                email = ''
+                administrator = True
+                force_sec_auth = True
+                sec_auth_active = True
+                s3_canonical_user_id = ''
+                password = ''
             )
         else :
             return UserProperties(

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.request_target import RequestTarget  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.request_target import RequestTarget  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestRequestTarget(unittest.TestCase):
     """RequestTarget unit test stubs"""
@@ -33,13 +33,13 @@ class TestRequestTarget(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.request_target.RequestTarget()  # noqa: E501
+        # model = ionoscloud.models.request_target.RequestTarget()  # noqa: E501
         if include_optional :
             return RequestTarget(
-                target = ionossdk.models.resource_reference.ResourceReference(
-                    id = '0', 
+                target = ionoscloud.models.resource_reference.ResourceReference(
+                    id = '', 
                     type = "resource", 
-                    href = '<RESOURCE-URI>', ), 
+                    href = '<RESOURCE-URI>', )
                 status = 'QUEUED'
             )
         else :

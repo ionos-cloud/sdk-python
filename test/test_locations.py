@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.locations import Locations  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.locations import Locations  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestLocations(unittest.TestCase):
     """Locations unit test stubs"""
@@ -33,18 +33,18 @@ class TestLocations(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.locations.Locations()  # noqa: E501
+        # model = ionoscloud.models.locations.Locations()  # noqa: E501
         if include_optional :
             return Locations(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                type = "collection", 
-                href = '<RESOURCE-URI>', 
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
+                type = "collection"
+                href = '<RESOURCE-URI>'
                 items = [
-                    ionossdk.models.location.Location(
+                    ionoscloud.models.location.Location(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "location", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                        metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
@@ -53,11 +53,11 @@ class TestLocations(unittest.TestCase):
                             last_modified_by = 'user@example.com', 
                             last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                             state = 'AVAILABLE', ), 
-                        properties = ionossdk.models.location_properties.LocationProperties(
+                        properties = ionoscloud.models.location_properties.LocationProperties(
                             name = 'My resource', 
                             features = [SSD], 
                             image_aliases = [
-                                '0'
+                                ''
                                 ], ), )
                     ]
             )

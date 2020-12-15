@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.kubernetes_api import KubernetesApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.kubernetes_api import KubernetesApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestKubernetesApi(unittest.TestCase):
     """KubernetesApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.kubernetes_api.KubernetesApi()  # noqa: E501
+        self.api = ionoscloud.api.kubernetes_api.KubernetesApi()  # noqa: E501
 
     def tearDown(self):
         pass
@@ -35,8 +35,8 @@ class TestKubernetesApi(unittest.TestCase):
         """
         pass
 
-    def test_k8s_find_by_clusterid(self):
-        """Test case for k8s_find_by_clusterid
+    def test_k8s_find_by_s_cluster_id(self):
+        """Test case for k8s_find_by_s_cluster_id
 
         Retrieve Kubernetes Cluster  # noqa: E501
         """

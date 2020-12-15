@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.data_center_entities import DataCenterEntities  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.data_center_entities import DataCenterEntities  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestDataCenterEntities(unittest.TestCase):
     """DataCenterEntities unit test stubs"""
@@ -33,19 +33,19 @@ class TestDataCenterEntities(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.data_center_entities.DataCenterEntities()  # noqa: E501
+        # model = ionoscloud.models.data_center_entities.DataCenterEntities()  # noqa: E501
         if include_optional :
             return DataCenterEntities(
-                servers = ionossdk.models.servers.Servers(
+                servers = ionoscloud.models.servers.Servers(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionossdk.models.server.Server(
+                        ionoscloud.models.server.Server(
                             id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                             type = "server", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -54,39 +54,39 @@ class TestDataCenterEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionossdk.models.server_properties.ServerProperties(
+                            properties = ionoscloud.models.server_properties.ServerProperties(
                                 name = 'My resource', 
                                 cores = 4, 
                                 ram = 4096, 
                                 availability_zone = 'AUTO', 
                                 vm_state = 'RUNNING', 
-                                boot_cdrom = ionossdk.models.resource_reference.ResourceReference(
-                                    id = '0', 
+                                boot_cdrom = ionoscloud.models.resource_reference.ResourceReference(
+                                    id = '', 
                                     type = "resource", 
                                     href = '<RESOURCE-URI>', ), 
-                                boot_volume = ionossdk.models.resource_reference.ResourceReference(
-                                    id = '0', 
+                                boot_volume = ionoscloud.models.resource_reference.ResourceReference(
+                                    id = '', 
                                     type = "resource", 
                                     href = '<RESOURCE-URI>', ), 
                                 cpu_family = 'AMD_OPTERON', ), 
-                            entities = ionossdk.models.server_entities.ServerEntities(
-                                cdroms = ionossdk.models.cdroms.Cdroms(
+                            entities = ionoscloud.models.server_entities.ServerEntities(
+                                cdroms = ionoscloud.models.cdroms.Cdroms(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', 
                                     offset = 0, 
                                     limit = 1000, 
-                                    _links = ionossdk.models.pagination_links.PaginationLinks(
+                                    _links = ionoscloud.models.pagination_links.PaginationLinks(
                                         prev = '<PREVIOUS-PAGE-URI>', 
                                         self = '<THIS-PAGE-URI>', 
                                         next = '<NEXT-PAGE-URI>', ), ), 
-                                volumes = ionossdk.models.attached_volumes.AttachedVolumes(
+                                volumes = ionoscloud.models.attached_volumes.AttachedVolumes(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', 
                                     offset = 0, 
                                     limit = 1000, ), 
-                                nics = ionossdk.models.nics.Nics(
+                                nics = ionoscloud.models.nics.Nics(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', 
@@ -95,20 +95,20 @@ class TestDataCenterEntities(unittest.TestCase):
                         ], 
                     offset = 0, 
                     limit = 1000, 
-                    _links = ionossdk.models.pagination_links.PaginationLinks(
+                    _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
-                        next = '<NEXT-PAGE-URI>', ), ), 
-                volumes = ionossdk.models.volumes.Volumes(
+                        next = '<NEXT-PAGE-URI>', ), )
+                volumes = ionoscloud.models.volumes.Volumes(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionossdk.models.volume.Volume(
+                        ionoscloud.models.volume.Volume(
                             id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                             type = "volume", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -117,14 +117,14 @@ class TestDataCenterEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionossdk.models.volume_properties.VolumeProperties(
+                            properties = ionoscloud.models.volume_properties.VolumeProperties(
                                 name = 'My resource', 
                                 type = 'HDD', 
                                 size = 100.0, 
                                 availability_zone = 'AUTO', 
                                 image = 'd6ad1576-fde9-4696-aa41-1ebd75bdaf49', 
                                 image_password = 'mypass123', 
-                                image_alias = '0', 
+                                image_alias = '', 
                                 ssh_keys = [ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345, ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43], 
                                 bus = 'VIRTIO', 
                                 licence_type = 'LINUX', 
@@ -139,20 +139,20 @@ class TestDataCenterEntities(unittest.TestCase):
                         ], 
                     offset = 0, 
                     limit = 1000, 
-                    _links = ionossdk.models.pagination_links.PaginationLinks(
+                    _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
-                        next = '<NEXT-PAGE-URI>', ), ), 
-                loadbalancers = ionossdk.models.loadbalancers.Loadbalancers(
+                        next = '<NEXT-PAGE-URI>', ), )
+                loadbalancers = ionoscloud.models.loadbalancers.Loadbalancers(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionossdk.models.loadbalancer.Loadbalancer(
+                        ionoscloud.models.loadbalancer.Loadbalancer(
                             id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                             type = "loadbalancer", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -161,38 +161,38 @@ class TestDataCenterEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionossdk.models.loadbalancer_properties.LoadbalancerProperties(
+                            properties = ionoscloud.models.loadbalancer_properties.LoadbalancerProperties(
                                 name = 'My resource', 
                                 ip = '22.231.113.64', 
                                 dhcp = True, ), 
-                            entities = ionossdk.models.loadbalancer_entities.LoadbalancerEntities(
-                                balancednics = ionossdk.models.balanced_nics.BalancedNics(
+                            entities = ionoscloud.models.loadbalancer_entities.LoadbalancerEntities(
+                                balancednics = ionoscloud.models.balanced_nics.BalancedNics(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', 
                                     offset = 0, 
                                     limit = 1000, 
-                                    _links = ionossdk.models.pagination_links.PaginationLinks(
+                                    _links = ionoscloud.models.pagination_links.PaginationLinks(
                                         prev = '<PREVIOUS-PAGE-URI>', 
                                         self = '<THIS-PAGE-URI>', 
                                         next = '<NEXT-PAGE-URI>', ), ), ), )
                         ], 
                     offset = 0, 
                     limit = 1000, 
-                    _links = ionossdk.models.pagination_links.PaginationLinks(
+                    _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
-                        next = '<NEXT-PAGE-URI>', ), ), 
-                lans = ionossdk.models.lans.Lans(
+                        next = '<NEXT-PAGE-URI>', ), )
+                lans = ionoscloud.models.lans.Lans(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionossdk.models.lan.Lan(
+                        ionoscloud.models.lan.Lan(
                             id = '5', 
                             type = "lan", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -201,30 +201,30 @@ class TestDataCenterEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionossdk.models.lan_properties.LanProperties(
+                            properties = ionoscloud.models.lan_properties.LanProperties(
                                 name = 'My resource', 
                                 ip_failover = [
-                                    ionossdk.models.ip_failover.IPFailover(
+                                    ionoscloud.models.ip_failover.IPFailover(
                                         ip = '192.18.2.231', 
                                         nic_uuid = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', )
                                     ], 
                                 pcc = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', 
                                 public = True, ), 
-                            entities = ionossdk.models.lan_entities.LanEntities(
-                                nics = ionossdk.models.lan_nics.LanNics(
+                            entities = ionoscloud.models.lan_entities.LanEntities(
+                                nics = ionoscloud.models.lan_nics.LanNics(
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "collection", 
                                     href = '<RESOURCE-URI>', 
                                     offset = 0, 
                                     limit = 1000, 
-                                    _links = ionossdk.models.pagination_links.PaginationLinks(
+                                    _links = ionoscloud.models.pagination_links.PaginationLinks(
                                         prev = '<PREVIOUS-PAGE-URI>', 
                                         self = '<THIS-PAGE-URI>', 
                                         next = '<NEXT-PAGE-URI>', ), ), ), )
                         ], 
                     offset = 0, 
                     limit = 1000, 
-                    _links = ionossdk.models.pagination_links.PaginationLinks(
+                    _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
                         next = '<NEXT-PAGE-URI>', ), )

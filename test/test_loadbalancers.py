@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.loadbalancers import Loadbalancers  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.loadbalancers import Loadbalancers  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestLoadbalancers(unittest.TestCase):
     """Loadbalancers unit test stubs"""
@@ -33,18 +33,18 @@ class TestLoadbalancers(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.loadbalancers.Loadbalancers()  # noqa: E501
+        # model = ionoscloud.models.loadbalancers.Loadbalancers()  # noqa: E501
         if include_optional :
             return Loadbalancers(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                type = "collection", 
-                href = '<RESOURCE-URI>', 
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
+                type = "collection"
+                href = '<RESOURCE-URI>'
                 items = [
-                    ionossdk.models.loadbalancer.Loadbalancer(
+                    ionoscloud.models.loadbalancer.Loadbalancer(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "loadbalancer", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                        metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
@@ -53,16 +53,28 @@ class TestLoadbalancers(unittest.TestCase):
                             last_modified_by = 'user@example.com', 
                             last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                             state = 'AVAILABLE', ), 
-                        properties = ionossdk.models.loadbalancer_properties.LoadbalancerProperties(
+                        properties = ionoscloud.models.loadbalancer_properties.LoadbalancerProperties(
                             name = 'My resource', 
                             ip = '22.231.113.64', 
                             dhcp = True, ), 
-                        entities = ionossdk.models.loadbalancer_entities.LoadbalancerEntities(
-                            balancednics = ionossdk.models.balanced_nics.BalancedNics(
+                        entities = ionoscloud.models.loadbalancer_entities.LoadbalancerEntities(
+                            balancednics = ionoscloud.models.balanced_nics.BalancedNics(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "collection", 
-                                href = '<RESOURCE-URI>', ), ), )
+                                href = '<RESOURCE-URI>', 
+                                offset = 0, 
+                                limit = 1000, 
+                                _links = ionoscloud.models.pagination_links.PaginationLinks(
+                                    prev = '<PREVIOUS-PAGE-URI>', 
+                                    self = '<THIS-PAGE-URI>', 
+                                    next = '<NEXT-PAGE-URI>', ), ), ), )
                     ]
+                offset = 0
+                limit = 1000
+                links = ionoscloud.models.pagination_links.PaginationLinks(
+                    prev = '<PREVIOUS-PAGE-URI>', 
+                    self = '<THIS-PAGE-URI>', 
+                    next = '<NEXT-PAGE-URI>', )
             )
         else :
             return Loadbalancers(

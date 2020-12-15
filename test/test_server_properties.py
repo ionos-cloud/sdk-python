@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.server_properties import ServerProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.server_properties import ServerProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestServerProperties(unittest.TestCase):
     """ServerProperties unit test stubs"""
@@ -33,22 +33,22 @@ class TestServerProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.server_properties.ServerProperties()  # noqa: E501
+        # model = ionoscloud.models.server_properties.ServerProperties()  # noqa: E501
         if include_optional :
             return ServerProperties(
-                name = 'My resource', 
-                cores = 4, 
-                ram = 4096, 
-                availability_zone = 'AUTO', 
-                vm_state = 'RUNNING', 
-                boot_cdrom = ionossdk.models.resource_reference.ResourceReference(
-                    id = '0', 
+                name = 'My resource'
+                cores = 4
+                ram = 4096
+                availability_zone = 'AUTO'
+                vm_state = 'RUNNING'
+                boot_cdrom = ionoscloud.models.resource_reference.ResourceReference(
+                    id = '', 
                     type = "resource", 
-                    href = '<RESOURCE-URI>', ), 
-                boot_volume = ionossdk.models.resource_reference.ResourceReference(
-                    id = '0', 
+                    href = '<RESOURCE-URI>', )
+                boot_volume = ionoscloud.models.resource_reference.ResourceReference(
+                    id = '', 
                     type = "resource", 
-                    href = '<RESOURCE-URI>', ), 
+                    href = '<RESOURCE-URI>', )
                 cpu_family = 'AMD_OPTERON'
             )
         else :

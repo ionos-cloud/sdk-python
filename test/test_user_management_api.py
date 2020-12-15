@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.user_management_api import UserManagementApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.user_management_api import UserManagementApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestUserManagementApi(unittest.TestCase):
     """UserManagementApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.user_management_api.UserManagementApi()  # noqa: E501
+        self.api = ionoscloud.api.user_management_api.UserManagementApi()  # noqa: E501
 
     def tearDown(self):
         pass
@@ -77,8 +77,8 @@ class TestUserManagementApi(unittest.TestCase):
         """
         pass
 
-    def test_um_groups_shares_find_by_resource(self):
-        """Test case for um_groups_shares_find_by_resource
+    def test_um_groups_shares_find_by_resource_id(self):
+        """Test case for um_groups_shares_find_by_resource_id
 
         Retrieve a group share  # noqa: E501
         """
@@ -203,8 +203,8 @@ class TestUserManagementApi(unittest.TestCase):
         """
         pass
 
-    def test_um_users_s3keys_find_by_key(self):
-        """Test case for um_users_s3keys_find_by_key
+    def test_um_users_s3keys_find_by_key_id(self):
+        """Test case for um_users_s3keys_find_by_key_id
 
         Retrieve given S3 key belonging to the given User  # noqa: E501
         """

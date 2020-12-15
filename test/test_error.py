@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.error import Error  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.error import Error  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestError(unittest.TestCase):
     """Error unit test stubs"""
@@ -33,12 +33,12 @@ class TestError(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.error.Error()  # noqa: E501
+        # model = ionoscloud.models.error.Error()  # noqa: E501
         if include_optional :
             return Error(
-                http_status = 400, 
+                http_status = 400
                 messages = [
-                    ionossdk.models.error_message.ErrorMessage(
+                    ionoscloud.models.error_message.ErrorMessage(
                         error_code = '123', 
                         message = 'Error message example', )
                     ]

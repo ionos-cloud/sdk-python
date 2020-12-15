@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.request import Request  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.request import Request  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestRequest(unittest.TestCase):
     """Request unit test stubs"""
@@ -33,49 +33,49 @@ class TestRequest(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.request.Request()  # noqa: E501
+        # model = ionoscloud.models.request.Request()  # noqa: E501
         if include_optional :
             return Request(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                type = "request", 
-                href = '<RESOURCE-URI>', 
-                metadata = ionossdk.models.request_metadata.RequestMetadata(
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
+                type = "request"
+                href = '<RESOURCE-URI>'
+                metadata = ionoscloud.models.request_metadata.RequestMetadata(
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
-                    request_status = ionossdk.models.request_status.RequestStatus(
+                    request_status = ionoscloud.models.request_status.RequestStatus(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "request-status", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionossdk.models.request_status_metadata.RequestStatusMetadata(
+                        metadata = ionoscloud.models.request_status_metadata.RequestStatusMetadata(
                             status = 'QUEUED', 
-                            message = '0', 
+                            message = '', 
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             targets = [
-                                ionossdk.models.request_target.RequestTarget(
-                                    target = ionossdk.models.resource_reference.ResourceReference(
-                                        id = '0', 
+                                ionoscloud.models.request_target.RequestTarget(
+                                    target = ionoscloud.models.resource_reference.ResourceReference(
+                                        id = '', 
                                         type = "resource", 
                                         href = '<RESOURCE-URI>', ), 
                                     status = 'QUEUED', )
-                                ], ), ), ), 
-                properties = ionossdk.models.request_properties.RequestProperties(
-                    method = '0', 
+                                ], ), ), )
+                properties = ionoscloud.models.request_properties.RequestProperties(
+                    method = '', 
                     headers = {
-                        'key' : '0'
+                        'key' : ''
                         }, 
-                    body = '0', 
-                    url = '0', )
+                    body = '', 
+                    url = '', )
             )
         else :
             return Request(
-                properties = ionossdk.models.request_properties.RequestProperties(
-                    method = '0', 
+                properties = ionoscloud.models.request_properties.RequestProperties(
+                    method = '', 
                     headers = {
-                        'key' : '0'
+                        'key' : ''
                         }, 
-                    body = '0', 
-                    url = '0', ),
+                    body = '', 
+                    url = '', ),
         )
 
     def testRequest(self):

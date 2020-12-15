@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.backup_unit_sso import BackupUnitSSO  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.backup_unit_sso import BackupUnitSSO  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestBackupUnitSSO(unittest.TestCase):
     """BackupUnitSSO unit test stubs"""
@@ -33,7 +33,7 @@ class TestBackupUnitSSO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.backup_unit_sso.BackupUnitSSO()  # noqa: E501
+        # model = ionoscloud.models.backup_unit_sso.BackupUnitSSO()  # noqa: E501
         if include_optional :
             return BackupUnitSSO(
                 sso_url = 'https://<hostname>/?jwt=eyJ0eXAiO...W47AN5-_x7E'

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.ip_failover import IPFailover  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.ip_failover import IPFailover  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestIPFailover(unittest.TestCase):
     """IPFailover unit test stubs"""
@@ -33,11 +33,11 @@ class TestIPFailover(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.ip_failover.IPFailover()  # noqa: E501
+        # model = ionoscloud.models.ip_failover.IPFailover()  # noqa: E501
         if include_optional :
             return IPFailover(
-                ip = '0', 
-                nic_uuid = '0'
+                ip = '192.18.2.231'
+                nic_uuid = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec'
             )
         else :
             return IPFailover(

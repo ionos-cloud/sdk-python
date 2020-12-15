@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.lan_properties_post import LanPropertiesPost  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.lan_properties_post import LanPropertiesPost  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestLanPropertiesPost(unittest.TestCase):
     """LanPropertiesPost unit test stubs"""
@@ -33,10 +33,16 @@ class TestLanPropertiesPost(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.lan_properties_post.LanPropertiesPost()  # noqa: E501
+        # model = ionoscloud.models.lan_properties_post.LanPropertiesPost()  # noqa: E501
         if include_optional :
             return LanPropertiesPost(
-                name = 'My resource', 
+                name = 'My resource'
+                ip_failover = [
+                    ionoscloud.models.ip_failover.IPFailover(
+                        ip = '192.18.2.231', 
+                        nic_uuid = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', )
+                    ]
+                pcc = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec'
                 public = True
             )
         else :

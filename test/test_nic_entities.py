@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.nic_entities import NicEntities  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.nic_entities import NicEntities  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestNicEntities(unittest.TestCase):
     """NicEntities unit test stubs"""
@@ -33,19 +33,19 @@ class TestNicEntities(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.nic_entities.NicEntities()  # noqa: E501
+        # model = ionoscloud.models.nic_entities.NicEntities()  # noqa: E501
         if include_optional :
             return NicEntities(
-                firewallrules = ionossdk.models.firewall_rules.FirewallRules(
+                firewallrules = ionoscloud.models.firewall_rules.FirewallRules(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
                     href = '<RESOURCE-URI>', 
                     items = [
-                        ionossdk.models.firewall_rule.FirewallRule(
+                        ionoscloud.models.firewall_rule.FirewallRule(
                             id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                             type = "firewall-rule", 
                             href = '<RESOURCE-URI>', 
-                            metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                            metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                                 etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                 created_date = '2015-12-04T14:34:09.809Z', 
                                 created_by = 'user@example.com', 
@@ -54,7 +54,7 @@ class TestNicEntities(unittest.TestCase):
                                 last_modified_by = 'user@example.com', 
                                 last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                 state = 'AVAILABLE', ), 
-                            properties = ionossdk.models.firewallrule_properties.FirewallruleProperties(
+                            properties = ionoscloud.models.firewallrule_properties.FirewallruleProperties(
                                 name = 'My resource', 
                                 protocol = 'TCP', 
                                 source_mac = '00:0a:95:9d:68:16', 
@@ -64,7 +64,13 @@ class TestNicEntities(unittest.TestCase):
                                 icmp_type = 8, 
                                 port_range_start = 8, 
                                 port_range_end = 8, ), )
-                        ], )
+                        ], 
+                    offset = 0, 
+                    limit = 1000, 
+                    _links = ionoscloud.models.pagination_links.PaginationLinks(
+                        prev = '<PREVIOUS-PAGE-URI>', 
+                        self = '<THIS-PAGE-URI>', 
+                        next = '<NEXT-PAGE-URI>', ), )
             )
         else :
             return NicEntities(

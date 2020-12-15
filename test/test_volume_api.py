@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.volume_api import VolumeApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.volume_api import VolumeApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestVolumeApi(unittest.TestCase):
     """VolumeApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.volume_api.VolumeApi()  # noqa: E501
+        self.api = ionoscloud.api.volume_api.VolumeApi()  # noqa: E501
 
     def tearDown(self):
         pass

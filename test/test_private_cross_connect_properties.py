@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.private_cross_connect_properties import PrivateCrossConnectProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.private_cross_connect_properties import PrivateCrossConnectProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestPrivateCrossConnectProperties(unittest.TestCase):
     """PrivateCrossConnectProperties unit test stubs"""
@@ -33,12 +33,12 @@ class TestPrivateCrossConnectProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.private_cross_connect_properties.PrivateCrossConnectProperties()  # noqa: E501
+        # model = ionoscloud.models.private_cross_connect_properties.PrivateCrossConnectProperties()  # noqa: E501
         if include_optional :
             return PrivateCrossConnectProperties(
-                name = 'My resource', 
-                description = 'Private Cross-Connect between datacenter 'A' and datacenter 'B' ', 
-                peers = { "peers": [ { "id": "<lan-id>", "name": "<lan-name>", "datacenterId": "<dc-uuid>",  "datacenterName": "<dc-name>", "location": "<de/fra>"} ] }, 
+                name = 'My resource'
+                description = 'Private Cross-Connect between datacenter 'A' and datacenter 'B' '
+                peers = { "peers": [ { "id": "<lan-id>", "name": "<lan-name>", "datacenterId": "<dc-uuid>",  "datacenterName": "<dc-name>", "location": "<de/fra>"} ] }
                 connectable_datacenters = { "connectableDatacenters": [ { "id": "<dc-id>", "name": "<dc-name>", "location": "<de/fra>"} ] }
             )
         else :

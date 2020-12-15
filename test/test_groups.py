@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.groups import Groups  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.groups import Groups  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestGroups(unittest.TestCase):
     """Groups unit test stubs"""
@@ -33,18 +33,18 @@ class TestGroups(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.groups.Groups()  # noqa: E501
+        # model = ionoscloud.models.groups.Groups()  # noqa: E501
         if include_optional :
             return Groups(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                type = "groups", 
-                href = 'https://<API_HOST>/cloudapi/v5/um/groups', 
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
+                type = "groups"
+                href = 'https://<API_HOST>/cloudapi/v5/um/groups'
                 items = [
-                    ionossdk.models.group.Group(
+                    ionoscloud.models.group.Group(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "group", 
                         href = 'https://<API_HOST>/cloudapi/v5/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                        properties = ionossdk.models.group_properties.GroupProperties(
+                        properties = ionoscloud.models.group_properties.GroupProperties(
                             name = 'My resource', 
                             create_data_center = True, 
                             create_snapshot = True, 
@@ -55,31 +55,31 @@ class TestGroups(unittest.TestCase):
                             create_backup_unit = True, 
                             create_internet_access = True, 
                             create_k8s_cluster = True, ), 
-                        entities = ionossdk.models.group_entities.GroupEntities(
-                            users = ionossdk.models.group_members.GroupMembers(
+                        entities = ionoscloud.models.group_entities.GroupEntities(
+                            users = ionoscloud.models.group_members.GroupMembers(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "collection", 
                                 href = 'https://<API_HOST>/cloudapi/v5/um/groups/30740c22-1def-11e7-aac9-d7a3646ca7fd/users', 
                                 items = [
-                                    ionossdk.models.user.User(
+                                    ionoscloud.models.user.User(
                                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                         type = "user", 
                                         href = '<RESOURCE-URI>', 
-                                        metadata = ionossdk.models.user_metadata.UserMetadata(
+                                        metadata = ionoscloud.models.user_metadata.UserMetadata(
                                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                             created_date = '2015-12-04T14:34:09.809Z', 
                                             last_login = '2015-12-04T14:34:09.809Z', ), 
-                                        properties = ionossdk.models.user_properties.UserProperties(
-                                            firstname = '0', 
-                                            lastname = '0', 
-                                            email = '0', 
+                                        properties = ionoscloud.models.user_properties.UserProperties(
+                                            firstname = '', 
+                                            lastname = '', 
+                                            email = '', 
                                             administrator = True, 
                                             force_sec_auth = True, 
                                             sec_auth_active = True, 
-                                            s3_canonical_user_id = '0', 
-                                            password = '0', ), )
+                                            s3_canonical_user_id = '', 
+                                            password = '', ), )
                                     ], ), 
-                            resources = ionossdk.models.resource_groups.ResourceGroups(
+                            resources = ionoscloud.models.resource_groups.ResourceGroups(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "collection", 
                                 href = 'https://<API_HOST>/cloudapi/v5/um/groups/30740c22-1def-11e7-aac9-d7a3646ca7fd/resources', ), ), )

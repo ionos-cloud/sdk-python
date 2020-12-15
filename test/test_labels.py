@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.labels import Labels  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.labels import Labels  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestLabels(unittest.TestCase):
     """Labels unit test stubs"""
@@ -33,18 +33,18 @@ class TestLabels(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.labels.Labels()  # noqa: E501
+        # model = ionoscloud.models.labels.Labels()  # noqa: E501
         if include_optional :
             return Labels(
-                id = 'labels', 
-                type = 'collection', 
-                href = '<RESOURCE-URI>', 
+                id = 'labels'
+                type = 'collection'
+                href = '<RESOURCE-URI>'
                 items = [
-                    ionossdk.models.label.Label(
+                    ionoscloud.models.label.Label(
                         id = 'urn:label:datacenter:700e1cab-99b2-4c30-ba8c-1d273ddba022:environment', 
                         type = 'label', 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionossdk.models.no_state_meta_data.NoStateMetaData(
+                        metadata = ionoscloud.models.no_state_meta_data.NoStateMetaData(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
@@ -52,7 +52,7 @@ class TestLabels(unittest.TestCase):
                             last_modified_date = '2015-12-04T14:34:09.809Z', 
                             last_modified_by = 'user@example.com', 
                             last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', ), 
-                        properties = ionossdk.models.label_properties.LabelProperties(
+                        properties = ionoscloud.models.label_properties.LabelProperties(
                             key = 'environment', 
                             value = 'production', 
                             resource_id = '700e1cab-99b2-4c30-ba8c-1d273ddba022', 

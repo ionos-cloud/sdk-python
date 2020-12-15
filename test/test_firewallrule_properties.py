@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.firewallrule_properties import FirewallruleProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.firewallrule_properties import FirewallruleProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestFirewallruleProperties(unittest.TestCase):
     """FirewallruleProperties unit test stubs"""
@@ -33,17 +33,17 @@ class TestFirewallruleProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.firewallrule_properties.FirewallruleProperties()  # noqa: E501
+        # model = ionoscloud.models.firewallrule_properties.FirewallruleProperties()  # noqa: E501
         if include_optional :
             return FirewallruleProperties(
-                name = 'My resource', 
-                protocol = 'TCP', 
-                source_mac = '00:0a:95:9d:68:16', 
-                source_ip = '22.231.113.64', 
-                target_ip = '22.231.113.64', 
-                icmp_code = 0, 
-                icmp_type = 8, 
-                port_range_start = 8, 
+                name = 'My resource'
+                protocol = 'TCP'
+                source_mac = '00:0a:95:9d:68:16'
+                source_ip = '22.231.113.64'
+                target_ip = '22.231.113.64'
+                icmp_code = 0
+                icmp_type = 8
+                port_range_start = 8
                 port_range_end = 8
             )
         else :

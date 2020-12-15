@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.data_center_api import DataCenterApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.data_center_api import DataCenterApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestDataCenterApi(unittest.TestCase):
     """DataCenterApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.data_center_api.DataCenterApi()  # noqa: E501
+        self.api = ionoscloud.api.data_center_api.DataCenterApi()  # noqa: E501
 
     def tearDown(self):
         pass

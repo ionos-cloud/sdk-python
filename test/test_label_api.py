@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.label_api import LabelApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.label_api import LabelApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestLabelApi(unittest.TestCase):
     """LabelApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.label_api.LabelApi()  # noqa: E501
+        self.api = ionoscloud.api.label_api.LabelApi()  # noqa: E501
 
     def tearDown(self):
         pass
@@ -168,8 +168,8 @@ class TestLabelApi(unittest.TestCase):
         """
         pass
 
-    def test_labels_find_by_labelurn(self):
-        """Test case for labels_find_by_labelurn
+    def test_labels_find_by_urn(self):
+        """Test case for labels_find_by_urn
 
         Returns the label by its URN.  # noqa: E501
         """

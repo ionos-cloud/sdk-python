@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.private_cross_connect_api import PrivateCrossConnectApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.private_cross_connect_api import PrivateCrossConnectApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestPrivateCrossConnectApi(unittest.TestCase):
     """PrivateCrossConnectApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.private_cross_connect_api.PrivateCrossConnectApi()  # noqa: E501
+        self.api = ionoscloud.api.private_cross_connect_api.PrivateCrossConnectApi()  # noqa: E501
 
     def tearDown(self):
         pass

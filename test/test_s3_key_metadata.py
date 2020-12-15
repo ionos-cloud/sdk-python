@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.s3_key_metadata import S3KeyMetadata  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.s3_key_metadata import S3KeyMetadata  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestS3KeyMetadata(unittest.TestCase):
     """S3KeyMetadata unit test stubs"""
@@ -33,10 +33,10 @@ class TestS3KeyMetadata(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.s3_key_metadata.S3KeyMetadata()  # noqa: E501
+        # model = ionoscloud.models.s3_key_metadata.S3KeyMetadata()  # noqa: E501
         if include_optional :
             return S3KeyMetadata(
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
                 created_date = '2015-12-04T14:34:09.809Z'
             )
         else :

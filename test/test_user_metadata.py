@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.user_metadata import UserMetadata  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.user_metadata import UserMetadata  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestUserMetadata(unittest.TestCase):
     """UserMetadata unit test stubs"""
@@ -33,11 +33,11 @@ class TestUserMetadata(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.user_metadata.UserMetadata()  # noqa: E501
+        # model = ionoscloud.models.user_metadata.UserMetadata()  # noqa: E501
         if include_optional :
             return UserMetadata(
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
-                created_date = '2015-12-04T14:34:09.809Z', 
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
+                created_date = '2015-12-04T14:34:09.809Z'
                 last_login = '2015-12-04T14:34:09.809Z'
             )
         else :

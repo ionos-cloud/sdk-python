@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.kubernetes_cluster import KubernetesCluster  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.kubernetes_cluster import KubernetesCluster  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestKubernetesCluster(unittest.TestCase):
     """KubernetesCluster unit test stubs"""
@@ -33,13 +33,13 @@ class TestKubernetesCluster(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.kubernetes_cluster.KubernetesCluster()  # noqa: E501
+        # model = ionoscloud.models.kubernetes_cluster.KubernetesCluster()  # noqa: E501
         if include_optional :
             return KubernetesCluster(
-                id = '1e072e52-2ed3-492f-b6b6-c6b116907527', 
-                type = 'k8s', 
-                href = '<RESOURCE-URI>', 
-                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                id = '1e072e52-2ed3-492f-b6b6-c6b116907527'
+                type = 'k8s'
+                href = '<RESOURCE-URI>'
+                metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
@@ -47,24 +47,26 @@ class TestKubernetesCluster(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', ), 
-                properties = ionossdk.models.kubernetes_cluster_properties.KubernetesClusterProperties(
+                    state = 'AVAILABLE', )
+                properties = ionoscloud.models.kubernetes_cluster_properties.KubernetesClusterProperties(
                     name = 'k8s', 
                     k8s_version = '1.15.4', 
-                    maintenance_window = ionossdk.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
+                    maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                         day_of_the_week = 'Monday', 
-                        time = '13:00:00', ), ), 
-                entities = ionossdk.models.kubernetes_cluster_entities.KubernetesClusterEntities(
-                    nodepools = ionossdk.models.kubernetes_node_pools.KubernetesNodePools(
+                        time = '13:00:00', ), 
+                    available_upgrade_versions = [1.16.4, 1.17.7], 
+                    viable_node_pool_versions = [1.17.7, 1.18.2], )
+                entities = ionoscloud.models.kubernetes_cluster_entities.KubernetesClusterEntities(
+                    nodepools = ionoscloud.models.kubernetes_node_pools.KubernetesNodePools(
                         id = '1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools', 
                         type = 'collection', 
                         href = '<RESOURCE-URI>', 
                         items = [
-                            ionossdk.models.kubernetes_node_pool.KubernetesNodePool(
+                            ionoscloud.models.kubernetes_node_pool.KubernetesNodePool(
                                 id = '1e072e52-2ed3-492f-b6b6-c6b116907527', 
                                 type = 'nodepool', 
                                 href = '<RESOURCE-URI>', 
-                                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                                metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                     created_date = '2015-12-04T14:34:09.809Z', 
                                     created_by = 'user@example.com', 
@@ -73,7 +75,7 @@ class TestKubernetesCluster(unittest.TestCase):
                                     last_modified_by = 'user@example.com', 
                                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                     state = 'AVAILABLE', ), 
-                                properties = ionossdk.models.kubernetes_node_pool_properties.KubernetesNodePoolProperties(
+                                properties = ionoscloud.models.kubernetes_node_pool_properties.KubernetesNodePoolProperties(
                                     name = 'k8s-node-pool', 
                                     datacenter_id = '1e072e52-2ed3-492f-b6b6-c6b116907521', 
                                     node_count = 2, 
@@ -84,32 +86,36 @@ class TestKubernetesCluster(unittest.TestCase):
                                     storage_type = 'HDD', 
                                     storage_size = 100, 
                                     k8s_version = '1.15.4', 
-                                    maintenance_window = ionossdk.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
+                                    maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                                         day_of_the_week = 'Monday', 
                                         time = '13:00:00', ), 
-                                    auto_scaling = ionossdk.models.kubernetes_auto_scaling.KubernetesAutoScaling(
+                                    auto_scaling = ionoscloud.models.kubernetes_auto_scaling.KubernetesAutoScaling(
                                         min_node_count = 1, 
                                         max_node_count = 1, ), 
                                     lans = [
-                                        ionossdk.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
+                                        ionoscloud.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
                                             id = 3, )
                                         ], 
-                                    labels = ionossdk.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
-                                        key = '0', 
-                                        value = '0', ), 
-                                    annotations = ionossdk.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
-                                        key = '0', 
-                                        value = '0', ), ), )
+                                    labels = ionoscloud.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
+                                        key = '', 
+                                        value = '', ), 
+                                    annotations = ionoscloud.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
+                                        key = '', 
+                                        value = '', ), 
+                                    public_ips = [81.173.1.2, 82.231.2.5, 92.221.2.4], 
+                                    available_upgrade_versions = [1.16.4, 1.17.7], ), )
                             ], ), )
             )
         else :
             return KubernetesCluster(
-                properties = ionossdk.models.kubernetes_cluster_properties.KubernetesClusterProperties(
+                properties = ionoscloud.models.kubernetes_cluster_properties.KubernetesClusterProperties(
                     name = 'k8s', 
                     k8s_version = '1.15.4', 
-                    maintenance_window = ionossdk.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
+                    maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                         day_of_the_week = 'Monday', 
-                        time = '13:00:00', ), ),
+                        time = '13:00:00', ), 
+                    available_upgrade_versions = [1.16.4, 1.17.7], 
+                    viable_node_pool_versions = [1.17.7, 1.18.2], ),
         )
 
     def testKubernetesCluster(self):

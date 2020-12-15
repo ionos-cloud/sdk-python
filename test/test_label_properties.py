@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.label_properties import LabelProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.label_properties import LabelProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestLabelProperties(unittest.TestCase):
     """LabelProperties unit test stubs"""
@@ -33,13 +33,13 @@ class TestLabelProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.label_properties.LabelProperties()  # noqa: E501
+        # model = ionoscloud.models.label_properties.LabelProperties()  # noqa: E501
         if include_optional :
             return LabelProperties(
-                key = 'environment', 
-                value = 'production', 
-                resource_id = '700e1cab-99b2-4c30-ba8c-1d273ddba022', 
-                resource_type = 'datacenter', 
+                key = 'environment'
+                value = 'production'
+                resource_id = '700e1cab-99b2-4c30-ba8c-1d273ddba022'
+                resource_type = 'datacenter'
                 resource_href = 'https://<hostname>/datacenters/700e1cab-99b2-4c30-ba8c-1d273ddba022'
             )
         else :

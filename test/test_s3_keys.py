@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.s3_keys import S3Keys  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.s3_keys import S3Keys  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestS3Keys(unittest.TestCase):
     """S3Keys unit test stubs"""
@@ -33,21 +33,21 @@ class TestS3Keys(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.s3_keys.S3Keys()  # noqa: E501
+        # model = ionoscloud.models.s3_keys.S3Keys()  # noqa: E501
         if include_optional :
             return S3Keys(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                type = "collection", 
-                href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/s3keys', 
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
+                type = "collection"
+                href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/s3keys'
                 items = [
-                    ionossdk.models.s3_key.S3Key(
+                    ionoscloud.models.s3_key.S3Key(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "group", 
                         href = 'https://<API_HOST>/cloudapi/v5/um/users/15f67991-0f51-4efc-a8ad-ef1fb31a480c/s3keys/78fa888e106456c1482d', 
-                        metadata = ionossdk.models.s3_key_metadata.S3KeyMetadata(
+                        metadata = ionoscloud.models.s3_key_metadata.S3KeyMetadata(
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                             created_date = '2015-12-04T14:34:09.809Z', ), 
-                        properties = ionossdk.models.s3_key_properties.S3KeyProperties(
+                        properties = ionoscloud.models.s3_key_properties.S3KeyProperties(
                             secret_key = 'tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG', 
                             active = True, ), )
                     ]

@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.image_api import ImageApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.image_api import ImageApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestImageApi(unittest.TestCase):
     """ImageApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.image_api.ImageApi()  # noqa: E501
+        self.api = ionoscloud.api.image_api.ImageApi()  # noqa: E501
 
     def tearDown(self):
         pass

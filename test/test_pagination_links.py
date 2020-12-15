@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.pagination_links import PaginationLinks  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.pagination_links import PaginationLinks  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestPaginationLinks(unittest.TestCase):
     """PaginationLinks unit test stubs"""
@@ -33,11 +33,11 @@ class TestPaginationLinks(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.pagination_links.PaginationLinks()  # noqa: E501
+        # model = ionoscloud.models.pagination_links.PaginationLinks()  # noqa: E501
         if include_optional :
             return PaginationLinks(
-                prev = '<PREVIOUS-PAGE-URI>', 
-                _self = '<THIS-PAGE-URI>', 
+                prev = '<PREVIOUS-PAGE-URI>'
+                _self = '<THIS-PAGE-URI>'
                 next = '<NEXT-PAGE-URI>'
             )
         else :

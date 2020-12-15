@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.lan import Lan  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.lan import Lan  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestLan(unittest.TestCase):
     """Lan unit test stubs"""
@@ -33,13 +33,13 @@ class TestLan(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.lan.Lan()  # noqa: E501
+        # model = ionoscloud.models.lan.Lan()  # noqa: E501
         if include_optional :
             return Lan(
-                id = '5', 
-                type = "lan", 
-                href = '<RESOURCE-URI>', 
-                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                id = '5'
+                type = "lan"
+                href = '<RESOURCE-URI>'
+                metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
@@ -47,23 +47,27 @@ class TestLan(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', ), 
-                properties = ionossdk.models.lan_properties.LanProperties(
+                    state = 'AVAILABLE', )
+                properties = ionoscloud.models.lan_properties.LanProperties(
                     name = 'My resource', 
-                    ip_failover = { "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }, 
+                    ip_failover = [
+                        ionoscloud.models.ip_failover.IPFailover(
+                            ip = '192.18.2.231', 
+                            nic_uuid = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', )
+                        ], 
                     pcc = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', 
-                    public = True, ), 
-                entities = ionossdk.models.lan_entities.LanEntities(
-                    nics = ionossdk.models.lan_nics.LanNics(
+                    public = True, )
+                entities = ionoscloud.models.lan_entities.LanEntities(
+                    nics = ionoscloud.models.lan_nics.LanNics(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "collection", 
                         href = '<RESOURCE-URI>', 
                         items = [
-                            ionossdk.models.nic.Nic(
+                            ionoscloud.models.nic.Nic(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "nic", 
                                 href = '<RESOURCE-URI>', 
-                                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                                metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                                     created_date = '2015-12-04T14:34:09.809Z', 
                                     created_by = 'user@example.com', 
@@ -72,23 +76,33 @@ class TestLan(unittest.TestCase):
                                     last_modified_by = 'user@example.com', 
                                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
                                     state = 'AVAILABLE', ), 
-                                properties = ionossdk.models.nic_properties.NicProperties(
+                                properties = ionoscloud.models.nic_properties.NicProperties(
                                     name = 'My resource', 
                                     mac = '00:0a:95:9d:68:16', 
                                     ips = [
-                                        '0'
+                                        ''
                                         ], 
                                     dhcp = True, 
                                     lan = 2, 
                                     firewall_active = False, 
                                     nat = True, ), )
-                            ], ), )
+                            ], 
+                        offset = 0, 
+                        limit = 1000, 
+                        _links = ionoscloud.models.pagination_links.PaginationLinks(
+                            prev = '<PREVIOUS-PAGE-URI>', 
+                            self = '<THIS-PAGE-URI>', 
+                            next = '<NEXT-PAGE-URI>', ), ), )
             )
         else :
             return Lan(
-                properties = ionossdk.models.lan_properties.LanProperties(
+                properties = ionoscloud.models.lan_properties.LanProperties(
                     name = 'My resource', 
-                    ip_failover = { "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }, 
+                    ip_failover = [
+                        ionoscloud.models.ip_failover.IPFailover(
+                            ip = '192.18.2.231', 
+                            nic_uuid = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', )
+                        ], 
                     pcc = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec', 
                     public = True, ),
         )

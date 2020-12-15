@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.image import Image  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.image import Image  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestImage(unittest.TestCase):
     """Image unit test stubs"""
@@ -33,13 +33,13 @@ class TestImage(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.image.Image()  # noqa: E501
+        # model = ionoscloud.models.image.Image()  # noqa: E501
         if include_optional :
             return Image(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                type = "image", 
-                href = '<RESOURCE-URI>', 
-                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
+                type = "image"
+                href = '<RESOURCE-URI>'
+                metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
@@ -47,8 +47,8 @@ class TestImage(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', ), 
-                properties = ionossdk.models.image_properties.ImageProperties(
+                    state = 'AVAILABLE', )
+                properties = ionoscloud.models.image_properties.ImageProperties(
                     name = 'My resource', 
                     description = 'Image/Snapshot of Ubuntu ', 
                     location = 'us/las', 
@@ -69,7 +69,7 @@ class TestImage(unittest.TestCase):
             )
         else :
             return Image(
-                properties = ionossdk.models.image_properties.ImageProperties(
+                properties = ionoscloud.models.image_properties.ImageProperties(
                     name = 'My resource', 
                     description = 'Image/Snapshot of Ubuntu ', 
                     location = 'us/las', 

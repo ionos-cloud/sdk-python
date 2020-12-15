@@ -14,29 +14,29 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.location_api import LocationApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.location_api import LocationApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestLocationApi(unittest.TestCase):
     """LocationApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.location_api.LocationApi()  # noqa: E501
+        self.api = ionoscloud.api.location_api.LocationApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def test_locations_find_by_region(self):
-        """Test case for locations_find_by_region
+    def test_locations_find_by_region_id(self):
+        """Test case for locations_find_by_region_id
 
         List Locations within a region  # noqa: E501
         """
         pass
 
-    def test_locations_find_by_region_and_id(self):
-        """Test case for locations_find_by_region_and_id
+    def test_locations_find_by_region_id_and_id(self):
+        """Test case for locations_find_by_region_id_and_id
 
         Retrieve a Location  # noqa: E501
         """

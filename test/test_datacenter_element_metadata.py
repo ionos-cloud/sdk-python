@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.datacenter_element_metadata import DatacenterElementMetadata  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.datacenter_element_metadata import DatacenterElementMetadata  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestDatacenterElementMetadata(unittest.TestCase):
     """DatacenterElementMetadata unit test stubs"""
@@ -33,16 +33,16 @@ class TestDatacenterElementMetadata(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata()  # noqa: E501
+        # model = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata()  # noqa: E501
         if include_optional :
             return DatacenterElementMetadata(
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
-                created_date = '2015-12-04T14:34:09.809Z', 
-                created_by = 'user@example.com', 
-                created_by_user_id = 'user@example.com', 
-                last_modified_date = '2015-12-04T14:34:09.809Z', 
-                last_modified_by = 'user@example.com', 
-                last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
+                created_date = '2015-12-04T14:34:09.809Z'
+                created_by = 'user@example.com'
+                created_by_user_id = 'user@example.com'
+                last_modified_date = '2015-12-04T14:34:09.809Z'
+                last_modified_by = 'user@example.com'
+                last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90'
                 state = 'AVAILABLE'
             )
         else :

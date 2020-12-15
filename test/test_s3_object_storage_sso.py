@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.s3_object_storage_sso import S3ObjectStorageSSO  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.s3_object_storage_sso import S3ObjectStorageSSO  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestS3ObjectStorageSSO(unittest.TestCase):
     """S3ObjectStorageSSO unit test stubs"""
@@ -33,7 +33,7 @@ class TestS3ObjectStorageSSO(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.s3_object_storage_sso.S3ObjectStorageSSO()  # noqa: E501
+        # model = ionoscloud.models.s3_object_storage_sso.S3ObjectStorageSSO()  # noqa: E501
         if include_optional :
             return S3ObjectStorageSSO(
                 sso_url = 'https://<hostname>:port/ssosecurelogin.htm?user=dcf5702f-9353-47AN5-_x7E.....htm'

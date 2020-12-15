@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.kubernetes_node_metadata import KubernetesNodeMetadata  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.kubernetes_node_metadata import KubernetesNodeMetadata  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestKubernetesNodeMetadata(unittest.TestCase):
     """KubernetesNodeMetadata unit test stubs"""
@@ -33,13 +33,13 @@ class TestKubernetesNodeMetadata(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.kubernetes_node_metadata.KubernetesNodeMetadata()  # noqa: E501
+        # model = ionoscloud.models.kubernetes_node_metadata.KubernetesNodeMetadata()  # noqa: E501
         if include_optional :
             return KubernetesNodeMetadata(
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
-                created_date = '2015-12-04T14:34:09.809Z', 
-                last_modified_date = '2015-12-04T14:34:09.809Z', 
-                state = 'AVAILABLE', 
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
+                created_date = '2015-12-04T14:34:09.809Z'
+                last_modified_date = '2015-12-04T14:34:09.809Z'
+                state = 'AVAILABLE'
                 last_software_updated_date = '2015-12-04T14:34:09.809Z'
             )
         else :

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.kubernetes_node_pool_label import KubernetesNodePoolLabel  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.kubernetes_node_pool_label import KubernetesNodePoolLabel  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestKubernetesNodePoolLabel(unittest.TestCase):
     """KubernetesNodePoolLabel unit test stubs"""
@@ -33,11 +33,11 @@ class TestKubernetesNodePoolLabel(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.kubernetes_node_pool_label.KubernetesNodePoolLabel()  # noqa: E501
+        # model = ionoscloud.models.kubernetes_node_pool_label.KubernetesNodePoolLabel()  # noqa: E501
         if include_optional :
             return KubernetesNodePoolLabel(
-                key = '0', 
-                value = '0'
+                key = ''
+                value = ''
             )
         else :
             return KubernetesNodePoolLabel(

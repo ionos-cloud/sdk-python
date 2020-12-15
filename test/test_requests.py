@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.requests import Requests  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.requests import Requests  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestRequests(unittest.TestCase):
     """Requests unit test stubs"""
@@ -33,36 +33,48 @@ class TestRequests(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.requests.Requests()  # noqa: E501
+        # model = ionoscloud.models.requests.Requests()  # noqa: E501
         if include_optional :
             return Requests(
-                id = 'requests', 
-                type = "collection", 
-                href = '<RESOURCE-URI>', 
+                id = 'requests'
+                type = "collection"
+                href = '<RESOURCE-URI>'
                 items = [
-                    ionossdk.models.request.Request(
+                    ionoscloud.models.request.Request(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                         type = "request", 
                         href = '<RESOURCE-URI>', 
-                        metadata = ionossdk.models.request_metadata.RequestMetadata(
+                        metadata = ionoscloud.models.request_metadata.RequestMetadata(
                             created_date = '2015-12-04T14:34:09.809Z', 
                             created_by = 'user@example.com', 
                             etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
-                            request_status = ionossdk.models.request_status.RequestStatus(
+                            request_status = ionoscloud.models.request_status.RequestStatus(
                                 id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                 type = "request-status", 
                                 href = '<RESOURCE-URI>', ), ), 
-                        properties = ionossdk.models.request_properties.RequestProperties(
-                            method = '0', 
+                        properties = ionoscloud.models.request_properties.RequestProperties(
+                            method = '', 
                             headers = {
-                                'key' : '0'
+                                'key' : ''
                                 }, 
-                            body = '0', 
-                            url = '0', ), )
+                            body = '', 
+                            url = '', ), )
                     ]
+                offset = 0
+                limit = 1000
+                links = ionoscloud.models.pagination_links.PaginationLinks(
+                    prev = '<PREVIOUS-PAGE-URI>', 
+                    self = '<THIS-PAGE-URI>', 
+                    next = '<NEXT-PAGE-URI>', )
             )
         else :
             return Requests(
+                offset = 0,
+                limit = 1000,
+                links = ionoscloud.models.pagination_links.PaginationLinks(
+                    prev = '<PREVIOUS-PAGE-URI>', 
+                    self = '<THIS-PAGE-URI>', 
+                    next = '<NEXT-PAGE-URI>', ),
         )
 
     def testRequests(self):

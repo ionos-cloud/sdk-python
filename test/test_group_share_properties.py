@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.group_share_properties import GroupShareProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.group_share_properties import GroupShareProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestGroupShareProperties(unittest.TestCase):
     """GroupShareProperties unit test stubs"""
@@ -33,10 +33,10 @@ class TestGroupShareProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.group_share_properties.GroupShareProperties()  # noqa: E501
+        # model = ionoscloud.models.group_share_properties.GroupShareProperties()  # noqa: E501
         if include_optional :
             return GroupShareProperties(
-                edit_privilege = True, 
+                edit_privilege = True
                 share_privilege = True
             )
         else :

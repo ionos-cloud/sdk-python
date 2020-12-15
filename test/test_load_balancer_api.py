@@ -14,16 +14,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import ionossdk
-from ionossdk.api.load_balancer_api import LoadBalancerApi  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.api.load_balancer_api import LoadBalancerApi  # noqa: E501
+from ionoscloud.rest import ApiException
 
 
 class TestLoadBalancerApi(unittest.TestCase):
     """LoadBalancerApi unit test stubs"""
 
     def setUp(self):
-        self.api = ionossdk.api.load_balancer_api.LoadBalancerApi()  # noqa: E501
+        self.api = ionoscloud.api.load_balancer_api.LoadBalancerApi()  # noqa: E501
 
     def tearDown(self):
         pass
@@ -35,8 +35,8 @@ class TestLoadBalancerApi(unittest.TestCase):
         """
         pass
 
-    def test_datacenters_loadbalancers_balancednics_find_by_nic(self):
-        """Test case for datacenters_loadbalancers_balancednics_find_by_nic
+    def test_datacenters_loadbalancers_balancednics_find_by_nic_id(self):
+        """Test case for datacenters_loadbalancers_balancednics_find_by_nic_id
 
         Retrieve a nic attached to Load Balancer  # noqa: E501
         """

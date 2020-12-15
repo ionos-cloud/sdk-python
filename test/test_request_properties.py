@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.request_properties import RequestProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.request_properties import RequestProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestRequestProperties(unittest.TestCase):
     """RequestProperties unit test stubs"""
@@ -33,15 +33,15 @@ class TestRequestProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.request_properties.RequestProperties()  # noqa: E501
+        # model = ionoscloud.models.request_properties.RequestProperties()  # noqa: E501
         if include_optional :
             return RequestProperties(
-                method = '0', 
+                method = ''
                 headers = {
-                    'key' : '0'
-                    }, 
-                body = '0', 
-                url = '0'
+                    'key' : ''
+                    }
+                body = ''
+                url = ''
             )
         else :
             return RequestProperties(

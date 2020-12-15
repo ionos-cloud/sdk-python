@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.firewall_rule import FirewallRule  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.firewall_rule import FirewallRule  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestFirewallRule(unittest.TestCase):
     """FirewallRule unit test stubs"""
@@ -33,13 +33,13 @@ class TestFirewallRule(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.firewall_rule.FirewallRule()  # noqa: E501
+        # model = ionoscloud.models.firewall_rule.FirewallRule()  # noqa: E501
         if include_optional :
             return FirewallRule(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
-                type = "firewall-rule", 
-                href = '<RESOURCE-URI>', 
-                metadata = ionossdk.models.datacenter_element_metadata.DatacenterElementMetadata(
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
+                type = "firewall-rule"
+                href = '<RESOURCE-URI>'
+                metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
@@ -47,8 +47,8 @@ class TestFirewallRule(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', ), 
-                properties = ionossdk.models.firewallrule_properties.FirewallruleProperties(
+                    state = 'AVAILABLE', )
+                properties = ionoscloud.models.firewallrule_properties.FirewallruleProperties(
                     name = 'My resource', 
                     protocol = 'TCP', 
                     source_mac = '00:0a:95:9d:68:16', 
@@ -61,7 +61,7 @@ class TestFirewallRule(unittest.TestCase):
             )
         else :
             return FirewallRule(
-                properties = ionossdk.models.firewallrule_properties.FirewallruleProperties(
+                properties = ionoscloud.models.firewallrule_properties.FirewallruleProperties(
                     name = 'My resource', 
                     protocol = 'TCP', 
                     source_mac = '00:0a:95:9d:68:16', 

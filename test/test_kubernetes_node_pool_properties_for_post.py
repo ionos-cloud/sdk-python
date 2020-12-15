@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.kubernetes_node_pool_properties_for_post import KubernetesNodePoolPropertiesForPost  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.kubernetes_node_pool_properties_for_post import KubernetesNodePoolPropertiesForPost  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestKubernetesNodePoolPropertiesForPost(unittest.TestCase):
     """KubernetesNodePoolPropertiesForPost unit test stubs"""
@@ -33,35 +33,35 @@ class TestKubernetesNodePoolPropertiesForPost(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.kubernetes_node_pool_properties_for_post.KubernetesNodePoolPropertiesForPost()  # noqa: E501
+        # model = ionoscloud.models.kubernetes_node_pool_properties_for_post.KubernetesNodePoolPropertiesForPost()  # noqa: E501
         if include_optional :
             return KubernetesNodePoolPropertiesForPost(
-                name = 'k8s-node-pool', 
-                datacenter_id = '1e072e52-2ed3-492f-b6b6-c6b116907521', 
-                node_count = 2, 
-                cpu_family = 'AMD_OPTERON', 
-                cores_count = 4, 
-                ram_size = 2048, 
-                availability_zone = 'AUTO', 
-                storage_type = 'HDD', 
-                storage_size = 100, 
-                k8s_version = '1.15.4', 
-                maintenance_window = ionossdk.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
+                name = 'k8s-node-pool'
+                datacenter_id = '1e072e52-2ed3-492f-b6b6-c6b116907521'
+                node_count = 2
+                cpu_family = 'AMD_OPTERON'
+                cores_count = 4
+                ram_size = 2048
+                availability_zone = 'AUTO'
+                storage_type = 'HDD'
+                storage_size = 100
+                k8s_version = '1.15.4'
+                maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                     day_of_the_week = 'Monday', 
-                    time = '13:00:00', ), 
-                auto_scaling = ionossdk.models.kubernetes_auto_scaling.KubernetesAutoScaling(
+                    time = '13:00:00', )
+                auto_scaling = ionoscloud.models.kubernetes_auto_scaling.KubernetesAutoScaling(
                     min_node_count = 1, 
-                    max_node_count = 1, ), 
+                    max_node_count = 1, )
                 lans = [
-                    ionossdk.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
+                    ionoscloud.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
                         id = 3, )
-                    ], 
-                labels = ionossdk.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
-                    key = '0', 
-                    value = '0', ), 
-                annotations = ionossdk.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
-                    key = '0', 
-                    value = '0', ), 
+                    ]
+                labels = ionoscloud.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
+                    key = '', 
+                    value = '', )
+                annotations = ionoscloud.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
+                    key = '', 
+                    value = '', )
                 public_ips = [81.173.1.2, 82.231.2.5, 92.221.2.4]
             )
         else :

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.snapshot_properties import SnapshotProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.snapshot_properties import SnapshotProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestSnapshotProperties(unittest.TestCase):
     """SnapshotProperties unit test stubs"""
@@ -33,24 +33,24 @@ class TestSnapshotProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.snapshot_properties.SnapshotProperties()  # noqa: E501
+        # model = ionoscloud.models.snapshot_properties.SnapshotProperties()  # noqa: E501
         if include_optional :
             return SnapshotProperties(
-                name = 'My resource', 
-                description = 'Image/Snapshot of Ubuntu ', 
-                location = 'us/las', 
-                size = 100.0, 
-                sec_auth_protection = True, 
-                cpu_hot_plug = True, 
-                cpu_hot_unplug = True, 
-                ram_hot_plug = True, 
-                ram_hot_unplug = True, 
-                nic_hot_plug = True, 
-                nic_hot_unplug = True, 
-                disc_virtio_hot_plug = True, 
-                disc_virtio_hot_unplug = True, 
-                disc_scsi_hot_plug = True, 
-                disc_scsi_hot_unplug = True, 
+                name = 'My resource'
+                description = 'Image/Snapshot of Ubuntu '
+                location = 'us/las'
+                size = 100.0
+                sec_auth_protection = True
+                cpu_hot_plug = True
+                cpu_hot_unplug = True
+                ram_hot_plug = True
+                ram_hot_unplug = True
+                nic_hot_plug = True
+                nic_hot_unplug = True
+                disc_virtio_hot_plug = True
+                disc_virtio_hot_unplug = True
+                disc_scsi_hot_plug = True
+                disc_scsi_hot_unplug = True
                 licence_type = 'LINUX'
             )
         else :

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.group_properties import GroupProperties  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.group_properties import GroupProperties  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestGroupProperties(unittest.TestCase):
     """GroupProperties unit test stubs"""
@@ -33,18 +33,18 @@ class TestGroupProperties(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.group_properties.GroupProperties()  # noqa: E501
+        # model = ionoscloud.models.group_properties.GroupProperties()  # noqa: E501
         if include_optional :
             return GroupProperties(
-                name = 'My resource', 
-                create_data_center = True, 
-                create_snapshot = True, 
-                reserve_ip = True, 
-                access_activity_log = True, 
-                create_pcc = True, 
-                s3_privilege = True, 
-                create_backup_unit = True, 
-                create_internet_access = True, 
+                name = 'My resource'
+                create_data_center = True
+                create_snapshot = True
+                reserve_ip = True
+                access_activity_log = True
+                create_pcc = True
+                s3_privilege = True
+                create_backup_unit = True
+                create_internet_access = True
                 create_k8s_cluster = True
             )
         else :

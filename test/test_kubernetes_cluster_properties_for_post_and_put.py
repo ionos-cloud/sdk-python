@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.kubernetes_cluster_properties_for_post_and_put import KubernetesClusterPropertiesForPostAndPut  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.kubernetes_cluster_properties_for_post_and_put import KubernetesClusterPropertiesForPostAndPut  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestKubernetesClusterPropertiesForPostAndPut(unittest.TestCase):
     """KubernetesClusterPropertiesForPostAndPut unit test stubs"""
@@ -33,12 +33,12 @@ class TestKubernetesClusterPropertiesForPostAndPut(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.kubernetes_cluster_properties_for_post_and_put.KubernetesClusterPropertiesForPostAndPut()  # noqa: E501
+        # model = ionoscloud.models.kubernetes_cluster_properties_for_post_and_put.KubernetesClusterPropertiesForPostAndPut()  # noqa: E501
         if include_optional :
             return KubernetesClusterPropertiesForPostAndPut(
-                name = 'k8s', 
-                k8s_version = '1.15.4', 
-                maintenance_window = ionossdk.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
+                name = 'k8s'
+                k8s_version = '1.15.4'
+                maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                     day_of_the_week = 'Monday', 
                     time = '13:00:00', )
             )

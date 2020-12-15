@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.contract import Contract  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.contract import Contract  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestContract(unittest.TestCase):
     """Contract unit test stubs"""
@@ -33,16 +33,16 @@ class TestContract(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.contract.Contract()  # noqa: E501
+        # model = ionoscloud.models.contract.Contract()  # noqa: E501
         if include_optional :
             return Contract(
-                type = "resource", 
-                properties = ionossdk.models.contract_properties.ContractProperties(
+                type = "resource"
+                properties = ionoscloud.models.contract_properties.ContractProperties(
                     contract_number = 56, 
-                    owner = '0', 
-                    status = '0', 
-                    reg_domain = '0', 
-                    resource_limits = ionossdk.models.resource_limits.ResourceLimits(
+                    owner = '', 
+                    status = '', 
+                    reg_domain = '', 
+                    resource_limits = ionoscloud.models.resource_limits.ResourceLimits(
                         cores_per_server = 56, 
                         cores_per_contract = 56, 
                         cores_provisioned = 56, 
@@ -63,12 +63,12 @@ class TestContract(unittest.TestCase):
             )
         else :
             return Contract(
-                properties = ionossdk.models.contract_properties.ContractProperties(
+                properties = ionoscloud.models.contract_properties.ContractProperties(
                     contract_number = 56, 
-                    owner = '0', 
-                    status = '0', 
-                    reg_domain = '0', 
-                    resource_limits = ionossdk.models.resource_limits.ResourceLimits(
+                    owner = '', 
+                    status = '', 
+                    reg_domain = '', 
+                    resource_limits = ionoscloud.models.resource_limits.ResourceLimits(
                         cores_per_server = 56, 
                         cores_per_contract = 56, 
                         cores_provisioned = 56, 

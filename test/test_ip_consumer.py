@@ -15,9 +15,9 @@ from __future__ import absolute_import
 import unittest
 import datetime
 
-import ionossdk
-from ionossdk.models.ip_consumer import IpConsumer  # noqa: E501
-from ionossdk.rest import ApiException
+import ionoscloud
+from ionoscloud.models.ip_consumer import IpConsumer  # noqa: E501
+from ionoscloud.rest import ApiException
 
 class TestIpConsumer(unittest.TestCase):
     """IpConsumer unit test stubs"""
@@ -33,16 +33,16 @@ class TestIpConsumer(unittest.TestCase):
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = ionossdk.models.ip_consumer.IpConsumer()  # noqa: E501
+        # model = ionoscloud.models.ip_consumer.IpConsumer()  # noqa: E501
         if include_optional :
             return IpConsumer(
-                ip = '0', 
-                mac = '0', 
-                nic_id = '0', 
-                server_id = '0', 
-                server_name = '0', 
-                datacenter_id = '0', 
-                datacenter_name = '0'
+                ip = ''
+                mac = ''
+                nic_id = ''
+                server_id = ''
+                server_name = ''
+                datacenter_id = ''
+                datacenter_name = ''
             )
         else :
             return IpConsumer(
