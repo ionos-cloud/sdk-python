@@ -36,9 +36,9 @@ class TestGroups(unittest.TestCase):
         # model = ionoscloud.models.groups.Groups()  # noqa: E501
         if include_optional :
             return Groups(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "groups"
-                href = 'https://<API_HOST>/cloudapi/v5/um/groups'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "groups",
+                href = 'https://<API_HOST>/cloudapi/v5/um/groups',
                 items = [
                     ionoscloud.models.group.Group(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

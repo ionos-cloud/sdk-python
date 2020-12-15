@@ -36,22 +36,22 @@ class TestImageProperties(unittest.TestCase):
         # model = ionoscloud.models.image_properties.ImageProperties()  # noqa: E501
         if include_optional :
             return ImageProperties(
-                name = 'My resource'
-                description = 'Image/Snapshot of Ubuntu '
-                location = 'us/las'
-                size = 100.0
-                cpu_hot_plug = True
-                cpu_hot_unplug = True
-                ram_hot_plug = True
-                ram_hot_unplug = True
-                nic_hot_plug = True
-                nic_hot_unplug = True
-                disc_virtio_hot_plug = True
-                disc_virtio_hot_unplug = True
-                disc_scsi_hot_plug = True
-                disc_scsi_hot_unplug = True
-                licence_type = 'LINUX'
-                image_type = 'HDD'
+                name = 'My resource',
+                description = 'Image/Snapshot of Ubuntu ',
+                location = 'us/las',
+                size = 100.0,
+                cpu_hot_plug = True,
+                cpu_hot_unplug = True,
+                ram_hot_plug = True,
+                ram_hot_unplug = True,
+                nic_hot_plug = True,
+                nic_hot_unplug = True,
+                disc_virtio_hot_plug = True,
+                disc_virtio_hot_unplug = True,
+                disc_scsi_hot_plug = True,
+                disc_scsi_hot_unplug = True,
+                licence_type = 'LINUX',
+                image_type = 'HDD',
                 public = True
             )
         else :

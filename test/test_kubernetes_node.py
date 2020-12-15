@@ -36,15 +36,15 @@ class TestKubernetesNode(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_node.KubernetesNode()  # noqa: E501
         if include_optional :
             return KubernetesNode(
-                id = '1e072e52-2ed3-492f-b6b6-c6b116907527'
-                type = 'nodepool'
-                href = '<RESOURCE-URI>'
+                id = '1e072e52-2ed3-492f-b6b6-c6b116907527',
+                type = 'nodepool',
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.kubernetes_node_metadata.KubernetesNodeMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     state = 'AVAILABLE', 
-                    last_software_updated_date = '2015-12-04T14:34:09.809Z', )
+                    last_software_updated_date = '2015-12-04T14:34:09.809Z', ),
                 properties = ionoscloud.models.kubernetes_node_properties.KubernetesNodeProperties(
                     name = 'k8s-node', 
                     public_ip = '192.168.23.2', 

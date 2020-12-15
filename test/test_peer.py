@@ -36,10 +36,10 @@ class TestPeer(unittest.TestCase):
         # model = ionoscloud.models.peer.Peer()  # noqa: E501
         if include_optional :
             return Peer(
-                id = ''
-                name = ''
-                datacenter_id = ''
-                datacenter_name = ''
+                id = '',
+                name = '',
+                datacenter_id = '',
+                datacenter_name = '',
                 location = ''
             )
         else :

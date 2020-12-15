@@ -36,9 +36,9 @@ class TestRequestMetadata(unittest.TestCase):
         # model = ionoscloud.models.request_metadata.RequestMetadata()  # noqa: E501
         if include_optional :
             return RequestMetadata(
-                created_date = '2015-12-04T14:34:09.809Z'
-                created_by = 'user@example.com'
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
+                created_date = '2015-12-04T14:34:09.809Z',
+                created_by = 'user@example.com',
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3',
                 request_status = ionoscloud.models.request_status.RequestStatus(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "request-status", 

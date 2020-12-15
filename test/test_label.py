@@ -36,9 +36,9 @@ class TestLabel(unittest.TestCase):
         # model = ionoscloud.models.label.Label()  # noqa: E501
         if include_optional :
             return Label(
-                id = 'urn:label:datacenter:700e1cab-99b2-4c30-ba8c-1d273ddba022:environment'
-                type = 'label'
-                href = '<RESOURCE-URI>'
+                id = 'urn:label:datacenter:700e1cab-99b2-4c30-ba8c-1d273ddba022:environment',
+                type = 'label',
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.no_state_meta_data.NoStateMetaData(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
@@ -46,7 +46,7 @@ class TestLabel(unittest.TestCase):
                     created_by_user_id = 'user@example.com', 
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
-                    last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', )
+                    last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', ),
                 properties = ionoscloud.models.label_properties.LabelProperties(
                     key = 'environment', 
                     value = 'production', 

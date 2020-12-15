@@ -36,14 +36,14 @@ class TestFirewallruleProperties(unittest.TestCase):
         # model = ionoscloud.models.firewallrule_properties.FirewallruleProperties()  # noqa: E501
         if include_optional :
             return FirewallruleProperties(
-                name = 'My resource'
-                protocol = 'TCP'
-                source_mac = '00:0a:95:9d:68:16'
-                source_ip = '22.231.113.64'
-                target_ip = '22.231.113.64'
-                icmp_code = 0
-                icmp_type = 8
-                port_range_start = 8
+                name = 'My resource',
+                protocol = 'TCP',
+                source_mac = '00:0a:95:9d:68:16',
+                source_ip = '22.231.113.64',
+                target_ip = '22.231.113.64',
+                icmp_code = 0,
+                icmp_type = 8,
+                port_range_start = 8,
                 port_range_end = 8
             )
         else :

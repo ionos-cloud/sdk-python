@@ -36,7 +36,7 @@ class TestGroupShareProperties(unittest.TestCase):
         # model = ionoscloud.models.group_share_properties.GroupShareProperties()  # noqa: E501
         if include_optional :
             return GroupShareProperties(
-                edit_privilege = True
+                edit_privilege = True,
                 share_privilege = True
             )
         else :

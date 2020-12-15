@@ -97,9 +97,9 @@ class BackupUnitApi(object):
         local_var_params = locals()
 
         all_params = [
-            'backupunit_id'
-            'pretty'
-            'depth'
+            'backupunit_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -155,7 +155,7 @@ class BackupUnitApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -258,9 +258,9 @@ class BackupUnitApi(object):
         local_var_params = locals()
 
         all_params = [
-            'backupunit_id'
-            'pretty'
-            'depth'
+            'backupunit_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -316,7 +316,7 @@ class BackupUnitApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'BackupUnit'
         if 'response_type' in kwargs:
@@ -415,8 +415,8 @@ class BackupUnitApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -466,7 +466,7 @@ class BackupUnitApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'BackupUnits'
         if 'response_type' in kwargs:
@@ -573,10 +573,10 @@ class BackupUnitApi(object):
         local_var_params = locals()
 
         all_params = [
-            'backupunit_id'
-            'backup_unit_properties'
-            'pretty'
-            'depth'
+            'backupunit_id',
+            'backup_unit_properties',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -642,7 +642,7 @@ class BackupUnitApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'BackupUnit'
         if 'response_type' in kwargs:
@@ -745,9 +745,9 @@ class BackupUnitApi(object):
         local_var_params = locals()
 
         all_params = [
-            'backup_unit'
-            'pretty'
-            'depth'
+            'backup_unit',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -807,7 +807,7 @@ class BackupUnitApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'BackupUnit'
         if 'response_type' in kwargs:
@@ -914,10 +914,10 @@ class BackupUnitApi(object):
         local_var_params = locals()
 
         all_params = [
-            'backupunit_id'
-            'backup_unit'
-            'pretty'
-            'depth'
+            'backupunit_id',
+            'backup_unit',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -983,7 +983,7 @@ class BackupUnitApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'BackupUnit'
         if 'response_type' in kwargs:
@@ -1082,8 +1082,8 @@ class BackupUnitApi(object):
         local_var_params = locals()
 
         all_params = [
-            'backupunit_id'
-            'pretty'
+            'backupunit_id',
+            'pretty',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1133,7 +1133,7 @@ class BackupUnitApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'BackupUnitSSO'
         if 'response_type' in kwargs:

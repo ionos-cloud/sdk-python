@@ -36,7 +36,7 @@ class TestS3KeyMetadata(unittest.TestCase):
         # model = ionoscloud.models.s3_key_metadata.S3KeyMetadata()  # noqa: E501
         if include_optional :
             return S3KeyMetadata(
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3',
                 created_date = '2015-12-04T14:34:09.809Z'
             )
         else :

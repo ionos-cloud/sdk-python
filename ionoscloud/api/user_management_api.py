@@ -97,9 +97,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'pretty'
-            'depth'
+            'group_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -155,7 +155,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -258,9 +258,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'pretty'
-            'depth'
+            'group_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -316,7 +316,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Group'
         if 'response_type' in kwargs:
@@ -415,8 +415,8 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -466,7 +466,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Groups'
         if 'response_type' in kwargs:
@@ -569,9 +569,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group'
-            'pretty'
-            'depth'
+            'group',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -631,7 +631,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Group'
         if 'response_type' in kwargs:
@@ -738,10 +738,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'group'
-            'pretty'
-            'depth'
+            'group_id',
+            'group',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -807,7 +807,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Group'
         if 'response_type' in kwargs:
@@ -908,9 +908,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'pretty'
-            'depth'
+            'group_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -966,7 +966,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'ResourceGroups'
         if 'response_type' in kwargs:
@@ -1073,10 +1073,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'resource_id'
-            'pretty'
-            'depth'
+            'group_id',
+            'resource_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1138,7 +1138,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -1245,10 +1245,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'resource_id'
-            'pretty'
-            'depth'
+            'group_id',
+            'resource_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1310,7 +1310,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'GroupShare'
         if 'response_type' in kwargs:
@@ -1413,9 +1413,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'pretty'
-            'depth'
+            'group_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1471,7 +1471,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'GroupShares'
         if 'response_type' in kwargs:
@@ -1582,11 +1582,11 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'resource_id'
-            'resource'
-            'pretty'
-            'depth'
+            'group_id',
+            'resource_id',
+            'resource',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1654,7 +1654,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'GroupShare'
         if 'response_type' in kwargs:
@@ -1765,11 +1765,11 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'resource_id'
-            'resource'
-            'pretty'
-            'depth'
+            'group_id',
+            'resource_id',
+            'resource',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1841,7 +1841,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'GroupShare'
         if 'response_type' in kwargs:
@@ -1948,10 +1948,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'user_id'
-            'pretty'
-            'depth'
+            'group_id',
+            'user_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2013,7 +2013,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -2116,9 +2116,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'pretty'
-            'depth'
+            'group_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2174,7 +2174,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'GroupMembers'
         if 'response_type' in kwargs:
@@ -2281,10 +2281,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'group_id'
-            'user'
-            'pretty'
-            'depth'
+            'group_id',
+            'user',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2350,7 +2350,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'User'
         if 'response_type' in kwargs:
@@ -2453,9 +2453,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'resource_type'
-            'pretty'
-            'depth'
+            'resource_type',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2511,7 +2511,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Resources'
         if 'response_type' in kwargs:
@@ -2618,10 +2618,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'resource_type'
-            'resource_id'
-            'pretty'
-            'depth'
+            'resource_type',
+            'resource_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2683,7 +2683,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Resource'
         if 'response_type' in kwargs:
@@ -2782,8 +2782,8 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2833,7 +2833,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Resources'
         if 'response_type' in kwargs:
@@ -2936,9 +2936,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'pretty'
-            'depth'
+            'user_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2994,7 +2994,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -3097,9 +3097,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'pretty'
-            'depth'
+            'user_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3155,7 +3155,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'User'
         if 'response_type' in kwargs:
@@ -3254,8 +3254,8 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3305,7 +3305,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Users'
         if 'response_type' in kwargs:
@@ -3408,9 +3408,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'pretty'
-            'depth'
+            'user_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3466,7 +3466,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'ResourceGroups'
         if 'response_type' in kwargs:
@@ -3569,9 +3569,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'pretty'
-            'depth'
+            'user_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3627,7 +3627,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'ResourcesUsers'
         if 'response_type' in kwargs:
@@ -3730,9 +3730,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user'
-            'pretty'
-            'depth'
+            'user',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3792,7 +3792,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'User'
         if 'response_type' in kwargs:
@@ -3899,10 +3899,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'user'
-            'pretty'
-            'depth'
+            'user_id',
+            'user',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3968,7 +3968,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'User'
         if 'response_type' in kwargs:
@@ -4075,10 +4075,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'key_id'
-            'pretty'
-            'depth'
+            'user_id',
+            'key_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4140,7 +4140,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -4247,10 +4247,10 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'key_id'
-            'pretty'
-            'depth'
+            'user_id',
+            'key_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4312,7 +4312,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'S3Key'
         if 'response_type' in kwargs:
@@ -4415,9 +4415,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'pretty'
-            'depth'
+            'user_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4473,7 +4473,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'S3Keys'
         if 'response_type' in kwargs:
@@ -4576,9 +4576,9 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'pretty'
-            'depth'
+            'user_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4634,7 +4634,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'S3Key'
         if 'response_type' in kwargs:
@@ -4745,11 +4745,11 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'key_id'
-            's3_key'
-            'pretty'
-            'depth'
+            'user_id',
+            'key_id',
+            's3_key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4821,7 +4821,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'S3Key'
         if 'response_type' in kwargs:
@@ -4920,8 +4920,8 @@ class UserManagementApi(object):
         local_var_params = locals()
 
         all_params = [
-            'user_id'
-            'pretty'
+            'user_id',
+            'pretty',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4971,7 +4971,7 @@ class UserManagementApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'S3ObjectStorageSSO'
         if 'response_type' in kwargs:

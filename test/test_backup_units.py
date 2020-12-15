@@ -36,9 +36,9 @@ class TestBackupUnits(unittest.TestCase):
         # model = ionoscloud.models.backup_units.BackupUnits()  # noqa: E501
         if include_optional :
             return BackupUnits(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = 'collection'
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = 'collection',
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.backup_unit.BackupUnit(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

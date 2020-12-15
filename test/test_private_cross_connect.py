@@ -36,9 +36,9 @@ class TestPrivateCrossConnect(unittest.TestCase):
         # model = ionoscloud.models.private_cross_connect.PrivateCrossConnect()  # noqa: E501
         if include_optional :
             return PrivateCrossConnect(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "pcc"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "pcc",
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
@@ -47,7 +47,7 @@ class TestPrivateCrossConnect(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', )
+                    state = 'AVAILABLE', ),
                 properties = ionoscloud.models.private_cross_connect_properties.PrivateCrossConnectProperties(
                     name = 'My resource', 
                     description = 'Private Cross-Connect between datacenter 'A' and datacenter 'B' ', 

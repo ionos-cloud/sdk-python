@@ -36,7 +36,7 @@ class TestKubernetesNodePoolLabel(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_node_pool_label.KubernetesNodePoolLabel()  # noqa: E501
         if include_optional :
             return KubernetesNodePoolLabel(
-                key = ''
+                key = '',
                 value = ''
             )
         else :

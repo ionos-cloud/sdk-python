@@ -36,7 +36,7 @@ class TestContract(unittest.TestCase):
         # model = ionoscloud.models.contract.Contract()  # noqa: E501
         if include_optional :
             return Contract(
-                type = "resource"
+                type = "resource",
                 properties = ionoscloud.models.contract_properties.ContractProperties(
                     contract_number = 56, 
                     owner = '', 

@@ -36,7 +36,7 @@ class TestKubernetesAutoScaling(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_auto_scaling.KubernetesAutoScaling()  # noqa: E501
         if include_optional :
             return KubernetesAutoScaling(
-                min_node_count = 1
+                min_node_count = 1,
                 max_node_count = 1
             )
         else :

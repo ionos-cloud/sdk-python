@@ -36,8 +36,8 @@ class TestUserMetadata(unittest.TestCase):
         # model = ionoscloud.models.user_metadata.UserMetadata()  # noqa: E501
         if include_optional :
             return UserMetadata(
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
-                created_date = '2015-12-04T14:34:09.809Z'
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3',
+                created_date = '2015-12-04T14:34:09.809Z',
                 last_login = '2015-12-04T14:34:09.809Z'
             )
         else :

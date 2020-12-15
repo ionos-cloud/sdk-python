@@ -36,13 +36,13 @@ class TestUserProperties(unittest.TestCase):
         # model = ionoscloud.models.user_properties.UserProperties()  # noqa: E501
         if include_optional :
             return UserProperties(
-                firstname = ''
-                lastname = ''
-                email = ''
-                administrator = True
-                force_sec_auth = True
-                sec_auth_active = True
-                s3_canonical_user_id = ''
+                firstname = '',
+                lastname = '',
+                email = '',
+                administrator = True,
+                force_sec_auth = True,
+                sec_auth_active = True,
+                s3_canonical_user_id = '',
                 password = ''
             )
         else :

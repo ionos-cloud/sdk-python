@@ -78,7 +78,7 @@ class TestServerEntities(unittest.TestCase):
                     _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
-                        next = '<NEXT-PAGE-URI>', ), )
+                        next = '<NEXT-PAGE-URI>', ), ),
                 volumes = ionoscloud.models.attached_volumes.AttachedVolumes(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
@@ -122,7 +122,7 @@ class TestServerEntities(unittest.TestCase):
                     _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
-                        next = '<NEXT-PAGE-URI>', ), )
+                        next = '<NEXT-PAGE-URI>', ), ),
                 nics = ionoscloud.models.nics.Nics(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 

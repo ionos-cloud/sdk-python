@@ -36,12 +36,12 @@ class TestKubernetesClusterProperties(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_cluster_properties.KubernetesClusterProperties()  # noqa: E501
         if include_optional :
             return KubernetesClusterProperties(
-                name = 'k8s'
-                k8s_version = '1.15.4'
+                name = 'k8s',
+                k8s_version = '1.15.4',
                 maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                     day_of_the_week = 'Monday', 
-                    time = '13:00:00', )
-                available_upgrade_versions = [1.16.4, 1.17.7]
+                    time = '13:00:00', ),
+                available_upgrade_versions = [1.16.4, 1.17.7],
                 viable_node_pool_versions = [1.17.7, 1.18.2]
             )
         else :

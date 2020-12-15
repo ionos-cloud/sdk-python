@@ -36,19 +36,19 @@ class TestServerProperties(unittest.TestCase):
         # model = ionoscloud.models.server_properties.ServerProperties()  # noqa: E501
         if include_optional :
             return ServerProperties(
-                name = 'My resource'
-                cores = 4
-                ram = 4096
-                availability_zone = 'AUTO'
-                vm_state = 'RUNNING'
+                name = 'My resource',
+                cores = 4,
+                ram = 4096,
+                availability_zone = 'AUTO',
+                vm_state = 'RUNNING',
                 boot_cdrom = ionoscloud.models.resource_reference.ResourceReference(
                     id = '', 
                     type = "resource", 
-                    href = '<RESOURCE-URI>', )
+                    href = '<RESOURCE-URI>', ),
                 boot_volume = ionoscloud.models.resource_reference.ResourceReference(
                     id = '', 
                     type = "resource", 
-                    href = '<RESOURCE-URI>', )
+                    href = '<RESOURCE-URI>', ),
                 cpu_family = 'AMD_OPTERON'
             )
         else :

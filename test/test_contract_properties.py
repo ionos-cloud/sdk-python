@@ -36,10 +36,10 @@ class TestContractProperties(unittest.TestCase):
         # model = ionoscloud.models.contract_properties.ContractProperties()  # noqa: E501
         if include_optional :
             return ContractProperties(
-                contract_number = 56
-                owner = ''
-                status = ''
-                reg_domain = ''
+                contract_number = 56,
+                owner = '',
+                status = '',
+                reg_domain = '',
                 resource_limits = ionoscloud.models.resource_limits.ResourceLimits(
                     cores_per_server = 56, 
                     cores_per_contract = 56, 

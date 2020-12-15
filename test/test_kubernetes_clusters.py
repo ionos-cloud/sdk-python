@@ -36,9 +36,9 @@ class TestKubernetesClusters(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_clusters.KubernetesClusters()  # noqa: E501
         if include_optional :
             return KubernetesClusters(
-                id = 'k8s'
-                type = 'collection'
-                href = '<RESOURCE-URI>'
+                id = 'k8s',
+                type = 'collection',
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.kubernetes_cluster.KubernetesCluster(
                         id = '1e072e52-2ed3-492f-b6b6-c6b116907527', 

@@ -36,9 +36,9 @@ class TestUsers(unittest.TestCase):
         # model = ionoscloud.models.users.Users()  # noqa: E501
         if include_optional :
             return Users(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.user.User(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

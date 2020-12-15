@@ -36,12 +36,12 @@ class TestIpConsumer(unittest.TestCase):
         # model = ionoscloud.models.ip_consumer.IpConsumer()  # noqa: E501
         if include_optional :
             return IpConsumer(
-                ip = ''
-                mac = ''
-                nic_id = ''
-                server_id = ''
-                server_name = ''
-                datacenter_id = ''
+                ip = '',
+                mac = '',
+                nic_id = '',
+                server_id = '',
+                server_name = '',
+                datacenter_id = '',
                 datacenter_name = ''
             )
         else :

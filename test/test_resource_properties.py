@@ -36,7 +36,7 @@ class TestResourceProperties(unittest.TestCase):
         # model = ionoscloud.models.resource_properties.ResourceProperties()  # noqa: E501
         if include_optional :
             return ResourceProperties(
-                name = ''
+                name = '',
                 sec_auth_protection = True
             )
         else :

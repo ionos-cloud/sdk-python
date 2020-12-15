@@ -36,11 +36,11 @@ class TestRequestProperties(unittest.TestCase):
         # model = ionoscloud.models.request_properties.RequestProperties()  # noqa: E501
         if include_optional :
             return RequestProperties(
-                method = ''
+                method = '',
                 headers = {
                     'key' : ''
-                    }
-                body = ''
+                    },
+                body = '',
                 url = ''
             )
         else :

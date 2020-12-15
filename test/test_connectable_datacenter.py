@@ -36,8 +36,8 @@ class TestConnectableDatacenter(unittest.TestCase):
         # model = ionoscloud.models.connectable_datacenter.ConnectableDatacenter()  # noqa: E501
         if include_optional :
             return ConnectableDatacenter(
-                id = ''
-                name = ''
+                id = '',
+                name = '',
                 location = ''
             )
         else :

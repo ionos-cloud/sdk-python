@@ -36,8 +36,8 @@ class TestResourceReference(unittest.TestCase):
         # model = ionoscloud.models.resource_reference.ResourceReference()  # noqa: E501
         if include_optional :
             return ResourceReference(
-                id = ''
-                type = "resource"
+                id = '',
+                type = "resource",
                 href = '<RESOURCE-URI>'
             )
         else :

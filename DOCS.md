@@ -87,7 +87,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Backup Unit
-        api_response = api_instance.backupunits_delete(backupunit_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BackupUnitApi->backupunits_delete: %s\n" % e)
@@ -348,7 +348,7 @@ Method | HTTP request | Description
 
 
 # **backupunits_delete**
-> object backupunits_delete(backupunit_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Backup Unit
 
@@ -389,7 +389,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Backup Unit
-        api_response = api_instance.backupunits_delete(backupunit_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BackupUnitApi->backupunits_delete: %s\n" % e)
@@ -423,7 +423,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_find_by_id**
-> BackupUnit backupunits_find_by_id(backupunit_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> BackupUnit backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Returns the specified backup Unit
 
@@ -464,7 +464,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Returns the specified backup Unit
-        api_response = api_instance.backupunits_find_by_id(backupunit_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BackupUnitApi->backupunits_find_by_id: %s\n" % e)
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_get**
-> BackupUnits backupunits_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> BackupUnits backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Backup Units 
 
@@ -538,7 +538,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Backup Units 
-        api_response = api_instance.backupunits_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BackupUnitApi->backupunits_get: %s\n" % e)
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_patch**
-> BackupUnit backupunits_patch(backupunit_idbackup_unit_propertiespretty=prettydepth=depthx_contract_number=x_contract_number)
+> BackupUnit backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Backup Unit
 
@@ -613,7 +613,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Backup Unit
-        api_response = api_instance.backupunits_patch(backupunit_idbackup_unit_propertiespretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BackupUnitApi->backupunits_patch: %s\n" % e)
@@ -648,7 +648,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_post**
-> BackupUnit backupunits_post(backup_unitpretty=prettydepth=depthx_contract_number=x_contract_number)
+> BackupUnit backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Backup Unit
 
@@ -689,7 +689,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Backup Unit
-        api_response = api_instance.backupunits_post(backup_unitpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BackupUnitApi->backupunits_post: %s\n" % e)
@@ -723,7 +723,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_put**
-> BackupUnit backupunits_put(backupunit_idbackup_unitpretty=prettydepth=depthx_contract_number=x_contract_number)
+> BackupUnit backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Backup Unit
 
@@ -765,7 +765,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Backup Unit
-        api_response = api_instance.backupunits_put(backupunit_idbackup_unitpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BackupUnitApi->backupunits_put: %s\n" % e)
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **backupunits_ssourl_get**
-> BackupUnitSSO backupunits_ssourl_get(backupunit_idpretty=prettyx_contract_number=x_contract_number)
+> BackupUnitSSO backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
 
 Returns a single signon URL for the specified backup Unit.
 
@@ -840,7 +840,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Returns a single signon URL for the specified backup Unit.
-        api_response = api_instance.backupunits_ssourl_get(backupunit_idpretty=prettyx_contract_number=x_contract_number)
+        api_response = api_instance.backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BackupUnitApi->backupunits_ssourl_get: %s\n" % e)
@@ -886,7 +886,7 @@ Method | HTTP request | Description
 
 
 # **contracts_get**
-> Contract contracts_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Contract contracts_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Contract
 
@@ -926,7 +926,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Contract
-        api_response = api_instance.contracts_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.contracts_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ContractApi->contracts_get: %s\n" % e)
@@ -977,7 +977,7 @@ Method | HTTP request | Description
 
 
 # **datacenters_delete**
-> object datacenters_delete(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_delete(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Data Center
 
@@ -1018,7 +1018,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Data Center
-        api_response = api_instance.datacenters_delete(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_delete(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DataCenterApi->datacenters_delete: %s\n" % e)
@@ -1052,7 +1052,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_find_by_id**
-> Datacenter datacenters_find_by_id(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Datacenter datacenters_find_by_id(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Data Center
 
@@ -1093,7 +1093,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Data Center
-        api_response = api_instance.datacenters_find_by_id(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_find_by_id(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DataCenterApi->datacenters_find_by_id: %s\n" % e)
@@ -1127,7 +1127,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_get**
-> Datacenters datacenters_get(pretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> Datacenters datacenters_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Data Centers under your account
 
@@ -1169,7 +1169,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Data Centers under your account
-        api_response = api_instance.datacenters_get(pretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DataCenterApi->datacenters_get: %s\n" % e)
@@ -1204,7 +1204,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_patch**
-> Datacenter datacenters_patch(datacenter_iddatacenterpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Datacenter datacenters_patch(datacenter_id, datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Data Center
 
@@ -1246,7 +1246,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Data Center
-        api_response = api_instance.datacenters_patch(datacenter_iddatacenterpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_patch(datacenter_id, datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DataCenterApi->datacenters_patch: %s\n" % e)
@@ -1281,7 +1281,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_post**
-> Datacenter datacenters_post(datacenterpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Datacenter datacenters_post(datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Data Center
 
@@ -1322,7 +1322,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Data Center
-        api_response = api_instance.datacenters_post(datacenterpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_post(datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DataCenterApi->datacenters_post: %s\n" % e)
@@ -1356,7 +1356,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_put**
-> Datacenter datacenters_put(datacenter_iddatacenterpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Datacenter datacenters_put(datacenter_id, datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Data Center
 
@@ -1398,7 +1398,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Data Center
-        api_response = api_instance.datacenters_put(datacenter_iddatacenterpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_put(datacenter_id, datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling DataCenterApi->datacenters_put: %s\n" % e)
@@ -1451,7 +1451,7 @@ Method | HTTP request | Description
 
 
 # **ipblocks_delete**
-> object ipblocks_delete(ipblock_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object ipblocks_delete(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete IP Block
 
@@ -1492,7 +1492,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete IP Block
-        api_response = api_instance.ipblocks_delete(ipblock_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_delete(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IPBlocksApi->ipblocks_delete: %s\n" % e)
@@ -1526,7 +1526,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_find_by_id**
-> IpBlock ipblocks_find_by_id(ipblock_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> IpBlock ipblocks_find_by_id(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve an IP Block
 
@@ -1567,7 +1567,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve an IP Block
-        api_response = api_instance.ipblocks_find_by_id(ipblock_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_find_by_id(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IPBlocksApi->ipblocks_find_by_id: %s\n" % e)
@@ -1601,7 +1601,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_get**
-> IpBlocks ipblocks_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> IpBlocks ipblocks_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List IP Blocks 
 
@@ -1641,7 +1641,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List IP Blocks 
-        api_response = api_instance.ipblocks_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IPBlocksApi->ipblocks_get: %s\n" % e)
@@ -1674,7 +1674,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_patch**
-> IpBlock ipblocks_patch(ipblock_idipblockpretty=prettydepth=depthx_contract_number=x_contract_number)
+> IpBlock ipblocks_patch(ipblock_id, ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify IP Block
 
@@ -1716,7 +1716,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify IP Block
-        api_response = api_instance.ipblocks_patch(ipblock_idipblockpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_patch(ipblock_id, ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IPBlocksApi->ipblocks_patch: %s\n" % e)
@@ -1751,7 +1751,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_post**
-> IpBlock ipblocks_post(ipblockpretty=prettydepth=depthx_contract_number=x_contract_number)
+> IpBlock ipblocks_post(ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Reserve IP Block
 
@@ -1792,7 +1792,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Reserve IP Block
-        api_response = api_instance.ipblocks_post(ipblockpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_post(ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IPBlocksApi->ipblocks_post: %s\n" % e)
@@ -1826,7 +1826,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_put**
-> IpBlock ipblocks_put(ipblock_idipblockpretty=prettydepth=depthx_contract_number=x_contract_number)
+> IpBlock ipblocks_put(ipblock_id, ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify IP Block
 
@@ -1868,7 +1868,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify IP Block
-        api_response = api_instance.ipblocks_put(ipblock_idipblockpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_put(ipblock_id, ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IPBlocksApi->ipblocks_put: %s\n" % e)
@@ -1920,7 +1920,7 @@ Method | HTTP request | Description
 
 
 # **images_delete**
-> object images_delete(image_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object images_delete(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete an Image
 
@@ -1961,7 +1961,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete an Image
-        api_response = api_instance.images_delete(image_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.images_delete(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ImageApi->images_delete: %s\n" % e)
@@ -1995,7 +1995,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **images_find_by_id**
-> Image images_find_by_id(image_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Image images_find_by_id(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve an Image
 
@@ -2036,7 +2036,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve an Image
-        api_response = api_instance.images_find_by_id(image_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.images_find_by_id(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ImageApi->images_find_by_id: %s\n" % e)
@@ -2070,7 +2070,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **images_get**
-> Images images_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Images images_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Images 
 
@@ -2110,7 +2110,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Images 
-        api_response = api_instance.images_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.images_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ImageApi->images_get: %s\n" % e)
@@ -2143,7 +2143,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **images_patch**
-> Image images_patch(image_idimagepretty=prettydepth=depthx_contract_number=x_contract_number)
+> Image images_patch(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify an Image
 
@@ -2185,7 +2185,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify an Image
-        api_response = api_instance.images_patch(image_idimagepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.images_patch(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ImageApi->images_patch: %s\n" % e)
@@ -2220,7 +2220,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **images_put**
-> Image images_put(image_idimagepretty=prettydepth=depthx_contract_number=x_contract_number)
+> Image images_put(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify an Image
 
@@ -2262,7 +2262,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify an Image
-        api_response = api_instance.images_put(image_idimagepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.images_put(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ImageApi->images_put: %s\n" % e)
@@ -2327,7 +2327,7 @@ Method | HTTP request | Description
 
 
 # **k8s_delete**
-> object k8s_delete(k8s_cluster_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object k8s_delete(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete Kubernetes Cluster
 
@@ -2368,7 +2368,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete Kubernetes Cluster
-        api_response = api_instance.k8s_delete(k8s_cluster_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_delete(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_delete: %s\n" % e)
@@ -2402,7 +2402,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_find_by_s_cluster_id**
-> KubernetesCluster k8s_find_by_s_cluster_id(k8s_cluster_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesCluster k8s_find_by_s_cluster_id(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve Kubernetes Cluster
 
@@ -2443,7 +2443,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve Kubernetes Cluster
-        api_response = api_instance.k8s_find_by_s_cluster_id(k8s_cluster_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_find_by_s_cluster_id(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_find_by_s_cluster_id: %s\n" % e)
@@ -2477,7 +2477,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_get**
-> KubernetesClusters k8s_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesClusters k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Kubernetes Clusters
 
@@ -2517,7 +2517,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Kubernetes Clusters
-        api_response = api_instance.k8s_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_get: %s\n" % e)
@@ -2550,7 +2550,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_kubeconfig_get**
-> KubernetesConfig k8s_kubeconfig_get(k8s_cluster_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesConfig k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve Kubernetes Configuration File
 
@@ -2591,7 +2591,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve Kubernetes Configuration File
-        api_response = api_instance.k8s_kubeconfig_get(k8s_cluster_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_kubeconfig_get: %s\n" % e)
@@ -2625,7 +2625,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_delete**
-> object k8s_nodepools_delete(k8s_cluster_idnodepool_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete Kubernetes Node Pool
 
@@ -2667,7 +2667,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete Kubernetes Node Pool
-        api_response = api_instance.k8s_nodepools_delete(k8s_cluster_idnodepool_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_delete: %s\n" % e)
@@ -2702,7 +2702,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_find_by_id**
-> KubernetesNodePool k8s_nodepools_find_by_id(k8s_cluster_idnodepool_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesNodePool k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve Kubernetes Node Pool
 
@@ -2744,7 +2744,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve Kubernetes Node Pool
-        api_response = api_instance.k8s_nodepools_find_by_id(k8s_cluster_idnodepool_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_find_by_id: %s\n" % e)
@@ -2779,7 +2779,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_get**
-> KubernetesNodePools k8s_nodepools_get(k8s_cluster_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesNodePools k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Kubernetes Node Pools
 
@@ -2820,7 +2820,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Kubernetes Node Pools
-        api_response = api_instance.k8s_nodepools_get(k8s_cluster_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_get: %s\n" % e)
@@ -2854,7 +2854,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_nodes_delete**
-> object k8s_nodepools_nodes_delete(k8s_cluster_idnodepool_idnode_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete Kubernetes node
 
@@ -2897,7 +2897,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete Kubernetes node
-        api_response = api_instance.k8s_nodepools_nodes_delete(k8s_cluster_idnodepool_idnode_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_nodes_delete: %s\n" % e)
@@ -2933,7 +2933,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_nodes_find_by_id**
-> KubernetesNode k8s_nodepools_nodes_find_by_id(k8s_cluster_idnodepool_idnode_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesNode k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve Kubernetes node
 
@@ -2976,7 +2976,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve Kubernetes node
-        api_response = api_instance.k8s_nodepools_nodes_find_by_id(k8s_cluster_idnodepool_idnode_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_nodes_find_by_id: %s\n" % e)
@@ -3012,7 +3012,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_nodes_get**
-> KubernetesNodes k8s_nodepools_nodes_get(k8s_cluster_idnodepool_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesNodes k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve Kubernetes nodes.
 
@@ -3054,7 +3054,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve Kubernetes nodes.
-        api_response = api_instance.k8s_nodepools_nodes_get(k8s_cluster_idnodepool_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_nodes_get: %s\n" % e)
@@ -3089,7 +3089,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_nodes_replace_post**
-> object k8s_nodepools_nodes_replace_post(k8s_cluster_idnodepool_idnode_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Recreate the Kubernetes node
 
@@ -3132,7 +3132,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Recreate the Kubernetes node
-        api_response = api_instance.k8s_nodepools_nodes_replace_post(k8s_cluster_idnodepool_idnode_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_nodes_replace_post: %s\n" % e)
@@ -3168,7 +3168,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_post**
-> KubernetesNodePool k8s_nodepools_post(k8s_cluster_idkubernetes_node_poolpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesNodePool k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Kubernetes Node Pool
 
@@ -3210,7 +3210,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Kubernetes Node Pool
-        api_response = api_instance.k8s_nodepools_post(k8s_cluster_idkubernetes_node_poolpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_post: %s\n" % e)
@@ -3245,7 +3245,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_nodepools_put**
-> KubernetesNodePoolForPut k8s_nodepools_put(k8s_cluster_idnodepool_idkubernetes_node_poolpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesNodePoolForPut k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify Kubernetes Node Pool
 
@@ -3288,7 +3288,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify Kubernetes Node Pool
-        api_response = api_instance.k8s_nodepools_put(k8s_cluster_idnodepool_idkubernetes_node_poolpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_nodepools_put: %s\n" % e)
@@ -3324,7 +3324,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_post**
-> KubernetesCluster k8s_post(kubernetes_clusterpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesCluster k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create Kubernetes Cluster
 
@@ -3365,7 +3365,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create Kubernetes Cluster
-        api_response = api_instance.k8s_post(kubernetes_clusterpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_post: %s\n" % e)
@@ -3399,7 +3399,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **k8s_put**
-> KubernetesCluster k8s_put(k8s_cluster_idkubernetes_clusterpretty=prettydepth=depthx_contract_number=x_contract_number)
+> KubernetesCluster k8s_put(k8s_cluster_id, kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify Kubernetes Cluster
 
@@ -3441,7 +3441,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify Kubernetes Cluster
-        api_response = api_instance.k8s_put(k8s_cluster_idkubernetes_clusterpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.k8s_put(k8s_cluster_id, kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling KubernetesApi->k8s_put: %s\n" % e)
@@ -3714,7 +3714,7 @@ Method | HTTP request | Description
 
 
 # **datacenters_labels_delete**
-> object datacenters_labels_delete(datacenter_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from Data Center
 
@@ -3756,7 +3756,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Label from Data Center
-        api_response = api_instance.datacenters_labels_delete(datacenter_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_labels_delete: %s\n" % e)
@@ -3791,7 +3791,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_labels_find_by_key**
-> LabelResource datacenters_labels_find_by_key(datacenter_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Label of Data Center
 
@@ -3833,7 +3833,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Label of Data Center
-        api_response = api_instance.datacenters_labels_find_by_key(datacenter_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_labels_find_by_key: %s\n" % e)
@@ -3868,7 +3868,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_labels_get**
-> LabelResources datacenters_labels_get(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> LabelResources datacenters_labels_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List all Data Center Labels
 
@@ -3911,7 +3911,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List all Data Center Labels
-        api_response = api_instance.datacenters_labels_get(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_labels_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_labels_get: %s\n" % e)
@@ -3947,7 +3947,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_labels_post**
-> LabelResource datacenters_labels_post(datacenter_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_labels_post(datacenter_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Add a Label to Data Center
 
@@ -3989,7 +3989,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Add a Label to Data Center
-        api_response = api_instance.datacenters_labels_post(datacenter_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_labels_post(datacenter_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_labels_post: %s\n" % e)
@@ -4024,7 +4024,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_labels_put**
-> LabelResource datacenters_labels_put(datacenter_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_labels_put(datacenter_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Label of Data Center
 
@@ -4067,7 +4067,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Label of Data Center
-        api_response = api_instance.datacenters_labels_put(datacenter_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_labels_put(datacenter_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_labels_put: %s\n" % e)
@@ -4103,7 +4103,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_delete**
-> object datacenters_servers_labels_delete(datacenter_idserver_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from Server
 
@@ -4146,7 +4146,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Label from Server
-        api_response = api_instance.datacenters_servers_labels_delete(datacenter_idserver_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_servers_labels_delete: %s\n" % e)
@@ -4182,7 +4182,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_find_by_key**
-> LabelResource datacenters_servers_labels_find_by_key(datacenter_idserver_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_servers_labels_find_by_key(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Label of Server
 
@@ -4225,7 +4225,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Label of Server
-        api_response = api_instance.datacenters_servers_labels_find_by_key(datacenter_idserver_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_labels_find_by_key(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_servers_labels_find_by_key: %s\n" % e)
@@ -4261,7 +4261,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_get**
-> LabelResources datacenters_servers_labels_get(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> LabelResources datacenters_servers_labels_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List all Server Labels
 
@@ -4305,7 +4305,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List all Server Labels
-        api_response = api_instance.datacenters_servers_labels_get(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_servers_labels_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_servers_labels_get: %s\n" % e)
@@ -4342,7 +4342,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_post**
-> LabelResource datacenters_servers_labels_post(datacenter_idserver_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_servers_labels_post(datacenter_id, server_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Add a Label to Server
 
@@ -4385,7 +4385,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Add a Label to Server
-        api_response = api_instance.datacenters_servers_labels_post(datacenter_idserver_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_labels_post(datacenter_id, server_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_servers_labels_post: %s\n" % e)
@@ -4421,7 +4421,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_labels_put**
-> LabelResource datacenters_servers_labels_put(datacenter_idserver_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Label of Server
 
@@ -4465,7 +4465,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Label of Server
-        api_response = api_instance.datacenters_servers_labels_put(datacenter_idserver_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_servers_labels_put: %s\n" % e)
@@ -4502,7 +4502,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_delete**
-> object datacenters_volumes_labels_delete(datacenter_idvolume_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from Volume
 
@@ -4545,7 +4545,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Label from Volume
-        api_response = api_instance.datacenters_volumes_labels_delete(datacenter_idvolume_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_volumes_labels_delete: %s\n" % e)
@@ -4581,7 +4581,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_find_by_key**
-> LabelResource datacenters_volumes_labels_find_by_key(datacenter_idvolume_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_volumes_labels_find_by_key(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Label of Volume
 
@@ -4624,7 +4624,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Label of Volume
-        api_response = api_instance.datacenters_volumes_labels_find_by_key(datacenter_idvolume_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_labels_find_by_key(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_volumes_labels_find_by_key: %s\n" % e)
@@ -4660,7 +4660,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_get**
-> LabelResources datacenters_volumes_labels_get(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> LabelResources datacenters_volumes_labels_get(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List all Volume Labels
 
@@ -4704,7 +4704,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List all Volume Labels
-        api_response = api_instance.datacenters_volumes_labels_get(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_volumes_labels_get(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_volumes_labels_get: %s\n" % e)
@@ -4741,7 +4741,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_post**
-> LabelResource datacenters_volumes_labels_post(datacenter_idvolume_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_volumes_labels_post(datacenter_id, volume_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Add a Label to Volume
 
@@ -4784,7 +4784,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Add a Label to Volume
-        api_response = api_instance.datacenters_volumes_labels_post(datacenter_idvolume_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_labels_post(datacenter_id, volume_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_volumes_labels_post: %s\n" % e)
@@ -4820,7 +4820,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_labels_put**
-> LabelResource datacenters_volumes_labels_put(datacenter_idvolume_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource datacenters_volumes_labels_put(datacenter_id, volume_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Label of Volume
 
@@ -4864,7 +4864,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Label of Volume
-        api_response = api_instance.datacenters_volumes_labels_put(datacenter_idvolume_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_labels_put(datacenter_id, volume_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->datacenters_volumes_labels_put: %s\n" % e)
@@ -4901,7 +4901,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_delete**
-> object ipblocks_labels_delete(ipblock_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> object ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from IP Block
 
@@ -4943,7 +4943,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Label from IP Block
-        api_response = api_instance.ipblocks_labels_delete(ipblock_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->ipblocks_labels_delete: %s\n" % e)
@@ -4978,7 +4978,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_find_by_key**
-> LabelResource ipblocks_labels_find_by_key(ipblock_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource ipblocks_labels_find_by_key(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Label of IP Block
 
@@ -5020,7 +5020,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Label of IP Block
-        api_response = api_instance.ipblocks_labels_find_by_key(ipblock_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_labels_find_by_key(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->ipblocks_labels_find_by_key: %s\n" % e)
@@ -5055,7 +5055,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_get**
-> LabelResources ipblocks_labels_get(ipblock_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResources ipblocks_labels_get(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List all Ip Block Labels
 
@@ -5096,7 +5096,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List all Ip Block Labels
-        api_response = api_instance.ipblocks_labels_get(ipblock_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_labels_get(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->ipblocks_labels_get: %s\n" % e)
@@ -5130,7 +5130,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_post**
-> LabelResource ipblocks_labels_post(ipblock_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource ipblocks_labels_post(ipblock_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Add a Label to IP Block
 
@@ -5172,7 +5172,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Add a Label to IP Block
-        api_response = api_instance.ipblocks_labels_post(ipblock_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_labels_post(ipblock_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->ipblocks_labels_post: %s\n" % e)
@@ -5207,7 +5207,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **ipblocks_labels_put**
-> LabelResource ipblocks_labels_put(ipblock_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource ipblocks_labels_put(ipblock_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Label of IP Block
 
@@ -5250,7 +5250,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Label of IP Block
-        api_response = api_instance.ipblocks_labels_put(ipblock_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.ipblocks_labels_put(ipblock_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->ipblocks_labels_put: %s\n" % e)
@@ -5286,7 +5286,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **labels_find_by_urn**
-> Label labels_find_by_urn(labelurnpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Label labels_find_by_urn(labelurn, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Returns the label by its URN.
 
@@ -5327,7 +5327,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Returns the label by its URN.
-        api_response = api_instance.labels_find_by_urn(labelurnpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.labels_find_by_urn(labelurn, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->labels_find_by_urn: %s\n" % e)
@@ -5361,7 +5361,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **labels_get**
-> Labels labels_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Labels labels_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Labels 
 
@@ -5401,7 +5401,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Labels 
-        api_response = api_instance.labels_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.labels_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->labels_get: %s\n" % e)
@@ -5434,7 +5434,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_delete**
-> object snapshots_labels_delete(snapshot_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> object snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from Snapshot
 
@@ -5476,7 +5476,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Label from Snapshot
-        api_response = api_instance.snapshots_labels_delete(snapshot_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->snapshots_labels_delete: %s\n" % e)
@@ -5511,7 +5511,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_find_by_key**
-> LabelResource snapshots_labels_find_by_key(snapshot_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource snapshots_labels_find_by_key(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Label of Snapshot
 
@@ -5553,7 +5553,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Label of Snapshot
-        api_response = api_instance.snapshots_labels_find_by_key(snapshot_idkeypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_labels_find_by_key(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->snapshots_labels_find_by_key: %s\n" % e)
@@ -5588,7 +5588,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_get**
-> LabelResources snapshots_labels_get(snapshot_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResources snapshots_labels_get(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List all Snapshot Labels
 
@@ -5629,7 +5629,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List all Snapshot Labels
-        api_response = api_instance.snapshots_labels_get(snapshot_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_labels_get(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->snapshots_labels_get: %s\n" % e)
@@ -5663,7 +5663,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_post**
-> LabelResource snapshots_labels_post(snapshot_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource snapshots_labels_post(snapshot_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Add a Label to Snapshot
 
@@ -5705,7 +5705,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Add a Label to Snapshot
-        api_response = api_instance.snapshots_labels_post(snapshot_idlabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_labels_post(snapshot_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->snapshots_labels_post: %s\n" % e)
@@ -5740,7 +5740,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_labels_put**
-> LabelResource snapshots_labels_put(snapshot_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LabelResource snapshots_labels_put(snapshot_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Label of Snapshot
 
@@ -5783,7 +5783,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Label of Snapshot
-        api_response = api_instance.snapshots_labels_put(snapshot_idkeylabelpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_labels_put(snapshot_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LabelApi->snapshots_labels_put: %s\n" % e)
@@ -5840,7 +5840,7 @@ Method | HTTP request | Description
 
 
 # **datacenters_lans_delete**
-> object datacenters_lans_delete(datacenter_idlan_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_lans_delete(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Lan.
 
@@ -5882,7 +5882,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Lan.
-        api_response = api_instance.datacenters_lans_delete(datacenter_idlan_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_lans_delete(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_delete: %s\n" % e)
@@ -5917,7 +5917,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_find_by_id**
-> Lan datacenters_lans_find_by_id(datacenter_idlan_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Lan datacenters_lans_find_by_id(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Lan
 
@@ -5959,7 +5959,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Lan
-        api_response = api_instance.datacenters_lans_find_by_id(datacenter_idlan_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_lans_find_by_id(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_find_by_id: %s\n" % e)
@@ -5994,7 +5994,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_get**
-> Lans datacenters_lans_get(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> Lans datacenters_lans_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Lans
 
@@ -6037,7 +6037,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Lans
-        api_response = api_instance.datacenters_lans_get(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_lans_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_get: %s\n" % e)
@@ -6073,7 +6073,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_nics_find_by_id**
-> Nic datacenters_lans_nics_find_by_id(datacenter_idlan_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Nic datacenters_lans_nics_find_by_id(datacenter_id, lan_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a nic attached to lan
 
@@ -6116,7 +6116,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a nic attached to lan
-        api_response = api_instance.datacenters_lans_nics_find_by_id(datacenter_idlan_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_lans_nics_find_by_id(datacenter_id, lan_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_nics_find_by_id: %s\n" % e)
@@ -6152,7 +6152,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_nics_get**
-> LanNics datacenters_lans_nics_get(datacenter_idlan_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> LanNics datacenters_lans_nics_get(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Lan Members 
 
@@ -6196,7 +6196,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Lan Members 
-        api_response = api_instance.datacenters_lans_nics_get(datacenter_idlan_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_lans_nics_get(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_nics_get: %s\n" % e)
@@ -6233,7 +6233,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_nics_post**
-> Nic datacenters_lans_nics_post(datacenter_idlan_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Nic datacenters_lans_nics_post(datacenter_id, lan_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Attach a nic
 
@@ -6276,7 +6276,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Attach a nic
-        api_response = api_instance.datacenters_lans_nics_post(datacenter_idlan_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_lans_nics_post(datacenter_id, lan_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_nics_post: %s\n" % e)
@@ -6312,7 +6312,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_patch**
-> Lan datacenters_lans_patch(datacenter_idlan_idlanpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Lan datacenters_lans_patch(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Lan
 
@@ -6355,7 +6355,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Lan
-        api_response = api_instance.datacenters_lans_patch(datacenter_idlan_idlanpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_lans_patch(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_patch: %s\n" % e)
@@ -6391,7 +6391,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_post**
-> LanPost datacenters_lans_post(datacenter_idlanpretty=prettydepth=depthx_contract_number=x_contract_number)
+> LanPost datacenters_lans_post(datacenter_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Lan
 
@@ -6433,7 +6433,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Lan
-        api_response = api_instance.datacenters_lans_post(datacenter_idlanpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_lans_post(datacenter_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_post: %s\n" % e)
@@ -6468,7 +6468,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_lans_put**
-> Lan datacenters_lans_put(datacenter_idlan_idlanpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Lan datacenters_lans_put(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Lan
 
@@ -6511,7 +6511,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Lan
-        api_response = api_instance.datacenters_lans_put(datacenter_idlan_idlanpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_lans_put(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LanApi->datacenters_lans_put: %s\n" % e)
@@ -6569,7 +6569,7 @@ Method | HTTP request | Description
 
 
 # **datacenters_loadbalancers_balancednics_delete**
-> object datacenters_loadbalancers_balancednics_delete(datacenter_idloadbalancer_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_loadbalancers_balancednics_delete(datacenter_id, loadbalancer_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Detach a nic from loadbalancer
 
@@ -6612,7 +6612,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Detach a nic from loadbalancer
-        api_response = api_instance.datacenters_loadbalancers_balancednics_delete(datacenter_idloadbalancer_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_loadbalancers_balancednics_delete(datacenter_id, loadbalancer_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_balancednics_delete: %s\n" % e)
@@ -6648,7 +6648,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_balancednics_find_by_nic_id**
-> Nic datacenters_loadbalancers_balancednics_find_by_nic_id(datacenter_idloadbalancer_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Nic datacenters_loadbalancers_balancednics_find_by_nic_id(datacenter_id, loadbalancer_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a nic attached to Load Balancer
 
@@ -6691,7 +6691,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a nic attached to Load Balancer
-        api_response = api_instance.datacenters_loadbalancers_balancednics_find_by_nic_id(datacenter_idloadbalancer_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_loadbalancers_balancednics_find_by_nic_id(datacenter_id, loadbalancer_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_balancednics_find_by_nic_id: %s\n" % e)
@@ -6727,7 +6727,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_balancednics_get**
-> BalancedNics datacenters_loadbalancers_balancednics_get(datacenter_idloadbalancer_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> BalancedNics datacenters_loadbalancers_balancednics_get(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Load Balancer Members 
 
@@ -6771,7 +6771,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Load Balancer Members 
-        api_response = api_instance.datacenters_loadbalancers_balancednics_get(datacenter_idloadbalancer_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_loadbalancers_balancednics_get(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_balancednics_get: %s\n" % e)
@@ -6808,7 +6808,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_balancednics_post**
-> Nic datacenters_loadbalancers_balancednics_post(datacenter_idloadbalancer_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Nic datacenters_loadbalancers_balancednics_post(datacenter_id, loadbalancer_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Attach a nic to Load Balancer
 
@@ -6851,7 +6851,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Attach a nic to Load Balancer
-        api_response = api_instance.datacenters_loadbalancers_balancednics_post(datacenter_idloadbalancer_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_loadbalancers_balancednics_post(datacenter_id, loadbalancer_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_balancednics_post: %s\n" % e)
@@ -6887,7 +6887,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_delete**
-> object datacenters_loadbalancers_delete(datacenter_idloadbalancer_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_loadbalancers_delete(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Loadbalancer.
 
@@ -6929,7 +6929,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Loadbalancer.
-        api_response = api_instance.datacenters_loadbalancers_delete(datacenter_idloadbalancer_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_loadbalancers_delete(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_delete: %s\n" % e)
@@ -6964,7 +6964,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_find_by_id**
-> Loadbalancer datacenters_loadbalancers_find_by_id(datacenter_idloadbalancer_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Loadbalancer datacenters_loadbalancers_find_by_id(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a loadbalancer
 
@@ -7006,7 +7006,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a loadbalancer
-        api_response = api_instance.datacenters_loadbalancers_find_by_id(datacenter_idloadbalancer_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_loadbalancers_find_by_id(datacenter_id, loadbalancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_find_by_id: %s\n" % e)
@@ -7041,7 +7041,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_get**
-> Loadbalancers datacenters_loadbalancers_get(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> Loadbalancers datacenters_loadbalancers_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Load Balancers
 
@@ -7084,7 +7084,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Load Balancers
-        api_response = api_instance.datacenters_loadbalancers_get(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_loadbalancers_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_get: %s\n" % e)
@@ -7120,7 +7120,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_patch**
-> Loadbalancer datacenters_loadbalancers_patch(datacenter_idloadbalancer_idloadbalancerpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Loadbalancer datacenters_loadbalancers_patch(datacenter_id, loadbalancer_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Loadbalancer
 
@@ -7163,7 +7163,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Loadbalancer
-        api_response = api_instance.datacenters_loadbalancers_patch(datacenter_idloadbalancer_idloadbalancerpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_loadbalancers_patch(datacenter_id, loadbalancer_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_patch: %s\n" % e)
@@ -7199,7 +7199,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_post**
-> Loadbalancer datacenters_loadbalancers_post(datacenter_idloadbalancerpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Loadbalancer datacenters_loadbalancers_post(datacenter_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Load Balancer
 
@@ -7241,7 +7241,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Load Balancer
-        api_response = api_instance.datacenters_loadbalancers_post(datacenter_idloadbalancerpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_loadbalancers_post(datacenter_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_post: %s\n" % e)
@@ -7276,7 +7276,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_loadbalancers_put**
-> Loadbalancer datacenters_loadbalancers_put(datacenter_idloadbalancer_idloadbalancerpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Loadbalancer datacenters_loadbalancers_put(datacenter_id, loadbalancer_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Load Balancer
 
@@ -7319,7 +7319,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Load Balancer
-        api_response = api_instance.datacenters_loadbalancers_put(datacenter_idloadbalancer_idloadbalancerpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_loadbalancers_put(datacenter_id, loadbalancer_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LoadBalancerApi->datacenters_loadbalancers_put: %s\n" % e)
@@ -7370,7 +7370,7 @@ Method | HTTP request | Description
 
 
 # **locations_find_by_region_id**
-> Locations locations_find_by_region_id(region_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Locations locations_find_by_region_id(region_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Locations within a region
 
@@ -7411,7 +7411,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Locations within a region
-        api_response = api_instance.locations_find_by_region_id(region_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.locations_find_by_region_id(region_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocationApi->locations_find_by_region_id: %s\n" % e)
@@ -7445,7 +7445,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **locations_find_by_region_id_and_id**
-> Location locations_find_by_region_id_and_id(region_idlocation_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Location locations_find_by_region_id_and_id(region_id, location_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Location
 
@@ -7487,7 +7487,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Location
-        api_response = api_instance.locations_find_by_region_id_and_id(region_idlocation_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.locations_find_by_region_id_and_id(region_id, location_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocationApi->locations_find_by_region_id_and_id: %s\n" % e)
@@ -7522,7 +7522,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **locations_get**
-> Locations locations_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Locations locations_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Locations
 
@@ -7562,7 +7562,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Locations
-        api_response = api_instance.locations_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.locations_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling LocationApi->locations_get: %s\n" % e)
@@ -7619,7 +7619,7 @@ Method | HTTP request | Description
 
 
 # **datacenters_servers_nics_delete**
-> object datacenters_servers_nics_delete(datacenter_idserver_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Nic
 
@@ -7662,7 +7662,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Nic
-        api_response = api_instance.datacenters_servers_nics_delete(datacenter_idserver_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_delete: %s\n" % e)
@@ -7698,7 +7698,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_find_by_id**
-> Nic datacenters_servers_nics_find_by_id(datacenter_idserver_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Nic datacenters_servers_nics_find_by_id(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Nic
 
@@ -7741,7 +7741,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Nic
-        api_response = api_instance.datacenters_servers_nics_find_by_id(datacenter_idserver_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_find_by_id(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_find_by_id: %s\n" % e)
@@ -7777,7 +7777,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_delete**
-> object datacenters_servers_nics_firewallrules_delete(datacenter_idserver_idnic_idfirewallrule_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_nics_firewallrules_delete(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Firewall Rule
 
@@ -7821,7 +7821,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Firewall Rule
-        api_response = api_instance.datacenters_servers_nics_firewallrules_delete(datacenter_idserver_idnic_idfirewallrule_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_firewallrules_delete(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_delete: %s\n" % e)
@@ -7858,7 +7858,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_find_by_id**
-> FirewallRule datacenters_servers_nics_firewallrules_find_by_id(datacenter_idserver_idnic_idfirewallrule_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> FirewallRule datacenters_servers_nics_firewallrules_find_by_id(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Firewall Rule
 
@@ -7902,7 +7902,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Firewall Rule
-        api_response = api_instance.datacenters_servers_nics_firewallrules_find_by_id(datacenter_idserver_idnic_idfirewallrule_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_firewallrules_find_by_id(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_find_by_id: %s\n" % e)
@@ -7939,7 +7939,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_get**
-> FirewallRules datacenters_servers_nics_firewallrules_get(datacenter_idserver_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> FirewallRules datacenters_servers_nics_firewallrules_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Firewall Rules 
 
@@ -7984,7 +7984,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Firewall Rules 
-        api_response = api_instance.datacenters_servers_nics_firewallrules_get(datacenter_idserver_idnic_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_servers_nics_firewallrules_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_get: %s\n" % e)
@@ -8022,7 +8022,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_patch**
-> FirewallRule datacenters_servers_nics_firewallrules_patch(datacenter_idserver_idnic_idfirewallrule_idfirewallrulepretty=prettydepth=depthx_contract_number=x_contract_number)
+> FirewallRule datacenters_servers_nics_firewallrules_patch(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Firewall Rule
 
@@ -8067,7 +8067,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Firewall Rule
-        api_response = api_instance.datacenters_servers_nics_firewallrules_patch(datacenter_idserver_idnic_idfirewallrule_idfirewallrulepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_firewallrules_patch(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_patch: %s\n" % e)
@@ -8105,7 +8105,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_post**
-> FirewallRule datacenters_servers_nics_firewallrules_post(datacenter_idserver_idnic_idfirewallrulepretty=prettydepth=depthx_contract_number=x_contract_number)
+> FirewallRule datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Firewall Rule
 
@@ -8149,7 +8149,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Firewall Rule
-        api_response = api_instance.datacenters_servers_nics_firewallrules_post(datacenter_idserver_idnic_idfirewallrulepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_post: %s\n" % e)
@@ -8186,7 +8186,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_firewallrules_put**
-> FirewallRule datacenters_servers_nics_firewallrules_put(datacenter_idserver_idnic_idfirewallrule_idfirewallrulepretty=prettydepth=depthx_contract_number=x_contract_number)
+> FirewallRule datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Firewall Rule
 
@@ -8231,7 +8231,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Firewall Rule
-        api_response = api_instance.datacenters_servers_nics_firewallrules_put(datacenter_idserver_idnic_idfirewallrule_idfirewallrulepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_firewallrules_put: %s\n" % e)
@@ -8269,7 +8269,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_get**
-> Nics datacenters_servers_nics_get(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> Nics datacenters_servers_nics_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Nics 
 
@@ -8313,7 +8313,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Nics 
-        api_response = api_instance.datacenters_servers_nics_get(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_servers_nics_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_get: %s\n" % e)
@@ -8350,7 +8350,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_patch**
-> Nic datacenters_servers_nics_patch(datacenter_idserver_idnic_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Nic datacenters_servers_nics_patch(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Nic
 
@@ -8394,7 +8394,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Nic
-        api_response = api_instance.datacenters_servers_nics_patch(datacenter_idserver_idnic_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_patch(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_patch: %s\n" % e)
@@ -8431,7 +8431,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_post**
-> Nic datacenters_servers_nics_post(datacenter_idserver_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Nic datacenters_servers_nics_post(datacenter_id, server_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Nic
 
@@ -8474,7 +8474,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Nic
-        api_response = api_instance.datacenters_servers_nics_post(datacenter_idserver_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_post(datacenter_id, server_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_post: %s\n" % e)
@@ -8510,7 +8510,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_nics_put**
-> Nic datacenters_servers_nics_put(datacenter_idserver_idnic_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Nic datacenters_servers_nics_put(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Nic
 
@@ -8554,7 +8554,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Nic
-        api_response = api_instance.datacenters_servers_nics_put(datacenter_idserver_idnic_idnicpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_nics_put(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling NicApi->datacenters_servers_nics_put: %s\n" % e)
@@ -8608,7 +8608,7 @@ Method | HTTP request | Description
 
 
 # **pccs_delete**
-> object pccs_delete(pcc_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object pccs_delete(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Private Cross-Connect
 
@@ -8649,7 +8649,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Private Cross-Connect
-        api_response = api_instance.pccs_delete(pcc_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.pccs_delete(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling PrivateCrossConnectApi->pccs_delete: %s\n" % e)
@@ -8683,7 +8683,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **pccs_find_by_id**
-> PrivateCrossConnect pccs_find_by_id(pcc_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> PrivateCrossConnect pccs_find_by_id(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Private Cross-Connect
 
@@ -8724,7 +8724,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Private Cross-Connect
-        api_response = api_instance.pccs_find_by_id(pcc_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.pccs_find_by_id(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling PrivateCrossConnectApi->pccs_find_by_id: %s\n" % e)
@@ -8758,7 +8758,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **pccs_get**
-> PrivateCrossConnects pccs_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> PrivateCrossConnects pccs_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Private Cross-Connects 
 
@@ -8798,7 +8798,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Private Cross-Connects 
-        api_response = api_instance.pccs_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.pccs_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling PrivateCrossConnectApi->pccs_get: %s\n" % e)
@@ -8831,7 +8831,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **pccs_patch**
-> PrivateCrossConnect pccs_patch(pcc_idpccpretty=prettydepth=depthx_contract_number=x_contract_number)
+> PrivateCrossConnect pccs_patch(pcc_id, pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a private cross-connect
 
@@ -8873,7 +8873,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a private cross-connect
-        api_response = api_instance.pccs_patch(pcc_idpccpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.pccs_patch(pcc_id, pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling PrivateCrossConnectApi->pccs_patch: %s\n" % e)
@@ -8908,7 +8908,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **pccs_post**
-> PrivateCrossConnect pccs_post(pccpretty=prettydepth=depthx_contract_number=x_contract_number)
+> PrivateCrossConnect pccs_post(pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Private Cross-Connect
 
@@ -8949,7 +8949,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Private Cross-Connect
-        api_response = api_instance.pccs_post(pccpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.pccs_post(pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling PrivateCrossConnectApi->pccs_post: %s\n" % e)
@@ -8998,7 +8998,7 @@ Method | HTTP request | Description
 
 
 # **requests_find_by_id**
-> Request requests_find_by_id(request_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Request requests_find_by_id(request_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Request
 
@@ -9039,7 +9039,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Request
-        api_response = api_instance.requests_find_by_id(request_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.requests_find_by_id(request_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RequestApi->requests_find_by_id: %s\n" % e)
@@ -9073,7 +9073,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **requests_get**
-> Requests requests_get(pretty=prettydepth=depthx_contract_number=x_contract_numberfilter_status=filter_statusfilter_created_after=filter_created_afterfilter_created_before=filter_created_beforeoffset=offsetlimit=limit)
+> Requests requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, offset=offset, limit=limit)
 
 List Requests
 
@@ -9118,7 +9118,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Requests
-        api_response = api_instance.requests_get(pretty=prettydepth=depthx_contract_number=x_contract_numberfilter_status=filter_statusfilter_created_after=filter_created_afterfilter_created_before=filter_created_beforeoffset=offsetlimit=limit)
+        api_response = api_instance.requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RequestApi->requests_get: %s\n" % e)
@@ -9156,7 +9156,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **requests_status_get**
-> RequestStatus requests_status_get(request_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> RequestStatus requests_status_get(request_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve Request Status
 
@@ -9197,7 +9197,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve Request Status
-        api_response = api_instance.requests_status_get(request_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.requests_status_get(request_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling RequestApi->requests_status_get: %s\n" % e)
@@ -9261,7 +9261,7 @@ Method | HTTP request | Description
 
 
 # **datacenters_servers_cdroms_delete**
-> object datacenters_servers_cdroms_delete(datacenter_idserver_idcdrom_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_cdroms_delete(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Detach a CD-ROM
 
@@ -9304,7 +9304,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Detach a CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_delete(datacenter_idserver_idcdrom_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_cdroms_delete(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_cdroms_delete: %s\n" % e)
@@ -9340,7 +9340,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_cdroms_find_by_id**
-> Image datacenters_servers_cdroms_find_by_id(datacenter_idserver_idcdrom_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Image datacenters_servers_cdroms_find_by_id(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve an attached CD-ROM
 
@@ -9383,7 +9383,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve an attached CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_find_by_id(datacenter_idserver_idcdrom_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_cdroms_find_by_id(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_cdroms_find_by_id: %s\n" % e)
@@ -9419,7 +9419,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_cdroms_get**
-> Cdroms datacenters_servers_cdroms_get(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> Cdroms datacenters_servers_cdroms_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List attached CD-ROMs 
 
@@ -9463,7 +9463,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List attached CD-ROMs 
-        api_response = api_instance.datacenters_servers_cdroms_get(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_servers_cdroms_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_cdroms_get: %s\n" % e)
@@ -9500,7 +9500,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_cdroms_post**
-> Image datacenters_servers_cdroms_post(datacenter_idserver_idcdrompretty=prettydepth=depthx_contract_number=x_contract_number)
+> Image datacenters_servers_cdroms_post(datacenter_id, server_id, cdrom, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Attach a CD-ROM
 
@@ -9543,7 +9543,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Attach a CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_post(datacenter_idserver_idcdrompretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_cdroms_post(datacenter_id, server_id, cdrom, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_cdroms_post: %s\n" % e)
@@ -9579,7 +9579,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_delete**
-> object datacenters_servers_delete(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_delete(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Server
 
@@ -9621,7 +9621,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Server
-        api_response = api_instance.datacenters_servers_delete(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_delete(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_delete: %s\n" % e)
@@ -9656,7 +9656,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_find_by_id**
-> Server datacenters_servers_find_by_id(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Server datacenters_servers_find_by_id(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Server
 
@@ -9698,7 +9698,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Server
-        api_response = api_instance.datacenters_servers_find_by_id(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_find_by_id(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_find_by_id: %s\n" % e)
@@ -9733,7 +9733,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_get**
-> Servers datacenters_servers_get(datacenter_idpretty=prettydepth=depthupgrade_needed=upgrade_neededx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> Servers datacenters_servers_get(datacenter_id, pretty=pretty, depth=depth, upgrade_needed=upgrade_needed, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Servers 
 
@@ -9777,7 +9777,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Servers 
-        api_response = api_instance.datacenters_servers_get(datacenter_idpretty=prettydepth=depthupgrade_needed=upgrade_neededx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_servers_get(datacenter_id, pretty=pretty, depth=depth, upgrade_needed=upgrade_needed, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_get: %s\n" % e)
@@ -9814,7 +9814,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_patch**
-> Server datacenters_servers_patch(datacenter_idserver_idserverpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Server datacenters_servers_patch(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Server
 
@@ -9857,7 +9857,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Server
-        api_response = api_instance.datacenters_servers_patch(datacenter_idserver_idserverpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_patch(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_patch: %s\n" % e)
@@ -9893,7 +9893,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_post**
-> Server datacenters_servers_post(datacenter_idserverpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Server datacenters_servers_post(datacenter_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Server
 
@@ -9935,7 +9935,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Server
-        api_response = api_instance.datacenters_servers_post(datacenter_idserverpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_post(datacenter_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_post: %s\n" % e)
@@ -9970,7 +9970,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_put**
-> Server datacenters_servers_put(datacenter_idserver_idserverpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Server datacenters_servers_put(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Server
 
@@ -10013,7 +10013,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Server
-        api_response = api_instance.datacenters_servers_put(datacenter_idserver_idserverpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_put(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_put: %s\n" % e)
@@ -10049,7 +10049,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_reboot_post**
-> object datacenters_servers_reboot_post(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_reboot_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Reboot a Server
 
@@ -10091,7 +10091,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Reboot a Server
-        api_response = api_instance.datacenters_servers_reboot_post(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_reboot_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_reboot_post: %s\n" % e)
@@ -10126,7 +10126,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_start_post**
-> object datacenters_servers_start_post(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_start_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Start a Server
 
@@ -10168,7 +10168,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Start a Server
-        api_response = api_instance.datacenters_servers_start_post(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_start_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_start_post: %s\n" % e)
@@ -10203,7 +10203,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_stop_post**
-> object datacenters_servers_stop_post(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_stop_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Stop a Server
 
@@ -10245,7 +10245,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Stop a Server
-        api_response = api_instance.datacenters_servers_stop_post(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_stop_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_stop_post: %s\n" % e)
@@ -10280,7 +10280,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_upgrade_post**
-> object datacenters_servers_upgrade_post(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_upgrade_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Upgrade a Server
 
@@ -10322,7 +10322,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Upgrade a Server
-        api_response = api_instance.datacenters_servers_upgrade_post(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_upgrade_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_upgrade_post: %s\n" % e)
@@ -10357,7 +10357,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_volumes_delete**
-> object datacenters_servers_volumes_delete(datacenter_idserver_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_servers_volumes_delete(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Detach a volume
 
@@ -10400,7 +10400,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Detach a volume
-        api_response = api_instance.datacenters_servers_volumes_delete(datacenter_idserver_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_volumes_delete(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_volumes_delete: %s\n" % e)
@@ -10436,7 +10436,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_volumes_find_by_id**
-> Volume datacenters_servers_volumes_find_by_id(datacenter_idserver_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Volume datacenters_servers_volumes_find_by_id(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve an attached volume
 
@@ -10479,7 +10479,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve an attached volume
-        api_response = api_instance.datacenters_servers_volumes_find_by_id(datacenter_idserver_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_volumes_find_by_id(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_volumes_find_by_id: %s\n" % e)
@@ -10515,7 +10515,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_volumes_get**
-> AttachedVolumes datacenters_servers_volumes_get(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> AttachedVolumes datacenters_servers_volumes_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Attached Volumes
 
@@ -10559,7 +10559,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Attached Volumes
-        api_response = api_instance.datacenters_servers_volumes_get(datacenter_idserver_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_servers_volumes_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_volumes_get: %s\n" % e)
@@ -10596,7 +10596,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_servers_volumes_post**
-> Volume datacenters_servers_volumes_post(datacenter_idserver_idvolumepretty=prettydepth=depthx_contract_number=x_contract_number)
+> Volume datacenters_servers_volumes_post(datacenter_id, server_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Attach a volume
 
@@ -10639,7 +10639,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Attach a volume
-        api_response = api_instance.datacenters_servers_volumes_post(datacenter_idserver_idvolumepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_servers_volumes_post(datacenter_id, server_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling ServerApi->datacenters_servers_volumes_post: %s\n" % e)
@@ -10692,7 +10692,7 @@ Method | HTTP request | Description
 
 
 # **snapshots_delete**
-> object snapshots_delete(snapshot_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object snapshots_delete(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Snapshot
 
@@ -10733,7 +10733,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Snapshot
-        api_response = api_instance.snapshots_delete(snapshot_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_delete(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SnapshotApi->snapshots_delete: %s\n" % e)
@@ -10767,7 +10767,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_find_by_id**
-> Snapshot snapshots_find_by_id(snapshot_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Snapshot snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Snapshot by its uuid.
 
@@ -10808,7 +10808,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Snapshot by its uuid.
-        api_response = api_instance.snapshots_find_by_id(snapshot_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SnapshotApi->snapshots_find_by_id: %s\n" % e)
@@ -10842,7 +10842,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_get**
-> Snapshots snapshots_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Snapshots snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Snapshots 
 
@@ -10882,7 +10882,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Snapshots 
-        api_response = api_instance.snapshots_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SnapshotApi->snapshots_get: %s\n" % e)
@@ -10915,7 +10915,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_patch**
-> Snapshot snapshots_patch(snapshot_idsnapshotpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Snapshot snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Snapshot
 
@@ -10957,7 +10957,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Snapshot
-        api_response = api_instance.snapshots_patch(snapshot_idsnapshotpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SnapshotApi->snapshots_patch: %s\n" % e)
@@ -10992,7 +10992,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **snapshots_put**
-> Snapshot snapshots_put(snapshot_idsnapshotpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Snapshot snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Snapshot
 
@@ -11034,7 +11034,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Snapshot
-        api_response = api_instance.snapshots_put(snapshot_idsnapshotpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling SnapshotApi->snapshots_put: %s\n" % e)
@@ -11111,7 +11111,7 @@ Method | HTTP request | Description
 
 
 # **um_groups_delete**
-> object um_groups_delete(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object um_groups_delete(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Group
 
@@ -11152,7 +11152,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Group
-        api_response = api_instance.um_groups_delete(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_delete(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_delete: %s\n" % e)
@@ -11186,7 +11186,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_find_by_id**
-> Group um_groups_find_by_id(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Group um_groups_find_by_id(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Group
 
@@ -11227,7 +11227,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Group
-        api_response = api_instance.um_groups_find_by_id(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_find_by_id(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_find_by_id: %s\n" % e)
@@ -11261,7 +11261,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_get**
-> Groups um_groups_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Groups um_groups_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List All Groups.
 
@@ -11301,7 +11301,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List All Groups.
-        api_response = api_instance.um_groups_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_get: %s\n" % e)
@@ -11334,7 +11334,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_post**
-> Group um_groups_post(grouppretty=prettydepth=depthx_contract_number=x_contract_number)
+> Group um_groups_post(group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Group
 
@@ -11375,7 +11375,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Group
-        api_response = api_instance.um_groups_post(grouppretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_post(group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_post: %s\n" % e)
@@ -11409,7 +11409,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_put**
-> Group um_groups_put(group_idgrouppretty=prettydepth=depthx_contract_number=x_contract_number)
+> Group um_groups_put(group_id, group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a group
 
@@ -11451,7 +11451,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a group
-        api_response = api_instance.um_groups_put(group_idgrouppretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_put(group_id, group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_put: %s\n" % e)
@@ -11486,7 +11486,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_resources_get**
-> ResourceGroups um_groups_resources_get(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> ResourceGroups um_groups_resources_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve resources assigned to a group
 
@@ -11525,7 +11525,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve resources assigned to a group
-        api_response = api_instance.um_groups_resources_get(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_resources_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_resources_get: %s\n" % e)
@@ -11559,7 +11559,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_delete**
-> object um_groups_shares_delete(group_idresource_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object um_groups_shares_delete(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Remove a resource from a group
 
@@ -11601,7 +11601,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Remove a resource from a group
-        api_response = api_instance.um_groups_shares_delete(group_idresource_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_shares_delete(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_shares_delete: %s\n" % e)
@@ -11636,7 +11636,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_find_by_resource_id**
-> GroupShare um_groups_shares_find_by_resource_id(group_idresource_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> GroupShare um_groups_shares_find_by_resource_id(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a group share
 
@@ -11678,7 +11678,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a group share
-        api_response = api_instance.um_groups_shares_find_by_resource_id(group_idresource_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_shares_find_by_resource_id(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_shares_find_by_resource_id: %s\n" % e)
@@ -11713,7 +11713,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_get**
-> GroupShares um_groups_shares_get(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> GroupShares um_groups_shares_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Group Shares 
 
@@ -11754,7 +11754,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Group Shares 
-        api_response = api_instance.um_groups_shares_get(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_shares_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_shares_get: %s\n" % e)
@@ -11788,7 +11788,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_post**
-> GroupShare um_groups_shares_post(group_idresource_idresourcepretty=prettydepth=depthx_contract_number=x_contract_number)
+> GroupShare um_groups_shares_post(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Add a resource to a group
 
@@ -11831,7 +11831,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Add a resource to a group
-        api_response = api_instance.um_groups_shares_post(group_idresource_idresourcepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_shares_post(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_shares_post: %s\n" % e)
@@ -11867,7 +11867,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_shares_put**
-> GroupShare um_groups_shares_put(group_idresource_idresourcepretty=prettydepth=depthx_contract_number=x_contract_number)
+> GroupShare um_groups_shares_put(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify resource permissions of a group
 
@@ -11910,7 +11910,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify resource permissions of a group
-        api_response = api_instance.um_groups_shares_put(group_idresource_idresourcepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_shares_put(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_shares_put: %s\n" % e)
@@ -11946,7 +11946,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_users_delete**
-> object um_groups_users_delete(group_iduser_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object um_groups_users_delete(group_id, user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Remove a user from a group
 
@@ -11988,7 +11988,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Remove a user from a group
-        api_response = api_instance.um_groups_users_delete(group_iduser_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_users_delete(group_id, user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_users_delete: %s\n" % e)
@@ -12023,7 +12023,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_users_get**
-> GroupMembers um_groups_users_get(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> GroupMembers um_groups_users_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List Group Members 
 
@@ -12064,7 +12064,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List Group Members 
-        api_response = api_instance.um_groups_users_get(group_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_users_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_users_get: %s\n" % e)
@@ -12098,7 +12098,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_groups_users_post**
-> User um_groups_users_post(group_iduserpretty=prettydepth=depthx_contract_number=x_contract_number)
+> User um_groups_users_post(group_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Add a user to a group
 
@@ -12140,7 +12140,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Add a user to a group
-        api_response = api_instance.um_groups_users_post(group_iduserpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_groups_users_post(group_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_groups_users_post: %s\n" % e)
@@ -12175,7 +12175,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_resources_find_by_type**
-> Resources um_resources_find_by_type(resource_typepretty=prettydepth=depthx_contract_number=x_contract_number)
+> Resources um_resources_find_by_type(resource_type, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a list of Resources by type.
 
@@ -12216,7 +12216,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a list of Resources by type.
-        api_response = api_instance.um_resources_find_by_type(resource_typepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_resources_find_by_type(resource_type, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_resources_find_by_type: %s\n" % e)
@@ -12250,7 +12250,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_resources_find_by_type_and_id**
-> Resource um_resources_find_by_type_and_id(resource_typeresource_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Resource um_resources_find_by_type_and_id(resource_type, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Resource by type.
 
@@ -12292,7 +12292,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Resource by type.
-        api_response = api_instance.um_resources_find_by_type_and_id(resource_typeresource_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_resources_find_by_type_and_id(resource_type, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_resources_find_by_type_and_id: %s\n" % e)
@@ -12327,7 +12327,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_resources_get**
-> Resources um_resources_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Resources um_resources_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List All Resources.
 
@@ -12367,7 +12367,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List All Resources.
-        api_response = api_instance.um_resources_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_resources_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_resources_get: %s\n" % e)
@@ -12400,7 +12400,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_delete**
-> object um_users_delete(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object um_users_delete(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a User
 
@@ -12441,7 +12441,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a User
-        api_response = api_instance.um_users_delete(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_delete(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_delete: %s\n" % e)
@@ -12475,7 +12475,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_find_by_id**
-> User um_users_find_by_id(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> User um_users_find_by_id(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a User
 
@@ -12516,7 +12516,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a User
-        api_response = api_instance.um_users_find_by_id(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_find_by_id(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_find_by_id: %s\n" % e)
@@ -12550,7 +12550,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_get**
-> Users um_users_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Users um_users_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 List all Users 
 
@@ -12590,7 +12590,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # List all Users 
-        api_response = api_instance.um_users_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_get: %s\n" % e)
@@ -12623,7 +12623,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_groups_get**
-> ResourceGroups um_users_groups_get(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> ResourceGroups um_users_groups_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a User's group resources
 
@@ -12664,7 +12664,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a User's group resources
-        api_response = api_instance.um_users_groups_get(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_groups_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_groups_get: %s\n" % e)
@@ -12698,7 +12698,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_owns_get**
-> ResourcesUsers um_users_owns_get(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> ResourcesUsers um_users_owns_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a User's own resources
 
@@ -12739,7 +12739,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a User's own resources
-        api_response = api_instance.um_users_owns_get(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_owns_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_owns_get: %s\n" % e)
@@ -12773,7 +12773,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_post**
-> User um_users_post(userpretty=prettydepth=depthx_contract_number=x_contract_number)
+> User um_users_post(user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a user
 
@@ -12814,7 +12814,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a user
-        api_response = api_instance.um_users_post(userpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_post(user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_post: %s\n" % e)
@@ -12848,7 +12848,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_put**
-> User um_users_put(user_iduserpretty=prettydepth=depthx_contract_number=x_contract_number)
+> User um_users_put(user_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a user
 
@@ -12890,7 +12890,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a user
-        api_response = api_instance.um_users_put(user_iduserpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_put(user_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_put: %s\n" % e)
@@ -12925,7 +12925,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_delete**
-> object um_users_s3keys_delete(user_idkey_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a S3 key
 
@@ -12967,7 +12967,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a S3 key
-        api_response = api_instance.um_users_s3keys_delete(user_idkey_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_s3keys_delete: %s\n" % e)
@@ -13002,7 +13002,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_find_by_key_id**
-> S3Key um_users_s3keys_find_by_key_id(user_idkey_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> S3Key um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve given S3 key belonging to the given User
 
@@ -13044,7 +13044,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve given S3 key belonging to the given User
-        api_response = api_instance.um_users_s3keys_find_by_key_id(user_idkey_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_s3keys_find_by_key_id: %s\n" % e)
@@ -13079,7 +13079,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_get**
-> S3Keys um_users_s3keys_get(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> S3Keys um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a User's S3 keys
 
@@ -13120,7 +13120,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a User's S3 keys
-        api_response = api_instance.um_users_s3keys_get(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_s3keys_get: %s\n" % e)
@@ -13154,7 +13154,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_post**
-> S3Key um_users_s3keys_post(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> S3Key um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a S3 key for the given user
 
@@ -13195,7 +13195,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a S3 key for the given user
-        api_response = api_instance.um_users_s3keys_post(user_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_s3keys_post: %s\n" % e)
@@ -13229,7 +13229,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3keys_put**
-> S3Key um_users_s3keys_put(user_idkey_ids3_keypretty=prettydepth=depthx_contract_number=x_contract_number)
+> S3Key um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a S3 key having the given key id
 
@@ -13272,7 +13272,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a S3 key having the given key id
-        api_response = api_instance.um_users_s3keys_put(user_idkey_ids3_keypretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_s3keys_put: %s\n" % e)
@@ -13308,7 +13308,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **um_users_s3ssourl_get**
-> S3ObjectStorageSSO um_users_s3ssourl_get(user_idpretty=prettyx_contract_number=x_contract_number)
+> S3ObjectStorageSSO um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
 
 Retrieve S3 object storage single signon URL for the given user
 
@@ -13348,7 +13348,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve S3 object storage single signon URL for the given user
-        api_response = api_instance.um_users_s3ssourl_get(user_idpretty=prettyx_contract_number=x_contract_number)
+        api_response = api_instance.um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling UserManagementApi->um_users_s3ssourl_get: %s\n" % e)
@@ -13401,7 +13401,7 @@ Method | HTTP request | Description
 
 
 # **datacenters_volumes_create_snapshot_post**
-> Snapshot datacenters_volumes_create_snapshot_post(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_numbername=namedescription=descriptionsec_auth_protection=sec_auth_protectionlicence_type=licence_type)
+> Snapshot datacenters_volumes_create_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, name=name, description=description, sec_auth_protection=sec_auth_protection, licence_type=licence_type)
 
 Create Volume Snapshot
 
@@ -13447,7 +13447,7 @@ licence_type = 'licence_type_example' # str | The OS type of this Snapshot (opti
 
     try:
         # Create Volume Snapshot
-        api_response = api_instance.datacenters_volumes_create_snapshot_post(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_numbername=namedescription=descriptionsec_auth_protection=sec_auth_protectionlicence_type=licence_type)
+        api_response = api_instance.datacenters_volumes_create_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, name=name, description=description, sec_auth_protection=sec_auth_protection, licence_type=licence_type)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VolumeApi->datacenters_volumes_create_snapshot_post: %s\n" % e)
@@ -13486,7 +13486,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_delete**
-> object datacenters_volumes_delete(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> object datacenters_volumes_delete(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Volume
 
@@ -13528,7 +13528,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Delete a Volume
-        api_response = api_instance.datacenters_volumes_delete(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_delete(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VolumeApi->datacenters_volumes_delete: %s\n" % e)
@@ -13563,7 +13563,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_find_by_id**
-> Volume datacenters_volumes_find_by_id(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+> Volume datacenters_volumes_find_by_id(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Volume
 
@@ -13605,7 +13605,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Retrieve a Volume
-        api_response = api_instance.datacenters_volumes_find_by_id(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_find_by_id(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VolumeApi->datacenters_volumes_find_by_id: %s\n" % e)
@@ -13640,7 +13640,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_get**
-> Volumes datacenters_volumes_get(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+> Volumes datacenters_volumes_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
 List Volumes 
 
@@ -13683,7 +13683,7 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
     try:
         # List Volumes 
-        api_response = api_instance.datacenters_volumes_get(datacenter_idpretty=prettydepth=depthx_contract_number=x_contract_numberoffset=offsetlimit=limit)
+        api_response = api_instance.datacenters_volumes_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VolumeApi->datacenters_volumes_get: %s\n" % e)
@@ -13719,7 +13719,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_patch**
-> Volume datacenters_volumes_patch(datacenter_idvolume_idvolumepretty=prettydepth=depthx_contract_number=x_contract_number)
+> Volume datacenters_volumes_patch(datacenter_id, volume_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Partially modify a Volume
 
@@ -13762,7 +13762,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Partially modify a Volume
-        api_response = api_instance.datacenters_volumes_patch(datacenter_idvolume_idvolumepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_patch(datacenter_id, volume_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VolumeApi->datacenters_volumes_patch: %s\n" % e)
@@ -13798,7 +13798,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_post**
-> Volume datacenters_volumes_post(datacenter_idvolumepretty=prettydepth=depthx_contract_number=x_contract_number)
+> Volume datacenters_volumes_post(datacenter_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Create a Volume
 
@@ -13840,7 +13840,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Create a Volume
-        api_response = api_instance.datacenters_volumes_post(datacenter_idvolumepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_post(datacenter_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VolumeApi->datacenters_volumes_post: %s\n" % e)
@@ -13875,7 +13875,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_put**
-> Volume datacenters_volumes_put(datacenter_idvolume_idvolumepretty=prettydepth=depthx_contract_number=x_contract_number)
+> Volume datacenters_volumes_put(datacenter_id, volume_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Volume
 
@@ -13918,7 +13918,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Modify a Volume
-        api_response = api_instance.datacenters_volumes_put(datacenter_idvolume_idvolumepretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.datacenters_volumes_put(datacenter_id, volume_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VolumeApi->datacenters_volumes_put: %s\n" % e)
@@ -13954,7 +13954,7 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 # **datacenters_volumes_restore_snapshot_post**
-> object datacenters_volumes_restore_snapshot_post(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_numbersnapshot_id=snapshot_id)
+> object datacenters_volumes_restore_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, snapshot_id=snapshot_id)
 
 Restore Volume Snapshot
 
@@ -13997,7 +13997,7 @@ snapshot_id = 'snapshot_id_example' # str | This is the ID of the snapshot (opti
 
     try:
         # Restore Volume Snapshot
-        api_response = api_instance.datacenters_volumes_restore_snapshot_post(datacenter_idvolume_idpretty=prettydepth=depthx_contract_number=x_contract_numbersnapshot_id=snapshot_id)
+        api_response = api_instance.datacenters_volumes_restore_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, snapshot_id=snapshot_id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling VolumeApi->datacenters_volumes_restore_snapshot_post: %s\n" % e)
@@ -14046,7 +14046,7 @@ Method | HTTP request | Description
 
 
 # **api_info_get**
-> Info api_info_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+> Info api_info_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Display API information
 
@@ -14077,7 +14077,7 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
     try:
         # Display API information
-        api_response = api_instance.api_info_get(pretty=prettydepth=depthx_contract_number=x_contract_number)
+        api_response = api_instance.api_info_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling Api->api_info_get: %s\n" % e)

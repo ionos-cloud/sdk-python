@@ -36,12 +36,12 @@ class TestS3Key(unittest.TestCase):
         # model = ionoscloud.models.s3_key.S3Key()  # noqa: E501
         if include_optional :
             return S3Key(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "group"
-                href = 'https://<API_HOST>/cloudapi/v5/um/users/15f67991-0f51-4efc-a8ad-ef1fb31a480c/s3keys/78fa888e106456c1482d'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "group",
+                href = 'https://<API_HOST>/cloudapi/v5/um/users/15f67991-0f51-4efc-a8ad-ef1fb31a480c/s3keys/78fa888e106456c1482d',
                 metadata = ionoscloud.models.s3_key_metadata.S3KeyMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
-                    created_date = '2015-12-04T14:34:09.809Z', )
+                    created_date = '2015-12-04T14:34:09.809Z', ),
                 properties = ionoscloud.models.s3_key_properties.S3KeyProperties(
                     secret_key = 'tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG', 
                     active = True, )

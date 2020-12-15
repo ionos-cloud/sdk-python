@@ -36,9 +36,9 @@ class TestRequests(unittest.TestCase):
         # model = ionoscloud.models.requests.Requests()  # noqa: E501
         if include_optional :
             return Requests(
-                id = 'requests'
-                type = "collection"
-                href = '<RESOURCE-URI>'
+                id = 'requests',
+                type = "collection",
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.request.Request(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
@@ -59,9 +59,9 @@ class TestRequests(unittest.TestCase):
                                 }, 
                             body = '', 
                             url = '', ), )
-                    ]
-                offset = 0
-                limit = 1000
+                    ],
+                offset = 0,
+                limit = 1000,
                 links = ionoscloud.models.pagination_links.PaginationLinks(
                     prev = '<PREVIOUS-PAGE-URI>', 
                     self = '<THIS-PAGE-URI>', 

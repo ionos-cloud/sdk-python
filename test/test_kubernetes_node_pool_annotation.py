@@ -36,7 +36,7 @@ class TestKubernetesNodePoolAnnotation(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation()  # noqa: E501
         if include_optional :
             return KubernetesNodePoolAnnotation(
-                key = ''
+                key = '',
                 value = ''
             )
         else :

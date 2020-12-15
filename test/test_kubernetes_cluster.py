@@ -36,9 +36,9 @@ class TestKubernetesCluster(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_cluster.KubernetesCluster()  # noqa: E501
         if include_optional :
             return KubernetesCluster(
-                id = '1e072e52-2ed3-492f-b6b6-c6b116907527'
-                type = 'k8s'
-                href = '<RESOURCE-URI>'
+                id = '1e072e52-2ed3-492f-b6b6-c6b116907527',
+                type = 'k8s',
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
@@ -47,7 +47,7 @@ class TestKubernetesCluster(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', )
+                    state = 'AVAILABLE', ),
                 properties = ionoscloud.models.kubernetes_cluster_properties.KubernetesClusterProperties(
                     name = 'k8s', 
                     k8s_version = '1.15.4', 
@@ -55,7 +55,7 @@ class TestKubernetesCluster(unittest.TestCase):
                         day_of_the_week = 'Monday', 
                         time = '13:00:00', ), 
                     available_upgrade_versions = [1.16.4, 1.17.7], 
-                    viable_node_pool_versions = [1.17.7, 1.18.2], )
+                    viable_node_pool_versions = [1.17.7, 1.18.2], ),
                 entities = ionoscloud.models.kubernetes_cluster_entities.KubernetesClusterEntities(
                     nodepools = ionoscloud.models.kubernetes_node_pools.KubernetesNodePools(
                         id = '1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools', 

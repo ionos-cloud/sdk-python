@@ -36,9 +36,9 @@ class TestPrivateCrossConnectProperties(unittest.TestCase):
         # model = ionoscloud.models.private_cross_connect_properties.PrivateCrossConnectProperties()  # noqa: E501
         if include_optional :
             return PrivateCrossConnectProperties(
-                name = 'My resource'
-                description = 'Private Cross-Connect between datacenter 'A' and datacenter 'B' '
-                peers = { "peers": [ { "id": "<lan-id>", "name": "<lan-name>", "datacenterId": "<dc-uuid>",  "datacenterName": "<dc-name>", "location": "<de/fra>"} ] }
+                name = 'My resource',
+                description = 'Private Cross-Connect between datacenter 'A' and datacenter 'B' ',
+                peers = { "peers": [ { "id": "<lan-id>", "name": "<lan-name>", "datacenterId": "<dc-uuid>",  "datacenterName": "<dc-name>", "location": "<de/fra>"} ] },
                 connectable_datacenters = { "connectableDatacenters": [ { "id": "<dc-id>", "name": "<dc-name>", "location": "<de/fra>"} ] }
             )
         else :

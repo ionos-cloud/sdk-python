@@ -36,9 +36,9 @@ class TestResources(unittest.TestCase):
         # model = ionoscloud.models.resources.Resources()  # noqa: E501
         if include_optional :
             return Resources(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = 'https://<API_HOST>/cloudapi/v5/um/resources'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = 'https://<API_HOST>/cloudapi/v5/um/resources',
                 items = [
                     ionoscloud.models.resource.Resource(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

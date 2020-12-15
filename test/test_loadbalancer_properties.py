@@ -36,8 +36,8 @@ class TestLoadbalancerProperties(unittest.TestCase):
         # model = ionoscloud.models.loadbalancer_properties.LoadbalancerProperties()  # noqa: E501
         if include_optional :
             return LoadbalancerProperties(
-                name = 'My resource'
-                ip = '22.231.113.64'
+                name = 'My resource',
+                ip = '22.231.113.64',
                 dhcp = True
             )
         else :

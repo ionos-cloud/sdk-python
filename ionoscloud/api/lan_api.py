@@ -101,10 +101,10 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'lan_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'lan_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -166,7 +166,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -273,10 +273,10 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'lan_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'lan_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -338,7 +338,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Lan'
         if 'response_type' in kwargs:
@@ -449,11 +449,11 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -519,7 +519,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Lans'
         if 'response_type' in kwargs:
@@ -630,11 +630,11 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'lan_id'
-            'nic_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'lan_id',
+            'nic_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -702,7 +702,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Nic'
         if 'response_type' in kwargs:
@@ -817,12 +817,12 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'lan_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'lan_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -894,7 +894,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LanNics'
         if 'response_type' in kwargs:
@@ -1005,11 +1005,11 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'lan_id'
-            'nic'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'lan_id',
+            'nic',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1081,7 +1081,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Nic'
         if 'response_type' in kwargs:
@@ -1192,11 +1192,11 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'lan_id'
-            'lan'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'lan_id',
+            'lan',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1268,7 +1268,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Lan'
         if 'response_type' in kwargs:
@@ -1375,10 +1375,10 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'lan'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'lan',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1444,7 +1444,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LanPost'
         if 'response_type' in kwargs:
@@ -1555,11 +1555,11 @@ class LanApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'lan_id'
-            'lan'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'lan_id',
+            'lan',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1631,7 +1631,7 @@ class LanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Lan'
         if 'response_type' in kwargs:

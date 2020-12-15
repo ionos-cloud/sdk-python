@@ -36,9 +36,9 @@ class TestPrivateCrossConnects(unittest.TestCase):
         # model = ionoscloud.models.private_cross_connects.PrivateCrossConnects()  # noqa: E501
         if include_optional :
             return PrivateCrossConnects(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.private_cross_connect.PrivateCrossConnect(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

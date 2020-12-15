@@ -36,9 +36,9 @@ class TestServer(unittest.TestCase):
         # model = ionoscloud.models.server.Server()  # noqa: E501
         if include_optional :
             return Server(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "server"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "server",
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
@@ -47,7 +47,7 @@ class TestServer(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', )
+                    state = 'AVAILABLE', ),
                 properties = ionoscloud.models.server_properties.ServerProperties(
                     name = 'My resource', 
                     cores = 4, 
@@ -62,7 +62,7 @@ class TestServer(unittest.TestCase):
                         id = '', 
                         type = "resource", 
                         href = '<RESOURCE-URI>', ), 
-                    cpu_family = 'AMD_OPTERON', )
+                    cpu_family = 'AMD_OPTERON', ),
                 entities = ionoscloud.models.server_entities.ServerEntities(
                     cdroms = ionoscloud.models.cdroms.Cdroms(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

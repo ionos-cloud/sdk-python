@@ -36,7 +36,7 @@ class TestErrorMessage(unittest.TestCase):
         # model = ionoscloud.models.error_message.ErrorMessage()  # noqa: E501
         if include_optional :
             return ErrorMessage(
-                error_code = '123'
+                error_code = '123',
                 message = 'Error message example'
             )
         else :

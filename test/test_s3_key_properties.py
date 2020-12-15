@@ -36,7 +36,7 @@ class TestS3KeyProperties(unittest.TestCase):
         # model = ionoscloud.models.s3_key_properties.S3KeyProperties()  # noqa: E501
         if include_optional :
             return S3KeyProperties(
-                secret_key = 'tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG'
+                secret_key = 'tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG',
                 active = True
             )
         else :

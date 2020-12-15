@@ -36,10 +36,10 @@ class TestIpBlockProperties(unittest.TestCase):
         # model = ionoscloud.models.ip_block_properties.IpBlockProperties()  # noqa: E501
         if include_optional :
             return IpBlockProperties(
-                ips = ["22.231.113.64", "22.231.113.65", "22.231.113.66"]
-                location = 'us/las'
-                size = 5
-                name = 'My resource'
+                ips = ["22.231.113.64", "22.231.113.65", "22.231.113.66"],
+                location = 'us/las',
+                size = 5,
+                name = 'My resource',
                 ip_consumers = { "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57", "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7", "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc", "datacenterName" : "IpConsumerDC"} ] }
             )
         else :

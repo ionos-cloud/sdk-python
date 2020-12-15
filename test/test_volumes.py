@@ -36,9 +36,9 @@ class TestVolumes(unittest.TestCase):
         # model = ionoscloud.models.volumes.Volumes()  # noqa: E501
         if include_optional :
             return Volumes(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.volume.Volume(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
@@ -72,9 +72,9 @@ class TestVolumes(unittest.TestCase):
                             disc_virtio_hot_unplug = True, 
                             device_number = 3, 
                             backupunit_id = '25f67991-0f51-4efc-a8ad-ef1fb31a481c', ), )
-                    ]
-                offset = 0
-                limit = 1000
+                    ],
+                offset = 0,
+                limit = 1000,
                 links = ionoscloud.models.pagination_links.PaginationLinks(
                     prev = '<PREVIOUS-PAGE-URI>', 
                     self = '<THIS-PAGE-URI>', 

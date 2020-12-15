@@ -36,8 +36,8 @@ class TestKubernetesClusterPropertiesForPostAndPut(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_cluster_properties_for_post_and_put.KubernetesClusterPropertiesForPostAndPut()  # noqa: E501
         if include_optional :
             return KubernetesClusterPropertiesForPostAndPut(
-                name = 'k8s'
-                k8s_version = '1.15.4'
+                name = 'k8s',
+                k8s_version = '1.15.4',
                 maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                     day_of_the_week = 'Monday', 
                     time = '13:00:00', )

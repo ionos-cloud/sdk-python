@@ -36,7 +36,7 @@ class TestError(unittest.TestCase):
         # model = ionoscloud.models.error.Error()  # noqa: E501
         if include_optional :
             return Error(
-                http_status = 400
+                http_status = 400,
                 messages = [
                     ionoscloud.models.error_message.ErrorMessage(
                         error_code = '123', 

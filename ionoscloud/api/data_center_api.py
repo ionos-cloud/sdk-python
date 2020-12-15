@@ -97,9 +97,9 @@ class DataCenterApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -155,7 +155,7 @@ class DataCenterApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -258,9 +258,9 @@ class DataCenterApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -316,7 +316,7 @@ class DataCenterApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Datacenter'
         if 'response_type' in kwargs:
@@ -423,10 +423,10 @@ class DataCenterApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -486,7 +486,7 @@ class DataCenterApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Datacenters'
         if 'response_type' in kwargs:
@@ -593,10 +593,10 @@ class DataCenterApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'datacenter'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'datacenter',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -662,7 +662,7 @@ class DataCenterApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Datacenter'
         if 'response_type' in kwargs:
@@ -765,9 +765,9 @@ class DataCenterApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter'
-            'pretty'
-            'depth'
+            'datacenter',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -827,7 +827,7 @@ class DataCenterApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Datacenter'
         if 'response_type' in kwargs:
@@ -934,10 +934,10 @@ class DataCenterApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'datacenter'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'datacenter',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1003,7 +1003,7 @@ class DataCenterApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Datacenter'
         if 'response_type' in kwargs:

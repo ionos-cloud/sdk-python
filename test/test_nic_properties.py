@@ -36,14 +36,14 @@ class TestNicProperties(unittest.TestCase):
         # model = ionoscloud.models.nic_properties.NicProperties()  # noqa: E501
         if include_optional :
             return NicProperties(
-                name = 'My resource'
-                mac = '00:0a:95:9d:68:16'
+                name = 'My resource',
+                mac = '00:0a:95:9d:68:16',
                 ips = [
                     ''
-                    ]
-                dhcp = True
-                lan = 2
-                firewall_active = False
+                    ],
+                dhcp = True,
+                lan = 2,
+                firewall_active = False,
                 nat = True
             )
         else :

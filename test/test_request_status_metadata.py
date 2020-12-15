@@ -36,9 +36,9 @@ class TestRequestStatusMetadata(unittest.TestCase):
         # model = ionoscloud.models.request_status_metadata.RequestStatusMetadata()  # noqa: E501
         if include_optional :
             return RequestStatusMetadata(
-                status = 'QUEUED'
-                message = ''
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
+                status = 'QUEUED',
+                message = '',
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3',
                 targets = [
                     ionoscloud.models.request_target.RequestTarget(
                         target = ionoscloud.models.resource_reference.ResourceReference(

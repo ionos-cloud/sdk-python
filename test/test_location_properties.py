@@ -36,8 +36,8 @@ class TestLocationProperties(unittest.TestCase):
         # model = ionoscloud.models.location_properties.LocationProperties()  # noqa: E501
         if include_optional :
             return LocationProperties(
-                name = 'My resource'
-                features = [SSD]
+                name = 'My resource',
+                features = [SSD],
                 image_aliases = [
                     ''
                     ]

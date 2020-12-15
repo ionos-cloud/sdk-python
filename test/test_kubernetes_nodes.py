@@ -36,9 +36,9 @@ class TestKubernetesNodes(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_nodes.KubernetesNodes()  # noqa: E501
         if include_optional :
             return KubernetesNodes(
-                id = '1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools'
-                type = 'collection'
-                href = '<RESOURCE-URI>'
+                id = '1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools',
+                type = 'collection',
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.kubernetes_node.KubernetesNode(
                         id = '1e072e52-2ed3-492f-b6b6-c6b116907527', 

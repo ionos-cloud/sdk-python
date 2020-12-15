@@ -36,10 +36,10 @@ class TestLabelProperties(unittest.TestCase):
         # model = ionoscloud.models.label_properties.LabelProperties()  # noqa: E501
         if include_optional :
             return LabelProperties(
-                key = 'environment'
-                value = 'production'
-                resource_id = '700e1cab-99b2-4c30-ba8c-1d273ddba022'
-                resource_type = 'datacenter'
+                key = 'environment',
+                value = 'production',
+                resource_id = '700e1cab-99b2-4c30-ba8c-1d273ddba022',
+                resource_type = 'datacenter',
                 resource_href = 'https://<hostname>/datacenters/700e1cab-99b2-4c30-ba8c-1d273ddba022'
             )
         else :

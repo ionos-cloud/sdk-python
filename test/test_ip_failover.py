@@ -36,7 +36,7 @@ class TestIPFailover(unittest.TestCase):
         # model = ionoscloud.models.ip_failover.IPFailover()  # noqa: E501
         if include_optional :
             return IPFailover(
-                ip = '192.18.2.231'
+                ip = '192.18.2.231',
                 nic_uuid = '3c11273c-b3e1-4ca3-8134-84fd2dd4ebec'
             )
         else :

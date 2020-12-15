@@ -36,8 +36,8 @@ class TestBackupUnitProperties(unittest.TestCase):
         # model = ionoscloud.models.backup_unit_properties.BackupUnitProperties()  # noqa: E501
         if include_optional :
             return BackupUnitProperties(
-                name = 'BackupUnitName'
-                password = 'mypass123'
+                name = 'BackupUnitName',
+                password = 'mypass123',
                 email = 'email@email.com'
             )
         else :

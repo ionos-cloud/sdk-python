@@ -36,15 +36,15 @@ class TestGroupProperties(unittest.TestCase):
         # model = ionoscloud.models.group_properties.GroupProperties()  # noqa: E501
         if include_optional :
             return GroupProperties(
-                name = 'My resource'
-                create_data_center = True
-                create_snapshot = True
-                reserve_ip = True
-                access_activity_log = True
-                create_pcc = True
-                s3_privilege = True
-                create_backup_unit = True
-                create_internet_access = True
+                name = 'My resource',
+                create_data_center = True,
+                create_snapshot = True,
+                reserve_ip = True,
+                access_activity_log = True,
+                create_pcc = True,
+                s3_privilege = True,
+                create_backup_unit = True,
+                create_internet_access = True,
                 create_k8s_cluster = True
             )
         else :

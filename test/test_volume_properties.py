@@ -36,23 +36,23 @@ class TestVolumeProperties(unittest.TestCase):
         # model = ionoscloud.models.volume_properties.VolumeProperties()  # noqa: E501
         if include_optional :
             return VolumeProperties(
-                name = 'My resource'
-                type = 'HDD'
-                size = 100.0
-                availability_zone = 'AUTO'
-                image = 'd6ad1576-fde9-4696-aa41-1ebd75bdaf49'
-                image_password = 'mypass123'
-                image_alias = ''
-                ssh_keys = [ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345, ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43]
-                bus = 'VIRTIO'
-                licence_type = 'LINUX'
-                cpu_hot_plug = True
-                ram_hot_plug = True
-                nic_hot_plug = True
-                nic_hot_unplug = True
-                disc_virtio_hot_plug = True
-                disc_virtio_hot_unplug = True
-                device_number = 3
+                name = 'My resource',
+                type = 'HDD',
+                size = 100.0,
+                availability_zone = 'AUTO',
+                image = 'd6ad1576-fde9-4696-aa41-1ebd75bdaf49',
+                image_password = 'mypass123',
+                image_alias = '',
+                ssh_keys = [ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345, ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43],
+                bus = 'VIRTIO',
+                licence_type = 'LINUX',
+                cpu_hot_plug = True,
+                ram_hot_plug = True,
+                nic_hot_plug = True,
+                nic_hot_unplug = True,
+                disc_virtio_hot_plug = True,
+                disc_virtio_hot_unplug = True,
+                device_number = 3,
                 backupunit_id = '25f67991-0f51-4efc-a8ad-ef1fb31a481c'
             )
         else :

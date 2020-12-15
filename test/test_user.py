@@ -36,13 +36,13 @@ class TestUser(unittest.TestCase):
         # model = ionoscloud.models.user.User()  # noqa: E501
         if include_optional :
             return User(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "user"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "user",
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.user_metadata.UserMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
-                    last_login = '2015-12-04T14:34:09.809Z', )
+                    last_login = '2015-12-04T14:34:09.809Z', ),
                 properties = ionoscloud.models.user_properties.UserProperties(
                     firstname = '', 
                     lastname = '', 
@@ -51,7 +51,7 @@ class TestUser(unittest.TestCase):
                     force_sec_auth = True, 
                     sec_auth_active = True, 
                     s3_canonical_user_id = '', 
-                    password = '', )
+                    password = '', ),
                 entities = ionoscloud.models.users_entities.UsersEntities(
                     owns = ionoscloud.models.resources_users.ResourcesUsers(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

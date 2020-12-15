@@ -97,9 +97,9 @@ class RequestApi(object):
         local_var_params = locals()
 
         all_params = [
-            'request_id'
-            'pretty'
-            'depth'
+            'request_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -155,7 +155,7 @@ class RequestApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Request'
         if 'response_type' in kwargs:
@@ -274,13 +274,13 @@ class RequestApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'filter_status'
-            'filter_created_after'
-            'filter_created_before'
-            'offset'
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'filter_status',
+            'filter_created_after',
+            'filter_created_before',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -346,7 +346,7 @@ class RequestApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Requests'
         if 'response_type' in kwargs:
@@ -449,9 +449,9 @@ class RequestApi(object):
         local_var_params = locals()
 
         all_params = [
-            'request_id'
-            'pretty'
-            'depth'
+            'request_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -507,7 +507,7 @@ class RequestApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'RequestStatus'
         if 'response_type' in kwargs:

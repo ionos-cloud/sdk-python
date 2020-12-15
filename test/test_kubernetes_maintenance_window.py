@@ -36,7 +36,7 @@ class TestKubernetesMaintenanceWindow(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow()  # noqa: E501
         if include_optional :
             return KubernetesMaintenanceWindow(
-                day_of_the_week = 'Monday'
+                day_of_the_week = 'Monday',
                 time = '13:00:00'
             )
         else :

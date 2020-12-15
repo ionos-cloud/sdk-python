@@ -36,8 +36,8 @@ class TestKubernetesNodeProperties(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_node_properties.KubernetesNodeProperties()  # noqa: E501
         if include_optional :
             return KubernetesNodeProperties(
-                name = 'k8s-node'
-                public_ip = '192.168.23.2'
+                name = 'k8s-node',
+                public_ip = '192.168.23.2',
                 k8s_version = '1.15.4'
             )
         else :

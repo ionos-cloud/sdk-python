@@ -117,14 +117,14 @@ class VolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'name'
-            'description'
-            'sec_auth_protection'
+            'datacenter_id',
+            'volume_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'name',
+            'description',
+            'sec_auth_protection',
             'licence_type'
         ]
         all_params.extend(
@@ -198,7 +198,7 @@ class VolumeApi(object):
             ['application/x-www-form-urlencoded'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Snapshot'
         if 'response_type' in kwargs:
@@ -305,10 +305,10 @@ class VolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -370,7 +370,7 @@ class VolumeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -477,10 +477,10 @@ class VolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -542,7 +542,7 @@ class VolumeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -653,11 +653,11 @@ class VolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -723,7 +723,7 @@ class VolumeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Volumes'
         if 'response_type' in kwargs:
@@ -834,11 +834,11 @@ class VolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'volume'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume_id',
+            'volume',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -910,7 +910,7 @@ class VolumeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -1017,10 +1017,10 @@ class VolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1086,7 +1086,7 @@ class VolumeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -1197,11 +1197,11 @@ class VolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'volume'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume_id',
+            'volume',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1273,7 +1273,7 @@ class VolumeApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -1384,11 +1384,11 @@ class VolumeApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
+            'datacenter_id',
+            'volume_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
             'snapshot_id'
         ]
         all_params.extend(
@@ -1456,7 +1456,7 @@ class VolumeApi(object):
             ['application/x-www-form-urlencoded'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:

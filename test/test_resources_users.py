@@ -36,9 +36,9 @@ class TestResourcesUsers(unittest.TestCase):
         # model = ionoscloud.models.resources_users.ResourcesUsers()  # noqa: E501
         if include_optional :
             return ResourcesUsers(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/owns'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/owns',
                 items = [
                     ionoscloud.models.resource.Resource(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

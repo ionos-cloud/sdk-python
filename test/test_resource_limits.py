@@ -36,22 +36,22 @@ class TestResourceLimits(unittest.TestCase):
         # model = ionoscloud.models.resource_limits.ResourceLimits()  # noqa: E501
         if include_optional :
             return ResourceLimits(
-                cores_per_server = 56
-                cores_per_contract = 56
-                cores_provisioned = 56
-                ram_per_server = 56
-                ram_per_contract = 56
-                ram_provisioned = 56
-                hdd_limit_per_volume = 56
-                hdd_limit_per_contract = 56
-                hdd_volume_provisioned = 56
-                ssd_limit_per_volume = 56
-                ssd_limit_per_contract = 56
-                ssd_volume_provisioned = 56
-                reservable_ips = 56
-                reserved_ips_on_contract = 56
-                reserved_ips_in_use = 56
-                k8s_cluster_limit_total = 56
+                cores_per_server = 56,
+                cores_per_contract = 56,
+                cores_provisioned = 56,
+                ram_per_server = 56,
+                ram_per_contract = 56,
+                ram_provisioned = 56,
+                hdd_limit_per_volume = 56,
+                hdd_limit_per_contract = 56,
+                hdd_volume_provisioned = 56,
+                ssd_limit_per_volume = 56,
+                ssd_limit_per_contract = 56,
+                ssd_volume_provisioned = 56,
+                reservable_ips = 56,
+                reserved_ips_on_contract = 56,
+                reserved_ips_in_use = 56,
+                k8s_cluster_limit_total = 56,
                 k8s_clusters_provisioned = 56
             )
         else :

@@ -36,11 +36,11 @@ class TestDatacenterProperties(unittest.TestCase):
         # model = ionoscloud.models.datacenter_properties.DatacenterProperties()  # noqa: E501
         if include_optional :
             return DatacenterProperties(
-                name = 'My resource'
-                description = 'My Production Datacenter'
-                location = 'us/las'
-                version = 8
-                features = [SSD]
+                name = 'My resource',
+                description = 'My Production Datacenter',
+                location = 'us/las',
+                version = 8,
+                features = [SSD],
                 sec_auth_protection = True
             )
         else :

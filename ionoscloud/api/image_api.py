@@ -97,9 +97,9 @@ class ImageApi(object):
         local_var_params = locals()
 
         all_params = [
-            'image_id'
-            'pretty'
-            'depth'
+            'image_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -155,7 +155,7 @@ class ImageApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -258,9 +258,9 @@ class ImageApi(object):
         local_var_params = locals()
 
         all_params = [
-            'image_id'
-            'pretty'
-            'depth'
+            'image_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -316,7 +316,7 @@ class ImageApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:
@@ -415,8 +415,8 @@ class ImageApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -466,7 +466,7 @@ class ImageApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Images'
         if 'response_type' in kwargs:
@@ -573,10 +573,10 @@ class ImageApi(object):
         local_var_params = locals()
 
         all_params = [
-            'image_id'
-            'image'
-            'pretty'
-            'depth'
+            'image_id',
+            'image',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -642,7 +642,7 @@ class ImageApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:
@@ -749,10 +749,10 @@ class ImageApi(object):
         local_var_params = locals()
 
         all_params = [
-            'image_id'
-            'image'
-            'pretty'
-            'depth'
+            'image_id',
+            'image',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -818,7 +818,7 @@ class ImageApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:

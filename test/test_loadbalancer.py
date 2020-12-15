@@ -36,9 +36,9 @@ class TestLoadbalancer(unittest.TestCase):
         # model = ionoscloud.models.loadbalancer.Loadbalancer()  # noqa: E501
         if include_optional :
             return Loadbalancer(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "loadbalancer"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "loadbalancer",
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
@@ -47,11 +47,11 @@ class TestLoadbalancer(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', )
+                    state = 'AVAILABLE', ),
                 properties = ionoscloud.models.loadbalancer_properties.LoadbalancerProperties(
                     name = 'My resource', 
                     ip = '22.231.113.64', 
-                    dhcp = True, )
+                    dhcp = True, ),
                 entities = ionoscloud.models.loadbalancer_entities.LoadbalancerEntities(
                     balancednics = ionoscloud.models.balanced_nics.BalancedNics(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

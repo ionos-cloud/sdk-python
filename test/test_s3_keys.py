@@ -36,9 +36,9 @@ class TestS3Keys(unittest.TestCase):
         # model = ionoscloud.models.s3_keys.S3Keys()  # noqa: E501
         if include_optional :
             return S3Keys(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/s3keys'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/s3keys',
                 items = [
                     ionoscloud.models.s3_key.S3Key(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

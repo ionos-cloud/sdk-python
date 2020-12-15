@@ -36,9 +36,9 @@ class TestGroupShare(unittest.TestCase):
         # model = ionoscloud.models.group_share.GroupShare()  # noqa: E501
         if include_optional :
             return GroupShare(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "resource"
-                href = 'https://<API_HOST>/cloudapi/v5/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c/shares/17faab13-13abc-4efc-a8ad-ef1fb31a481b'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "resource",
+                href = 'https://<API_HOST>/cloudapi/v5/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c/shares/17faab13-13abc-4efc-a8ad-ef1fb31a481b',
                 properties = ionoscloud.models.group_share_properties.GroupShareProperties(
                     edit_privilege = True, 
                     share_privilege = True, )

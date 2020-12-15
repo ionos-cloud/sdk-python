@@ -36,9 +36,9 @@ class TestKubernetesNodePool(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_node_pool.KubernetesNodePool()  # noqa: E501
         if include_optional :
             return KubernetesNodePool(
-                id = '1e072e52-2ed3-492f-b6b6-c6b116907527'
-                type = 'nodepool'
-                href = '<RESOURCE-URI>'
+                id = '1e072e52-2ed3-492f-b6b6-c6b116907527',
+                type = 'nodepool',
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.datacenter_element_metadata.DatacenterElementMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
                     created_date = '2015-12-04T14:34:09.809Z', 
@@ -47,7 +47,7 @@ class TestKubernetesNodePool(unittest.TestCase):
                     last_modified_date = '2015-12-04T14:34:09.809Z', 
                     last_modified_by = 'user@example.com', 
                     last_modified_by_user_id = '63cef532-26fe-4a64-a4e0-de7c8a506c90', 
-                    state = 'AVAILABLE', )
+                    state = 'AVAILABLE', ),
                 properties = ionoscloud.models.kubernetes_node_pool_properties.KubernetesNodePoolProperties(
                     name = 'k8s-node-pool', 
                     datacenter_id = '1e072e52-2ed3-492f-b6b6-c6b116907521', 

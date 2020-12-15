@@ -36,8 +36,8 @@ class TestPaginationLinks(unittest.TestCase):
         # model = ionoscloud.models.pagination_links.PaginationLinks()  # noqa: E501
         if include_optional :
             return PaginationLinks(
-                prev = '<PREVIOUS-PAGE-URI>'
-                _self = '<THIS-PAGE-URI>'
+                prev = '<PREVIOUS-PAGE-URI>',
+                _self = '<THIS-PAGE-URI>',
                 next = '<NEXT-PAGE-URI>'
             )
         else :

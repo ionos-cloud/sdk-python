@@ -36,9 +36,9 @@ class TestIpBlocks(unittest.TestCase):
         # model = ionoscloud.models.ip_blocks.IpBlocks()  # noqa: E501
         if include_optional :
             return IpBlocks(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.ip_block.IpBlock(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

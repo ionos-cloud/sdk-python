@@ -36,9 +36,9 @@ class TestRequest(unittest.TestCase):
         # model = ionoscloud.models.request.Request()  # noqa: E501
         if include_optional :
             return Request(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "request"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "request",
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.request_metadata.RequestMetadata(
                     created_date = '2015-12-04T14:34:09.809Z', 
                     created_by = 'user@example.com', 
@@ -58,7 +58,7 @@ class TestRequest(unittest.TestCase):
                                         type = "resource", 
                                         href = '<RESOURCE-URI>', ), 
                                     status = 'QUEUED', )
-                                ], ), ), )
+                                ], ), ), ),
                 properties = ionoscloud.models.request_properties.RequestProperties(
                     method = '', 
                     headers = {

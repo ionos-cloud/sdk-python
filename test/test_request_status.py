@@ -36,9 +36,9 @@ class TestRequestStatus(unittest.TestCase):
         # model = ionoscloud.models.request_status.RequestStatus()  # noqa: E501
         if include_optional :
             return RequestStatus(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "request-status"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "request-status",
+                href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.request_status_metadata.RequestStatusMetadata(
                     status = 'QUEUED', 
                     message = '', 

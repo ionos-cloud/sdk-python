@@ -97,9 +97,9 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -155,7 +155,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -258,9 +258,9 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -316,7 +316,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesCluster'
         if 'response_type' in kwargs:
@@ -415,8 +415,8 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -466,7 +466,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesClusters'
         if 'response_type' in kwargs:
@@ -569,9 +569,9 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -627,7 +627,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesConfig'
         if 'response_type' in kwargs:
@@ -734,10 +734,10 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'nodepool_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'nodepool_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -799,7 +799,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -906,10 +906,10 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'nodepool_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'nodepool_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -971,7 +971,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesNodePool'
         if 'response_type' in kwargs:
@@ -1074,9 +1074,9 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1132,7 +1132,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesNodePools'
         if 'response_type' in kwargs:
@@ -1243,11 +1243,11 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'nodepool_id'
-            'node_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'nodepool_id',
+            'node_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1315,7 +1315,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -1426,11 +1426,11 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'nodepool_id'
-            'node_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'nodepool_id',
+            'node_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1498,7 +1498,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesNode'
         if 'response_type' in kwargs:
@@ -1605,10 +1605,10 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'nodepool_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'nodepool_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1670,7 +1670,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesNodes'
         if 'response_type' in kwargs:
@@ -1781,11 +1781,11 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'nodepool_id'
-            'node_id'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'nodepool_id',
+            'node_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1853,7 +1853,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -1960,10 +1960,10 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'kubernetes_node_pool'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'kubernetes_node_pool',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2029,7 +2029,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesNodePool'
         if 'response_type' in kwargs:
@@ -2140,11 +2140,11 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'nodepool_id'
-            'kubernetes_node_pool'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'nodepool_id',
+            'kubernetes_node_pool',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2216,7 +2216,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesNodePoolForPut'
         if 'response_type' in kwargs:
@@ -2319,9 +2319,9 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'kubernetes_cluster'
-            'pretty'
-            'depth'
+            'kubernetes_cluster',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2381,7 +2381,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesCluster'
         if 'response_type' in kwargs:
@@ -2488,10 +2488,10 @@ class KubernetesApi(object):
         local_var_params = locals()
 
         all_params = [
-            'k8s_cluster_id'
-            'kubernetes_cluster'
-            'pretty'
-            'depth'
+            'k8s_cluster_id',
+            'kubernetes_cluster',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2557,7 +2557,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'KubernetesCluster'
         if 'response_type' in kwargs:
@@ -2693,7 +2693,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'list[str]'
         if 'response_type' in kwargs:
@@ -2818,7 +2818,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'str'
         if 'response_type' in kwargs:
@@ -2943,7 +2943,7 @@ class KubernetesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'list[str]'
         if 'response_type' in kwargs:

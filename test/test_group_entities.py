@@ -67,7 +67,7 @@ class TestGroupEntities(unittest.TestCase):
                                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                                     type = "groups", 
                                     href = 'https://<API_HOST>/cloudapi/v5/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/groups', ), ), )
-                        ], )
+                        ], ),
                 resources = ionoscloud.models.resource_groups.ResourceGroups(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 

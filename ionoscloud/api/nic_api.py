@@ -105,11 +105,11 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -177,7 +177,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -288,11 +288,11 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -360,7 +360,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Nic'
         if 'response_type' in kwargs:
@@ -475,12 +475,12 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'firewallrule_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'firewallrule_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -554,7 +554,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -669,12 +669,12 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'firewallrule_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'firewallrule_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -748,7 +748,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'FirewallRule'
         if 'response_type' in kwargs:
@@ -867,13 +867,13 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -951,7 +951,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'FirewallRules'
         if 'response_type' in kwargs:
@@ -1070,13 +1070,13 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'firewallrule_id'
-            'firewallrule'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'firewallrule_id',
+            'firewallrule',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1160,7 +1160,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'FirewallRule'
         if 'response_type' in kwargs:
@@ -1275,12 +1275,12 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'firewallrule'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'firewallrule',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1358,7 +1358,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'FirewallRule'
         if 'response_type' in kwargs:
@@ -1477,13 +1477,13 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'firewallrule_id'
-            'firewallrule'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'firewallrule_id',
+            'firewallrule',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1567,7 +1567,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'FirewallRule'
         if 'response_type' in kwargs:
@@ -1682,12 +1682,12 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -1759,7 +1759,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Nics'
         if 'response_type' in kwargs:
@@ -1874,12 +1874,12 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'nic'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'nic',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1957,7 +1957,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Nic'
         if 'response_type' in kwargs:
@@ -2068,11 +2068,11 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2144,7 +2144,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Nic'
         if 'response_type' in kwargs:
@@ -2259,12 +2259,12 @@ class NicApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'nic_id'
-            'nic'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'nic_id',
+            'nic',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2342,7 +2342,7 @@ class NicApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Nic'
         if 'response_type' in kwargs:

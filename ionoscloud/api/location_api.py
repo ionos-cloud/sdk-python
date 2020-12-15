@@ -97,9 +97,9 @@ class LocationApi(object):
         local_var_params = locals()
 
         all_params = [
-            'region_id'
-            'pretty'
-            'depth'
+            'region_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -155,7 +155,7 @@ class LocationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Locations'
         if 'response_type' in kwargs:
@@ -262,10 +262,10 @@ class LocationApi(object):
         local_var_params = locals()
 
         all_params = [
-            'region_id'
-            'location_id'
-            'pretty'
-            'depth'
+            'region_id',
+            'location_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -327,7 +327,7 @@ class LocationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Location'
         if 'response_type' in kwargs:
@@ -426,8 +426,8 @@ class LocationApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -477,7 +477,7 @@ class LocationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Locations'
         if 'response_type' in kwargs:

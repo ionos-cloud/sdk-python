@@ -105,11 +105,11 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'cdrom_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'cdrom_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -177,7 +177,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -288,11 +288,11 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'cdrom_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'cdrom_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -360,7 +360,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:
@@ -475,12 +475,12 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -552,7 +552,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Cdroms'
         if 'response_type' in kwargs:
@@ -663,11 +663,11 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'cdrom'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'cdrom',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -739,7 +739,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:
@@ -846,10 +846,10 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -911,7 +911,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -1018,10 +1018,10 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1083,7 +1083,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Server'
         if 'response_type' in kwargs:
@@ -1198,12 +1198,12 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'pretty'
-            'depth'
-            'upgrade_needed'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'pretty',
+            'depth',
+            'upgrade_needed',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -1271,7 +1271,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Servers'
         if 'response_type' in kwargs:
@@ -1382,11 +1382,11 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'server'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'server',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1458,7 +1458,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Server'
         if 'response_type' in kwargs:
@@ -1565,10 +1565,10 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1634,7 +1634,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Server'
         if 'response_type' in kwargs:
@@ -1745,11 +1745,11 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'server'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'server',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1821,7 +1821,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Server'
         if 'response_type' in kwargs:
@@ -1928,10 +1928,10 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1993,7 +1993,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -2100,10 +2100,10 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2165,7 +2165,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -2272,10 +2272,10 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2337,7 +2337,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -2444,10 +2444,10 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2509,7 +2509,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -2620,11 +2620,11 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'volume_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'volume_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2692,7 +2692,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -2803,11 +2803,11 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'volume_id'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'volume_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2875,7 +2875,7 @@ class ServerApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -2990,12 +2990,12 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -3178,11 +3178,11 @@ class ServerApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'volume'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'volume',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(

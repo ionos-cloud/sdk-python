@@ -36,10 +36,10 @@ class TestKubernetesNodeMetadata(unittest.TestCase):
         # model = ionoscloud.models.kubernetes_node_metadata.KubernetesNodeMetadata()  # noqa: E501
         if include_optional :
             return KubernetesNodeMetadata(
-                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3'
-                created_date = '2015-12-04T14:34:09.809Z'
-                last_modified_date = '2015-12-04T14:34:09.809Z'
-                state = 'AVAILABLE'
+                etag = '45480eb3fbfc31f1d916c1eaa4abdcc3',
+                created_date = '2015-12-04T14:34:09.809Z',
+                last_modified_date = '2015-12-04T14:34:09.809Z',
+                state = 'AVAILABLE',
                 last_software_updated_date = '2015-12-04T14:34:09.809Z'
             )
         else :

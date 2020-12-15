@@ -36,9 +36,9 @@ class TestCdroms(unittest.TestCase):
         # model = ionoscloud.models.cdroms.Cdroms()  # noqa: E501
         if include_optional :
             return Cdroms(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.image.Image(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
@@ -71,9 +71,9 @@ class TestCdroms(unittest.TestCase):
                             licence_type = 'LINUX', 
                             image_type = 'HDD', 
                             public = True, ), )
-                    ]
-                offset = 0
-                limit = 1000
+                    ],
+                offset = 0,
+                limit = 1000,
                 links = ionoscloud.models.pagination_links.PaginationLinks(
                     prev = '<PREVIOUS-PAGE-URI>', 
                     self = '<THIS-PAGE-URI>', 

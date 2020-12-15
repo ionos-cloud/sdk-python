@@ -36,7 +36,7 @@ class TestLabelResourceProperties(unittest.TestCase):
         # model = ionoscloud.models.label_resource_properties.LabelResourceProperties()  # noqa: E501
         if include_optional :
             return LabelResourceProperties(
-                key = 'environment'
+                key = 'environment',
                 value = 'production'
             )
         else :

@@ -98,7 +98,7 @@ class TestDataCenterEntities(unittest.TestCase):
                     _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
-                        next = '<NEXT-PAGE-URI>', ), )
+                        next = '<NEXT-PAGE-URI>', ), ),
                 volumes = ionoscloud.models.volumes.Volumes(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
@@ -142,7 +142,7 @@ class TestDataCenterEntities(unittest.TestCase):
                     _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
-                        next = '<NEXT-PAGE-URI>', ), )
+                        next = '<NEXT-PAGE-URI>', ), ),
                 loadbalancers = ionoscloud.models.loadbalancers.Loadbalancers(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 
@@ -182,7 +182,7 @@ class TestDataCenterEntities(unittest.TestCase):
                     _links = ionoscloud.models.pagination_links.PaginationLinks(
                         prev = '<PREVIOUS-PAGE-URI>', 
                         self = '<THIS-PAGE-URI>', 
-                        next = '<NEXT-PAGE-URI>', ), )
+                        next = '<NEXT-PAGE-URI>', ), ),
                 lans = ionoscloud.models.lans.Lans(
                     id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
                     type = "collection", 

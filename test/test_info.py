@@ -36,8 +36,8 @@ class TestInfo(unittest.TestCase):
         # model = ionoscloud.models.info.Info()  # noqa: E501
         if include_optional :
             return Info(
-                href = ''
-                name = 'CLOUD API'
+                href = '',
+                name = 'CLOUD API',
                 version = '1.0'
             )
         else :

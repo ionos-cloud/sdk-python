@@ -39,7 +39,7 @@ class TestRequestTarget(unittest.TestCase):
                 target = ionoscloud.models.resource_reference.ResourceReference(
                     id = '', 
                     type = "resource", 
-                    href = '<RESOURCE-URI>', )
+                    href = '<RESOURCE-URI>', ),
                 status = 'QUEUED'
             )
         else :

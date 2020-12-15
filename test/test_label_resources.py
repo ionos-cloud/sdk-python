@@ -36,9 +36,9 @@ class TestLabelResources(unittest.TestCase):
         # model = ionoscloud.models.label_resources.LabelResources()  # noqa: E501
         if include_optional :
             return LabelResources(
-                id = 'labels'
-                type = 'collection'
-                href = '<RESOURCE-URI>'
+                id = 'labels',
+                type = 'collection',
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.label_resource.LabelResource(
                         id = 'environment', 
@@ -55,9 +55,9 @@ class TestLabelResources(unittest.TestCase):
                         properties = ionoscloud.models.label_resource_properties.LabelResourceProperties(
                             key = 'environment', 
                             value = 'production', ), )
-                    ]
-                offset = 0
-                limit = 1000
+                    ],
+                offset = 0,
+                limit = 1000,
                 links = ionoscloud.models.pagination_links.PaginationLinks(
                     prev = '<PREVIOUS-PAGE-URI>', 
                     self = '<THIS-PAGE-URI>', 

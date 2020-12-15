@@ -36,9 +36,9 @@ class TestLabels(unittest.TestCase):
         # model = ionoscloud.models.labels.Labels()  # noqa: E501
         if include_optional :
             return Labels(
-                id = 'labels'
-                type = 'collection'
-                href = '<RESOURCE-URI>'
+                id = 'labels',
+                type = 'collection',
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.label.Label(
                         id = 'urn:label:datacenter:700e1cab-99b2-4c30-ba8c-1d273ddba022:environment', 

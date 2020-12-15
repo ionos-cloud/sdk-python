@@ -36,9 +36,9 @@ class TestImages(unittest.TestCase):
         # model = ionoscloud.models.images.Images()  # noqa: E501
         if include_optional :
             return Images(
-                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c'
-                type = "collection"
-                href = '<RESOURCE-URI>'
+                id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c',
+                type = "collection",
+                href = '<RESOURCE-URI>',
                 items = [
                     ionoscloud.models.image.Image(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 

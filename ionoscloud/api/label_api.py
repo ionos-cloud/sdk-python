@@ -101,10 +101,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'key'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -166,7 +166,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -273,10 +273,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'key'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -338,7 +338,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -449,11 +449,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -519,7 +519,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResources'
         if 'response_type' in kwargs:
@@ -626,10 +626,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'label'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -695,7 +695,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -806,11 +806,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'key'
-            'label'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'key',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -882,7 +882,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -993,11 +993,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'key'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1065,7 +1065,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -1176,11 +1176,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'key'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1248,7 +1248,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -1363,12 +1363,12 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'server_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -1440,7 +1440,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResources'
         if 'response_type' in kwargs:
@@ -1551,11 +1551,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'label'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1627,7 +1627,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -1742,12 +1742,12 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'server_id'
-            'key'
-            'label'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'server_id',
+            'key',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -1825,7 +1825,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -1936,11 +1936,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'key'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2008,7 +2008,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -2119,11 +2119,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'key'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2191,7 +2191,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -2306,12 +2306,12 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'pretty'
-            'depth'
-            'x_contract_number'
-            'offset'
+            'datacenter_id',
+            'volume_id',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
             'limit'
         ]
         all_params.extend(
@@ -2383,7 +2383,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResources'
         if 'response_type' in kwargs:
@@ -2494,11 +2494,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'label'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume_id',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2570,7 +2570,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -2685,12 +2685,12 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'datacenter_id'
-            'volume_id'
-            'key'
-            'label'
-            'pretty'
-            'depth'
+            'datacenter_id',
+            'volume_id',
+            'key',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2768,7 +2768,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -2875,10 +2875,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'ipblock_id'
-            'key'
-            'pretty'
-            'depth'
+            'ipblock_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -2940,7 +2940,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -3047,10 +3047,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'ipblock_id'
-            'key'
-            'pretty'
-            'depth'
+            'ipblock_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3112,7 +3112,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -3215,9 +3215,9 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'ipblock_id'
-            'pretty'
-            'depth'
+            'ipblock_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3273,7 +3273,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResources'
         if 'response_type' in kwargs:
@@ -3380,10 +3380,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'ipblock_id'
-            'label'
-            'pretty'
-            'depth'
+            'ipblock_id',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3449,7 +3449,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -3560,11 +3560,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'ipblock_id'
-            'key'
-            'label'
-            'pretty'
-            'depth'
+            'ipblock_id',
+            'key',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3636,7 +3636,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -3739,9 +3739,9 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'labelurn'
-            'pretty'
-            'depth'
+            'labelurn',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3797,7 +3797,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Label'
         if 'response_type' in kwargs:
@@ -3896,8 +3896,8 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'pretty'
-            'depth'
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -3947,7 +3947,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'Labels'
         if 'response_type' in kwargs:
@@ -4054,10 +4054,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'snapshot_id'
-            'key'
-            'pretty'
-            'depth'
+            'snapshot_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4119,7 +4119,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'object'
         if 'response_type' in kwargs:
@@ -4226,10 +4226,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'snapshot_id'
-            'key'
-            'pretty'
-            'depth'
+            'snapshot_id',
+            'key',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4291,7 +4291,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -4394,9 +4394,9 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'snapshot_id'
-            'pretty'
-            'depth'
+            'snapshot_id',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4452,7 +4452,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResources'
         if 'response_type' in kwargs:
@@ -4559,10 +4559,10 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'snapshot_id'
-            'label'
-            'pretty'
-            'depth'
+            'snapshot_id',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4628,7 +4628,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
@@ -4739,11 +4739,11 @@ class LabelApi(object):
         local_var_params = locals()
 
         all_params = [
-            'snapshot_id'
-            'key'
-            'label'
-            'pretty'
-            'depth'
+            'snapshot_id',
+            'key',
+            'label',
+            'pretty',
+            'depth',
             'x_contract_number'
         ]
         all_params.extend(
@@ -4815,7 +4815,7 @@ class LabelApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication','Token Authentication']  # noqa: E501
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
         response_type = 'LabelResource'
         if 'response_type' in kwargs:
