@@ -33,13 +33,13 @@ def read(*parts):
 if os.path.isfile("README.md"):
     long_desc = read('README.md')
 else:
-    long_desc = "Ionos Enterprise API Client Library for Python"
+    long_desc = "Ionos Cloud API Client Library for Python"
 
 setup(
     name=NAME,
     version=VERSION,
-    description="CLOUD API - EXPERIMENTAL version used for testing",
-    author='Ionos Enterprise',
+    description="Python SDK for the Ionos Cloud API",
+    author='Ionos Cloud',
     author_email='sdk@cloud.ionos.com',
     long_description=long_desc,
     long_description_content_type='text/markdown',
