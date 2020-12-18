@@ -51,7 +51,8 @@ class TestUser(unittest.TestCase):
                     force_sec_auth = True, 
                     sec_auth_active = True, 
                     s3_canonical_user_id = '', 
-                    password = '', ),
+                    password = '', 
+                    active = True, ),
                 entities = ionoscloud.models.users_entities.UsersEntities(
                     owns = ionoscloud.models.resources_users.ResourcesUsers(
                         id = '15f67991-0f51-4efc-a8ad-ef1fb31a480c', 
@@ -90,7 +91,8 @@ class TestUser(unittest.TestCase):
                     force_sec_auth = True, 
                     sec_auth_active = True, 
                     s3_canonical_user_id = '', 
-                    password = '', ),
+                    password = '', 
+                    active = True, ),
         )
 
     def testUser(self):

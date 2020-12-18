@@ -272,7 +272,7 @@ class KubernetesNodePoolPropertiesForPut(object):
     def availability_zone(self):
         """Gets the availability_zone of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
 
-        The availability zone in which the server should exist  # noqa: E501
+        The availability zone in which the target VM should exist  # noqa: E501
 
         :return: The availability_zone of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
         :rtype: str
@@ -283,7 +283,7 @@ class KubernetesNodePoolPropertiesForPut(object):
     def availability_zone(self, availability_zone):
         """Sets the availability_zone of this KubernetesNodePoolPropertiesForPut.
 
-        The availability zone in which the server should exist  # noqa: E501
+        The availability zone in which the target VM should exist  # noqa: E501
 
         :param availability_zone: The availability_zone of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
         :type availability_zone: str

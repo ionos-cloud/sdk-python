@@ -41,6 +41,7 @@ class UserProperties(object):
         'sec_auth_active': 'bool',
         's3_canonical_user_id': 'str',
         'password': 'str',
+        'active': 'bool',
     }
 
     attribute_map = {
@@ -52,9 +53,10 @@ class UserProperties(object):
         'sec_auth_active': 'secAuthActive',
         's3_canonical_user_id': 's3CanonicalUserId',
         'password': 'password',
+        'active': 'active',
     }
 
-    def __init__(self, firstname=None, lastname=None, email=None, administrator=None, force_sec_auth=None, sec_auth_active=None, s3_canonical_user_id=None, password=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, firstname=None, lastname=None, email=None, administrator=None, force_sec_auth=None, sec_auth_active=None, s3_canonical_user_id=None, password=None, active=None, local_vars_configuration=None):  # noqa: E501
         """UserProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -68,6 +70,7 @@ class UserProperties(object):
         self._sec_auth_active = None
         self._s3_canonical_user_id = None
         self._password = None
+        self._active = None
         self.discriminator = None
 
         if firstname is not None:
@@ -86,6 +89,8 @@ class UserProperties(object):
             self.s3_canonical_user_id = s3_canonical_user_id
         if password is not None:
             self.password = password
+        if active is not None:
+            self.active = active
 
     @property
     def firstname(self):
@@ -270,6 +275,29 @@ class UserProperties(object):
         """
 
         self._password = password
+
+    @property
+    def active(self):
+        """Gets the active of this UserProperties.  # noqa: E501
+
+        indicates if the user is active  # noqa: E501
+
+        :return: The active of this UserProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._active
+
+    @active.setter
+    def active(self, active):
+        """Sets the active of this UserProperties.
+
+        indicates if the user is active  # noqa: E501
+
+        :param active: The active of this UserProperties.  # noqa: E501
+        :type active: bool
+        """
+
+        self._active = active
 
     def to_dict(self):
         """Returns the model properties as a dict"""
