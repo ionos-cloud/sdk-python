@@ -178,14 +178,14 @@ class KubernetesApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def k8s_find_by_s_cluster_id(self, k8s_cluster_id, **kwargs):  # noqa: E501
+    def k8s_find_by_cluster_id(self, k8s_cluster_id, **kwargs):  # noqa: E501
         """Retrieve Kubernetes Cluster  # noqa: E501
 
         This will retrieve a single Kubernetes Cluster.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_find_by_s_cluster_id(k8s_cluster_id, async_req=True)
+        >>> thread = api.k8s_find_by_cluster_id(k8s_cluster_id, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
@@ -212,16 +212,16 @@ class KubernetesApi(object):
         :rtype: KubernetesCluster
         """
         kwargs['_return_http_data_only'] = True
-        return self.k8s_find_by_s_cluster_id_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
+        return self.k8s_find_by_cluster_id_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
 
-    def k8s_find_by_s_cluster_id_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
+    def k8s_find_by_cluster_id_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
         """Retrieve Kubernetes Cluster  # noqa: E501
 
         This will retrieve a single Kubernetes Cluster.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_find_by_s_cluster_id_with_http_info(k8s_cluster_id, async_req=True)
+        >>> thread = api.k8s_find_by_cluster_id_with_http_info(k8s_cluster_id, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
@@ -278,19 +278,19 @@ class KubernetesApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_find_by_s_cluster_id" % key
+                    " to method k8s_find_by_cluster_id" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['k8s_cluster_id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `k8s_cluster_id` when calling `k8s_find_by_s_cluster_id`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `k8s_cluster_id` when calling `k8s_find_by_cluster_id`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_find_by_s_cluster_id`, must be a value less than or equal to `10`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_find_by_cluster_id`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_find_by_s_cluster_id`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_find_by_cluster_id`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}

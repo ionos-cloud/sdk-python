@@ -35,8 +35,8 @@ class TestKubernetesApi(unittest.TestCase):
         """
         pass
 
-    def test_k8s_find_by_s_cluster_id(self):
-        """Test case for k8s_find_by_s_cluster_id
+    def test_k8s_find_by_cluster_id(self):
+        """Test case for k8s_find_by_cluster_id
 
         Retrieve Kubernetes Cluster  # noqa: E501
         """
