@@ -23,7 +23,7 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```python
+```
 from __future__ import print_function
 import time
 import ionoscloud
@@ -37,13 +37,11 @@ configuration = ionoscloud.Configuration(
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples with auth method are provided below
-
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
@@ -52,7 +50,6 @@ with ionoscloud.ApiClient(configuration) as api_client:
 pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
 depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
 x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
     try:
         # Delete a Backup Unit
         api_response = api_instance.backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
