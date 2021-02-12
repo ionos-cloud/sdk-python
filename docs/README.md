@@ -10,21 +10,22 @@ The IONOS Cloud SDK for Python provides you with access to the IONOS Cloud API. 
 
 ### pip install
 
-Since this package is hosted on PyPI (https://pypi.org/) you can install it like this
+Since this package is hosted on PyPI \([https://pypi.org/](https://pypi.org/)\) you can install it like this
 
-```sh
+```bash
 pip install ionoscloud
 ```
 
 If the python package is hosted on a repository, you can install directly using:
 
-```sh
+```bash
 pip install git+https://github.com/ionos-cloud/sdk-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/ionos-cloud/sdk-python.git`)
 
+\(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/ionos-cloud/sdk-python.git`\)
 
 Then import the package:
+
 ```python
 import ionoscloud
 ```
@@ -33,12 +34,14 @@ import ionoscloud
 
 Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
-```sh
+```bash
 python setup.py install --user
 ```
-(or `sudo python setup.py install` to install the package for all users)
+
+\(or `sudo python setup.py install` to install the package for all users\)
 
 Then import the package:
+
 ```python
 import ionoscloud
 ```
