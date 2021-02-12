@@ -10,7 +10,7 @@ The IONOS Cloud SDK for Python provides you with access to the IONOS Cloud API. 
 
 ### pip install
 
-Since this package is hosted on Pypi you can install it like this
+Since this package is hosted on PyPI (https://pypi.org/) you can install it like this
 
 ```sh
 pip install ionoscloud
