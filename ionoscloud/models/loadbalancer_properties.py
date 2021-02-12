@@ -105,12 +105,9 @@ class LoadbalancerProperties(object):
         :param ip: The ip of this LoadbalancerProperties.  # noqa: E501
         :type ip: str
         """
-        allowed_values = ["@Valid IP address@", "null"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and ip not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `ip` ({0}), must be one of {1}"  # noqa: E501
-                .format(ip, allowed_values)
-            )
+        if (self.local_vars_configuration.client_side_validation and
+                ip is not None and not re.search(r'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$', ip)):  # noqa: E501
+            raise ValueError(r"Invalid value for `ip`, must be a follow pattern or equal to `/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/`")  # noqa: E501
 
         self._ip = ip
 

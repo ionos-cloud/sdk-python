@@ -221,11 +221,16 @@ conf = ionoscloud.Configuration(
         self.safe_chars_for_path_param = '/'
         """Safe chars for path_param
         """
-        self.retries = None
+        self.retries = False
         """Adding retries to override urllib3 default value 3
         """
         # Enable client side validation
         self.client_side_validation = False
+
+        """Default maximum number of api call retries"""
+        self.max_retries = 3
+        self.wait_time = 100
+        self.max_wait_time = 2000
 
     def __deepcopy__(self, memo):
         cls = self.__class__
@@ -426,7 +431,7 @@ conf = ionoscloud.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 5.0\n"\
-               "SDK Package Version: 5.0.3".\
+               "SDK Package Version: 5.0.4".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):

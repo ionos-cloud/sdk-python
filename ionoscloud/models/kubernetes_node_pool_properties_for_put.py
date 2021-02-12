@@ -46,8 +46,8 @@ class KubernetesNodePoolPropertiesForPut(object):
         'maintenance_window': 'KubernetesMaintenanceWindow',
         'auto_scaling': 'KubernetesAutoScaling',
         'lans': 'list[KubernetesNodePoolLan]',
-        'labels': 'KubernetesNodePoolLabel',
-        'annotations': 'KubernetesNodePoolAnnotation',
+        'labels': 'dict(str, str)',
+        'annotations': 'dict(str, str)',
         'public_ips': 'list[str]',
     }
 
@@ -447,9 +447,10 @@ class KubernetesNodePoolPropertiesForPut(object):
     def labels(self):
         """Gets the labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
 
+        map of labels attached to node pool  # noqa: E501
 
         :return: The labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :rtype: KubernetesNodePoolLabel
+        :rtype: dict(str, str)
         """
         return self._labels
 
@@ -457,9 +458,10 @@ class KubernetesNodePoolPropertiesForPut(object):
     def labels(self, labels):
         """Sets the labels of this KubernetesNodePoolPropertiesForPut.
 
+        map of labels attached to node pool  # noqa: E501
 
         :param labels: The labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :type labels: KubernetesNodePoolLabel
+        :type labels: dict(str, str)
         """
 
         self._labels = labels
@@ -468,9 +470,10 @@ class KubernetesNodePoolPropertiesForPut(object):
     def annotations(self):
         """Gets the annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
 
+        map of annotations attached to node pool  # noqa: E501
 
         :return: The annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :rtype: KubernetesNodePoolAnnotation
+        :rtype: dict(str, str)
         """
         return self._annotations
 
@@ -478,9 +481,10 @@ class KubernetesNodePoolPropertiesForPut(object):
     def annotations(self, annotations):
         """Sets the annotations of this KubernetesNodePoolPropertiesForPut.
 
+        map of annotations attached to node pool  # noqa: E501
 
         :param annotations: The annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :type annotations: KubernetesNodePoolAnnotation
+        :type annotations: dict(str, str)
         """
 
         self._annotations = annotations

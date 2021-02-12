@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "5.0.3"
+__version__ = "5.0.4"
 
 # import apis into sdk package
 from ionoscloud.api.backup_unit_api import BackupUnitApi
@@ -96,9 +96,7 @@ from ionoscloud.models.kubernetes_maintenance_window import KubernetesMaintenanc
 from ionoscloud.models.kubernetes_node import KubernetesNode
 from ionoscloud.models.kubernetes_node_metadata import KubernetesNodeMetadata
 from ionoscloud.models.kubernetes_node_pool import KubernetesNodePool
-from ionoscloud.models.kubernetes_node_pool_annotation import KubernetesNodePoolAnnotation
 from ionoscloud.models.kubernetes_node_pool_for_put import KubernetesNodePoolForPut
-from ionoscloud.models.kubernetes_node_pool_label import KubernetesNodePoolLabel
 from ionoscloud.models.kubernetes_node_pool_lan import KubernetesNodePoolLan
 from ionoscloud.models.kubernetes_node_pool_properties import KubernetesNodePoolProperties
 from ionoscloud.models.kubernetes_node_pool_properties_for_post import KubernetesNodePoolPropertiesForPost

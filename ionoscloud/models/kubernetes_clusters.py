@@ -94,7 +94,7 @@ class KubernetesClusters(object):
     def type(self):
         """Gets the type of this KubernetesClusters.  # noqa: E501
 
-        The type of resource within a collection  # noqa: E501
+        The type of object that has been created  # noqa: E501
 
         :return: The type of this KubernetesClusters.  # noqa: E501
         :rtype: str
@@ -105,12 +105,12 @@ class KubernetesClusters(object):
     def type(self, type):
         """Sets the type of this KubernetesClusters.
 
-        The type of resource within a collection  # noqa: E501
+        The type of object that has been created  # noqa: E501
 
         :param type: The type of this KubernetesClusters.  # noqa: E501
         :type type: str
         """
-        allowed_values = ["k8s"]  # noqa: E501
+        allowed_values = ["collection"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501

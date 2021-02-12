@@ -161,7 +161,7 @@ class KubernetesNodeMetadata(object):
         :param state: The state of this KubernetesNodeMetadata.  # noqa: E501
         :type state: str
         """
-        allowed_values = ["PROVISIONING", "PROVISIONED", "READY", "TERMINATING", "REBUILDING", "BUSY"]  # noqa: E501
+        allowed_values = ["PROVISIONING", "PROVISIONED", "READY", "TERMINATING", "REBUILDING", "BUSY", "UNKNOWN"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and state not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `state` ({0}), must be one of {1}"  # noqa: E501

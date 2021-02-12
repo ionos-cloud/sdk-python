@@ -14,6 +14,7 @@ import atexit
 import datetime
 from dateutil.parser import parse
 import json
+import http
 import mimetypes
 from multiprocessing.pool import ThreadPool
 import os
@@ -27,6 +28,7 @@ import sys
 # python 2 and python 3 compatibility library
 import six
 from six.moves.urllib.parse import quote
+from urllib3.exceptions import ProtocolError
 
 from ionoscloud.configuration import Configuration
 import ionoscloud.models
@@ -111,7 +113,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'ionos-cloud-sdk-python/5.0.3'
+        self.user_agent = 'ionos-cloud-sdk-python/5.0.4'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
@@ -147,9 +149,6 @@ class ApiClient(object):
     def user_agent(self, value):
         self.default_headers['User-Agent'] = value
 
-    """Default maximum number of api call retries"""
-    max_retries = 3
-
     def set_default_header(self, header_name, header_value):
         self.default_headers[header_name] = header_value
 
@@ -162,6 +161,7 @@ class ApiClient(object):
             _request_auth=None):
 
         config = self.configuration
+        logger = logging.getLogger(__name__)
 
         # header parameters
         header_params = header_params or {}
@@ -219,17 +219,52 @@ class ApiClient(object):
             number_of_calls = 0
             while True:
                 # perform request and return response
-                response_data = self.request(
-                    method, url, query_params=query_params, headers=header_params,
-                    post_params=post_params, body=body,
-                    _preload_content=_preload_content,
-                    _request_timeout=_request_timeout)
-                number_of_calls += 1
-                retry_after_value = response_data.getheader('retry-after')
-                if retry_after_value is None or number_of_calls >= self.max_retries:
+                try:
+                    response_data = self.request(
+                        method, url, query_params=query_params, headers=header_params,
+                        post_params=post_params, body=body,
+                        _preload_content=_preload_content,
+                        _request_timeout=_request_timeout)
                     break
-                else:
-                    time.sleep(int(retry_after_value))
+                except ApiException as response_error:
+                    number_of_calls += 1
+
+                    if response_error.status in (
+                        http.HTTPStatus.BAD_GATEWAY.value, 
+                        http.HTTPStatus.SERVICE_UNAVAILABLE.value,
+                        http.HTTPStatus.GATEWAY_TIMEOUT.value,
+                    ):
+                        backoff_time = config.wait_time
+                    elif response_error.status == http.HTTPStatus.TOO_MANY_REQUESTS.value:
+                        backoff_time = config.wait_time
+                        try:
+                            backoff_time = int(response_error.headers['Retry-After'])
+                        except ValueError:
+                            pass
+                    else:
+                        raise response_error
+
+                    if number_of_calls >= config.max_retries:
+                        if config.debug:
+                            logger.debug('number of maximum retries exceeded {}'.format(config.max_retries))
+                        raise response_error
+
+                    if backoff_time > config.max_wait_time:
+                        backoff_time = config.max_wait_time
+
+                    if config.debug:
+                        logger.debug('HTTP response body ~BEGIN~\n#{}\n~END~\n'.format(response.body))
+
+                    time.sleep(backoff_time)
+                except ProtocolError as protocol_error:
+                    number_of_calls += 1
+                    if number_of_calls >= config.max_retries:
+                        if config.debug:
+                            logger.debug('number of maximum retries exceeded {}'.format(config.max_retries))
+                        raise protocol_error
+         
+                    time.sleep(config.wait_time)           
+
         except ApiException as e:
             e.body = e.body.decode('utf-8') if six.PY3 else e.body
             e.url = url

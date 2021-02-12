@@ -268,7 +268,7 @@ class DatacenterElementMetadata(object):
         :param state: The state of this DatacenterElementMetadata.  # noqa: E501
         :type state: str
         """
-        allowed_values = ["AVAILABLE", "INACTIVE", "BUSY", "DEPLOYING", "ACTIVE", "FAILED", "SUSPENDED", "FAILED_SUSPENDED", "UPDATING", "FAILED_UPDATING", "DESTROYING", "FAILED_DESTROYING", "TERMINATED"]  # noqa: E501
+        allowed_values = ["AVAILABLE", "INACTIVE", "BUSY", "DEPLOYING", "ACTIVE", "FAILED", "SUSPENDED", "FAILED_SUSPENDED", "UPDATING", "FAILED_UPDATING", "DESTROYING", "FAILED_DESTROYING", "TERMINATED", "UNKNOWN"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and state not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `state` ({0}), must be one of {1}"  # noqa: E501

@@ -165,12 +165,9 @@ class FirewallruleProperties(object):
         :param source_mac: The source_mac of this FirewallruleProperties.  # noqa: E501
         :type source_mac: str
         """
-        allowed_values = ["@Valid MAC address@", "null"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and source_mac not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `source_mac` ({0}), must be one of {1}"  # noqa: E501
-                .format(source_mac, allowed_values)
-            )
+        if (self.local_vars_configuration.client_side_validation and
+                source_mac is not None and not re.search(r'^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$', source_mac)):  # noqa: E501
+            raise ValueError(r"Invalid value for `source_mac`, must be a follow pattern or equal to `/^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$/`")  # noqa: E501
 
         self._source_mac = source_mac
 
@@ -194,12 +191,9 @@ class FirewallruleProperties(object):
         :param source_ip: The source_ip of this FirewallruleProperties.  # noqa: E501
         :type source_ip: str
         """
-        allowed_values = ["@Valid IP address@", "null"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and source_ip not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `source_ip` ({0}), must be one of {1}"  # noqa: E501
-                .format(source_ip, allowed_values)
-            )
+        if (self.local_vars_configuration.client_side_validation and
+                source_ip is not None and not re.search(r'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$', source_ip)):  # noqa: E501
+            raise ValueError(r"Invalid value for `source_ip`, must be a follow pattern or equal to `/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/`")  # noqa: E501
 
         self._source_ip = source_ip
 
@@ -223,12 +217,9 @@ class FirewallruleProperties(object):
         :param target_ip: The target_ip of this FirewallruleProperties.  # noqa: E501
         :type target_ip: str
         """
-        allowed_values = ["@Valid IP address@", "null"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and target_ip not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `target_ip` ({0}), must be one of {1}"  # noqa: E501
-                .format(target_ip, allowed_values)
-            )
+        if (self.local_vars_configuration.client_side_validation and
+                target_ip is not None and not re.search(r'^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$', target_ip)):  # noqa: E501
+            raise ValueError(r"Invalid value for `target_ip`, must be a follow pattern or equal to `/^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/`")  # noqa: E501
 
         self._target_ip = target_ip
 
