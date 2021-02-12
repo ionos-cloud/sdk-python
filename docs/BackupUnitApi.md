@@ -23,7 +23,7 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```
+```python
 from __future__ import print_function
 import time
 import ionoscloud
