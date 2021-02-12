@@ -1,4 +1,4 @@
-# ionoscloud.RequestApi
+# RequestApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
