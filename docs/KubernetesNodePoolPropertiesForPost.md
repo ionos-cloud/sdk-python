@@ -1,9 +1,9 @@
 # KubernetesNodePoolPropertiesForPost
 
 ## Properties
-Name | Type | Description | Notes
+| Name | Type | Description | Notes |
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+| **name** | **str** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
 **datacenter_id** | **str** | A valid uuid of the datacenter on which user has access | 
 **node_count** | **int** | Number of nodes part of the Node Pool | 
 **cpu_family** | **str** | A valid cpu family name | 
@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **labels** | **dict(str, str)** | map of labels attached to node pool | [optional] 
 **annotations** | **dict(str, str)** | map of annotations attached to node pool | [optional] 
 **public_ips** | **list[str]** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. | [optional] 
+ |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

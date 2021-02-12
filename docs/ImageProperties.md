@@ -1,9 +1,9 @@
 # ImageProperties
 
 ## Properties
-Name | Type | Description | Notes
+| Name | Type | Description | Notes |
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | A name of that resource | [optional] 
+| **name** | **str** | A name of that resource | [optional] 
 **description** | **str** | Human readable description | [optional] 
 **location** | **str** | Location of that image/snapshot.  | [optional] [readonly] 
 **size** | **float** | The size of the image in GB | [optional] [readonly] 
@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **licence_type** | **str** | OS type of this Image | 
 **image_type** | **str** | This indicates the type of image | [optional] [readonly] 
 **public** | **bool** | Indicates if the image is part of the public repository or not | [optional] [readonly] 
+ |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

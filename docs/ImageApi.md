@@ -2,7 +2,7 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
+| Method | HTTP request | Description |
 ------------- | ------------- | -------------
 [**images_delete**](ImageApi.md#images_delete) | **DELETE** /images/{imageId} | Delete an Image
 [**images_find_by_id**](ImageApi.md#images_find_by_id) | **GET** /images/{imageId} | Retrieve an Image
@@ -102,8 +102,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **image_id** | **str**|  | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -221,8 +221,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **image_id** | **str**|  | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -338,8 +338,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] 
@@ -458,8 +458,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **image_id** | **str**|  | 
  **image** | [**ImageProperties**](ImageProperties.md)| Modified Image | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -580,8 +580,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **image_id** | **str**|  | 
  **image** | [**Image**](Image.md)| Modified Image | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]

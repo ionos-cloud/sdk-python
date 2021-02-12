@@ -2,7 +2,7 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
+| Method | HTTP request | Description |
 ------------- | ------------- | -------------
 [**datacenters_servers_nics_delete**](NicApi.md#datacenters_servers_nics_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
 [**datacenters_servers_nics_find_by_id**](NicApi.md#datacenters_servers_nics_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
@@ -113,8 +113,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -238,8 +238,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -365,8 +365,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -493,8 +493,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -623,8 +623,8 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -754,8 +754,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -883,8 +883,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -1013,8 +1013,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -1142,8 +1142,8 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1270,8 +1270,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 
@@ -1396,8 +1396,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic** | [**Nic**](Nic.md)| Nic to be created | 
@@ -1523,8 +1523,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **nic_id** | **str**| The unique ID of the NIC | 

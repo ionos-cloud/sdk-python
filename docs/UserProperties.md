@@ -1,9 +1,9 @@
 # UserProperties
 
 ## Properties
-Name | Type | Description | Notes
+| Name | Type | Description | Notes |
 ------------ | ------------- | ------------- | -------------
-**firstname** | **str** | first name of the user | [optional] 
+| **firstname** | **str** | first name of the user | [optional] 
 **lastname** | **str** | last name of the user | [optional] 
 **email** | **str** | email address of the user | [optional] 
 **administrator** | **bool** | indicates if the user has admin rights or not | [optional] 
@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **s3_canonical_user_id** | **str** | Canonical (S3) id of the user for a given identity | [optional] 
 **password** | **str** | User password | [optional] 
 **active** | **bool** | indicates if the user is active | [optional] 
+ |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

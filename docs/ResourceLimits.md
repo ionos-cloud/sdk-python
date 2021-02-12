@@ -1,9 +1,9 @@
 # ResourceLimits
 
 ## Properties
-Name | Type | Description | Notes
+| Name | Type | Description | Notes |
 ------------ | ------------- | ------------- | -------------
-**cores_per_server** | **int** | maximum number of cores per server | 
+| **cores_per_server** | **int** | maximum number of cores per server | 
 **cores_per_contract** | **int** | maximum cores per contract | 
 **cores_provisioned** | **int** | number of cores provisioned | 
 **ram_per_server** | **int** | maximum ram per server | 
@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **reserved_ips_in_use** | **int** | reserved ips in use | 
 **k8s_cluster_limit_total** | **int** | k8s clusters total limit | 
 **k8s_clusters_provisioned** | **int** | k8s clusters provisioned | 
+ |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

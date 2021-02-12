@@ -2,7 +2,7 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
+| Method | HTTP request | Description |
 ------------- | ------------- | -------------
 [**datacenters_servers_cdroms_delete**](ServerApi.md#datacenters_servers_cdroms_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM
 [**datacenters_servers_cdroms_find_by_id**](ServerApi.md#datacenters_servers_cdroms_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM
@@ -119,8 +119,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the Datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **cdrom_id** | **str**| The unique ID of the CD-ROM | 
@@ -244,8 +244,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the Datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **cdrom_id** | **str**| The unique ID of the CD-ROM | 
@@ -371,8 +371,8 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the Datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -497,8 +497,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the Datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **cdrom** | [**Image**](Image.md)| CD-ROM to be attached | 
@@ -620,8 +620,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -742,8 +742,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -868,8 +868,8 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -994,8 +994,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the server | 
  **server** | [**ServerProperties**](ServerProperties.md)| Modified properties of Server | 
@@ -1117,8 +1117,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server** | [**Server**](Server.md)| Server to be created | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1241,8 +1241,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the server | 
  **server** | [**Server**](Server.md)| Modified Server | 
@@ -1364,8 +1364,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1486,8 +1486,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1608,8 +1608,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1730,8 +1730,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1854,8 +1854,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the Datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **volume_id** | **str**| The unique ID of the Volume | 
@@ -1979,8 +1979,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the Datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **volume_id** | **str**| The unique ID of the Volume | 
@@ -2063,8 +2063,8 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the Datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -2147,8 +2147,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the Datacenter | 
  **server_id** | **str**| The unique ID of the Server | 
  **volume** | [**Volume**](Volume.md)| Volume to be attached (created and attached) | 

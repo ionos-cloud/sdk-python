@@ -2,7 +2,7 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
+| Method | HTTP request | Description |
 ------------- | ------------- | -------------
 [**um_groups_delete**](UserManagementApi.md#um_groups_delete) | **DELETE** /um/groups/{groupId} | Delete a Group
 [**um_groups_find_by_id**](UserManagementApi.md#um_groups_find_by_id) | **GET** /um/groups/{groupId} | Retrieve a Group
@@ -127,8 +127,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**| The unique ID of the group | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -246,8 +246,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**| The unique ID of the group | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -363,8 +363,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] 
@@ -481,8 +481,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group** | [**Group**](Group.md)| Group to be created | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -602,8 +602,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**| The unique ID of the group | 
  **group** | [**Group**](Group.md)| Modified properties of the Group | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -720,8 +720,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**| The unique ID of the group | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -841,8 +841,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**|  | 
  **resource_id** | **str**|  | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -963,8 +963,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**|  | 
  **resource_id** | **str**|  | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1083,8 +1083,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**|  | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -1206,8 +1206,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**|  | 
  **resource_id** | **str**|  | 
  **resource** | [**GroupShare**](GroupShare.md)| Resource to be added | 
@@ -1331,8 +1331,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**|  | 
  **resource_id** | **str**|  | 
  **resource** | [**GroupShare**](GroupShare.md)| Modified Resource | 
@@ -1454,8 +1454,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**|  | 
  **user_id** | **str**|  | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1574,8 +1574,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**|  | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -1695,8 +1695,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **group_id** | **str**|  | 
  **user** | [**User**](User.md)| User to be added | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -1815,8 +1815,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **resource_type** | **str**| The resource Type | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -1936,8 +1936,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **resource_type** | **str**| The resource Type | 
  **resource_id** | **str**| The resource Uuid | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -2054,8 +2054,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] 
@@ -2172,8 +2172,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -2291,8 +2291,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -2408,8 +2408,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] 
@@ -2526,8 +2526,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -2645,8 +2645,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -2764,8 +2764,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user** | [**User**](User.md)| User to be created | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -2885,8 +2885,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**|  | 
  **user** | [**User**](User.md)| Modified user | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -3007,8 +3007,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **key_id** | **str**| The unique access key ID of the S3 key | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -3129,8 +3129,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **key_id** | **str**| The unique access key ID of the S3 key | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -3249,8 +3249,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -3368,8 +3368,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -3491,8 +3491,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**|  | 
  **key_id** | **str**| The unique access key ID of the S3 key | 
  **s3_key** | [**S3Key**](S3Key.md)| Modified s3 key | 
@@ -3610,8 +3610,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **user_id** | **str**| The unique ID of the user | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] 

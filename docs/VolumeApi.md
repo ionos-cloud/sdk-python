@@ -2,7 +2,7 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
+| Method | HTTP request | Description |
 ------------- | ------------- | -------------
 [**datacenters_volumes_create_snapshot_post**](VolumeApi.md#datacenters_volumes_create_snapshot_post) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot
 [**datacenters_volumes_delete**](VolumeApi.md#datacenters_volumes_delete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume
@@ -115,8 +115,8 @@ licence_type = 'licence_type_example' # str | The OS type of this Snapshot (opti
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **volume_id** | **str**| The unique ID of the Volume | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -241,8 +241,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **volume_id** | **str**| The unique ID of the Volume | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -363,8 +363,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **volume_id** | **str**| The unique ID of the Volume | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -487,8 +487,8 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
  **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
@@ -612,8 +612,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **volume_id** | **str**| The unique ID of the Volume | 
  **volume** | [**VolumeProperties**](VolumeProperties.md)| Modified properties of Volume | 
@@ -735,8 +735,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **volume** | [**Volume**](Volume.md)| Volume to be created | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]
@@ -859,8 +859,8 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **volume_id** | **str**| The unique ID of the Volume | 
  **volume** | [**Volume**](Volume.md)| Modified Volume | 
@@ -984,8 +984,8 @@ snapshot_id = 'snapshot_id_example' # str | This is the ID of the snapshot (opti
 
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
  **datacenter_id** | **str**| The unique ID of the datacenter | 
  **volume_id** | **str**| The unique ID of the Volume | 
  **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True]

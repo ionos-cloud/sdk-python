@@ -1,9 +1,9 @@
 # SnapshotProperties
 
 ## Properties
-Name | Type | Description | Notes
+| Name | Type | Description | Notes |
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | A name of that resource | [optional] 
+| **name** | **str** | A name of that resource | [optional] 
 **description** | **str** | Human readable description | [optional] 
 **location** | **str** | Location of that image/snapshot.  | [optional] [readonly] 
 **size** | **float** | The size of the image in GB | [optional] [readonly] 
@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **disc_scsi_hot_plug** | **bool** | Is capable of SCSI drive hot plug (no reboot required) | [optional] 
 **disc_scsi_hot_unplug** | **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
 **licence_type** | **str** | OS type of this Snapshot | [optional] 
+ |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

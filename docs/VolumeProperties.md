@@ -1,9 +1,9 @@
 # VolumeProperties
 
 ## Properties
-Name | Type | Description | Notes
+| Name | Type | Description | Notes |
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | A name of that resource | [optional] 
+| **name** | **str** | A name of that resource | [optional] 
 **type** | **str** | Hardware type of the volume. | [optional] 
 **size** | **float** | The size of the volume in GB | 
 **availability_zone** | **str** | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront | [optional] 
@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **disc_virtio_hot_unplug** | **bool** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
 **device_number** | **int** | The LUN ID of the storage volume. Null for volumes not mounted to any VM | [optional] [readonly] 
 **backupunit_id** | **str** | The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provied either public image or imageAlias in conjunction with this property. | [optional] 
+ |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
