@@ -30,11 +30,9 @@ from pprint import pprint
 configuration = ionoscloud.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples with auth method are provided below
-
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
@@ -70,11 +68,9 @@ from pprint import pprint
 configuration = ionoscloud.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples with auth method are provided below
-
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
@@ -147,11 +143,9 @@ from pprint import pprint
 configuration = ionoscloud.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples with auth method are provided below
-
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
@@ -188,11 +182,9 @@ from pprint import pprint
 configuration = ionoscloud.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples with auth method are provided below
-
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
@@ -267,11 +259,9 @@ from pprint import pprint
 configuration = ionoscloud.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples with auth method are provided below
-
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
@@ -306,11 +296,9 @@ from pprint import pprint
 configuration = ionoscloud.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
-
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples with auth method are provided below
-
 # Configure HTTP basic authorization: Basic Authentication
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',

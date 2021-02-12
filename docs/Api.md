@@ -28,7 +28,6 @@ configuration = ionoscloud.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
 
-
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient() as api_client:
     # Create an instance of the API class
