@@ -34,15 +34,18 @@ from pprint import pprint
 configuration = ionoscloud.Configuration(
     host = "https://api.ionos.com/cloudapi/v5"
 )
+
 # The client must configure the authentication and authorization parameters
 # in accordance with the API server security policy.
 # Examples with auth method are provided below
 # Configure HTTP basic authorization: Basic Authentication
+
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
 # Enter a context with an instance of the API client
+
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.BackupUnitApi(api_client)
