@@ -50,12 +50,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Nic
         api_response = api_instance.datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -88,12 +87,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Nic
         api_response = api_instance.datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -119,18 +117,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_find_by_id**
 > Nic datacenters_servers_nics_find_by_id(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -164,12 +156,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Nic
         api_response = api_instance.datacenters_servers_nics_find_by_id(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -202,12 +193,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Nic
         api_response = api_instance.datacenters_servers_nics_find_by_id(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -233,18 +223,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_firewallrules_delete**
 > object datacenters_servers_nics_firewallrules_delete(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -278,13 +262,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_delete(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -317,13 +300,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_delete(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -350,18 +332,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_firewallrules_find_by_id**
 > FirewallRule datacenters_servers_nics_firewallrules_find_by_id(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -395,13 +371,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_find_by_id(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -434,13 +409,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_find_by_id(datacenter_id, server_id, nic_id, firewallrule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -467,18 +441,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_firewallrules_get**
 > FirewallRules datacenters_servers_nics_firewallrules_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
@@ -512,14 +480,13 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
     try:
         # List Firewall Rules 
         api_response = api_instance.datacenters_servers_nics_firewallrules_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
@@ -552,14 +519,13 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
     try:
         # List Firewall Rules 
         api_response = api_instance.datacenters_servers_nics_firewallrules_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
@@ -587,18 +553,12 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_firewallrules_patch**
 > FirewallRule datacenters_servers_nics_firewallrules_patch(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -632,14 +592,13 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-firewallrule = ionoscloud.FirewallruleProperties() # FirewallruleProperties | Modified Firewall Rule
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
+    firewallrule = ionoscloud.FirewallruleProperties() # FirewallruleProperties | Modified Firewall Rule
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Partially modify a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_patch(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -672,14 +631,13 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-firewallrule = ionoscloud.FirewallruleProperties() # FirewallruleProperties | Modified Firewall Rule
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
+    firewallrule = ionoscloud.FirewallruleProperties() # FirewallruleProperties | Modified Firewall Rule
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Partially modify a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_patch(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -707,18 +665,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_firewallrules_post**
 > FirewallRule datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -752,13 +704,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule = ionoscloud.FirewallRule() # FirewallRule | Firewall Rule to be created
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule = ionoscloud.FirewallRule() # FirewallRule | Firewall Rule to be created
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -791,13 +742,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule = ionoscloud.FirewallRule() # FirewallRule | Firewall Rule to be created
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule = ionoscloud.FirewallRule() # FirewallRule | Firewall Rule to be created
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -824,18 +774,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_firewallrules_put**
 > FirewallRule datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -869,14 +813,13 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-firewallrule = ionoscloud.FirewallRule() # FirewallRule | Modified Firewall Rule
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
+    firewallrule = ionoscloud.FirewallRule() # FirewallRule | Modified Firewall Rule
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -909,14 +852,13 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
-firewallrule = ionoscloud.FirewallRule() # FirewallRule | Modified Firewall Rule
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the Firewall Rule
+    firewallrule = ionoscloud.FirewallRule() # FirewallRule | Modified Firewall Rule
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -944,18 +886,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_get**
 > Nics datacenters_servers_nics_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
@@ -989,13 +925,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
     try:
         # List Nics 
         api_response = api_instance.datacenters_servers_nics_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
@@ -1028,13 +963,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
     try:
         # List Nics 
         api_response = api_instance.datacenters_servers_nics_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
@@ -1061,18 +995,12 @@ limit = 1000 # int | the maximum number of elements to return (use together with
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_patch**
 > Nic datacenters_servers_nics_patch(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1106,13 +1034,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-nic = ionoscloud.NicProperties() # NicProperties | Modified properties of Nic
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    nic = ionoscloud.NicProperties() # NicProperties | Modified properties of Nic
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Partially modify a Nic
         api_response = api_instance.datacenters_servers_nics_patch(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1145,13 +1072,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-nic = ionoscloud.NicProperties() # NicProperties | Modified properties of Nic
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    nic = ionoscloud.NicProperties() # NicProperties | Modified properties of Nic
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Partially modify a Nic
         api_response = api_instance.datacenters_servers_nics_patch(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1178,18 +1104,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_post**
 > Nic datacenters_servers_nics_post(datacenter_id, server_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1223,12 +1143,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic = ionoscloud.Nic() # Nic | Nic to be created
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic = ionoscloud.Nic() # Nic | Nic to be created
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Nic
         api_response = api_instance.datacenters_servers_nics_post(datacenter_id, server_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1261,12 +1180,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic = ionoscloud.Nic() # Nic | Nic to be created
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic = ionoscloud.Nic() # Nic | Nic to be created
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Nic
         api_response = api_instance.datacenters_servers_nics_post(datacenter_id, server_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1292,18 +1210,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **datacenters_servers_nics_put**
 > Nic datacenters_servers_nics_put(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1337,13 +1249,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-nic = ionoscloud.Nic() # Nic | Modified Nic
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    nic = ionoscloud.Nic() # Nic | Modified Nic
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a Nic
         api_response = api_instance.datacenters_servers_nics_put(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1376,13 +1287,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NicApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-server_id = 'server_id_example' # str | The unique ID of the Server
-nic_id = 'nic_id_example' # str | The unique ID of the NIC
-nic = ionoscloud.Nic() # Nic | Modified Nic
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    nic = ionoscloud.Nic() # Nic | Modified Nic
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a Nic
         api_response = api_instance.datacenters_servers_nics_put(datacenter_id, server_id, nic_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1409,16 +1319,10 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 

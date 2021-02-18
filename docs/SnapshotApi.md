@@ -43,10 +43,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Snapshot
         api_response = api_instance.snapshots_delete(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -79,10 +78,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Snapshot
         api_response = api_instance.snapshots_delete(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -106,18 +104,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **snapshots_find_by_id**
 > Snapshot snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -151,10 +143,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Snapshot by its uuid.
         api_response = api_instance.snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -187,10 +178,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Snapshot by its uuid.
         api_response = api_instance.snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -214,18 +204,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **snapshots_get**
 > Snapshots snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -259,9 +243,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Snapshots 
         api_response = api_instance.snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -294,9 +277,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Snapshots 
         api_response = api_instance.snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -319,18 +301,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **snapshots_patch**
 > Snapshot snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -364,11 +340,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-snapshot = ionoscloud.SnapshotProperties() # SnapshotProperties | Modified Snapshot
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    snapshot = ionoscloud.SnapshotProperties() # SnapshotProperties | Modified Snapshot
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Partially modify a Snapshot
         api_response = api_instance.snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -401,11 +376,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-snapshot = ionoscloud.SnapshotProperties() # SnapshotProperties | Modified Snapshot
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    snapshot = ionoscloud.SnapshotProperties() # SnapshotProperties | Modified Snapshot
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Partially modify a Snapshot
         api_response = api_instance.snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -430,18 +404,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **snapshots_put**
 > Snapshot snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -475,11 +443,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-snapshot = ionoscloud.Snapshot() # Snapshot | Modified Snapshot
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    snapshot = ionoscloud.Snapshot() # Snapshot | Modified Snapshot
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a Snapshot
         api_response = api_instance.snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -512,11 +479,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.SnapshotApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
-snapshot = ionoscloud.Snapshot() # Snapshot | Modified Snapshot
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    snapshot = ionoscloud.Snapshot() # Snapshot | Modified Snapshot
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a Snapshot
         api_response = api_instance.snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -541,16 +507,10 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 

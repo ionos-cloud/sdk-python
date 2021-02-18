@@ -56,10 +56,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete Kubernetes Cluster
         api_response = api_instance.k8s_delete(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -92,10 +91,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete Kubernetes Cluster
         api_response = api_instance.k8s_delete(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -119,18 +117,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_find_by_cluster_id**
 > KubernetesCluster k8s_find_by_cluster_id(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -164,10 +156,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes Cluster
         api_response = api_instance.k8s_find_by_cluster_id(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -200,10 +191,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes Cluster
         api_response = api_instance.k8s_find_by_cluster_id(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -227,18 +217,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_get**
 > KubernetesClusters k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -272,9 +256,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Kubernetes Clusters
         api_response = api_instance.k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -307,9 +290,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Kubernetes Clusters
         api_response = api_instance.k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -332,18 +314,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_kubeconfig_get**
 > KubernetesConfig k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -377,10 +353,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes Configuration File
         api_response = api_instance.k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -413,10 +388,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes Configuration File
         api_response = api_instance.k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -440,18 +414,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_delete**
 > object k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -485,11 +453,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete Kubernetes Node Pool
         api_response = api_instance.k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -522,11 +489,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete Kubernetes Node Pool
         api_response = api_instance.k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -551,18 +517,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_find_by_id**
 > KubernetesNodePool k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -596,11 +556,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes Node Pool
         api_response = api_instance.k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -633,11 +592,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes Node Pool
         api_response = api_instance.k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -662,18 +620,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_get**
 > KubernetesNodePools k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -707,10 +659,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Kubernetes Node Pools
         api_response = api_instance.k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -743,10 +694,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Kubernetes Node Pools
         api_response = api_instance.k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -770,18 +720,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_nodes_delete**
 > object k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -815,12 +759,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-node_id = 'node_id_example' # str | The unique ID of the Kubernetes node
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes node
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete Kubernetes node
         api_response = api_instance.k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -853,12 +796,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-node_id = 'node_id_example' # str | The unique ID of the Kubernetes node
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes node
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete Kubernetes node
         api_response = api_instance.k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -884,18 +826,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_nodes_find_by_id**
 > KubernetesNode k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -929,12 +865,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes node
         api_response = api_instance.k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -967,12 +902,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes node
         api_response = api_instance.k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -998,18 +932,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_nodes_get**
 > KubernetesNodes k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1043,11 +971,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes nodes.
         api_response = api_instance.k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1080,11 +1007,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve Kubernetes nodes.
         api_response = api_instance.k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1109,18 +1035,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_nodes_replace_post**
 > object k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1154,12 +1074,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Recreate the Kubernetes node
         api_response = api_instance.k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1192,12 +1111,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Recreate the Kubernetes node
         api_response = api_instance.k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1223,18 +1141,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_post**
 > KubernetesNodePool k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1268,11 +1180,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Kubernetes Node Pool
         api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1305,11 +1216,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Kubernetes Node Pool
         api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1334,18 +1244,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_nodepools_put**
 > KubernetesNodePoolForPut k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1379,12 +1283,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of the Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify Kubernetes Node Pool
         api_response = api_instance.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1417,12 +1320,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
-kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of the Kubernetes Node Pool
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify Kubernetes Node Pool
         api_response = api_instance.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1448,18 +1350,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_post**
 > KubernetesCluster k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1493,10 +1389,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     kubernetes_cluster = ionoscloud.KubernetesCluster() # KubernetesCluster | Properties of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create Kubernetes Cluster
         api_response = api_instance.k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1529,10 +1424,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     kubernetes_cluster = ionoscloud.KubernetesCluster() # KubernetesCluster | Properties of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create Kubernetes Cluster
         api_response = api_instance.k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1556,18 +1450,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_put**
 > KubernetesCluster k8s_put(k8s_cluster_id, kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1601,11 +1489,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-kubernetes_cluster = ionoscloud.KubernetesCluster() # KubernetesCluster | Properties of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    kubernetes_cluster = ionoscloud.KubernetesCluster() # KubernetesCluster | Properties of the Kubernetes Cluster
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify Kubernetes Cluster
         api_response = api_instance.k8s_put(k8s_cluster_id, kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1638,11 +1525,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
-kubernetes_cluster = ionoscloud.KubernetesCluster() # KubernetesCluster | Properties of the Kubernetes Cluster
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    kubernetes_cluster = ionoscloud.KubernetesCluster() # KubernetesCluster | Properties of the Kubernetes Cluster
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify Kubernetes Cluster
         api_response = api_instance.k8s_put(k8s_cluster_id, kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1667,18 +1553,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_versions_compatibilities_get**
 > list[str] k8s_versions_compatibilities_get(cluster_version)
@@ -1712,7 +1592,6 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     cluster_version = 'cluster_version_example' # str | 
-
     try:
         # Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
         api_response = api_instance.k8s_versions_compatibilities_get(cluster_version)
@@ -1745,7 +1624,6 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
     cluster_version = 'cluster_version_example' # str | 
-
     try:
         # Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
         api_response = api_instance.k8s_versions_compatibilities_get(cluster_version)
@@ -1766,18 +1644,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_versions_default_get**
 > str k8s_versions_default_get()
@@ -1810,7 +1682,6 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
-    
     try:
         # Retrieve the current default kubernetes version for clusters and nodepools.
         api_response = api_instance.k8s_versions_default_get()
@@ -1842,7 +1713,6 @@ configuration.api_key = {
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
-    
     try:
         # Retrieve the current default kubernetes version for clusters and nodepools.
         api_response = api_instance.k8s_versions_default_get()
@@ -1860,18 +1730,12 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
 
 # **k8s_versions_get**
 > list[str] k8s_versions_get()
@@ -1904,7 +1768,6 @@ configuration.password = 'YOUR_PASSWORD'
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
-    
     try:
         # Retrieve available Kubernetes versions
         api_response = api_instance.k8s_versions_get()
@@ -1936,7 +1799,6 @@ configuration.api_key = {
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.KubernetesApi(api_client)
-    
     try:
         # Retrieve available Kubernetes versions
         api_response = api_instance.k8s_versions_get()
@@ -1954,16 +1816,10 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
 

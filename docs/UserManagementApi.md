@@ -68,10 +68,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Group
         api_response = api_instance.um_groups_delete(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -104,10 +103,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Group
         api_response = api_instance.um_groups_delete(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -131,18 +129,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_find_by_id**
 > Group um_groups_find_by_id(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -176,10 +168,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Group
         api_response = api_instance.um_groups_find_by_id(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -212,10 +203,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Group
         api_response = api_instance.um_groups_find_by_id(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -239,18 +229,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_get**
 > Groups um_groups_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -284,9 +268,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List All Groups.
         api_response = api_instance.um_groups_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -319,9 +302,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List All Groups.
         api_response = api_instance.um_groups_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -344,18 +326,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_post**
 > Group um_groups_post(group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -389,10 +365,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group = ionoscloud.Group() # Group | Group to be created
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Group
         api_response = api_instance.um_groups_post(group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -425,10 +400,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group = ionoscloud.Group() # Group | Group to be created
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Group
         api_response = api_instance.um_groups_post(group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -452,18 +426,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_put**
 > Group um_groups_put(group_id, group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -497,11 +465,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-group = ionoscloud.Group() # Group | Modified properties of the Group
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    group = ionoscloud.Group() # Group | Modified properties of the Group
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a group
         api_response = api_instance.um_groups_put(group_id, group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -534,11 +501,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-group = ionoscloud.Group() # Group | Modified properties of the Group
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    group = ionoscloud.Group() # Group | Modified properties of the Group
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a group
         api_response = api_instance.um_groups_put(group_id, group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -563,18 +529,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_resources_get**
 > ResourceGroups um_groups_resources_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -606,10 +566,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve resources assigned to a group
         api_response = api_instance.um_groups_resources_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -642,10 +601,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve resources assigned to a group
         api_response = api_instance.um_groups_resources_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -669,18 +627,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_shares_delete**
 > object um_groups_shares_delete(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -714,11 +666,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-resource_id = 'resource_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | 
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove a resource from a group
         api_response = api_instance.um_groups_shares_delete(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -751,11 +702,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-resource_id = 'resource_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | 
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove a resource from a group
         api_response = api_instance.um_groups_shares_delete(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -780,18 +730,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_shares_find_by_resource_id**
 > GroupShare um_groups_shares_find_by_resource_id(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -825,11 +769,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-resource_id = 'resource_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | 
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a group share
         api_response = api_instance.um_groups_shares_find_by_resource_id(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -862,11 +805,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-resource_id = 'resource_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | 
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a group share
         api_response = api_instance.um_groups_shares_find_by_resource_id(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -891,18 +833,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_shares_get**
 > GroupShares um_groups_shares_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -936,10 +872,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Group Shares 
         api_response = api_instance.um_groups_shares_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -972,10 +907,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Group Shares 
         api_response = api_instance.um_groups_shares_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -999,18 +933,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_shares_post**
 > GroupShare um_groups_shares_post(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1044,12 +972,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-resource_id = 'resource_id_example' # str | 
-resource = ionoscloud.GroupShare() # GroupShare | Resource to be added
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | 
+    resource = ionoscloud.GroupShare() # GroupShare | Resource to be added
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Add a resource to a group
         api_response = api_instance.um_groups_shares_post(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1082,12 +1009,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-resource_id = 'resource_id_example' # str | 
-resource = ionoscloud.GroupShare() # GroupShare | Resource to be added
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | 
+    resource = ionoscloud.GroupShare() # GroupShare | Resource to be added
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Add a resource to a group
         api_response = api_instance.um_groups_shares_post(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1113,18 +1039,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_shares_put**
 > GroupShare um_groups_shares_put(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1158,12 +1078,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-resource_id = 'resource_id_example' # str | 
-resource = ionoscloud.GroupShare() # GroupShare | Modified Resource
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | 
+    resource = ionoscloud.GroupShare() # GroupShare | Modified Resource
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify resource permissions of a group
         api_response = api_instance.um_groups_shares_put(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1196,12 +1115,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-resource_id = 'resource_id_example' # str | 
-resource = ionoscloud.GroupShare() # GroupShare | Modified Resource
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | 
+    resource = ionoscloud.GroupShare() # GroupShare | Modified Resource
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify resource permissions of a group
         api_response = api_instance.um_groups_shares_put(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1227,18 +1145,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_users_delete**
 > object um_groups_users_delete(group_id, user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1272,11 +1184,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-user_id = 'user_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    user_id = 'user_id_example' # str | 
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove a user from a group
         api_response = api_instance.um_groups_users_delete(group_id, user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1309,11 +1220,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-user_id = 'user_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    user_id = 'user_id_example' # str | 
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove a user from a group
         api_response = api_instance.um_groups_users_delete(group_id, user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1338,18 +1248,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_users_get**
 > GroupMembers um_groups_users_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1383,10 +1287,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Group Members 
         api_response = api_instance.um_groups_users_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1419,10 +1322,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Group Members 
         api_response = api_instance.um_groups_users_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1446,18 +1348,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_groups_users_post**
 > User um_groups_users_post(group_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1491,11 +1387,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-user = ionoscloud.User() # User | User to be added
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    user = ionoscloud.User() # User | User to be added
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Add a user to a group
         api_response = api_instance.um_groups_users_post(group_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1528,11 +1423,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-user = ionoscloud.User() # User | User to be added
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    user = ionoscloud.User() # User | User to be added
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Add a user to a group
         api_response = api_instance.um_groups_users_post(group_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1557,18 +1451,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_resources_find_by_type**
 > Resources um_resources_find_by_type(resource_type, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1602,10 +1490,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     resource_type = 'resource_type_example' # str | The resource Type
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a list of Resources by type.
         api_response = api_instance.um_resources_find_by_type(resource_type, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1638,10 +1525,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     resource_type = 'resource_type_example' # str | The resource Type
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a list of Resources by type.
         api_response = api_instance.um_resources_find_by_type(resource_type, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1665,18 +1551,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_resources_find_by_type_and_id**
 > Resource um_resources_find_by_type_and_id(resource_type, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1710,11 +1590,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     resource_type = 'resource_type_example' # str | The resource Type
-resource_id = 'resource_id_example' # str | The resource Uuid
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | The resource Uuid
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Resource by type.
         api_response = api_instance.um_resources_find_by_type_and_id(resource_type, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1747,11 +1626,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     resource_type = 'resource_type_example' # str | The resource Type
-resource_id = 'resource_id_example' # str | The resource Uuid
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    resource_id = 'resource_id_example' # str | The resource Uuid
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Resource by type.
         api_response = api_instance.um_resources_find_by_type_and_id(resource_type, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1776,18 +1654,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_resources_get**
 > Resources um_resources_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1821,9 +1693,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List All Resources.
         api_response = api_instance.um_resources_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1856,9 +1727,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List All Resources.
         api_response = api_instance.um_resources_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1881,18 +1751,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_delete**
 > object um_users_delete(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1926,10 +1790,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a User
         api_response = api_instance.um_users_delete(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1962,10 +1825,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a User
         api_response = api_instance.um_users_delete(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -1989,18 +1851,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_find_by_id**
 > User um_users_find_by_id(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2034,10 +1890,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User
         api_response = api_instance.um_users_find_by_id(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2070,10 +1925,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User
         api_response = api_instance.um_users_find_by_id(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2097,18 +1951,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_get**
 > Users um_users_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2142,9 +1990,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List all Users 
         api_response = api_instance.um_users_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2177,9 +2024,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List all Users 
         api_response = api_instance.um_users_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2202,18 +2048,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_groups_get**
 > ResourceGroups um_users_groups_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2247,10 +2087,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's group resources
         api_response = api_instance.um_users_groups_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2283,10 +2122,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's group resources
         api_response = api_instance.um_users_groups_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2310,18 +2148,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_owns_get**
 > ResourcesUsers um_users_owns_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2355,10 +2187,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's own resources
         api_response = api_instance.um_users_owns_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2391,10 +2222,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's own resources
         api_response = api_instance.um_users_owns_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2418,18 +2248,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_post**
 > User um_users_post(user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2463,10 +2287,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user = ionoscloud.User() # User | User to be created
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a user
         api_response = api_instance.um_users_post(user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2499,10 +2322,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user = ionoscloud.User() # User | User to be created
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a user
         api_response = api_instance.um_users_post(user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2526,18 +2348,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_put**
 > User um_users_put(user_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2571,11 +2387,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | 
-user = ionoscloud.User() # User | Modified user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    user = ionoscloud.User() # User | Modified user
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a user
         api_response = api_instance.um_users_put(user_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2608,11 +2423,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | 
-user = ionoscloud.User() # User | Modified user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    user = ionoscloud.User() # User | Modified user
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a user
         api_response = api_instance.um_users_put(user_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2637,18 +2451,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_s3keys_delete**
 > object um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2682,11 +2490,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a S3 key
         api_response = api_instance.um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2719,11 +2526,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a S3 key
         api_response = api_instance.um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2748,18 +2554,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_s3keys_find_by_key_id**
 > S3Key um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2793,11 +2593,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve given S3 key belonging to the given User
         api_response = api_instance.um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2830,11 +2629,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve given S3 key belonging to the given User
         api_response = api_instance.um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2859,18 +2657,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_s3keys_get**
 > S3Keys um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2904,10 +2696,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's S3 keys
         api_response = api_instance.um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2940,10 +2731,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's S3 keys
         api_response = api_instance.um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -2967,18 +2757,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_s3keys_post**
 > S3Key um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3012,10 +2796,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a S3 key for the given user
         api_response = api_instance.um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3048,10 +2831,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a S3 key for the given user
         api_response = api_instance.um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3075,18 +2857,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_s3keys_put**
 > S3Key um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3120,12 +2896,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | 
-key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-s3_key = ionoscloud.S3Key() # S3Key | Modified s3 key
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    s3_key = ionoscloud.S3Key() # S3Key | Modified s3 key
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a S3 key having the given key id
         api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3158,12 +2933,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | 
-key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-s3_key = ionoscloud.S3Key() # S3Key | Modified s3 key
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    s3_key = ionoscloud.S3Key() # S3Key | Modified s3 key
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a S3 key having the given key id
         api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -3189,18 +2963,12 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: application/json
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
 # **um_users_s3ssourl_get**
 > S3ObjectStorageSSO um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
@@ -3234,9 +3002,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve S3 object storage single signon URL for the given user
         api_response = api_instance.um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
@@ -3269,9 +3036,8 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve S3 object storage single signon URL for the given user
         api_response = api_instance.um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
@@ -3294,16 +3060,10 @@ x_contract_number = 56 # int | Users having more than 1 contract need to provide
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
-| **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
