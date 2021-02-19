@@ -1,7 +1,7 @@
 # Introduction
 
-[![PyPI version](https://badge.fury.io/py/ionoscloud.svg)](https://badge.fury.io/py/ionoscloud)
 ![CI](https://github.com/ionos-cloud/sdk-resources/workflows/CI/badge.svg)
+[![PyPI version](https://badge.fury.io/py/ionoscloud.svg)](https://badge.fury.io/py/ionoscloud)
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
 
 ## Overview
