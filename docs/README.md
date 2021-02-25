@@ -1,8 +1,6 @@
 # Introduction
 
-![CI](https://github.com/ionos-cloud/sdk-resources/workflows/CI/badge.svg)
-[![PyPI version](http://img.shields.io/pypi/v/ionoscloud)](https://pypi.python.org/pypi/ionoscloud/)
-[![Gitter](https://badges.gitter.im/ionos-cloud/sdk-general.png)](https://gitter.im/ionos-cloud/sdk-general)
+![CI](https://github.com/ionos-cloud/sdk-resources/workflows/CI/badge.svg) [![PyPI version](http://img.shields.io/pypi/v/ionoscloud)](https://pypi.python.org/pypi/ionoscloud/) [![Gitter](https://badges.gitter.im/ionos-cloud/sdk-general.png)](https://gitter.im/ionos-cloud/sdk-general)
 
 ## Overview
 
@@ -104,7 +102,7 @@ The IONOS Cloud SDK for Python aims to offer access to all resources in the IONO
 
 Bugs & feature requests can be open on the repository issues: [https://github.com/ionos-cloud/sdk-python/issues/new/choose](https://github.com/ionos-cloud/sdk-python/issues/new/choose)
 
-2. Can I contribute to the Python SDK?
+1. Can I contribute to the Python SDK?
 
 Pure SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
 
