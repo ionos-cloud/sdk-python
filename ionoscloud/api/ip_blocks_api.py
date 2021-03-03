@@ -20,7 +20,7 @@ class IPBlocksApi(object):
     def ipblocks_delete(self, ipblock_id, **kwargs):  # noqa: E501
         """Delete IP Block  # noqa: E501
 
-        Removes the specific IP Block  # noqa: E501
+        Removes the specific IP Block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -56,7 +56,7 @@ class IPBlocksApi(object):
     def ipblocks_delete_with_http_info(self, ipblock_id, **kwargs):  # noqa: E501
         """Delete IP Block  # noqa: E501
 
-        Removes the specific IP Block  # noqa: E501
+        Removes the specific IP Block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -342,7 +342,7 @@ class IPBlocksApi(object):
     def ipblocks_get(self, **kwargs):  # noqa: E501
         """List IP Blocks   # noqa: E501
 
-        Retrieve a list of all reserved IP Blocks  # noqa: E501
+        Retrieve a list of all reserved IP Blocks.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -376,7 +376,7 @@ class IPBlocksApi(object):
     def ipblocks_get_with_http_info(self, **kwargs):  # noqa: E501
         """List IP Blocks   # noqa: E501
 
-        Retrieve a list of all reserved IP Blocks  # noqa: E501
+        Retrieve a list of all reserved IP Blocks.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -492,7 +492,7 @@ class IPBlocksApi(object):
     def ipblocks_patch(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
         """Partially modify IP Block  # noqa: E501
 
-        You can use update attributes of a resource  # noqa: E501
+        You can use update attributes of a resource.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -530,7 +530,7 @@ class IPBlocksApi(object):
     def ipblocks_patch_with_http_info(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
         """Partially modify IP Block  # noqa: E501
 
-        You can use update attributes of a resource  # noqa: E501
+        You can use update attributes of a resource.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -668,7 +668,7 @@ class IPBlocksApi(object):
     def ipblocks_post(self, ipblock, **kwargs):  # noqa: E501
         """Reserve IP Block  # noqa: E501
 
-        This will reserve a new IP Block  # noqa: E501
+        This will reserve a new IP Block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -704,7 +704,7 @@ class IPBlocksApi(object):
     def ipblocks_post_with_http_info(self, ipblock, **kwargs):  # noqa: E501
         """Reserve IP Block  # noqa: E501
 
-        This will reserve a new IP Block  # noqa: E501
+        This will reserve a new IP Block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -833,7 +833,7 @@ class IPBlocksApi(object):
     def ipblocks_put(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
         """Modify IP Block  # noqa: E501
 
-        You can use update attributes of a resource  # noqa: E501
+        You can use update attributes of a resource.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -871,7 +871,7 @@ class IPBlocksApi(object):
     def ipblocks_put_with_http_info(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
         """Modify IP Block  # noqa: E501
 
-        You can use update attributes of a resource  # noqa: E501
+        You can use update attributes of a resource.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

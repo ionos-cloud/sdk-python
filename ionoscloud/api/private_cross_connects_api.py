@@ -1,0 +1,851 @@
+from __future__ import absolute_import
+
+import re  # noqa: F401
+import six
+
+from ionoscloud.api_client import ApiClient
+from ionoscloud.exceptions import (  # noqa: F401
+    ApiTypeError,
+    ApiValueError
+)
+
+
+class PrivateCrossConnectsApi(object):
+
+    def __init__(self, api_client=None):
+        if api_client is None:
+            api_client = ApiClient()
+        self.api_client = api_client
+
+    def pccs_delete(self, pcc_id, **kwargs):  # noqa: E501
+        """Delete a Private Cross-Connect  # noqa: E501
+
+        Delete a private cross-connect if no datacenters are joined to the given PCC  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_delete(pcc_id, async_req=True)
+        >>> result = thread.get()
+
+        :param pcc_id: The unique ID of the private cross-connect (required)
+        :type pcc_id: str
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: object
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.pccs_delete_with_http_info(pcc_id, **kwargs)  # noqa: E501
+
+    def pccs_delete_with_http_info(self, pcc_id, **kwargs):  # noqa: E501
+        """Delete a Private Cross-Connect  # noqa: E501
+
+        Delete a private cross-connect if no datacenters are joined to the given PCC  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_delete_with_http_info(pcc_id, async_req=True)
+        >>> result = thread.get()
+
+        :param pcc_id: The unique ID of the private cross-connect (required)
+        :type pcc_id: str
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'pcc_id',
+            'pretty',
+            'depth',
+            'x_contract_number'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                'response_type'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method pccs_delete" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'pcc_id' is set
+        if self.api_client.client_side_validation and ('pcc_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['pcc_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `pcc_id` when calling `pccs_delete`")  # noqa: E501
+
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_delete`, must be a value less than or equal to `10`")  # noqa: E501
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_delete`, must be a value greater than or equal to `0`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'pcc_id' in local_var_params:
+            path_params['pccId'] = local_var_params['pcc_id']  # noqa: E501
+
+        query_params = []
+        if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
+            query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
+        if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
+            query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+
+        header_params = {}
+        if 'x_contract_number' in local_var_params:
+            header_params['X-Contract-Number'] = local_var_params['x_contract_number']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+
+        response_type = 'object'
+        if 'response_type' in kwargs:
+            response_type = kwargs['response_type']
+
+        return self.api_client.call_api(
+            '/pccs/{pccId}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
+    def pccs_find_by_id(self, pcc_id, **kwargs):  # noqa: E501
+        """Retrieve a Private Cross-Connect  # noqa: E501
+
+        You can retrieve a private cross-connect by using the resource's ID. This value can be found in the response body when a private cross-connect is created or when you GET a list of private cross-connects.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_find_by_id(pcc_id, async_req=True)
+        >>> result = thread.get()
+
+        :param pcc_id: The unique ID of the private cross-connect (required)
+        :type pcc_id: str
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: PrivateCrossConnect
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.pccs_find_by_id_with_http_info(pcc_id, **kwargs)  # noqa: E501
+
+    def pccs_find_by_id_with_http_info(self, pcc_id, **kwargs):  # noqa: E501
+        """Retrieve a Private Cross-Connect  # noqa: E501
+
+        You can retrieve a private cross-connect by using the resource's ID. This value can be found in the response body when a private cross-connect is created or when you GET a list of private cross-connects.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_find_by_id_with_http_info(pcc_id, async_req=True)
+        >>> result = thread.get()
+
+        :param pcc_id: The unique ID of the private cross-connect (required)
+        :type pcc_id: str
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(PrivateCrossConnect, status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'pcc_id',
+            'pretty',
+            'depth',
+            'x_contract_number'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                'response_type'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method pccs_find_by_id" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'pcc_id' is set
+        if self.api_client.client_side_validation and ('pcc_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['pcc_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `pcc_id` when calling `pccs_find_by_id`")  # noqa: E501
+
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_find_by_id`, must be a value less than or equal to `10`")  # noqa: E501
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_find_by_id`, must be a value greater than or equal to `0`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'pcc_id' in local_var_params:
+            path_params['pccId'] = local_var_params['pcc_id']  # noqa: E501
+
+        query_params = []
+        if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
+            query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
+        if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
+            query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+
+        header_params = {}
+        if 'x_contract_number' in local_var_params:
+            header_params['X-Contract-Number'] = local_var_params['x_contract_number']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+
+        response_type = 'PrivateCrossConnect'
+        if 'response_type' in kwargs:
+            response_type = kwargs['response_type']
+
+        return self.api_client.call_api(
+            '/pccs/{pccId}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
+    def pccs_get(self, **kwargs):  # noqa: E501
+        """List Private Cross-Connects  # noqa: E501
+
+        You can retrieve a complete list of private cross-connects provisioned under your account  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_get(async_req=True)
+        >>> result = thread.get()
+
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: PrivateCrossConnects
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.pccs_get_with_http_info(**kwargs)  # noqa: E501
+
+    def pccs_get_with_http_info(self, **kwargs):  # noqa: E501
+        """List Private Cross-Connects  # noqa: E501
+
+        You can retrieve a complete list of private cross-connects provisioned under your account  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_get_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(PrivateCrossConnects, status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'pretty',
+            'depth',
+            'x_contract_number'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                'response_type'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method pccs_get" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_get`, must be a value less than or equal to `10`")  # noqa: E501
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
+            query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
+        if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
+            query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+
+        header_params = {}
+        if 'x_contract_number' in local_var_params:
+            header_params['X-Contract-Number'] = local_var_params['x_contract_number']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+
+        response_type = 'PrivateCrossConnects'
+        if 'response_type' in kwargs:
+            response_type = kwargs['response_type']
+
+        return self.api_client.call_api(
+            '/pccs', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
+    def pccs_patch(self, pcc_id, pcc, **kwargs):  # noqa: E501
+        """Partially Modify a Private Cross-Connect  # noqa: E501
+
+        You can use update private cross-connect to re-name or update its description  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_patch(pcc_id, pcc, async_req=True)
+        >>> result = thread.get()
+
+        :param pcc_id: The unique ID of the private cross-connect (required)
+        :type pcc_id: str
+        :param pcc: Modified properties of private cross-connect (required)
+        :type pcc: PrivateCrossConnectProperties
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :type limit: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: PrivateCrossConnect
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.pccs_patch_with_http_info(pcc_id, pcc, **kwargs)  # noqa: E501
+
+    def pccs_patch_with_http_info(self, pcc_id, pcc, **kwargs):  # noqa: E501
+        """Partially Modify a Private Cross-Connect  # noqa: E501
+
+        You can use update private cross-connect to re-name or update its description  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_patch_with_http_info(pcc_id, pcc, async_req=True)
+        >>> result = thread.get()
+
+        :param pcc_id: The unique ID of the private cross-connect (required)
+        :type pcc_id: str
+        :param pcc: Modified properties of private cross-connect (required)
+        :type pcc: PrivateCrossConnectProperties
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :type limit: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(PrivateCrossConnect, status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'pcc_id',
+            'pcc',
+            'pretty',
+            'depth',
+            'x_contract_number',
+            'offset',
+            'limit'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                'response_type'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method pccs_patch" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'pcc_id' is set
+        if self.api_client.client_side_validation and ('pcc_id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['pcc_id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `pcc_id` when calling `pccs_patch`")  # noqa: E501
+        # verify the required parameter 'pcc' is set
+        if self.api_client.client_side_validation and ('pcc' not in local_var_params or  # noqa: E501
+                                                        local_var_params['pcc'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `pcc` when calling `pccs_patch`")  # noqa: E501
+
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_patch`, must be a value less than or equal to `10`")  # noqa: E501
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_patch`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `pccs_patch`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `pccs_patch`, must be a value less than or equal to `10000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `pccs_patch`, must be a value greater than or equal to `1`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'pcc_id' in local_var_params:
+            path_params['pccId'] = local_var_params['pcc_id']  # noqa: E501
+
+        query_params = []
+        if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
+            query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
+        if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
+            query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
+
+        header_params = {}
+        if 'x_contract_number' in local_var_params:
+            header_params['X-Contract-Number'] = local_var_params['x_contract_number']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'pcc' in local_var_params:
+            body_params = local_var_params['pcc']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+
+        response_type = 'PrivateCrossConnect'
+        if 'response_type' in kwargs:
+            response_type = kwargs['response_type']
+
+        return self.api_client.call_api(
+            '/pccs/{pccId}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))
+
+    def pccs_post(self, pcc, **kwargs):  # noqa: E501
+        """Create a Private Cross-Connect  # noqa: E501
+
+        You can use this POST method to create a private cross-connect.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_post(pcc, async_req=True)
+        >>> result = thread.get()
+
+        :param pcc: Private Cross-Connect to be created (required)
+        :type pcc: PrivateCrossConnect
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: PrivateCrossConnect
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.pccs_post_with_http_info(pcc, **kwargs)  # noqa: E501
+
+    def pccs_post_with_http_info(self, pcc, **kwargs):  # noqa: E501
+        """Create a Private Cross-Connect  # noqa: E501
+
+        You can use this POST method to create a private cross-connect.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.pccs_post_with_http_info(pcc, async_req=True)
+        >>> result = thread.get()
+
+        :param pcc: Private Cross-Connect to be created (required)
+        :type pcc: PrivateCrossConnect
+        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :type pretty: bool
+        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :type depth: int
+        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :type x_contract_number: int
+        :param async_req: Whether to execute the request asynchronously.
+        :type async_req: bool, optional
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :type _return_http_data_only: bool, optional
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :type _preload_content: bool, optional
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :param _request_auth: set to override the auth_settings for an a single
+                              request; this effectively ignores the authentication
+                              in the spec for a single request.
+        :type _request_auth: dict, optional
+        :return: Returns the result object.
+                 If the method is called asynchronously,
+                 returns the request thread.
+        :rtype: tuple(PrivateCrossConnect, status_code(int), headers(HTTPHeaderDict))
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'pcc',
+            'pretty',
+            'depth',
+            'x_contract_number'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout',
+                '_request_auth',
+                'response_type'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method pccs_post" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'pcc' is set
+        if self.api_client.client_side_validation and ('pcc' not in local_var_params or  # noqa: E501
+                                                        local_var_params['pcc'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `pcc` when calling `pccs_post`")  # noqa: E501
+
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_post`, must be a value less than or equal to `10`")  # noqa: E501
+        if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_post`, must be a value greater than or equal to `0`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
+            query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
+        if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
+            query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+
+        header_params = {}
+        if 'x_contract_number' in local_var_params:
+            header_params['X-Contract-Number'] = local_var_params['x_contract_number']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'pcc' in local_var_params:
+            body_params = local_var_params['pcc']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+
+        response_type = 'PrivateCrossConnect'
+        if 'response_type' in kwargs:
+            response_type = kwargs['response_type']
+
+        return self.api_client.call_api(
+            '/pccs', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats,
+            _request_auth=local_var_params.get('_request_auth'))

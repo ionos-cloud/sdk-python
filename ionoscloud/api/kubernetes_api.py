@@ -492,7 +492,7 @@ class KubernetesApi(object):
     def k8s_kubeconfig_get(self, k8s_cluster_id, **kwargs):  # noqa: E501
         """Retrieve Kubernetes Configuration File  # noqa: E501
 
-        You can retrieve kubernetes configuration file for the kubernetes cluster.  # noqa: E501
+        You can retrieve kubernetes configuration file in YAML or JSON format for the kubernetes cluster. You can send the Accept header accordingly. Default Accept header is application/yaml  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -520,7 +520,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: KubernetesConfig
+        :rtype: str
         """
         kwargs['_return_http_data_only'] = True
         return self.k8s_kubeconfig_get_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
@@ -528,7 +528,7 @@ class KubernetesApi(object):
     def k8s_kubeconfig_get_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
         """Retrieve Kubernetes Configuration File  # noqa: E501
 
-        You can retrieve kubernetes configuration file for the kubernetes cluster.  # noqa: E501
+        You can retrieve kubernetes configuration file in YAML or JSON format for the kubernetes cluster. You can send the Accept header accordingly. Default Accept header is application/yaml  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -563,7 +563,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(KubernetesConfig, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(str, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -624,12 +624,12 @@ class KubernetesApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
+            ['application/yaml', 'application/x-yaml', 'application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'KubernetesConfig'
+        response_type = 'str'
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 
@@ -1888,7 +1888,7 @@ class KubernetesApi(object):
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
-        :param kubernetes_node_pool: Details of Kubernetes Node Pool (required)
+        :param kubernetes_node_pool: Details of the Kubernetes Node Pool (required)
         :type kubernetes_node_pool: KubernetesNodePool
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
@@ -1926,7 +1926,7 @@ class KubernetesApi(object):
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
-        :param kubernetes_node_pool: Details of Kubernetes Node Pool (required)
+        :param kubernetes_node_pool: Details of the Kubernetes Node Pool (required)
         :type kubernetes_node_pool: KubernetesNodePool
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
@@ -2249,7 +2249,7 @@ class KubernetesApi(object):
         >>> thread = api.k8s_post(kubernetes_cluster, async_req=True)
         >>> result = thread.get()
 
-        :param kubernetes_cluster: Properties of the Kubernetes Cluster (required)
+        :param kubernetes_cluster: Details of the Kubernetes Cluster (required)
         :type kubernetes_cluster: KubernetesCluster
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
@@ -2285,7 +2285,7 @@ class KubernetesApi(object):
         >>> thread = api.k8s_post_with_http_info(kubernetes_cluster, async_req=True)
         >>> result = thread.get()
 
-        :param kubernetes_cluster: Properties of the Kubernetes Cluster (required)
+        :param kubernetes_cluster: Details of the Kubernetes Cluster (required)
         :type kubernetes_cluster: KubernetesCluster
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
@@ -2416,7 +2416,7 @@ class KubernetesApi(object):
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
-        :param kubernetes_cluster: Properties of the Kubernetes Cluster (required)
+        :param kubernetes_cluster: Details of of the Kubernetes Cluster (required)
         :type kubernetes_cluster: KubernetesCluster
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
@@ -2454,7 +2454,7 @@ class KubernetesApi(object):
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
-        :param kubernetes_cluster: Properties of the Kubernetes Cluster (required)
+        :param kubernetes_cluster: Details of of the Kubernetes Cluster (required)
         :type kubernetes_cluster: KubernetesCluster
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
@@ -2565,142 +2565,6 @@ class KubernetesApi(object):
 
         return self.api_client.call_api(
             '/k8s/{k8sClusterId}', 'PUT',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=response_type,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats,
-            _request_auth=local_var_params.get('_request_auth'))
-
-    def k8s_versions_compatibilities_get(self, cluster_version, **kwargs):  # noqa: E501
-        """Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.  # noqa: E501
-
-        You can retrieve a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.k8s_versions_compatibilities_get(cluster_version, async_req=True)
-        >>> result = thread.get()
-
-        :param cluster_version: (required)
-        :type cluster_version: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :type _preload_content: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: list[str]
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.k8s_versions_compatibilities_get_with_http_info(cluster_version, **kwargs)  # noqa: E501
-
-    def k8s_versions_compatibilities_get_with_http_info(self, cluster_version, **kwargs):  # noqa: E501
-        """Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.  # noqa: E501
-
-        You can retrieve a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-
-        >>> thread = api.k8s_versions_compatibilities_get_with_http_info(cluster_version, async_req=True)
-        >>> result = thread.get()
-
-        :param cluster_version: (required)
-        :type cluster_version: str
-        :param async_req: Whether to execute the request asynchronously.
-        :type async_req: bool, optional
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :type _return_http_data_only: bool, optional
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :type _preload_content: bool, optional
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :param _request_auth: set to override the auth_settings for an a single
-                              request; this effectively ignores the authentication
-                              in the spec for a single request.
-        :type _request_auth: dict, optional
-        :return: Returns the result object.
-                 If the method is called asynchronously,
-                 returns the request thread.
-        :rtype: tuple(list[str], status_code(int), headers(HTTPHeaderDict))
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cluster_version'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout',
-                '_request_auth',
-                'response_type'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method k8s_versions_compatibilities_get" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cluster_version' is set
-        if self.api_client.client_side_validation and ('cluster_version' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cluster_version'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cluster_version` when calling `k8s_versions_compatibilities_get`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cluster_version' in local_var_params:
-            path_params['clusterVersion'] = local_var_params['cluster_version']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
-
-        response_type = 'list[str]'
-        if 'response_type' in kwargs:
-            response_type = kwargs['response_type']
-
-        return self.api_client.call_api(
-            '/k8s/versions/{clusterVersion}/compatibilities', 'GET',
             path_params,
             query_params,
             header_params,
