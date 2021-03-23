@@ -8,6 +8,8 @@ The IONOS Cloud SDK for Python provides you with access to the IONOS Cloud API. 
 
 ## Getting Started
 
+An IONOS account is required for access to the Cloud API; credentials from your registration are used to authenticate against the IONOS Cloud API.
+
 ### Installation & Usage
 
 ### pip install
