@@ -1,7 +1,5 @@
 # Introduction
 
-![CI](https://github.com/ionos-cloud/sdk-resources/workflows/CI/badge.svg) [![PyPI version](http://img.shields.io/pypi/v/ionoscloud)](https://pypi.python.org/pypi/ionoscloud/) [![Gitter](https://badges.gitter.im/ionos-cloud/sdk-general.png)](https://gitter.im/ionos-cloud/sdk-general)
-
 ## Overview
 
 The IONOS Cloud SDK for Python provides you with access to the IONOS Cloud API. The client library supports both simple and complex requests. It is designed for developers who are building applications in Python. The SDK for Python wraps the IONOS Cloud API. All API operations are performed over SSL and authenticated using your IONOS Cloud portal credentials. The API can be accessed within an instance running in IONOS Cloud or directly over the Internet from any application that can send an HTTPS request and receive an HTTPS response.
