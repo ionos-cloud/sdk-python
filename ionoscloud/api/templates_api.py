@@ -18,7 +18,7 @@ class TemplatesApi(object):
         self.api_client = api_client
 
     def templates_find_by_id(self, template_id, **kwargs):  # noqa: E501
-        """Retrieve a Template  # noqa: E501
+        """Retrieve an available template  # noqa: E501
 
         Retrieves the attributes of a given template.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -50,7 +50,7 @@ class TemplatesApi(object):
         return self.templates_find_by_id_with_http_info(template_id, **kwargs)  # noqa: E501
 
     def templates_find_by_id_with_http_info(self, template_id, **kwargs):  # noqa: E501
-        """Retrieve a Template  # noqa: E501
+        """Retrieve an available template  # noqa: E501
 
         Retrieves the attributes of a given template.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

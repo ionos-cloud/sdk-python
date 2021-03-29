@@ -2049,7 +2049,7 @@ class ServersApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: str
+        :rtype: RemoteConsoleUrl
         """
         kwargs['_return_http_data_only'] = True
         return self.datacenters_servers_remote_console_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
@@ -2094,7 +2094,7 @@ class ServersApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(str, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(RemoteConsoleUrl, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -2162,12 +2162,12 @@ class ServersApi(object):
         body_params = None
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['text'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'str'
+        response_type = 'RemoteConsoleUrl'
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 

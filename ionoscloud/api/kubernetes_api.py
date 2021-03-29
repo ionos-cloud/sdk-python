@@ -2250,7 +2250,7 @@ class KubernetesApi(object):
         >>> result = thread.get()
 
         :param kubernetes_cluster: Details of the Kubernetes Cluster (required)
-        :type kubernetes_cluster: KubernetesCluster
+        :type kubernetes_cluster: KubernetesClusterForPost
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2286,7 +2286,7 @@ class KubernetesApi(object):
         >>> result = thread.get()
 
         :param kubernetes_cluster: Details of the Kubernetes Cluster (required)
-        :type kubernetes_cluster: KubernetesCluster
+        :type kubernetes_cluster: KubernetesClusterForPost
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2417,7 +2417,7 @@ class KubernetesApi(object):
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
         :param kubernetes_cluster: Details of of the Kubernetes Cluster (required)
-        :type kubernetes_cluster: KubernetesCluster
+        :type kubernetes_cluster: KubernetesClusterForPut
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2455,7 +2455,7 @@ class KubernetesApi(object):
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
         :param kubernetes_cluster: Details of of the Kubernetes Cluster (required)
-        :type kubernetes_cluster: KubernetesCluster
+        :type kubernetes_cluster: KubernetesClusterForPut
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
