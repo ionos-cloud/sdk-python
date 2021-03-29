@@ -30,7 +30,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 def read(*parts):
     return codecs.open(os.path.join(here, *parts), 'r', 'utf-8').read()
 
-if os.path.isfile("README.md"):
+if os.path.isfile("docs/README.md"):
     long_desc = read('README.md')
 else:
     long_desc = "Ionos Cloud API Client Library for Python"
