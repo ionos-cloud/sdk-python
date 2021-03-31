@@ -8,6 +8,8 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-python&metric=security_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-python)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-python&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-python)
 
+![Alt text](.github/IONOS.CLOUD.BLU.svg?raw=true "Title")
+
 
 # Python API Client For IONOS Cloud
 
