@@ -55,4 +55,4 @@ Then import the package:
 ```python
 import ionoscloud
 ```
-## Our latest, most up to date usage documentation is available [here](https://docs.ionos.com/python-sdk/d)
+## Our latest, most up to date usage documentation is available [here](https://docs.ionos.com/python-sdk/)
