@@ -431,7 +431,7 @@ conf = ionoscloud.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 6.0\n"\
-               "SDK Package Version: 6.0.0-beta9".\
+               "SDK Package Version: 6.0.0-beta10".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
