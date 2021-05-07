@@ -194,12 +194,28 @@ class RequestsApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
-        :param filter_status: Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED]
+        :param filter_status: Request filter to fetch all requests based on a particular status [QUEUED, RUNNING, DONE, FAILED]. It doesn't depend on depth query parameter
         :type filter_status: str
-        :param filter_created_after: Filter all the requests after the created date
+        :param filter_created_after: Request filter to fetch all requests created after the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00
         :type filter_created_after: str
-        :param filter_created_before: Filter all the requests before the created date
+        :param filter_created_before: Request filter to fetch all requests created before the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00
         :type filter_created_before: str
+        :param filter_created_date: Response filter to select and display only the requests that contains the specified createdDate. The value is case insensitive and it  depends on depth query parameter that should have a value greater than 0. Date format e.g. 2020-11-16T17:42:59Z
+        :type filter_created_date: str
+        :param filter_created_by: Response filter to select and display only the requests that contains the specified createdBy. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_created_by: str
+        :param filter_etag: Response filter to select and display only the requests that contains the specified etag. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_etag: str
+        :param filter_request_status: Response filter to select and display only the requests that contains the specified requestStatus. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_request_status: str
+        :param filter_method: Response filter to select and display only the requests that contains the specified method. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_method: str
+        :param filter_headers: Response filter to select and display only the requests that contains the specified headers. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_headers: str
+        :param filter_body: Response filter to select and display only the requests that contains the specified body. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_body: str
+        :param filter_url: Response filter to select and display only the requests that contains the specified url. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_url: str
         :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
         :type offset: int
         :param limit: the maximum number of elements to return (use together with offset for pagination)
@@ -238,12 +254,28 @@ class RequestsApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
-        :param filter_status: Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED]
+        :param filter_status: Request filter to fetch all requests based on a particular status [QUEUED, RUNNING, DONE, FAILED]. It doesn't depend on depth query parameter
         :type filter_status: str
-        :param filter_created_after: Filter all the requests after the created date
+        :param filter_created_after: Request filter to fetch all requests created after the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00
         :type filter_created_after: str
-        :param filter_created_before: Filter all the requests before the created date
+        :param filter_created_before: Request filter to fetch all requests created before the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00
         :type filter_created_before: str
+        :param filter_created_date: Response filter to select and display only the requests that contains the specified createdDate. The value is case insensitive and it  depends on depth query parameter that should have a value greater than 0. Date format e.g. 2020-11-16T17:42:59Z
+        :type filter_created_date: str
+        :param filter_created_by: Response filter to select and display only the requests that contains the specified createdBy. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_created_by: str
+        :param filter_etag: Response filter to select and display only the requests that contains the specified etag. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_etag: str
+        :param filter_request_status: Response filter to select and display only the requests that contains the specified requestStatus. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_request_status: str
+        :param filter_method: Response filter to select and display only the requests that contains the specified method. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_method: str
+        :param filter_headers: Response filter to select and display only the requests that contains the specified headers. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_headers: str
+        :param filter_body: Response filter to select and display only the requests that contains the specified body. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_body: str
+        :param filter_url: Response filter to select and display only the requests that contains the specified url. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0. 
+        :type filter_url: str
         :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
         :type offset: int
         :param limit: the maximum number of elements to return (use together with offset for pagination)
@@ -280,6 +312,14 @@ class RequestsApi(object):
             'filter_status',
             'filter_created_after',
             'filter_created_before',
+            'filter_created_date',
+            'filter_created_by',
+            'filter_etag',
+            'filter_request_status',
+            'filter_method',
+            'filter_headers',
+            'filter_body',
+            'filter_url',
             'offset',
             'limit'
         ]
@@ -328,6 +368,22 @@ class RequestsApi(object):
             query_params.append(('filter.createdAfter', local_var_params['filter_created_after']))  # noqa: E501
         if 'filter_created_before' in local_var_params and local_var_params['filter_created_before'] is not None:  # noqa: E501
             query_params.append(('filter.createdBefore', local_var_params['filter_created_before']))  # noqa: E501
+        if 'filter_created_date' in local_var_params and local_var_params['filter_created_date'] is not None:  # noqa: E501
+            query_params.append(('filter.createdDate', local_var_params['filter_created_date']))  # noqa: E501
+        if 'filter_created_by' in local_var_params and local_var_params['filter_created_by'] is not None:  # noqa: E501
+            query_params.append(('filter.createdBy', local_var_params['filter_created_by']))  # noqa: E501
+        if 'filter_etag' in local_var_params and local_var_params['filter_etag'] is not None:  # noqa: E501
+            query_params.append(('filter.etag', local_var_params['filter_etag']))  # noqa: E501
+        if 'filter_request_status' in local_var_params and local_var_params['filter_request_status'] is not None:  # noqa: E501
+            query_params.append(('filter.requestStatus', local_var_params['filter_request_status']))  # noqa: E501
+        if 'filter_method' in local_var_params and local_var_params['filter_method'] is not None:  # noqa: E501
+            query_params.append(('filter.method', local_var_params['filter_method']))  # noqa: E501
+        if 'filter_headers' in local_var_params and local_var_params['filter_headers'] is not None:  # noqa: E501
+            query_params.append(('filter.headers', local_var_params['filter_headers']))  # noqa: E501
+        if 'filter_body' in local_var_params and local_var_params['filter_body'] is not None:  # noqa: E501
+            query_params.append(('filter.body', local_var_params['filter_body']))  # noqa: E501
+        if 'filter_url' in local_var_params and local_var_params['filter_url'] is not None:  # noqa: E501
+            query_params.append(('filter.url', local_var_params['filter_url']))  # noqa: E501
         if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
             query_params.append(('offset', local_var_params['offset']))  # noqa: E501
         if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501

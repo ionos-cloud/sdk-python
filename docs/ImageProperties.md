@@ -20,5 +20,7 @@
 | **licence_type** | **str** | OS type of this Image |  |
 | **image_type** | **str** | This indicates the type of image | [optional] [readonly]  |
 | **public** | **bool** | Indicates if the image is part of the public repository or not | [optional] [readonly]  |
+| **image_aliases** | **list[str]** | List of image aliases mapped for this Image | [optional] [readonly]  |
+| **cloud_init** | **str** | Cloud init compatibility | [optional]  |
 
 

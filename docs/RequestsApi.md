@@ -110,7 +110,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **requests_get**
-> Requests requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, offset=offset, limit=limit)
+> Requests requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, filter_created_date=filter_created_date, filter_created_by=filter_created_by, filter_etag=filter_etag, filter_request_status=filter_request_status, filter_method=filter_method, filter_headers=filter_headers, filter_body=filter_body, filter_url=filter_url, offset=offset, limit=limit)
 
 List Requests
 
@@ -143,14 +143,22 @@ with ionoscloud.ApiClient(configuration) as api_client:
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    filter_status = 'filter_status_example' # str | Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED] (optional)
-    filter_created_after = 'filter_created_after_example' # str | Filter all the requests after the created date (optional)
-    filter_created_before = 'filter_created_before_example' # str | Filter all the requests before the created date (optional)
+    filter_status = 'filter_status_example' # str | Request filter to fetch all requests based on a particular status [QUEUED, RUNNING, DONE, FAILED]. It doesn't depend on depth query parameter (optional)
+    filter_created_after = 'filter_created_after_example' # str | Request filter to fetch all requests created after the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 (optional)
+    filter_created_before = 'filter_created_before_example' # str | Request filter to fetch all requests created before the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 (optional)
+    filter_created_date = 'filter_created_date_example' # str | Response filter to select and display only the requests that contains the specified createdDate. The value is case insensitive and it  depends on depth query parameter that should have a value greater than 0. Date format e.g. 2020-11-16T17:42:59Z (optional)
+    filter_created_by = 'filter_created_by_example' # str | Response filter to select and display only the requests that contains the specified createdBy. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_etag = 'filter_etag_example' # str | Response filter to select and display only the requests that contains the specified etag. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_request_status = 'filter_request_status_example' # str | Response filter to select and display only the requests that contains the specified requestStatus. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_method = 'filter_method_example' # str | Response filter to select and display only the requests that contains the specified method. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_headers = 'filter_headers_example' # str | Response filter to select and display only the requests that contains the specified headers. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_body = 'filter_body_example' # str | Response filter to select and display only the requests that contains the specified body. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_url = 'filter_url_example' # str | Response filter to select and display only the requests that contains the specified url. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
     offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
     limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
         # List Requests
-        api_response = api_instance.requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, offset=offset, limit=limit)
+        api_response = api_instance.requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, filter_created_date=filter_created_date, filter_created_by=filter_created_by, filter_etag=filter_etag, filter_request_status=filter_request_status, filter_method=filter_method, filter_headers=filter_headers, filter_body=filter_body, filter_url=filter_url, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print('Exception when calling RequestsApi.requests_get: %s\n' % e)
@@ -182,14 +190,22 @@ with ionoscloud.ApiClient(configuration) as api_client:
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    filter_status = 'filter_status_example' # str | Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED] (optional)
-    filter_created_after = 'filter_created_after_example' # str | Filter all the requests after the created date (optional)
-    filter_created_before = 'filter_created_before_example' # str | Filter all the requests before the created date (optional)
+    filter_status = 'filter_status_example' # str | Request filter to fetch all requests based on a particular status [QUEUED, RUNNING, DONE, FAILED]. It doesn't depend on depth query parameter (optional)
+    filter_created_after = 'filter_created_after_example' # str | Request filter to fetch all requests created after the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 (optional)
+    filter_created_before = 'filter_created_before_example' # str | Request filter to fetch all requests created before the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 (optional)
+    filter_created_date = 'filter_created_date_example' # str | Response filter to select and display only the requests that contains the specified createdDate. The value is case insensitive and it  depends on depth query parameter that should have a value greater than 0. Date format e.g. 2020-11-16T17:42:59Z (optional)
+    filter_created_by = 'filter_created_by_example' # str | Response filter to select and display only the requests that contains the specified createdBy. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_etag = 'filter_etag_example' # str | Response filter to select and display only the requests that contains the specified etag. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_request_status = 'filter_request_status_example' # str | Response filter to select and display only the requests that contains the specified requestStatus. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_method = 'filter_method_example' # str | Response filter to select and display only the requests that contains the specified method. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_headers = 'filter_headers_example' # str | Response filter to select and display only the requests that contains the specified headers. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_body = 'filter_body_example' # str | Response filter to select and display only the requests that contains the specified body. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filter_url = 'filter_url_example' # str | Response filter to select and display only the requests that contains the specified url. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
     offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
     limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
         # List Requests
-        api_response = api_instance.requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, offset=offset, limit=limit)
+        api_response = api_instance.requests_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, filter_status=filter_status, filter_created_after=filter_created_after, filter_created_before=filter_created_before, filter_created_date=filter_created_date, filter_created_by=filter_created_by, filter_etag=filter_etag, filter_request_status=filter_request_status, filter_method=filter_method, filter_headers=filter_headers, filter_body=filter_body, filter_url=filter_url, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
         print('Exception when calling RequestsApi.requests_get: %s\n' % e)
@@ -202,9 +218,17 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-| **filter_status** | **str**| Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED] | [optional]  |
-| **filter_created_after** | **str**| Filter all the requests after the created date | [optional]  |
-| **filter_created_before** | **str**| Filter all the requests before the created date | [optional]  |
+| **filter_status** | **str**| Request filter to fetch all requests based on a particular status [QUEUED, RUNNING, DONE, FAILED]. It doesn&#39;t depend on depth query parameter | [optional]  |
+| **filter_created_after** | **str**| Request filter to fetch all requests created after the specified date. It doesn&#39;t depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 | [optional]  |
+| **filter_created_before** | **str**| Request filter to fetch all requests created before the specified date. It doesn&#39;t depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 | [optional]  |
+| **filter_created_date** | **str**| Response filter to select and display only the requests that contains the specified createdDate. The value is case insensitive and it  depends on depth query parameter that should have a value greater than 0. Date format e.g. 2020-11-16T17:42:59Z | [optional]  |
+| **filter_created_by** | **str**| Response filter to select and display only the requests that contains the specified createdBy. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional]  |
+| **filter_etag** | **str**| Response filter to select and display only the requests that contains the specified etag. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional]  |
+| **filter_request_status** | **str**| Response filter to select and display only the requests that contains the specified requestStatus. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional]  |
+| **filter_method** | **str**| Response filter to select and display only the requests that contains the specified method. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional]  |
+| **filter_headers** | **str**| Response filter to select and display only the requests that contains the specified headers. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional]  |
+| **filter_body** | **str**| Response filter to select and display only the requests that contains the specified body. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional]  |
+| **filter_url** | **str**| Response filter to select and display only the requests that contains the specified url. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional]  |
 | **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
 | **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
 

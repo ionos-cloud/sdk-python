@@ -15,5 +15,6 @@
 | **create_k8s_cluster** | **bool** | create kubernetes cluster privilege | [optional]  |
 | **create_flow_log** | **bool** | create Flow Logs privilege | [optional]  |
 | **access_and_manage_monitoring** | **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional]  |
+| **access_and_manage_certificates** | **bool** | Privilege for a group to access and manage certificates. | [optional]  |
 
 
