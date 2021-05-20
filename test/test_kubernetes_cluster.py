@@ -55,7 +55,9 @@ class TestKubernetesCluster(unittest.TestCase):
                         day_of_the_week = 'Monday', 
                         time = '13:00:00', ), 
                     available_upgrade_versions = [1.16.4, 1.17.7], 
-                    viable_node_pool_versions = [1.17.7, 1.18.2], ),
+                    viable_node_pool_versions = [1.17.7, 1.18.2], 
+                    public = True, 
+                    gateway_ip = '192.170.0.1', ),
                 entities = ionoscloud.models.kubernetes_cluster_entities.KubernetesClusterEntities(
                     nodepools = ionoscloud.models.kubernetes_node_pools.KubernetesNodePools(
                         id = '1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools', 
@@ -96,12 +98,12 @@ class TestKubernetesCluster(unittest.TestCase):
                                         ionoscloud.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
                                             id = 3, )
                                         ], 
-                                    labels = ionoscloud.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
-                                        key = '', 
-                                        value = '', ), 
-                                    annotations = ionoscloud.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
-                                        key = '', 
-                                        value = '', ), 
+                                    labels = {
+                                        'key' : ''
+                                        }, 
+                                    annotations = {
+                                        'key' : ''
+                                        }, 
                                     public_ips = [81.173.1.2, 82.231.2.5, 92.221.2.4], 
                                     available_upgrade_versions = [1.16.4, 1.17.7], ), )
                             ], ), )
@@ -115,7 +117,9 @@ class TestKubernetesCluster(unittest.TestCase):
                         day_of_the_week = 'Monday', 
                         time = '13:00:00', ), 
                     available_upgrade_versions = [1.16.4, 1.17.7], 
-                    viable_node_pool_versions = [1.17.7, 1.18.2], ),
+                    viable_node_pool_versions = [1.17.7, 1.18.2], 
+                    public = True, 
+                    gateway_ip = '192.170.0.1', ),
         )
 
     def testKubernetesCluster(self):

@@ -190,7 +190,6 @@ class DatacenterProperties(object):
         :param features: The features of this DatacenterProperties.  # noqa: E501
         :type features: list[str]
         """
-        allowed_values = ["SSD", "SSD_STORAGE_ZONING"]  # noqa: E501
 
         self._features = features
 

@@ -42,7 +42,9 @@ class TestKubernetesClusterProperties(unittest.TestCase):
                     day_of_the_week = 'Monday', 
                     time = '13:00:00', ),
                 available_upgrade_versions = [1.16.4, 1.17.7],
-                viable_node_pool_versions = [1.17.7, 1.18.2]
+                viable_node_pool_versions = [1.17.7, 1.18.2],
+                public = True,
+                gateway_ip = '192.170.0.1'
             )
         else :
             return KubernetesClusterProperties(

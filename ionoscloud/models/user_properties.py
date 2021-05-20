@@ -40,7 +40,6 @@ class UserProperties(object):
         'force_sec_auth': 'bool',
         'sec_auth_active': 'bool',
         's3_canonical_user_id': 'str',
-        'password': 'str',
         'active': 'bool',
     }
 
@@ -52,11 +51,10 @@ class UserProperties(object):
         'force_sec_auth': 'forceSecAuth',
         'sec_auth_active': 'secAuthActive',
         's3_canonical_user_id': 's3CanonicalUserId',
-        'password': 'password',
         'active': 'active',
     }
 
-    def __init__(self, firstname=None, lastname=None, email=None, administrator=None, force_sec_auth=None, sec_auth_active=None, s3_canonical_user_id=None, password=None, active=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, firstname=None, lastname=None, email=None, administrator=None, force_sec_auth=None, sec_auth_active=None, s3_canonical_user_id=None, active=None, local_vars_configuration=None):  # noqa: E501
         """UserProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,7 +67,6 @@ class UserProperties(object):
         self._force_sec_auth = None
         self._sec_auth_active = None
         self._s3_canonical_user_id = None
-        self._password = None
         self._active = None
         self.discriminator = None
 
@@ -87,8 +84,6 @@ class UserProperties(object):
             self.sec_auth_active = sec_auth_active
         if s3_canonical_user_id is not None:
             self.s3_canonical_user_id = s3_canonical_user_id
-        if password is not None:
-            self.password = password
         if active is not None:
             self.active = active
 
@@ -252,29 +247,6 @@ class UserProperties(object):
         """
 
         self._s3_canonical_user_id = s3_canonical_user_id
-
-    @property
-    def password(self):
-        """Gets the password of this UserProperties.  # noqa: E501
-
-        User password  # noqa: E501
-
-        :return: The password of this UserProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._password
-
-    @password.setter
-    def password(self, password):
-        """Sets the password of this UserProperties.
-
-        User password  # noqa: E501
-
-        :param password: The password of this UserProperties.  # noqa: E501
-        :type password: str
-        """
-
-        self._password = password
 
     @property
     def active(self):

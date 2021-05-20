@@ -72,7 +72,6 @@ class TestGroup(unittest.TestCase):
                                     force_sec_auth = True, 
                                     sec_auth_active = True, 
                                     s3_canonical_user_id = '', 
-                                    password = '', 
                                     active = True, ), )
                             ], ), 
                     resources = ionoscloud.models.resource_groups.ResourceGroups(

@@ -42,7 +42,9 @@ class TestIpConsumer(unittest.TestCase):
                 server_id = '',
                 server_name = '',
                 datacenter_id = '',
-                datacenter_name = ''
+                datacenter_name = '',
+                k8s_node_pool_uuid = '',
+                k8s_cluster_uuid = ''
             )
         else :
             return IpConsumer(

@@ -65,7 +65,11 @@ class TestImage(unittest.TestCase):
                     disc_scsi_hot_unplug = True, 
                     licence_type = 'LINUX', 
                     image_type = 'HDD', 
-                    public = True, )
+                    public = True, 
+                    image_aliases = [
+                        ''
+                        ], 
+                    cloud_init = 'V1', )
             )
         else :
             return Image(
@@ -86,7 +90,11 @@ class TestImage(unittest.TestCase):
                     disc_scsi_hot_unplug = True, 
                     licence_type = 'LINUX', 
                     image_type = 'HDD', 
-                    public = True, ),
+                    public = True, 
+                    image_aliases = [
+                        ''
+                        ], 
+                    cloud_init = 'V1', ),
         )
 
     def testImage(self):

@@ -37,7 +37,7 @@ class TestKubernetesNode(unittest.TestCase):
         if include_optional :
             return KubernetesNode(
                 id = '1e072e52-2ed3-492f-b6b6-c6b116907527',
-                type = 'nodepool',
+                type = 'node',
                 href = '<RESOURCE-URI>',
                 metadata = ionoscloud.models.kubernetes_node_metadata.KubernetesNodeMetadata(
                     etag = '45480eb3fbfc31f1d916c1eaa4abdcc3', 
@@ -48,6 +48,7 @@ class TestKubernetesNode(unittest.TestCase):
                 properties = ionoscloud.models.kubernetes_node_properties.KubernetesNodeProperties(
                     name = 'k8s-node', 
                     public_ip = '192.168.23.2', 
+                    private_ip = '192.168.23.2', 
                     k8s_version = '1.15.4', )
             )
         else :
@@ -55,6 +56,7 @@ class TestKubernetesNode(unittest.TestCase):
                 properties = ionoscloud.models.kubernetes_node_properties.KubernetesNodeProperties(
                     name = 'k8s-node', 
                     public_ip = '192.168.23.2', 
+                    private_ip = '192.168.23.2', 
                     k8s_version = '1.15.4', ),
         )
 

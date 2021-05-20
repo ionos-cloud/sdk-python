@@ -50,14 +50,7 @@ class TestKubernetesNodePoolForPut(unittest.TestCase):
                     state = 'AVAILABLE', ),
                 properties = ionoscloud.models.kubernetes_node_pool_properties_for_put.KubernetesNodePoolPropertiesForPut(
                     name = 'k8s-node-pool', 
-                    datacenter_id = '1e072e52-2ed3-492f-b6b6-c6b116907521', 
                     node_count = 2, 
-                    cpu_family = 'AMD_OPTERON', 
-                    cores_count = 4, 
-                    ram_size = 2048, 
-                    availability_zone = 'AUTO', 
-                    storage_type = 'HDD', 
-                    storage_size = 100, 
                     k8s_version = '1.15.4', 
                     maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                         day_of_the_week = 'Monday', 
@@ -69,26 +62,19 @@ class TestKubernetesNodePoolForPut(unittest.TestCase):
                         ionoscloud.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
                             id = 3, )
                         ], 
-                    labels = ionoscloud.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
-                        key = '', 
-                        value = '', ), 
-                    annotations = ionoscloud.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
-                        key = '', 
-                        value = '', ), 
+                    labels = {
+                        'key' : ''
+                        }, 
+                    annotations = {
+                        'key' : ''
+                        }, 
                     public_ips = [81.173.1.2, 82.231.2.5, 92.221.2.4], )
             )
         else :
             return KubernetesNodePoolForPut(
                 properties = ionoscloud.models.kubernetes_node_pool_properties_for_put.KubernetesNodePoolPropertiesForPut(
                     name = 'k8s-node-pool', 
-                    datacenter_id = '1e072e52-2ed3-492f-b6b6-c6b116907521', 
                     node_count = 2, 
-                    cpu_family = 'AMD_OPTERON', 
-                    cores_count = 4, 
-                    ram_size = 2048, 
-                    availability_zone = 'AUTO', 
-                    storage_type = 'HDD', 
-                    storage_size = 100, 
                     k8s_version = '1.15.4', 
                     maintenance_window = ionoscloud.models.kubernetes_maintenance_window.KubernetesMaintenanceWindow(
                         day_of_the_week = 'Monday', 
@@ -100,12 +86,12 @@ class TestKubernetesNodePoolForPut(unittest.TestCase):
                         ionoscloud.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
                             id = 3, )
                         ], 
-                    labels = ionoscloud.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
-                        key = '', 
-                        value = '', ), 
-                    annotations = ionoscloud.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
-                        key = '', 
-                        value = '', ), 
+                    labels = {
+                        'key' : ''
+                        }, 
+                    annotations = {
+                        'key' : ''
+                        }, 
                     public_ips = [81.173.1.2, 82.231.2.5, 92.221.2.4], ),
         )
 

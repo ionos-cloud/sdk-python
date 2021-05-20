@@ -71,7 +71,8 @@ class TestAttachedVolumes(unittest.TestCase):
                             disc_virtio_hot_plug = True, 
                             disc_virtio_hot_unplug = True, 
                             device_number = 3, 
-                            backupunit_id = '25f67991-0f51-4efc-a8ad-ef1fb31a481c', ), )
+                            backupunit_id = '25f67991-0f51-4efc-a8ad-ef1fb31a481c', 
+                            user_data = '', ), )
                     ],
                 offset = 0,
                 limit = 1000,

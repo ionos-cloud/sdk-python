@@ -61,7 +61,7 @@ class S3KeyProperties(object):
     def secret_key(self):
         """Gets the secret_key of this S3KeyProperties.  # noqa: E501
 
-        secret of the s3 key  # noqa: E501
+        secret of the S3 key  # noqa: E501
 
         :return: The secret_key of this S3KeyProperties.  # noqa: E501
         :rtype: str
@@ -72,7 +72,7 @@ class S3KeyProperties(object):
     def secret_key(self, secret_key):
         """Sets the secret_key of this S3KeyProperties.
 
-        secret of the s3 key  # noqa: E501
+        secret of the S3 key  # noqa: E501
 
         :param secret_key: The secret_key of this S3KeyProperties.  # noqa: E501
         :type secret_key: str
@@ -84,7 +84,7 @@ class S3KeyProperties(object):
     def active(self):
         """Gets the active of this S3KeyProperties.  # noqa: E501
 
-        denotes if the s3 key is active or not  # noqa: E501
+        denotes if the S3 key is active or not  # noqa: E501
 
         :return: The active of this S3KeyProperties.  # noqa: E501
         :rtype: bool
@@ -95,7 +95,7 @@ class S3KeyProperties(object):
     def active(self, active):
         """Sets the active of this S3KeyProperties.
 
-        denotes if the s3 key is active or not  # noqa: E501
+        denotes if the S3 key is active or not  # noqa: E501
 
         :param active: The active of this S3KeyProperties.  # noqa: E501
         :type active: bool

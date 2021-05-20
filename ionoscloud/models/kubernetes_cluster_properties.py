@@ -38,6 +38,8 @@ class KubernetesClusterProperties(object):
         'maintenance_window': 'KubernetesMaintenanceWindow',
         'available_upgrade_versions': 'list[str]',
         'viable_node_pool_versions': 'list[str]',
+        'public': 'bool',
+        'gateway_ip': 'str',
     }
 
     attribute_map = {
@@ -46,9 +48,11 @@ class KubernetesClusterProperties(object):
         'maintenance_window': 'maintenanceWindow',
         'available_upgrade_versions': 'availableUpgradeVersions',
         'viable_node_pool_versions': 'viableNodePoolVersions',
+        'public': 'public',
+        'gateway_ip': 'gatewayIp',
     }
 
-    def __init__(self, name=None, k8s_version=None, maintenance_window=None, available_upgrade_versions=None, viable_node_pool_versions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, k8s_version=None, maintenance_window=None, available_upgrade_versions=None, viable_node_pool_versions=None, public=True, gateway_ip=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesClusterProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -59,6 +63,8 @@ class KubernetesClusterProperties(object):
         self._maintenance_window = None
         self._available_upgrade_versions = None
         self._viable_node_pool_versions = None
+        self._public = None
+        self._gateway_ip = None
         self.discriminator = None
 
         self.name = name
@@ -70,6 +76,10 @@ class KubernetesClusterProperties(object):
             self.available_upgrade_versions = available_upgrade_versions
         if viable_node_pool_versions is not None:
             self.viable_node_pool_versions = viable_node_pool_versions
+        if public is not None:
+            self.public = public
+        if gateway_ip is not None:
+            self.gateway_ip = gateway_ip
 
     @property
     def name(self):
@@ -185,6 +195,52 @@ class KubernetesClusterProperties(object):
         """
 
         self._viable_node_pool_versions = viable_node_pool_versions
+
+    @property
+    def public(self):
+        """Gets the public of this KubernetesClusterProperties.  # noqa: E501
+
+        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
+
+        :return: The public of this KubernetesClusterProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._public
+
+    @public.setter
+    def public(self, public):
+        """Sets the public of this KubernetesClusterProperties.
+
+        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
+
+        :param public: The public of this KubernetesClusterProperties.  # noqa: E501
+        :type public: bool
+        """
+
+        self._public = public
+
+    @property
+    def gateway_ip(self):
+        """Gets the gateway_ip of this KubernetesClusterProperties.  # noqa: E501
+
+        The IP address of the gateway used by the cluster. This is mandatory when `public` is set to `false` and should not be provided otherwise.  # noqa: E501
+
+        :return: The gateway_ip of this KubernetesClusterProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._gateway_ip
+
+    @gateway_ip.setter
+    def gateway_ip(self, gateway_ip):
+        """Sets the gateway_ip of this KubernetesClusterProperties.
+
+        The IP address of the gateway used by the cluster. This is mandatory when `public` is set to `false` and should not be provided otherwise.  # noqa: E501
+
+        :param gateway_ip: The gateway_ip of this KubernetesClusterProperties.  # noqa: E501
+        :type gateway_ip: str
+        """
+
+        self._gateway_ip = gateway_ip
 
     def to_dict(self):
         """Returns the model properties as a dict"""

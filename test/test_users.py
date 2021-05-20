@@ -56,7 +56,6 @@ class TestUsers(unittest.TestCase):
                             force_sec_auth = True, 
                             sec_auth_active = True, 
                             s3_canonical_user_id = '', 
-                            password = '', 
                             active = True, ), 
                         entities = ionoscloud.models.users_entities.UsersEntities(
                             owns = ionoscloud.models.resources_users.ResourcesUsers(

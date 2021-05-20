@@ -40,6 +40,8 @@ class IpConsumer(object):
         'server_name': 'str',
         'datacenter_id': 'str',
         'datacenter_name': 'str',
+        'k8s_node_pool_uuid': 'str',
+        'k8s_cluster_uuid': 'str',
     }
 
     attribute_map = {
@@ -50,9 +52,11 @@ class IpConsumer(object):
         'server_name': 'serverName',
         'datacenter_id': 'datacenterId',
         'datacenter_name': 'datacenterName',
+        'k8s_node_pool_uuid': 'k8sNodePoolUuid',
+        'k8s_cluster_uuid': 'k8sClusterUuid',
     }
 
-    def __init__(self, ip=None, mac=None, nic_id=None, server_id=None, server_name=None, datacenter_id=None, datacenter_name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, ip=None, mac=None, nic_id=None, server_id=None, server_name=None, datacenter_id=None, datacenter_name=None, k8s_node_pool_uuid=None, k8s_cluster_uuid=None, local_vars_configuration=None):  # noqa: E501
         """IpConsumer - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -65,6 +69,8 @@ class IpConsumer(object):
         self._server_name = None
         self._datacenter_id = None
         self._datacenter_name = None
+        self._k8s_node_pool_uuid = None
+        self._k8s_cluster_uuid = None
         self.discriminator = None
 
         if ip is not None:
@@ -81,6 +87,10 @@ class IpConsumer(object):
             self.datacenter_id = datacenter_id
         if datacenter_name is not None:
             self.datacenter_name = datacenter_name
+        if k8s_node_pool_uuid is not None:
+            self.k8s_node_pool_uuid = k8s_node_pool_uuid
+        if k8s_cluster_uuid is not None:
+            self.k8s_cluster_uuid = k8s_cluster_uuid
 
     @property
     def ip(self):
@@ -228,6 +238,48 @@ class IpConsumer(object):
         """
 
         self._datacenter_name = datacenter_name
+
+    @property
+    def k8s_node_pool_uuid(self):
+        """Gets the k8s_node_pool_uuid of this IpConsumer.  # noqa: E501
+
+
+        :return: The k8s_node_pool_uuid of this IpConsumer.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_node_pool_uuid
+
+    @k8s_node_pool_uuid.setter
+    def k8s_node_pool_uuid(self, k8s_node_pool_uuid):
+        """Sets the k8s_node_pool_uuid of this IpConsumer.
+
+
+        :param k8s_node_pool_uuid: The k8s_node_pool_uuid of this IpConsumer.  # noqa: E501
+        :type k8s_node_pool_uuid: str
+        """
+
+        self._k8s_node_pool_uuid = k8s_node_pool_uuid
+
+    @property
+    def k8s_cluster_uuid(self):
+        """Gets the k8s_cluster_uuid of this IpConsumer.  # noqa: E501
+
+
+        :return: The k8s_cluster_uuid of this IpConsumer.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_cluster_uuid
+
+    @k8s_cluster_uuid.setter
+    def k8s_cluster_uuid(self, k8s_cluster_uuid):
+        """Sets the k8s_cluster_uuid of this IpConsumer.
+
+
+        :param k8s_cluster_uuid: The k8s_cluster_uuid of this IpConsumer.  # noqa: E501
+        :type k8s_cluster_uuid: str
+        """
+
+        self._k8s_cluster_uuid = k8s_cluster_uuid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

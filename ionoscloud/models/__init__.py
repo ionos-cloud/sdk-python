@@ -55,8 +55,11 @@ from ionoscloud.models.ip_consumer import IpConsumer
 from ionoscloud.models.kubernetes_auto_scaling import KubernetesAutoScaling
 from ionoscloud.models.kubernetes_cluster import KubernetesCluster
 from ionoscloud.models.kubernetes_cluster_entities import KubernetesClusterEntities
+from ionoscloud.models.kubernetes_cluster_for_post import KubernetesClusterForPost
+from ionoscloud.models.kubernetes_cluster_for_put import KubernetesClusterForPut
 from ionoscloud.models.kubernetes_cluster_properties import KubernetesClusterProperties
-from ionoscloud.models.kubernetes_cluster_properties_for_post_and_put import KubernetesClusterPropertiesForPostAndPut
+from ionoscloud.models.kubernetes_cluster_properties_for_post import KubernetesClusterPropertiesForPost
+from ionoscloud.models.kubernetes_cluster_properties_for_put import KubernetesClusterPropertiesForPut
 from ionoscloud.models.kubernetes_clusters import KubernetesClusters
 from ionoscloud.models.kubernetes_config import KubernetesConfig
 from ionoscloud.models.kubernetes_config_properties import KubernetesConfigProperties
@@ -64,6 +67,7 @@ from ionoscloud.models.kubernetes_maintenance_window import KubernetesMaintenanc
 from ionoscloud.models.kubernetes_node import KubernetesNode
 from ionoscloud.models.kubernetes_node_metadata import KubernetesNodeMetadata
 from ionoscloud.models.kubernetes_node_pool import KubernetesNodePool
+from ionoscloud.models.kubernetes_node_pool_for_post import KubernetesNodePoolForPost
 from ionoscloud.models.kubernetes_node_pool_for_put import KubernetesNodePoolForPut
 from ionoscloud.models.kubernetes_node_pool_lan import KubernetesNodePoolLan
 from ionoscloud.models.kubernetes_node_pool_properties import KubernetesNodePoolProperties
@@ -132,7 +136,11 @@ from ionoscloud.models.snapshots import Snapshots
 from ionoscloud.models.type import Type
 from ionoscloud.models.user import User
 from ionoscloud.models.user_metadata import UserMetadata
+from ionoscloud.models.user_post import UserPost
 from ionoscloud.models.user_properties import UserProperties
+from ionoscloud.models.user_properties_post import UserPropertiesPost
+from ionoscloud.models.user_properties_put import UserPropertiesPut
+from ionoscloud.models.user_put import UserPut
 from ionoscloud.models.users import Users
 from ionoscloud.models.users_entities import UsersEntities
 from ionoscloud.models.volume import Volume

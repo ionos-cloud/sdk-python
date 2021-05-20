@@ -105,7 +105,6 @@ class LocationProperties(object):
         :param features: The features of this LocationProperties.  # noqa: E501
         :type features: list[str]
         """
-        allowed_values = ["SSD", "SSD_STORAGE_ZONING"]  # noqa: E501
 
         self._features = features
 

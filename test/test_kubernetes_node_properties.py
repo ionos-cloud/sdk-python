@@ -38,12 +38,12 @@ class TestKubernetesNodeProperties(unittest.TestCase):
             return KubernetesNodeProperties(
                 name = 'k8s-node',
                 public_ip = '192.168.23.2',
+                private_ip = '192.168.23.2',
                 k8s_version = '1.15.4'
             )
         else :
             return KubernetesNodeProperties(
                 name = 'k8s-node',
-                public_ip = '192.168.23.2',
                 k8s_version = '1.15.4',
         )
 

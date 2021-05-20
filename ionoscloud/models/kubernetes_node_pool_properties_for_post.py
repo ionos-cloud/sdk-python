@@ -247,7 +247,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def ram_size(self):
         """Gets the ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB.  # noqa: E501
+        RAM size for node, minimum size is 2048MB. Ram size must be set to multiple of 1024MB.  # noqa: E501
 
         :return: The ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: int
@@ -258,7 +258,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def ram_size(self, ram_size):
         """Sets the ram_size of this KubernetesNodePoolPropertiesForPost.
 
-        RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB.  # noqa: E501
+        RAM size for node, minimum size is 2048MB. Ram size must be set to multiple of 1024MB.  # noqa: E501
 
         :param ram_size: The ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type ram_size: int

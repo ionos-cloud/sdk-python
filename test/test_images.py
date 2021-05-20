@@ -70,7 +70,11 @@ class TestImages(unittest.TestCase):
                             disc_scsi_hot_unplug = True, 
                             licence_type = 'LINUX', 
                             image_type = 'HDD', 
-                            public = True, ), )
+                            public = True, 
+                            image_aliases = [
+                                ''
+                                ], 
+                            cloud_init = 'V1', ), )
                     ]
             )
         else :

@@ -56,12 +56,12 @@ class TestKubernetesNodePoolProperties(unittest.TestCase):
                     ionoscloud.models.kubernetes_node_pool_lan.KubernetesNodePoolLan(
                         id = 3, )
                     ],
-                labels = ionoscloud.models.kubernetes_node_pool_label.KubernetesNodePoolLabel(
-                    key = '', 
-                    value = '', ),
-                annotations = ionoscloud.models.kubernetes_node_pool_annotation.KubernetesNodePoolAnnotation(
-                    key = '', 
-                    value = '', ),
+                labels = {
+                    'key' : ''
+                    },
+                annotations = {
+                    'key' : ''
+                    },
                 public_ips = [81.173.1.2, 82.231.2.5, 92.221.2.4],
                 available_upgrade_versions = [1.16.4, 1.17.7]
             )

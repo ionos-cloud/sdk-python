@@ -125,7 +125,7 @@ class LabelResources(object):
         :param type: The type of this LabelResources.  # noqa: E501
         :type type: str
         """
-        allowed_values = ["label"]  # noqa: E501
+        allowed_values = ["collection"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501

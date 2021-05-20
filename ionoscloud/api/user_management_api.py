@@ -3661,7 +3661,7 @@ class UserManagementApi(object):
         >>> result = thread.get()
 
         :param user: User to be created (required)
-        :type user: User
+        :type user: UserPost
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -3697,7 +3697,7 @@ class UserManagementApi(object):
         >>> result = thread.get()
 
         :param user: User to be created (required)
-        :type user: User
+        :type user: UserPost
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -3828,7 +3828,7 @@ class UserManagementApi(object):
         :param user_id: (required)
         :type user_id: str
         :param user: Modified user (required)
-        :type user: User
+        :type user: UserPut
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -3866,7 +3866,7 @@ class UserManagementApi(object):
         :param user_id: (required)
         :type user_id: str
         :param user: Modified user (required)
-        :type user: User
+        :type user: UserPut
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -4660,7 +4660,7 @@ class UserManagementApi(object):
     def um_users_s3keys_put(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
         """Modify a S3 key having the given key id  # noqa: E501
 
-        You can enable or disable a given S3 key  # noqa: E501
+        You can enable or disable a given S3 key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -4671,7 +4671,7 @@ class UserManagementApi(object):
         :type user_id: str
         :param key_id: The unique access key ID of the S3 key (required)
         :type key_id: str
-        :param s3_key: Modified s3 key (required)
+        :param s3_key: Modified S3 key (required)
         :type s3_key: S3Key
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
@@ -4700,7 +4700,7 @@ class UserManagementApi(object):
     def um_users_s3keys_put_with_http_info(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
         """Modify a S3 key having the given key id  # noqa: E501
 
-        You can enable or disable a given S3 key  # noqa: E501
+        You can enable or disable a given S3 key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -4711,7 +4711,7 @@ class UserManagementApi(object):
         :type user_id: str
         :param key_id: The unique access key ID of the S3 key (required)
         :type key_id: str
-        :param s3_key: Modified s3 key (required)
+        :param s3_key: Modified S3 key (required)
         :type s3_key: S3Key
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool

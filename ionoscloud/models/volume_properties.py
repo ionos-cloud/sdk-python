@@ -51,6 +51,7 @@ class VolumeProperties(object):
         'disc_virtio_hot_unplug': 'bool',
         'device_number': 'int',
         'backupunit_id': 'str',
+        'user_data': 'str',
     }
 
     attribute_map = {
@@ -72,9 +73,10 @@ class VolumeProperties(object):
         'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
         'device_number': 'deviceNumber',
         'backupunit_id': 'backupunitId',
+        'user_data': 'userData',
     }
 
-    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, backupunit_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, backupunit_id=None, user_data=None, local_vars_configuration=None):  # noqa: E501
         """VolumeProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -98,6 +100,7 @@ class VolumeProperties(object):
         self._disc_virtio_hot_unplug = None
         self._device_number = None
         self._backupunit_id = None
+        self._user_data = None
         self.discriminator = None
 
         if name is not None:
@@ -135,6 +138,8 @@ class VolumeProperties(object):
             self.device_number = device_number
         if backupunit_id is not None:
             self.backupunit_id = backupunit_id
+        if user_data is not None:
+            self.user_data = user_data
 
     @property
     def name(self):
@@ -555,7 +560,7 @@ class VolumeProperties(object):
     def backupunit_id(self):
         """Gets the backupunit_id of this VolumeProperties.  # noqa: E501
 
-        The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provied either public image or imageAlias in conjunction with this property.  # noqa: E501
+        The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.  # noqa: E501
 
         :return: The backupunit_id of this VolumeProperties.  # noqa: E501
         :rtype: str
@@ -566,13 +571,36 @@ class VolumeProperties(object):
     def backupunit_id(self, backupunit_id):
         """Sets the backupunit_id of this VolumeProperties.
 
-        The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provied either public image or imageAlias in conjunction with this property.  # noqa: E501
+        The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.  # noqa: E501
 
         :param backupunit_id: The backupunit_id of this VolumeProperties.  # noqa: E501
         :type backupunit_id: str
         """
 
         self._backupunit_id = backupunit_id
+
+    @property
+    def user_data(self):
+        """Gets the user_data of this VolumeProperties.  # noqa: E501
+
+        The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either 'public image' or 'imageAlias' that has cloud-init compatibility in conjunction with this property.  # noqa: E501
+
+        :return: The user_data of this VolumeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_data
+
+    @user_data.setter
+    def user_data(self, user_data):
+        """Sets the user_data of this VolumeProperties.
+
+        The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either 'public image' or 'imageAlias' that has cloud-init compatibility in conjunction with this property.  # noqa: E501
+
+        :param user_data: The user_data of this VolumeProperties.  # noqa: E501
+        :type user_data: str
+        """
+
+        self._user_data = user_data
 
     def to_dict(self):
         """Returns the model properties as a dict"""
