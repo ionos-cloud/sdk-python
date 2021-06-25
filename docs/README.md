@@ -1,4 +1,4 @@
-# Introduction
+# Python SDK
 
 ## Overview
 
@@ -57,7 +57,7 @@ configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-client = ionoscloud.ApiClient(configuration) 
+client = ionoscloud.ApiClient(configuration)
 ```
 
 Environment variables can also be used; the SDK uses the following variables:
@@ -65,8 +65,6 @@ Environment variables can also be used; the SDK uses the following variables:
 * IONOS\_USERNAME - to specify the username used to login
 * IONOS\_PASSWORD - to specify the password
 * IONOS\_TOKEN - if an authentication token is being used
-
-
 
 **Warning**: Make sure to follow the Information Security Best Practices when using credentials within your code or storing them in a file.
 
@@ -85,7 +83,7 @@ Many of the _List_ or _Get_ operations will accept an optional _depth_ argument.
 
 ### Pretty
 
-The operations will also accept an optional _pretty_ argument. Setting this to a value of `true` or `false` controls whether the response is pretty-printed (with indentation and new lines). By default, the SDK sets the _pretty_ argument to `true`.
+The operations will also accept an optional _pretty_ argument. Setting this to a value of `true` or `false` controls whether the response is pretty-printed \(with indentation and new lines\). By default, the SDK sets the _pretty_ argument to `true`.
 
 ## Feature Reference
 
