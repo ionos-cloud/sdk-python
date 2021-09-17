@@ -1,22 +1,22 @@
-# PrivateCrossConnectsApi
+# SnapshotsApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**pccs_delete**](PrivateCrossConnectsApi.md#pccs_delete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect |
-| [**pccs_find_by_id**](PrivateCrossConnectsApi.md#pccs_find_by_id) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect |
-| [**pccs_get**](PrivateCrossConnectsApi.md#pccs_get) | **GET** /pccs | List Private Cross-Connects |
-| [**pccs_patch**](PrivateCrossConnectsApi.md#pccs_patch) | **PATCH** /pccs/{pccId} | Partially Modify a Private Cross-Connect |
-| [**pccs_post**](PrivateCrossConnectsApi.md#pccs_post) | **POST** /pccs | Create a Private Cross-Connect |
+| [**snapshots_delete**](SnapshotsApi.md#snapshots_delete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot |
+| [**snapshots_find_by_id**](SnapshotsApi.md#snapshots_find_by_id) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid. |
+| [**snapshots_get**](SnapshotsApi.md#snapshots_get) | **GET** /snapshots | List Snapshots |
+| [**snapshots_patch**](SnapshotsApi.md#snapshots_patch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot |
+| [**snapshots_put**](SnapshotsApi.md#snapshots_put) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot |
 
 
-# **pccs_delete**
-> object pccs_delete(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **snapshots_delete**
+> snapshots_delete(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Delete a Private Cross-Connect
+Delete a Snapshot
 
-Delete a private cross-connect if no datacenters are joined to the given PCC
+Deletes the specified snapshot.
 
 ### Example
 
@@ -41,17 +41,16 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
-    pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
+    api_instance = ionoscloud.SnapshotsApi(api_client)
+    snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Delete a Private Cross-Connect
-        api_response = api_instance.pccs_delete(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete a Snapshot
+        api_instance.snapshots_delete(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_delete: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_delete: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -76,31 +75,30 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
-    pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
+    api_instance = ionoscloud.SnapshotsApi(api_client)
+    snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Delete a Private Cross-Connect
-        api_response = api_instance.pccs_delete(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete a Snapshot
+        api_instance.snapshots_delete(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_delete: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_delete: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pcc_id** | **str**| The unique ID of the private cross-connect |  |
+| **snapshot_id** | **str**| The unique ID of the Snapshot |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -111,12 +109,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **pccs_find_by_id**
-> PrivateCrossConnect pccs_find_by_id(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **snapshots_find_by_id**
+> Snapshot snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Retrieve a Private Cross-Connect
+Retrieve a Snapshot by its uuid.
 
-You can retrieve a private cross-connect by using the resource's ID. This value can be found in the response body when a private cross-connect is created or when you GET a list of private cross-connects.
+Retrieves the attributes of a given Snapshot.
 
 ### Example
 
@@ -141,17 +139,17 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
-    pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
+    api_instance = ionoscloud.SnapshotsApi(api_client)
+    snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve a Private Cross-Connect
-        api_response = api_instance.pccs_find_by_id(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve a Snapshot by its uuid.
+        api_response = api_instance.snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_find_by_id: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_find_by_id: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -176,31 +174,31 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
-    pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
+    api_instance = ionoscloud.SnapshotsApi(api_client)
+    snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve a Private Cross-Connect
-        api_response = api_instance.pccs_find_by_id(pcc_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve a Snapshot by its uuid.
+        api_response = api_instance.snapshots_find_by_id(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_find_by_id: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pcc_id** | **str**| The unique ID of the private cross-connect |  |
+| **snapshot_id** | **str**| The unique ID of the Snapshot |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**Snapshot**](Snapshot.md)
 
 ### Authorization
 
@@ -211,12 +209,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **pccs_get**
-> PrivateCrossConnects pccs_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **snapshots_get**
+> Snapshots snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-List Private Cross-Connects
+List Snapshots
 
-You can retrieve a complete list of private cross-connects provisioned under your account
+Retrieve a list of available snapshots.
 
 ### Example
 
@@ -241,16 +239,16 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
+    api_instance = ionoscloud.SnapshotsApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # List Private Cross-Connects
-        api_response = api_instance.pccs_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Snapshots
+        api_response = api_instance.snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_get: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -275,16 +273,16 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
+    api_instance = ionoscloud.SnapshotsApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # List Private Cross-Connects
-        api_response = api_instance.pccs_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Snapshots
+        api_response = api_instance.snapshots_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_get: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_get: %s\n' % e)
 ```
 
 ### Parameters
@@ -297,7 +295,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**PrivateCrossConnects**](PrivateCrossConnects.md)
+[**Snapshots**](Snapshots.md)
 
 ### Authorization
 
@@ -308,12 +306,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **pccs_patch**
-> PrivateCrossConnect pccs_patch(pcc_id, pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+# **snapshots_patch**
+> Snapshot snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Partially Modify a Private Cross-Connect
+Partially modify a Snapshot
 
-You can use update private cross-connect to re-name or update its description
+You can use this method to update attributes of a snapshot.
 
 ### Example
 
@@ -338,20 +336,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
-    pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
-    pcc = ionoscloud.PrivateCrossConnectProperties() # PrivateCrossConnectProperties | Modified properties of private cross-connect
+    api_instance = ionoscloud.SnapshotsApi(api_client)
+    snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
+    snapshot = ionoscloud.SnapshotProperties() # SnapshotProperties | Modified Snapshot
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
-        # Partially Modify a Private Cross-Connect
-        api_response = api_instance.pccs_patch(pcc_id, pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        # Partially modify a Snapshot
+        api_response = api_instance.snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_patch: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_patch: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -376,37 +372,33 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
-    pcc_id = 'pcc_id_example' # str | The unique ID of the private cross-connect
-    pcc = ionoscloud.PrivateCrossConnectProperties() # PrivateCrossConnectProperties | Modified properties of private cross-connect
+    api_instance = ionoscloud.SnapshotsApi(api_client)
+    snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
+    snapshot = ionoscloud.SnapshotProperties() # SnapshotProperties | Modified Snapshot
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
-        # Partially Modify a Private Cross-Connect
-        api_response = api_instance.pccs_patch(pcc_id, pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        # Partially modify a Snapshot
+        api_response = api_instance.snapshots_patch(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_patch: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_patch: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pcc_id** | **str**| The unique ID of the private cross-connect |  |
-| **pcc** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md)| Modified properties of private cross-connect |  |
+| **snapshot_id** | **str**| The unique ID of the Snapshot |  |
+| **snapshot** | [**SnapshotProperties**](SnapshotProperties.md)| Modified Snapshot |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
-| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**Snapshot**](Snapshot.md)
 
 ### Authorization
 
@@ -417,12 +409,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **pccs_post**
-> PrivateCrossConnect pccs_post(pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **snapshots_put**
+> Snapshot snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Create a Private Cross-Connect
+Modify a Snapshot
 
-You can use this POST method to create a private cross-connect.
+You can use update attributes of a resource.
 
 ### Example
 
@@ -447,17 +439,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
-    pcc = ionoscloud.PrivateCrossConnect() # PrivateCrossConnect | Private Cross-Connect to be created
+    api_instance = ionoscloud.SnapshotsApi(api_client)
+    snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
+    snapshot = ionoscloud.Snapshot() # Snapshot | Modified Snapshot
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Create a Private Cross-Connect
-        api_response = api_instance.pccs_post(pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Modify a Snapshot
+        api_response = api_instance.snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_post: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_put: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -482,31 +475,33 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
-    pcc = ionoscloud.PrivateCrossConnect() # PrivateCrossConnect | Private Cross-Connect to be created
+    api_instance = ionoscloud.SnapshotsApi(api_client)
+    snapshot_id = 'snapshot_id_example' # str | The unique ID of the Snapshot
+    snapshot = ionoscloud.Snapshot() # Snapshot | Modified Snapshot
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Create a Private Cross-Connect
-        api_response = api_instance.pccs_post(pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Modify a Snapshot
+        api_response = api_instance.snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling PrivateCrossConnectsApi.pccs_post: %s\n' % e)
+        print('Exception when calling SnapshotsApi.snapshots_put: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pcc** | [**PrivateCrossConnect**](PrivateCrossConnect.md)| Private Cross-Connect to be created |  |
+| **snapshot_id** | **str**| The unique ID of the Snapshot |  |
+| **snapshot** | [**Snapshot**](Snapshot.md)| Modified Snapshot |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**Snapshot**](Snapshot.md)
 
 ### Authorization
 

@@ -1,4 +1,4 @@
-# KubernetesNodePoolPropertiesForPost
+# KubernetesNodePoolProperties
 
 ## Properties
 | Name | Type | Description | Notes |
@@ -19,5 +19,7 @@
 | **labels** | **dict(str, str)** | map of labels attached to node pool | [optional]  |
 | **annotations** | **dict(str, str)** | map of annotations attached to node pool | [optional]  |
 | **public_ips** | **list[str]** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. | [optional]  |
+| **available_upgrade_versions** | **list[str]** | List of available versions for upgrading the node pool | [optional]  |
+| **gateway_ip** | **str** | Public IP address for the gateway performing source NAT for the node pool&#39;s nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster. | [optional]  |
 
 

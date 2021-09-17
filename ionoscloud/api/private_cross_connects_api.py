@@ -48,7 +48,7 @@ class PrivateCrossConnectsApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: object
+        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.pccs_delete_with_http_info(pcc_id, **kwargs)  # noqa: E501
@@ -91,7 +91,7 @@ class PrivateCrossConnectsApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :rtype: None
         """
 
         local_var_params = locals()
@@ -157,7 +157,7 @@ class PrivateCrossConnectsApi(object):
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'object'
+        response_type = None
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 
@@ -509,10 +509,6 @@ class PrivateCrossConnectsApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
-        :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
-        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -551,10 +547,6 @@ class PrivateCrossConnectsApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
-        :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
-        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -585,9 +577,7 @@ class PrivateCrossConnectsApi(object):
             'pcc',
             'pretty',
             'depth',
-            'x_contract_number',
-            'offset',
-            'limit'
+            'x_contract_number'
         ]
         all_params.extend(
             [
@@ -621,12 +611,6 @@ class PrivateCrossConnectsApi(object):
             raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_patch`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `pccs_patch`, must be a value greater than or equal to `0`")  # noqa: E501
-        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `offset` when calling `pccs_patch`, must be a value greater than or equal to `0`")  # noqa: E501
-        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 10000:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `limit` when calling `pccs_patch`, must be a value less than or equal to `10000`")  # noqa: E501
-        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `limit` when calling `pccs_patch`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -638,10 +622,6 @@ class PrivateCrossConnectsApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
-        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
-            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
-        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
-            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:

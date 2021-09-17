@@ -13,7 +13,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 
 # **datacenters_servers_nics_delete**
-> object datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Network Interface
 
@@ -51,8 +51,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Network Interface
-        api_response = api_instance.datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling NetworkInterfacesApi.datacenters_servers_nics_delete: %s\n' % e)
 ```
@@ -88,8 +87,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Network Interface
-        api_response = api_instance.datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling NetworkInterfacesApi.datacenters_servers_nics_delete: %s\n' % e)
 ```
@@ -107,7 +105,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 

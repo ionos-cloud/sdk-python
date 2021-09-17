@@ -48,7 +48,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: object
+        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.k8s_delete_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
@@ -91,7 +91,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :rtype: None
         """
 
         local_var_params = locals()
@@ -157,7 +157,7 @@ class KubernetesApi(object):
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'object'
+        response_type = None
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 
@@ -683,7 +683,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: object
+        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.k8s_nodepools_delete_with_http_info(k8s_cluster_id, nodepool_id, **kwargs)  # noqa: E501
@@ -728,7 +728,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :rtype: None
         """
 
         local_var_params = locals()
@@ -801,7 +801,7 @@ class KubernetesApi(object):
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'object'
+        response_type = None
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 
@@ -1190,7 +1190,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: object
+        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.k8s_nodepools_nodes_delete_with_http_info(k8s_cluster_id, nodepool_id, node_id, **kwargs)  # noqa: E501
@@ -1237,7 +1237,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :rtype: None
         """
 
         local_var_params = locals()
@@ -1317,7 +1317,7 @@ class KubernetesApi(object):
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'object'
+        response_type = None
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 
@@ -1728,7 +1728,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: object
+        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.k8s_nodepools_nodes_replace_post_with_http_info(k8s_cluster_id, nodepool_id, node_id, **kwargs)  # noqa: E501
@@ -1775,7 +1775,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :rtype: None
         """
 
         local_var_params = locals()
@@ -1855,7 +1855,7 @@ class KubernetesApi(object):
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'object'
+        response_type = None
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 
@@ -2052,22 +2052,22 @@ class KubernetesApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def k8s_nodepools_put(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs):  # noqa: E501
+    def k8s_nodepools_put(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool_for_put, **kwargs):  # noqa: E501
         """Modify Kubernetes Node Pool  # noqa: E501
 
         This will modify the Kubernetes Node Pool.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool, async_req=True)
+        >>> thread = api.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool_for_put, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
         :param nodepool_id: The unique ID of the Kubernetes Node Pool (required)
         :type nodepool_id: str
-        :param kubernetes_node_pool: Details of the Kubernetes Node Pool (required)
-        :type kubernetes_node_pool: KubernetesNodePool
+        :param kubernetes_node_pool_for_put: Details of the Kubernetes Node Pool (required)
+        :type kubernetes_node_pool_for_put: KubernetesNodePoolForPut
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2087,27 +2087,27 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: KubernetesNodePoolForPut
+        :rtype: KubernetesNodePool
         """
         kwargs['_return_http_data_only'] = True
-        return self.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs)  # noqa: E501
+        return self.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool_for_put, **kwargs)  # noqa: E501
 
-    def k8s_nodepools_put_with_http_info(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs):  # noqa: E501
+    def k8s_nodepools_put_with_http_info(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool_for_put, **kwargs):  # noqa: E501
         """Modify Kubernetes Node Pool  # noqa: E501
 
         This will modify the Kubernetes Node Pool.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool, async_req=True)
+        >>> thread = api.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool_for_put, async_req=True)
         >>> result = thread.get()
 
         :param k8s_cluster_id: The unique ID of the Kubernetes Cluster (required)
         :type k8s_cluster_id: str
         :param nodepool_id: The unique ID of the Kubernetes Node Pool (required)
         :type nodepool_id: str
-        :param kubernetes_node_pool: Details of the Kubernetes Node Pool (required)
-        :type kubernetes_node_pool: KubernetesNodePool
+        :param kubernetes_node_pool_for_put: Details of the Kubernetes Node Pool (required)
+        :type kubernetes_node_pool_for_put: KubernetesNodePoolForPut
         :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
         :type pretty: bool
         :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
@@ -2134,7 +2134,7 @@ class KubernetesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(KubernetesNodePoolForPut, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(KubernetesNodePool, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -2142,7 +2142,7 @@ class KubernetesApi(object):
         all_params = [
             'k8s_cluster_id',
             'nodepool_id',
-            'kubernetes_node_pool',
+            'kubernetes_node_pool_for_put',
             'pretty',
             'depth',
             'x_contract_number'
@@ -2174,10 +2174,10 @@ class KubernetesApi(object):
         if self.api_client.client_side_validation and ('nodepool_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['nodepool_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `nodepool_id` when calling `k8s_nodepools_put`")  # noqa: E501
-        # verify the required parameter 'kubernetes_node_pool' is set
-        if self.api_client.client_side_validation and ('kubernetes_node_pool' not in local_var_params or  # noqa: E501
-                                                        local_var_params['kubernetes_node_pool'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `kubernetes_node_pool` when calling `k8s_nodepools_put`")  # noqa: E501
+        # verify the required parameter 'kubernetes_node_pool_for_put' is set
+        if self.api_client.client_side_validation and ('kubernetes_node_pool_for_put' not in local_var_params or  # noqa: E501
+                                                        local_var_params['kubernetes_node_pool_for_put'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `kubernetes_node_pool_for_put` when calling `k8s_nodepools_put`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `k8s_nodepools_put`, must be a value less than or equal to `10`")  # noqa: E501
@@ -2205,8 +2205,8 @@ class KubernetesApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'kubernetes_node_pool' in local_var_params:
-            body_params = local_var_params['kubernetes_node_pool']
+        if 'kubernetes_node_pool_for_put' in local_var_params:
+            body_params = local_var_params['kubernetes_node_pool_for_put']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -2218,7 +2218,7 @@ class KubernetesApi(object):
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'KubernetesNodePoolForPut'
+        response_type = 'KubernetesNodePool'
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 

@@ -1,22 +1,24 @@
-# ImagesApi
+# BackupUnitsApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**images_delete**](ImagesApi.md#images_delete) | **DELETE** /images/{imageId} | Delete an Image |
-| [**images_find_by_id**](ImagesApi.md#images_find_by_id) | **GET** /images/{imageId} | Retrieve an Image |
-| [**images_get**](ImagesApi.md#images_get) | **GET** /images | List Images |
-| [**images_patch**](ImagesApi.md#images_patch) | **PATCH** /images/{imageId} | Partially modify an Image |
-| [**images_put**](ImagesApi.md#images_put) | **PUT** /images/{imageId} | Modify an Image |
+| [**backupunits_delete**](BackupUnitsApi.md#backupunits_delete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit |
+| [**backupunits_find_by_id**](BackupUnitsApi.md#backupunits_find_by_id) | **GET** /backupunits/{backupunitId} | Returns the specified Backup Unit |
+| [**backupunits_get**](BackupUnitsApi.md#backupunits_get) | **GET** /backupunits | List Backup Units |
+| [**backupunits_patch**](BackupUnitsApi.md#backupunits_patch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit |
+| [**backupunits_post**](BackupUnitsApi.md#backupunits_post) | **POST** /backupunits | Create a Backup Unit |
+| [**backupunits_put**](BackupUnitsApi.md#backupunits_put) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit |
+| [**backupunits_ssourl_get**](BackupUnitsApi.md#backupunits_ssourl_get) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified Backup Unit |
 
 
-# **images_delete**
-> object images_delete(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **backupunits_delete**
+> backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Delete an Image
+Delete a Backup Unit
 
-Deletes the specified image. This operation is permitted on private image only.
+NOTE: Running through the deletion process will delete: - the backup plans inside the Backup Unit. - all backups associated with the Backup Unit. - the backup user and finally also the unit
 
 ### Example
 
@@ -41,17 +43,16 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
-    image_id = 'image_id_example' # str | 
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup Unit
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Delete an Image
-        api_response = api_instance.images_delete(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete a Backup Unit
+        api_instance.backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_delete: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_delete: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -76,31 +77,30 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
-    image_id = 'image_id_example' # str | 
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup Unit
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Delete an Image
-        api_response = api_instance.images_delete(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete a Backup Unit
+        api_instance.backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_delete: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_delete: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **image_id** | **str**|  |  |
+| **backupunit_id** | **str**| The unique ID of the backup Unit |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -111,12 +111,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **images_find_by_id**
-> Image images_find_by_id(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **backupunits_find_by_id**
+> BackupUnit backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Retrieve an Image
+Returns the specified Backup Unit
 
-Retrieves the attributes of a given image.
+You can retrieve the details of an specific backup unit.
 
 ### Example
 
@@ -141,17 +141,17 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
-    image_id = 'image_id_example' # str | 
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve an Image
-        api_response = api_instance.images_find_by_id(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Returns the specified Backup Unit
+        api_response = api_instance.backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_find_by_id: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_find_by_id: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -176,31 +176,31 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
-    image_id = 'image_id_example' # str | 
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve an Image
-        api_response = api_instance.images_find_by_id(image_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Returns the specified Backup Unit
+        api_response = api_instance.backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_find_by_id: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **image_id** | **str**|  |  |
+| **backupunit_id** | **str**| The unique ID of the backup unit |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**Image**](Image.md)
+[**BackupUnit**](BackupUnit.md)
 
 ### Authorization
 
@@ -211,12 +211,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **images_get**
-> Images images_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **backupunits_get**
+> BackupUnits backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-List Images
+List Backup Units
 
-Retrieve a list of images within the datacenter
+You can retrieve a complete list of backup Units that you have access to.
 
 ### Example
 
@@ -241,16 +241,16 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # List Images
-        api_response = api_instance.images_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Backup Units
+        api_response = api_instance.backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_get: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -275,16 +275,16 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # List Images
-        api_response = api_instance.images_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Backup Units
+        api_response = api_instance.backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_get: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_get: %s\n' % e)
 ```
 
 ### Parameters
@@ -297,7 +297,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Images**](Images.md)
+[**BackupUnits**](BackupUnits.md)
 
 ### Authorization
 
@@ -308,12 +308,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **images_patch**
-> Image images_patch(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **backupunits_patch**
+> BackupUnit backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Partially modify an Image
+Partially modify a Backup Unit
 
-You can use update attributes of a resource
+You can use update a Backup Unit properties.
 
 ### Example
 
@@ -338,18 +338,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
-    image_id = 'image_id_example' # str | 
-    image = ionoscloud.ImageProperties() # ImageProperties | Modified Image
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
+    backup_unit_properties = ionoscloud.BackupUnitProperties() # BackupUnitProperties | Modified backup Unit properties
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Partially modify an Image
-        api_response = api_instance.images_patch(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Partially modify a Backup Unit
+        api_response = api_instance.backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_patch: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_patch: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -374,33 +374,33 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
-    image_id = 'image_id_example' # str | 
-    image = ionoscloud.ImageProperties() # ImageProperties | Modified Image
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
+    backup_unit_properties = ionoscloud.BackupUnitProperties() # BackupUnitProperties | Modified backup Unit properties
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Partially modify an Image
-        api_response = api_instance.images_patch(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Partially modify a Backup Unit
+        api_response = api_instance.backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_patch: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_patch: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **image_id** | **str**|  |  |
-| **image** | [**ImageProperties**](ImageProperties.md)| Modified Image |  |
+| **backupunit_id** | **str**| The unique ID of the backup unit |  |
+| **backup_unit_properties** | [**BackupUnitProperties**](BackupUnitProperties.md)| Modified backup Unit properties |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**Image**](Image.md)
+[**BackupUnit**](BackupUnit.md)
 
 ### Authorization
 
@@ -411,12 +411,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **images_put**
-> Image images_put(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **backupunits_post**
+> BackupUnit backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify an Image
+Create a Backup Unit
 
-You can use update attributes of a resource
+Create a Backup Unit. A Backup Unit is considered a resource like a virtual datacenter, IP Block, snapshot, etc. It shall be shareable via groups inside our User Management Feature 
 
 ### Example
 
@@ -441,18 +441,17 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
-    image_id = 'image_id_example' # str | 
-    image = ionoscloud.Image() # Image | Modified Image
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backup_unit = ionoscloud.BackupUnit() # BackupUnit | Payload containing data to create a new Backup Unit
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify an Image
-        api_response = api_instance.images_put(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Create a Backup Unit
+        api_response = api_instance.backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_put: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_post: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -477,33 +476,31 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.ImagesApi(api_client)
-    image_id = 'image_id_example' # str | 
-    image = ionoscloud.Image() # Image | Modified Image
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backup_unit = ionoscloud.BackupUnit() # BackupUnit | Payload containing data to create a new Backup Unit
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify an Image
-        api_response = api_instance.images_put(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Create a Backup Unit
+        api_response = api_instance.backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling ImagesApi.images_put: %s\n' % e)
+        print('Exception when calling BackupUnitsApi.backupunits_post: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **image_id** | **str**|  |  |
-| **image** | [**Image**](Image.md)| Modified Image |  |
+| **backup_unit** | [**BackupUnit**](BackupUnit.md)| Payload containing data to create a new Backup Unit |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**Image**](Image.md)
+[**BackupUnit**](BackupUnit.md)
 
 ### Authorization
 
@@ -512,5 +509,205 @@ Basic Authentication, Token Authentication
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **backupunits_put**
+> BackupUnit backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+
+Modify a Backup Unit
+
+You can use update a Backup Unit properties.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
+    backup_unit = ionoscloud.BackupUnit() # BackupUnit | Modified backup Unit
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Modify a Backup Unit
+        api_response = api_instance.backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling BackupUnitsApi.backupunits_put: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
+    backup_unit = ionoscloud.BackupUnit() # BackupUnit | Modified backup Unit
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Modify a Backup Unit
+        api_response = api_instance.backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling BackupUnitsApi.backupunits_put: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **backupunit_id** | **str**| The unique ID of the backup unit |  |
+| **backup_unit** | [**BackupUnit**](BackupUnit.md)| Modified backup Unit |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+
+### Return type
+
+[**BackupUnit**](BackupUnit.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **backupunits_ssourl_get**
+> BackupUnitSSO backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
+
+Returns a single signon URL for the specified Backup Unit
+
+Returns a single signon URL for the specified Backup Unit.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique UUID of the backup unit
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Returns a single signon URL for the specified Backup Unit
+        api_response = api_instance.backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling BackupUnitsApi.backupunits_ssourl_get: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    backupunit_id = 'backupunit_id_example' # str | The unique UUID of the backup unit
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Returns a single signon URL for the specified Backup Unit
+        api_response = api_instance.backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling BackupUnitsApi.backupunits_ssourl_get: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **backupunit_id** | **str**| The unique UUID of the backup unit |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+
+### Return type
+
+[**BackupUnitSSO**](BackupUnitSSO.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 

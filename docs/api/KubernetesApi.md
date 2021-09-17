@@ -1,35 +1,34 @@
-# NetworkLoadBalancersApi
+# KubernetesApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**datacenters_networkloadbalancers_delete**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_delete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Remove an Network Load Balancer |
-| [**datacenters_networkloadbalancers_find_by_network_load_balancer_id**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_find_by_network_load_balancer_id) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Retrieve an Network Load Balancer |
-| [**datacenters_networkloadbalancers_flowlogs_delete**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_flowlogs_delete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Remove Flow Log from Network Load Balancer |
-| [**datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Retrieve a Flow Log of the Network Load Balancer |
-| [**datacenters_networkloadbalancers_flowlogs_get**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_flowlogs_get) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | List Network Load Balancer Flow Logs |
-| [**datacenters_networkloadbalancers_flowlogs_patch**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_flowlogs_patch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Partially modify a Flow Log of the Network Load Balancer |
-| [**datacenters_networkloadbalancers_flowlogs_post**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_flowlogs_post) | **POST** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | Add a Network Load Balancer Flow Log |
-| [**datacenters_networkloadbalancers_flowlogs_put**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_flowlogs_put) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Modify a Flow Log of the Network Load Balancer |
-| [**datacenters_networkloadbalancers_forwardingrules_delete**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_forwardingrules_delete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Remove Forwarding Rule from Network Load Balancer |
-| [**datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Retrieve a Forwarding Rule of the Network Load Balancer |
-| [**datacenters_networkloadbalancers_forwardingrules_get**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_forwardingrules_get) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | List Network Load Balancer Forwarding Rules |
-| [**datacenters_networkloadbalancers_forwardingrules_patch**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_forwardingrules_patch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify a forwarding rule of the Network Load Balancer |
-| [**datacenters_networkloadbalancers_forwardingrules_post**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_forwardingrules_post) | **POST** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | Add a Network Load Balancer Forwarding Rule |
-| [**datacenters_networkloadbalancers_forwardingrules_put**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_forwardingrules_put) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify a forwarding rule of the Network Load Balancer |
-| [**datacenters_networkloadbalancers_get**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_get) | **GET** /datacenters/{datacenterId}/networkloadbalancers | List Network Load Balancers |
-| [**datacenters_networkloadbalancers_patch**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_patch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Partially update an Network Load Balancer |
-| [**datacenters_networkloadbalancers_post**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_post) | **POST** /datacenters/{datacenterId}/networkloadbalancers | Create an Network Load Balancer |
-| [**datacenters_networkloadbalancers_put**](NetworkLoadBalancersApi.md#datacenters_networkloadbalancers_put) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Update an Network Load Balancer |
+| [**k8s_delete**](KubernetesApi.md#k8s_delete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster |
+| [**k8s_find_by_cluster_id**](KubernetesApi.md#k8s_find_by_cluster_id) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster |
+| [**k8s_get**](KubernetesApi.md#k8s_get) | **GET** /k8s | List Kubernetes Clusters |
+| [**k8s_kubeconfig_get**](KubernetesApi.md#k8s_kubeconfig_get) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File |
+| [**k8s_nodepools_delete**](KubernetesApi.md#k8s_nodepools_delete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool |
+| [**k8s_nodepools_find_by_id**](KubernetesApi.md#k8s_nodepools_find_by_id) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool |
+| [**k8s_nodepools_get**](KubernetesApi.md#k8s_nodepools_get) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools |
+| [**k8s_nodepools_nodes_delete**](KubernetesApi.md#k8s_nodepools_nodes_delete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node |
+| [**k8s_nodepools_nodes_find_by_id**](KubernetesApi.md#k8s_nodepools_nodes_find_by_id) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node |
+| [**k8s_nodepools_nodes_get**](KubernetesApi.md#k8s_nodepools_nodes_get) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes. |
+| [**k8s_nodepools_nodes_replace_post**](KubernetesApi.md#k8s_nodepools_nodes_replace_post) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node |
+| [**k8s_nodepools_post**](KubernetesApi.md#k8s_nodepools_post) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool |
+| [**k8s_nodepools_put**](KubernetesApi.md#k8s_nodepools_put) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool |
+| [**k8s_post**](KubernetesApi.md#k8s_post) | **POST** /k8s | Create Kubernetes Cluster |
+| [**k8s_put**](KubernetesApi.md#k8s_put) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster |
+| [**k8s_versions_default_get**](KubernetesApi.md#k8s_versions_default_get) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools. |
+| [**k8s_versions_get**](KubernetesApi.md#k8s_versions_get) | **GET** /k8s/versions | Retrieve available Kubernetes versions |
 
 
-# **datacenters_networkloadbalancers_delete**
-> object datacenters_networkloadbalancers_delete(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_delete**
+> k8s_delete(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Remove an Network Load Balancer
+Delete Kubernetes Cluster
 
-Removes the specified Network Load Balancer.
+This will remove a Kubernetes Cluster.
 
 ### Example
 
@@ -54,18 +53,16 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Remove an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_delete(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete Kubernetes Cluster
+        api_instance.k8s_delete(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_delete: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_delete: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -90,33 +87,30 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Remove an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_delete(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete Kubernetes Cluster
+        api_instance.k8s_delete(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_delete: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_delete: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -127,12 +121,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_find_by_network_load_balancer_id**
-> NetworkLoadBalancer datacenters_networkloadbalancers_find_by_network_load_balancer_id(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_find_by_cluster_id**
+> KubernetesCluster k8s_find_by_cluster_id(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Retrieve an Network Load Balancer
+Retrieve Kubernetes Cluster
 
-Retrieves the attributes of a given Network Load Balancer.
+This will retrieve a single Kubernetes Cluster.
 
 ### Example
 
@@ -157,18 +151,17 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_find_by_network_load_balancer_id(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve Kubernetes Cluster
+        api_response = api_instance.k8s_find_by_cluster_id(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_find_by_network_load_balancer_id: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_find_by_cluster_id: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -193,33 +186,31 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_find_by_network_load_balancer_id(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve Kubernetes Cluster
+        api_response = api_instance.k8s_find_by_cluster_id(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_find_by_network_load_balancer_id: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_find_by_cluster_id: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**NetworkLoadBalancer**](NetworkLoadBalancer.md)
+[**KubernetesCluster**](KubernetesCluster.md)
 
 ### Authorization
 
@@ -230,12 +221,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_flowlogs_delete**
-> object datacenters_networkloadbalancers_flowlogs_delete(datacenter_id, network_load_balancer_id, flow_log_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_get**
+> KubernetesClusters k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Remove Flow Log from Network Load Balancer
+List Kubernetes Clusters
 
-This will remove a flow log from the network load balancer.
+You can retrieve a list of all kubernetes clusters associated with a contract
 
 ### Example
 
@@ -260,19 +251,16 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the flow log
+    api_instance = ionoscloud.KubernetesApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Remove Flow Log from Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_delete(datacenter_id, network_load_balancer_id, flow_log_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Kubernetes Clusters
+        api_response = api_instance.k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_delete: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -297,35 +285,29 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the flow log
+    api_instance = ionoscloud.KubernetesApi(api_client)
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Remove Flow Log from Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_delete(datacenter_id, network_load_balancer_id, flow_log_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Kubernetes Clusters
+        api_response = api_instance.k8s_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_delete: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_get: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **flow_log_id** | **str**| The unique ID of the flow log |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-**object**
+[**KubernetesClusters**](KubernetesClusters.md)
 
 ### Authorization
 
@@ -336,12 +318,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id**
-> FlowLog datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id(datacenter_id, network_load_balancer_id, flow_log_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_kubeconfig_get**
+> str k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Retrieve a Flow Log of the Network Load Balancer
+Retrieve Kubernetes Configuration File
 
-This will return a Flow Log of the Network Load Balancer.
+You can retrieve kubernetes configuration file in YAML or JSON format for the kubernetes cluster. You can send the Accept header accordingly. Default Accept header is application/yaml
 
 ### Example
 
@@ -366,19 +348,17 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve a Flow Log of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id(datacenter_id, network_load_balancer_id, flow_log_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve Kubernetes Configuration File
+        api_response = api_instance.k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_kubeconfig_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -403,35 +383,132 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve a Flow Log of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id(datacenter_id, network_load_balancer_id, flow_log_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve Kubernetes Configuration File
+        api_response = api_instance.k8s_kubeconfig_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_kubeconfig_get: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **flow_log_id** | **str**| The unique ID of the Flow Log |  |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**FlowLog**](FlowLog.md)
+**str**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/yaml, application/x-yaml, application/json
+
+# **k8s_nodepools_delete**
+> k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+
+Delete Kubernetes Node Pool
+
+This will remove a Kubernetes Node Pool.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Delete Kubernetes Node Pool
+        api_instance.k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_delete: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Delete Kubernetes Node Pool
+        api_instance.k8s_nodepools_delete(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_delete: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **nodepool_id** | **str**| The unique ID of the Kubernetes Node Pool |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+
+### Return type
+
+void (empty response body)
 
 ### Authorization
 
@@ -442,12 +519,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_flowlogs_get**
-> FlowLogs datacenters_networkloadbalancers_flowlogs_get(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_nodepools_find_by_id**
+> KubernetesNodePool k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-List Network Load Balancer Flow Logs
+Retrieve Kubernetes Node Pool
 
-You can retrieve a list of Flow Logs of the Network Load Balancer.
+You can retrieve a single Kubernetes Node Pool.
 
 ### Example
 
@@ -472,18 +549,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # List Network Load Balancer Flow Logs
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_get(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve Kubernetes Node Pool
+        api_response = api_instance.k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_get: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_nodepools_find_by_id: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -508,33 +585,33 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # List Network Load Balancer Flow Logs
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_get(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve Kubernetes Node Pool
+        api_response = api_instance.k8s_nodepools_find_by_id(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_get: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_nodepools_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **nodepool_id** | **str**| The unique ID of the Kubernetes Node Pool |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**FlowLogs**](FlowLogs.md)
+[**KubernetesNodePool**](KubernetesNodePool.md)
 
 ### Authorization
 
@@ -545,12 +622,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_flowlogs_patch**
-> FlowLog datacenters_networkloadbalancers_flowlogs_patch(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_nodepools_get**
+> KubernetesNodePools k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Partially modify a Flow Log of the Network Load Balancer
+List Kubernetes Node Pools
 
-You can use to partially update a Flow Log of a Network Load Balancer.
+You can retrieve a list of all kubernetes node pools part of kubernetes cluster
 
 ### Example
 
@@ -575,20 +652,17 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log
-    network_load_balancer_flow_log_properties = ionoscloud.FlowLogProperties() # FlowLogProperties | Properties of a Flow Log to be updated
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Partially modify a Flow Log of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_patch(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Kubernetes Node Pools
+        api_response = api_instance.k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_patch: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_nodepools_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -613,37 +687,31 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log
-    network_load_balancer_flow_log_properties = ionoscloud.FlowLogProperties() # FlowLogProperties | Properties of a Flow Log to be updated
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Partially modify a Flow Log of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_patch(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Kubernetes Node Pools
+        api_response = api_instance.k8s_nodepools_get(k8s_cluster_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_patch: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_nodepools_get: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **flow_log_id** | **str**| The unique ID of the Flow Log |  |
-| **network_load_balancer_flow_log_properties** | [**FlowLogProperties**](FlowLogProperties.md)| Properties of a Flow Log to be updated |  |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**FlowLog**](FlowLog.md)
+[**KubernetesNodePools**](KubernetesNodePools.md)
 
 ### Authorization
 
@@ -654,12 +722,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_flowlogs_post**
-> FlowLog datacenters_networkloadbalancers_flowlogs_post(datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_nodepools_nodes_delete**
+> k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Add a Network Load Balancer Flow Log
+Delete Kubernetes node
 
-This will add a new Flow Log to the Network Load Balancer.
+This will remove a Kubernetes node.
 
 ### Example
 
@@ -684,19 +752,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    network_load_balancer_flow_log = ionoscloud.FlowLog() # FlowLog | Flow Log to add
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes node
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Add a Network Load Balancer Flow Log
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_post(datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete Kubernetes node
+        api_instance.k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_post: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_nodepools_nodes_delete: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -721,35 +788,450 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    network_load_balancer_flow_log = ionoscloud.FlowLog() # FlowLog | Flow Log to add
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes node
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Add a Network Load Balancer Flow Log
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_post(datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete Kubernetes node
+        api_instance.k8s_nodepools_nodes_delete(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_post: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_nodepools_nodes_delete: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **network_load_balancer_flow_log** | [**FlowLog**](FlowLog.md)| Flow Log to add |  |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **nodepool_id** | **str**| The unique ID of the Kubernetes Node Pool |  |
+| **node_id** | **str**| The unique ID of the Kubernetes node |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**FlowLog**](FlowLog.md)
+void (empty response body)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8s_nodepools_nodes_find_by_id**
+> KubernetesNode k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+
+Retrieve Kubernetes node
+
+You can retrieve a single Kubernetes Node.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Retrieve Kubernetes node
+        api_response = api_instance.k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_nodes_find_by_id: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Retrieve Kubernetes node
+        api_response = api_instance.k8s_nodepools_nodes_find_by_id(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_nodes_find_by_id: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **nodepool_id** | **str**| The unique ID of the Kubernetes Node Pool |  |
+| **node_id** | **str**| The unique ID of the Kubernetes Node. |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+
+### Return type
+
+[**KubernetesNode**](KubernetesNode.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8s_nodepools_nodes_get**
+> KubernetesNodes k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+
+Retrieve Kubernetes nodes.
+
+You can retrieve all nodes of Kubernetes Node Pool.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Retrieve Kubernetes nodes.
+        api_response = api_instance.k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_nodes_get: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Retrieve Kubernetes nodes.
+        api_response = api_instance.k8s_nodepools_nodes_get(k8s_cluster_id, nodepool_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_nodes_get: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **nodepool_id** | **str**| The unique ID of the Kubernetes Node Pool |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+
+### Return type
+
+[**KubernetesNodes**](KubernetesNodes.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8s_nodepools_nodes_replace_post**
+> k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+
+Recreate the Kubernetes node
+
+You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process which based on the nodepool's template creates & configures a new node, waits for status \"ACTIVE\", and migrates all the pods from the faulty node, deleting it once empty. While this operation occurs, the nodepool will have an extra billable \"ACTIVE\" node.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Recreate the Kubernetes node
+        api_instance.k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_nodes_replace_post: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    node_id = 'node_id_example' # str | The unique ID of the Kubernetes Node.
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Recreate the Kubernetes node
+        api_instance.k8s_nodepools_nodes_replace_post(k8s_cluster_id, nodepool_id, node_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_nodes_replace_post: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **nodepool_id** | **str**| The unique ID of the Kubernetes Node Pool |  |
+| **node_id** | **str**| The unique ID of the Kubernetes Node. |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8s_nodepools_post**
+> KubernetesNodePool k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+
+Create a Kubernetes Node Pool
+
+This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Create a Kubernetes Node Pool
+        api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_post: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    kubernetes_node_pool = ionoscloud.KubernetesNodePool() # KubernetesNodePool | Details of the Kubernetes Node Pool
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Create a Kubernetes Node Pool
+        api_response = api_instance.k8s_nodepools_post(k8s_cluster_id, kubernetes_node_pool, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling KubernetesApi.k8s_nodepools_post: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **kubernetes_node_pool** | [**KubernetesNodePool**](KubernetesNodePool.md)| Details of the Kubernetes Node Pool |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+
+### Return type
+
+[**KubernetesNodePool**](KubernetesNodePool.md)
 
 ### Authorization
 
@@ -760,12 +1242,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_flowlogs_put**
-> FlowLog datacenters_networkloadbalancers_flowlogs_put(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_nodepools_put**
+> KubernetesNodePool k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool_for_put, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify a Flow Log of the Network Load Balancer
+Modify Kubernetes Node Pool
 
-You can use to update a Flow Log of the Network Load Balancer.
+This will modify the Kubernetes Node Pool.
 
 ### Example
 
@@ -790,20 +1272,19 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log
-    network_load_balancer_flow_log = ionoscloud.FlowLogPut() # FlowLogPut | Modified Network Load Balancer Flow Log
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    kubernetes_node_pool_for_put = ionoscloud.KubernetesNodePoolForPut() # KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify a Flow Log of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_put(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Modify Kubernetes Node Pool
+        api_response = api_instance.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool_for_put, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_put: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_nodepools_put: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -828,37 +1309,35 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log
-    network_load_balancer_flow_log = ionoscloud.FlowLogPut() # FlowLogPut | Modified Network Load Balancer Flow Log
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    nodepool_id = 'nodepool_id_example' # str | The unique ID of the Kubernetes Node Pool
+    kubernetes_node_pool_for_put = ionoscloud.KubernetesNodePoolForPut() # KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify a Flow Log of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_flowlogs_put(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Modify Kubernetes Node Pool
+        api_response = api_instance.k8s_nodepools_put(k8s_cluster_id, nodepool_id, kubernetes_node_pool_for_put, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_flowlogs_put: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_nodepools_put: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **flow_log_id** | **str**| The unique ID of the Flow Log |  |
-| **network_load_balancer_flow_log** | [**FlowLogPut**](FlowLogPut.md)| Modified Network Load Balancer Flow Log |  |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **nodepool_id** | **str**| The unique ID of the Kubernetes Node Pool |  |
+| **kubernetes_node_pool_for_put** | [**KubernetesNodePoolForPut**](KubernetesNodePoolForPut.md)| Details of the Kubernetes Node Pool |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**FlowLog**](FlowLog.md)
+[**KubernetesNodePool**](KubernetesNodePool.md)
 
 ### Authorization
 
@@ -869,118 +1348,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_forwardingrules_delete**
-> object datacenters_networkloadbalancers_forwardingrules_delete(datacenter_id, network_load_balancer_id, forwarding_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_post**
+> KubernetesCluster k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Remove Forwarding Rule from Network Load Balancer
+Create Kubernetes Cluster
 
-This will remove a forwarding rule from the Network Load Balancer.
-
-### Example
-
-* Basic Authentication (Basic Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    forwarding_rule_id = 'forwarding_rule_id_example' # str | The unique ID of the forwarding rule
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Remove Forwarding Rule from Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_delete(datacenter_id, network_load_balancer_id, forwarding_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_delete: %s\n' % e)
-```
-
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    forwarding_rule_id = 'forwarding_rule_id_example' # str | The unique ID of the forwarding rule
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Remove Forwarding Rule from Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_delete(datacenter_id, network_load_balancer_id, forwarding_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_delete: %s\n' % e)
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **forwarding_rule_id** | **str**| The unique ID of the forwarding rule |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-
-### Return type
-
-**object**
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-# **datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id**
-> NetworkLoadBalancerForwardingRule datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id(datacenter_id, network_load_balancer_id, forwarding_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-
-Retrieve a Forwarding Rule of the Network Load Balancer
-
-This will a forwarding rule of the Network Load Balancer.
+This will create a new Kubernetes Cluster.
 
 ### Example
 
@@ -1005,19 +1378,17 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    forwarding_rule_id = 'forwarding_rule_id_example' # str | The unique ID of the forwarding rule
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    kubernetes_cluster = ionoscloud.KubernetesClusterForPost() # KubernetesClusterForPost | Details of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve a Forwarding Rule of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id(datacenter_id, network_load_balancer_id, forwarding_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Create Kubernetes Cluster
+        api_response = api_instance.k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_post: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -1042,353 +1413,31 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    forwarding_rule_id = 'forwarding_rule_id_example' # str | The unique ID of the forwarding rule
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    kubernetes_cluster = ionoscloud.KubernetesClusterForPost() # KubernetesClusterForPost | Details of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve a Forwarding Rule of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id(datacenter_id, network_load_balancer_id, forwarding_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Create Kubernetes Cluster
+        api_response = api_instance.k8s_post(kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_post: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **forwarding_rule_id** | **str**| The unique ID of the forwarding rule |  |
+| **kubernetes_cluster** | [**KubernetesClusterForPost**](KubernetesClusterForPost.md)| Details of the Kubernetes Cluster |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**NetworkLoadBalancerForwardingRule**](NetworkLoadBalancerForwardingRule.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-# **datacenters_networkloadbalancers_forwardingrules_get**
-> NetworkLoadBalancerForwardingRules datacenters_networkloadbalancers_forwardingrules_get(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-
-List Network Load Balancer Forwarding Rules
-
-You can retrieve a list of forwarding rules of the Network Load Balancer.
-
-### Example
-
-* Basic Authentication (Basic Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # List Network Load Balancer Forwarding Rules
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_get(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_get: %s\n' % e)
-```
-
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # List Network Load Balancer Forwarding Rules
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_get(datacenter_id, network_load_balancer_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_get: %s\n' % e)
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-
-### Return type
-
-[**NetworkLoadBalancerForwardingRules**](NetworkLoadBalancerForwardingRules.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-# **datacenters_networkloadbalancers_forwardingrules_patch**
-> NetworkLoadBalancerForwardingRule datacenters_networkloadbalancers_forwardingrules_patch(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-
-Partially modify a forwarding rule of the Network Load Balancer
-
-You can use to partially update a forwarding rule of a Network Load Balancer.
-
-### Example
-
-* Basic Authentication (Basic Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    forwarding_rule_id = 'forwarding_rule_id_example' # str | The unique ID of the forwarding rule
-    network_load_balancer_forwarding_rule_properties = ionoscloud.NetworkLoadBalancerForwardingRuleProperties() # NetworkLoadBalancerForwardingRuleProperties | Properties of a forwarding rule to be updated
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Partially modify a forwarding rule of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_patch(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_patch: %s\n' % e)
-```
-
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    forwarding_rule_id = 'forwarding_rule_id_example' # str | The unique ID of the forwarding rule
-    network_load_balancer_forwarding_rule_properties = ionoscloud.NetworkLoadBalancerForwardingRuleProperties() # NetworkLoadBalancerForwardingRuleProperties | Properties of a forwarding rule to be updated
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Partially modify a forwarding rule of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_patch(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_patch: %s\n' % e)
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **forwarding_rule_id** | **str**| The unique ID of the forwarding rule |  |
-| **network_load_balancer_forwarding_rule_properties** | [**NetworkLoadBalancerForwardingRuleProperties**](NetworkLoadBalancerForwardingRuleProperties.md)| Properties of a forwarding rule to be updated |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-
-### Return type
-
-[**NetworkLoadBalancerForwardingRule**](NetworkLoadBalancerForwardingRule.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-# **datacenters_networkloadbalancers_forwardingrules_post**
-> NetworkLoadBalancerForwardingRule datacenters_networkloadbalancers_forwardingrules_post(datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-
-Add a Network Load Balancer Forwarding Rule
-
-This will add a new forwarding rule to the Network Load Balancer.
-
-### Example
-
-* Basic Authentication (Basic Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    network_load_balancer_forwarding_rule = ionoscloud.NetworkLoadBalancerForwardingRule() # NetworkLoadBalancerForwardingRule | forwarding rule to add
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Add a Network Load Balancer Forwarding Rule
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_post(datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_post: %s\n' % e)
-```
-
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    network_load_balancer_forwarding_rule = ionoscloud.NetworkLoadBalancerForwardingRule() # NetworkLoadBalancerForwardingRule | forwarding rule to add
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Add a Network Load Balancer Forwarding Rule
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_post(datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_post: %s\n' % e)
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **network_load_balancer_forwarding_rule** | [**NetworkLoadBalancerForwardingRule**](NetworkLoadBalancerForwardingRule.md)| forwarding rule to add |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-
-### Return type
-
-[**NetworkLoadBalancerForwardingRule**](NetworkLoadBalancerForwardingRule.md)
+[**KubernetesCluster**](KubernetesCluster.md)
 
 ### Authorization
 
@@ -1399,12 +1448,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_forwardingrules_put**
-> NetworkLoadBalancerForwardingRule datacenters_networkloadbalancers_forwardingrules_put(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_put**
+> KubernetesCluster k8s_put(k8s_cluster_id, kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify a forwarding rule of the Network Load Balancer
+Modify Kubernetes Cluster
 
-You can use to update a forwarding rule of the Network Load Balancer.
+This will modify the Kubernetes Cluster.
 
 ### Example
 
@@ -1429,20 +1478,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    forwarding_rule_id = 'forwarding_rule_id_example' # str | The unique ID of the forwarding rule
-    network_load_balancer_forwarding_rule = ionoscloud.NetworkLoadBalancerForwardingRulePut() # NetworkLoadBalancerForwardingRulePut | Modified Network Load Balancer Forwarding Rule
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    kubernetes_cluster = ionoscloud.KubernetesClusterForPut() # KubernetesClusterForPut | Details of of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify a forwarding rule of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_put(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Modify Kubernetes Cluster
+        api_response = api_instance.k8s_put(k8s_cluster_id, kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_put: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_put: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -1467,37 +1514,33 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    forwarding_rule_id = 'forwarding_rule_id_example' # str | The unique ID of the forwarding rule
-    network_load_balancer_forwarding_rule = ionoscloud.NetworkLoadBalancerForwardingRulePut() # NetworkLoadBalancerForwardingRulePut | Modified Network Load Balancer Forwarding Rule
+    api_instance = ionoscloud.KubernetesApi(api_client)
+    k8s_cluster_id = 'k8s_cluster_id_example' # str | The unique ID of the Kubernetes Cluster
+    kubernetes_cluster = ionoscloud.KubernetesClusterForPut() # KubernetesClusterForPut | Details of of the Kubernetes Cluster
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify a forwarding rule of the Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_forwardingrules_put(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Modify Kubernetes Cluster
+        api_response = api_instance.k8s_put(k8s_cluster_id, kubernetes_cluster, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_forwardingrules_put: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_put: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **forwarding_rule_id** | **str**| The unique ID of the forwarding rule |  |
-| **network_load_balancer_forwarding_rule** | [**NetworkLoadBalancerForwardingRulePut**](NetworkLoadBalancerForwardingRulePut.md)| Modified Network Load Balancer Forwarding Rule |  |
+| **k8s_cluster_id** | **str**| The unique ID of the Kubernetes Cluster |  |
+| **kubernetes_cluster** | [**KubernetesClusterForPut**](KubernetesClusterForPut.md)| Details of of the Kubernetes Cluster |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**NetworkLoadBalancerForwardingRule**](NetworkLoadBalancerForwardingRule.md)
+[**KubernetesCluster**](KubernetesCluster.md)
 
 ### Authorization
 
@@ -1508,12 +1551,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_get**
-> NetworkLoadBalancers datacenters_networkloadbalancers_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+# **k8s_versions_default_get**
+> str k8s_versions_default_get()
 
-List Network Load Balancers
+Retrieve the current default kubernetes version for clusters and nodepools.
 
-Retrieve a list of Network Load Balancers within the datacenter.
+You can retrieve the current default kubernetes version for clusters and nodepools.
 
 ### Example
 
@@ -1538,19 +1581,13 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
+    api_instance = ionoscloud.KubernetesApi(api_client)
     try:
-        # List Network Load Balancers
-        api_response = api_instance.datacenters_networkloadbalancers_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        # Retrieve the current default kubernetes version for clusters and nodepools.
+        api_response = api_instance.k8s_versions_default_get()
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_get: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_versions_default_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -1575,35 +1612,21 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
+    api_instance = ionoscloud.KubernetesApi(api_client)
     try:
-        # List Network Load Balancers
-        api_response = api_instance.datacenters_networkloadbalancers_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        # Retrieve the current default kubernetes version for clusters and nodepools.
+        api_response = api_instance.k8s_versions_default_get()
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_get: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_versions_default_get: %s\n' % e)
 ```
 
 ### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
-| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**NetworkLoadBalancers**](NetworkLoadBalancers.md)
+**str**
 
 ### Authorization
 
@@ -1614,12 +1637,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **datacenters_networkloadbalancers_patch**
-> NetworkLoadBalancer datacenters_networkloadbalancers_patch(datacenter_id, network_load_balancer_id, network_load_balancer_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **k8s_versions_get**
+> list[str] k8s_versions_get()
 
-Partially update an Network Load Balancer
+Retrieve available Kubernetes versions
 
-Partially update the attributes of a given Network Load Balancer
+You can retrieve a list of available kubernetes versions
 
 ### Example
 
@@ -1644,19 +1667,13 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    network_load_balancer_properties = ionoscloud.NetworkLoadBalancerProperties() # NetworkLoadBalancerProperties | Network Load Balancer properties to be updated
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    api_instance = ionoscloud.KubernetesApi(api_client)
     try:
-        # Partially update an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_patch(datacenter_id, network_load_balancer_id, network_load_balancer_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve available Kubernetes versions
+        api_response = api_instance.k8s_versions_get()
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_patch: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_versions_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -1681,35 +1698,21 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    network_load_balancer_properties = ionoscloud.NetworkLoadBalancerProperties() # NetworkLoadBalancerProperties | Network Load Balancer properties to be updated
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    api_instance = ionoscloud.KubernetesApi(api_client)
     try:
-        # Partially update an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_patch(datacenter_id, network_load_balancer_id, network_load_balancer_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve available Kubernetes versions
+        api_response = api_instance.k8s_versions_get()
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_patch: %s\n' % e)
+        print('Exception when calling KubernetesApi.k8s_versions_get: %s\n' % e)
 ```
 
 ### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **network_load_balancer_properties** | [**NetworkLoadBalancerProperties**](NetworkLoadBalancerProperties.md)| Network Load Balancer properties to be updated |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**NetworkLoadBalancer**](NetworkLoadBalancer.md)
+**list[str]**
 
 ### Authorization
 
@@ -1718,220 +1721,5 @@ Basic Authentication, Token Authentication
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
-
-# **datacenters_networkloadbalancers_post**
-> NetworkLoadBalancer datacenters_networkloadbalancers_post(datacenter_id, network_load_balancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-
-Create an Network Load Balancer
-
-Creates an Network Load Balancer within the datacenter.
-
-### Example
-
-* Basic Authentication (Basic Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer = ionoscloud.NetworkLoadBalancer() # NetworkLoadBalancer | Network Load Balancer to be created
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Create an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_post(datacenter_id, network_load_balancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_post: %s\n' % e)
-```
-
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer = ionoscloud.NetworkLoadBalancer() # NetworkLoadBalancer | Network Load Balancer to be created
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Create an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_post(datacenter_id, network_load_balancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_post: %s\n' % e)
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer** | [**NetworkLoadBalancer**](NetworkLoadBalancer.md)| Network Load Balancer to be created |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-
-### Return type
-
-[**NetworkLoadBalancer**](NetworkLoadBalancer.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-# **datacenters_networkloadbalancers_put**
-> NetworkLoadBalancer datacenters_networkloadbalancers_put(datacenter_id, network_load_balancer_id, network_load_balancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
-
-Update an Network Load Balancer
-
-Update the attributes of a given Network Load Balancer
-
-### Example
-
-* Basic Authentication (Basic Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    network_load_balancer = ionoscloud.NetworkLoadBalancerPut() # NetworkLoadBalancerPut | Modified Network Load Balancer
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
-    try:
-        # Update an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_put(datacenter_id, network_load_balancer_id, network_load_balancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_put: %s\n' % e)
-```
-
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NetworkLoadBalancersApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    network_load_balancer_id = 'network_load_balancer_id_example' # str | The unique ID of the Network Load Balancer
-    network_load_balancer = ionoscloud.NetworkLoadBalancerPut() # NetworkLoadBalancerPut | Modified Network Load Balancer
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
-    try:
-        # Update an Network Load Balancer
-        api_response = api_instance.datacenters_networkloadbalancers_put(datacenter_id, network_load_balancer_id, network_load_balancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NetworkLoadBalancersApi.datacenters_networkloadbalancers_put: %s\n' % e)
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str**| The unique ID of the datacenter |  |
-| **network_load_balancer_id** | **str**| The unique ID of the Network Load Balancer |  |
-| **network_load_balancer** | [**NetworkLoadBalancerPut**](NetworkLoadBalancerPut.md)| Modified Network Load Balancer |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
-| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
-
-### Return type
-
-[**NetworkLoadBalancer**](NetworkLoadBalancer.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
- - **Content-Type**: application/json
  - **Accept**: application/json
 

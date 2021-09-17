@@ -1,23 +1,23 @@
-# UserS3KeysApi
+# FlowLogsApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**um_users_s3keys_delete**](UserS3KeysApi.md#um_users_s3keys_delete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete an S3 Key |
-| [**um_users_s3keys_find_by_key_id**](UserS3KeysApi.md#um_users_s3keys_find_by_key_id) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 Key belonging to the given User |
-| [**um_users_s3keys_get**](UserS3KeysApi.md#um_users_s3keys_get) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys |
-| [**um_users_s3keys_post**](UserS3KeysApi.md#um_users_s3keys_post) | **POST** /um/users/{userId}/s3keys | Create a S3 Key for the given User |
-| [**um_users_s3keys_put**](UserS3KeysApi.md#um_users_s3keys_put) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id |
-| [**um_users_s3ssourl_get**](UserS3KeysApi.md#um_users_s3ssourl_get) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user |
+| [**datacenters_servers_nics_flowlogs_delete**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Delete a Flow Log |
+| [**datacenters_servers_nics_flowlogs_find_by_id**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Retrieve a Flow Log |
+| [**datacenters_servers_nics_flowlogs_get**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | List Flow Logs |
+| [**datacenters_servers_nics_flowlogs_patch**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Partially update a Flow Log |
+| [**datacenters_servers_nics_flowlogs_post**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create a Flow Log |
+| [**datacenters_servers_nics_flowlogs_put**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Modify a Flow Log |
 
 
-# **um_users_s3keys_delete**
-> object um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_servers_nics_flowlogs_delete**
+> datacenters_servers_nics_flowlogs_delete(datacenter_id, server_id, nic_id, flowlog_id, pretty=pretty, depth=depth)
 
-Delete an S3 Key
+Delete a Flow Log
 
-Delete an S3 key.
+Removes the specified Flow Log.
 
 ### Example
 
@@ -42,18 +42,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog_id = 'flowlog_id_example' # str | The unique ID of the Flow Log
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Delete an S3 Key
-        api_response = api_instance.um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete a Flow Log
+        api_instance.datacenters_servers_nics_flowlogs_delete(datacenter_id, server_id, nic_id, flowlog_id, pretty=pretty, depth=depth)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_delete: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_delete: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -78,33 +78,34 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog_id = 'flowlog_id_example' # str | The unique ID of the Flow Log
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Delete an S3 Key
-        api_response = api_instance.um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete a Flow Log
+        api_instance.datacenters_servers_nics_flowlogs_delete(datacenter_id, server_id, nic_id, flowlog_id, pretty=pretty, depth=depth)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_delete: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_delete: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **str**| The unique ID of the user |  |
-| **key_id** | **str**| The unique access key ID of the S3 key |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **server_id** | **str**| The unique ID of the Server |  |
+| **nic_id** | **str**| The unique ID of the NIC |  |
+| **flowlog_id** | **str**| The unique ID of the Flow Log |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -115,12 +116,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **um_users_s3keys_find_by_key_id**
-> S3Key um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_servers_nics_flowlogs_find_by_id**
+> FlowLog datacenters_servers_nics_flowlogs_find_by_id(datacenter_id, server_id, nic_id, flowlog_id, pretty=pretty, depth=depth)
 
-Retrieve given S3 Key belonging to the given User
+Retrieve a Flow Log
 
-You can retrieve S3 key belonging to the given User. This user Id can be found in the response body when a user is created or when you GET a list of users. The key Id can be found in the response body when a S3 key is created or when you GET a list of all S3 keys of a user
+Retrieves the attributes of a given Flow Log.
 
 ### Example
 
@@ -145,18 +146,19 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog_id = 'flowlog_id_example' # str | The unique ID of the Flow Log
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve given S3 Key belonging to the given User
-        api_response = api_instance.um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve a Flow Log
+        api_response = api_instance.datacenters_servers_nics_flowlogs_find_by_id(datacenter_id, server_id, nic_id, flowlog_id, pretty=pretty, depth=depth)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_find_by_key_id: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_find_by_id: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -181,33 +183,35 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog_id = 'flowlog_id_example' # str | The unique ID of the Flow Log
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Retrieve given S3 Key belonging to the given User
-        api_response = api_instance.um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve a Flow Log
+        api_response = api_instance.datacenters_servers_nics_flowlogs_find_by_id(datacenter_id, server_id, nic_id, flowlog_id, pretty=pretty, depth=depth)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_find_by_key_id: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **str**| The unique ID of the user |  |
-| **key_id** | **str**| The unique access key ID of the S3 key |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **server_id** | **str**| The unique ID of the Server |  |
+| **nic_id** | **str**| The unique ID of the NIC |  |
+| **flowlog_id** | **str**| The unique ID of the Flow Log |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**FlowLog**](FlowLog.md)
 
 ### Authorization
 
@@ -218,12 +222,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **um_users_s3keys_get**
-> S3Keys um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_servers_nics_flowlogs_get**
+> FlowLogs datacenters_servers_nics_flowlogs_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, offset=offset, limit=limit)
 
-Retrieve a User's S3 keys
+List Flow Logs
 
-You can retrieve S3 keys owned by a user by using the users ID. This user Id can be found in the response body when a user is created or when you GET a list of users.
+Retrieves a list of Flow Logs associated with a particular network interface.
 
 ### Example
 
@@ -248,17 +252,20 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
-        # Retrieve a User's S3 keys
-        api_response = api_instance.um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Flow Logs
+        api_response = api_instance.datacenters_servers_nics_flowlogs_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_get: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -283,31 +290,37 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the Server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
-        # Retrieve a User's S3 keys
-        api_response = api_instance.um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Flow Logs
+        api_response = api_instance.datacenters_servers_nics_flowlogs_get(datacenter_id, server_id, nic_id, pretty=pretty, depth=depth, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_get: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_get: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **str**| The unique ID of the user |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **server_id** | **str**| The unique ID of the Server |  |
+| **nic_id** | **str**| The unique ID of the NIC |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
+| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
 
 ### Return type
 
-[**S3Keys**](S3Keys.md)
+[**FlowLogs**](FlowLogs.md)
 
 ### Authorization
 
@@ -318,112 +331,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **um_users_s3keys_post**
-> S3Key um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_servers_nics_flowlogs_patch**
+> FlowLog datacenters_servers_nics_flowlogs_patch(datacenter_id, server_id, nic_id, flowlog_id, flowlog, pretty=pretty, depth=depth)
 
-Create a S3 Key for the given User
+Partially update a Flow Log
 
-Creates a S3 key for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users. Maximum of 5 keys can be generated for a given user
-
-### Example
-
-* Basic Authentication (Basic Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
-configuration.username = 'YOUR_USERNAME'
-configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Create a S3 Key for the given User
-        api_response = api_instance.um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_post: %s\n' % e)
-```
-
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Create a S3 Key for the given User
-        api_response = api_instance.um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_post: %s\n' % e)
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **str**| The unique ID of the user |  |
-| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-
-### Return type
-
-[**S3Key**](S3Key.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-# **um_users_s3keys_put**
-> S3Key um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-
-Modify a S3 key having the given key id
-
-You can enable or disable a given S3 key.
+This will partially update a Flow Log record.
 
 ### Example
 
@@ -448,19 +361,20 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | 
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-    s3_key = ionoscloud.S3Key() # S3Key | Modified S3 key
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog_id = 'flowlog_id_example' # str | The unique ID of the Flow Log
+    flowlog = ionoscloud.FlowLogProperties() # FlowLogProperties | Modified Flow Log
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify a S3 key having the given key id
-        api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Partially update a Flow Log
+        api_response = api_instance.datacenters_servers_nics_flowlogs_patch(datacenter_id, server_id, nic_id, flowlog_id, flowlog, pretty=pretty, depth=depth)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_put: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_patch: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -485,35 +399,37 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | 
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-    s3_key = ionoscloud.S3Key() # S3Key | Modified S3 key
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog_id = 'flowlog_id_example' # str | The unique ID of the Flow Log
+    flowlog = ionoscloud.FlowLogProperties() # FlowLogProperties | Modified Flow Log
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify a S3 key having the given key id
-        api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Partially update a Flow Log
+        api_response = api_instance.datacenters_servers_nics_flowlogs_patch(datacenter_id, server_id, nic_id, flowlog_id, flowlog, pretty=pretty, depth=depth)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3keys_put: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_patch: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **str**|  |  |
-| **key_id** | **str**| The unique access key ID of the S3 key |  |
-| **s3_key** | [**S3Key**](S3Key.md)| Modified S3 key |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **server_id** | **str**| The unique ID of the server |  |
+| **nic_id** | **str**| The unique ID of the NIC |  |
+| **flowlog_id** | **str**| The unique ID of the Flow Log |  |
+| **flowlog** | [**FlowLogProperties**](FlowLogProperties.md)| Modified Flow Log |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**FlowLog**](FlowLog.md)
 
 ### Authorization
 
@@ -524,12 +440,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **um_users_s3ssourl_get**
-> S3ObjectStorageSSO um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
+# **datacenters_servers_nics_flowlogs_post**
+> FlowLog datacenters_servers_nics_flowlogs_post(datacenter_id, server_id, nic_id, flowlog, pretty=pretty, depth=depth)
 
-Retrieve S3 object storage single signon URL for the given user
+Create a Flow Log
 
-You can retrieve S3 object storage single signon URL for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users.
+This will add a Flow Log to the network interface.
 
 ### Example
 
@@ -554,16 +470,19 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog = ionoscloud.FlowLog() # FlowLog | Flow Log to be created
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     try:
-        # Retrieve S3 object storage single signon URL for the given user
-        api_response = api_instance.um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
+        # Create a Flow Log
+        api_response = api_instance.datacenters_servers_nics_flowlogs_post(datacenter_id, server_id, nic_id, flowlog, pretty=pretty, depth=depth)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3ssourl_get: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_post: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -588,29 +507,35 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.UserS3KeysApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog = ionoscloud.FlowLog() # FlowLog | Flow Log to be created
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     try:
-        # Retrieve S3 object storage single signon URL for the given user
-        api_response = api_instance.um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
+        # Create a Flow Log
+        api_response = api_instance.datacenters_servers_nics_flowlogs_post(datacenter_id, server_id, nic_id, flowlog, pretty=pretty, depth=depth)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling UserS3KeysApi.um_users_s3ssourl_get: %s\n' % e)
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_post: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user_id** | **str**| The unique ID of the user |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **server_id** | **str**| The unique ID of the server |  |
+| **nic_id** | **str**| The unique ID of the NIC |  |
+| **flowlog** | [**FlowLog**](FlowLog.md)| Flow Log to be created |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
-| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 
 ### Return type
 
-[**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
+[**FlowLog**](FlowLog.md)
 
 ### Authorization
 
@@ -618,6 +543,115 @@ Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **datacenters_servers_nics_flowlogs_put**
+> FlowLog datacenters_servers_nics_flowlogs_put(datacenter_id, server_id, nic_id, flowlog_id, flowlog, pretty=pretty, depth=depth)
+
+Modify a Flow Log
+
+This will update a Flow Log record.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog_id = 'flowlog_id_example' # str | The unique ID of the Flow Log
+    flowlog = ionoscloud.FlowLogPut() # FlowLogPut | Modified Flow Log
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    try:
+        # Modify a Flow Log
+        api_response = api_instance.datacenters_servers_nics_flowlogs_put(datacenter_id, server_id, nic_id, flowlog_id, flowlog, pretty=pretty, depth=depth)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_put: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.FlowLogsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    server_id = 'server_id_example' # str | The unique ID of the server
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
+    flowlog_id = 'flowlog_id_example' # str | The unique ID of the Flow Log
+    flowlog = ionoscloud.FlowLogPut() # FlowLogPut | Modified Flow Log
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    try:
+        # Modify a Flow Log
+        api_response = api_instance.datacenters_servers_nics_flowlogs_put(datacenter_id, server_id, nic_id, flowlog_id, flowlog, pretty=pretty, depth=depth)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling FlowLogsApi.datacenters_servers_nics_flowlogs_put: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **server_id** | **str**| The unique ID of the server |  |
+| **nic_id** | **str**| The unique ID of the NIC |  |
+| **flowlog_id** | **str**| The unique ID of the Flow Log |  |
+| **flowlog** | [**FlowLogPut**](FlowLogPut.md)| Modified Flow Log |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+
+### Return type
+
+[**FlowLog**](FlowLog.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

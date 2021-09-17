@@ -52,7 +52,7 @@ class NetworkInterfacesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: object
+        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.datacenters_servers_nics_delete_with_http_info(datacenter_id, server_id, nic_id, **kwargs)  # noqa: E501
@@ -99,7 +99,7 @@ class NetworkInterfacesApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :rtype: None
         """
 
         local_var_params = locals()
@@ -179,7 +179,7 @@ class NetworkInterfacesApi(object):
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'object'
+        response_type = None
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 

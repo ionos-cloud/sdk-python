@@ -1,24 +1,26 @@
-# BackupUnitsApi
+# LansApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**backupunits_delete**](BackupUnitsApi.md#backupunits_delete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit |
-| [**backupunits_find_by_id**](BackupUnitsApi.md#backupunits_find_by_id) | **GET** /backupunits/{backupunitId} | Returns the specified Backup Unit |
-| [**backupunits_get**](BackupUnitsApi.md#backupunits_get) | **GET** /backupunits | List Backup Units |
-| [**backupunits_patch**](BackupUnitsApi.md#backupunits_patch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit |
-| [**backupunits_post**](BackupUnitsApi.md#backupunits_post) | **POST** /backupunits | Create a Backup Unit |
-| [**backupunits_put**](BackupUnitsApi.md#backupunits_put) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit |
-| [**backupunits_ssourl_get**](BackupUnitsApi.md#backupunits_ssourl_get) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified Backup Unit |
+| [**datacenters_lans_delete**](LansApi.md#datacenters_lans_delete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan. |
+| [**datacenters_lans_find_by_id**](LansApi.md#datacenters_lans_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan |
+| [**datacenters_lans_get**](LansApi.md#datacenters_lans_get) | **GET** /datacenters/{datacenterId}/lans | List Lans |
+| [**datacenters_lans_nics_find_by_id**](LansApi.md#datacenters_lans_nics_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan |
+| [**datacenters_lans_nics_get**](LansApi.md#datacenters_lans_nics_get) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members  |
+| [**datacenters_lans_nics_post**](LansApi.md#datacenters_lans_nics_post) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic |
+| [**datacenters_lans_patch**](LansApi.md#datacenters_lans_patch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan |
+| [**datacenters_lans_post**](LansApi.md#datacenters_lans_post) | **POST** /datacenters/{datacenterId}/lans | Create a Lan |
+| [**datacenters_lans_put**](LansApi.md#datacenters_lans_put) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan |
 
 
-# **backupunits_delete**
-> object backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_lans_delete**
+> datacenters_lans_delete(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Delete a Backup Unit
+Delete a Lan.
 
-NOTE: Running through the deletion process will delete: - the backup plans inside the Backup Unit. - all backups associated with the Backup Unit. - the backup user and finally also the unit
+Removes the specific LAN.
 
 ### Example
 
@@ -43,17 +45,17 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup Unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Delete a Backup Unit
-        api_response = api_instance.backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete a Lan.
+        api_instance.datacenters_lans_delete(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_delete: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_delete: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -78,31 +80,32 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup Unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Delete a Backup Unit
-        api_response = api_instance.backupunits_delete(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        # Delete a Lan.
+        api_instance.datacenters_lans_delete(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_delete: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_delete: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **backupunit_id** | **str**| The unique ID of the backup Unit |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **lan_id** | **str**| The unique ID of the LAN |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -113,12 +116,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **backupunits_find_by_id**
-> BackupUnit backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_lans_find_by_id**
+> Lan datacenters_lans_find_by_id(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Returns the specified Backup Unit
+Retrieve a Lan
 
-You can retrieve the details of an specific backup unit.
+Retrieves the attributes of a given LAN.
 
 ### Example
 
@@ -143,17 +146,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Returns the specified Backup Unit
-        api_response = api_instance.backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve a Lan
+        api_response = api_instance.datacenters_lans_find_by_id(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_find_by_id: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_find_by_id: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -178,31 +182,33 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Returns the specified Backup Unit
-        api_response = api_instance.backupunits_find_by_id(backupunit_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve a Lan
+        api_response = api_instance.datacenters_lans_find_by_id(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_find_by_id: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **backupunit_id** | **str**| The unique ID of the backup unit |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **lan_id** | **str**| The unique ID of the LAN |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**Lan**](Lan.md)
 
 ### Authorization
 
@@ -213,12 +219,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **backupunits_get**
-> BackupUnits backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_lans_get**
+> Lans datacenters_lans_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
 
-List Backup Units
+List Lans
 
-You can retrieve a complete list of backup Units that you have access to.
+Retrieve a list of LANs within the datacenter.
 
 ### Example
 
@@ -243,16 +249,19 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
-        # List Backup Units
-        api_response = api_instance.backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Lans
+        api_response = api_instance.datacenters_lans_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_get: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_get: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -277,29 +286,35 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
-        # List Backup Units
-        api_response = api_instance.backupunits_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # List Lans
+        api_response = api_instance.datacenters_lans_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_get: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_get: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
+| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
 
 ### Return type
 
-[**BackupUnits**](BackupUnits.md)
+[**Lans**](Lans.md)
 
 ### Authorization
 
@@ -310,12 +325,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-# **backupunits_patch**
-> BackupUnit backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_lans_nics_find_by_id**
+> Nic datacenters_lans_nics_find_by_id(datacenter_id, lan_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Partially modify a Backup Unit
+Retrieve a nic attached to lan
 
-You can use update a Backup Unit properties.
+This will retrieve the properties of an attached network interface.
 
 ### Example
 
@@ -340,18 +355,19 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
-    backup_unit_properties = ionoscloud.BackupUnitProperties() # BackupUnitProperties | Modified backup Unit properties
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Partially modify a Backup Unit
-        api_response = api_instance.backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve a nic attached to lan
+        api_response = api_instance.datacenters_lans_nics_find_by_id(datacenter_id, lan_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_patch: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_nics_find_by_id: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -376,33 +392,250 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
-    backup_unit_properties = ionoscloud.BackupUnitProperties() # BackupUnitProperties | Modified backup Unit properties
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    nic_id = 'nic_id_example' # str | The unique ID of the NIC
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Partially modify a Backup Unit
-        api_response = api_instance.backupunits_patch(backupunit_id, backup_unit_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Retrieve a nic attached to lan
+        api_response = api_instance.datacenters_lans_nics_find_by_id(datacenter_id, lan_id, nic_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_patch: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_nics_find_by_id: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **backupunit_id** | **str**| The unique ID of the backup unit |  |
-| **backup_unit_properties** | [**BackupUnitProperties**](BackupUnitProperties.md)| Modified backup Unit properties |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **lan_id** | **str**| The unique ID of the LAN |  |
+| **nic_id** | **str**| The unique ID of the NIC |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**Nic**](Nic.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacenters_lans_nics_get**
+> LanNics datacenters_lans_nics_get(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+
+List Lan Members 
+
+You can retrieve a list of nics attached to a LAN.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
+    try:
+        # List Lan Members 
+        api_response = api_instance.datacenters_lans_nics_get(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling LansApi.datacenters_lans_nics_get: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
+    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
+    try:
+        # List Lan Members 
+        api_response = api_instance.datacenters_lans_nics_get(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling LansApi.datacenters_lans_nics_get: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **lan_id** | **str**| The unique ID of the LAN |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
+| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
+
+### Return type
+
+[**LanNics**](LanNics.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacenters_lans_nics_post**
+> Nic datacenters_lans_nics_post(datacenter_id, lan_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+
+Attach a nic
+
+This will attach a pre-existing nic to a LAN.
+
+### Example
+
+* Basic Authentication (Basic Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure HTTP basic authorization: Basic Authentication
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    nic = ionoscloud.Nic() # Nic | Nic to be attached
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Attach a nic
+        api_response = api_instance.datacenters_lans_nics_post(datacenter_id, lan_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling LansApi.datacenters_lans_nics_post: %s\n' % e)
+```
+
+* Api Key Authentication (Token Authentication):
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+# See configuration.py for a list of all supported configuration parameters.
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples with auth method are provided below
+# Configure Api Key access token for authorization: Token Authentication
+configuration.api_key = {
+    'Token Authentication': 'YOUR_API_TOKEN',
+}
+# Enter a context with an instance of the API client
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    nic = ionoscloud.Nic() # Nic | Nic to be attached
+    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
+    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    try:
+        # Attach a nic
+        api_response = api_instance.datacenters_lans_nics_post(datacenter_id, lan_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        pprint(api_response)
+    except ApiException as e:
+        print('Exception when calling LansApi.datacenters_lans_nics_post: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **lan_id** | **str**| The unique ID of the LAN |  |
+| **nic** | [**Nic**](Nic.md)| Nic to be attached |  |
+| **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
+
+### Return type
+
+[**Nic**](Nic.md)
 
 ### Authorization
 
@@ -413,12 +646,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **backupunits_post**
-> BackupUnit backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_lans_patch**
+> Lan datacenters_lans_patch(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Create a Backup Unit
+Partially modify a Lan
 
-Create a Backup Unit. A Backup Unit is considered a resource like a virtual datacenter, IP Block, snapshot, etc. It shall be shareable via groups inside our User Management Feature 
+You can use update attributes of a resource.
 
 ### Example
 
@@ -443,17 +676,19 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backup_unit = ionoscloud.BackupUnit() # BackupUnit | Payload containing data to create a new Backup Unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    lan = ionoscloud.LanProperties() # LanProperties | Modified Lan
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Create a Backup Unit
-        api_response = api_instance.backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Partially modify a Lan
+        api_response = api_instance.datacenters_lans_patch(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_post: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_patch: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -478,31 +713,35 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backup_unit = ionoscloud.BackupUnit() # BackupUnit | Payload containing data to create a new Backup Unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    lan = ionoscloud.LanProperties() # LanProperties | Modified Lan
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Create a Backup Unit
-        api_response = api_instance.backupunits_post(backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Partially modify a Lan
+        api_response = api_instance.datacenters_lans_patch(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_post: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_patch: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **backup_unit** | [**BackupUnit**](BackupUnit.md)| Payload containing data to create a new Backup Unit |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **lan_id** | **str**| The unique ID of the LAN |  |
+| **lan** | [**LanProperties**](LanProperties.md)| Modified Lan |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**Lan**](Lan.md)
 
 ### Authorization
 
@@ -513,12 +752,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **backupunits_put**
-> BackupUnit backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+# **datacenters_lans_post**
+> LanPost datacenters_lans_post(datacenter_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify a Backup Unit
+Create a Lan
 
-You can use update a Backup Unit properties.
+Creates a LAN within the datacenter.
 
 ### Example
 
@@ -543,18 +782,18 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
-    backup_unit = ionoscloud.BackupUnit() # BackupUnit | Modified backup Unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan = ionoscloud.LanPost() # LanPost | Lan to be created
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify a Backup Unit
-        api_response = api_instance.backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Create a Lan
+        api_response = api_instance.datacenters_lans_post(datacenter_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_put: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_post: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -579,33 +818,33 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique ID of the backup unit
-    backup_unit = ionoscloud.BackupUnit() # BackupUnit | Modified backup Unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan = ionoscloud.LanPost() # LanPost | Lan to be created
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Modify a Backup Unit
-        api_response = api_instance.backupunits_put(backupunit_id, backup_unit, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        # Create a Lan
+        api_response = api_instance.datacenters_lans_post(datacenter_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_put: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_post: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **backupunit_id** | **str**| The unique ID of the backup unit |  |
-| **backup_unit** | [**BackupUnit**](BackupUnit.md)| Modified backup Unit |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **lan** | [**LanPost**](LanPost.md)| Lan to be created |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**LanPost**](LanPost.md)
 
 ### Authorization
 
@@ -616,12 +855,12 @@ Basic Authentication, Token Authentication
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-# **backupunits_ssourl_get**
-> BackupUnitSSO backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
+# **datacenters_lans_put**
+> Lan datacenters_lans_put(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Returns a single signon URL for the specified Backup Unit
+Modify a Lan
 
-Returns a single signon URL for the specified Backup Unit.
+You can use update attributes of a resource.
 
 ### Example
 
@@ -646,16 +885,19 @@ configuration.password = 'YOUR_PASSWORD'
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique UUID of the backup unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    lan = ionoscloud.Lan() # Lan | Modified Lan
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Returns a single signon URL for the specified Backup Unit
-        api_response = api_instance.backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
+        # Modify a Lan
+        api_response = api_instance.datacenters_lans_put(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_ssourl_get: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_put: %s\n' % e)
 ```
 
 * Api Key Authentication (Token Authentication):
@@ -680,29 +922,35 @@ configuration.api_key = {
 # Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = ionoscloud.BackupUnitsApi(api_client)
-    backupunit_id = 'backupunit_id_example' # str | The unique UUID of the backup unit
+    api_instance = ionoscloud.LansApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
+    lan_id = 'lan_id_example' # str | The unique ID of the LAN
+    lan = ionoscloud.Lan() # Lan | Modified Lan
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
+    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
-        # Returns a single signon URL for the specified Backup Unit
-        api_response = api_instance.backupunits_ssourl_get(backupunit_id, pretty=pretty, x_contract_number=x_contract_number)
+        # Modify a Lan
+        api_response = api_instance.datacenters_lans_put(datacenter_id, lan_id, lan, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
-        print('Exception when calling BackupUnitsApi.backupunits_ssourl_get: %s\n' % e)
+        print('Exception when calling LansApi.datacenters_lans_put: %s\n' % e)
 ```
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **backupunit_id** | **str**| The unique UUID of the backup unit |  |
+| **datacenter_id** | **str**| The unique ID of the datacenter |  |
+| **lan_id** | **str**| The unique ID of the LAN |  |
+| **lan** | [**Lan**](Lan.md)| Modified Lan |  |
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
+| **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
 
 ### Return type
 
-[**BackupUnitSSO**](BackupUnitSSO.md)
+[**Lan**](Lan.md)
 
 ### Authorization
 
@@ -710,6 +958,6 @@ Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

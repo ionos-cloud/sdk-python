@@ -25,7 +25,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 
 # **datacenters_natgateways_delete**
-> object datacenters_natgateways_delete(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> datacenters_natgateways_delete(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Remove a NAT gateway
 
@@ -62,8 +62,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove a NAT gateway
-        api_response = api_instance.datacenters_natgateways_delete(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_natgateways_delete(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_delete: %s\n' % e)
 ```
@@ -98,8 +97,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove a NAT gateway
-        api_response = api_instance.datacenters_natgateways_delete(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_natgateways_delete(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_delete: %s\n' % e)
 ```
@@ -116,7 +114,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -231,7 +229,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_natgateways_flowlogs_delete**
-> object datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
+> datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
 
 Remove Flow Log from NAT Gateway
 
@@ -268,8 +266,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     try:
         # Remove Flow Log from NAT Gateway
-        api_response = api_instance.datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
-        pprint(api_response)
+        api_instance.datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_delete: %s\n' % e)
 ```
@@ -304,8 +301,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     try:
         # Remove Flow Log from NAT Gateway
-        api_response = api_instance.datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
-        pprint(api_response)
+        api_instance.datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_delete: %s\n' % e)
 ```
@@ -322,7 +318,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -1167,7 +1163,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_natgateways_put**
-> NatGateway datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+> NatGateway datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Update a NAT gateway
 
@@ -1203,11 +1199,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
         # Update a NAT gateway
-        api_response = api_instance.datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        api_response = api_instance.datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_put: %s\n' % e)
@@ -1242,11 +1236,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
         # Update a NAT gateway
-        api_response = api_instance.datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        api_response = api_instance.datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_put: %s\n' % e)
@@ -1262,8 +1254,6 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
-| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
 
 ### Return type
 
@@ -1279,7 +1269,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_natgateways_rules_delete**
-> object datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Remove rule from NAT Gateway
 
@@ -1317,8 +1307,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove rule from NAT Gateway
-        api_response = api_instance.datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_delete: %s\n' % e)
 ```
@@ -1354,8 +1343,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove rule from NAT Gateway
-        api_response = api_instance.datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_delete: %s\n' % e)
 ```
@@ -1373,7 +1361,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 

@@ -9,6 +9,7 @@
 | **availability_zone** | **str** | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront. It is not available for DAS (Direct Attached Storage) and subject of availability for SSD. | [optional]  |
 | **image** | **str** | Image or snapshot ID to be used as template for this volume | [optional]  |
 | **image_password** | **str** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9 | [optional]  |
+| **image_alias** | **str** |  | [optional]  |
 | **ssh_keys** | **list[str]** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. | [optional]  |
 | **bus** | **str** | The bus type of the volume. Default is VIRTIO | [optional]  |
 | **licence_type** | **str** | OS type of this volume | [optional] [readonly]  |

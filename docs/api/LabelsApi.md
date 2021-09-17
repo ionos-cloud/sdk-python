@@ -34,7 +34,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 
 # **datacenters_labels_delete**
-> object datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from Data Center
 
@@ -71,8 +71,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from Data Center
-        api_response = api_instance.datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_delete: %s\n' % e)
 ```
@@ -107,8 +106,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from Data Center
-        api_response = api_instance.datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_delete: %s\n' % e)
 ```
@@ -125,7 +123,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -137,7 +135,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_labels_find_by_key**
-> LabelResource datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+> LabelResource datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Retrieve a Label of Data Center
 
@@ -172,11 +170,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
         # Retrieve a Label of Data Center
-        api_response = api_instance.datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        api_response = api_instance.datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_find_by_key: %s\n' % e)
@@ -210,11 +206,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
         # Retrieve a Label of Data Center
-        api_response = api_instance.datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        api_response = api_instance.datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_find_by_key: %s\n' % e)
@@ -229,8 +223,6 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
-| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
 
 ### Return type
 
@@ -555,7 +547,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_servers_labels_delete**
-> object datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from Server
 
@@ -593,8 +585,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from Server
-        api_response = api_instance.datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_delete: %s\n' % e)
 ```
@@ -630,8 +621,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from Server
-        api_response = api_instance.datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_delete: %s\n' % e)
 ```
@@ -649,7 +639,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -976,7 +966,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_servers_labels_put**
-> LabelResource datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+> LabelResource datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Modify a Label of Server
 
@@ -1013,11 +1003,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
         # Modify a Label of Server
-        api_response = api_instance.datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        api_response = api_instance.datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_put: %s\n' % e)
@@ -1053,11 +1041,9 @@ with ionoscloud.ApiClient(configuration) as api_client:
     pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
     depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
     try:
         # Modify a Label of Server
-        api_response = api_instance.datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
+        api_response = api_instance.datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
         pprint(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_put: %s\n' % e)
@@ -1074,8 +1060,6 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **pretty** | **bool**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to True] |
 | **depth** | **int**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]  |
-| **offset** | **int**| the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [optional] [default to 0] |
-| **limit** | **int**| the maximum number of elements to return (use together with offset for pagination) | [optional] [default to 1000] |
 
 ### Return type
 
@@ -1091,7 +1075,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_volumes_labels_delete**
-> object datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from Volume
 
@@ -1129,8 +1113,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from Volume
-        api_response = api_instance.datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_volumes_labels_delete: %s\n' % e)
 ```
@@ -1166,8 +1149,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from Volume
-        api_response = api_instance.datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_volumes_labels_delete: %s\n' % e)
 ```
@@ -1185,7 +1167,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -1621,7 +1603,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **ipblocks_labels_delete**
-> object ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from IP Block
 
@@ -1658,8 +1640,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from IP Block
-        api_response = api_instance.ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.ipblocks_labels_delete: %s\n' % e)
 ```
@@ -1694,8 +1675,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from IP Block
-        api_response = api_instance.ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.ipblocks_labels_delete: %s\n' % e)
 ```
@@ -1712,7 +1692,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 
@@ -2333,7 +2313,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **snapshots_labels_delete**
-> object snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
 Delete a Label from Snapshot
 
@@ -2370,8 +2350,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from Snapshot
-        api_response = api_instance.snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.snapshots_labels_delete: %s\n' % e)
 ```
@@ -2406,8 +2385,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Label from Snapshot
-        api_response = api_instance.snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_instance.snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
     except ApiException as e:
         print('Exception when calling LabelsApi.snapshots_labels_delete: %s\n' % e)
 ```
@@ -2424,7 +2402,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-**object**
+void (empty response body)
 
 ### Authorization
 

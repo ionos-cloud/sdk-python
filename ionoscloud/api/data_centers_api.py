@@ -48,7 +48,7 @@ class DataCentersApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: object
+        :rtype: None
         """
         kwargs['_return_http_data_only'] = True
         return self.datacenters_delete_with_http_info(datacenter_id, **kwargs)  # noqa: E501
@@ -91,7 +91,7 @@ class DataCentersApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
+        :rtype: None
         """
 
         local_var_params = locals()
@@ -157,7 +157,7 @@ class DataCentersApi(object):
         # Authentication setting
         auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
 
-        response_type = 'object'
+        response_type = None
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 
@@ -342,7 +342,7 @@ class DataCentersApi(object):
     def datacenters_get(self, **kwargs):  # noqa: E501
         """List Data Centers under your account  # noqa: E501
 
-        You can retrieve a complete list of data centers provisioned under your account  # noqa: E501
+        You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -380,7 +380,7 @@ class DataCentersApi(object):
     def datacenters_get_with_http_info(self, **kwargs):  # noqa: E501
         """List Data Centers under your account  # noqa: E501
 
-        You can retrieve a complete list of data centers provisioned under your account  # noqa: E501
+        You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
