@@ -33,14 +33,20 @@ class PaginationLinks(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'prev': 'str',
+
         '_self': 'str',
+
         'next': 'str',
     }
 
     attribute_map = {
+
         'prev': 'prev',
+
         '_self': 'self',
+
         'next': 'next',
     }
 
@@ -61,6 +67,7 @@ class PaginationLinks(object):
             self._self = _self
         if next is not None:
             self.next = next
+
 
     @property
     def prev(self):
@@ -130,7 +137,6 @@ class PaginationLinks(object):
         """
 
         self._next = next
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -113,13 +113,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_delete" % key
+                    " to method k8s_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -274,13 +274,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_find_by_cluster_id" % key
+                    " to method k8s_find_by_cluster_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -430,13 +430,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_get" % key
+                    " to method k8s_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -585,13 +585,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_kubeconfig_get" % key
+                    " to method k8s_kubeconfig_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -751,13 +751,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_delete" % key
+                    " to method k8s_nodepools_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -923,13 +923,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_find_by_id" % key
+                    " to method k8s_nodepools_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -1090,13 +1090,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_get" % key
+                    " to method k8s_nodepools_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -1261,13 +1261,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_nodes_delete" % key
+                    " to method k8s_nodepools_nodes_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -1444,13 +1444,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_nodes_find_by_id" % key
+                    " to method k8s_nodepools_nodes_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -1622,13 +1622,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_nodes_get" % key
+                    " to method k8s_nodepools_nodes_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -1799,13 +1799,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_nodes_replace_post" % key
+                    " to method k8s_nodepools_nodes_replace_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -1977,13 +1977,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_post" % key
+                    " to method k8s_nodepools_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -2158,13 +2158,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_nodepools_put" % key
+                    " to method k8s_nodepools_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -2335,13 +2335,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_post" % key
+                    " to method k8s_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'kubernetes_cluster' is set
         if self.api_client.client_side_validation and ('kubernetes_cluster' not in local_var_params or  # noqa: E501
@@ -2505,13 +2505,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_put" % key
+                    " to method k8s_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'k8s_cluster_id' is set
         if self.api_client.client_side_validation and ('k8s_cluster_id' not in local_var_params or  # noqa: E501
@@ -2661,13 +2661,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_versions_compatibilities_get" % key
+                    " to method k8s_versions_compatibilities_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'cluster_version' is set
         if self.api_client.client_side_validation and ('cluster_version' not in local_var_params or  # noqa: E501
@@ -2792,13 +2792,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_versions_default_get" % key
+                    " to method k8s_versions_default_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         collection_formats = {}
@@ -2917,13 +2917,13 @@ class KubernetesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method k8s_versions_get" % key
+                    " to method k8s_versions_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         collection_formats = {}

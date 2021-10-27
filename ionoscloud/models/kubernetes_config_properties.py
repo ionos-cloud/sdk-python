@@ -33,10 +33,12 @@ class KubernetesConfigProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'kubeconfig': 'str',
     }
 
     attribute_map = {
+
         'kubeconfig': 'kubeconfig',
     }
 
@@ -51,6 +53,7 @@ class KubernetesConfigProperties(object):
 
         if kubeconfig is not None:
             self.kubeconfig = kubeconfig
+
 
     @property
     def kubeconfig(self):
@@ -74,7 +77,6 @@ class KubernetesConfigProperties(object):
         """
 
         self._kubeconfig = kubeconfig
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

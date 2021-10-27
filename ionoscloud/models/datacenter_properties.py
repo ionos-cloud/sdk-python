@@ -33,20 +33,32 @@ class DatacenterProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'description': 'str',
+
         'location': 'str',
+
         'version': 'int',
+
         'features': 'list[str]',
+
         'sec_auth_protection': 'bool',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'description': 'description',
+
         'location': 'location',
+
         'version': 'version',
+
         'features': 'features',
+
         'sec_auth_protection': 'secAuthProtection',
     }
 
@@ -75,6 +87,7 @@ class DatacenterProperties(object):
             self.features = features
         if sec_auth_protection is not None:
             self.sec_auth_protection = sec_auth_protection
+
 
     @property
     def name(self):
@@ -215,7 +228,6 @@ class DatacenterProperties(object):
         """
 
         self._sec_auth_protection = sec_auth_protection
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

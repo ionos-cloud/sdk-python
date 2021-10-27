@@ -33,46 +33,84 @@ class VolumeProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'type': 'str',
+
         'size': 'float',
+
         'availability_zone': 'str',
+
         'image': 'str',
+
         'image_password': 'str',
+
         'image_alias': 'str',
+
         'ssh_keys': 'list[str]',
+
         'bus': 'str',
+
         'licence_type': 'str',
+
         'cpu_hot_plug': 'bool',
+
         'ram_hot_plug': 'bool',
+
         'nic_hot_plug': 'bool',
+
         'nic_hot_unplug': 'bool',
+
         'disc_virtio_hot_plug': 'bool',
+
         'disc_virtio_hot_unplug': 'bool',
+
         'device_number': 'int',
+
         'backupunit_id': 'str',
+
         'user_data': 'str',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'type': 'type',
+
         'size': 'size',
+
         'availability_zone': 'availabilityZone',
+
         'image': 'image',
+
         'image_password': 'imagePassword',
+
         'image_alias': 'imageAlias',
+
         'ssh_keys': 'sshKeys',
+
         'bus': 'bus',
+
         'licence_type': 'licenceType',
+
         'cpu_hot_plug': 'cpuHotPlug',
+
         'ram_hot_plug': 'ramHotPlug',
+
         'nic_hot_plug': 'nicHotPlug',
+
         'nic_hot_unplug': 'nicHotUnplug',
+
         'disc_virtio_hot_plug': 'discVirtioHotPlug',
+
         'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
+
         'device_number': 'deviceNumber',
+
         'backupunit_id': 'backupunitId',
+
         'user_data': 'userData',
     }
 
@@ -141,6 +179,7 @@ class VolumeProperties(object):
         if user_data is not None:
             self.user_data = user_data
 
+
     @property
     def name(self):
         """Gets the name of this VolumeProperties.  # noqa: E501
@@ -184,7 +223,7 @@ class VolumeProperties(object):
         :param type: The type of this VolumeProperties.  # noqa: E501
         :type type: str
         """
-        allowed_values = ["HDD", "SSD", "SSD Standard", "SSD Premium"]  # noqa: E501
+        allowed_values = ["HDD", "SSD", "SSD Standard", "SSD Premium", "DAS", "ISO"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
@@ -357,7 +396,7 @@ class VolumeProperties(object):
         :param bus: The bus of this VolumeProperties.  # noqa: E501
         :type bus: str
         """
-        allowed_values = ["VIRTIO", "IDE"]  # noqa: E501
+        allowed_values = ["VIRTIO", "IDE", "UNKNOWN"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and bus not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `bus` ({0}), must be one of {1}"  # noqa: E501
@@ -601,7 +640,6 @@ class VolumeProperties(object):
         """
 
         self._user_data = user_data
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

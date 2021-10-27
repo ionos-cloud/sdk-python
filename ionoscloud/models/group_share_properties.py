@@ -33,12 +33,16 @@ class GroupShareProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'edit_privilege': 'bool',
+
         'share_privilege': 'bool',
     }
 
     attribute_map = {
+
         'edit_privilege': 'editPrivilege',
+
         'share_privilege': 'sharePrivilege',
     }
 
@@ -56,6 +60,7 @@ class GroupShareProperties(object):
             self.edit_privilege = edit_privilege
         if share_privilege is not None:
             self.share_privilege = share_privilege
+
 
     @property
     def edit_privilege(self):
@@ -102,7 +107,6 @@ class GroupShareProperties(object):
         """
 
         self._share_privilege = share_privilege
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

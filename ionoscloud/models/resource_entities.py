@@ -33,10 +33,12 @@ class ResourceEntities(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'groups': 'ResourceGroups',
     }
 
     attribute_map = {
+
         'groups': 'groups',
     }
 
@@ -51,6 +53,7 @@ class ResourceEntities(object):
 
         if groups is not None:
             self.groups = groups
+
 
     @property
     def groups(self):
@@ -72,7 +75,6 @@ class ResourceEntities(object):
         """
 
         self._groups = groups
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

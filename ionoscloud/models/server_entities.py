@@ -33,14 +33,20 @@ class ServerEntities(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'cdroms': 'Cdroms',
+
         'volumes': 'AttachedVolumes',
+
         'nics': 'Nics',
     }
 
     attribute_map = {
+
         'cdroms': 'cdroms',
+
         'volumes': 'volumes',
+
         'nics': 'nics',
     }
 
@@ -61,6 +67,7 @@ class ServerEntities(object):
             self.volumes = volumes
         if nics is not None:
             self.nics = nics
+
 
     @property
     def cdroms(self):
@@ -124,7 +131,6 @@ class ServerEntities(object):
         """
 
         self._nics = nics
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

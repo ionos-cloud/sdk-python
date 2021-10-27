@@ -33,10 +33,12 @@ class KubernetesClusterEntities(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'nodepools': 'KubernetesNodePools',
     }
 
     attribute_map = {
+
         'nodepools': 'nodepools',
     }
 
@@ -51,6 +53,7 @@ class KubernetesClusterEntities(object):
 
         if nodepools is not None:
             self.nodepools = nodepools
+
 
     @property
     def nodepools(self):
@@ -72,7 +75,6 @@ class KubernetesClusterEntities(object):
         """
 
         self._nodepools = nodepools
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

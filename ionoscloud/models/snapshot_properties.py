@@ -33,40 +33,72 @@ class SnapshotProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'description': 'str',
+
         'location': 'str',
+
         'size': 'float',
+
         'sec_auth_protection': 'bool',
+
         'cpu_hot_plug': 'bool',
+
         'cpu_hot_unplug': 'bool',
+
         'ram_hot_plug': 'bool',
+
         'ram_hot_unplug': 'bool',
+
         'nic_hot_plug': 'bool',
+
         'nic_hot_unplug': 'bool',
+
         'disc_virtio_hot_plug': 'bool',
+
         'disc_virtio_hot_unplug': 'bool',
+
         'disc_scsi_hot_plug': 'bool',
+
         'disc_scsi_hot_unplug': 'bool',
+
         'licence_type': 'str',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'description': 'description',
+
         'location': 'location',
+
         'size': 'size',
+
         'sec_auth_protection': 'secAuthProtection',
+
         'cpu_hot_plug': 'cpuHotPlug',
+
         'cpu_hot_unplug': 'cpuHotUnplug',
+
         'ram_hot_plug': 'ramHotPlug',
+
         'ram_hot_unplug': 'ramHotUnplug',
+
         'nic_hot_plug': 'nicHotPlug',
+
         'nic_hot_unplug': 'nicHotUnplug',
+
         'disc_virtio_hot_plug': 'discVirtioHotPlug',
+
         'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
+
         'disc_scsi_hot_plug': 'discScsiHotPlug',
+
         'disc_scsi_hot_unplug': 'discScsiHotUnplug',
+
         'licence_type': 'licenceType',
     }
 
@@ -126,6 +158,7 @@ class SnapshotProperties(object):
             self.disc_scsi_hot_unplug = disc_scsi_hot_unplug
         if licence_type is not None:
             self.licence_type = licence_type
+
 
     @property
     def name(self):
@@ -500,7 +533,6 @@ class SnapshotProperties(object):
             )
 
         self._licence_type = licence_type
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

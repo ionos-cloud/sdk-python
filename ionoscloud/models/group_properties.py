@@ -33,28 +33,48 @@ class GroupProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'create_data_center': 'bool',
+
         'create_snapshot': 'bool',
+
         'reserve_ip': 'bool',
+
         'access_activity_log': 'bool',
+
         'create_pcc': 'bool',
+
         's3_privilege': 'bool',
+
         'create_backup_unit': 'bool',
+
         'create_internet_access': 'bool',
+
         'create_k8s_cluster': 'bool',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'create_data_center': 'createDataCenter',
+
         'create_snapshot': 'createSnapshot',
+
         'reserve_ip': 'reserveIp',
+
         'access_activity_log': 'accessActivityLog',
+
         'create_pcc': 'createPcc',
+
         's3_privilege': 's3Privilege',
+
         'create_backup_unit': 'createBackupUnit',
+
         'create_internet_access': 'createInternetAccess',
+
         'create_k8s_cluster': 'createK8sCluster',
     }
 
@@ -96,6 +116,7 @@ class GroupProperties(object):
             self.create_internet_access = create_internet_access
         if create_k8s_cluster is not None:
             self.create_k8s_cluster = create_k8s_cluster
+
 
     @property
     def name(self):
@@ -326,7 +347,6 @@ class GroupProperties(object):
         """
 
         self._create_k8s_cluster = create_k8s_cluster
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

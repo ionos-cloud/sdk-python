@@ -33,14 +33,20 @@ class ConnectableDatacenter(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'name': 'str',
+
         'location': 'str',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'name': 'name',
+
         'location': 'location',
     }
 
@@ -61,6 +67,7 @@ class ConnectableDatacenter(object):
             self.name = name
         if location is not None:
             self.location = location
+
 
     @property
     def id(self):
@@ -124,7 +131,6 @@ class ConnectableDatacenter(object):
         """
 
         self._location = location
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

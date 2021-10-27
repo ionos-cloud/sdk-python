@@ -113,13 +113,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_delete" % key
+                    " to method ipblocks_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -274,13 +274,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_find_by_id" % key
+                    " to method ipblocks_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -355,6 +355,10 @@ class IPBlocksApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -389,6 +393,10 @@ class IPBlocksApi(object):
         :type depth: int
         :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
         :type x_contract_number: int
+        :param offset: the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+        :type offset: int
+        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -417,7 +425,9 @@ class IPBlocksApi(object):
         all_params = [
             'pretty',
             'depth',
-            'x_contract_number'
+            'x_contract_number',
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -430,19 +440,25 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_get" % key
+                    " to method ipblocks_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `ipblocks_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `ipblocks_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `ipblocks_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 1000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `ipblocks_get`, must be a value less than or equal to `1000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `ipblocks_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -452,6 +468,10 @@ class IPBlocksApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:
@@ -590,13 +610,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_patch" % key
+                    " to method ipblocks_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -761,13 +781,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_post" % key
+                    " to method ipblocks_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock' is set
         if self.api_client.client_side_validation and ('ipblock' not in local_var_params or  # noqa: E501
@@ -931,13 +951,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_put" % key
+                    " to method ipblocks_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501

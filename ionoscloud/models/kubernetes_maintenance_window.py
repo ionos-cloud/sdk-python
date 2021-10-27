@@ -33,12 +33,16 @@ class KubernetesMaintenanceWindow(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'day_of_the_week': 'str',
+
         'time': 'str',
     }
 
     attribute_map = {
+
         'day_of_the_week': 'dayOfTheWeek',
+
         'time': 'time',
     }
 
@@ -56,6 +60,7 @@ class KubernetesMaintenanceWindow(object):
             self.day_of_the_week = day_of_the_week
         if time is not None:
             self.time = time
+
 
     @property
     def day_of_the_week(self):
@@ -108,7 +113,6 @@ class KubernetesMaintenanceWindow(object):
         """
 
         self._time = time
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,16 +33,24 @@ class KubernetesConfig(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'str',
+
         'href': 'str',
+
         'properties': 'KubernetesConfigProperties',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'properties': 'properties',
     }
 
@@ -65,6 +73,7 @@ class KubernetesConfig(object):
         if href is not None:
             self.href = href
         self.properties = properties
+
 
     @property
     def id(self):
@@ -163,7 +172,6 @@ class KubernetesConfig(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

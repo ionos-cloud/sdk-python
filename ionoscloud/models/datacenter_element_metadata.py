@@ -33,24 +33,40 @@ class DatacenterElementMetadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'etag': 'str',
+
         'created_date': 'datetime',
+
         'created_by': 'str',
+
         'created_by_user_id': 'str',
+
         'last_modified_date': 'datetime',
+
         'last_modified_by': 'str',
+
         'last_modified_by_user_id': 'str',
+
         'state': 'str',
     }
 
     attribute_map = {
+
         'etag': 'etag',
+
         'created_date': 'createdDate',
+
         'created_by': 'createdBy',
+
         'created_by_user_id': 'createdByUserId',
+
         'last_modified_date': 'lastModifiedDate',
+
         'last_modified_by': 'lastModifiedBy',
+
         'last_modified_by_user_id': 'lastModifiedByUserId',
+
         'state': 'state',
     }
 
@@ -86,6 +102,7 @@ class DatacenterElementMetadata(object):
             self.last_modified_by_user_id = last_modified_by_user_id
         if state is not None:
             self.state = state
+
 
     @property
     def etag(self):
@@ -276,7 +293,6 @@ class DatacenterElementMetadata(object):
             )
 
         self._state = state
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

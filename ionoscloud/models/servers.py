@@ -33,22 +33,36 @@ class Servers(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'Type',
+
         'href': 'str',
+
         'items': 'list[Server]',
+
         'offset': 'float',
+
         'limit': 'float',
+
         'links': 'PaginationLinks',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'items': 'items',
+
         'offset': 'offset',
+
         'limit': 'limit',
+
         'links': '_links',
     }
 
@@ -81,6 +95,7 @@ class Servers(object):
             self.limit = limit
         if links is not None:
             self.links = links
+
 
     @property
     def id(self):
@@ -240,7 +255,6 @@ class Servers(object):
         """
 
         self._links = links
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

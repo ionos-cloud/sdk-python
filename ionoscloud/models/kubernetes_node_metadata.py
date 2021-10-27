@@ -33,18 +33,28 @@ class KubernetesNodeMetadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'etag': 'str',
+
         'created_date': 'datetime',
+
         'last_modified_date': 'datetime',
+
         'state': 'str',
+
         'last_software_updated_date': 'datetime',
     }
 
     attribute_map = {
+
         'etag': 'etag',
+
         'created_date': 'createdDate',
+
         'last_modified_date': 'lastModifiedDate',
+
         'state': 'state',
+
         'last_software_updated_date': 'lastSoftwareUpdatedDate',
     }
 
@@ -71,6 +81,7 @@ class KubernetesNodeMetadata(object):
             self.state = state
         if last_software_updated_date is not None:
             self.last_software_updated_date = last_software_updated_date
+
 
     @property
     def etag(self):
@@ -192,7 +203,6 @@ class KubernetesNodeMetadata(object):
         """
 
         self._last_software_updated_date = last_software_updated_date
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

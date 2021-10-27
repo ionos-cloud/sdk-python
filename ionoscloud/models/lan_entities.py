@@ -33,10 +33,12 @@ class LanEntities(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'nics': 'LanNics',
     }
 
     attribute_map = {
+
         'nics': 'nics',
     }
 
@@ -51,6 +53,7 @@ class LanEntities(object):
 
         if nics is not None:
             self.nics = nics
+
 
     @property
     def nics(self):
@@ -72,7 +75,6 @@ class LanEntities(object):
         """
 
         self._nics = nics
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

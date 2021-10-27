@@ -33,16 +33,24 @@ class RequestProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'method': 'str',
+
         'headers': 'dict(str, str)',
+
         'body': 'str',
+
         'url': 'str',
     }
 
     attribute_map = {
+
         'method': 'method',
+
         'headers': 'headers',
+
         'body': 'body',
+
         'url': 'url',
     }
 
@@ -66,6 +74,7 @@ class RequestProperties(object):
             self.body = body
         if url is not None:
             self.url = url
+
 
     @property
     def method(self):
@@ -150,7 +159,6 @@ class RequestProperties(object):
         """
 
         self._url = url
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,40 +33,72 @@ class KubernetesNodePoolPropertiesForPost(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'datacenter_id': 'str',
+
         'node_count': 'int',
+
         'cpu_family': 'str',
+
         'cores_count': 'int',
+
         'ram_size': 'int',
+
         'availability_zone': 'str',
+
         'storage_type': 'str',
+
         'storage_size': 'int',
+
         'k8s_version': 'str',
+
         'maintenance_window': 'KubernetesMaintenanceWindow',
+
         'auto_scaling': 'KubernetesAutoScaling',
+
         'lans': 'list[KubernetesNodePoolLan]',
+
         'labels': 'dict(str, str)',
+
         'annotations': 'dict(str, str)',
+
         'public_ips': 'list[str]',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'datacenter_id': 'datacenterId',
+
         'node_count': 'nodeCount',
+
         'cpu_family': 'cpuFamily',
+
         'cores_count': 'coresCount',
+
         'ram_size': 'ramSize',
+
         'availability_zone': 'availabilityZone',
+
         'storage_type': 'storageType',
+
         'storage_size': 'storageSize',
+
         'k8s_version': 'k8sVersion',
+
         'maintenance_window': 'maintenanceWindow',
+
         'auto_scaling': 'autoScaling',
+
         'lans': 'lans',
+
         'labels': 'labels',
+
         'annotations': 'annotations',
+
         'public_ips': 'publicIps',
     }
 
@@ -117,6 +149,7 @@ class KubernetesNodePoolPropertiesForPost(object):
             self.annotations = annotations
         if public_ips is not None:
             self.public_ips = public_ips
+
 
     @property
     def name(self):
@@ -511,7 +544,6 @@ class KubernetesNodePoolPropertiesForPost(object):
         """
 
         self._public_ips = public_ips
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

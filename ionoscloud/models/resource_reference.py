@@ -33,14 +33,20 @@ class ResourceReference(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'Type',
+
         'href': 'str',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
     }
 
@@ -60,6 +66,7 @@ class ResourceReference(object):
             self.type = type
         if href is not None:
             self.href = href
+
 
     @property
     def id(self):
@@ -131,7 +138,6 @@ class ResourceReference(object):
         """
 
         self._href = href
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

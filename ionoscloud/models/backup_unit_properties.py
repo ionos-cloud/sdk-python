@@ -33,14 +33,20 @@ class BackupUnitProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'password': 'str',
+
         'email': 'str',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'password': 'password',
+
         'email': 'email',
     }
 
@@ -60,6 +66,7 @@ class BackupUnitProperties(object):
             self.password = password
         if email is not None:
             self.email = email
+
 
     @property
     def name(self):
@@ -131,7 +138,6 @@ class BackupUnitProperties(object):
         """
 
         self._email = email
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

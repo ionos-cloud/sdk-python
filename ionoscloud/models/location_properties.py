@@ -33,14 +33,20 @@ class LocationProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'features': 'list[str]',
+
         'image_aliases': 'list[str]',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'features': 'features',
+
         'image_aliases': 'imageAliases',
     }
 
@@ -61,6 +67,7 @@ class LocationProperties(object):
             self.features = features
         if image_aliases is not None:
             self.image_aliases = image_aliases
+
 
     @property
     def name(self):
@@ -130,7 +137,6 @@ class LocationProperties(object):
         """
 
         self._image_aliases = image_aliases
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

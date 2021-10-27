@@ -33,10 +33,12 @@ class NicEntities(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'firewallrules': 'FirewallRules',
     }
 
     attribute_map = {
+
         'firewallrules': 'firewallrules',
     }
 
@@ -51,6 +53,7 @@ class NicEntities(object):
 
         if firewallrules is not None:
             self.firewallrules = firewallrules
+
 
     @property
     def firewallrules(self):
@@ -72,7 +75,6 @@ class NicEntities(object):
         """
 
         self._firewallrules = firewallrules
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

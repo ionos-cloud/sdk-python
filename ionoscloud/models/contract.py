@@ -33,12 +33,16 @@ class Contract(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'type': 'Type',
+
         'properties': 'ContractProperties',
     }
 
     attribute_map = {
+
         'type': 'type',
+
         'properties': 'properties',
     }
 
@@ -55,6 +59,7 @@ class Contract(object):
         if type is not None:
             self.type = type
         self.properties = properties
+
 
     @property
     def type(self):
@@ -101,7 +106,6 @@ class Contract(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

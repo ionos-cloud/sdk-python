@@ -33,26 +33,44 @@ class IpConsumer(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'ip': 'str',
+
         'mac': 'str',
+
         'nic_id': 'str',
+
         'server_id': 'str',
+
         'server_name': 'str',
+
         'datacenter_id': 'str',
+
         'datacenter_name': 'str',
+
         'k8s_node_pool_uuid': 'str',
+
         'k8s_cluster_uuid': 'str',
     }
 
     attribute_map = {
+
         'ip': 'ip',
+
         'mac': 'mac',
+
         'nic_id': 'nicId',
+
         'server_id': 'serverId',
+
         'server_name': 'serverName',
+
         'datacenter_id': 'datacenterId',
+
         'datacenter_name': 'datacenterName',
+
         'k8s_node_pool_uuid': 'k8sNodePoolUuid',
+
         'k8s_cluster_uuid': 'k8sClusterUuid',
     }
 
@@ -91,6 +109,7 @@ class IpConsumer(object):
             self.k8s_node_pool_uuid = k8s_node_pool_uuid
         if k8s_cluster_uuid is not None:
             self.k8s_cluster_uuid = k8s_cluster_uuid
+
 
     @property
     def ip(self):
@@ -280,7 +299,6 @@ class IpConsumer(object):
         """
 
         self._k8s_cluster_uuid = k8s_cluster_uuid
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

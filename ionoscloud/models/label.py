@@ -33,18 +33,28 @@ class Label(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'str',
+
         'href': 'str',
+
         'metadata': 'NoStateMetaData',
+
         'properties': 'LabelProperties',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'metadata': 'metadata',
+
         'properties': 'properties',
     }
 
@@ -70,6 +80,7 @@ class Label(object):
         if metadata is not None:
             self.metadata = metadata
         self.properties = properties
+
 
     @property
     def id(self):
@@ -189,7 +200,6 @@ class Label(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,12 +33,16 @@ class ResourceProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'sec_auth_protection': 'bool',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'sec_auth_protection': 'secAuthProtection',
     }
 
@@ -56,6 +60,7 @@ class ResourceProperties(object):
             self.name = name
         if sec_auth_protection is not None:
             self.sec_auth_protection = sec_auth_protection
+
 
     @property
     def name(self):
@@ -102,7 +107,6 @@ class ResourceProperties(object):
         """
 
         self._sec_auth_protection = sec_auth_protection
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,20 +33,32 @@ class Lan(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'Type',
+
         'href': 'str',
+
         'metadata': 'DatacenterElementMetadata',
+
         'properties': 'LanProperties',
+
         'entities': 'LanEntities',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'metadata': 'metadata',
+
         'properties': 'properties',
+
         'entities': 'entities',
     }
 
@@ -75,6 +87,7 @@ class Lan(object):
         self.properties = properties
         if entities is not None:
             self.entities = entities
+
 
     @property
     def id(self):
@@ -209,7 +222,6 @@ class Lan(object):
         """
 
         self._entities = entities
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

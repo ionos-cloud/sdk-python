@@ -15,7 +15,7 @@ import os
 import codecs
 
 NAME = "ionoscloud"
-VERSION = "5.0.4"
+VERSION = "5.0.5"
 # To install the library, run the following
 #
 # python setup.py install

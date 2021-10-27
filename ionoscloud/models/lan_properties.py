@@ -33,16 +33,24 @@ class LanProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'ip_failover': 'list[IPFailover]',
+
         'pcc': 'str',
+
         'public': 'bool',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'ip_failover': 'ipFailover',
+
         'pcc': 'pcc',
+
         'public': 'public',
     }
 
@@ -66,6 +74,7 @@ class LanProperties(object):
             self.pcc = pcc
         if public is not None:
             self.public = public
+
 
     @property
     def name(self):
@@ -158,7 +167,6 @@ class LanProperties(object):
         """
 
         self._public = public
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

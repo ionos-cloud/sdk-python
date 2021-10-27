@@ -33,12 +33,16 @@ class S3KeyProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'secret_key': 'str',
+
         'active': 'bool',
     }
 
     attribute_map = {
+
         'secret_key': 'secretKey',
+
         'active': 'active',
     }
 
@@ -56,6 +60,7 @@ class S3KeyProperties(object):
             self.secret_key = secret_key
         if active is not None:
             self.active = active
+
 
     @property
     def secret_key(self):
@@ -102,7 +107,6 @@ class S3KeyProperties(object):
         """
 
         self._active = active
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

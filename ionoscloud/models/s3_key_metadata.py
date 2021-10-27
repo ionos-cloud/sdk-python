@@ -33,12 +33,16 @@ class S3KeyMetadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'etag': 'str',
+
         'created_date': 'datetime',
     }
 
     attribute_map = {
+
         'etag': 'etag',
+
         'created_date': 'createdDate',
     }
 
@@ -56,6 +60,7 @@ class S3KeyMetadata(object):
             self.etag = etag
         if created_date is not None:
             self.created_date = created_date
+
 
     @property
     def etag(self):
@@ -102,7 +107,6 @@ class S3KeyMetadata(object):
         """
 
         self._created_date = created_date
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

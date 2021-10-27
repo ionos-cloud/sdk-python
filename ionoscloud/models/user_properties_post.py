@@ -33,24 +33,40 @@ class UserPropertiesPost(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'firstname': 'str',
+
         'lastname': 'str',
+
         'email': 'str',
+
         'administrator': 'bool',
+
         'force_sec_auth': 'bool',
+
         'sec_auth_active': 'bool',
+
         'password': 'str',
+
         'active': 'bool',
     }
 
     attribute_map = {
+
         'firstname': 'firstname',
+
         'lastname': 'lastname',
+
         'email': 'email',
+
         'administrator': 'administrator',
+
         'force_sec_auth': 'forceSecAuth',
+
         'sec_auth_active': 'secAuthActive',
+
         'password': 'password',
+
         'active': 'active',
     }
 
@@ -86,6 +102,7 @@ class UserPropertiesPost(object):
             self.password = password
         if active is not None:
             self.active = active
+
 
     @property
     def firstname(self):
@@ -270,7 +287,6 @@ class UserPropertiesPost(object):
         """
 
         self._active = active
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,16 +33,24 @@ class RequestStatusMetadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'status': 'str',
+
         'message': 'str',
+
         'etag': 'str',
+
         'targets': 'list[RequestTarget]',
     }
 
     attribute_map = {
+
         'status': 'status',
+
         'message': 'message',
+
         'etag': 'etag',
+
         'targets': 'targets',
     }
 
@@ -66,6 +74,7 @@ class RequestStatusMetadata(object):
             self.etag = etag
         if targets is not None:
             self.targets = targets
+
 
     @property
     def status(self):
@@ -158,7 +167,6 @@ class RequestStatusMetadata(object):
         """
 
         self._targets = targets
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

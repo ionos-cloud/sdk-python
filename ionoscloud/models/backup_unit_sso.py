@@ -33,10 +33,12 @@ class BackupUnitSSO(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'sso_url': 'str',
     }
 
     attribute_map = {
+
         'sso_url': 'ssoUrl',
     }
 
@@ -51,6 +53,7 @@ class BackupUnitSSO(object):
 
         if sso_url is not None:
             self.sso_url = sso_url
+
 
     @property
     def sso_url(self):
@@ -74,7 +77,6 @@ class BackupUnitSSO(object):
         """
 
         self._sso_url = sso_url
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

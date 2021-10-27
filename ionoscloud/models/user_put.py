@@ -33,12 +33,16 @@ class UserPut(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'properties': 'UserPropertiesPut',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'properties': 'properties',
     }
 
@@ -55,6 +59,7 @@ class UserPut(object):
         if id is not None:
             self.id = id
         self.properties = properties
+
 
     @property
     def id(self):
@@ -101,7 +106,6 @@ class UserPut(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

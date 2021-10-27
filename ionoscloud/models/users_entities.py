@@ -33,12 +33,16 @@ class UsersEntities(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'owns': 'ResourcesUsers',
+
         'groups': 'GroupUsers',
     }
 
     attribute_map = {
+
         'owns': 'owns',
+
         'groups': 'groups',
     }
 
@@ -56,6 +60,7 @@ class UsersEntities(object):
             self.owns = owns
         if groups is not None:
             self.groups = groups
+
 
     @property
     def owns(self):
@@ -98,7 +103,6 @@ class UsersEntities(object):
         """
 
         self._groups = groups
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

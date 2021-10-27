@@ -33,22 +33,36 @@ class Requests(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'Type',
+
         'href': 'str',
+
         'items': 'list[Request]',
+
         'offset': 'float',
+
         'limit': 'float',
+
         'links': 'PaginationLinks',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'items': 'items',
+
         'offset': 'offset',
+
         'limit': 'limit',
+
         'links': '_links',
     }
 
@@ -78,6 +92,7 @@ class Requests(object):
         self.offset = offset
         self.limit = limit
         self.links = links
+
 
     @property
     def id(self):
@@ -200,7 +215,7 @@ class Requests(object):
     def limit(self):
         """Gets the limit of this Requests.  # noqa: E501
 
-        the limit specified in the request (or, if none was specified, the default limit of 0)  # noqa: E501
+        the limit specified in the request (or, if none was specified use the endpoint's default pagination limit)  # noqa: E501
 
         :return: The limit of this Requests.  # noqa: E501
         :rtype: float
@@ -211,7 +226,7 @@ class Requests(object):
     def limit(self, limit):
         """Sets the limit of this Requests.
 
-        the limit specified in the request (or, if none was specified, the default limit of 0)  # noqa: E501
+        the limit specified in the request (or, if none was specified use the endpoint's default pagination limit)  # noqa: E501
 
         :param limit: The limit of this Requests.  # noqa: E501
         :type limit: float
@@ -243,7 +258,6 @@ class Requests(object):
             raise ValueError("Invalid value for `links`, must not be `None`")  # noqa: E501
 
         self._links = links
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

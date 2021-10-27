@@ -33,42 +33,76 @@ class ResourceLimits(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'cores_per_server': 'int',
+
         'cores_per_contract': 'int',
+
         'cores_provisioned': 'int',
+
         'ram_per_server': 'int',
+
         'ram_per_contract': 'int',
+
         'ram_provisioned': 'int',
+
         'hdd_limit_per_volume': 'int',
+
         'hdd_limit_per_contract': 'int',
+
         'hdd_volume_provisioned': 'int',
+
         'ssd_limit_per_volume': 'int',
+
         'ssd_limit_per_contract': 'int',
+
         'ssd_volume_provisioned': 'int',
+
         'reservable_ips': 'int',
+
         'reserved_ips_on_contract': 'int',
+
         'reserved_ips_in_use': 'int',
+
         'k8s_cluster_limit_total': 'int',
+
         'k8s_clusters_provisioned': 'int',
     }
 
     attribute_map = {
+
         'cores_per_server': 'coresPerServer',
+
         'cores_per_contract': 'coresPerContract',
+
         'cores_provisioned': 'coresProvisioned',
+
         'ram_per_server': 'ramPerServer',
+
         'ram_per_contract': 'ramPerContract',
+
         'ram_provisioned': 'ramProvisioned',
+
         'hdd_limit_per_volume': 'hddLimitPerVolume',
+
         'hdd_limit_per_contract': 'hddLimitPerContract',
+
         'hdd_volume_provisioned': 'hddVolumeProvisioned',
+
         'ssd_limit_per_volume': 'ssdLimitPerVolume',
+
         'ssd_limit_per_contract': 'ssdLimitPerContract',
+
         'ssd_volume_provisioned': 'ssdVolumeProvisioned',
+
         'reservable_ips': 'reservableIps',
+
         'reserved_ips_on_contract': 'reservedIpsOnContract',
+
         'reserved_ips_in_use': 'reservedIpsInUse',
+
         'k8s_cluster_limit_total': 'k8sClusterLimitTotal',
+
         'k8s_clusters_provisioned': 'k8sClustersProvisioned',
     }
 
@@ -114,6 +148,7 @@ class ResourceLimits(object):
         self.reserved_ips_in_use = reserved_ips_in_use
         self.k8s_cluster_limit_total = k8s_cluster_limit_total
         self.k8s_clusters_provisioned = k8s_clusters_provisioned
+
 
     @property
     def cores_per_server(self):
@@ -539,7 +574,6 @@ class ResourceLimits(object):
             raise ValueError("Invalid value for `k8s_clusters_provisioned`, must not be `None`")  # noqa: E501
 
         self._k8s_clusters_provisioned = k8s_clusters_provisioned
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

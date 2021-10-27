@@ -33,26 +33,44 @@ class KubernetesNodePoolPropertiesForPut(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'node_count': 'int',
+
         'k8s_version': 'str',
+
         'maintenance_window': 'KubernetesMaintenanceWindow',
+
         'auto_scaling': 'KubernetesAutoScaling',
+
         'lans': 'list[KubernetesNodePoolLan]',
+
         'labels': 'dict(str, str)',
+
         'annotations': 'dict(str, str)',
+
         'public_ips': 'list[str]',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'node_count': 'nodeCount',
+
         'k8s_version': 'k8sVersion',
+
         'maintenance_window': 'maintenanceWindow',
+
         'auto_scaling': 'autoScaling',
+
         'lans': 'lans',
+
         'labels': 'labels',
+
         'annotations': 'annotations',
+
         'public_ips': 'publicIps',
     }
 
@@ -89,6 +107,7 @@ class KubernetesNodePoolPropertiesForPut(object):
             self.annotations = annotations
         if public_ips is not None:
             self.public_ips = public_ips
+
 
     @property
     def name(self):
@@ -296,7 +315,6 @@ class KubernetesNodePoolPropertiesForPut(object):
         """
 
         self._public_ips = public_ips
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

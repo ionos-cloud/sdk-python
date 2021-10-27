@@ -33,12 +33,16 @@ class RequestTarget(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'target': 'ResourceReference',
+
         'status': 'str',
     }
 
     attribute_map = {
+
         'target': 'target',
+
         'status': 'status',
     }
 
@@ -56,6 +60,7 @@ class RequestTarget(object):
             self.target = target
         if status is not None:
             self.status = status
+
 
     @property
     def target(self):
@@ -104,7 +109,6 @@ class RequestTarget(object):
             )
 
         self._status = status
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

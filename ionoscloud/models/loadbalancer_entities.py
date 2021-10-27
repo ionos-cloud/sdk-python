@@ -33,10 +33,12 @@ class LoadbalancerEntities(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'balancednics': 'BalancedNics',
     }
 
     attribute_map = {
+
         'balancednics': 'balancednics',
     }
 
@@ -51,6 +53,7 @@ class LoadbalancerEntities(object):
 
         if balancednics is not None:
             self.balancednics = balancednics
+
 
     @property
     def balancednics(self):
@@ -72,7 +75,6 @@ class LoadbalancerEntities(object):
         """
 
         self._balancednics = balancednics
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

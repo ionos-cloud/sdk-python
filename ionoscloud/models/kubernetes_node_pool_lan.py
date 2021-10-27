@@ -33,10 +33,12 @@ class KubernetesNodePoolLan(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'int',
     }
 
     attribute_map = {
+
         'id': 'id',
     }
 
@@ -49,8 +51,8 @@ class KubernetesNodePoolLan(object):
         self._id = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
+        self.id = id
+
 
     @property
     def id(self):
@@ -72,9 +74,10 @@ class KubernetesNodePoolLan(object):
         :param id: The id of this KubernetesNodePoolLan.  # noqa: E501
         :type id: int
         """
+        if self.local_vars_configuration.client_side_validation and id is None:  # noqa: E501
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

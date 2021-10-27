@@ -33,18 +33,28 @@ class LabelProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'key': 'str',
+
         'value': 'str',
+
         'resource_id': 'str',
+
         'resource_type': 'str',
+
         'resource_href': 'str',
     }
 
     attribute_map = {
+
         'key': 'key',
+
         'value': 'value',
+
         'resource_id': 'resourceId',
+
         'resource_type': 'resourceType',
+
         'resource_href': 'resourceHref',
     }
 
@@ -71,6 +81,7 @@ class LabelProperties(object):
             self.resource_type = resource_type
         if resource_href is not None:
             self.resource_href = resource_href
+
 
     @property
     def key(self):
@@ -186,7 +197,6 @@ class LabelProperties(object):
         """
 
         self._resource_href = resource_href
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,16 +33,24 @@ class DataCenterEntities(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'servers': 'Servers',
+
         'volumes': 'Volumes',
+
         'loadbalancers': 'Loadbalancers',
+
         'lans': 'Lans',
     }
 
     attribute_map = {
+
         'servers': 'servers',
+
         'volumes': 'volumes',
+
         'loadbalancers': 'loadbalancers',
+
         'lans': 'lans',
     }
 
@@ -66,6 +74,7 @@ class DataCenterEntities(object):
             self.loadbalancers = loadbalancers
         if lans is not None:
             self.lans = lans
+
 
     @property
     def servers(self):
@@ -150,7 +159,6 @@ class DataCenterEntities(object):
         """
 
         self._lans = lans
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

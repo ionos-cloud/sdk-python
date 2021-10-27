@@ -33,26 +33,44 @@ class FirewallruleProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'protocol': 'str',
+
         'source_mac': 'str',
+
         'source_ip': 'str',
+
         'target_ip': 'str',
+
         'icmp_code': 'int',
+
         'icmp_type': 'int',
+
         'port_range_start': 'int',
+
         'port_range_end': 'int',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'protocol': 'protocol',
+
         'source_mac': 'sourceMac',
+
         'source_ip': 'sourceIp',
+
         'target_ip': 'targetIp',
+
         'icmp_code': 'icmpCode',
+
         'icmp_type': 'icmpType',
+
         'port_range_start': 'portRangeStart',
+
         'port_range_end': 'portRangeEnd',
     }
 
@@ -90,6 +108,7 @@ class FirewallruleProperties(object):
             self.port_range_start = port_range_start
         if port_range_end is not None:
             self.port_range_end = port_range_end
+
 
     @property
     def name(self):
@@ -338,7 +357,6 @@ class FirewallruleProperties(object):
             raise ValueError("Invalid value for `port_range_end`, must be a value greater than or equal to `1`")  # noqa: E501
 
         self._port_range_end = port_range_end
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

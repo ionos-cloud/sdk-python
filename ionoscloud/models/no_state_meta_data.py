@@ -33,22 +33,36 @@ class NoStateMetaData(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'etag': 'str',
+
         'created_date': 'datetime',
+
         'created_by': 'str',
+
         'created_by_user_id': 'str',
+
         'last_modified_date': 'datetime',
+
         'last_modified_by': 'str',
+
         'last_modified_by_user_id': 'str',
     }
 
     attribute_map = {
+
         'etag': 'etag',
+
         'created_date': 'createdDate',
+
         'created_by': 'createdBy',
+
         'created_by_user_id': 'createdByUserId',
+
         'last_modified_date': 'lastModifiedDate',
+
         'last_modified_by': 'lastModifiedBy',
+
         'last_modified_by_user_id': 'lastModifiedByUserId',
     }
 
@@ -81,6 +95,7 @@ class NoStateMetaData(object):
             self.last_modified_by = last_modified_by
         if last_modified_by_user_id is not None:
             self.last_modified_by_user_id = last_modified_by_user_id
+
 
     @property
     def etag(self):
@@ -242,7 +257,6 @@ class NoStateMetaData(object):
         """
 
         self._last_modified_by_user_id = last_modified_by_user_id
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

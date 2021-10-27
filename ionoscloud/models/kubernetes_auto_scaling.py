@@ -33,12 +33,16 @@ class KubernetesAutoScaling(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'min_node_count': 'int',
+
         'max_node_count': 'int',
     }
 
     attribute_map = {
+
         'min_node_count': 'minNodeCount',
+
         'max_node_count': 'maxNodeCount',
     }
 
@@ -56,6 +60,7 @@ class KubernetesAutoScaling(object):
             self.min_node_count = min_node_count
         if max_node_count is not None:
             self.max_node_count = max_node_count
+
 
     @property
     def min_node_count(self):
@@ -102,7 +107,6 @@ class KubernetesAutoScaling(object):
         """
 
         self._max_node_count = max_node_count
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

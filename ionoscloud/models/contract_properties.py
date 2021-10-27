@@ -33,18 +33,28 @@ class ContractProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'contract_number': 'int',
+
         'owner': 'str',
+
         'status': 'str',
+
         'reg_domain': 'str',
+
         'resource_limits': 'ResourceLimits',
     }
 
     attribute_map = {
+
         'contract_number': 'contractNumber',
+
         'owner': 'owner',
+
         'status': 'status',
+
         'reg_domain': 'regDomain',
+
         'resource_limits': 'resourceLimits',
     }
 
@@ -71,6 +81,7 @@ class ContractProperties(object):
             self.reg_domain = reg_domain
         if resource_limits is not None:
             self.resource_limits = resource_limits
+
 
     @property
     def contract_number(self):
@@ -184,7 +195,6 @@ class ContractProperties(object):
         """
 
         self._resource_limits = resource_limits
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

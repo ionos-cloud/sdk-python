@@ -33,10 +33,12 @@ class UserPost(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'properties': 'UserPropertiesPost',
     }
 
     attribute_map = {
+
         'properties': 'properties',
     }
 
@@ -50,6 +52,7 @@ class UserPost(object):
         self.discriminator = None
 
         self.properties = properties
+
 
     @property
     def properties(self):
@@ -73,7 +76,6 @@ class UserPost(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

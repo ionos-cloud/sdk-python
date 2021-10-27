@@ -33,22 +33,32 @@ class KubernetesClusterPropertiesForPost(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'k8s_version': 'str',
+
         'maintenance_window': 'KubernetesMaintenanceWindow',
-        'public': 'bool',
-        'gateway_ip': 'str',
+
+        'api_subnet_allow_list': 'list[str]',
+
+        's3_buckets': 'list[S3Bucket]',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'k8s_version': 'k8sVersion',
+
         'maintenance_window': 'maintenanceWindow',
-        'public': 'public',
-        'gateway_ip': 'gatewayIp',
+
+        'api_subnet_allow_list': 'apiSubnetAllowList',
+
+        's3_buckets': 's3Buckets',
     }
 
-    def __init__(self, name=None, k8s_version=None, maintenance_window=None, public=True, gateway_ip=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, k8s_version=None, maintenance_window=None, api_subnet_allow_list=None, s3_buckets=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesClusterPropertiesForPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,8 +67,8 @@ class KubernetesClusterPropertiesForPost(object):
         self._name = None
         self._k8s_version = None
         self._maintenance_window = None
-        self._public = None
-        self._gateway_ip = None
+        self._api_subnet_allow_list = None
+        self._s3_buckets = None
         self.discriminator = None
 
         self.name = name
@@ -66,10 +76,11 @@ class KubernetesClusterPropertiesForPost(object):
             self.k8s_version = k8s_version
         if maintenance_window is not None:
             self.maintenance_window = maintenance_window
-        if public is not None:
-            self.public = public
-        if gateway_ip is not None:
-            self.gateway_ip = gateway_ip
+        if api_subnet_allow_list is not None:
+            self.api_subnet_allow_list = api_subnet_allow_list
+        if s3_buckets is not None:
+            self.s3_buckets = s3_buckets
+
 
     @property
     def name(self):
@@ -141,51 +152,50 @@ class KubernetesClusterPropertiesForPost(object):
         self._maintenance_window = maintenance_window
 
     @property
-    def public(self):
-        """Gets the public of this KubernetesClusterPropertiesForPost.  # noqa: E501
+    def api_subnet_allow_list(self):
+        """Gets the api_subnet_allow_list of this KubernetesClusterPropertiesForPost.  # noqa: E501
 
-        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
+        Access to the K8s API server is restricted to these CIDRs. Cluster-internal traffic is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
 
-        :return: The public of this KubernetesClusterPropertiesForPost.  # noqa: E501
-        :rtype: bool
+        :return: The api_subnet_allow_list of this KubernetesClusterPropertiesForPost.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._public
+        return self._api_subnet_allow_list
 
-    @public.setter
-    def public(self, public):
-        """Sets the public of this KubernetesClusterPropertiesForPost.
+    @api_subnet_allow_list.setter
+    def api_subnet_allow_list(self, api_subnet_allow_list):
+        """Sets the api_subnet_allow_list of this KubernetesClusterPropertiesForPost.
 
-        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
+        Access to the K8s API server is restricted to these CIDRs. Cluster-internal traffic is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
 
-        :param public: The public of this KubernetesClusterPropertiesForPost.  # noqa: E501
-        :type public: bool
+        :param api_subnet_allow_list: The api_subnet_allow_list of this KubernetesClusterPropertiesForPost.  # noqa: E501
+        :type api_subnet_allow_list: list[str]
         """
 
-        self._public = public
+        self._api_subnet_allow_list = api_subnet_allow_list
 
     @property
-    def gateway_ip(self):
-        """Gets the gateway_ip of this KubernetesClusterPropertiesForPost.  # noqa: E501
+    def s3_buckets(self):
+        """Gets the s3_buckets of this KubernetesClusterPropertiesForPost.  # noqa: E501
 
-        The IP address of the gateway used by the cluster. This is mandatory when `public` is set to `false` and should not be provided otherwise.  # noqa: E501
+        List of S3 bucket configured for K8s usage. For now it contains only one S3 bucket used to store K8s API audit logs  # noqa: E501
 
-        :return: The gateway_ip of this KubernetesClusterPropertiesForPost.  # noqa: E501
-        :rtype: str
+        :return: The s3_buckets of this KubernetesClusterPropertiesForPost.  # noqa: E501
+        :rtype: list[S3Bucket]
         """
-        return self._gateway_ip
+        return self._s3_buckets
 
-    @gateway_ip.setter
-    def gateway_ip(self, gateway_ip):
-        """Sets the gateway_ip of this KubernetesClusterPropertiesForPost.
+    @s3_buckets.setter
+    def s3_buckets(self, s3_buckets):
+        """Sets the s3_buckets of this KubernetesClusterPropertiesForPost.
 
-        The IP address of the gateway used by the cluster. This is mandatory when `public` is set to `false` and should not be provided otherwise.  # noqa: E501
+        List of S3 bucket configured for K8s usage. For now it contains only one S3 bucket used to store K8s API audit logs  # noqa: E501
 
-        :param gateway_ip: The gateway_ip of this KubernetesClusterPropertiesForPost.  # noqa: E501
-        :type gateway_ip: str
+        :param s3_buckets: The s3_buckets of this KubernetesClusterPropertiesForPost.  # noqa: E501
+        :type s3_buckets: list[S3Bucket]
         """
 
-        self._gateway_ip = gateway_ip
-
+        self._s3_buckets = s3_buckets
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

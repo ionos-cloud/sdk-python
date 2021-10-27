@@ -33,16 +33,24 @@ class KubernetesNodeProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'public_ip': 'str',
+
         'private_ip': 'str',
+
         'k8s_version': 'str',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'public_ip': 'publicIP',
+
         'private_ip': 'privateIP',
+
         'k8s_version': 'k8sVersion',
     }
 
@@ -64,6 +72,7 @@ class KubernetesNodeProperties(object):
         if private_ip is not None:
             self.private_ip = private_ip
         self.k8s_version = k8s_version
+
 
     @property
     def name(self):
@@ -160,7 +169,6 @@ class KubernetesNodeProperties(object):
             raise ValueError("Invalid value for `k8s_version`, must not be `None`")  # noqa: E501
 
         self._k8s_version = k8s_version
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

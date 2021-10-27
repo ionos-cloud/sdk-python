@@ -33,20 +33,32 @@ class LanPost(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'Type',
+
         'href': 'str',
+
         'metadata': 'DatacenterElementMetadata',
+
         'entities': 'LanEntities',
+
         'properties': 'LanPropertiesPost',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'metadata': 'metadata',
+
         'entities': 'entities',
+
         'properties': 'properties',
     }
 
@@ -75,6 +87,7 @@ class LanPost(object):
         if entities is not None:
             self.entities = entities
         self.properties = properties
+
 
     @property
     def id(self):
@@ -209,7 +222,6 @@ class LanPost(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

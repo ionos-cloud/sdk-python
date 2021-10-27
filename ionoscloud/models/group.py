@@ -33,18 +33,28 @@ class Group(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'Type',
+
         'href': 'str',
+
         'properties': 'GroupProperties',
+
         'entities': 'GroupEntities',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'properties': 'properties',
+
         'entities': 'entities',
     }
 
@@ -70,6 +80,7 @@ class Group(object):
         self.properties = properties
         if entities is not None:
             self.entities = entities
+
 
     @property
     def id(self):
@@ -183,7 +194,6 @@ class Group(object):
         """
 
         self._entities = entities
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,46 +33,84 @@ class ImageProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'description': 'str',
+
         'location': 'str',
+
         'size': 'float',
+
         'cpu_hot_plug': 'bool',
+
         'cpu_hot_unplug': 'bool',
+
         'ram_hot_plug': 'bool',
+
         'ram_hot_unplug': 'bool',
+
         'nic_hot_plug': 'bool',
+
         'nic_hot_unplug': 'bool',
+
         'disc_virtio_hot_plug': 'bool',
+
         'disc_virtio_hot_unplug': 'bool',
+
         'disc_scsi_hot_plug': 'bool',
+
         'disc_scsi_hot_unplug': 'bool',
+
         'licence_type': 'str',
+
         'image_type': 'str',
+
         'public': 'bool',
+
         'image_aliases': 'list[str]',
+
         'cloud_init': 'str',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'description': 'description',
+
         'location': 'location',
+
         'size': 'size',
+
         'cpu_hot_plug': 'cpuHotPlug',
+
         'cpu_hot_unplug': 'cpuHotUnplug',
+
         'ram_hot_plug': 'ramHotPlug',
+
         'ram_hot_unplug': 'ramHotUnplug',
+
         'nic_hot_plug': 'nicHotPlug',
+
         'nic_hot_unplug': 'nicHotUnplug',
+
         'disc_virtio_hot_plug': 'discVirtioHotPlug',
+
         'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
+
         'disc_scsi_hot_plug': 'discScsiHotPlug',
+
         'disc_scsi_hot_unplug': 'discScsiHotUnplug',
+
         'licence_type': 'licenceType',
+
         'image_type': 'imageType',
+
         'public': 'public',
+
         'image_aliases': 'imageAliases',
+
         'cloud_init': 'cloudInit',
     }
 
@@ -140,6 +178,7 @@ class ImageProperties(object):
             self.image_aliases = image_aliases
         if cloud_init is not None:
             self.cloud_init = cloud_init
+
 
     @property
     def name(self):
@@ -514,7 +553,7 @@ class ImageProperties(object):
         :param image_type: The image_type of this ImageProperties.  # noqa: E501
         :type image_type: str
         """
-        allowed_values = ["HDD", "CDROM"]  # noqa: E501
+        allowed_values = ["HDD", "CDROM", "UNKNOWN"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and image_type not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `image_type` ({0}), must be one of {1}"  # noqa: E501
@@ -597,7 +636,6 @@ class ImageProperties(object):
             )
 
         self._cloud_init = cloud_init
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,22 +33,36 @@ class NicProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'mac': 'str',
+
         'ips': 'list[str]',
+
         'dhcp': 'bool',
+
         'lan': 'int',
+
         'firewall_active': 'bool',
+
         'nat': 'bool',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'mac': 'mac',
+
         'ips': 'ips',
+
         'dhcp': 'dhcp',
+
         'lan': 'lan',
+
         'firewall_active': 'firewallActive',
+
         'nat': 'nat',
     }
 
@@ -80,6 +94,7 @@ class NicProperties(object):
             self.firewall_active = firewall_active
         if nat is not None:
             self.nat = nat
+
 
     @property
     def name(self):
@@ -243,7 +258,6 @@ class NicProperties(object):
         """
 
         self._nat = nat
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,14 +33,20 @@ class Info(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'href': 'str',
+
         'name': 'str',
+
         'version': 'str',
     }
 
     attribute_map = {
+
         'href': 'href',
+
         'name': 'name',
+
         'version': 'version',
     }
 
@@ -61,6 +67,7 @@ class Info(object):
             self.name = name
         if version is not None:
             self.version = version
+
 
     @property
     def href(self):
@@ -130,7 +137,6 @@ class Info(object):
         """
 
         self._version = version
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

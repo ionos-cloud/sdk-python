@@ -33,18 +33,28 @@ class Peer(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'name': 'str',
+
         'datacenter_id': 'str',
+
         'datacenter_name': 'str',
+
         'location': 'str',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'name': 'name',
+
         'datacenter_id': 'datacenterId',
+
         'datacenter_name': 'datacenterName',
+
         'location': 'location',
     }
 
@@ -71,6 +81,7 @@ class Peer(object):
             self.datacenter_name = datacenter_name
         if location is not None:
             self.location = location
+
 
     @property
     def id(self):
@@ -176,7 +187,6 @@ class Peer(object):
         """
 
         self._location = location
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,24 +33,40 @@ class ServerProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'cores': 'int',
+
         'ram': 'int',
+
         'availability_zone': 'str',
+
         'vm_state': 'str',
+
         'boot_cdrom': 'ResourceReference',
+
         'boot_volume': 'ResourceReference',
+
         'cpu_family': 'str',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'cores': 'cores',
+
         'ram': 'ram',
+
         'availability_zone': 'availabilityZone',
+
         'vm_state': 'vmState',
+
         'boot_cdrom': 'bootCdrom',
+
         'boot_volume': 'bootVolume',
+
         'cpu_family': 'cpuFamily',
     }
 
@@ -84,6 +100,7 @@ class ServerProperties(object):
             self.boot_volume = boot_volume
         if cpu_family is not None:
             self.cpu_family = cpu_family
+
 
     @property
     def name(self):
@@ -207,7 +224,7 @@ class ServerProperties(object):
         :param vm_state: The vm_state of this ServerProperties.  # noqa: E501
         :type vm_state: str
         """
-        allowed_values = ["NOSTATE", "RUNNING", "BLOCKED", "PAUSED", "SHUTDOWN", "SHUTOFF", "CRASHED"]  # noqa: E501
+        allowed_values = ["NOSTATE", "RUNNING", "BLOCKED", "PAUSED", "SHUTDOWN", "SHUTOFF", "CRASHED", "SUSPENDED"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and vm_state not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `vm_state` ({0}), must be one of {1}"  # noqa: E501
@@ -280,7 +297,6 @@ class ServerProperties(object):
         """
 
         self._cpu_family = cpu_family
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "5.0.4"
+__version__ = "5.0.5"
 
 # import apis into sdk package
 from ionoscloud.api.backup_unit_api import BackupUnitApi
@@ -153,6 +153,7 @@ from ionoscloud.models.resource_properties import ResourceProperties
 from ionoscloud.models.resource_reference import ResourceReference
 from ionoscloud.models.resources import Resources
 from ionoscloud.models.resources_users import ResourcesUsers
+from ionoscloud.models.s3_bucket import S3Bucket
 from ionoscloud.models.s3_key import S3Key
 from ionoscloud.models.s3_key_metadata import S3KeyMetadata
 from ionoscloud.models.s3_key_properties import S3KeyProperties

@@ -33,14 +33,20 @@ class UserMetadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'etag': 'str',
+
         'created_date': 'datetime',
+
         'last_login': 'datetime',
     }
 
     attribute_map = {
+
         'etag': 'etag',
+
         'created_date': 'createdDate',
+
         'last_login': 'lastLogin',
     }
 
@@ -61,6 +67,7 @@ class UserMetadata(object):
             self.created_date = created_date
         if last_login is not None:
             self.last_login = last_login
+
 
     @property
     def etag(self):
@@ -130,7 +137,6 @@ class UserMetadata(object):
         """
 
         self._last_login = last_login
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

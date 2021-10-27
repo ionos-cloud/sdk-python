@@ -33,16 +33,24 @@ class GroupShare(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'Type',
+
         'href': 'str',
+
         'properties': 'GroupShareProperties',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'properties': 'properties',
     }
 
@@ -65,6 +73,7 @@ class GroupShare(object):
         if href is not None:
             self.href = href
         self.properties = properties
+
 
     @property
     def id(self):
@@ -157,7 +166,6 @@ class GroupShare(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -33,16 +33,24 @@ class PrivateCrossConnectProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'description': 'str',
+
         'peers': 'list[Peer]',
+
         'connectable_datacenters': 'list[ConnectableDatacenter]',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'description': 'description',
+
         'peers': 'peers',
+
         'connectable_datacenters': 'connectableDatacenters',
     }
 
@@ -66,6 +74,7 @@ class PrivateCrossConnectProperties(object):
             self.peers = peers
         if connectable_datacenters is not None:
             self.connectable_datacenters = connectable_datacenters
+
 
     @property
     def name(self):
@@ -158,7 +167,6 @@ class PrivateCrossConnectProperties(object):
         """
 
         self._connectable_datacenters = connectable_datacenters
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

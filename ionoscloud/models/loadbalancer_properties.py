@@ -33,14 +33,20 @@ class LoadbalancerProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'name': 'str',
+
         'ip': 'str',
+
         'dhcp': 'bool',
     }
 
     attribute_map = {
+
         'name': 'name',
+
         'ip': 'ip',
+
         'dhcp': 'dhcp',
     }
 
@@ -61,6 +67,7 @@ class LoadbalancerProperties(object):
             self.ip = ip
         if dhcp is not None:
             self.dhcp = dhcp
+
 
     @property
     def name(self):
@@ -133,7 +140,6 @@ class LoadbalancerProperties(object):
         """
 
         self._dhcp = dhcp
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

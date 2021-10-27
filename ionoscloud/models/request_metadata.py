@@ -33,16 +33,24 @@ class RequestMetadata(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'created_date': 'datetime',
+
         'created_by': 'str',
+
         'etag': 'str',
+
         'request_status': 'RequestStatus',
     }
 
     attribute_map = {
+
         'created_date': 'createdDate',
+
         'created_by': 'createdBy',
+
         'etag': 'etag',
+
         'request_status': 'requestStatus',
     }
 
@@ -66,6 +74,7 @@ class RequestMetadata(object):
             self.etag = etag
         if request_status is not None:
             self.request_status = request_status
+
 
     @property
     def created_date(self):
@@ -156,7 +165,6 @@ class RequestMetadata(object):
         """
 
         self._request_status = request_status
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

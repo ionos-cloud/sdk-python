@@ -33,16 +33,24 @@ class RequestStatus(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'id': 'str',
+
         'type': 'Type',
+
         'href': 'str',
+
         'metadata': 'RequestStatusMetadata',
     }
 
     attribute_map = {
+
         'id': 'id',
+
         'type': 'type',
+
         'href': 'href',
+
         'metadata': 'metadata',
     }
 
@@ -66,6 +74,7 @@ class RequestStatus(object):
             self.href = href
         if metadata is not None:
             self.metadata = metadata
+
 
     @property
     def id(self):
@@ -156,7 +165,6 @@ class RequestStatus(object):
         """
 
         self._metadata = metadata
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

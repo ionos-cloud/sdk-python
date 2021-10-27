@@ -33,12 +33,16 @@ class IPFailover(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'ip': 'str',
+
         'nic_uuid': 'str',
     }
 
     attribute_map = {
+
         'ip': 'ip',
+
         'nic_uuid': 'nicUuid',
     }
 
@@ -56,6 +60,7 @@ class IPFailover(object):
             self.ip = ip
         if nic_uuid is not None:
             self.nic_uuid = nic_uuid
+
 
     @property
     def ip(self):
@@ -98,7 +103,6 @@ class IPFailover(object):
         """
 
         self._nic_uuid = nic_uuid
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

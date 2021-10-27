@@ -33,12 +33,16 @@ class ErrorMessage(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'error_code': 'str',
+
         'message': 'str',
     }
 
     attribute_map = {
+
         'error_code': 'errorCode',
+
         'message': 'message',
     }
 
@@ -56,6 +60,7 @@ class ErrorMessage(object):
             self.error_code = error_code
         if message is not None:
             self.message = message
+
 
     @property
     def error_code(self):
@@ -102,7 +107,6 @@ class ErrorMessage(object):
         """
 
         self._message = message
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

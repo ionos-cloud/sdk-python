@@ -33,18 +33,28 @@ class IpBlockProperties(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+
         'ips': 'list[str]',
+
         'location': 'str',
+
         'size': 'int',
+
         'name': 'str',
+
         'ip_consumers': 'list[IpConsumer]',
     }
 
     attribute_map = {
+
         'ips': 'ips',
+
         'location': 'location',
+
         'size': 'size',
+
         'name': 'name',
+
         'ip_consumers': 'ipConsumers',
     }
 
@@ -69,6 +79,7 @@ class IpBlockProperties(object):
             self.name = name
         if ip_consumers is not None:
             self.ip_consumers = ip_consumers
+
 
     @property
     def ips(self):
@@ -188,7 +199,6 @@ class IpBlockProperties(object):
         """
 
         self._ip_consumers = ip_consumers
-
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
