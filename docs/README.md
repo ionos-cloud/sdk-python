@@ -10,6 +10,9 @@ An IONOS account is required for access to the Cloud API; credentials from your 
 
 ### Installation & Usage
 
+**Requirements:**
+- Python >= 3.5
+
 ### pip install
 
 Since this package is hosted on PyPI \([https://pypi.org/](https://pypi.org/)\) you can install it like this
@@ -47,6 +50,9 @@ Then import the package:
 ```python
 import ionoscloud
 ```
+
+> **_NOTE:_**  The Python SDK does not support Python 2. It only supports Python >= 3.5.
+
 
 ### Authentication
 
