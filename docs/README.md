@@ -1,4 +1,4 @@
-# Introduction
+# Python SDK
 
 ## Overview
 
@@ -9,6 +9,9 @@ The IONOS Cloud SDK for Python provides you with access to the IONOS Cloud API. 
 An IONOS account is required for access to the Cloud API; credentials from your registration are used to authenticate against the IONOS Cloud API.
 
 ### Installation & Usage
+
+**Requirements:**
+- Python >= 3.5
 
 ### pip install
 
@@ -48,46 +51,45 @@ Then import the package:
 import ionoscloud
 ```
 
-### After installing please run the following code:
+> **_NOTE:_**  The Python SDK does not support Python 2. It only supports Python >= 3.5.
+
+
+### Authentication
+
+The username and password or the authentication token can be manually specified when initializing the SDK client:
 
 ```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = "https://api.ionos.com/cloudapi/v6"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-
-# Configure HTTP basic authorization: Basic Authentication
 configuration = ionoscloud.Configuration(
     username = 'YOUR_USERNAME',
     password = 'YOUR_PASSWORD'
 )
-
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.Api(api_client)
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-
-    try:
-        # Display API information
-        api_response = api_instance.api_info_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling Api->api_info_get: %s\n" % e)
+client = ionoscloud.ApiClient(configuration)
 ```
+
+Environment variables can also be used; the SDK uses the following variables:
+
+* IONOS\_USERNAME - to specify the username used to login
+* IONOS\_PASSWORD - to specify the password
+* IONOS\_TOKEN - if an authentication token is being used
+
+**Warning**: Make sure to follow the Information Security Best Practices when using credentials within your code or storing them in a file.
+
+### Depth
+
+Many of the _List_ or _Get_ operations will accept an optional _depth_ argument. Setting this to a value between 0 and 5 affects the amount of data that is returned. The details returned vary depending on the resource being queried, but it generally follows this pattern. By default, the SDK sets the _depth_ argument to the maximum value.
+
+| Depth | Description |
+| :--- | :--- |
+| 0 | Only direct properties are included. Children are not included. |
+| 1 | Direct properties and children's references are returned. |
+| 2 | Direct properties and children's properties are returned. |
+| 3 | Direct properties, children's properties, and descendants' references are returned. |
+| 4 | Direct properties, children's properties, and descendants' properties are returned. |
+| 5 | Returns all available properties. |
+
+### Pretty
+
+The operations will also accept an optional _pretty_ argument. Setting this to a value of `true` or `false` controls whether the response is pretty-printed \(with indentation and new lines\). By default, the SDK sets the _pretty_ argument to `true`.
 
 ## Feature Reference
 
