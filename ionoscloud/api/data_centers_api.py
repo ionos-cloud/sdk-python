@@ -18,22 +18,22 @@ class DataCentersApi(object):
         self.api_client = api_client
 
     def datacenters_delete(self, datacenter_id, **kwargs):  # noqa: E501
-        """Delete a Data Center  # noqa: E501
+        """Delete data centers  # noqa: E501
 
-        Will remove all objects within the datacenter and remove the datacenter object itself, too. This is a highly destructive method which should be used with caution  # noqa: E501
+        Delete the specified data center and all the elements it contains. This is method is destructive and should be used carefully.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_delete(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -54,22 +54,22 @@ class DataCentersApi(object):
         return self.datacenters_delete_with_http_info(datacenter_id, **kwargs)  # noqa: E501
 
     def datacenters_delete_with_http_info(self, datacenter_id, **kwargs):  # noqa: E501
-        """Delete a Data Center  # noqa: E501
+        """Delete data centers  # noqa: E501
 
-        Will remove all objects within the datacenter and remove the datacenter object itself, too. This is a highly destructive method which should be used with caution  # noqa: E501
+        Delete the specified data center and all the elements it contains. This is method is destructive and should be used carefully.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_delete_with_http_info(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -113,13 +113,13 @@ class DataCentersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_delete" % key
+                    " to method datacenters_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -179,22 +179,22 @@ class DataCentersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_find_by_id(self, datacenter_id, **kwargs):  # noqa: E501
-        """Retrieve a Data Center  # noqa: E501
+        """Retrieve data centers  # noqa: E501
 
-        You can retrieve a data center by using the resource's ID. This value can be found in the response body when a datacenter is created or when you GET a list of datacenters.  # noqa: E501
+        Retrieve data centers by resource ID. This value is in the response body when the data center is created, and in the list of the data centers, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_find_by_id(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -215,22 +215,22 @@ class DataCentersApi(object):
         return self.datacenters_find_by_id_with_http_info(datacenter_id, **kwargs)  # noqa: E501
 
     def datacenters_find_by_id_with_http_info(self, datacenter_id, **kwargs):  # noqa: E501
-        """Retrieve a Data Center  # noqa: E501
+        """Retrieve data centers  # noqa: E501
 
-        You can retrieve a data center by using the resource's ID. This value can be found in the response body when a datacenter is created or when you GET a list of datacenters.  # noqa: E501
+        Retrieve data centers by resource ID. This value is in the response body when the data center is created, and in the list of the data centers, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_find_by_id_with_http_info(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -274,13 +274,13 @@ class DataCentersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_find_by_id" % key
+                    " to method datacenters_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -340,24 +340,24 @@ class DataCentersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_get(self, **kwargs):  # noqa: E501
-        """List Data Centers under your account  # noqa: E501
+        """List your data centers  # noqa: E501
 
-        You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters  # noqa: E501
+        List the data centers for your account. Default limit is the first 100 items; use pagination query parameters for listing more items.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -378,24 +378,24 @@ class DataCentersApi(object):
         return self.datacenters_get_with_http_info(**kwargs)  # noqa: E501
 
     def datacenters_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Data Centers under your account  # noqa: E501
+        """List your data centers  # noqa: E501
 
-        You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters  # noqa: E501
+        List the data centers for your account. Default limit is the first 100 items; use pagination query parameters for listing more items.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -440,13 +440,13 @@ class DataCentersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_get" % key
+                    " to method datacenters_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -510,24 +510,24 @@ class DataCentersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_patch(self, datacenter_id, datacenter, **kwargs):  # noqa: E501
-        """Partially modify a Data Center  # noqa: E501
+        """Partially modify data centers  # noqa: E501
 
-        You can use update datacenter to re-name the datacenter or update its description  # noqa: E501
+        Update the properties of the specified data center, rename it, or change the description.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_patch(datacenter_id, datacenter, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param datacenter: Modified properties of Data Center (required)
+        :param datacenter: The properties of the data center to be updated. (required)
         :type datacenter: DatacenterProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -548,24 +548,24 @@ class DataCentersApi(object):
         return self.datacenters_patch_with_http_info(datacenter_id, datacenter, **kwargs)  # noqa: E501
 
     def datacenters_patch_with_http_info(self, datacenter_id, datacenter, **kwargs):  # noqa: E501
-        """Partially modify a Data Center  # noqa: E501
+        """Partially modify data centers  # noqa: E501
 
-        You can use update datacenter to re-name the datacenter or update its description  # noqa: E501
+        Update the properties of the specified data center, rename it, or change the description.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_patch_with_http_info(datacenter_id, datacenter, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param datacenter: Modified properties of Data Center (required)
+        :param datacenter: The properties of the data center to be updated. (required)
         :type datacenter: DatacenterProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -610,13 +610,13 @@ class DataCentersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_patch" % key
+                    " to method datacenters_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -686,22 +686,22 @@ class DataCentersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_post(self, datacenter, **kwargs):  # noqa: E501
-        """Create a Data Center  # noqa: E501
+        """Create data centers  # noqa: E501
 
-        Virtual data centers are the foundation of the platform. They act as logical containers for all other objects you will be creating, e.g. servers. You can provision as many data centers as you want. Datacenters have their own private network and are logically segmented from each other to create isolation. You can use this POST method to create a simple datacenter or to create a datacenter with multiple objects under it such as servers and storage volumes.  # noqa: E501
+        Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_post(datacenter, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter: Datacenter to be created (required)
+        :param datacenter: The data center to create. (required)
         :type datacenter: Datacenter
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -722,22 +722,22 @@ class DataCentersApi(object):
         return self.datacenters_post_with_http_info(datacenter, **kwargs)  # noqa: E501
 
     def datacenters_post_with_http_info(self, datacenter, **kwargs):  # noqa: E501
-        """Create a Data Center  # noqa: E501
+        """Create data centers  # noqa: E501
 
-        Virtual data centers are the foundation of the platform. They act as logical containers for all other objects you will be creating, e.g. servers. You can provision as many data centers as you want. Datacenters have their own private network and are logically segmented from each other to create isolation. You can use this POST method to create a simple datacenter or to create a datacenter with multiple objects under it such as servers and storage volumes.  # noqa: E501
+        Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_post_with_http_info(datacenter, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter: Datacenter to be created (required)
+        :param datacenter: The data center to create. (required)
         :type datacenter: Datacenter
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -781,13 +781,13 @@ class DataCentersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_post" % key
+                    " to method datacenters_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter' is set
         if self.api_client.client_side_validation and ('datacenter' not in local_var_params or  # noqa: E501
@@ -851,24 +851,24 @@ class DataCentersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_put(self, datacenter_id, datacenter, **kwargs):  # noqa: E501
-        """Modify a Data Center  # noqa: E501
+        """Modify data centers  # noqa: E501
 
-        You can use update datacenter to re-name the datacenter or update its description  # noqa: E501
+        Modify the properties of the specified data center, rename it, or change the description.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_put(datacenter_id, datacenter, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param datacenter: Modified Data Center (required)
+        :param datacenter: The modified data center. (required)
         :type datacenter: Datacenter
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -889,24 +889,24 @@ class DataCentersApi(object):
         return self.datacenters_put_with_http_info(datacenter_id, datacenter, **kwargs)  # noqa: E501
 
     def datacenters_put_with_http_info(self, datacenter_id, datacenter, **kwargs):  # noqa: E501
-        """Modify a Data Center  # noqa: E501
+        """Modify data centers  # noqa: E501
 
-        You can use update datacenter to re-name the datacenter or update its description  # noqa: E501
+        Modify the properties of the specified data center, rename it, or change the description.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_put_with_http_info(datacenter_id, datacenter, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param datacenter: Modified Data Center (required)
+        :param datacenter: The modified data center. (required)
         :type datacenter: Datacenter
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -951,13 +951,13 @@ class DataCentersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_put" % key
+                    " to method datacenters_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501

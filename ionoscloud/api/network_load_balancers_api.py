@@ -18,24 +18,24 @@ class NetworkLoadBalancersApi(object):
         self.api_client = api_client
 
     def datacenters_networkloadbalancers_delete(self, datacenter_id, network_load_balancer_id, **kwargs):  # noqa: E501
-        """Remove an Network Load Balancer  # noqa: E501
+        """Delete Network Load Balancers  # noqa: E501
 
-        Removes the specified Network Load Balancer.  # noqa: E501
+        Remove the specified Network Load Balancer from the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_delete(datacenter_id, network_load_balancer_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -56,24 +56,24 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_delete_with_http_info(datacenter_id, network_load_balancer_id, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_delete_with_http_info(self, datacenter_id, network_load_balancer_id, **kwargs):  # noqa: E501
-        """Remove an Network Load Balancer  # noqa: E501
+        """Delete Network Load Balancers  # noqa: E501
 
-        Removes the specified Network Load Balancer.  # noqa: E501
+        Remove the specified Network Load Balancer from the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_delete_with_http_info(datacenter_id, network_load_balancer_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -118,13 +118,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_delete" % key
+                    " to method datacenters_networkloadbalancers_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -190,24 +190,24 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_find_by_network_load_balancer_id(self, datacenter_id, network_load_balancer_id, **kwargs):  # noqa: E501
-        """Retrieve an Network Load Balancer  # noqa: E501
+        """Retrieve Network Load Balancers  # noqa: E501
 
-        Retrieves the attributes of a given Network Load Balancer.  # noqa: E501
+        Retrieve the properties of the specified Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_find_by_network_load_balancer_id(datacenter_id, network_load_balancer_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -228,24 +228,24 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_find_by_network_load_balancer_id_with_http_info(datacenter_id, network_load_balancer_id, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_find_by_network_load_balancer_id_with_http_info(self, datacenter_id, network_load_balancer_id, **kwargs):  # noqa: E501
-        """Retrieve an Network Load Balancer  # noqa: E501
+        """Retrieve Network Load Balancers  # noqa: E501
 
-        Retrieves the attributes of a given Network Load Balancer.  # noqa: E501
+        Retrieve the properties of the specified Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_find_by_network_load_balancer_id_with_http_info(datacenter_id, network_load_balancer_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -290,13 +290,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_find_by_network_load_balancer_id" % key
+                    " to method datacenters_networkloadbalancers_find_by_network_load_balancer_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -362,26 +362,26 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_flowlogs_delete(self, datacenter_id, network_load_balancer_id, flow_log_id, **kwargs):  # noqa: E501
-        """Remove Flow Log from Network Load Balancer  # noqa: E501
+        """Delete NLB Flow Logs  # noqa: E501
 
-        This will remove a flow log from the network load balancer.  # noqa: E501
+        Delete the specified Network Load Balancer Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_delete(datacenter_id, network_load_balancer_id, flow_log_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -402,26 +402,26 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_flowlogs_delete_with_http_info(datacenter_id, network_load_balancer_id, flow_log_id, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_flowlogs_delete_with_http_info(self, datacenter_id, network_load_balancer_id, flow_log_id, **kwargs):  # noqa: E501
-        """Remove Flow Log from Network Load Balancer  # noqa: E501
+        """Delete NLB Flow Logs  # noqa: E501
 
-        This will remove a flow log from the network load balancer.  # noqa: E501
+        Delete the specified Network Load Balancer Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_delete_with_http_info(datacenter_id, network_load_balancer_id, flow_log_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -467,13 +467,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_flowlogs_delete" % key
+                    " to method datacenters_networkloadbalancers_flowlogs_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -545,26 +545,26 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id(self, datacenter_id, network_load_balancer_id, flow_log_id, **kwargs):  # noqa: E501
-        """Retrieve a Flow Log of the Network Load Balancer  # noqa: E501
+        """Retrieve NLB Flow Logs  # noqa: E501
 
-        This will return a Flow Log of the Network Load Balancer.  # noqa: E501
+        Retrieve the specified Network Load Balancer Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id(datacenter_id, network_load_balancer_id, flow_log_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -585,26 +585,26 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id_with_http_info(datacenter_id, network_load_balancer_id, flow_log_id, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id_with_http_info(self, datacenter_id, network_load_balancer_id, flow_log_id, **kwargs):  # noqa: E501
-        """Retrieve a Flow Log of the Network Load Balancer  # noqa: E501
+        """Retrieve NLB Flow Logs  # noqa: E501
 
-        This will return a Flow Log of the Network Load Balancer.  # noqa: E501
+        Retrieve the specified Network Load Balancer Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id_with_http_info(datacenter_id, network_load_balancer_id, flow_log_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -650,13 +650,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id" % key
+                    " to method datacenters_networkloadbalancers_flowlogs_find_by_flow_log_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -728,24 +728,24 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_flowlogs_get(self, datacenter_id, network_load_balancer_id, **kwargs):  # noqa: E501
-        """List Network Load Balancer Flow Logs  # noqa: E501
+        """List NLB Flow Logs  # noqa: E501
 
-        You can retrieve a list of Flow Logs of the Network Load Balancer.  # noqa: E501
+        List all the Flow Logs for the specified Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_get(datacenter_id, network_load_balancer_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -766,24 +766,24 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_flowlogs_get_with_http_info(datacenter_id, network_load_balancer_id, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_flowlogs_get_with_http_info(self, datacenter_id, network_load_balancer_id, **kwargs):  # noqa: E501
-        """List Network Load Balancer Flow Logs  # noqa: E501
+        """List NLB Flow Logs  # noqa: E501
 
-        You can retrieve a list of Flow Logs of the Network Load Balancer.  # noqa: E501
+        List all the Flow Logs for the specified Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_get_with_http_info(datacenter_id, network_load_balancer_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -828,13 +828,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_flowlogs_get" % key
+                    " to method datacenters_networkloadbalancers_flowlogs_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -900,28 +900,28 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_flowlogs_patch(self, datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log_properties, **kwargs):  # noqa: E501
-        """Partially modify a Flow Log of the Network Load Balancer  # noqa: E501
+        """Partially modify NLB Flow Logs  # noqa: E501
 
-        You can use to partially update a Flow Log of a Network Load Balancer.  # noqa: E501
+        Update the properties of the specified Network Load Balancer Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_patch(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param network_load_balancer_flow_log_properties: Properties of a Flow Log to be updated (required)
+        :param network_load_balancer_flow_log_properties: The properties of the Flow Log to be updated. (required)
         :type network_load_balancer_flow_log_properties: FlowLogProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -942,28 +942,28 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_flowlogs_patch_with_http_info(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log_properties, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_flowlogs_patch_with_http_info(self, datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log_properties, **kwargs):  # noqa: E501
-        """Partially modify a Flow Log of the Network Load Balancer  # noqa: E501
+        """Partially modify NLB Flow Logs  # noqa: E501
 
-        You can use to partially update a Flow Log of a Network Load Balancer.  # noqa: E501
+        Update the properties of the specified Network Load Balancer Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_patch_with_http_info(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param network_load_balancer_flow_log_properties: Properties of a Flow Log to be updated (required)
+        :param network_load_balancer_flow_log_properties: The properties of the Flow Log to be updated. (required)
         :type network_load_balancer_flow_log_properties: FlowLogProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1010,13 +1010,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_flowlogs_patch" % key
+                    " to method datacenters_networkloadbalancers_flowlogs_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1094,26 +1094,26 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_flowlogs_post(self, datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Add a Network Load Balancer Flow Log  # noqa: E501
+        """Create NLB Flow Logs  # noqa: E501
 
-        This will add a new Flow Log to the Network Load Balancer.  # noqa: E501
+        Add a new Flow Log for the Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_post(datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param network_load_balancer_flow_log: Flow Log to add (required)
+        :param network_load_balancer_flow_log: The Flow Log to create. (required)
         :type network_load_balancer_flow_log: FlowLog
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1134,26 +1134,26 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_flowlogs_post_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_flowlogs_post_with_http_info(self, datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Add a Network Load Balancer Flow Log  # noqa: E501
+        """Create NLB Flow Logs  # noqa: E501
 
-        This will add a new Flow Log to the Network Load Balancer.  # noqa: E501
+        Add a new Flow Log for the Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_post_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param network_load_balancer_flow_log: Flow Log to add (required)
+        :param network_load_balancer_flow_log: The Flow Log to create. (required)
         :type network_load_balancer_flow_log: FlowLog
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1199,13 +1199,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_flowlogs_post" % key
+                    " to method datacenters_networkloadbalancers_flowlogs_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1281,28 +1281,28 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_flowlogs_put(self, datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Modify a Flow Log of the Network Load Balancer  # noqa: E501
+        """Modify NLB Flow Logs  # noqa: E501
 
-        You can use to update a Flow Log of the Network Load Balancer.  # noqa: E501
+        Modify the specified Network Load Balancer Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_put(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param network_load_balancer_flow_log: Modified Network Load Balancer Flow Log (required)
+        :param network_load_balancer_flow_log: The modified NLB Flow Log. (required)
         :type network_load_balancer_flow_log: FlowLogPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1323,28 +1323,28 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_flowlogs_put_with_http_info(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_flowlogs_put_with_http_info(self, datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Modify a Flow Log of the Network Load Balancer  # noqa: E501
+        """Modify NLB Flow Logs  # noqa: E501
 
-        You can use to update a Flow Log of the Network Load Balancer.  # noqa: E501
+        Modify the specified Network Load Balancer Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_flowlogs_put_with_http_info(datacenter_id, network_load_balancer_id, flow_log_id, network_load_balancer_flow_log, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param network_load_balancer_flow_log: Modified Network Load Balancer Flow Log (required)
+        :param network_load_balancer_flow_log: The modified NLB Flow Log. (required)
         :type network_load_balancer_flow_log: FlowLogPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1391,13 +1391,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_flowlogs_put" % key
+                    " to method datacenters_networkloadbalancers_flowlogs_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1479,26 +1479,26 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_forwardingrules_delete(self, datacenter_id, network_load_balancer_id, forwarding_rule_id, **kwargs):  # noqa: E501
-        """Remove Forwarding Rule from Network Load Balancer  # noqa: E501
+        """Delete NLB forwarding rules  # noqa: E501
 
-        This will remove a forwarding rule from the Network Load Balancer.  # noqa: E501
+        Delete the specified Network Load Balancer forwarding rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_delete(datacenter_id, network_load_balancer_id, forwarding_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param forwarding_rule_id: The unique ID of the forwarding rule (required)
+        :param forwarding_rule_id: The unique ID of the forwarding rule. (required)
         :type forwarding_rule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1519,26 +1519,26 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_forwardingrules_delete_with_http_info(datacenter_id, network_load_balancer_id, forwarding_rule_id, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_forwardingrules_delete_with_http_info(self, datacenter_id, network_load_balancer_id, forwarding_rule_id, **kwargs):  # noqa: E501
-        """Remove Forwarding Rule from Network Load Balancer  # noqa: E501
+        """Delete NLB forwarding rules  # noqa: E501
 
-        This will remove a forwarding rule from the Network Load Balancer.  # noqa: E501
+        Delete the specified Network Load Balancer forwarding rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_delete_with_http_info(datacenter_id, network_load_balancer_id, forwarding_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param forwarding_rule_id: The unique ID of the forwarding rule (required)
+        :param forwarding_rule_id: The unique ID of the forwarding rule. (required)
         :type forwarding_rule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1584,13 +1584,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_forwardingrules_delete" % key
+                    " to method datacenters_networkloadbalancers_forwardingrules_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1662,26 +1662,26 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id(self, datacenter_id, network_load_balancer_id, forwarding_rule_id, **kwargs):  # noqa: E501
-        """Retrieve a Forwarding Rule of the Network Load Balancer  # noqa: E501
+        """Retrieve NLB forwarding rules  # noqa: E501
 
-        This will a forwarding rule of the Network Load Balancer.  # noqa: E501
+        Retrieve the specified Network Load Balance forwarding rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id(datacenter_id, network_load_balancer_id, forwarding_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param forwarding_rule_id: The unique ID of the forwarding rule (required)
+        :param forwarding_rule_id: The unique ID of the forwarding rule. (required)
         :type forwarding_rule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1702,26 +1702,26 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id_with_http_info(datacenter_id, network_load_balancer_id, forwarding_rule_id, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id_with_http_info(self, datacenter_id, network_load_balancer_id, forwarding_rule_id, **kwargs):  # noqa: E501
-        """Retrieve a Forwarding Rule of the Network Load Balancer  # noqa: E501
+        """Retrieve NLB forwarding rules  # noqa: E501
 
-        This will a forwarding rule of the Network Load Balancer.  # noqa: E501
+        Retrieve the specified Network Load Balance forwarding rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id_with_http_info(datacenter_id, network_load_balancer_id, forwarding_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param forwarding_rule_id: The unique ID of the forwarding rule (required)
+        :param forwarding_rule_id: The unique ID of the forwarding rule. (required)
         :type forwarding_rule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1767,13 +1767,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id" % key
+                    " to method datacenters_networkloadbalancers_forwardingrules_find_by_forwarding_rule_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1845,24 +1845,24 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_forwardingrules_get(self, datacenter_id, network_load_balancer_id, **kwargs):  # noqa: E501
-        """List Network Load Balancer Forwarding Rules  # noqa: E501
+        """List NLB forwarding rules  # noqa: E501
 
-        You can retrieve a list of forwarding rules of the Network Load Balancer.  # noqa: E501
+        List the forwarding rules for the specified Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_get(datacenter_id, network_load_balancer_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1883,24 +1883,24 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_forwardingrules_get_with_http_info(datacenter_id, network_load_balancer_id, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_forwardingrules_get_with_http_info(self, datacenter_id, network_load_balancer_id, **kwargs):  # noqa: E501
-        """List Network Load Balancer Forwarding Rules  # noqa: E501
+        """List NLB forwarding rules  # noqa: E501
 
-        You can retrieve a list of forwarding rules of the Network Load Balancer.  # noqa: E501
+        List the forwarding rules for the specified Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_get_with_http_info(datacenter_id, network_load_balancer_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1945,13 +1945,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_forwardingrules_get" % key
+                    " to method datacenters_networkloadbalancers_forwardingrules_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2017,28 +2017,28 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_forwardingrules_patch(self, datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule_properties, **kwargs):  # noqa: E501
-        """Partially modify a forwarding rule of the Network Load Balancer  # noqa: E501
+        """Partially modify NLB forwarding rules  # noqa: E501
 
-        You can use to partially update a forwarding rule of a Network Load Balancer.  # noqa: E501
+        Update the properties of the specified Network Load Balancer forwarding rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_patch(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param forwarding_rule_id: The unique ID of the forwarding rule (required)
+        :param forwarding_rule_id: The unique ID of the forwarding rule. (required)
         :type forwarding_rule_id: str
-        :param network_load_balancer_forwarding_rule_properties: Properties of a forwarding rule to be updated (required)
+        :param network_load_balancer_forwarding_rule_properties: The properties of the forwarding rule to be updated. (required)
         :type network_load_balancer_forwarding_rule_properties: NetworkLoadBalancerForwardingRuleProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2059,28 +2059,28 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_forwardingrules_patch_with_http_info(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule_properties, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_forwardingrules_patch_with_http_info(self, datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule_properties, **kwargs):  # noqa: E501
-        """Partially modify a forwarding rule of the Network Load Balancer  # noqa: E501
+        """Partially modify NLB forwarding rules  # noqa: E501
 
-        You can use to partially update a forwarding rule of a Network Load Balancer.  # noqa: E501
+        Update the properties of the specified Network Load Balancer forwarding rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_patch_with_http_info(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param forwarding_rule_id: The unique ID of the forwarding rule (required)
+        :param forwarding_rule_id: The unique ID of the forwarding rule. (required)
         :type forwarding_rule_id: str
-        :param network_load_balancer_forwarding_rule_properties: Properties of a forwarding rule to be updated (required)
+        :param network_load_balancer_forwarding_rule_properties: The properties of the forwarding rule to be updated. (required)
         :type network_load_balancer_forwarding_rule_properties: NetworkLoadBalancerForwardingRuleProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2127,13 +2127,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_forwardingrules_patch" % key
+                    " to method datacenters_networkloadbalancers_forwardingrules_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2211,26 +2211,26 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_forwardingrules_post(self, datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Add a Network Load Balancer Forwarding Rule  # noqa: E501
+        """Create NLB forwarding rules  # noqa: E501
 
-        This will add a new forwarding rule to the Network Load Balancer.  # noqa: E501
+        Create a forwarding rule for the specified Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_post(datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param network_load_balancer_forwarding_rule: forwarding rule to add (required)
+        :param network_load_balancer_forwarding_rule: The forwarding rule to create. (required)
         :type network_load_balancer_forwarding_rule: NetworkLoadBalancerForwardingRule
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2251,26 +2251,26 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_forwardingrules_post_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_forwardingrules_post_with_http_info(self, datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Add a Network Load Balancer Forwarding Rule  # noqa: E501
+        """Create NLB forwarding rules  # noqa: E501
 
-        This will add a new forwarding rule to the Network Load Balancer.  # noqa: E501
+        Create a forwarding rule for the specified Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_post_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param network_load_balancer_forwarding_rule: forwarding rule to add (required)
+        :param network_load_balancer_forwarding_rule: The forwarding rule to create. (required)
         :type network_load_balancer_forwarding_rule: NetworkLoadBalancerForwardingRule
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2316,13 +2316,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_forwardingrules_post" % key
+                    " to method datacenters_networkloadbalancers_forwardingrules_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2398,28 +2398,28 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_forwardingrules_put(self, datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Modify a forwarding rule of the Network Load Balancer  # noqa: E501
+        """Modify NLB forwarding rules  # noqa: E501
 
-        You can use to update a forwarding rule of the Network Load Balancer.  # noqa: E501
+        Modify the specified Network Load Balancer forwarding rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_put(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param forwarding_rule_id: The unique ID of the forwarding rule (required)
+        :param forwarding_rule_id: The unique ID of the forwarding rule. (required)
         :type forwarding_rule_id: str
-        :param network_load_balancer_forwarding_rule: Modified Network Load Balancer Forwarding Rule (required)
+        :param network_load_balancer_forwarding_rule: The modified NLB forwarding rule. (required)
         :type network_load_balancer_forwarding_rule: NetworkLoadBalancerForwardingRulePut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2440,28 +2440,28 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_forwardingrules_put_with_http_info(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_forwardingrules_put_with_http_info(self, datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Modify a forwarding rule of the Network Load Balancer  # noqa: E501
+        """Modify NLB forwarding rules  # noqa: E501
 
-        You can use to update a forwarding rule of the Network Load Balancer.  # noqa: E501
+        Modify the specified Network Load Balancer forwarding rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_forwardingrules_put_with_http_info(datacenter_id, network_load_balancer_id, forwarding_rule_id, network_load_balancer_forwarding_rule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param forwarding_rule_id: The unique ID of the forwarding rule (required)
+        :param forwarding_rule_id: The unique ID of the forwarding rule. (required)
         :type forwarding_rule_id: str
-        :param network_load_balancer_forwarding_rule: Modified Network Load Balancer Forwarding Rule (required)
+        :param network_load_balancer_forwarding_rule: The modified NLB forwarding rule. (required)
         :type network_load_balancer_forwarding_rule: NetworkLoadBalancerForwardingRulePut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2508,13 +2508,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_forwardingrules_put" % key
+                    " to method datacenters_networkloadbalancers_forwardingrules_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2598,24 +2598,24 @@ class NetworkLoadBalancersApi(object):
     def datacenters_networkloadbalancers_get(self, datacenter_id, **kwargs):  # noqa: E501
         """List Network Load Balancers  # noqa: E501
 
-        Retrieve a list of Network Load Balancers within the datacenter.  # noqa: E501
+        List all the Network Load Balancers within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_get(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2638,24 +2638,24 @@ class NetworkLoadBalancersApi(object):
     def datacenters_networkloadbalancers_get_with_http_info(self, datacenter_id, **kwargs):  # noqa: E501
         """List Network Load Balancers  # noqa: E501
 
-        Retrieve a list of Network Load Balancers within the datacenter.  # noqa: E501
+        List all the Network Load Balancers within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_get_with_http_info(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2701,13 +2701,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_get" % key
+                    " to method datacenters_networkloadbalancers_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2777,26 +2777,26 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_patch(self, datacenter_id, network_load_balancer_id, network_load_balancer_properties, **kwargs):  # noqa: E501
-        """Partially update an Network Load Balancer  # noqa: E501
+        """Partially modify Network Load Balancers  # noqa: E501
 
-        Partially update the attributes of a given Network Load Balancer  # noqa: E501
+        Update the properties of the specified Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_patch(datacenter_id, network_load_balancer_id, network_load_balancer_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param network_load_balancer_properties: Network Load Balancer properties to be updated (required)
+        :param network_load_balancer_properties: The properties of the Network Load Balancer to be updated. (required)
         :type network_load_balancer_properties: NetworkLoadBalancerProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2817,26 +2817,26 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_patch_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer_properties, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_patch_with_http_info(self, datacenter_id, network_load_balancer_id, network_load_balancer_properties, **kwargs):  # noqa: E501
-        """Partially update an Network Load Balancer  # noqa: E501
+        """Partially modify Network Load Balancers  # noqa: E501
 
-        Partially update the attributes of a given Network Load Balancer  # noqa: E501
+        Update the properties of the specified Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_patch_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param network_load_balancer_properties: Network Load Balancer properties to be updated (required)
+        :param network_load_balancer_properties: The properties of the Network Load Balancer to be updated. (required)
         :type network_load_balancer_properties: NetworkLoadBalancerProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2882,13 +2882,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_patch" % key
+                    " to method datacenters_networkloadbalancers_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2960,24 +2960,24 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_post(self, datacenter_id, network_load_balancer, **kwargs):  # noqa: E501
-        """Create an Network Load Balancer  # noqa: E501
+        """Create Network Load Balancers  # noqa: E501
 
-        Creates an Network Load Balancer within the datacenter.  # noqa: E501
+        Create a Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_post(datacenter_id, network_load_balancer, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer: Network Load Balancer to be created (required)
+        :param network_load_balancer: The Network Load Balancer to create. (required)
         :type network_load_balancer: NetworkLoadBalancer
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2998,24 +2998,24 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_post_with_http_info(datacenter_id, network_load_balancer, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_post_with_http_info(self, datacenter_id, network_load_balancer, **kwargs):  # noqa: E501
-        """Create an Network Load Balancer  # noqa: E501
+        """Create Network Load Balancers  # noqa: E501
 
-        Creates an Network Load Balancer within the datacenter.  # noqa: E501
+        Create a Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_post_with_http_info(datacenter_id, network_load_balancer, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer: Network Load Balancer to be created (required)
+        :param network_load_balancer: The Network Load Balancer to create. (required)
         :type network_load_balancer: NetworkLoadBalancer
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3060,13 +3060,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_post" % key
+                    " to method datacenters_networkloadbalancers_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -3136,26 +3136,26 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_put(self, datacenter_id, network_load_balancer_id, network_load_balancer, **kwargs):  # noqa: E501
-        """Update an Network Load Balancer  # noqa: E501
+        """Modify Network Load Balancers  # noqa: E501
 
-        Update the attributes of a given Network Load Balancer  # noqa: E501
+        Modify the properties of the specified Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_put(datacenter_id, network_load_balancer_id, network_load_balancer, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param network_load_balancer: Modified Network Load Balancer (required)
+        :param network_load_balancer: The modified Network Load Balancer. (required)
         :type network_load_balancer: NetworkLoadBalancerPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3176,26 +3176,26 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_put_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_put_with_http_info(self, datacenter_id, network_load_balancer_id, network_load_balancer, **kwargs):  # noqa: E501
-        """Update an Network Load Balancer  # noqa: E501
+        """Modify Network Load Balancers  # noqa: E501
 
-        Update the attributes of a given Network Load Balancer  # noqa: E501
+        Modify the properties of the specified Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_networkloadbalancers_put_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param network_load_balancer_id: The unique ID of the Network Load Balancer (required)
+        :param network_load_balancer_id: The unique ID of the Network Load Balancer. (required)
         :type network_load_balancer_id: str
-        :param network_load_balancer: Modified Network Load Balancer (required)
+        :param network_load_balancer: The modified Network Load Balancer. (required)
         :type network_load_balancer: NetworkLoadBalancerPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3241,13 +3241,13 @@ class NetworkLoadBalancersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_networkloadbalancers_put" % key
+                    " to method datacenters_networkloadbalancers_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501

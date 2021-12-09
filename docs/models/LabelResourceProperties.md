@@ -3,7 +3,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **key** | **str** | A Label Key | [optional]  |
-| **value** | **str** | A Label Value | [optional]  |
+| **key** | **str** | A label key | [optional]  |
+| **value** | **str** | A label value | [optional]  |
 
 

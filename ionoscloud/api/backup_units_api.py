@@ -18,22 +18,22 @@ class BackupUnitsApi(object):
         self.api_client = api_client
 
     def backupunits_delete(self, backupunit_id, **kwargs):  # noqa: E501
-        """Delete a Backup Unit  # noqa: E501
+        """Delete backup units  # noqa: E501
 
-        NOTE: Running through the deletion process will delete: - the backup plans inside the Backup Unit. - all backups associated with the Backup Unit. - the backup user and finally also the unit  # noqa: E501
+        Remove the specified backup unit.  This process will delete: 1) The backup plans inside the backup unit 2) All backups, associated with this backup unit 3) The backup user 4) The backup unit itself  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_delete(backupunit_id, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique ID of the backup Unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -54,22 +54,22 @@ class BackupUnitsApi(object):
         return self.backupunits_delete_with_http_info(backupunit_id, **kwargs)  # noqa: E501
 
     def backupunits_delete_with_http_info(self, backupunit_id, **kwargs):  # noqa: E501
-        """Delete a Backup Unit  # noqa: E501
+        """Delete backup units  # noqa: E501
 
-        NOTE: Running through the deletion process will delete: - the backup plans inside the Backup Unit. - all backups associated with the Backup Unit. - the backup user and finally also the unit  # noqa: E501
+        Remove the specified backup unit.  This process will delete: 1) The backup plans inside the backup unit 2) All backups, associated with this backup unit 3) The backup user 4) The backup unit itself  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_delete_with_http_info(backupunit_id, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique ID of the backup Unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -113,13 +113,13 @@ class BackupUnitsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method backupunits_delete" % key
+                    " to method backupunits_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'backupunit_id' is set
         if self.api_client.client_side_validation and ('backupunit_id' not in local_var_params or  # noqa: E501
@@ -179,22 +179,22 @@ class BackupUnitsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def backupunits_find_by_id(self, backupunit_id, **kwargs):  # noqa: E501
-        """Returns the specified Backup Unit  # noqa: E501
+        """Retrieve backup units  # noqa: E501
 
-        You can retrieve the details of an specific backup unit.  # noqa: E501
+        Retrieve the properties of the specified backup unit.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_find_by_id(backupunit_id, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique ID of the backup unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -215,22 +215,22 @@ class BackupUnitsApi(object):
         return self.backupunits_find_by_id_with_http_info(backupunit_id, **kwargs)  # noqa: E501
 
     def backupunits_find_by_id_with_http_info(self, backupunit_id, **kwargs):  # noqa: E501
-        """Returns the specified Backup Unit  # noqa: E501
+        """Retrieve backup units  # noqa: E501
 
-        You can retrieve the details of an specific backup unit.  # noqa: E501
+        Retrieve the properties of the specified backup unit.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_find_by_id_with_http_info(backupunit_id, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique ID of the backup unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -274,13 +274,13 @@ class BackupUnitsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method backupunits_find_by_id" % key
+                    " to method backupunits_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'backupunit_id' is set
         if self.api_client.client_side_validation and ('backupunit_id' not in local_var_params or  # noqa: E501
@@ -340,20 +340,20 @@ class BackupUnitsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def backupunits_get(self, **kwargs):  # noqa: E501
-        """List Backup Units  # noqa: E501
+        """List backup units  # noqa: E501
 
-        You can retrieve a complete list of backup Units that you have access to.  # noqa: E501
+        List all available backup units.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -374,20 +374,20 @@ class BackupUnitsApi(object):
         return self.backupunits_get_with_http_info(**kwargs)  # noqa: E501
 
     def backupunits_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Backup Units  # noqa: E501
+        """List backup units  # noqa: E501
 
-        You can retrieve a complete list of backup Units that you have access to.  # noqa: E501
+        List all available backup units.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -430,13 +430,13 @@ class BackupUnitsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method backupunits_get" % key
+                    " to method backupunits_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -489,25 +489,25 @@ class BackupUnitsApi(object):
             collection_formats=collection_formats,
             _request_auth=local_var_params.get('_request_auth'))
 
-    def backupunits_patch(self, backupunit_id, backup_unit_properties, **kwargs):  # noqa: E501
-        """Partially modify a Backup Unit  # noqa: E501
+    def backupunits_patch(self, backupunit_id, backup_unit, **kwargs):  # noqa: E501
+        """Partially modify backup units  # noqa: E501
 
-        You can use update a Backup Unit properties.  # noqa: E501
+        Update the properties of the specified backup unit.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.backupunits_patch(backupunit_id, backup_unit_properties, async_req=True)
+        >>> thread = api.backupunits_patch(backupunit_id, backup_unit, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique ID of the backup unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param backup_unit_properties: Modified backup Unit properties (required)
-        :type backup_unit_properties: BackupUnitProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param backup_unit: The properties of the backup unit to be updated. (required)
+        :type backup_unit: BackupUnitProperties
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -525,27 +525,27 @@ class BackupUnitsApi(object):
         :rtype: BackupUnit
         """
         kwargs['_return_http_data_only'] = True
-        return self.backupunits_patch_with_http_info(backupunit_id, backup_unit_properties, **kwargs)  # noqa: E501
+        return self.backupunits_patch_with_http_info(backupunit_id, backup_unit, **kwargs)  # noqa: E501
 
-    def backupunits_patch_with_http_info(self, backupunit_id, backup_unit_properties, **kwargs):  # noqa: E501
-        """Partially modify a Backup Unit  # noqa: E501
+    def backupunits_patch_with_http_info(self, backupunit_id, backup_unit, **kwargs):  # noqa: E501
+        """Partially modify backup units  # noqa: E501
 
-        You can use update a Backup Unit properties.  # noqa: E501
+        Update the properties of the specified backup unit.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.backupunits_patch_with_http_info(backupunit_id, backup_unit_properties, async_req=True)
+        >>> thread = api.backupunits_patch_with_http_info(backupunit_id, backup_unit, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique ID of the backup unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param backup_unit_properties: Modified backup Unit properties (required)
-        :type backup_unit_properties: BackupUnitProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param backup_unit: The properties of the backup unit to be updated. (required)
+        :type backup_unit: BackupUnitProperties
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -574,7 +574,7 @@ class BackupUnitsApi(object):
 
         all_params = [
             'backupunit_id',
-            'backup_unit_properties',
+            'backup_unit',
             'pretty',
             'depth',
             'x_contract_number'
@@ -590,22 +590,22 @@ class BackupUnitsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method backupunits_patch" % key
+                    " to method backupunits_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'backupunit_id' is set
         if self.api_client.client_side_validation and ('backupunit_id' not in local_var_params or  # noqa: E501
                                                         local_var_params['backupunit_id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `backupunit_id` when calling `backupunits_patch`")  # noqa: E501
-        # verify the required parameter 'backup_unit_properties' is set
-        if self.api_client.client_side_validation and ('backup_unit_properties' not in local_var_params or  # noqa: E501
-                                                        local_var_params['backup_unit_properties'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `backup_unit_properties` when calling `backupunits_patch`")  # noqa: E501
+        # verify the required parameter 'backup_unit' is set
+        if self.api_client.client_side_validation and ('backup_unit' not in local_var_params or  # noqa: E501
+                                                        local_var_params['backup_unit'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `backup_unit` when calling `backupunits_patch`")  # noqa: E501
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `backupunits_patch`, must be a value less than or equal to `10`")  # noqa: E501
@@ -631,8 +631,8 @@ class BackupUnitsApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'backup_unit_properties' in local_var_params:
-            body_params = local_var_params['backup_unit_properties']
+        if 'backup_unit' in local_var_params:
+            body_params = local_var_params['backup_unit']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -666,22 +666,22 @@ class BackupUnitsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def backupunits_post(self, backup_unit, **kwargs):  # noqa: E501
-        """Create a Backup Unit  # noqa: E501
+        """Create backup units  # noqa: E501
 
-        Create a Backup Unit. A Backup Unit is considered a resource like a virtual datacenter, IP Block, snapshot, etc. It shall be shareable via groups inside our User Management Feature   # noqa: E501
+        Create a backup unit. Backup units are resources, same as storage volumes or snapshots; they can be shared through groups in User management.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_post(backup_unit, async_req=True)
         >>> result = thread.get()
 
-        :param backup_unit: Payload containing data to create a new Backup Unit (required)
+        :param backup_unit: The backup unit to create. (required)
         :type backup_unit: BackupUnit
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -702,22 +702,22 @@ class BackupUnitsApi(object):
         return self.backupunits_post_with_http_info(backup_unit, **kwargs)  # noqa: E501
 
     def backupunits_post_with_http_info(self, backup_unit, **kwargs):  # noqa: E501
-        """Create a Backup Unit  # noqa: E501
+        """Create backup units  # noqa: E501
 
-        Create a Backup Unit. A Backup Unit is considered a resource like a virtual datacenter, IP Block, snapshot, etc. It shall be shareable via groups inside our User Management Feature   # noqa: E501
+        Create a backup unit. Backup units are resources, same as storage volumes or snapshots; they can be shared through groups in User management.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_post_with_http_info(backup_unit, async_req=True)
         >>> result = thread.get()
 
-        :param backup_unit: Payload containing data to create a new Backup Unit (required)
+        :param backup_unit: The backup unit to create. (required)
         :type backup_unit: BackupUnit
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -761,13 +761,13 @@ class BackupUnitsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method backupunits_post" % key
+                    " to method backupunits_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'backup_unit' is set
         if self.api_client.client_side_validation and ('backup_unit' not in local_var_params or  # noqa: E501
@@ -831,24 +831,24 @@ class BackupUnitsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def backupunits_put(self, backupunit_id, backup_unit, **kwargs):  # noqa: E501
-        """Modify a Backup Unit  # noqa: E501
+        """Modify backup units  # noqa: E501
 
-        You can use update a Backup Unit properties.  # noqa: E501
+        Modify the properties of the specified backup unit.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_put(backupunit_id, backup_unit, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique ID of the backup unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param backup_unit: Modified backup Unit (required)
+        :param backup_unit: The modified backup unit. (required)
         :type backup_unit: BackupUnit
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -869,24 +869,24 @@ class BackupUnitsApi(object):
         return self.backupunits_put_with_http_info(backupunit_id, backup_unit, **kwargs)  # noqa: E501
 
     def backupunits_put_with_http_info(self, backupunit_id, backup_unit, **kwargs):  # noqa: E501
-        """Modify a Backup Unit  # noqa: E501
+        """Modify backup units  # noqa: E501
 
-        You can use update a Backup Unit properties.  # noqa: E501
+        Modify the properties of the specified backup unit.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_put_with_http_info(backupunit_id, backup_unit, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique ID of the backup unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param backup_unit: Modified backup Unit (required)
+        :param backup_unit: The modified backup unit. (required)
         :type backup_unit: BackupUnit
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -931,13 +931,13 @@ class BackupUnitsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method backupunits_put" % key
+                    " to method backupunits_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'backupunit_id' is set
         if self.api_client.client_side_validation and ('backupunit_id' not in local_var_params or  # noqa: E501
@@ -1007,20 +1007,20 @@ class BackupUnitsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def backupunits_ssourl_get(self, backupunit_id, **kwargs):  # noqa: E501
-        """Returns a single signon URL for the specified Backup Unit  # noqa: E501
+        """Retrieve BU single sign-on URLs  # noqa: E501
 
-        Returns a single signon URL for the specified Backup Unit.  # noqa: E501
+        Retrieve a single sign-on URL for the specified backup unit.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_ssourl_get(backupunit_id, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique UUID of the backup unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1041,20 +1041,20 @@ class BackupUnitsApi(object):
         return self.backupunits_ssourl_get_with_http_info(backupunit_id, **kwargs)  # noqa: E501
 
     def backupunits_ssourl_get_with_http_info(self, backupunit_id, **kwargs):  # noqa: E501
-        """Returns a single signon URL for the specified Backup Unit  # noqa: E501
+        """Retrieve BU single sign-on URLs  # noqa: E501
 
-        Returns a single signon URL for the specified Backup Unit.  # noqa: E501
+        Retrieve a single sign-on URL for the specified backup unit.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.backupunits_ssourl_get_with_http_info(backupunit_id, async_req=True)
         >>> result = thread.get()
 
-        :param backupunit_id: The unique UUID of the backup unit (required)
+        :param backupunit_id: The unique ID of the backup unit. (required)
         :type backupunit_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1097,13 +1097,13 @@ class BackupUnitsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method backupunits_ssourl_get" % key
+                    " to method backupunits_ssourl_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'backupunit_id' is set
         if self.api_client.client_side_validation and ('backupunit_id' not in local_var_params or  # noqa: E501

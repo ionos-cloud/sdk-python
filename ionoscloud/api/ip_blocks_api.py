@@ -18,22 +18,22 @@ class IPBlocksApi(object):
         self.api_client = api_client
 
     def ipblocks_delete(self, ipblock_id, **kwargs):  # noqa: E501
-        """Delete IP Block  # noqa: E501
+        """Delete IP blocks  # noqa: E501
 
-        Removes the specific IP Block.  # noqa: E501
+        Remove the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_delete(ipblock_id, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -54,22 +54,22 @@ class IPBlocksApi(object):
         return self.ipblocks_delete_with_http_info(ipblock_id, **kwargs)  # noqa: E501
 
     def ipblocks_delete_with_http_info(self, ipblock_id, **kwargs):  # noqa: E501
-        """Delete IP Block  # noqa: E501
+        """Delete IP blocks  # noqa: E501
 
-        Removes the specific IP Block.  # noqa: E501
+        Remove the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_delete_with_http_info(ipblock_id, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -113,13 +113,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_delete" % key
+                    " to method ipblocks_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -179,22 +179,22 @@ class IPBlocksApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_find_by_id(self, ipblock_id, **kwargs):  # noqa: E501
-        """Retrieve an IP Block  # noqa: E501
+        """Retrieve IP blocks  # noqa: E501
 
-        Retrieves the attributes of a given IP Block.  # noqa: E501
+        Retrieve the properties of the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_find_by_id(ipblock_id, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -215,22 +215,22 @@ class IPBlocksApi(object):
         return self.ipblocks_find_by_id_with_http_info(ipblock_id, **kwargs)  # noqa: E501
 
     def ipblocks_find_by_id_with_http_info(self, ipblock_id, **kwargs):  # noqa: E501
-        """Retrieve an IP Block  # noqa: E501
+        """Retrieve IP blocks  # noqa: E501
 
-        Retrieves the attributes of a given IP Block.  # noqa: E501
+        Retrieve the properties of the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_find_by_id_with_http_info(ipblock_id, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -274,13 +274,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_find_by_id" % key
+                    " to method ipblocks_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -340,21 +340,25 @@ class IPBlocksApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_get(self, **kwargs):  # noqa: E501
-        """List IP Blocks   # noqa: E501
+        """List IP blocks   # noqa: E501
 
-        Retrieve a list of all reserved IP Blocks.  # noqa: E501
+        List all reserved IP blocks.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+        :type offset: int
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -374,21 +378,25 @@ class IPBlocksApi(object):
         return self.ipblocks_get_with_http_info(**kwargs)  # noqa: E501
 
     def ipblocks_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List IP Blocks   # noqa: E501
+        """List IP blocks   # noqa: E501
 
-        Retrieve a list of all reserved IP Blocks.  # noqa: E501
+        List all reserved IP blocks.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+        :type offset: int
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -417,7 +425,9 @@ class IPBlocksApi(object):
         all_params = [
             'pretty',
             'depth',
-            'x_contract_number'
+            'x_contract_number',
+            'offset',
+            'limit'
         ]
         all_params.extend(
             [
@@ -430,19 +440,25 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_get" % key
+                    " to method ipblocks_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `ipblocks_get`, must be a value less than or equal to `10`")  # noqa: E501
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `depth` when calling `ipblocks_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'offset' in local_var_params and local_var_params['offset'] < 0:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `offset` when calling `ipblocks_get`, must be a value greater than or equal to `0`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] > 1000:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `ipblocks_get`, must be a value less than or equal to `1000`")  # noqa: E501
+        if self.api_client.client_side_validation and 'limit' in local_var_params and local_var_params['limit'] < 1:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `limit` when calling `ipblocks_get`, must be a value greater than or equal to `1`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -452,6 +468,10 @@ class IPBlocksApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
+            query_params.append(('offset', local_var_params['offset']))  # noqa: E501
+        if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
+            query_params.append(('limit', local_var_params['limit']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:
@@ -490,24 +510,24 @@ class IPBlocksApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_patch(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
-        """Partially modify IP Block  # noqa: E501
+        """Partially modify IP blocks  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Update the properties of the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_patch(ipblock_id, ipblock, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param ipblock: IP Block to be modified (required)
+        :param ipblock: The properties of the IP block to be updated. (required)
         :type ipblock: IpBlockProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -528,24 +548,24 @@ class IPBlocksApi(object):
         return self.ipblocks_patch_with_http_info(ipblock_id, ipblock, **kwargs)  # noqa: E501
 
     def ipblocks_patch_with_http_info(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
-        """Partially modify IP Block  # noqa: E501
+        """Partially modify IP blocks  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Update the properties of the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_patch_with_http_info(ipblock_id, ipblock, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param ipblock: IP Block to be modified (required)
+        :param ipblock: The properties of the IP block to be updated. (required)
         :type ipblock: IpBlockProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -590,13 +610,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_patch" % key
+                    " to method ipblocks_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -666,22 +686,22 @@ class IPBlocksApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_post(self, ipblock, **kwargs):  # noqa: E501
-        """Reserve IP Block  # noqa: E501
+        """Reserve IP blocks  # noqa: E501
 
-        This will reserve a new IP Block.  # noqa: E501
+        Reserve a new IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_post(ipblock, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock: IP Block to be reserved (required)
+        :param ipblock: The IP block to be reserved. (required)
         :type ipblock: IpBlock
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -702,22 +722,22 @@ class IPBlocksApi(object):
         return self.ipblocks_post_with_http_info(ipblock, **kwargs)  # noqa: E501
 
     def ipblocks_post_with_http_info(self, ipblock, **kwargs):  # noqa: E501
-        """Reserve IP Block  # noqa: E501
+        """Reserve IP blocks  # noqa: E501
 
-        This will reserve a new IP Block.  # noqa: E501
+        Reserve a new IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_post_with_http_info(ipblock, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock: IP Block to be reserved (required)
+        :param ipblock: The IP block to be reserved. (required)
         :type ipblock: IpBlock
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -761,13 +781,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_post" % key
+                    " to method ipblocks_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock' is set
         if self.api_client.client_side_validation and ('ipblock' not in local_var_params or  # noqa: E501
@@ -831,24 +851,24 @@ class IPBlocksApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_put(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
-        """Modify IP Block  # noqa: E501
+        """Modify IP blocks  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Modify the properties of the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_put(ipblock_id, ipblock, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param ipblock: IP Block to be modified (required)
+        :param ipblock: The modified IP block. (required)
         :type ipblock: IpBlock
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -869,24 +889,24 @@ class IPBlocksApi(object):
         return self.ipblocks_put_with_http_info(ipblock_id, ipblock, **kwargs)  # noqa: E501
 
     def ipblocks_put_with_http_info(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
-        """Modify IP Block  # noqa: E501
+        """Modify IP blocks  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Modify the properties of the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_put_with_http_info(ipblock_id, ipblock, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param ipblock: IP Block to be modified (required)
+        :param ipblock: The modified IP block. (required)
         :type ipblock: IpBlock
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -931,13 +951,13 @@ class IPBlocksApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_put" % key
+                    " to method ipblocks_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501

@@ -18,26 +18,26 @@ class ServersApi(object):
         self.api_client = api_client
 
     def datacenters_servers_cdroms_delete(self, datacenter_id, server_id, cdrom_id, **kwargs):  # noqa: E501
-        """Detach a CD-ROM  # noqa: E501
+        """Detach CD-ROMs  # noqa: E501
 
-        This will detach a CD-ROM from the server  # noqa: E501
+        Detach the specified CD-ROM from the server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_cdroms_delete(datacenter_id, server_id, cdrom_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param cdrom_id: The unique ID of the CD-ROM (required)
+        :param cdrom_id: The unique ID of the CD-ROM. (required)
         :type cdrom_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -58,26 +58,26 @@ class ServersApi(object):
         return self.datacenters_servers_cdroms_delete_with_http_info(datacenter_id, server_id, cdrom_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_cdroms_delete_with_http_info(self, datacenter_id, server_id, cdrom_id, **kwargs):  # noqa: E501
-        """Detach a CD-ROM  # noqa: E501
+        """Detach CD-ROMs  # noqa: E501
 
-        This will detach a CD-ROM from the server  # noqa: E501
+        Detach the specified CD-ROM from the server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_cdroms_delete_with_http_info(datacenter_id, server_id, cdrom_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param cdrom_id: The unique ID of the CD-ROM (required)
+        :param cdrom_id: The unique ID of the CD-ROM. (required)
         :type cdrom_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -123,13 +123,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_cdroms_delete" % key
+                    " to method datacenters_servers_cdroms_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -201,26 +201,26 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_cdroms_find_by_id(self, datacenter_id, server_id, cdrom_id, **kwargs):  # noqa: E501
-        """Retrieve an attached CD-ROM  # noqa: E501
+        """Retrieve attached CD-ROMs  # noqa: E501
 
-        You can retrieve a specific CD-ROM attached to the server  # noqa: E501
+        Retrieve the properties of the CD-ROM, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_cdroms_find_by_id(datacenter_id, server_id, cdrom_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param cdrom_id: The unique ID of the CD-ROM (required)
+        :param cdrom_id: The unique ID of the CD-ROM. (required)
         :type cdrom_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -241,26 +241,26 @@ class ServersApi(object):
         return self.datacenters_servers_cdroms_find_by_id_with_http_info(datacenter_id, server_id, cdrom_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_cdroms_find_by_id_with_http_info(self, datacenter_id, server_id, cdrom_id, **kwargs):  # noqa: E501
-        """Retrieve an attached CD-ROM  # noqa: E501
+        """Retrieve attached CD-ROMs  # noqa: E501
 
-        You can retrieve a specific CD-ROM attached to the server  # noqa: E501
+        Retrieve the properties of the CD-ROM, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_cdroms_find_by_id_with_http_info(datacenter_id, server_id, cdrom_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param cdrom_id: The unique ID of the CD-ROM (required)
+        :param cdrom_id: The unique ID of the CD-ROM. (required)
         :type cdrom_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -306,13 +306,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_cdroms_find_by_id" % key
+                    " to method datacenters_servers_cdroms_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -386,26 +386,26 @@ class ServersApi(object):
     def datacenters_servers_cdroms_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
         """List attached CD-ROMs   # noqa: E501
 
-        You can retrieve a list of CD-ROMs attached to the server.  # noqa: E501
+        List all CD-ROMs, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_cdroms_get(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -428,26 +428,26 @@ class ServersApi(object):
     def datacenters_servers_cdroms_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
         """List attached CD-ROMs   # noqa: E501
 
-        You can retrieve a list of CD-ROMs attached to the server.  # noqa: E501
+        List all CD-ROMs, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_cdroms_get_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -494,13 +494,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_cdroms_get" % key
+                    " to method datacenters_servers_cdroms_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -576,26 +576,26 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_cdroms_post(self, datacenter_id, server_id, cdrom, **kwargs):  # noqa: E501
-        """Attach a CD-ROM  # noqa: E501
+        """Attach CD-ROMs  # noqa: E501
 
-        You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to one server.   # noqa: E501
+        Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_cdroms_post(datacenter_id, server_id, cdrom, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param cdrom: CD-ROM to be attached (required)
+        :param cdrom: The CD-ROM to be attached. (required)
         :type cdrom: Image
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -616,26 +616,26 @@ class ServersApi(object):
         return self.datacenters_servers_cdroms_post_with_http_info(datacenter_id, server_id, cdrom, **kwargs)  # noqa: E501
 
     def datacenters_servers_cdroms_post_with_http_info(self, datacenter_id, server_id, cdrom, **kwargs):  # noqa: E501
-        """Attach a CD-ROM  # noqa: E501
+        """Attach CD-ROMs  # noqa: E501
 
-        You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to one server.   # noqa: E501
+        Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_cdroms_post_with_http_info(datacenter_id, server_id, cdrom, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param cdrom: CD-ROM to be attached (required)
+        :param cdrom: The CD-ROM to be attached. (required)
         :type cdrom: Image
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -681,13 +681,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_cdroms_post" % key
+                    " to method datacenters_servers_cdroms_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -763,24 +763,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_delete(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Delete a Server  # noqa: E501
+        """Delete servers  # noqa: E501
 
-        This will remove a server from your datacenter; however, it will not remove the storage volumes attached to the server. You will need to make a separate API call to perform that action  # noqa: E501
+        Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_delete(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -801,24 +801,24 @@ class ServersApi(object):
         return self.datacenters_servers_delete_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_delete_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Delete a Server  # noqa: E501
+        """Delete servers  # noqa: E501
 
-        This will remove a server from your datacenter; however, it will not remove the storage volumes attached to the server. You will need to make a separate API call to perform that action  # noqa: E501
+        Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_delete_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -863,13 +863,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_delete" % key
+                    " to method datacenters_servers_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -935,24 +935,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_find_by_id(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Retrieve a Server  # noqa: E501
+        """Retrieve servers by ID  # noqa: E501
 
-        Returns information about a server such as its configuration, provisioning status, etc.  # noqa: E501
+        Retrieve information about the specified server within the data center, such as its configuration, provisioning status, and so on.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_find_by_id(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -973,24 +973,24 @@ class ServersApi(object):
         return self.datacenters_servers_find_by_id_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_find_by_id_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Retrieve a Server  # noqa: E501
+        """Retrieve servers by ID  # noqa: E501
 
-        Returns information about a server such as its configuration, provisioning status, etc.  # noqa: E501
+        Retrieve information about the specified server within the data center, such as its configuration, provisioning status, and so on.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_find_by_id_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1035,13 +1035,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_find_by_id" % key
+                    " to method datacenters_servers_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1107,28 +1107,28 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_get(self, datacenter_id, **kwargs):  # noqa: E501
-        """List Servers   # noqa: E501
+        """List servers   # noqa: E501
 
-        You can retrieve a list of servers within a datacenter  # noqa: E501
+        List all servers within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_get(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param upgrade_needed: It can be used to filter which servers can be upgraded which can not be upgraded.
+        :param upgrade_needed: Filter servers that can or that cannot be upgraded.
         :type upgrade_needed: bool
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1149,28 +1149,28 @@ class ServersApi(object):
         return self.datacenters_servers_get_with_http_info(datacenter_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_get_with_http_info(self, datacenter_id, **kwargs):  # noqa: E501
-        """List Servers   # noqa: E501
+        """List servers   # noqa: E501
 
-        You can retrieve a list of servers within a datacenter  # noqa: E501
+        List all servers within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_get_with_http_info(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param upgrade_needed: It can be used to filter which servers can be upgraded which can not be upgraded.
+        :param upgrade_needed: Filter servers that can or that cannot be upgraded.
         :type upgrade_needed: bool
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1217,13 +1217,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_get" % key
+                    " to method datacenters_servers_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1295,26 +1295,26 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_patch(self, datacenter_id, server_id, server, **kwargs):  # noqa: E501
-        """Partially modify a Server  # noqa: E501
+        """Partially modify servers  # noqa: E501
 
-        You can use update attributes of a server  # noqa: E501
+        Update the properties of the specified server within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_patch(datacenter_id, server_id, server, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param server: Modified properties of Server (required)
+        :param server: The properties of the server to be updated. (required)
         :type server: ServerProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1335,26 +1335,26 @@ class ServersApi(object):
         return self.datacenters_servers_patch_with_http_info(datacenter_id, server_id, server, **kwargs)  # noqa: E501
 
     def datacenters_servers_patch_with_http_info(self, datacenter_id, server_id, server, **kwargs):  # noqa: E501
-        """Partially modify a Server  # noqa: E501
+        """Partially modify servers  # noqa: E501
 
-        You can use update attributes of a server  # noqa: E501
+        Update the properties of the specified server within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_patch_with_http_info(datacenter_id, server_id, server, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param server: Modified properties of Server (required)
+        :param server: The properties of the server to be updated. (required)
         :type server: ServerProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1400,13 +1400,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_patch" % key
+                    " to method datacenters_servers_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1482,24 +1482,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_post(self, datacenter_id, server, **kwargs):  # noqa: E501
-        """Create a Server  # noqa: E501
+        """Create servers  # noqa: E501
 
-        Creates a server within an existing datacenter. You can configure the boot volume and connect the server to an existing LAN.  # noqa: E501
+        Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_post(datacenter_id, server, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server: Server to be created (required)
+        :param server: The server to create. (required)
         :type server: Server
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1520,24 +1520,24 @@ class ServersApi(object):
         return self.datacenters_servers_post_with_http_info(datacenter_id, server, **kwargs)  # noqa: E501
 
     def datacenters_servers_post_with_http_info(self, datacenter_id, server, **kwargs):  # noqa: E501
-        """Create a Server  # noqa: E501
+        """Create servers  # noqa: E501
 
-        Creates a server within an existing datacenter. You can configure the boot volume and connect the server to an existing LAN.  # noqa: E501
+        Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_post_with_http_info(datacenter_id, server, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server: Server to be created (required)
+        :param server: The server to create. (required)
         :type server: Server
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1582,13 +1582,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_post" % key
+                    " to method datacenters_servers_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1658,26 +1658,26 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_put(self, datacenter_id, server_id, server, **kwargs):  # noqa: E501
-        """Modify a Server  # noqa: E501
+        """Modify servers  # noqa: E501
 
-        Allows to modify the attributes of a Server. From v5 onwards 'allowReboot' attribute will no longer be available. For certain server property change it was earlier forced to be provided. Now this behaviour is implicit and backend will do this automatically e.g. in earlier versions, when CPU family changes, the 'allowReboot' property was required to be set to true which will no longer be the case and the server will be rebooted automatically  # noqa: E501
+        Modify the properties of the specified server within the data center.  Starting with v5, the 'allowReboot' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, 'allowReboot' had to be set to 'true'; this is no longer required, the reboot will be performed automatically.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_put(datacenter_id, server_id, server, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param server: Modified Server (required)
+        :param server: The modified server (required)
         :type server: Server
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1698,26 +1698,26 @@ class ServersApi(object):
         return self.datacenters_servers_put_with_http_info(datacenter_id, server_id, server, **kwargs)  # noqa: E501
 
     def datacenters_servers_put_with_http_info(self, datacenter_id, server_id, server, **kwargs):  # noqa: E501
-        """Modify a Server  # noqa: E501
+        """Modify servers  # noqa: E501
 
-        Allows to modify the attributes of a Server. From v5 onwards 'allowReboot' attribute will no longer be available. For certain server property change it was earlier forced to be provided. Now this behaviour is implicit and backend will do this automatically e.g. in earlier versions, when CPU family changes, the 'allowReboot' property was required to be set to true which will no longer be the case and the server will be rebooted automatically  # noqa: E501
+        Modify the properties of the specified server within the data center.  Starting with v5, the 'allowReboot' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, 'allowReboot' had to be set to 'true'; this is no longer required, the reboot will be performed automatically.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_put_with_http_info(datacenter_id, server_id, server, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param server: Modified Server (required)
+        :param server: The modified server (required)
         :type server: Server
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1763,13 +1763,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_put" % key
+                    " to method datacenters_servers_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1845,24 +1845,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_reboot_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Reboot a Server  # noqa: E501
+        """Reboot servers  # noqa: E501
 
-        This will force a hard reboot of the server. Do not use this method if you want to gracefully reboot the machine. This is the equivalent of powering off the machine and turning it back on.  # noqa: E501
+        Force a hard reboot of the specified server within the data center. Don't use this method if you wish to reboot gracefully. This is an equivalent of powering down a computer and turning it back on.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_reboot_post(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1883,24 +1883,24 @@ class ServersApi(object):
         return self.datacenters_servers_reboot_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_reboot_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Reboot a Server  # noqa: E501
+        """Reboot servers  # noqa: E501
 
-        This will force a hard reboot of the server. Do not use this method if you want to gracefully reboot the machine. This is the equivalent of powering off the machine and turning it back on.  # noqa: E501
+        Force a hard reboot of the specified server within the data center. Don't use this method if you wish to reboot gracefully. This is an equivalent of powering down a computer and turning it back on.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_reboot_post_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1945,13 +1945,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_reboot_post" % key
+                    " to method datacenters_servers_reboot_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2017,24 +2017,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_remote_console_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Get the server remote console link  # noqa: E501
+        """Get Remote Console link  # noqa: E501
 
-        Returns the link with the jwToken to access the server remote console  # noqa: E501
+        Retrieve a link with a JSON Web Token for accessing the server's Remote Console.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_remote_console_get(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2055,24 +2055,24 @@ class ServersApi(object):
         return self.datacenters_servers_remote_console_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_remote_console_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Get the server remote console link  # noqa: E501
+        """Get Remote Console link  # noqa: E501
 
-        Returns the link with the jwToken to access the server remote console  # noqa: E501
+        Retrieve a link with a JSON Web Token for accessing the server's Remote Console.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_remote_console_get_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2117,13 +2117,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_remote_console_get" % key
+                    " to method datacenters_servers_remote_console_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2189,24 +2189,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_resume_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Resume a Cube Server  # noqa: E501
+        """Resume Cubes instances  # noqa: E501
 
-        This will resume a suspended server. The operation can only be applied to suspended Cube servers. No billing event will be generated.  # noqa: E501
+        Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_resume_post(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2227,24 +2227,24 @@ class ServersApi(object):
         return self.datacenters_servers_resume_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_resume_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Resume a Cube Server  # noqa: E501
+        """Resume Cubes instances  # noqa: E501
 
-        This will resume a suspended server. The operation can only be applied to suspended Cube servers. No billing event will be generated.  # noqa: E501
+        Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_resume_post_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2289,13 +2289,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_resume_post" % key
+                    " to method datacenters_servers_resume_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2361,24 +2361,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_start_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Start a Server  # noqa: E501
+        """Start servers  # noqa: E501
 
-        This will start a server. If the server's public IP was deallocated then a new IP will be assigned  # noqa: E501
+        Start the specified server within the data center; if the server's public IP address has been deallocated, a new IP address will be assigned.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_start_post(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2399,24 +2399,24 @@ class ServersApi(object):
         return self.datacenters_servers_start_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_start_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Start a Server  # noqa: E501
+        """Start servers  # noqa: E501
 
-        This will start a server. If the server's public IP was deallocated then a new IP will be assigned  # noqa: E501
+        Start the specified server within the data center; if the server's public IP address has been deallocated, a new IP address will be assigned.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_start_post_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2461,13 +2461,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_start_post" % key
+                    " to method datacenters_servers_start_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2533,24 +2533,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_stop_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Stop a Server  # noqa: E501
+        """Stop VMs  # noqa: E501
 
-        This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.  # noqa: E501
+        Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_stop_post(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2571,24 +2571,24 @@ class ServersApi(object):
         return self.datacenters_servers_stop_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_stop_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Stop a Server  # noqa: E501
+        """Stop VMs  # noqa: E501
 
-        This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.  # noqa: E501
+        Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_stop_post_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2633,13 +2633,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_stop_post" % key
+                    " to method datacenters_servers_stop_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2705,24 +2705,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_suspend_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Suspend a Cube Server  # noqa: E501
+        """Suspend Cubes instances  # noqa: E501
 
-        This will suspend a server. The operation can only be applied to Cube servers. Note: The virtual machine will not be deleted, and the consumed resources will continue to be billed.  # noqa: E501
+        Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_suspend_post(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2743,24 +2743,24 @@ class ServersApi(object):
         return self.datacenters_servers_suspend_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_suspend_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Suspend a Cube Server  # noqa: E501
+        """Suspend Cubes instances  # noqa: E501
 
-        This will suspend a server. The operation can only be applied to Cube servers. Note: The virtual machine will not be deleted, and the consumed resources will continue to be billed.  # noqa: E501
+        Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_suspend_post_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2805,13 +2805,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_suspend_post" % key
+                    " to method datacenters_servers_suspend_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2877,24 +2877,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_token_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Get the server's jwToken  # noqa: E501
+        """Get JASON Web Token  # noqa: E501
 
-        Returns the server json web token to be used for login operations (ex: accessing the server console)  # noqa: E501
+        Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server's console).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_token_get(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2915,24 +2915,24 @@ class ServersApi(object):
         return self.datacenters_servers_token_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_token_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Get the server's jwToken  # noqa: E501
+        """Get JASON Web Token  # noqa: E501
 
-        Returns the server json web token to be used for login operations (ex: accessing the server console)  # noqa: E501
+        Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server's console).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_token_get_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2977,13 +2977,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_token_get" % key
+                    " to method datacenters_servers_token_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -3049,24 +3049,24 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_upgrade_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Upgrade a Server  # noqa: E501
+        """Upgrade servers  # noqa: E501
 
-        This will upgrade the version of the server, if needed. To verify if there is an upgrade available for a server, call '/datacenters/{datacenterId}/servers?upgradeNeeded=true'  # noqa: E501
+        Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  '/datacenters/{datacenterId}/servers?upgradeNeeded=true'  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_upgrade_post(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3087,24 +3087,24 @@ class ServersApi(object):
         return self.datacenters_servers_upgrade_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_upgrade_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Upgrade a Server  # noqa: E501
+        """Upgrade servers  # noqa: E501
 
-        This will upgrade the version of the server, if needed. To verify if there is an upgrade available for a server, call '/datacenters/{datacenterId}/servers?upgradeNeeded=true'  # noqa: E501
+        Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  '/datacenters/{datacenterId}/servers?upgradeNeeded=true'  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_upgrade_post_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3149,13 +3149,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_upgrade_post" % key
+                    " to method datacenters_servers_upgrade_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -3221,26 +3221,26 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_volumes_delete(self, datacenter_id, server_id, volume_id, **kwargs):  # noqa: E501
-        """Detach a volume  # noqa: E501
+        """Detach volumes  # noqa: E501
 
-        This will detach the volume from the server. This will not delete the volume from your datacenter. You will need to make a separate request to perform a deletion  # noqa: E501
+        Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_volumes_delete(datacenter_id, server_id, volume_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3261,26 +3261,26 @@ class ServersApi(object):
         return self.datacenters_servers_volumes_delete_with_http_info(datacenter_id, server_id, volume_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_volumes_delete_with_http_info(self, datacenter_id, server_id, volume_id, **kwargs):  # noqa: E501
-        """Detach a volume  # noqa: E501
+        """Detach volumes  # noqa: E501
 
-        This will detach the volume from the server. This will not delete the volume from your datacenter. You will need to make a separate request to perform a deletion  # noqa: E501
+        Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_volumes_delete_with_http_info(datacenter_id, server_id, volume_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3326,13 +3326,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_volumes_delete" % key
+                    " to method datacenters_servers_volumes_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -3404,26 +3404,26 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_volumes_find_by_id(self, datacenter_id, server_id, volume_id, **kwargs):  # noqa: E501
-        """Retrieve an attached volume  # noqa: E501
+        """Retrieve attached volumes  # noqa: E501
 
-        This will retrieve the properties of an attached volume.  # noqa: E501
+        Retrieve the properties of the volume, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_volumes_find_by_id(datacenter_id, server_id, volume_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3444,26 +3444,26 @@ class ServersApi(object):
         return self.datacenters_servers_volumes_find_by_id_with_http_info(datacenter_id, server_id, volume_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_volumes_find_by_id_with_http_info(self, datacenter_id, server_id, volume_id, **kwargs):  # noqa: E501
-        """Retrieve an attached volume  # noqa: E501
+        """Retrieve attached volumes  # noqa: E501
 
-        This will retrieve the properties of an attached volume.  # noqa: E501
+        Retrieve the properties of the volume, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_volumes_find_by_id_with_http_info(datacenter_id, server_id, volume_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3509,13 +3509,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_volumes_find_by_id" % key
+                    " to method datacenters_servers_volumes_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -3587,28 +3587,28 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_volumes_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List Attached Volumes  # noqa: E501
+        """List attached volumes  # noqa: E501
 
-        You can retrieve a list of volumes attached to the server  # noqa: E501
+        List all volumes, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_volumes_get(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3629,28 +3629,28 @@ class ServersApi(object):
         return self.datacenters_servers_volumes_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_volumes_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List Attached Volumes  # noqa: E501
+        """List attached volumes  # noqa: E501
 
-        You can retrieve a list of volumes attached to the server  # noqa: E501
+        List all volumes, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_volumes_get_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3697,13 +3697,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_volumes_get" % key
+                    " to method datacenters_servers_volumes_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -3779,26 +3779,26 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_volumes_post(self, datacenter_id, server_id, volume, **kwargs):  # noqa: E501
-        """Attach a volume  # noqa: E501
+        """Attach volumes  # noqa: E501
 
-        This will attach a pre-existing storage volume to the server. It is also possible to create and attach a volume in one step just by providing a new volume description as payload. Combine count of Nics and volumes attached to the server should not exceed size 24.  # noqa: E501
+        Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_volumes_post(datacenter_id, server_id, volume, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param volume: Volume to be attached (created and attached) (required)
+        :param volume: The volume to be attached (or created and attached). (required)
         :type volume: Volume
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3819,26 +3819,26 @@ class ServersApi(object):
         return self.datacenters_servers_volumes_post_with_http_info(datacenter_id, server_id, volume, **kwargs)  # noqa: E501
 
     def datacenters_servers_volumes_post_with_http_info(self, datacenter_id, server_id, volume, **kwargs):  # noqa: E501
-        """Attach a volume  # noqa: E501
+        """Attach volumes  # noqa: E501
 
-        This will attach a pre-existing storage volume to the server. It is also possible to create and attach a volume in one step just by providing a new volume description as payload. Combine count of Nics and volumes attached to the server should not exceed size 24.  # noqa: E501
+        Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_volumes_post_with_http_info(datacenter_id, server_id, volume, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param volume: Volume to be attached (created and attached) (required)
+        :param volume: The volume to be attached (or created and attached). (required)
         :type volume: Volume
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3884,13 +3884,13 @@ class ServersApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_volumes_post" % key
+                    " to method datacenters_servers_volumes_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501

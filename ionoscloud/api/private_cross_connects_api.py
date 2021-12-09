@@ -18,22 +18,22 @@ class PrivateCrossConnectsApi(object):
         self.api_client = api_client
 
     def pccs_delete(self, pcc_id, **kwargs):  # noqa: E501
-        """Delete a Private Cross-Connect  # noqa: E501
+        """Delete private Cross-Connects  # noqa: E501
 
-        Delete a private cross-connect if no datacenters are joined to the given PCC  # noqa: E501
+        Remove the specified private Cross-Connect (only if not connected to any data centers).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_delete(pcc_id, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private cross-connect (required)
+        :param pcc_id: The unique ID of the private Cross-Connect. (required)
         :type pcc_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -54,22 +54,22 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_delete_with_http_info(pcc_id, **kwargs)  # noqa: E501
 
     def pccs_delete_with_http_info(self, pcc_id, **kwargs):  # noqa: E501
-        """Delete a Private Cross-Connect  # noqa: E501
+        """Delete private Cross-Connects  # noqa: E501
 
-        Delete a private cross-connect if no datacenters are joined to the given PCC  # noqa: E501
+        Remove the specified private Cross-Connect (only if not connected to any data centers).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_delete_with_http_info(pcc_id, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private cross-connect (required)
+        :param pcc_id: The unique ID of the private Cross-Connect. (required)
         :type pcc_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -113,13 +113,13 @@ class PrivateCrossConnectsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pccs_delete" % key
+                    " to method pccs_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'pcc_id' is set
         if self.api_client.client_side_validation and ('pcc_id' not in local_var_params or  # noqa: E501
@@ -179,22 +179,22 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_find_by_id(self, pcc_id, **kwargs):  # noqa: E501
-        """Retrieve a Private Cross-Connect  # noqa: E501
+        """Retrieve private Cross-Connects  # noqa: E501
 
-        You can retrieve a private cross-connect by using the resource's ID. This value can be found in the response body when a private cross-connect is created or when you GET a list of private cross-connects.  # noqa: E501
+        Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the response body when the private Cross-Connect is created, and in the list of private Cross-Connects, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_find_by_id(pcc_id, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private cross-connect (required)
+        :param pcc_id: The unique ID of the private Cross-Connect. (required)
         :type pcc_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -215,22 +215,22 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_find_by_id_with_http_info(pcc_id, **kwargs)  # noqa: E501
 
     def pccs_find_by_id_with_http_info(self, pcc_id, **kwargs):  # noqa: E501
-        """Retrieve a Private Cross-Connect  # noqa: E501
+        """Retrieve private Cross-Connects  # noqa: E501
 
-        You can retrieve a private cross-connect by using the resource's ID. This value can be found in the response body when a private cross-connect is created or when you GET a list of private cross-connects.  # noqa: E501
+        Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the response body when the private Cross-Connect is created, and in the list of private Cross-Connects, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_find_by_id_with_http_info(pcc_id, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private cross-connect (required)
+        :param pcc_id: The unique ID of the private Cross-Connect. (required)
         :type pcc_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -274,13 +274,13 @@ class PrivateCrossConnectsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pccs_find_by_id" % key
+                    " to method pccs_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'pcc_id' is set
         if self.api_client.client_side_validation and ('pcc_id' not in local_var_params or  # noqa: E501
@@ -340,20 +340,20 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_get(self, **kwargs):  # noqa: E501
-        """List Private Cross-Connects  # noqa: E501
+        """List private Cross-Connects  # noqa: E501
 
-        You can retrieve a complete list of private cross-connects provisioned under your account  # noqa: E501
+        List all private Cross-Connects for your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -374,20 +374,20 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_get_with_http_info(**kwargs)  # noqa: E501
 
     def pccs_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Private Cross-Connects  # noqa: E501
+        """List private Cross-Connects  # noqa: E501
 
-        You can retrieve a complete list of private cross-connects provisioned under your account  # noqa: E501
+        List all private Cross-Connects for your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -430,13 +430,13 @@ class PrivateCrossConnectsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pccs_get" % key
+                    " to method pccs_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -490,24 +490,24 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_patch(self, pcc_id, pcc, **kwargs):  # noqa: E501
-        """Partially Modify a Private Cross-Connect  # noqa: E501
+        """Partially modify private Cross-Connects  # noqa: E501
 
-        You can use update private cross-connect to re-name or update its description  # noqa: E501
+        Update the properties of the specified private Cross-Connect.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_patch(pcc_id, pcc, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private cross-connect (required)
+        :param pcc_id: The unique ID of the private Cross-Connect. (required)
         :type pcc_id: str
-        :param pcc: Modified properties of private cross-connect (required)
+        :param pcc: The properties of the private Cross-Connect to be updated. (required)
         :type pcc: PrivateCrossConnectProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -528,24 +528,24 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_patch_with_http_info(pcc_id, pcc, **kwargs)  # noqa: E501
 
     def pccs_patch_with_http_info(self, pcc_id, pcc, **kwargs):  # noqa: E501
-        """Partially Modify a Private Cross-Connect  # noqa: E501
+        """Partially modify private Cross-Connects  # noqa: E501
 
-        You can use update private cross-connect to re-name or update its description  # noqa: E501
+        Update the properties of the specified private Cross-Connect.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_patch_with_http_info(pcc_id, pcc, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private cross-connect (required)
+        :param pcc_id: The unique ID of the private Cross-Connect. (required)
         :type pcc_id: str
-        :param pcc: Modified properties of private cross-connect (required)
+        :param pcc: The properties of the private Cross-Connect to be updated. (required)
         :type pcc: PrivateCrossConnectProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -590,13 +590,13 @@ class PrivateCrossConnectsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pccs_patch" % key
+                    " to method pccs_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'pcc_id' is set
         if self.api_client.client_side_validation and ('pcc_id' not in local_var_params or  # noqa: E501
@@ -666,22 +666,22 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_post(self, pcc, **kwargs):  # noqa: E501
-        """Create a Private Cross-Connect  # noqa: E501
+        """Create private Cross-Connects  # noqa: E501
 
-        You can use this POST method to create a private cross-connect.  # noqa: E501
+        Create a private Cross-Connect.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_post(pcc, async_req=True)
         >>> result = thread.get()
 
-        :param pcc: Private Cross-Connect to be created (required)
+        :param pcc: The private Cross-Connect to create. (required)
         :type pcc: PrivateCrossConnect
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -702,22 +702,22 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_post_with_http_info(pcc, **kwargs)  # noqa: E501
 
     def pccs_post_with_http_info(self, pcc, **kwargs):  # noqa: E501
-        """Create a Private Cross-Connect  # noqa: E501
+        """Create private Cross-Connects  # noqa: E501
 
-        You can use this POST method to create a private cross-connect.  # noqa: E501
+        Create a private Cross-Connect.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_post_with_http_info(pcc, async_req=True)
         >>> result = thread.get()
 
-        :param pcc: Private Cross-Connect to be created (required)
+        :param pcc: The private Cross-Connect to create. (required)
         :type pcc: PrivateCrossConnect
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -761,13 +761,13 @@ class PrivateCrossConnectsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pccs_post" % key
+                    " to method pccs_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'pcc' is set
         if self.api_client.client_side_validation and ('pcc' not in local_var_params or  # noqa: E501

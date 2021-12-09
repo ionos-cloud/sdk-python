@@ -18,28 +18,28 @@ class FirewallRulesApi(object):
         self.api_client = api_client
 
     def datacenters_servers_nics_firewallrules_delete(self, datacenter_id, server_id, nic_id, firewallrule_id, **kwargs):  # noqa: E501
-        """Delete a Firewall Rule  # noqa: E501
+        """Delete firewall rules  # noqa: E501
 
-        Removes the specified firewall rule.  # noqa: E501
+        Delete the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_delete(datacenter_id, server_id, nic_id, firewallrule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule_id: The unique ID of the Firewall Rule (required)
+        :param firewallrule_id: The unique ID of the firewall rule. (required)
         :type firewallrule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -60,28 +60,28 @@ class FirewallRulesApi(object):
         return self.datacenters_servers_nics_firewallrules_delete_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_firewallrules_delete_with_http_info(self, datacenter_id, server_id, nic_id, firewallrule_id, **kwargs):  # noqa: E501
-        """Delete a Firewall Rule  # noqa: E501
+        """Delete firewall rules  # noqa: E501
 
-        Removes the specified firewall rule.  # noqa: E501
+        Delete the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_delete_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule_id: The unique ID of the Firewall Rule (required)
+        :param firewallrule_id: The unique ID of the firewall rule. (required)
         :type firewallrule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -128,13 +128,13 @@ class FirewallRulesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_firewallrules_delete" % key
+                    " to method datacenters_servers_nics_firewallrules_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -212,28 +212,28 @@ class FirewallRulesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_firewallrules_find_by_id(self, datacenter_id, server_id, nic_id, firewallrule_id, **kwargs):  # noqa: E501
-        """Retrieve a Firewall Rule  # noqa: E501
+        """Retrieve firewall rules  # noqa: E501
 
-        Retrieves the attributes of a given firewall rule.  # noqa: E501
+        Retrieve the properties of the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_find_by_id(datacenter_id, server_id, nic_id, firewallrule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule_id: The unique ID of the Firewall Rule (required)
+        :param firewallrule_id: The unique ID of the firewall rule. (required)
         :type firewallrule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -254,28 +254,28 @@ class FirewallRulesApi(object):
         return self.datacenters_servers_nics_firewallrules_find_by_id_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_firewallrules_find_by_id_with_http_info(self, datacenter_id, server_id, nic_id, firewallrule_id, **kwargs):  # noqa: E501
-        """Retrieve a Firewall Rule  # noqa: E501
+        """Retrieve firewall rules  # noqa: E501
 
-        Retrieves the attributes of a given firewall rule.  # noqa: E501
+        Retrieve the properties of the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_find_by_id_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule_id: The unique ID of the Firewall Rule (required)
+        :param firewallrule_id: The unique ID of the firewall rule. (required)
         :type firewallrule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -322,13 +322,13 @@ class FirewallRulesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_firewallrules_find_by_id" % key
+                    " to method datacenters_servers_nics_firewallrules_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -406,30 +406,30 @@ class FirewallRulesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_firewallrules_get(self, datacenter_id, server_id, nic_id, **kwargs):  # noqa: E501
-        """List Firewall Rules  # noqa: E501
+        """List firewall rules  # noqa: E501
 
-        Retrieves a list of firewall rules associated with a particular network interface.  # noqa: E501
+        List all firewall rules for the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_get(datacenter_id, server_id, nic_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -450,30 +450,30 @@ class FirewallRulesApi(object):
         return self.datacenters_servers_nics_firewallrules_get_with_http_info(datacenter_id, server_id, nic_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_firewallrules_get_with_http_info(self, datacenter_id, server_id, nic_id, **kwargs):  # noqa: E501
-        """List Firewall Rules  # noqa: E501
+        """List firewall rules  # noqa: E501
 
-        Retrieves a list of firewall rules associated with a particular network interface.  # noqa: E501
+        List all firewall rules for the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_get_with_http_info(datacenter_id, server_id, nic_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -521,13 +521,13 @@ class FirewallRulesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_firewallrules_get" % key
+                    " to method datacenters_servers_nics_firewallrules_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -609,30 +609,30 @@ class FirewallRulesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_firewallrules_patch(self, datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs):  # noqa: E501
-        """Partially Modify a Firewall Rule  # noqa: E501
+        """Partially modify firewall rules  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Update the properties of the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_patch(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule_id: The unique ID of the Firewall Rule (required)
+        :param firewallrule_id: The unique ID of the firewall rule. (required)
         :type firewallrule_id: str
-        :param firewallrule: Modified Firewall Rule (required)
+        :param firewallrule: The properties of the firewall rule to be updated. (required)
         :type firewallrule: FirewallruleProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -653,30 +653,30 @@ class FirewallRulesApi(object):
         return self.datacenters_servers_nics_firewallrules_patch_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_firewallrules_patch_with_http_info(self, datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs):  # noqa: E501
-        """Partially Modify a Firewall Rule  # noqa: E501
+        """Partially modify firewall rules  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Update the properties of the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_patch_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule_id: The unique ID of the Firewall Rule (required)
+        :param firewallrule_id: The unique ID of the firewall rule. (required)
         :type firewallrule_id: str
-        :param firewallrule: Modified Firewall Rule (required)
+        :param firewallrule: The properties of the firewall rule to be updated. (required)
         :type firewallrule: FirewallruleProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -724,13 +724,13 @@ class FirewallRulesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_firewallrules_patch" % key
+                    " to method datacenters_servers_nics_firewallrules_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -818,28 +818,28 @@ class FirewallRulesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_firewallrules_post(self, datacenter_id, server_id, nic_id, firewallrule, **kwargs):  # noqa: E501
-        """Create a Firewall Rule  # noqa: E501
+        """Create firewall rules  # noqa: E501
 
-        This will add a Firewall Rule to the network interface.  # noqa: E501
+        Create a firewall rule for the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule: Firewall Rule to be created (required)
+        :param firewallrule: The firewall rule to create. (required)
         :type firewallrule: FirewallRule
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -860,28 +860,28 @@ class FirewallRulesApi(object):
         return self.datacenters_servers_nics_firewallrules_post_with_http_info(datacenter_id, server_id, nic_id, firewallrule, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_firewallrules_post_with_http_info(self, datacenter_id, server_id, nic_id, firewallrule, **kwargs):  # noqa: E501
-        """Create a Firewall Rule  # noqa: E501
+        """Create firewall rules  # noqa: E501
 
-        This will add a Firewall Rule to the network interface.  # noqa: E501
+        Create a firewall rule for the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_post_with_http_info(datacenter_id, server_id, nic_id, firewallrule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule: Firewall Rule to be created (required)
+        :param firewallrule: The firewall rule to create. (required)
         :type firewallrule: FirewallRule
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -928,13 +928,13 @@ class FirewallRulesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_firewallrules_post" % key
+                    " to method datacenters_servers_nics_firewallrules_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1016,30 +1016,30 @@ class FirewallRulesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_firewallrules_put(self, datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs):  # noqa: E501
-        """Modify a Firewall Rule  # noqa: E501
+        """Modify firewall rules  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Modify the properties of the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule_id: The unique ID of the Firewall Rule (required)
+        :param firewallrule_id: The unique ID of the firewall rule. (required)
         :type firewallrule_id: str
-        :param firewallrule: Modified Firewall Rule (required)
+        :param firewallrule: The modified firewall rule. (required)
         :type firewallrule: FirewallRule
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1060,30 +1060,30 @@ class FirewallRulesApi(object):
         return self.datacenters_servers_nics_firewallrules_put_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_firewallrules_put_with_http_info(self, datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs):  # noqa: E501
-        """Modify a Firewall Rule  # noqa: E501
+        """Modify firewall rules  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Modify the properties of the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_firewallrules_put_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param firewallrule_id: The unique ID of the Firewall Rule (required)
+        :param firewallrule_id: The unique ID of the firewall rule. (required)
         :type firewallrule_id: str
-        :param firewallrule: Modified Firewall Rule (required)
+        :param firewallrule: The modified firewall rule. (required)
         :type firewallrule: FirewallRule
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1131,13 +1131,13 @@ class FirewallRulesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_firewallrules_put" % key
+                    " to method datacenters_servers_nics_firewallrules_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501

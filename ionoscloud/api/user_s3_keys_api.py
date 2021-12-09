@@ -18,24 +18,24 @@ class UserS3KeysApi(object):
         self.api_client = api_client
 
     def um_users_s3keys_delete(self, user_id, key_id, **kwargs):  # noqa: E501
-        """Delete an S3 Key  # noqa: E501
+        """Delete S3 keys  # noqa: E501
 
-        Delete an S3 key.  # noqa: E501
+        Delete the specified user S3 key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_delete(user_id, key_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique access key ID of the S3 key (required)
+        :param key_id: The unique ID of the S3 key. (required)
         :type key_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -56,24 +56,24 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_delete_with_http_info(user_id, key_id, **kwargs)  # noqa: E501
 
     def um_users_s3keys_delete_with_http_info(self, user_id, key_id, **kwargs):  # noqa: E501
-        """Delete an S3 Key  # noqa: E501
+        """Delete S3 keys  # noqa: E501
 
-        Delete an S3 key.  # noqa: E501
+        Delete the specified user S3 key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_delete_with_http_info(user_id, key_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique access key ID of the S3 key (required)
+        :param key_id: The unique ID of the S3 key. (required)
         :type key_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -118,13 +118,13 @@ class UserS3KeysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_s3keys_delete" % key
+                    " to method um_users_s3keys_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -190,24 +190,24 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_find_by_key_id(self, user_id, key_id, **kwargs):  # noqa: E501
-        """Retrieve given S3 Key belonging to the given User  # noqa: E501
+        """Retrieve user S3 keys by key ID  # noqa: E501
 
-        You can retrieve S3 key belonging to the given User. This user Id can be found in the response body when a user is created or when you GET a list of users. The key Id can be found in the response body when a S3 key is created or when you GET a list of all S3 keys of a user  # noqa: E501
+        Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_find_by_key_id(user_id, key_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique access key ID of the S3 key (required)
+        :param key_id: The unique ID of the S3 key. (required)
         :type key_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -228,24 +228,24 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_find_by_key_id_with_http_info(user_id, key_id, **kwargs)  # noqa: E501
 
     def um_users_s3keys_find_by_key_id_with_http_info(self, user_id, key_id, **kwargs):  # noqa: E501
-        """Retrieve given S3 Key belonging to the given User  # noqa: E501
+        """Retrieve user S3 keys by key ID  # noqa: E501
 
-        You can retrieve S3 key belonging to the given User. This user Id can be found in the response body when a user is created or when you GET a list of users. The key Id can be found in the response body when a S3 key is created or when you GET a list of all S3 keys of a user  # noqa: E501
+        Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_find_by_key_id_with_http_info(user_id, key_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique access key ID of the S3 key (required)
+        :param key_id: The unique ID of the S3 key. (required)
         :type key_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -290,13 +290,13 @@ class UserS3KeysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_s3keys_find_by_key_id" % key
+                    " to method um_users_s3keys_find_by_key_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -362,22 +362,22 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_get(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve a User's S3 keys  # noqa: E501
+        """List user S3 keys  # noqa: E501
 
-        You can retrieve S3 keys owned by a user by using the users ID. This user Id can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_get(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -398,22 +398,22 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_get_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_s3keys_get_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve a User's S3 keys  # noqa: E501
+        """List user S3 keys  # noqa: E501
 
-        You can retrieve S3 keys owned by a user by using the users ID. This user Id can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_get_with_http_info(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -457,13 +457,13 @@ class UserS3KeysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_s3keys_get" % key
+                    " to method um_users_s3keys_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -523,22 +523,22 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_post(self, user_id, **kwargs):  # noqa: E501
-        """Create a S3 Key for the given User  # noqa: E501
+        """Create user S3 keys  # noqa: E501
 
-        Creates a S3 key for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users. Maximum of 5 keys can be generated for a given user  # noqa: E501
+        Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_post(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -559,22 +559,22 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_post_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_s3keys_post_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Create a S3 Key for the given User  # noqa: E501
+        """Create user S3 keys  # noqa: E501
 
-        Creates a S3 key for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users. Maximum of 5 keys can be generated for a given user  # noqa: E501
+        Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_post_with_http_info(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -618,13 +618,13 @@ class UserS3KeysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_s3keys_post" % key
+                    " to method um_users_s3keys_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -684,26 +684,26 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_put(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
-        """Modify a S3 key having the given key id  # noqa: E501
+        """Modify S3 keys by key ID  # noqa: E501
 
-        You can enable or disable a given S3 key.  # noqa: E501
+        Enable or disable the specified user S3 key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_put(user_id, key_id, s3_key, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique access key ID of the S3 key (required)
+        :param key_id: The unique ID of the S3 key. (required)
         :type key_id: str
-        :param s3_key: Modified S3 key (required)
+        :param s3_key: The modified S3 key. (required)
         :type s3_key: S3Key
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -724,26 +724,26 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_put_with_http_info(user_id, key_id, s3_key, **kwargs)  # noqa: E501
 
     def um_users_s3keys_put_with_http_info(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
-        """Modify a S3 key having the given key id  # noqa: E501
+        """Modify S3 keys by key ID  # noqa: E501
 
-        You can enable or disable a given S3 key.  # noqa: E501
+        Enable or disable the specified user S3 key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3keys_put_with_http_info(user_id, key_id, s3_key, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique access key ID of the S3 key (required)
+        :param key_id: The unique ID of the S3 key. (required)
         :type key_id: str
-        :param s3_key: Modified S3 key (required)
+        :param s3_key: The modified S3 key. (required)
         :type s3_key: S3Key
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -789,13 +789,13 @@ class UserS3KeysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_s3keys_put" % key
+                    " to method um_users_s3keys_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -871,20 +871,20 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3ssourl_get(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve S3 object storage single signon URL for the given user  # noqa: E501
+        """Retrieve S3 single sign-on URLs  # noqa: E501
 
-        You can retrieve S3 object storage single signon URL for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3ssourl_get(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -905,20 +905,20 @@ class UserS3KeysApi(object):
         return self.um_users_s3ssourl_get_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_s3ssourl_get_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve S3 object storage single signon URL for the given user  # noqa: E501
+        """Retrieve S3 single sign-on URLs  # noqa: E501
 
-        You can retrieve S3 object storage single signon URL for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_s3ssourl_get_with_http_info(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -961,13 +961,13 @@ class UserS3KeysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_s3ssourl_get" % key
+                    " to method um_users_s3ssourl_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501

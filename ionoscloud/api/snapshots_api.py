@@ -18,7 +18,7 @@ class SnapshotsApi(object):
         self.api_client = api_client
 
     def snapshots_delete(self, snapshot_id, **kwargs):  # noqa: E501
-        """Delete a Snapshot  # noqa: E501
+        """Delete snapshots  # noqa: E501
 
         Deletes the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -27,13 +27,13 @@ class SnapshotsApi(object):
         >>> thread = api.snapshots_delete(snapshot_id, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -54,7 +54,7 @@ class SnapshotsApi(object):
         return self.snapshots_delete_with_http_info(snapshot_id, **kwargs)  # noqa: E501
 
     def snapshots_delete_with_http_info(self, snapshot_id, **kwargs):  # noqa: E501
-        """Delete a Snapshot  # noqa: E501
+        """Delete snapshots  # noqa: E501
 
         Deletes the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -63,13 +63,13 @@ class SnapshotsApi(object):
         >>> thread = api.snapshots_delete_with_http_info(snapshot_id, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -113,13 +113,13 @@ class SnapshotsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_delete" % key
+                    " to method snapshots_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501
@@ -179,22 +179,22 @@ class SnapshotsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_find_by_id(self, snapshot_id, **kwargs):  # noqa: E501
-        """Retrieve a Snapshot by its uuid.  # noqa: E501
+        """Retrieve snapshots by ID  # noqa: E501
 
-        Retrieves the attributes of a given Snapshot.  # noqa: E501
+        Retrieve the properties of the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_find_by_id(snapshot_id, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -215,22 +215,22 @@ class SnapshotsApi(object):
         return self.snapshots_find_by_id_with_http_info(snapshot_id, **kwargs)  # noqa: E501
 
     def snapshots_find_by_id_with_http_info(self, snapshot_id, **kwargs):  # noqa: E501
-        """Retrieve a Snapshot by its uuid.  # noqa: E501
+        """Retrieve snapshots by ID  # noqa: E501
 
-        Retrieves the attributes of a given Snapshot.  # noqa: E501
+        Retrieve the properties of the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_find_by_id_with_http_info(snapshot_id, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -274,13 +274,13 @@ class SnapshotsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_find_by_id" % key
+                    " to method snapshots_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501
@@ -340,20 +340,20 @@ class SnapshotsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_get(self, **kwargs):  # noqa: E501
-        """List Snapshots  # noqa: E501
+        """List snapshots  # noqa: E501
 
-        Retrieve a list of available snapshots.  # noqa: E501
+        List all available snapshots.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -374,20 +374,20 @@ class SnapshotsApi(object):
         return self.snapshots_get_with_http_info(**kwargs)  # noqa: E501
 
     def snapshots_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Snapshots  # noqa: E501
+        """List snapshots  # noqa: E501
 
-        Retrieve a list of available snapshots.  # noqa: E501
+        List all available snapshots.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -430,13 +430,13 @@ class SnapshotsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_get" % key
+                    " to method snapshots_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -490,24 +490,24 @@ class SnapshotsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_patch(self, snapshot_id, snapshot, **kwargs):  # noqa: E501
-        """Partially modify a Snapshot  # noqa: E501
+        """Partially modify snapshots  # noqa: E501
 
-        You can use this method to update attributes of a snapshot.  # noqa: E501
+        Update the properties of the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_patch(snapshot_id, snapshot, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param snapshot: Modified Snapshot (required)
+        :param snapshot: The properties of the snapshot to be updated. (required)
         :type snapshot: SnapshotProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -528,24 +528,24 @@ class SnapshotsApi(object):
         return self.snapshots_patch_with_http_info(snapshot_id, snapshot, **kwargs)  # noqa: E501
 
     def snapshots_patch_with_http_info(self, snapshot_id, snapshot, **kwargs):  # noqa: E501
-        """Partially modify a Snapshot  # noqa: E501
+        """Partially modify snapshots  # noqa: E501
 
-        You can use this method to update attributes of a snapshot.  # noqa: E501
+        Update the properties of the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_patch_with_http_info(snapshot_id, snapshot, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param snapshot: Modified Snapshot (required)
+        :param snapshot: The properties of the snapshot to be updated. (required)
         :type snapshot: SnapshotProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -590,13 +590,13 @@ class SnapshotsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_patch" % key
+                    " to method snapshots_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501
@@ -666,24 +666,24 @@ class SnapshotsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_put(self, snapshot_id, snapshot, **kwargs):  # noqa: E501
-        """Modify a Snapshot  # noqa: E501
+        """Modify snapshots  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Modify the properties of the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_put(snapshot_id, snapshot, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param snapshot: Modified Snapshot (required)
+        :param snapshot: The modified snapshot (required)
         :type snapshot: Snapshot
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -704,24 +704,24 @@ class SnapshotsApi(object):
         return self.snapshots_put_with_http_info(snapshot_id, snapshot, **kwargs)  # noqa: E501
 
     def snapshots_put_with_http_info(self, snapshot_id, snapshot, **kwargs):  # noqa: E501
-        """Modify a Snapshot  # noqa: E501
+        """Modify snapshots  # noqa: E501
 
-        You can use update attributes of a resource.  # noqa: E501
+        Modify the properties of the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_put_with_http_info(snapshot_id, snapshot, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param snapshot: Modified Snapshot (required)
+        :param snapshot: The modified snapshot (required)
         :type snapshot: Snapshot
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -766,13 +766,13 @@ class SnapshotsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_put" % key
+                    " to method snapshots_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501

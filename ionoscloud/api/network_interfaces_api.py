@@ -18,26 +18,26 @@ class NetworkInterfacesApi(object):
         self.api_client = api_client
 
     def datacenters_servers_nics_delete(self, datacenter_id, server_id, nic_id, **kwargs):  # noqa: E501
-        """Delete a Network Interface  # noqa: E501
+        """Delete NICs  # noqa: E501
 
-        Deletes the specified network interface.  # noqa: E501
+        Remove the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_delete(datacenter_id, server_id, nic_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -58,26 +58,26 @@ class NetworkInterfacesApi(object):
         return self.datacenters_servers_nics_delete_with_http_info(datacenter_id, server_id, nic_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_delete_with_http_info(self, datacenter_id, server_id, nic_id, **kwargs):  # noqa: E501
-        """Delete a Network Interface  # noqa: E501
+        """Delete NICs  # noqa: E501
 
-        Deletes the specified network interface.  # noqa: E501
+        Remove the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_delete_with_http_info(datacenter_id, server_id, nic_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -123,13 +123,13 @@ class NetworkInterfacesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_delete" % key
+                    " to method datacenters_servers_nics_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -201,26 +201,26 @@ class NetworkInterfacesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_find_by_id(self, datacenter_id, server_id, nic_id, **kwargs):  # noqa: E501
-        """Retrieve a Network Interface  # noqa: E501
+        """Retrieve NICs  # noqa: E501
 
-        Retrieves the attributes of a given network interface.  # noqa: E501
+        Retrieve the properties of the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_find_by_id(datacenter_id, server_id, nic_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -241,26 +241,26 @@ class NetworkInterfacesApi(object):
         return self.datacenters_servers_nics_find_by_id_with_http_info(datacenter_id, server_id, nic_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_find_by_id_with_http_info(self, datacenter_id, server_id, nic_id, **kwargs):  # noqa: E501
-        """Retrieve a Network Interface  # noqa: E501
+        """Retrieve NICs  # noqa: E501
 
-        Retrieves the attributes of a given network interface.  # noqa: E501
+        Retrieve the properties of the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_find_by_id_with_http_info(datacenter_id, server_id, nic_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -306,13 +306,13 @@ class NetworkInterfacesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_find_by_id" % key
+                    " to method datacenters_servers_nics_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -384,28 +384,28 @@ class NetworkInterfacesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List Network Interfaces  # noqa: E501
+        """List NICs  # noqa: E501
 
-        Retrieves a list of network interfaces.  # noqa: E501
+        List all NICs, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_get(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -426,28 +426,28 @@ class NetworkInterfacesApi(object):
         return self.datacenters_servers_nics_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List Network Interfaces  # noqa: E501
+        """List NICs  # noqa: E501
 
-        Retrieves a list of network interfaces.  # noqa: E501
+        List all NICs, attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_get_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -494,13 +494,13 @@ class NetworkInterfacesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_get" % key
+                    " to method datacenters_servers_nics_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -576,28 +576,28 @@ class NetworkInterfacesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_patch(self, datacenter_id, server_id, nic_id, nic, **kwargs):  # noqa: E501
-        """Partially Modify a Network Interface  # noqa: E501
+        """Partially modify NICs  # noqa: E501
 
-        You can use update attributes of a network interface.  # noqa: E501
+        Update the properties of the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_patch(datacenter_id, server_id, nic_id, nic, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param nic: Modified properties of Nic (required)
+        :param nic: The properties of the NIC to be updated. (required)
         :type nic: NicProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -618,28 +618,28 @@ class NetworkInterfacesApi(object):
         return self.datacenters_servers_nics_patch_with_http_info(datacenter_id, server_id, nic_id, nic, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_patch_with_http_info(self, datacenter_id, server_id, nic_id, nic, **kwargs):  # noqa: E501
-        """Partially Modify a Network Interface  # noqa: E501
+        """Partially modify NICs  # noqa: E501
 
-        You can use update attributes of a network interface.  # noqa: E501
+        Update the properties of the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_patch_with_http_info(datacenter_id, server_id, nic_id, nic, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param nic: Modified properties of Nic (required)
+        :param nic: The properties of the NIC to be updated. (required)
         :type nic: NicProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -686,13 +686,13 @@ class NetworkInterfacesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_patch" % key
+                    " to method datacenters_servers_nics_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -774,26 +774,26 @@ class NetworkInterfacesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_post(self, datacenter_id, server_id, nic, **kwargs):  # noqa: E501
-        """Create a Network Interface  # noqa: E501
+        """Create NICs  # noqa: E501
 
-        Adds a network interface to the target server. Combined count of network interfaces and volumes attached to the server should not exceed size 24.  # noqa: E501
+        Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_post(datacenter_id, server_id, nic, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic: Nic to be created (required)
+        :param nic: The NIC to create. (required)
         :type nic: Nic
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -814,26 +814,26 @@ class NetworkInterfacesApi(object):
         return self.datacenters_servers_nics_post_with_http_info(datacenter_id, server_id, nic, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_post_with_http_info(self, datacenter_id, server_id, nic, **kwargs):  # noqa: E501
-        """Create a Network Interface  # noqa: E501
+        """Create NICs  # noqa: E501
 
-        Adds a network interface to the target server. Combined count of network interfaces and volumes attached to the server should not exceed size 24.  # noqa: E501
+        Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_post_with_http_info(datacenter_id, server_id, nic, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic: Nic to be created (required)
+        :param nic: The NIC to create. (required)
         :type nic: Nic
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -879,13 +879,13 @@ class NetworkInterfacesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_post" % key
+                    " to method datacenters_servers_nics_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -961,28 +961,28 @@ class NetworkInterfacesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_put(self, datacenter_id, server_id, nic_id, nic, **kwargs):  # noqa: E501
-        """Modify a Network Interface  # noqa: E501
+        """Modify NICs  # noqa: E501
 
-        You can use update attributes of a network interface.  # noqa: E501
+        Modify the properties of the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_put(datacenter_id, server_id, nic_id, nic, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param nic: Modified Nic (required)
+        :param nic: The modified NIC (required)
         :type nic: NicPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1003,28 +1003,28 @@ class NetworkInterfacesApi(object):
         return self.datacenters_servers_nics_put_with_http_info(datacenter_id, server_id, nic_id, nic, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_put_with_http_info(self, datacenter_id, server_id, nic_id, nic, **kwargs):  # noqa: E501
-        """Modify a Network Interface  # noqa: E501
+        """Modify NICs  # noqa: E501
 
-        You can use update attributes of a network interface.  # noqa: E501
+        Modify the properties of the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_nics_put_with_http_info(datacenter_id, server_id, nic_id, nic, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param nic_id: The unique ID of the NIC (required)
+        :param nic_id: The unique ID of the NIC. (required)
         :type nic_id: str
-        :param nic: Modified Nic (required)
+        :param nic: The modified NIC (required)
         :type nic: NicPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1071,13 +1071,13 @@ class NetworkInterfacesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_nics_put" % key
+                    " to method datacenters_servers_nics_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501

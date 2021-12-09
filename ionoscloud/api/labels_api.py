@@ -18,24 +18,24 @@ class LabelsApi(object):
         self.api_client = api_client
 
     def datacenters_labels_delete(self, datacenter_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from Data Center  # noqa: E501
+        """Delete data center labels  # noqa: E501
 
-        This will remove a label from the data center.  # noqa: E501
+        Delete the specified data center label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_delete(datacenter_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -56,24 +56,24 @@ class LabelsApi(object):
         return self.datacenters_labels_delete_with_http_info(datacenter_id, key, **kwargs)  # noqa: E501
 
     def datacenters_labels_delete_with_http_info(self, datacenter_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from Data Center  # noqa: E501
+        """Delete data center labels  # noqa: E501
 
-        This will remove a label from the data center.  # noqa: E501
+        Delete the specified data center label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_delete_with_http_info(datacenter_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -118,13 +118,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_labels_delete" % key
+                    " to method datacenters_labels_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -190,24 +190,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_labels_find_by_key(self, datacenter_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of Data Center  # noqa: E501
+        """Retrieve data center labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a data center.  # noqa: E501
+        Retrieve the properties of the specified data center label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_find_by_key(datacenter_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -228,24 +228,24 @@ class LabelsApi(object):
         return self.datacenters_labels_find_by_key_with_http_info(datacenter_id, key, **kwargs)  # noqa: E501
 
     def datacenters_labels_find_by_key_with_http_info(self, datacenter_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of Data Center  # noqa: E501
+        """Retrieve data center labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a data center.  # noqa: E501
+        Retrieve the properties of the specified data center label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_find_by_key_with_http_info(datacenter_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -290,13 +290,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_labels_find_by_key" % key
+                    " to method datacenters_labels_find_by_key" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -362,22 +362,22 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_labels_get(self, datacenter_id, **kwargs):  # noqa: E501
-        """List all Data Center Labels  # noqa: E501
+        """List data center labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a data center.  # noqa: E501
+        List all the the labels for the specified data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_get(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -398,22 +398,22 @@ class LabelsApi(object):
         return self.datacenters_labels_get_with_http_info(datacenter_id, **kwargs)  # noqa: E501
 
     def datacenters_labels_get_with_http_info(self, datacenter_id, **kwargs):  # noqa: E501
-        """List all Data Center Labels  # noqa: E501
+        """List data center labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a data center.  # noqa: E501
+        List all the the labels for the specified data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_get_with_http_info(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -457,13 +457,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_labels_get" % key
+                    " to method datacenters_labels_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -523,24 +523,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_labels_post(self, datacenter_id, label, **kwargs):  # noqa: E501
-        """Add a Label to Data Center  # noqa: E501
+        """Create data center labels  # noqa: E501
 
-        This will add a label to the data center.  # noqa: E501
+        Add a new label to the specified data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_post(datacenter_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -561,24 +561,24 @@ class LabelsApi(object):
         return self.datacenters_labels_post_with_http_info(datacenter_id, label, **kwargs)  # noqa: E501
 
     def datacenters_labels_post_with_http_info(self, datacenter_id, label, **kwargs):  # noqa: E501
-        """Add a Label to Data Center  # noqa: E501
+        """Create data center labels  # noqa: E501
 
-        This will add a label to the data center.  # noqa: E501
+        Add a new label to the specified data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_post_with_http_info(datacenter_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -623,13 +623,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_labels_post" % key
+                    " to method datacenters_labels_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -699,26 +699,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_labels_put(self, datacenter_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of Data Center  # noqa: E501
+        """Modify data center labels  # noqa: E501
 
-        This will modify the value of the label on a data center.  # noqa: E501
+        Modify the specified data center label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_put(datacenter_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -739,26 +739,26 @@ class LabelsApi(object):
         return self.datacenters_labels_put_with_http_info(datacenter_id, key, label, **kwargs)  # noqa: E501
 
     def datacenters_labels_put_with_http_info(self, datacenter_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of Data Center  # noqa: E501
+        """Modify data center labels  # noqa: E501
 
-        This will modify the value of the label on a data center.  # noqa: E501
+        Modify the specified data center label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_labels_put_with_http_info(datacenter_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Data Center (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -804,13 +804,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_labels_put" % key
+                    " to method datacenters_labels_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -886,26 +886,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_labels_delete(self, datacenter_id, server_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from Server  # noqa: E501
+        """Delete server labels  # noqa: E501
 
-        This will remove a label from the server.  # noqa: E501
+        Delete the specified server label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_delete(datacenter_id, server_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -926,26 +926,26 @@ class LabelsApi(object):
         return self.datacenters_servers_labels_delete_with_http_info(datacenter_id, server_id, key, **kwargs)  # noqa: E501
 
     def datacenters_servers_labels_delete_with_http_info(self, datacenter_id, server_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from Server  # noqa: E501
+        """Delete server labels  # noqa: E501
 
-        This will remove a label from the server.  # noqa: E501
+        Delete the specified server label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_delete_with_http_info(datacenter_id, server_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -991,13 +991,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_labels_delete" % key
+                    " to method datacenters_servers_labels_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1069,26 +1069,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_labels_find_by_key(self, datacenter_id, server_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of Server  # noqa: E501
+        """Retrieve server labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a server.  # noqa: E501
+        Retrieve the properties of the specified server label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_find_by_key(datacenter_id, server_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1109,26 +1109,26 @@ class LabelsApi(object):
         return self.datacenters_servers_labels_find_by_key_with_http_info(datacenter_id, server_id, key, **kwargs)  # noqa: E501
 
     def datacenters_servers_labels_find_by_key_with_http_info(self, datacenter_id, server_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of Server  # noqa: E501
+        """Retrieve server labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a server.  # noqa: E501
+        Retrieve the properties of the specified server label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_find_by_key_with_http_info(datacenter_id, server_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1174,13 +1174,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_labels_find_by_key" % key
+                    " to method datacenters_servers_labels_find_by_key" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1252,24 +1252,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_labels_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List all Server Labels  # noqa: E501
+        """List server labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a server.  # noqa: E501
+        List all the the labels for the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_get(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1290,24 +1290,24 @@ class LabelsApi(object):
         return self.datacenters_servers_labels_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_labels_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List all Server Labels  # noqa: E501
+        """List server labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a server.  # noqa: E501
+        List all the the labels for the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_get_with_http_info(datacenter_id, server_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1352,13 +1352,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_labels_get" % key
+                    " to method datacenters_servers_labels_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1424,26 +1424,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_labels_post(self, datacenter_id, server_id, label, **kwargs):  # noqa: E501
-        """Add a Label to Server  # noqa: E501
+        """Create server labels  # noqa: E501
 
-        This will add a label to the server.  # noqa: E501
+        Add a new label to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_post(datacenter_id, server_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1464,26 +1464,26 @@ class LabelsApi(object):
         return self.datacenters_servers_labels_post_with_http_info(datacenter_id, server_id, label, **kwargs)  # noqa: E501
 
     def datacenters_servers_labels_post_with_http_info(self, datacenter_id, server_id, label, **kwargs):  # noqa: E501
-        """Add a Label to Server  # noqa: E501
+        """Create server labels  # noqa: E501
 
-        This will add a label to the server.  # noqa: E501
+        Add a new label to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_post_with_http_info(datacenter_id, server_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1529,13 +1529,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_labels_post" % key
+                    " to method datacenters_servers_labels_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1611,28 +1611,28 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_labels_put(self, datacenter_id, server_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of Server  # noqa: E501
+        """Modify server labels  # noqa: E501
 
-        This will modify the value of the label on a server.  # noqa: E501
+        Modify the specified server label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_put(datacenter_id, server_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1653,28 +1653,28 @@ class LabelsApi(object):
         return self.datacenters_servers_labels_put_with_http_info(datacenter_id, server_id, key, label, **kwargs)  # noqa: E501
 
     def datacenters_servers_labels_put_with_http_info(self, datacenter_id, server_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of Server  # noqa: E501
+        """Modify server labels  # noqa: E501
 
-        This will modify the value of the label on a server.  # noqa: E501
+        Modify the specified server label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_servers_labels_put_with_http_info(datacenter_id, server_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param server_id: The unique ID of the Server (required)
+        :param server_id: The unique ID of the server. (required)
         :type server_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1721,13 +1721,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_servers_labels_put" % key
+                    " to method datacenters_servers_labels_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1809,26 +1809,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_labels_delete(self, datacenter_id, volume_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from Volume  # noqa: E501
+        """Delete volume labels  # noqa: E501
 
-        This will remove a label from the volume.  # noqa: E501
+        Delete the specified volume label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_delete(datacenter_id, volume_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1849,26 +1849,26 @@ class LabelsApi(object):
         return self.datacenters_volumes_labels_delete_with_http_info(datacenter_id, volume_id, key, **kwargs)  # noqa: E501
 
     def datacenters_volumes_labels_delete_with_http_info(self, datacenter_id, volume_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from Volume  # noqa: E501
+        """Delete volume labels  # noqa: E501
 
-        This will remove a label from the volume.  # noqa: E501
+        Delete the specified volume label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_delete_with_http_info(datacenter_id, volume_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1914,13 +1914,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_volumes_labels_delete" % key
+                    " to method datacenters_volumes_labels_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1992,26 +1992,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_labels_find_by_key(self, datacenter_id, volume_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of Volume  # noqa: E501
+        """Retrieve volume labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a volume.  # noqa: E501
+        Retrieve the properties of the specified volume label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_find_by_key(datacenter_id, volume_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2032,26 +2032,26 @@ class LabelsApi(object):
         return self.datacenters_volumes_labels_find_by_key_with_http_info(datacenter_id, volume_id, key, **kwargs)  # noqa: E501
 
     def datacenters_volumes_labels_find_by_key_with_http_info(self, datacenter_id, volume_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of Volume  # noqa: E501
+        """Retrieve volume labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a volume.  # noqa: E501
+        Retrieve the properties of the specified volume label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_find_by_key_with_http_info(datacenter_id, volume_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2097,13 +2097,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_volumes_labels_find_by_key" % key
+                    " to method datacenters_volumes_labels_find_by_key" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2175,24 +2175,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_labels_get(self, datacenter_id, volume_id, **kwargs):  # noqa: E501
-        """List all Volume Labels  # noqa: E501
+        """List volume labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a volume.  # noqa: E501
+        List all the the labels for the specified volume.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_get(datacenter_id, volume_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2213,24 +2213,24 @@ class LabelsApi(object):
         return self.datacenters_volumes_labels_get_with_http_info(datacenter_id, volume_id, **kwargs)  # noqa: E501
 
     def datacenters_volumes_labels_get_with_http_info(self, datacenter_id, volume_id, **kwargs):  # noqa: E501
-        """List all Volume Labels  # noqa: E501
+        """List volume labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a volume.  # noqa: E501
+        List all the the labels for the specified volume.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_get_with_http_info(datacenter_id, volume_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2275,13 +2275,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_volumes_labels_get" % key
+                    " to method datacenters_volumes_labels_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2347,26 +2347,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_labels_post(self, datacenter_id, volume_id, label, **kwargs):  # noqa: E501
-        """Add a Label to Volume  # noqa: E501
+        """Create volume labels  # noqa: E501
 
-        This will add a label to the volume.  # noqa: E501
+        Add a new label to the specified volume.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_post(datacenter_id, volume_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2387,26 +2387,26 @@ class LabelsApi(object):
         return self.datacenters_volumes_labels_post_with_http_info(datacenter_id, volume_id, label, **kwargs)  # noqa: E501
 
     def datacenters_volumes_labels_post_with_http_info(self, datacenter_id, volume_id, label, **kwargs):  # noqa: E501
-        """Add a Label to Volume  # noqa: E501
+        """Create volume labels  # noqa: E501
 
-        This will add a label to the volume.  # noqa: E501
+        Add a new label to the specified volume.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_post_with_http_info(datacenter_id, volume_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2452,13 +2452,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_volumes_labels_post" % key
+                    " to method datacenters_volumes_labels_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2534,28 +2534,28 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_labels_put(self, datacenter_id, volume_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of Volume  # noqa: E501
+        """Modify volume labels  # noqa: E501
 
-        This will modify the value of the label on a volume.  # noqa: E501
+        Modify the specified volume label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_put(datacenter_id, volume_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2576,28 +2576,28 @@ class LabelsApi(object):
         return self.datacenters_volumes_labels_put_with_http_info(datacenter_id, volume_id, key, label, **kwargs)  # noqa: E501
 
     def datacenters_volumes_labels_put_with_http_info(self, datacenter_id, volume_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of Volume  # noqa: E501
+        """Modify volume labels  # noqa: E501
 
-        This will modify the value of the label on a volume.  # noqa: E501
+        Modify the specified volume label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_volumes_labels_put_with_http_info(datacenter_id, volume_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the Datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param volume_id: The unique ID of the Volume (required)
+        :param volume_id: The unique ID of the volume. (required)
         :type volume_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2644,13 +2644,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_volumes_labels_put" % key
+                    " to method datacenters_volumes_labels_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2732,24 +2732,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_labels_delete(self, ipblock_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from IP Block  # noqa: E501
+        """Delete IP block labels  # noqa: E501
 
-        This will remove a label from the Ip Block.  # noqa: E501
+        Delete the specified IP block label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_delete(ipblock_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2770,24 +2770,24 @@ class LabelsApi(object):
         return self.ipblocks_labels_delete_with_http_info(ipblock_id, key, **kwargs)  # noqa: E501
 
     def ipblocks_labels_delete_with_http_info(self, ipblock_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from IP Block  # noqa: E501
+        """Delete IP block labels  # noqa: E501
 
-        This will remove a label from the Ip Block.  # noqa: E501
+        Delete the specified IP block label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_delete_with_http_info(ipblock_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2832,13 +2832,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_labels_delete" % key
+                    " to method ipblocks_labels_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -2904,24 +2904,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_labels_find_by_key(self, ipblock_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of IP Block  # noqa: E501
+        """Retrieve IP block labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a Ip Block.  # noqa: E501
+        Retrieve the properties of the specified IP block label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_find_by_key(ipblock_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2942,24 +2942,24 @@ class LabelsApi(object):
         return self.ipblocks_labels_find_by_key_with_http_info(ipblock_id, key, **kwargs)  # noqa: E501
 
     def ipblocks_labels_find_by_key_with_http_info(self, ipblock_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of IP Block  # noqa: E501
+        """Retrieve IP block labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a Ip Block.  # noqa: E501
+        Retrieve the properties of the specified IP block label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_find_by_key_with_http_info(ipblock_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3004,13 +3004,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_labels_find_by_key" % key
+                    " to method ipblocks_labels_find_by_key" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -3076,22 +3076,22 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_labels_get(self, ipblock_id, **kwargs):  # noqa: E501
-        """List all Ip Block Labels  # noqa: E501
+        """List IP block labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a IP Block.  # noqa: E501
+        List all the the labels for the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_get(ipblock_id, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3112,22 +3112,22 @@ class LabelsApi(object):
         return self.ipblocks_labels_get_with_http_info(ipblock_id, **kwargs)  # noqa: E501
 
     def ipblocks_labels_get_with_http_info(self, ipblock_id, **kwargs):  # noqa: E501
-        """List all Ip Block Labels  # noqa: E501
+        """List IP block labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a IP Block.  # noqa: E501
+        List all the the labels for the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_get_with_http_info(ipblock_id, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3171,13 +3171,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_labels_get" % key
+                    " to method ipblocks_labels_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -3237,24 +3237,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_labels_post(self, ipblock_id, label, **kwargs):  # noqa: E501
-        """Add a Label to IP Block  # noqa: E501
+        """Create IP block labels  # noqa: E501
 
-        This will add a label to the Ip Block.  # noqa: E501
+        Add a new label to the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_post(ipblock_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3275,24 +3275,24 @@ class LabelsApi(object):
         return self.ipblocks_labels_post_with_http_info(ipblock_id, label, **kwargs)  # noqa: E501
 
     def ipblocks_labels_post_with_http_info(self, ipblock_id, label, **kwargs):  # noqa: E501
-        """Add a Label to IP Block  # noqa: E501
+        """Create IP block labels  # noqa: E501
 
-        This will add a label to the Ip Block.  # noqa: E501
+        Add a new label to the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_post_with_http_info(ipblock_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3337,13 +3337,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_labels_post" % key
+                    " to method ipblocks_labels_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -3413,26 +3413,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_labels_put(self, ipblock_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of IP Block  # noqa: E501
+        """Modify IP block labels  # noqa: E501
 
-        This will modify the value of the label on a Ip Block.  # noqa: E501
+        Modify the specified IP block label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_put(ipblock_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3453,26 +3453,26 @@ class LabelsApi(object):
         return self.ipblocks_labels_put_with_http_info(ipblock_id, key, label, **kwargs)  # noqa: E501
 
     def ipblocks_labels_put_with_http_info(self, ipblock_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of IP Block  # noqa: E501
+        """Modify IP block labels  # noqa: E501
 
-        This will modify the value of the label on a Ip Block.  # noqa: E501
+        Modify the specified IP block label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.ipblocks_labels_put_with_http_info(ipblock_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param ipblock_id: The unique ID of the Ip Block (required)
+        :param ipblock_id: The unique ID of the IP block. (required)
         :type ipblock_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3518,13 +3518,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method ipblocks_labels_put" % key
+                    " to method ipblocks_labels_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'ipblock_id' is set
         if self.api_client.client_side_validation and ('ipblock_id' not in local_var_params or  # noqa: E501
@@ -3600,22 +3600,22 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def labels_find_by_urn(self, labelurn, **kwargs):  # noqa: E501
-        """Returns the label by its URN.  # noqa: E501
+        """Retrieve labels by URN  # noqa: E501
 
-        You can retrieve the details of a specific label using its URN. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>  # noqa: E501
+        Retrieve a label by label URN.  The URN is unique for each label, and consists of:  urn:label:<resource_type>:<resource_uuid>:<key>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.labels_find_by_urn(labelurn, async_req=True)
         >>> result = thread.get()
 
-        :param labelurn: The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key> (required)
+        :param labelurn: The label URN; URN is unique for each label, and consists of:  urn:label:<resource_type>:<resource_uuid>:<key><key> (required)
         :type labelurn: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3636,22 +3636,22 @@ class LabelsApi(object):
         return self.labels_find_by_urn_with_http_info(labelurn, **kwargs)  # noqa: E501
 
     def labels_find_by_urn_with_http_info(self, labelurn, **kwargs):  # noqa: E501
-        """Returns the label by its URN.  # noqa: E501
+        """Retrieve labels by URN  # noqa: E501
 
-        You can retrieve the details of a specific label using its URN. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>  # noqa: E501
+        Retrieve a label by label URN.  The URN is unique for each label, and consists of:  urn:label:<resource_type>:<resource_uuid>:<key>  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.labels_find_by_urn_with_http_info(labelurn, async_req=True)
         >>> result = thread.get()
 
-        :param labelurn: The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key> (required)
+        :param labelurn: The label URN; URN is unique for each label, and consists of:  urn:label:<resource_type>:<resource_uuid>:<key><key> (required)
         :type labelurn: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3695,13 +3695,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method labels_find_by_urn" % key
+                    " to method labels_find_by_urn" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'labelurn' is set
         if self.api_client.client_side_validation and ('labelurn' not in local_var_params or  # noqa: E501
@@ -3761,20 +3761,20 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def labels_get(self, **kwargs):  # noqa: E501
-        """List Labels   # noqa: E501
+        """List labels   # noqa: E501
 
-        You can retrieve a complete list of labels that you have access to.  # noqa: E501
+        List all available labels.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.labels_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3795,20 +3795,20 @@ class LabelsApi(object):
         return self.labels_get_with_http_info(**kwargs)  # noqa: E501
 
     def labels_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Labels   # noqa: E501
+        """List labels   # noqa: E501
 
-        You can retrieve a complete list of labels that you have access to.  # noqa: E501
+        List all available labels.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.labels_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3851,13 +3851,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method labels_get" % key
+                    " to method labels_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -3911,24 +3911,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_labels_delete(self, snapshot_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from Snapshot  # noqa: E501
+        """Delete snapshot labels  # noqa: E501
 
-        This will remove a label from the snapshot.  # noqa: E501
+        Delete the specified snapshot label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_delete(snapshot_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3949,24 +3949,24 @@ class LabelsApi(object):
         return self.snapshots_labels_delete_with_http_info(snapshot_id, key, **kwargs)  # noqa: E501
 
     def snapshots_labels_delete_with_http_info(self, snapshot_id, key, **kwargs):  # noqa: E501
-        """Delete a Label from Snapshot  # noqa: E501
+        """Delete snapshot labels  # noqa: E501
 
-        This will remove a label from the snapshot.  # noqa: E501
+        Delete the specified snapshot label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_delete_with_http_info(snapshot_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4011,13 +4011,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_labels_delete" % key
+                    " to method snapshots_labels_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501
@@ -4083,24 +4083,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_labels_find_by_key(self, snapshot_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of Snapshot  # noqa: E501
+        """Retrieve snapshot labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a snapshot.  # noqa: E501
+        Retrieve the properties of the specified snapshot label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_find_by_key(snapshot_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4121,24 +4121,24 @@ class LabelsApi(object):
         return self.snapshots_labels_find_by_key_with_http_info(snapshot_id, key, **kwargs)  # noqa: E501
 
     def snapshots_labels_find_by_key_with_http_info(self, snapshot_id, key, **kwargs):  # noqa: E501
-        """Retrieve a Label of Snapshot  # noqa: E501
+        """Retrieve snapshot labels  # noqa: E501
 
-        This will retrieve the properties of a associated label to a snapshot.  # noqa: E501
+        Retrieve the properties of the specified snapshot label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_find_by_key_with_http_info(snapshot_id, key, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4183,13 +4183,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_labels_find_by_key" % key
+                    " to method snapshots_labels_find_by_key" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501
@@ -4255,22 +4255,22 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_labels_get(self, snapshot_id, **kwargs):  # noqa: E501
-        """List all Snapshot Labels  # noqa: E501
+        """List snapshot labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a snapshot.  # noqa: E501
+        List all the the labels for the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_get(snapshot_id, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4291,22 +4291,22 @@ class LabelsApi(object):
         return self.snapshots_labels_get_with_http_info(snapshot_id, **kwargs)  # noqa: E501
 
     def snapshots_labels_get_with_http_info(self, snapshot_id, **kwargs):  # noqa: E501
-        """List all Snapshot Labels  # noqa: E501
+        """List snapshot labels  # noqa: E501
 
-        You can retrieve a list of all labels associated with a snapshot.  # noqa: E501
+        List all the the labels for the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_get_with_http_info(snapshot_id, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4350,13 +4350,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_labels_get" % key
+                    " to method snapshots_labels_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501
@@ -4416,24 +4416,24 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_labels_post(self, snapshot_id, label, **kwargs):  # noqa: E501
-        """Add a Label to Snapshot  # noqa: E501
+        """Create snapshot labels  # noqa: E501
 
-        This will add a label to the snapshot.  # noqa: E501
+        Add a new label to the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_post(snapshot_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4454,24 +4454,24 @@ class LabelsApi(object):
         return self.snapshots_labels_post_with_http_info(snapshot_id, label, **kwargs)  # noqa: E501
 
     def snapshots_labels_post_with_http_info(self, snapshot_id, label, **kwargs):  # noqa: E501
-        """Add a Label to Snapshot  # noqa: E501
+        """Create snapshot labels  # noqa: E501
 
-        This will add a label to the snapshot.  # noqa: E501
+        Add a new label to the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_post_with_http_info(snapshot_id, label, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param label: Label to be added (required)
+        :param label: The label to create. (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4516,13 +4516,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_labels_post" % key
+                    " to method snapshots_labels_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501
@@ -4592,26 +4592,26 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_labels_put(self, snapshot_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of Snapshot  # noqa: E501
+        """Modify snapshot labels  # noqa: E501
 
-        This will modify the value of the label on a snapshot.  # noqa: E501
+        Modify the specified snapshot label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_put(snapshot_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4632,26 +4632,26 @@ class LabelsApi(object):
         return self.snapshots_labels_put_with_http_info(snapshot_id, key, label, **kwargs)  # noqa: E501
 
     def snapshots_labels_put_with_http_info(self, snapshot_id, key, label, **kwargs):  # noqa: E501
-        """Modify a Label of Snapshot  # noqa: E501
+        """Modify snapshot labels  # noqa: E501
 
-        This will modify the value of the label on a snapshot.  # noqa: E501
+        Modify the specified snapshot label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.snapshots_labels_put_with_http_info(snapshot_id, key, label, async_req=True)
         >>> result = thread.get()
 
-        :param snapshot_id: The unique ID of the Snapshot (required)
+        :param snapshot_id: The unique ID of the snapshot. (required)
         :type snapshot_id: str
-        :param key: The key of the Label (required)
+        :param key: The label key (required)
         :type key: str
-        :param label: Modified Label (required)
+        :param label: The modified label (required)
         :type label: LabelResource
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -4697,13 +4697,13 @@ class LabelsApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method snapshots_labels_put" % key
+                    " to method snapshots_labels_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'snapshot_id' is set
         if self.api_client.client_side_validation and ('snapshot_id' not in local_var_params or  # noqa: E501

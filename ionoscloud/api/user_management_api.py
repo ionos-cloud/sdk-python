@@ -18,22 +18,22 @@ class UserManagementApi(object):
         self.api_client = api_client
 
     def um_groups_delete(self, group_id, **kwargs):  # noqa: E501
-        """Delete a Group  # noqa: E501
+        """Delete groups  # noqa: E501
 
-        Delete a group  # noqa: E501
+        Remove the specified group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_delete(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: The unique ID of the group (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -54,22 +54,22 @@ class UserManagementApi(object):
         return self.um_groups_delete_with_http_info(group_id, **kwargs)  # noqa: E501
 
     def um_groups_delete_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """Delete a Group  # noqa: E501
+        """Delete groups  # noqa: E501
 
-        Delete a group  # noqa: E501
+        Remove the specified group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_delete_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: The unique ID of the group (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -113,13 +113,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_delete" % key
+                    " to method um_groups_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -179,22 +179,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_find_by_id(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve a Group  # noqa: E501
+        """Retrieve groups  # noqa: E501
 
-        You can retrieve a group by using the group ID. This value can be found in the response body when a group is created or when you GET a list of groups.  # noqa: E501
+        Retrieve a group by the group ID. This value is in the response body when the group is created, and in the list of the groups, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_find_by_id(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: The unique ID of the group (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -215,22 +215,22 @@ class UserManagementApi(object):
         return self.um_groups_find_by_id_with_http_info(group_id, **kwargs)  # noqa: E501
 
     def um_groups_find_by_id_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve a Group  # noqa: E501
+        """Retrieve groups  # noqa: E501
 
-        You can retrieve a group by using the group ID. This value can be found in the response body when a group is created or when you GET a list of groups.  # noqa: E501
+        Retrieve a group by the group ID. This value is in the response body when the group is created, and in the list of the groups, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_find_by_id_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: The unique ID of the group (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -274,13 +274,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_find_by_id" % key
+                    " to method um_groups_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -340,20 +340,20 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_get(self, **kwargs):  # noqa: E501
-        """List All Groups.  # noqa: E501
+        """List all groups  # noqa: E501
 
-        You can retrieve a complete list of all groups that you have access to  # noqa: E501
+        List all the available user groups.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -374,20 +374,20 @@ class UserManagementApi(object):
         return self.um_groups_get_with_http_info(**kwargs)  # noqa: E501
 
     def um_groups_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List All Groups.  # noqa: E501
+        """List all groups  # noqa: E501
 
-        You can retrieve a complete list of all groups that you have access to  # noqa: E501
+        List all the available user groups.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -430,13 +430,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_get" % key
+                    " to method um_groups_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -490,22 +490,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_post(self, group, **kwargs):  # noqa: E501
-        """Create a Group  # noqa: E501
+        """Create groups  # noqa: E501
 
-        You can use this POST method to create a group  # noqa: E501
+        Create a group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_post(group, async_req=True)
         >>> result = thread.get()
 
-        :param group: Group to be created (required)
+        :param group: The group to create. (required)
         :type group: Group
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -526,22 +526,22 @@ class UserManagementApi(object):
         return self.um_groups_post_with_http_info(group, **kwargs)  # noqa: E501
 
     def um_groups_post_with_http_info(self, group, **kwargs):  # noqa: E501
-        """Create a Group  # noqa: E501
+        """Create groups  # noqa: E501
 
-        You can use this POST method to create a group  # noqa: E501
+        Create a group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_post_with_http_info(group, async_req=True)
         >>> result = thread.get()
 
-        :param group: Group to be created (required)
+        :param group: The group to create. (required)
         :type group: Group
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -585,13 +585,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_post" % key
+                    " to method um_groups_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group' is set
         if self.api_client.client_side_validation and ('group' not in local_var_params or  # noqa: E501
@@ -655,24 +655,24 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_put(self, group_id, group, **kwargs):  # noqa: E501
-        """Modify a group  # noqa: E501
+        """Modify groups  # noqa: E501
 
-        You can use this method to update properties of the group.  # noqa: E501
+        Modify the properties of the specified group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_put(group_id, group, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: The unique ID of the group (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param group: Modified properties of the Group (required)
+        :param group: The modified group. (required)
         :type group: Group
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -693,24 +693,24 @@ class UserManagementApi(object):
         return self.um_groups_put_with_http_info(group_id, group, **kwargs)  # noqa: E501
 
     def um_groups_put_with_http_info(self, group_id, group, **kwargs):  # noqa: E501
-        """Modify a group  # noqa: E501
+        """Modify groups  # noqa: E501
 
-        You can use this method to update properties of the group.  # noqa: E501
+        Modify the properties of the specified group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_put_with_http_info(group_id, group, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: The unique ID of the group (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param group: Modified properties of the Group (required)
+        :param group: The modified group. (required)
         :type group: Group
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -755,13 +755,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_put" % key
+                    " to method um_groups_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -831,21 +831,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_resources_get(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve resources assigned to a group  # noqa: E501
+        """Retrieve group resources  # noqa: E501
 
+        List the resources assigned to the group, by group ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_resources_get(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: The unique ID of the group (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -866,21 +867,22 @@ class UserManagementApi(object):
         return self.um_groups_resources_get_with_http_info(group_id, **kwargs)  # noqa: E501
 
     def um_groups_resources_get_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """Retrieve resources assigned to a group  # noqa: E501
+        """Retrieve group resources  # noqa: E501
 
+        List the resources assigned to the group, by group ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_resources_get_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: The unique ID of the group (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -924,13 +926,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_resources_get" % key
+                    " to method um_groups_resources_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -990,24 +992,24 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_shares_delete(self, group_id, resource_id, **kwargs):  # noqa: E501
-        """Remove a resource from a group  # noqa: E501
+        """Remove group shares  # noqa: E501
 
-        This will remove a resource from a group  # noqa: E501
+        Remove the specified share from the group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_delete(group_id, resource_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param resource_id: (required)
+        :param resource_id: The unique ID of the resource. (required)
         :type resource_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1028,24 +1030,24 @@ class UserManagementApi(object):
         return self.um_groups_shares_delete_with_http_info(group_id, resource_id, **kwargs)  # noqa: E501
 
     def um_groups_shares_delete_with_http_info(self, group_id, resource_id, **kwargs):  # noqa: E501
-        """Remove a resource from a group  # noqa: E501
+        """Remove group shares  # noqa: E501
 
-        This will remove a resource from a group  # noqa: E501
+        Remove the specified share from the group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_delete_with_http_info(group_id, resource_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param resource_id: (required)
+        :param resource_id: The unique ID of the resource. (required)
         :type resource_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1090,13 +1092,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_shares_delete" % key
+                    " to method um_groups_shares_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -1162,24 +1164,24 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_shares_find_by_resource_id(self, group_id, resource_id, **kwargs):  # noqa: E501
-        """Retrieve a group share  # noqa: E501
+        """Retrieve group shares  # noqa: E501
 
-        This will retrieve the properties of a group share.  # noqa: E501
+        Retrieve the properties of the specified group share.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_find_by_resource_id(group_id, resource_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param resource_id: (required)
+        :param resource_id: The unique ID of the resource. (required)
         :type resource_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1200,24 +1202,24 @@ class UserManagementApi(object):
         return self.um_groups_shares_find_by_resource_id_with_http_info(group_id, resource_id, **kwargs)  # noqa: E501
 
     def um_groups_shares_find_by_resource_id_with_http_info(self, group_id, resource_id, **kwargs):  # noqa: E501
-        """Retrieve a group share  # noqa: E501
+        """Retrieve group shares  # noqa: E501
 
-        This will retrieve the properties of a group share.  # noqa: E501
+        Retrieve the properties of the specified group share.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_find_by_resource_id_with_http_info(group_id, resource_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param resource_id: (required)
+        :param resource_id: The unique ID of the resource. (required)
         :type resource_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1262,13 +1264,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_shares_find_by_resource_id" % key
+                    " to method um_groups_shares_find_by_resource_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -1334,22 +1336,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_shares_get(self, group_id, **kwargs):  # noqa: E501
-        """List Group Shares   # noqa: E501
+        """List group shares   # noqa: E501
 
-        You can retrieve a list of all resources along with their permissions of the group  # noqa: E501
+        List all shares and share privileges for the specified group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_get(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1370,22 +1372,22 @@ class UserManagementApi(object):
         return self.um_groups_shares_get_with_http_info(group_id, **kwargs)  # noqa: E501
 
     def um_groups_shares_get_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """List Group Shares   # noqa: E501
+        """List group shares   # noqa: E501
 
-        You can retrieve a list of all resources along with their permissions of the group  # noqa: E501
+        List all shares and share privileges for the specified group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_get_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1429,13 +1431,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_shares_get" % key
+                    " to method um_groups_shares_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -1495,26 +1497,26 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_shares_post(self, group_id, resource_id, resource, **kwargs):  # noqa: E501
-        """Add a resource to a group  # noqa: E501
+        """Add group shares  # noqa: E501
 
-        This will add a resource to the group.   # noqa: E501
+        Add the specified share to the group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_post(group_id, resource_id, resource, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param resource_id: (required)
+        :param resource_id: The unique ID of the resource. (required)
         :type resource_id: str
-        :param resource: Resource to be added (required)
+        :param resource: The resource to add. (required)
         :type resource: GroupShare
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1535,26 +1537,26 @@ class UserManagementApi(object):
         return self.um_groups_shares_post_with_http_info(group_id, resource_id, resource, **kwargs)  # noqa: E501
 
     def um_groups_shares_post_with_http_info(self, group_id, resource_id, resource, **kwargs):  # noqa: E501
-        """Add a resource to a group  # noqa: E501
+        """Add group shares  # noqa: E501
 
-        This will add a resource to the group.   # noqa: E501
+        Add the specified share to the group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_post_with_http_info(group_id, resource_id, resource, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param resource_id: (required)
+        :param resource_id: The unique ID of the resource. (required)
         :type resource_id: str
-        :param resource: Resource to be added (required)
+        :param resource: The resource to add. (required)
         :type resource: GroupShare
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1600,13 +1602,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_shares_post" % key
+                    " to method um_groups_shares_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -1678,26 +1680,26 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_shares_put(self, group_id, resource_id, resource, **kwargs):  # noqa: E501
-        """Modify resource permissions of a group  # noqa: E501
+        """Modify group share privileges  # noqa: E501
 
-        You can use update resource permissions of a group. If empty body will be provided, no updates will happen, instead you will be returned the current permissions of resource in a group. In this case response code will be 200  # noqa: E501
+        Modify share permissions for the specified group. With an empty body, no updates are performed, and the current share permissions for the group are returned with response code 200.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_put(group_id, resource_id, resource, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param resource_id: (required)
+        :param resource_id: The unique ID of the resource. (required)
         :type resource_id: str
-        :param resource: Modified Resource (required)
+        :param resource: The modified resource (required)
         :type resource: GroupShare
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1718,26 +1720,26 @@ class UserManagementApi(object):
         return self.um_groups_shares_put_with_http_info(group_id, resource_id, resource, **kwargs)  # noqa: E501
 
     def um_groups_shares_put_with_http_info(self, group_id, resource_id, resource, **kwargs):  # noqa: E501
-        """Modify resource permissions of a group  # noqa: E501
+        """Modify group share privileges  # noqa: E501
 
-        You can use update resource permissions of a group. If empty body will be provided, no updates will happen, instead you will be returned the current permissions of resource in a group. In this case response code will be 200  # noqa: E501
+        Modify share permissions for the specified group. With an empty body, no updates are performed, and the current share permissions for the group are returned with response code 200.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_shares_put_with_http_info(group_id, resource_id, resource, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param resource_id: (required)
+        :param resource_id: The unique ID of the resource. (required)
         :type resource_id: str
-        :param resource: Modified Resource (required)
+        :param resource: The modified resource (required)
         :type resource: GroupShare
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1783,13 +1785,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_shares_put" % key
+                    " to method um_groups_shares_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -1865,24 +1867,24 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_users_delete(self, group_id, user_id, **kwargs):  # noqa: E501
-        """Remove a user from a group  # noqa: E501
+        """Remove users from groups  # noqa: E501
 
-        This will remove a user from a group.  # noqa: E501
+        Remove the specified user from the group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_users_delete(group_id, user_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param user_id: (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1903,24 +1905,24 @@ class UserManagementApi(object):
         return self.um_groups_users_delete_with_http_info(group_id, user_id, **kwargs)  # noqa: E501
 
     def um_groups_users_delete_with_http_info(self, group_id, user_id, **kwargs):  # noqa: E501
-        """Remove a user from a group  # noqa: E501
+        """Remove users from groups  # noqa: E501
 
-        This will remove a user from a group.  # noqa: E501
+        Remove the specified user from the group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_users_delete_with_http_info(group_id, user_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param user_id: (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1965,13 +1967,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_users_delete" % key
+                    " to method um_groups_users_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -2037,22 +2039,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_users_get(self, group_id, **kwargs):  # noqa: E501
-        """List Group Members   # noqa: E501
+        """List group members  # noqa: E501
 
-        You can retrieve a list of users who are members of the group  # noqa: E501
+        List all members of the specified user group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_users_get(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2073,22 +2075,22 @@ class UserManagementApi(object):
         return self.um_groups_users_get_with_http_info(group_id, **kwargs)  # noqa: E501
 
     def um_groups_users_get_with_http_info(self, group_id, **kwargs):  # noqa: E501
-        """List Group Members   # noqa: E501
+        """List group members  # noqa: E501
 
-        You can retrieve a list of users who are members of the group  # noqa: E501
+        List all members of the specified user group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_users_get_with_http_info(group_id, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2132,13 +2134,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_users_get" % key
+                    " to method um_groups_users_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -2198,24 +2200,24 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_users_post(self, group_id, user, **kwargs):  # noqa: E501
-        """Add a user to a group  # noqa: E501
+        """Add group members  # noqa: E501
 
-        This will attach a pre-existing user to a group.   # noqa: E501
+        Add an existing user to the specified group.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_users_post(group_id, user, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param user: User to be added (required)
+        :param user: The user to add. (required)
         :type user: User
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2236,24 +2238,24 @@ class UserManagementApi(object):
         return self.um_groups_users_post_with_http_info(group_id, user, **kwargs)  # noqa: E501
 
     def um_groups_users_post_with_http_info(self, group_id, user, **kwargs):  # noqa: E501
-        """Add a user to a group  # noqa: E501
+        """Add group members  # noqa: E501
 
-        This will attach a pre-existing user to a group.   # noqa: E501
+        Add an existing user to the specified group.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_groups_users_post_with_http_info(group_id, user, async_req=True)
         >>> result = thread.get()
 
-        :param group_id: (required)
+        :param group_id: The unique ID of the group. (required)
         :type group_id: str
-        :param user: User to be added (required)
+        :param user: The user to add. (required)
         :type user: User
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2298,13 +2300,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_groups_users_post" % key
+                    " to method um_groups_users_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'group_id' is set
         if self.api_client.client_side_validation and ('group_id' not in local_var_params or  # noqa: E501
@@ -2374,22 +2376,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_resources_find_by_type(self, resource_type, **kwargs):  # noqa: E501
-        """Retrieve a list of Resources by type.  # noqa: E501
+        """List resources by type  # noqa: E501
 
-        You can retrieve a list of resources by using the type. Allowed values are { datacenter, snapshot, image, ipblock, pcc, backupunit, k8s }. This value of resource type also be found in the response body when you GET a list of all resources.  # noqa: E501
+        List all resources of the specified type.  Resource types are: {datacenter, snapshot, image, ipblock, pcc, backupunit, k8s}  Resource types are in the list of resources, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_resources_find_by_type(resource_type, async_req=True)
         >>> result = thread.get()
 
-        :param resource_type: The resource Type (required)
+        :param resource_type: The resource type (required)
         :type resource_type: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2410,22 +2412,22 @@ class UserManagementApi(object):
         return self.um_resources_find_by_type_with_http_info(resource_type, **kwargs)  # noqa: E501
 
     def um_resources_find_by_type_with_http_info(self, resource_type, **kwargs):  # noqa: E501
-        """Retrieve a list of Resources by type.  # noqa: E501
+        """List resources by type  # noqa: E501
 
-        You can retrieve a list of resources by using the type. Allowed values are { datacenter, snapshot, image, ipblock, pcc, backupunit, k8s }. This value of resource type also be found in the response body when you GET a list of all resources.  # noqa: E501
+        List all resources of the specified type.  Resource types are: {datacenter, snapshot, image, ipblock, pcc, backupunit, k8s}  Resource types are in the list of resources, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_resources_find_by_type_with_http_info(resource_type, async_req=True)
         >>> result = thread.get()
 
-        :param resource_type: The resource Type (required)
+        :param resource_type: The resource type (required)
         :type resource_type: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2469,13 +2471,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_resources_find_by_type" % key
+                    " to method um_resources_find_by_type" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'resource_type' is set
         if self.api_client.client_side_validation and ('resource_type' not in local_var_params or  # noqa: E501
@@ -2535,24 +2537,24 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_resources_find_by_type_and_id(self, resource_type, resource_id, **kwargs):  # noqa: E501
-        """Retrieve a Resource by type.  # noqa: E501
+        """Retrieve resources by type  # noqa: E501
 
-        You can retrieve a resource by using the type and its uuid. Allowed values for types are { datacenter, snapshot, image, ipblock, pcc, backupunit, k8s }. The value of resource type can also be found in the response body when you GET a list of all resources.  # noqa: E501
+        Retrieve a resource by the resource type and resource ID.  Resource types are: {datacenter, snapshot, image, ipblock, pcc, backupunit, k8s}  Resource types are in the list of resources, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_resources_find_by_type_and_id(resource_type, resource_id, async_req=True)
         >>> result = thread.get()
 
-        :param resource_type: The resource Type (required)
+        :param resource_type: The resource type (required)
         :type resource_type: str
-        :param resource_id: The resource Uuid (required)
+        :param resource_id: The resource ID (required)
         :type resource_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2573,24 +2575,24 @@ class UserManagementApi(object):
         return self.um_resources_find_by_type_and_id_with_http_info(resource_type, resource_id, **kwargs)  # noqa: E501
 
     def um_resources_find_by_type_and_id_with_http_info(self, resource_type, resource_id, **kwargs):  # noqa: E501
-        """Retrieve a Resource by type.  # noqa: E501
+        """Retrieve resources by type  # noqa: E501
 
-        You can retrieve a resource by using the type and its uuid. Allowed values for types are { datacenter, snapshot, image, ipblock, pcc, backupunit, k8s }. The value of resource type can also be found in the response body when you GET a list of all resources.  # noqa: E501
+        Retrieve a resource by the resource type and resource ID.  Resource types are: {datacenter, snapshot, image, ipblock, pcc, backupunit, k8s}  Resource types are in the list of resources, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_resources_find_by_type_and_id_with_http_info(resource_type, resource_id, async_req=True)
         >>> result = thread.get()
 
-        :param resource_type: The resource Type (required)
+        :param resource_type: The resource type (required)
         :type resource_type: str
-        :param resource_id: The resource Uuid (required)
+        :param resource_id: The resource ID (required)
         :type resource_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2635,13 +2637,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_resources_find_by_type_and_id" % key
+                    " to method um_resources_find_by_type_and_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'resource_type' is set
         if self.api_client.client_side_validation and ('resource_type' not in local_var_params or  # noqa: E501
@@ -2707,20 +2709,20 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_resources_get(self, **kwargs):  # noqa: E501
-        """List All Resources.  # noqa: E501
+        """List all resources  # noqa: E501
 
-        You can retrieve a complete list of all resources that you have access to.  # noqa: E501
+        List all the available resources.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_resources_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2741,20 +2743,20 @@ class UserManagementApi(object):
         return self.um_resources_get_with_http_info(**kwargs)  # noqa: E501
 
     def um_resources_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List All Resources.  # noqa: E501
+        """List all resources  # noqa: E501
 
-        You can retrieve a complete list of all resources that you have access to.  # noqa: E501
+        List all the available resources.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_resources_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2797,13 +2799,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_resources_get" % key
+                    " to method um_resources_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -2857,22 +2859,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_delete(self, user_id, **kwargs):  # noqa: E501
-        """Delete a User  # noqa: E501
+        """Delete users  # noqa: E501
 
-        Delete a user  # noqa: E501
+        Delete the specified user.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_delete(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2893,22 +2895,22 @@ class UserManagementApi(object):
         return self.um_users_delete_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_delete_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Delete a User  # noqa: E501
+        """Delete users  # noqa: E501
 
-        Delete a user  # noqa: E501
+        Delete the specified user.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_delete_with_http_info(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2952,13 +2954,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_delete" % key
+                    " to method um_users_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -3018,22 +3020,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_find_by_id(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve a User  # noqa: E501
+        """Retrieve users  # noqa: E501
 
-        You can retrieve user details by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        Retrieve user properties by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_find_by_id(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3054,22 +3056,22 @@ class UserManagementApi(object):
         return self.um_users_find_by_id_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_find_by_id_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve a User  # noqa: E501
+        """Retrieve users  # noqa: E501
 
-        You can retrieve user details by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        Retrieve user properties by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_find_by_id_with_http_info(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3113,13 +3115,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_find_by_id" % key
+                    " to method um_users_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -3179,24 +3181,24 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_get(self, **kwargs):  # noqa: E501
-        """List all Users   # noqa: E501
+        """List all users   # noqa: E501
 
-        You can retrieve a complete list of users under your account  # noqa: E501
+        List all the users in your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_get(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :param limit: The maximum number of elements to return (use together with <code>offset</code> for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3217,24 +3219,24 @@ class UserManagementApi(object):
         return self.um_users_get_with_http_info(**kwargs)  # noqa: E501
 
     def um_users_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List all Users   # noqa: E501
+        """List all users   # noqa: E501
 
-        You can retrieve a complete list of users under your account  # noqa: E501
+        List all the users in your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with <code>offset</code> for pagination)
+        :param limit: The maximum number of elements to return (use together with <code>offset</code> for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3279,13 +3281,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_get" % key
+                    " to method um_users_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
@@ -3349,22 +3351,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_groups_get(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve a User's group resources  # noqa: E501
+        """Retrieve group resources by user ID  # noqa: E501
 
-        You can retrieve group resources of user by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        Retrieve group resources of the user by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_groups_get(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3385,22 +3387,22 @@ class UserManagementApi(object):
         return self.um_users_groups_get_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_groups_get_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve a User's group resources  # noqa: E501
+        """Retrieve group resources by user ID  # noqa: E501
 
-        You can retrieve group resources of user by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        Retrieve group resources of the user by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_groups_get_with_http_info(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3444,13 +3446,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_groups_get" % key
+                    " to method um_users_groups_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -3510,22 +3512,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_owns_get(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve a User's own resources  # noqa: E501
+        """Retrieve user resources by user ID  # noqa: E501
 
-        You can retrieve resources owned by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        Retrieve own resources of the user by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_owns_get(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3546,22 +3548,22 @@ class UserManagementApi(object):
         return self.um_users_owns_get_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_owns_get_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve a User's own resources  # noqa: E501
+        """Retrieve user resources by user ID  # noqa: E501
 
-        You can retrieve resources owned by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.  # noqa: E501
+        Retrieve own resources of the user by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_owns_get_with_http_info(user_id, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: The unique ID of the user (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3605,13 +3607,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_owns_get" % key
+                    " to method um_users_owns_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501
@@ -3671,22 +3673,22 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_post(self, user, **kwargs):  # noqa: E501
-        """Create a user  # noqa: E501
+        """Create users  # noqa: E501
 
-        You can use this POST method to create a user  # noqa: E501
+        Create a user.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_post(user, async_req=True)
         >>> result = thread.get()
 
-        :param user: User to be created (required)
+        :param user: The user to create. (required)
         :type user: UserPost
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3707,22 +3709,22 @@ class UserManagementApi(object):
         return self.um_users_post_with_http_info(user, **kwargs)  # noqa: E501
 
     def um_users_post_with_http_info(self, user, **kwargs):  # noqa: E501
-        """Create a user  # noqa: E501
+        """Create users  # noqa: E501
 
-        You can use this POST method to create a user  # noqa: E501
+        Create a user.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_post_with_http_info(user, async_req=True)
         >>> result = thread.get()
 
-        :param user: User to be created (required)
+        :param user: The user to create. (required)
         :type user: UserPost
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3766,13 +3768,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_post" % key
+                    " to method um_users_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user' is set
         if self.api_client.client_side_validation and ('user' not in local_var_params or  # noqa: E501
@@ -3836,24 +3838,24 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_put(self, user_id, user, **kwargs):  # noqa: E501
-        """Modify a user  # noqa: E501
+        """Modify users  # noqa: E501
 
-        You can use update attributes of a User  # noqa: E501
+        Modify the properties of the specified user.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_put(user_id, user, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param user: Modified user (required)
+        :param user: The modified user (required)
         :type user: UserPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3874,24 +3876,24 @@ class UserManagementApi(object):
         return self.um_users_put_with_http_info(user_id, user, **kwargs)  # noqa: E501
 
     def um_users_put_with_http_info(self, user_id, user, **kwargs):  # noqa: E501
-        """Modify a user  # noqa: E501
+        """Modify users  # noqa: E501
 
-        You can use update attributes of a User  # noqa: E501
+        Modify the properties of the specified user.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.um_users_put_with_http_info(user_id, user, async_req=True)
         >>> result = thread.get()
 
-        :param user_id: (required)
+        :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param user: Modified user (required)
+        :param user: The modified user (required)
         :type user: UserPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3936,13 +3938,13 @@ class UserManagementApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method um_users_put" % key
+                    " to method um_users_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'user_id' is set
         if self.api_client.client_side_validation and ('user_id' not in local_var_params or  # noqa: E501

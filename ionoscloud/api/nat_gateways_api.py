@@ -18,24 +18,24 @@ class NATGatewaysApi(object):
         self.api_client = api_client
 
     def datacenters_natgateways_delete(self, datacenter_id, nat_gateway_id, **kwargs):  # noqa: E501
-        """Remove a NAT gateway  # noqa: E501
+        """Delete NAT Gateways  # noqa: E501
 
-        Removes the specified NAT gateway.  # noqa: E501
+        Remove the specified NAT Gateway from the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_delete(datacenter_id, nat_gateway_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -56,24 +56,24 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_delete_with_http_info(datacenter_id, nat_gateway_id, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_delete_with_http_info(self, datacenter_id, nat_gateway_id, **kwargs):  # noqa: E501
-        """Remove a NAT gateway  # noqa: E501
+        """Delete NAT Gateways  # noqa: E501
 
-        Removes the specified NAT gateway.  # noqa: E501
+        Remove the specified NAT Gateway from the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_delete_with_http_info(datacenter_id, nat_gateway_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -118,13 +118,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_delete" % key
+                    " to method datacenters_natgateways_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -190,24 +190,24 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_find_by_nat_gateway_id(self, datacenter_id, nat_gateway_id, **kwargs):  # noqa: E501
-        """Retrieve a NAT gateway  # noqa: E501
+        """Retrieve NAT Gateways  # noqa: E501
 
-        Retrieves the attributes of a given NAT gateway.  # noqa: E501
+        Retrieve the properties of the specified NAT Gateway within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_find_by_nat_gateway_id(datacenter_id, nat_gateway_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -228,24 +228,24 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_find_by_nat_gateway_id_with_http_info(datacenter_id, nat_gateway_id, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_find_by_nat_gateway_id_with_http_info(self, datacenter_id, nat_gateway_id, **kwargs):  # noqa: E501
-        """Retrieve a NAT gateway  # noqa: E501
+        """Retrieve NAT Gateways  # noqa: E501
 
-        Retrieves the attributes of a given NAT gateway.  # noqa: E501
+        Retrieve the properties of the specified NAT Gateway within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_find_by_nat_gateway_id_with_http_info(datacenter_id, nat_gateway_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -290,13 +290,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_find_by_nat_gateway_id" % key
+                    " to method datacenters_natgateways_find_by_nat_gateway_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -362,24 +362,24 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_flowlogs_delete(self, datacenter_id, nat_gateway_id, flow_log_id, **kwargs):  # noqa: E501
-        """Remove Flow Log from NAT Gateway  # noqa: E501
+        """Delete NAT Gateway Flow Logs  # noqa: E501
 
-        This will remove a flow log from the NAT gateway.  # noqa: E501
+        Delete the specified NAT Gateway Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -400,24 +400,24 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_flowlogs_delete_with_http_info(datacenter_id, nat_gateway_id, flow_log_id, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_flowlogs_delete_with_http_info(self, datacenter_id, nat_gateway_id, flow_log_id, **kwargs):  # noqa: E501
-        """Remove Flow Log from NAT Gateway  # noqa: E501
+        """Delete NAT Gateway Flow Logs  # noqa: E501
 
-        This will remove a flow log from the NAT gateway.  # noqa: E501
+        Delete the specified NAT Gateway Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_delete_with_http_info(datacenter_id, nat_gateway_id, flow_log_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -462,13 +462,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_flowlogs_delete" % key
+                    " to method datacenters_natgateways_flowlogs_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -538,24 +538,24 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_flowlogs_find_by_flow_log_id(self, datacenter_id, nat_gateway_id, flow_log_id, **kwargs):  # noqa: E501
-        """Retrieve a Flow Log of the NAT Gateway  # noqa: E501
+        """Retrieve NAT Gateway Flow Logs  # noqa: E501
 
-        This will return a Flow Log of the NAT Gateway.  # noqa: E501
+        Retrieve the specified NAT Gateway Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_find_by_flow_log_id(datacenter_id, nat_gateway_id, flow_log_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -576,24 +576,24 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_flowlogs_find_by_flow_log_id_with_http_info(datacenter_id, nat_gateway_id, flow_log_id, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_flowlogs_find_by_flow_log_id_with_http_info(self, datacenter_id, nat_gateway_id, flow_log_id, **kwargs):  # noqa: E501
-        """Retrieve a Flow Log of the NAT Gateway  # noqa: E501
+        """Retrieve NAT Gateway Flow Logs  # noqa: E501
 
-        This will return a Flow Log of the NAT Gateway.  # noqa: E501
+        Retrieve the specified NAT Gateway Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_find_by_flow_log_id_with_http_info(datacenter_id, nat_gateway_id, flow_log_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -638,13 +638,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_flowlogs_find_by_flow_log_id" % key
+                    " to method datacenters_natgateways_flowlogs_find_by_flow_log_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -716,24 +716,24 @@ class NATGatewaysApi(object):
     def datacenters_natgateways_flowlogs_get(self, datacenter_id, nat_gateway_id, **kwargs):  # noqa: E501
         """List NAT Gateway Flow Logs  # noqa: E501
 
-        You can retrieve a list of Flow Logs of the NAT Gateway.  # noqa: E501
+        List all the Flow Logs for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_get(datacenter_id, nat_gateway_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -756,24 +756,24 @@ class NATGatewaysApi(object):
     def datacenters_natgateways_flowlogs_get_with_http_info(self, datacenter_id, nat_gateway_id, **kwargs):  # noqa: E501
         """List NAT Gateway Flow Logs  # noqa: E501
 
-        You can retrieve a list of Flow Logs of the NAT Gateway.  # noqa: E501
+        List all the Flow Logs for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_get_with_http_info(datacenter_id, nat_gateway_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param offset: the first element (of the total list of elements) to include in the response (use together with limit for pagination)
+        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
         :type offset: int
-        :param limit: the maximum number of elements to return (use together with offset for pagination)
+        :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -819,13 +819,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_flowlogs_get" % key
+                    " to method datacenters_natgateways_flowlogs_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -899,26 +899,26 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_flowlogs_patch(self, datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log_properties, **kwargs):  # noqa: E501
-        """Partially modify a Flow Log of the NAT Gateway  # noqa: E501
+        """Partially modify NAT Gateway Flow Logs  # noqa: E501
 
-        You can use to partially update a Flow Log of a NAT Gateway.  # noqa: E501
+        Update the properties of the specified NAT Gateway Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_patch(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param nat_gateway_flow_log_properties: Properties of a Flow Log to be updated (required)
+        :param nat_gateway_flow_log_properties: The properties of the Flow Log to be updated. (required)
         :type nat_gateway_flow_log_properties: FlowLogProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -939,26 +939,26 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_flowlogs_patch_with_http_info(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log_properties, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_flowlogs_patch_with_http_info(self, datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log_properties, **kwargs):  # noqa: E501
-        """Partially modify a Flow Log of the NAT Gateway  # noqa: E501
+        """Partially modify NAT Gateway Flow Logs  # noqa: E501
 
-        You can use to partially update a Flow Log of a NAT Gateway.  # noqa: E501
+        Update the properties of the specified NAT Gateway Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_patch_with_http_info(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param nat_gateway_flow_log_properties: Properties of a Flow Log to be updated (required)
+        :param nat_gateway_flow_log_properties: The properties of the Flow Log to be updated. (required)
         :type nat_gateway_flow_log_properties: FlowLogProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1004,13 +1004,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_flowlogs_patch" % key
+                    " to method datacenters_natgateways_flowlogs_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1086,24 +1086,24 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_flowlogs_post(self, datacenter_id, nat_gateway_id, nat_gateway_flow_log, **kwargs):  # noqa: E501
-        """Add a NAT Gateways Flow Log  # noqa: E501
+        """Create NAT Gateway Flow Logs  # noqa: E501
 
-        This will add a new Flow Log to the NAT Gateway.  # noqa: E501
+        Add a new Flow Log for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_post(datacenter_id, nat_gateway_id, nat_gateway_flow_log, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_flow_log: Flow Log to add on NAT Gateway (required)
+        :param nat_gateway_flow_log: The Flow Log to create. (required)
         :type nat_gateway_flow_log: FlowLog
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1124,24 +1124,24 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_flowlogs_post_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_flow_log, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_flowlogs_post_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_flow_log, **kwargs):  # noqa: E501
-        """Add a NAT Gateways Flow Log  # noqa: E501
+        """Create NAT Gateway Flow Logs  # noqa: E501
 
-        This will add a new Flow Log to the NAT Gateway.  # noqa: E501
+        Add a new Flow Log for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_post_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_flow_log, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_flow_log: Flow Log to add on NAT Gateway (required)
+        :param nat_gateway_flow_log: The Flow Log to create. (required)
         :type nat_gateway_flow_log: FlowLog
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1186,13 +1186,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_flowlogs_post" % key
+                    " to method datacenters_natgateways_flowlogs_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1266,26 +1266,26 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_flowlogs_put(self, datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log, **kwargs):  # noqa: E501
-        """Modify a Flow Log of the NAT Gateway  # noqa: E501
+        """Modify NAT Gateway Flow Logs  # noqa: E501
 
-        You can use to update a Flow Log of the NAT Gateway.  # noqa: E501
+        Modify the specified NAT Gateway Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_put(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param nat_gateway_flow_log: Modified NAT Gateway Flow Log (required)
+        :param nat_gateway_flow_log: The modified NAT Gateway Flow Log. (required)
         :type nat_gateway_flow_log: FlowLogPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1306,26 +1306,26 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_flowlogs_put_with_http_info(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_flowlogs_put_with_http_info(self, datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log, **kwargs):  # noqa: E501
-        """Modify a Flow Log of the NAT Gateway  # noqa: E501
+        """Modify NAT Gateway Flow Logs  # noqa: E501
 
-        You can use to update a Flow Log of the NAT Gateway.  # noqa: E501
+        Modify the specified NAT Gateway Flow Log.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_flowlogs_put_with_http_info(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param flow_log_id: The unique ID of the flow log (required)
+        :param flow_log_id: The unique ID of the Flow Log. (required)
         :type flow_log_id: str
-        :param nat_gateway_flow_log: Modified NAT Gateway Flow Log (required)
+        :param nat_gateway_flow_log: The modified NAT Gateway Flow Log. (required)
         :type nat_gateway_flow_log: FlowLogPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1371,13 +1371,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_flowlogs_put" % key
+                    " to method datacenters_natgateways_flowlogs_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1459,20 +1459,20 @@ class NATGatewaysApi(object):
     def datacenters_natgateways_get(self, datacenter_id, **kwargs):  # noqa: E501
         """List NAT Gateways  # noqa: E501
 
-        Retrieve a list of NAT Gateways within the datacenter.  # noqa: E501
+        List all NAT Gateways within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_get(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1495,20 +1495,20 @@ class NATGatewaysApi(object):
     def datacenters_natgateways_get_with_http_info(self, datacenter_id, **kwargs):  # noqa: E501
         """List NAT Gateways  # noqa: E501
 
-        Retrieve a list of NAT Gateways within the datacenter.  # noqa: E501
+        List all NAT Gateways within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_get_with_http_info(datacenter_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1552,13 +1552,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_get" % key
+                    " to method datacenters_natgateways_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1618,26 +1618,26 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_patch(self, datacenter_id, nat_gateway_id, nat_gateway_properties, **kwargs):  # noqa: E501
-        """Partially update a NAT gateway  # noqa: E501
+        """Partially modify NAT Gateways  # noqa: E501
 
-        Partially update the attributes of a given NAT gateway  # noqa: E501
+        Update the properties of the specified NAT Gateway within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_patch(datacenter_id, nat_gateway_id, nat_gateway_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_properties: NAT gateway properties to be updated (required)
+        :param nat_gateway_properties: The properties of the NAT Gateway to be updated. (required)
         :type nat_gateway_properties: NatGatewayProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1658,26 +1658,26 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_patch_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_properties, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_patch_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_properties, **kwargs):  # noqa: E501
-        """Partially update a NAT gateway  # noqa: E501
+        """Partially modify NAT Gateways  # noqa: E501
 
-        Partially update the attributes of a given NAT gateway  # noqa: E501
+        Update the properties of the specified NAT Gateway within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_patch_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_properties: NAT gateway properties to be updated (required)
+        :param nat_gateway_properties: The properties of the NAT Gateway to be updated. (required)
         :type nat_gateway_properties: NatGatewayProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1723,13 +1723,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_patch" % key
+                    " to method datacenters_natgateways_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1801,24 +1801,24 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_post(self, datacenter_id, nat_gateway, **kwargs):  # noqa: E501
-        """Create a NAT Gateway  # noqa: E501
+        """Create NAT Gateways  # noqa: E501
 
-        Creates a NAT Gateway within the datacenter. User should be the contract owner or a admin or a user with createInternetAccess privilege  # noqa: E501
+        Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with 'createInternetAccess' privileges.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_post(datacenter_id, nat_gateway, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway: NAT gateway to be created (required)
+        :param nat_gateway: The NAT Gateway to create. (required)
         :type nat_gateway: NatGateway
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1839,24 +1839,24 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_post_with_http_info(datacenter_id, nat_gateway, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_post_with_http_info(self, datacenter_id, nat_gateway, **kwargs):  # noqa: E501
-        """Create a NAT Gateway  # noqa: E501
+        """Create NAT Gateways  # noqa: E501
 
-        Creates a NAT Gateway within the datacenter. User should be the contract owner or a admin or a user with createInternetAccess privilege  # noqa: E501
+        Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with 'createInternetAccess' privileges.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_post_with_http_info(datacenter_id, nat_gateway, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway: NAT gateway to be created (required)
+        :param nat_gateway: The NAT Gateway to create. (required)
         :type nat_gateway: NatGateway
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1901,13 +1901,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_post" % key
+                    " to method datacenters_natgateways_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -1977,26 +1977,26 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_put(self, datacenter_id, nat_gateway_id, nat_gateway, **kwargs):  # noqa: E501
-        """Update a NAT gateway  # noqa: E501
+        """Modify NAT Gateways  # noqa: E501
 
-        Update the attributes of a given NAT gateway  # noqa: E501
+        Modify the properties of the specified NAT Gateway within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway: Modified NAT Gateway (required)
+        :param nat_gateway: The modified NAT Gateway. (required)
         :type nat_gateway: NatGatewayPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2017,26 +2017,26 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_put_with_http_info(datacenter_id, nat_gateway_id, nat_gateway, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_put_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway, **kwargs):  # noqa: E501
-        """Update a NAT gateway  # noqa: E501
+        """Modify NAT Gateways  # noqa: E501
 
-        Update the attributes of a given NAT gateway  # noqa: E501
+        Modify the properties of the specified NAT Gateway within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_put_with_http_info(datacenter_id, nat_gateway_id, nat_gateway, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway: Modified NAT Gateway (required)
+        :param nat_gateway: The modified NAT Gateway. (required)
         :type nat_gateway: NatGatewayPut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2082,13 +2082,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_put" % key
+                    " to method datacenters_natgateways_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2164,26 +2164,26 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_delete(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, **kwargs):  # noqa: E501
-        """Remove rule from NAT Gateway  # noqa: E501
+        """Delete NAT Gateway rules  # noqa: E501
 
-        This will remove a rule from the NAT gateway.  # noqa: E501
+        Delete the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule_id: The unique ID of the NAT gateway rule (required)
+        :param nat_gateway_rule_id: The unique ID of the NAT Gateway rule. (required)
         :type nat_gateway_rule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2204,26 +2204,26 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_delete_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_delete_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, **kwargs):  # noqa: E501
-        """Remove rule from NAT Gateway  # noqa: E501
+        """Delete NAT Gateway rules  # noqa: E501
 
-        This will remove a rule from the NAT gateway.  # noqa: E501
+        Delete the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_delete_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule_id: The unique ID of the NAT gateway rule (required)
+        :param nat_gateway_rule_id: The unique ID of the NAT Gateway rule. (required)
         :type nat_gateway_rule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2269,13 +2269,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_rules_delete" % key
+                    " to method datacenters_natgateways_rules_delete" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2347,26 +2347,26 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_find_by_nat_gateway_rule_id(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, **kwargs):  # noqa: E501
-        """Retrieve a NAT Gateway Rule  # noqa: E501
+        """Retrieve NAT Gateway rules  # noqa: E501
 
-        Retrieves the attributes of a given NAT gateway rule.  # noqa: E501
+        Retrieve the properties of the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_find_by_nat_gateway_rule_id(datacenter_id, nat_gateway_id, nat_gateway_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule_id: The unique ID of the NAT gateway rule (required)
+        :param nat_gateway_rule_id: The unique ID of the NAT Gateway rule. (required)
         :type nat_gateway_rule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2387,26 +2387,26 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_find_by_nat_gateway_rule_id_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_find_by_nat_gateway_rule_id_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, **kwargs):  # noqa: E501
-        """Retrieve a NAT Gateway Rule  # noqa: E501
+        """Retrieve NAT Gateway rules  # noqa: E501
 
-        Retrieves the attributes of a given NAT gateway rule.  # noqa: E501
+        Retrieve the properties of the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_find_by_nat_gateway_rule_id_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule_id: The unique ID of the NAT gateway rule (required)
+        :param nat_gateway_rule_id: The unique ID of the NAT Gateway rule. (required)
         :type nat_gateway_rule_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2452,13 +2452,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_rules_find_by_nat_gateway_rule_id" % key
+                    " to method datacenters_natgateways_rules_find_by_nat_gateway_rule_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2530,24 +2530,24 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_get(self, datacenter_id, nat_gateway_id, **kwargs):  # noqa: E501
-        """List NAT Gateways Rules  # noqa: E501
+        """List NAT Gateway rules  # noqa: E501
 
-        Retrieve a list of rules of a NAT Gateway within the datacenter.  # noqa: E501
+        List all rules for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_get(datacenter_id, nat_gateway_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2568,24 +2568,24 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_get_with_http_info(datacenter_id, nat_gateway_id, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_get_with_http_info(self, datacenter_id, nat_gateway_id, **kwargs):  # noqa: E501
-        """List NAT Gateways Rules  # noqa: E501
+        """List NAT Gateway rules  # noqa: E501
 
-        Retrieve a list of rules of a NAT Gateway within the datacenter.  # noqa: E501
+        List all rules for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_get_with_http_info(datacenter_id, nat_gateway_id, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2630,13 +2630,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_rules_get" % key
+                    " to method datacenters_natgateways_rules_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2702,28 +2702,28 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_patch(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, **kwargs):  # noqa: E501
-        """Partially modify a rule of the NAT gateway  # noqa: E501
+        """Partially modify NAT Gateway rules  # noqa: E501
 
-        You can use to partially update a rule of a NAT gateway.  # noqa: E501
+        Update the properties of the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_patch(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule_id: The unique ID of the NAT gateway rule (required)
+        :param nat_gateway_rule_id: The unique ID of the NAT Gateway rule. (required)
         :type nat_gateway_rule_id: str
-        :param nat_gateway_rule_properties: Properties of a NAT gateway rule to be updated (required)
+        :param nat_gateway_rule_properties: The properties of the NAT Gateway rule to be updated. (required)
         :type nat_gateway_rule_properties: NatGatewayRuleProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2744,28 +2744,28 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_patch_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_patch_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, **kwargs):  # noqa: E501
-        """Partially modify a rule of the NAT gateway  # noqa: E501
+        """Partially modify NAT Gateway rules  # noqa: E501
 
-        You can use to partially update a rule of a NAT gateway.  # noqa: E501
+        Update the properties of the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_patch_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule_id: The unique ID of the NAT gateway rule (required)
+        :param nat_gateway_rule_id: The unique ID of the NAT Gateway rule. (required)
         :type nat_gateway_rule_id: str
-        :param nat_gateway_rule_properties: Properties of a NAT gateway rule to be updated (required)
+        :param nat_gateway_rule_properties: The properties of the NAT Gateway rule to be updated. (required)
         :type nat_gateway_rule_properties: NatGatewayRuleProperties
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2812,13 +2812,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_rules_patch" % key
+                    " to method datacenters_natgateways_rules_patch" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -2896,26 +2896,26 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_post(self, datacenter_id, nat_gateway_id, nat_gateway_rule, **kwargs):  # noqa: E501
-        """Create a NAT Gateway Rule  # noqa: E501
+        """Create NAT Gateway rules  # noqa: E501
 
-        Creates a rule within the NAT Gateway of a datacenter.  # noqa: E501
+        Create a rule for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_post(datacenter_id, nat_gateway_id, nat_gateway_rule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule: NAT gateway rule to be created (required)
+        :param nat_gateway_rule: The NAT Gateway rule to create. (required)
         :type nat_gateway_rule: NatGatewayRule
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2936,26 +2936,26 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_post_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_post_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_rule, **kwargs):  # noqa: E501
-        """Create a NAT Gateway Rule  # noqa: E501
+        """Create NAT Gateway rules  # noqa: E501
 
-        Creates a rule within the NAT Gateway of a datacenter.  # noqa: E501
+        Create a rule for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_post_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule: NAT gateway rule to be created (required)
+        :param nat_gateway_rule: The NAT Gateway rule to create. (required)
         :type nat_gateway_rule: NatGatewayRule
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3001,13 +3001,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_rules_post" % key
+                    " to method datacenters_natgateways_rules_post" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501
@@ -3083,28 +3083,28 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_put(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, **kwargs):  # noqa: E501
-        """Modify a rule of the NAT gateway  # noqa: E501
+        """Modify NAT Gateway rules  # noqa: E501
 
-        You can use to update a rule of the NAT gateway.  # noqa: E501
+        Modify the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_put(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule_id: The unique ID of the NAT gateway rule (required)
+        :param nat_gateway_rule_id: The unique ID of the NAT Gateway rule. (required)
         :type nat_gateway_rule_id: str
-        :param nat_gateway_rule: Modified NAT Gateway Rule (required)
+        :param nat_gateway_rule: The modified NAT Gateway rule. (required)
         :type nat_gateway_rule: NatGatewayRulePut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3125,28 +3125,28 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_put_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_put_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, **kwargs):  # noqa: E501
-        """Modify a rule of the NAT gateway  # noqa: E501
+        """Modify NAT Gateway rules  # noqa: E501
 
-        You can use to update a rule of the NAT gateway.  # noqa: E501
+        Modify the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.datacenters_natgateways_rules_put_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, async_req=True)
         >>> result = thread.get()
 
-        :param datacenter_id: The unique ID of the datacenter (required)
+        :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
-        :param nat_gateway_id: The unique ID of the NAT gateway (required)
+        :param nat_gateway_id: The unique ID of the NAT Gateway. (required)
         :type nat_gateway_id: str
-        :param nat_gateway_rule_id: The unique ID of the NAT gateway rule (required)
+        :param nat_gateway_rule_id: The unique ID of the NAT Gateway rule. (required)
         :type nat_gateway_rule_id: str
-        :param nat_gateway_rule: Modified NAT Gateway Rule (required)
+        :param nat_gateway_rule: The modified NAT Gateway rule. (required)
         :type nat_gateway_rule: NatGatewayRulePut
-        :param pretty: Controls whether response is pretty-printed (with indentation and new lines)
+        :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3193,13 +3193,13 @@ class NATGatewaysApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method datacenters_natgateways_rules_put" % key
+                    " to method datacenters_natgateways_rules_put" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'datacenter_id' is set
         if self.api_client.client_side_validation and ('datacenter_id' not in local_var_params or  # noqa: E501

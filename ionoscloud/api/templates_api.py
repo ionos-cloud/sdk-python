@@ -18,18 +18,18 @@ class TemplatesApi(object):
         self.api_client = api_client
 
     def templates_find_by_id(self, template_id, **kwargs):  # noqa: E501
-        """Retrieve an available template  # noqa: E501
+        """Retrieve Cubes Templates  # noqa: E501
 
-        Retrieves the attributes of a given template.  # noqa: E501
+        Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.templates_find_by_id(template_id, async_req=True)
         >>> result = thread.get()
 
-        :param template_id: (required)
+        :param template_id: The unique Template ID. (required)
         :type template_id: str
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -50,18 +50,18 @@ class TemplatesApi(object):
         return self.templates_find_by_id_with_http_info(template_id, **kwargs)  # noqa: E501
 
     def templates_find_by_id_with_http_info(self, template_id, **kwargs):  # noqa: E501
-        """Retrieve an available template  # noqa: E501
+        """Retrieve Cubes Templates  # noqa: E501
 
-        Retrieves the attributes of a given template.  # noqa: E501
+        Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.templates_find_by_id_with_http_info(template_id, async_req=True)
         >>> result = thread.get()
 
-        :param template_id: (required)
+        :param template_id: The unique Template ID. (required)
         :type template_id: str
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -103,13 +103,13 @@ class TemplatesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method templates_find_by_id" % key
+                    " to method templates_find_by_id" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
         # verify the required parameter 'template_id' is set
         if self.api_client.client_side_validation and ('template_id' not in local_var_params or  # noqa: E501
@@ -165,16 +165,16 @@ class TemplatesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def templates_get(self, **kwargs):  # noqa: E501
-        """List Templates  # noqa: E501
+        """List Cubes Templates  # noqa: E501
 
-        Retrieve a list of available templates. Templates can be used on specific server types only (CUBE at the moment)  # noqa: E501
+        List all of the available Cubes Templates.  This operation is only supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.templates_get(async_req=True)
         >>> result = thread.get()
 
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -195,16 +195,16 @@ class TemplatesApi(object):
         return self.templates_get_with_http_info(**kwargs)  # noqa: E501
 
     def templates_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Templates  # noqa: E501
+        """List Cubes Templates  # noqa: E501
 
-        Retrieve a list of available templates. Templates can be used on specific server types only (CUBE at the moment)  # noqa: E501
+        List all of the available Cubes Templates.  This operation is only supported for the Cubes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.templates_get_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param depth: Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+        :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -245,13 +245,13 @@ class TemplatesApi(object):
             ]
         )
 
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
+        for local_var_params_key, local_var_params_val in six.iteritems(local_var_params['kwargs']):
+            if local_var_params_key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method templates_get" % key
+                    " to method templates_get" % local_var_params_key
                 )
-            local_var_params[key] = val
+            local_var_params[local_var_params_key] = local_var_params_val
         del local_var_params['kwargs']
 
         if self.api_client.client_side_validation and 'depth' in local_var_params and local_var_params['depth'] > 10:  # noqa: E501
