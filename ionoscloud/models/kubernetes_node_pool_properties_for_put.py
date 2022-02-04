@@ -296,7 +296,7 @@ class KubernetesNodePoolPropertiesForPut(object):
     def public_ips(self):
         """Gets the public_ips of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
 
-        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.  # noqa: E501
+        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.  # noqa: E501
 
         :return: The public_ips of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
         :rtype: list[str]
@@ -307,7 +307,7 @@ class KubernetesNodePoolPropertiesForPut(object):
     def public_ips(self, public_ips):
         """Sets the public_ips of this KubernetesNodePoolPropertiesForPut.
 
-        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.  # noqa: E501
+        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.  # noqa: E501
 
         :param public_ips: The public_ips of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
         :type public_ips: list[str]

@@ -120,7 +120,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def algorithm(self):
         """Gets the algorithm of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Algorithm for the balancing.  # noqa: E501
+        Balancing algorithm  # noqa: E501
 
         :return: The algorithm of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: str
@@ -131,7 +131,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def algorithm(self, algorithm):
         """Sets the algorithm of this NetworkLoadBalancerForwardingRuleProperties.
 
-        Algorithm for the balancing.  # noqa: E501
+        Balancing algorithm  # noqa: E501
 
         :param algorithm: The algorithm of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type algorithm: str
@@ -151,7 +151,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def protocol(self):
         """Gets the protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Protocol of the balancing.  # noqa: E501
+        Balancing protocol  # noqa: E501
 
         :return: The protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: str
@@ -162,7 +162,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def protocol(self, protocol):
         """Sets the protocol of this NetworkLoadBalancerForwardingRuleProperties.
 
-        Protocol of the balancing.  # noqa: E501
+        Balancing protocol  # noqa: E501
 
         :param protocol: The protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type protocol: str
@@ -182,7 +182,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def listener_ip(self):
         """Gets the listener_ip of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Listening IP. (inbound)  # noqa: E501
+        Listening (inbound) IP  # noqa: E501
 
         :return: The listener_ip of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: str
@@ -193,7 +193,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def listener_ip(self, listener_ip):
         """Sets the listener_ip of this NetworkLoadBalancerForwardingRuleProperties.
 
-        Listening IP. (inbound)  # noqa: E501
+        Listening (inbound) IP  # noqa: E501
 
         :param listener_ip: The listener_ip of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type listener_ip: str
@@ -207,7 +207,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def listener_port(self):
         """Gets the listener_port of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Listening port number. (inbound) (range: 1 to 65535)  # noqa: E501
+        Listening (inbound) port number; valid range is 1 to 65535.  # noqa: E501
 
         :return: The listener_port of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: int
@@ -218,7 +218,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def listener_port(self, listener_port):
         """Sets the listener_port of this NetworkLoadBalancerForwardingRuleProperties.
 
-        Listening port number. (inbound) (range: 1 to 65535)  # noqa: E501
+        Listening (inbound) port number; valid range is 1 to 65535.  # noqa: E501
 
         :param listener_port: The listener_port of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type listener_port: int
@@ -253,7 +253,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def targets(self):
         """Gets the targets of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :return: The targets of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: list[NetworkLoadBalancerForwardingRuleTarget]
@@ -264,7 +264,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def targets(self, targets):
         """Sets the targets of this NetworkLoadBalancerForwardingRuleProperties.
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :param targets: The targets of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type targets: list[NetworkLoadBalancerForwardingRuleTarget]

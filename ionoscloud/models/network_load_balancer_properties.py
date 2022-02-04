@@ -134,7 +134,7 @@ class NetworkLoadBalancerProperties(object):
     def ips(self):
         """Gets the ips of this NetworkLoadBalancerProperties.  # noqa: E501
 
-        Collection of IP addresses of the Network Load Balancer. (Inbound and outbound) IP of the listenerLan must be a customer reserved IP for the public Load Balancer and private IP for the private Load balancer.  # noqa: E501
+        Collection of the Network Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan must be customer-reserved IPs for public Load Balancers, and private IPs for private Load Balancers.  # noqa: E501
 
         :return: The ips of this NetworkLoadBalancerProperties.  # noqa: E501
         :rtype: list[str]
@@ -145,7 +145,7 @@ class NetworkLoadBalancerProperties(object):
     def ips(self, ips):
         """Sets the ips of this NetworkLoadBalancerProperties.
 
-        Collection of IP addresses of the Network Load Balancer. (Inbound and outbound) IP of the listenerLan must be a customer reserved IP for the public Load Balancer and private IP for the private Load balancer.  # noqa: E501
+        Collection of the Network Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan must be customer-reserved IPs for public Load Balancers, and private IPs for private Load Balancers.  # noqa: E501
 
         :param ips: The ips of this NetworkLoadBalancerProperties.  # noqa: E501
         :type ips: list[str]
@@ -182,7 +182,7 @@ class NetworkLoadBalancerProperties(object):
     def lb_private_ips(self):
         """Gets the lb_private_ips of this NetworkLoadBalancerProperties.  # noqa: E501
 
-        Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain valid subnet mask. If user will not provide any IP then the system will generate one IP with /24 subnet.  # noqa: E501
+        Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
 
         :return: The lb_private_ips of this NetworkLoadBalancerProperties.  # noqa: E501
         :rtype: list[str]
@@ -193,7 +193,7 @@ class NetworkLoadBalancerProperties(object):
     def lb_private_ips(self, lb_private_ips):
         """Sets the lb_private_ips of this NetworkLoadBalancerProperties.
 
-        Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain valid subnet mask. If user will not provide any IP then the system will generate one IP with /24 subnet.  # noqa: E501
+        Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
 
         :param lb_private_ips: The lb_private_ips of this NetworkLoadBalancerProperties.  # noqa: E501
         :type lb_private_ips: list[str]

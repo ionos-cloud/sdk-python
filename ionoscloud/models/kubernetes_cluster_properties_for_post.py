@@ -40,6 +40,8 @@ class KubernetesClusterPropertiesForPost(object):
 
         'maintenance_window': 'KubernetesMaintenanceWindow',
 
+        'public': 'bool',
+
         'api_subnet_allow_list': 'list[str]',
 
         's3_buckets': 'list[S3Bucket]',
@@ -53,12 +55,14 @@ class KubernetesClusterPropertiesForPost(object):
 
         'maintenance_window': 'maintenanceWindow',
 
+        'public': 'public',
+
         'api_subnet_allow_list': 'apiSubnetAllowList',
 
         's3_buckets': 's3Buckets',
     }
 
-    def __init__(self, name=None, k8s_version=None, maintenance_window=None, api_subnet_allow_list=None, s3_buckets=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, k8s_version=None, maintenance_window=None, public=True, api_subnet_allow_list=None, s3_buckets=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesClusterPropertiesForPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,6 +71,7 @@ class KubernetesClusterPropertiesForPost(object):
         self._name = None
         self._k8s_version = None
         self._maintenance_window = None
+        self._public = None
         self._api_subnet_allow_list = None
         self._s3_buckets = None
         self.discriminator = None
@@ -76,6 +81,8 @@ class KubernetesClusterPropertiesForPost(object):
             self.k8s_version = k8s_version
         if maintenance_window is not None:
             self.maintenance_window = maintenance_window
+        if public is not None:
+            self.public = public
         if api_subnet_allow_list is not None:
             self.api_subnet_allow_list = api_subnet_allow_list
         if s3_buckets is not None:
@@ -152,10 +159,33 @@ class KubernetesClusterPropertiesForPost(object):
         self._maintenance_window = maintenance_window
 
     @property
+    def public(self):
+        """Gets the public of this KubernetesClusterPropertiesForPost.  # noqa: E501
+
+        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
+
+        :return: The public of this KubernetesClusterPropertiesForPost.  # noqa: E501
+        :rtype: bool
+        """
+        return self._public
+
+    @public.setter
+    def public(self, public):
+        """Sets the public of this KubernetesClusterPropertiesForPost.
+
+        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
+
+        :param public: The public of this KubernetesClusterPropertiesForPost.  # noqa: E501
+        :type public: bool
+        """
+
+        self._public = public
+
+    @property
     def api_subnet_allow_list(self):
         """Gets the api_subnet_allow_list of this KubernetesClusterPropertiesForPost.  # noqa: E501
 
-        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
+        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
 
         :return: The api_subnet_allow_list of this KubernetesClusterPropertiesForPost.  # noqa: E501
         :rtype: list[str]
@@ -166,7 +196,7 @@ class KubernetesClusterPropertiesForPost(object):
     def api_subnet_allow_list(self, api_subnet_allow_list):
         """Sets the api_subnet_allow_list of this KubernetesClusterPropertiesForPost.
 
-        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
+        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
 
         :param api_subnet_allow_list: The api_subnet_allow_list of this KubernetesClusterPropertiesForPost.  # noqa: E501
         :type api_subnet_allow_list: list[str]

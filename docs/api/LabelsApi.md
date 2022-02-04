@@ -42,71 +42,29 @@ Delete the specified data center label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Delete data center labels
-        api_instance.datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_labels_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Delete data center labels
-        api_instance.datacenters_labels_delete(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_instance.datacenters_labels_delete(datacenter_id, key)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_delete: %s\n' % e)
 ```
@@ -119,7 +77,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
@@ -143,73 +101,30 @@ Retrieve the properties of the specified data center label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Retrieve data center labels
-        api_response = api_instance.datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_labels_find_by_key: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Retrieve data center labels
-        api_response = api_instance.datacenters_labels_find_by_key(datacenter_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_labels_find_by_key(datacenter_id, key)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_find_by_key: %s\n' % e)
 ```
@@ -222,11 +137,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -246,71 +161,29 @@ List all the the labels for the specified data center.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # List data center labels
-        api_response = api_instance.datacenters_labels_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_labels_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # List data center labels
-        api_response = api_instance.datacenters_labels_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_labels_get(datacenter_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_get: %s\n' % e)
 ```
@@ -322,11 +195,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -346,73 +219,30 @@ Add a new label to the specified data center.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Create data center labels
-        api_response = api_instance.datacenters_labels_post(datacenter_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_labels_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Create data center labels
-        api_response = api_instance.datacenters_labels_post(datacenter_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_labels_post(datacenter_id, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_post: %s\n' % e)
 ```
@@ -425,11 +255,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The label to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -449,75 +279,31 @@ Modify the specified data center label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    key = 'key_example' # str | The label key
-    label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Modify data center labels
-        api_response = api_instance.datacenters_labels_put(datacenter_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_labels_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     key = 'key_example' # str | The label key
     label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Modify data center labels
-        api_response = api_instance.datacenters_labels_put(datacenter_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_labels_put(datacenter_id, key, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_labels_put: %s\n' % e)
 ```
@@ -531,11 +317,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The modified label |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -555,73 +341,30 @@ Delete the specified server label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    server_id = 'server_id_example' # str | The unique ID of the server.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Delete server labels
-        api_instance.datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_servers_labels_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     server_id = 'server_id_example' # str | The unique ID of the server.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Delete server labels
-        api_instance.datacenters_servers_labels_delete(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_instance.datacenters_servers_labels_delete(datacenter_id, server_id, key)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_delete: %s\n' % e)
 ```
@@ -635,7 +378,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
@@ -659,75 +402,31 @@ Retrieve the properties of the specified server label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    server_id = 'server_id_example' # str | The unique ID of the server.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Retrieve server labels
-        api_response = api_instance.datacenters_servers_labels_find_by_key(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_servers_labels_find_by_key: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     server_id = 'server_id_example' # str | The unique ID of the server.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Retrieve server labels
-        api_response = api_instance.datacenters_servers_labels_find_by_key(datacenter_id, server_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_labels_find_by_key(datacenter_id, server_id, key)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_find_by_key: %s\n' % e)
 ```
@@ -741,11 +440,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -765,73 +464,30 @@ List all the the labels for the specified server.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    server_id = 'server_id_example' # str | The unique ID of the server.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # List server labels
-        api_response = api_instance.datacenters_servers_labels_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_servers_labels_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     server_id = 'server_id_example' # str | The unique ID of the server.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # List server labels
-        api_response = api_instance.datacenters_servers_labels_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_labels_get(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_get: %s\n' % e)
 ```
@@ -844,11 +500,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **server_id** | **str**| The unique ID of the server. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -868,75 +524,31 @@ Add a new label to the specified server.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    server_id = 'server_id_example' # str | The unique ID of the server.
-    label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Create server labels
-        api_response = api_instance.datacenters_servers_labels_post(datacenter_id, server_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_servers_labels_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     server_id = 'server_id_example' # str | The unique ID of the server.
     label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Create server labels
-        api_response = api_instance.datacenters_servers_labels_post(datacenter_id, server_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_labels_post(datacenter_id, server_id, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_post: %s\n' % e)
 ```
@@ -950,11 +562,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The label to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -974,63 +586,21 @@ Modify the specified server label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    server_id = 'server_id_example' # str | The unique ID of the server.
-    key = 'key_example' # str | The label key
-    label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Modify server labels
-        api_response = api_instance.datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_servers_labels_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
@@ -1038,13 +608,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     server_id = 'server_id_example' # str | The unique ID of the server.
     key = 'key_example' # str | The label key
     label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Modify server labels
-        api_response = api_instance.datacenters_servers_labels_put(datacenter_id, server_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_labels_put(datacenter_id, server_id, key, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_servers_labels_put: %s\n' % e)
 ```
@@ -1059,11 +626,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The modified label |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1083,73 +650,30 @@ Delete the specified volume label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    volume_id = 'volume_id_example' # str | The unique ID of the volume.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Delete volume labels
-        api_instance.datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_volumes_labels_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     volume_id = 'volume_id_example' # str | The unique ID of the volume.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Delete volume labels
-        api_instance.datacenters_volumes_labels_delete(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_instance.datacenters_volumes_labels_delete(datacenter_id, volume_id, key)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_volumes_labels_delete: %s\n' % e)
 ```
@@ -1163,7 +687,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
@@ -1187,75 +711,31 @@ Retrieve the properties of the specified volume label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    volume_id = 'volume_id_example' # str | The unique ID of the volume.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Retrieve volume labels
-        api_response = api_instance.datacenters_volumes_labels_find_by_key(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_volumes_labels_find_by_key: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     volume_id = 'volume_id_example' # str | The unique ID of the volume.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Retrieve volume labels
-        api_response = api_instance.datacenters_volumes_labels_find_by_key(datacenter_id, volume_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_volumes_labels_find_by_key(datacenter_id, volume_id, key)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_volumes_labels_find_by_key: %s\n' % e)
 ```
@@ -1269,11 +749,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1293,73 +773,30 @@ List all the the labels for the specified volume.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    volume_id = 'volume_id_example' # str | The unique ID of the volume.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # List volume labels
-        api_response = api_instance.datacenters_volumes_labels_get(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_volumes_labels_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     volume_id = 'volume_id_example' # str | The unique ID of the volume.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # List volume labels
-        api_response = api_instance.datacenters_volumes_labels_get(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_volumes_labels_get(datacenter_id, volume_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_volumes_labels_get: %s\n' % e)
 ```
@@ -1372,11 +809,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **volume_id** | **str**| The unique ID of the volume. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -1396,75 +833,31 @@ Add a new label to the specified volume.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    volume_id = 'volume_id_example' # str | The unique ID of the volume.
-    label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Create volume labels
-        api_response = api_instance.datacenters_volumes_labels_post(datacenter_id, volume_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_volumes_labels_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     volume_id = 'volume_id_example' # str | The unique ID of the volume.
     label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Create volume labels
-        api_response = api_instance.datacenters_volumes_labels_post(datacenter_id, volume_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_volumes_labels_post(datacenter_id, volume_id, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_volumes_labels_post: %s\n' % e)
 ```
@@ -1478,11 +871,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The label to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1502,63 +895,21 @@ Modify the specified volume label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    volume_id = 'volume_id_example' # str | The unique ID of the volume.
-    key = 'key_example' # str | The label key
-    label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Modify volume labels
-        api_response = api_instance.datacenters_volumes_labels_put(datacenter_id, volume_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.datacenters_volumes_labels_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
@@ -1566,13 +917,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     volume_id = 'volume_id_example' # str | The unique ID of the volume.
     key = 'key_example' # str | The label key
     label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Modify volume labels
-        api_response = api_instance.datacenters_volumes_labels_put(datacenter_id, volume_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_volumes_labels_put(datacenter_id, volume_id, key, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.datacenters_volumes_labels_put: %s\n' % e)
 ```
@@ -1587,11 +935,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The modified label |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1611,71 +959,29 @@ Delete the specified IP block label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Delete IP block labels
-        api_instance.ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.ipblocks_labels_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Delete IP block labels
-        api_instance.ipblocks_labels_delete(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_instance.ipblocks_labels_delete(ipblock_id, key)
     except ApiException as e:
         print('Exception when calling LabelsApi.ipblocks_labels_delete: %s\n' % e)
 ```
@@ -1688,7 +994,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
@@ -1712,73 +1018,30 @@ Retrieve the properties of the specified IP block label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Retrieve IP block labels
-        api_response = api_instance.ipblocks_labels_find_by_key(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.ipblocks_labels_find_by_key: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Retrieve IP block labels
-        api_response = api_instance.ipblocks_labels_find_by_key(ipblock_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.ipblocks_labels_find_by_key(ipblock_id, key)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.ipblocks_labels_find_by_key: %s\n' % e)
 ```
@@ -1791,11 +1054,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1815,71 +1078,29 @@ List all the the labels for the specified IP block.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # List IP block labels
-        api_response = api_instance.ipblocks_labels_get(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.ipblocks_labels_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # List IP block labels
-        api_response = api_instance.ipblocks_labels_get(ipblock_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.ipblocks_labels_get(ipblock_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.ipblocks_labels_get: %s\n' % e)
 ```
@@ -1891,11 +1112,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **ipblock_id** | **str**| The unique ID of the IP block. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -1915,73 +1136,30 @@ Add a new label to the specified IP block.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
-    label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Create IP block labels
-        api_response = api_instance.ipblocks_labels_post(ipblock_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.ipblocks_labels_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
     label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Create IP block labels
-        api_response = api_instance.ipblocks_labels_post(ipblock_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.ipblocks_labels_post(ipblock_id, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.ipblocks_labels_post: %s\n' % e)
 ```
@@ -1994,11 +1172,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The label to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -2018,75 +1196,31 @@ Modify the specified IP block label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
-    key = 'key_example' # str | The label key
-    label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Modify IP block labels
-        api_response = api_instance.ipblocks_labels_put(ipblock_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.ipblocks_labels_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
     key = 'key_example' # str | The label key
     label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Modify IP block labels
-        api_response = api_instance.ipblocks_labels_put(ipblock_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.ipblocks_labels_put(ipblock_id, key, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.ipblocks_labels_put: %s\n' % e)
 ```
@@ -2100,11 +1234,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The modified label |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -2124,71 +1258,29 @@ Retrieve a label by label URN.  The URN is unique for each label, and consists o
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    labelurn = 'labelurn_example' # str | The label URN; URN is unique for each label, and consists of:  urn:label:<resource_type>:<resource_uuid>:<key><key>
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Retrieve labels by URN
-        api_response = api_instance.labels_find_by_urn(labelurn, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.labels_find_by_urn: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     labelurn = 'labelurn_example' # str | The label URN; URN is unique for each label, and consists of:  urn:label:<resource_type>:<resource_uuid>:<key><key>
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Retrieve labels by URN
-        api_response = api_instance.labels_find_by_urn(labelurn, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.labels_find_by_urn(labelurn)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.labels_find_by_urn: %s\n' % e)
 ```
@@ -2200,11 +1292,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **labelurn** | **str**| The label URN; URN is unique for each label, and consists of:  urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt;&lt;key&gt; |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**Label**](Label.md)
+[**Label**](../models/Label.md)
 
 ### Authorization
 
@@ -2224,69 +1316,28 @@ List all available labels.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # List labels 
-        api_response = api_instance.labels_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.labels_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # List labels 
-        api_response = api_instance.labels_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.labels_get()
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.labels_get: %s\n' % e)
 ```
@@ -2297,11 +1348,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | ------------- | ------------- | ------------- | ------------- |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**Labels**](Labels.md)
+[**Labels**](../models/Labels.md)
 
 ### Authorization
 
@@ -2321,71 +1372,29 @@ Delete the specified snapshot label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Delete snapshot labels
-        api_instance.snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.snapshots_labels_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Delete snapshot labels
-        api_instance.snapshots_labels_delete(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_instance.snapshots_labels_delete(snapshot_id, key)
     except ApiException as e:
         print('Exception when calling LabelsApi.snapshots_labels_delete: %s\n' % e)
 ```
@@ -2398,7 +1407,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
@@ -2422,73 +1431,30 @@ Retrieve the properties of the specified snapshot label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
-    key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Retrieve snapshot labels
-        api_response = api_instance.snapshots_labels_find_by_key(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.snapshots_labels_find_by_key: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
     key = 'key_example' # str | The label key
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Retrieve snapshot labels
-        api_response = api_instance.snapshots_labels_find_by_key(snapshot_id, key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.snapshots_labels_find_by_key(snapshot_id, key)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.snapshots_labels_find_by_key: %s\n' % e)
 ```
@@ -2501,11 +1467,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **key** | **str**| The label key |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -2525,71 +1491,29 @@ List all the the labels for the specified snapshot.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # List snapshot labels
-        api_response = api_instance.snapshots_labels_get(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.snapshots_labels_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # List snapshot labels
-        api_response = api_instance.snapshots_labels_get(snapshot_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.snapshots_labels_get(snapshot_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.snapshots_labels_get: %s\n' % e)
 ```
@@ -2601,11 +1525,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **snapshot_id** | **str**| The unique ID of the snapshot. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -2625,73 +1549,30 @@ Add a new label to the specified snapshot.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
-    label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Create snapshot labels
-        api_response = api_instance.snapshots_labels_post(snapshot_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.snapshots_labels_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
     label = ionoscloud.LabelResource() # LabelResource | The label to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Create snapshot labels
-        api_response = api_instance.snapshots_labels_post(snapshot_id, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.snapshots_labels_post(snapshot_id, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.snapshots_labels_post: %s\n' % e)
 ```
@@ -2704,11 +1585,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The label to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -2728,75 +1609,31 @@ Modify the specified snapshot label.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.LabelsApi(api_client)
-    snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
-    key = 'key_example' # str | The label key
-    label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Modify snapshot labels
-        api_response = api_instance.snapshots_labels_put(snapshot_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling LabelsApi.snapshots_labels_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LabelsApi(api_client)
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
     key = 'key_example' # str | The label key
     label = ionoscloud.LabelResource() # LabelResource | The modified label
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Modify snapshot labels
-        api_response = api_instance.snapshots_labels_put(snapshot_id, key, label, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.snapshots_labels_put(snapshot_id, key, label)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling LabelsApi.snapshots_labels_put: %s\n' % e)
 ```
@@ -2810,11 +1647,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **label** | [**LabelResource**](LabelResource.md)| The modified label |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 

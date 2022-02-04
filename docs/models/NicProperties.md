@@ -9,8 +9,8 @@
 | **dhcp** | **bool** | Indicates if the NIC will reserve an IP using DHCP. | [optional]  |
 | **lan** | **int** | The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created. |  |
 | **firewall_active** | **bool** | Activate or deactivate the firewall. By default, an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, IP addresses and ports. | [optional]  |
-| **firewall_type** | **str** | The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken. | [optional]  |
-| **device_number** | **int** | The Logical Unit Number (LUN) of the storage volume. Null if this NIC was create from CloudAPI and no DCD changes were done on the Datacenter. | [optional] [readonly]  |
-| **pci_slot** | **int** | The PCI slot number of the NIC. | [optional] [readonly]  |
+| **firewall_type** | **str** | The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used. | [optional]  |
+| **device_number** | **int** | The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter. | [optional] [readonly]  |
+| **pci_slot** | **int** | The PCI slot number for the NIC. | [optional] [readonly]  |
 
 

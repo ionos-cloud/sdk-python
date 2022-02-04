@@ -73,7 +73,7 @@ class NetworkLoadBalancerForwardingRuleTargetHealthCheck(object):
     def check(self):
         """Gets the check of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
 
-        Check specifies whether the target VM's health is checked. If turned off, a target VM is always considered available. If turned on, the target VM is available when accepting periodic TCP connections, to ensure that it is really able to serve requests. The address and port to send the tests to are those of the target VM. The health check only consists of a connection attempt.  # noqa: E501
+        Makes the target available only if it accepts periodic health check TCP connection attempts; when turned off, the target is considered always available. The health check only consists of a connection attempt to the address and port of the target.  # noqa: E501
 
         :return: The check of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
         :rtype: bool
@@ -84,7 +84,7 @@ class NetworkLoadBalancerForwardingRuleTargetHealthCheck(object):
     def check(self, check):
         """Sets the check of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.
 
-        Check specifies whether the target VM's health is checked. If turned off, a target VM is always considered available. If turned on, the target VM is available when accepting periodic TCP connections, to ensure that it is really able to serve requests. The address and port to send the tests to are those of the target VM. The health check only consists of a connection attempt.  # noqa: E501
+        Makes the target available only if it accepts periodic health check TCP connection attempts; when turned off, the target is considered always available. The health check only consists of a connection attempt to the address and port of the target.  # noqa: E501
 
         :param check: The check of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
         :type check: bool
@@ -96,7 +96,7 @@ class NetworkLoadBalancerForwardingRuleTargetHealthCheck(object):
     def check_interval(self):
         """Gets the check_interval of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
 
-        CheckInterval determines the duration (in milliseconds) between consecutive health checks. If unspecified a default of 2000 ms is used.  # noqa: E501
+        The interval in milliseconds between consecutive health checks; default is 2000.  # noqa: E501
 
         :return: The check_interval of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
         :rtype: int
@@ -107,7 +107,7 @@ class NetworkLoadBalancerForwardingRuleTargetHealthCheck(object):
     def check_interval(self, check_interval):
         """Sets the check_interval of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.
 
-        CheckInterval determines the duration (in milliseconds) between consecutive health checks. If unspecified a default of 2000 ms is used.  # noqa: E501
+        The interval in milliseconds between consecutive health checks; default is 2000.  # noqa: E501
 
         :param check_interval: The check_interval of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
         :type check_interval: int
@@ -119,7 +119,7 @@ class NetworkLoadBalancerForwardingRuleTargetHealthCheck(object):
     def maintenance(self):
         """Gets the maintenance of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
 
-        Maintenance specifies if a target VM should be marked as down, even if it is not.  # noqa: E501
+        Maintenance mode prevents the target from receiving balanced traffic.  # noqa: E501
 
         :return: The maintenance of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
         :rtype: bool
@@ -130,7 +130,7 @@ class NetworkLoadBalancerForwardingRuleTargetHealthCheck(object):
     def maintenance(self, maintenance):
         """Sets the maintenance of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.
 
-        Maintenance specifies if a target VM should be marked as down, even if it is not.  # noqa: E501
+        Maintenance mode prevents the target from receiving balanced traffic.  # noqa: E501
 
         :param maintenance: The maintenance of this NetworkLoadBalancerForwardingRuleTargetHealthCheck.  # noqa: E501
         :type maintenance: bool

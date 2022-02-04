@@ -167,7 +167,7 @@ class Requests(object):
     def items(self):
         """Gets the items of this Requests.  # noqa: E501
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :return: The items of this Requests.  # noqa: E501
         :rtype: list[Request]
@@ -178,7 +178,7 @@ class Requests(object):
     def items(self, items):
         """Sets the items of this Requests.
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :param items: The items of this Requests.  # noqa: E501
         :type items: list[Request]
@@ -190,7 +190,7 @@ class Requests(object):
     def offset(self):
         """Gets the offset of this Requests.  # noqa: E501
 
-        The offset specified in the request (or, if none was specified, the default offset of 0)  # noqa: E501
+        The offset, specified in the request (if not is specified, 0 is used by default).  # noqa: E501
 
         :return: The offset of this Requests.  # noqa: E501
         :rtype: float
@@ -201,7 +201,7 @@ class Requests(object):
     def offset(self, offset):
         """Sets the offset of this Requests.
 
-        The offset specified in the request (or, if none was specified, the default offset of 0)  # noqa: E501
+        The offset, specified in the request (if not is specified, 0 is used by default).  # noqa: E501
 
         :param offset: The offset of this Requests.  # noqa: E501
         :type offset: float
@@ -215,7 +215,7 @@ class Requests(object):
     def limit(self):
         """Gets the limit of this Requests.  # noqa: E501
 
-        The limit specified in the request (if none was specified, use the endpoint's default pagination limit).  # noqa: E501
+        The limit, specified in the request (if not specified, the endpoint's default pagination limit is used).  # noqa: E501
 
         :return: The limit of this Requests.  # noqa: E501
         :rtype: float
@@ -226,7 +226,7 @@ class Requests(object):
     def limit(self, limit):
         """Sets the limit of this Requests.
 
-        The limit specified in the request (if none was specified, use the endpoint's default pagination limit).  # noqa: E501
+        The limit, specified in the request (if not specified, the endpoint's default pagination limit is used).  # noqa: E501
 
         :param limit: The limit of this Requests.  # noqa: E501
         :type limit: float

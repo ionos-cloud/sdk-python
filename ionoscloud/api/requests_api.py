@@ -33,7 +33,7 @@ class RequestsApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -69,7 +69,7 @@ class RequestsApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -192,7 +192,7 @@ class RequestsApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param filter_status: Filter the list by request status [QUEUED, RUNNING, DONE, FAILED]. Filter is not affected by the depth query parameter.
         :type filter_status: str
@@ -216,7 +216,7 @@ class RequestsApi(object):
         :type filter_body: str
         :param filter_url: Filter the list to only include the requests that contain the specified URL. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. 
         :type filter_url: str
-        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+        :param offset: The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
         :type offset: int
         :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
@@ -252,7 +252,7 @@ class RequestsApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param filter_status: Filter the list by request status [QUEUED, RUNNING, DONE, FAILED]. Filter is not affected by the depth query parameter.
         :type filter_status: str
@@ -276,7 +276,7 @@ class RequestsApi(object):
         :type filter_body: str
         :param filter_url: Filter the list to only include the requests that contain the specified URL. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. 
         :type filter_url: str
-        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+        :param offset: The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
         :type offset: int
         :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
@@ -441,7 +441,7 @@ class RequestsApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -477,7 +477,7 @@ class RequestsApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional

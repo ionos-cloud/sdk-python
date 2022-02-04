@@ -35,7 +35,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -73,7 +73,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -207,7 +207,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -245,7 +245,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -731,7 +731,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+        :param offset: The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
         :type offset: int
         :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
@@ -771,7 +771,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param offset: The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+        :param offset: The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
         :type offset: int
         :param limit: The maximum number of elements to return (use together with offset for pagination).
         :type limit: int
@@ -1472,7 +1472,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1508,7 +1508,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1637,7 +1637,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1677,7 +1677,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1818,7 +1818,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1856,7 +1856,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1996,7 +1996,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2036,7 +2036,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2183,7 +2183,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2223,7 +2223,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2366,7 +2366,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2406,7 +2406,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2547,7 +2547,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2585,7 +2585,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2723,7 +2723,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2765,7 +2765,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2915,7 +2915,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2955,7 +2955,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3104,7 +3104,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -3146,7 +3146,7 @@ class NATGatewaysApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional

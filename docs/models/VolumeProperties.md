@@ -11,7 +11,7 @@
 | **image_password** | **str** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9. | [optional]  |
 | **image_alias** | **str** |  | [optional]  |
 | **ssh_keys** | **list[str]** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. | [optional]  |
-| **bus** | **str** | The bus type of the volume. Default is VIRTIO | [optional]  |
+| **bus** | **str** | The bus type for this volume; default is VIRTIO. | [optional]  |
 | **licence_type** | **str** | OS type for this volume. | [optional] [readonly]  |
 | **cpu_hot_plug** | **bool** | Hot-plug capable CPU (no reboot required). | [optional]  |
 | **ram_hot_plug** | **bool** | Hot-plug capable RAM (no reboot required). | [optional]  |
@@ -23,5 +23,6 @@
 | **pci_slot** | **int** | The PCI slot number of the storage volume. Null for volumes, not mounted to a VM. | [optional] [readonly]  |
 | **backupunit_id** | **str** | The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property. | [optional]  |
 | **user_data** | **str** | The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; that has cloud-init compatibility in conjunction with this property. | [optional]  |
+| **boot_server** | **str** | The UUID of the attached server. | [optional] [readonly]  |
 
 

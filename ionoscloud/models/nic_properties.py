@@ -95,8 +95,7 @@ class NicProperties(object):
             self.name = name
         if mac is not None:
             self.mac = mac
-        if ips is not None:
-            self.ips = ips
+        self.ips = ips
         if dhcp is not None:
             self.dhcp = dhcp
         self.lan = lan
@@ -254,7 +253,7 @@ class NicProperties(object):
     def firewall_type(self):
         """Gets the firewall_type of this NicProperties.  # noqa: E501
 
-        The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.  # noqa: E501
+        The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used.  # noqa: E501
 
         :return: The firewall_type of this NicProperties.  # noqa: E501
         :rtype: str
@@ -265,7 +264,7 @@ class NicProperties(object):
     def firewall_type(self, firewall_type):
         """Sets the firewall_type of this NicProperties.
 
-        The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.  # noqa: E501
+        The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used.  # noqa: E501
 
         :param firewall_type: The firewall_type of this NicProperties.  # noqa: E501
         :type firewall_type: str
@@ -283,7 +282,7 @@ class NicProperties(object):
     def device_number(self):
         """Gets the device_number of this NicProperties.  # noqa: E501
 
-        The Logical Unit Number (LUN) of the storage volume. Null if this NIC was create from CloudAPI and no DCD changes were done on the Datacenter.  # noqa: E501
+        The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.  # noqa: E501
 
         :return: The device_number of this NicProperties.  # noqa: E501
         :rtype: int
@@ -294,7 +293,7 @@ class NicProperties(object):
     def device_number(self, device_number):
         """Sets the device_number of this NicProperties.
 
-        The Logical Unit Number (LUN) of the storage volume. Null if this NIC was create from CloudAPI and no DCD changes were done on the Datacenter.  # noqa: E501
+        The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.  # noqa: E501
 
         :param device_number: The device_number of this NicProperties.  # noqa: E501
         :type device_number: int
@@ -306,7 +305,7 @@ class NicProperties(object):
     def pci_slot(self):
         """Gets the pci_slot of this NicProperties.  # noqa: E501
 
-        The PCI slot number of the NIC.  # noqa: E501
+        The PCI slot number for the NIC.  # noqa: E501
 
         :return: The pci_slot of this NicProperties.  # noqa: E501
         :rtype: int
@@ -317,7 +316,7 @@ class NicProperties(object):
     def pci_slot(self, pci_slot):
         """Sets the pci_slot of this NicProperties.
 
-        The PCI slot number of the NIC.  # noqa: E501
+        The PCI slot number for the NIC.  # noqa: E501
 
         :param pci_slot: The pci_slot of this NicProperties.  # noqa: E501
         :type pci_slot: int

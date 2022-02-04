@@ -99,16 +99,11 @@ class FirewallruleProperties(object):
         if name is not None:
             self.name = name
         self.protocol = protocol
-        if source_mac is not None:
-            self.source_mac = source_mac
-        if source_ip is not None:
-            self.source_ip = source_ip
-        if target_ip is not None:
-            self.target_ip = target_ip
-        if icmp_code is not None:
-            self.icmp_code = icmp_code
-        if icmp_type is not None:
-            self.icmp_type = icmp_type
+        self.source_mac = source_mac
+        self.source_ip = source_ip
+        self.target_ip = target_ip
+        self.icmp_code = icmp_code
+        self.icmp_type = icmp_type
         if port_range_start is not None:
             self.port_range_start = port_range_start
         if port_range_end is not None:
@@ -369,7 +364,7 @@ class FirewallruleProperties(object):
     def type(self):
         """Gets the type of this FirewallruleProperties.  # noqa: E501
 
-        The type of firewall rule. If not specified, the default INGRESS value is taken.  # noqa: E501
+        The type of the firewall rule. If not specified, the default INGRESS value is used.  # noqa: E501
 
         :return: The type of this FirewallruleProperties.  # noqa: E501
         :rtype: str
@@ -380,7 +375,7 @@ class FirewallruleProperties(object):
     def type(self, type):
         """Sets the type of this FirewallruleProperties.
 
-        The type of firewall rule. If not specified, the default INGRESS value is taken.  # noqa: E501
+        The type of the firewall rule. If not specified, the default INGRESS value is used.  # noqa: E501
 
         :param type: The type of this FirewallruleProperties.  # noqa: E501
         :type type: str

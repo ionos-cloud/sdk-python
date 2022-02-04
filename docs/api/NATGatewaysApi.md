@@ -33,71 +33,29 @@ Remove the specified NAT Gateway from the data center.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Delete NAT Gateways
-        api_instance.datacenters_natgateways_delete(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Delete NAT Gateways
-        api_instance.datacenters_natgateways_delete(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_instance.datacenters_natgateways_delete(datacenter_id, nat_gateway_id)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_delete: %s\n' % e)
 ```
@@ -110,7 +68,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_id** | **str**| The unique ID of the NAT Gateway. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
@@ -134,73 +92,30 @@ Retrieve the properties of the specified NAT Gateway within the data center.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Retrieve NAT Gateways
-        api_response = api_instance.datacenters_natgateways_find_by_nat_gateway_id(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_find_by_nat_gateway_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Retrieve NAT Gateways
-        api_response = api_instance.datacenters_natgateways_find_by_nat_gateway_id(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_find_by_nat_gateway_id(datacenter_id, nat_gateway_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_find_by_nat_gateway_id: %s\n' % e)
 ```
@@ -213,11 +128,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_id** | **str**| The unique ID of the NAT Gateway. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGateway**](NatGateway.md)
+[**NatGateway**](../models/NatGateway.md)
 
 ### Authorization
 
@@ -237,71 +152,30 @@ Delete the specified NAT Gateway Flow Log.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    try:
-        # Delete NAT Gateway Flow Logs
-        api_instance.datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     try:
         # Delete NAT Gateway Flow Logs
-        api_instance.datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
+        api_instance.datacenters_natgateways_flowlogs_delete(datacenter_id, nat_gateway_id, flow_log_id)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_delete: %s\n' % e)
 ```
@@ -338,73 +212,31 @@ Retrieve the specified NAT Gateway Flow Log.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    try:
-        # Retrieve NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_find_by_flow_log_id(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_find_by_flow_log_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     try:
         # Retrieve NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_find_by_flow_log_id(datacenter_id, nat_gateway_id, flow_log_id, pretty=pretty, depth=depth)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_flowlogs_find_by_flow_log_id(datacenter_id, nat_gateway_id, flow_log_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_find_by_flow_log_id: %s\n' % e)
 ```
@@ -421,7 +253,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**FlowLog**](FlowLog.md)
+[**FlowLog**](../models/FlowLog.md)
 
 ### Authorization
 
@@ -441,75 +273,30 @@ List all the Flow Logs for the specified NAT Gateway.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    offset = 0 # int | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional) (default to 0)
-    limit = 1000 # int | The maximum number of elements to return (use together with offset for pagination). (optional) (default to 1000)
-    try:
-        # List NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_get(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, offset=offset, limit=limit)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    offset = 0 # int | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional) (default to 0)
-    limit = 1000 # int | The maximum number of elements to return (use together with offset for pagination). (optional) (default to 1000)
     try:
         # List NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_get(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, offset=offset, limit=limit)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_flowlogs_get(datacenter_id, nat_gateway_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_get: %s\n' % e)
 ```
@@ -522,12 +309,12 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_id** | **str**| The unique ID of the NAT Gateway. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **offset** | **int**| The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional] [default to 0] |
+| **offset** | **int**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0] |
 | **limit** | **int**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000] |
 
 ### Return type
 
-[**FlowLogs**](FlowLogs.md)
+[**FlowLogs**](../models/FlowLogs.md)
 
 ### Authorization
 
@@ -547,62 +334,21 @@ Update the properties of the specified NAT Gateway Flow Log.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log.
-    nat_gateway_flow_log_properties = ionoscloud.FlowLogProperties() # FlowLogProperties | The properties of the Flow Log to be updated.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    try:
-        # Partially modify NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_patch(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log_properties, pretty=pretty, depth=depth)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_patch: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
@@ -610,12 +356,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log.
     nat_gateway_flow_log_properties = ionoscloud.FlowLogProperties() # FlowLogProperties | The properties of the Flow Log to be updated.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     try:
         # Partially modify NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_patch(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log_properties, pretty=pretty, depth=depth)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_flowlogs_patch(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log_properties)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_patch: %s\n' % e)
 ```
@@ -633,7 +377,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**FlowLog**](FlowLog.md)
+[**FlowLog**](../models/FlowLog.md)
 
 ### Authorization
 
@@ -653,73 +397,31 @@ Add a new Flow Log for the specified NAT Gateway.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    nat_gateway_flow_log = ionoscloud.FlowLog() # FlowLog | The Flow Log to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    try:
-        # Create NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_post(datacenter_id, nat_gateway_id, nat_gateway_flow_log, pretty=pretty, depth=depth)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     nat_gateway_flow_log = ionoscloud.FlowLog() # FlowLog | The Flow Log to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     try:
         # Create NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_post(datacenter_id, nat_gateway_id, nat_gateway_flow_log, pretty=pretty, depth=depth)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_flowlogs_post(datacenter_id, nat_gateway_id, nat_gateway_flow_log)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_post: %s\n' % e)
 ```
@@ -736,7 +438,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**FlowLog**](FlowLog.md)
+[**FlowLog**](../models/FlowLog.md)
 
 ### Authorization
 
@@ -756,62 +458,21 @@ Modify the specified NAT Gateway Flow Log.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log.
-    nat_gateway_flow_log = ionoscloud.FlowLogPut() # FlowLogPut | The modified NAT Gateway Flow Log.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    try:
-        # Modify NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_put(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log, pretty=pretty, depth=depth)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
@@ -819,12 +480,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     flow_log_id = 'flow_log_id_example' # str | The unique ID of the Flow Log.
     nat_gateway_flow_log = ionoscloud.FlowLogPut() # FlowLogPut | The modified NAT Gateway Flow Log.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     try:
         # Modify NAT Gateway Flow Logs
-        api_response = api_instance.datacenters_natgateways_flowlogs_put(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log, pretty=pretty, depth=depth)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_flowlogs_put(datacenter_id, nat_gateway_id, flow_log_id, nat_gateway_flow_log)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_flowlogs_put: %s\n' % e)
 ```
@@ -842,7 +501,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**FlowLog**](FlowLog.md)
+[**FlowLog**](../models/FlowLog.md)
 
 ### Authorization
 
@@ -862,71 +521,29 @@ List all NAT Gateways within the data center.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # List NAT Gateways
-        api_response = api_instance.datacenters_natgateways_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # List NAT Gateways
-        api_response = api_instance.datacenters_natgateways_get(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_get(datacenter_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_get: %s\n' % e)
 ```
@@ -938,11 +555,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGateways**](NatGateways.md)
+[**NatGateways**](../models/NatGateways.md)
 
 ### Authorization
 
@@ -962,75 +579,31 @@ Update the properties of the specified NAT Gateway within the data center.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    nat_gateway_properties = ionoscloud.NatGatewayProperties() # NatGatewayProperties | The properties of the NAT Gateway to be updated.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Partially modify NAT Gateways
-        api_response = api_instance.datacenters_natgateways_patch(datacenter_id, nat_gateway_id, nat_gateway_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_patch: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     nat_gateway_properties = ionoscloud.NatGatewayProperties() # NatGatewayProperties | The properties of the NAT Gateway to be updated.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Partially modify NAT Gateways
-        api_response = api_instance.datacenters_natgateways_patch(datacenter_id, nat_gateway_id, nat_gateway_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_patch(datacenter_id, nat_gateway_id, nat_gateway_properties)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_patch: %s\n' % e)
 ```
@@ -1044,11 +617,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_properties** | [**NatGatewayProperties**](NatGatewayProperties.md)| The properties of the NAT Gateway to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGateway**](NatGateway.md)
+[**NatGateway**](../models/NatGateway.md)
 
 ### Authorization
 
@@ -1068,73 +641,30 @@ Create a NAT Gateway within the data center.  This operation is restricted to co
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway = ionoscloud.NatGateway() # NatGateway | The NAT Gateway to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Create NAT Gateways
-        api_response = api_instance.datacenters_natgateways_post(datacenter_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway = ionoscloud.NatGateway() # NatGateway | The NAT Gateway to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Create NAT Gateways
-        api_response = api_instance.datacenters_natgateways_post(datacenter_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_post(datacenter_id, nat_gateway)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_post: %s\n' % e)
 ```
@@ -1147,11 +677,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway** | [**NatGateway**](NatGateway.md)| The NAT Gateway to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGateway**](NatGateway.md)
+[**NatGateway**](../models/NatGateway.md)
 
 ### Authorization
 
@@ -1171,75 +701,31 @@ Modify the properties of the specified NAT Gateway within the data center.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    nat_gateway = ionoscloud.NatGatewayPut() # NatGatewayPut | The modified NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Modify NAT Gateways
-        api_response = api_instance.datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     nat_gateway = ionoscloud.NatGatewayPut() # NatGatewayPut | The modified NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Modify NAT Gateways
-        api_response = api_instance.datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_put(datacenter_id, nat_gateway_id, nat_gateway)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_put: %s\n' % e)
 ```
@@ -1253,11 +739,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway** | [**NatGatewayPut**](NatGatewayPut.md)| The modified NAT Gateway. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGateway**](NatGateway.md)
+[**NatGateway**](../models/NatGateway.md)
 
 ### Authorization
 
@@ -1277,73 +763,30 @@ Delete the specified NAT Gateway rule.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    nat_gateway_rule_id = 'nat_gateway_rule_id_example' # str | The unique ID of the NAT Gateway rule.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Delete NAT Gateway rules
-        api_instance.datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     nat_gateway_rule_id = 'nat_gateway_rule_id_example' # str | The unique ID of the NAT Gateway rule.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Delete NAT Gateway rules
-        api_instance.datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+        api_instance.datacenters_natgateways_rules_delete(datacenter_id, nat_gateway_id, nat_gateway_rule_id)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_delete: %s\n' % e)
 ```
@@ -1357,7 +800,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_rule_id** | **str**| The unique ID of the NAT Gateway rule. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
@@ -1381,75 +824,31 @@ Retrieve the properties of the specified NAT Gateway rule.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    nat_gateway_rule_id = 'nat_gateway_rule_id_example' # str | The unique ID of the NAT Gateway rule.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Retrieve NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_find_by_nat_gateway_rule_id(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_find_by_nat_gateway_rule_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     nat_gateway_rule_id = 'nat_gateway_rule_id_example' # str | The unique ID of the NAT Gateway rule.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Retrieve NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_find_by_nat_gateway_rule_id(datacenter_id, nat_gateway_id, nat_gateway_rule_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_rules_find_by_nat_gateway_rule_id(datacenter_id, nat_gateway_id, nat_gateway_rule_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_find_by_nat_gateway_rule_id: %s\n' % e)
 ```
@@ -1463,11 +862,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_rule_id** | **str**| The unique ID of the NAT Gateway rule. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGatewayRule**](NatGatewayRule.md)
+[**NatGatewayRule**](../models/NatGatewayRule.md)
 
 ### Authorization
 
@@ -1487,73 +886,30 @@ List all rules for the specified NAT Gateway.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # List NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_get(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # List NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_get(datacenter_id, nat_gateway_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_rules_get(datacenter_id, nat_gateway_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_get: %s\n' % e)
 ```
@@ -1566,11 +922,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_id** | **str**| The unique ID of the NAT Gateway. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGatewayRules**](NatGatewayRules.md)
+[**NatGatewayRules**](../models/NatGatewayRules.md)
 
 ### Authorization
 
@@ -1590,63 +946,21 @@ Update the properties of the specified NAT Gateway rule.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    nat_gateway_rule_id = 'nat_gateway_rule_id_example' # str | The unique ID of the NAT Gateway rule.
-    nat_gateway_rule_properties = ionoscloud.NatGatewayRuleProperties() # NatGatewayRuleProperties | The properties of the NAT Gateway rule to be updated.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Partially modify NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_patch(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_patch: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
@@ -1654,13 +968,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     nat_gateway_rule_id = 'nat_gateway_rule_id_example' # str | The unique ID of the NAT Gateway rule.
     nat_gateway_rule_properties = ionoscloud.NatGatewayRuleProperties() # NatGatewayRuleProperties | The properties of the NAT Gateway rule to be updated.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Partially modify NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_patch(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_rules_patch(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_patch: %s\n' % e)
 ```
@@ -1675,11 +986,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_rule_properties** | [**NatGatewayRuleProperties**](NatGatewayRuleProperties.md)| The properties of the NAT Gateway rule to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGatewayRule**](NatGatewayRule.md)
+[**NatGatewayRule**](../models/NatGatewayRule.md)
 
 ### Authorization
 
@@ -1699,75 +1010,31 @@ Create a rule for the specified NAT Gateway.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    nat_gateway_rule = ionoscloud.NatGatewayRule() # NatGatewayRule | The NAT Gateway rule to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Create NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_post(datacenter_id, nat_gateway_id, nat_gateway_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     nat_gateway_rule = ionoscloud.NatGatewayRule() # NatGatewayRule | The NAT Gateway rule to create.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Create NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_post(datacenter_id, nat_gateway_id, nat_gateway_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_rules_post(datacenter_id, nat_gateway_id, nat_gateway_rule)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_post: %s\n' % e)
 ```
@@ -1781,11 +1048,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_rule** | [**NatGatewayRule**](NatGatewayRule.md)| The NAT Gateway rule to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGatewayRule**](NatGatewayRule.md)
+[**NatGatewayRule**](../models/NatGatewayRule.md)
 
 ### Authorization
 
@@ -1805,63 +1072,21 @@ Modify the specified NAT Gateway rule.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v6',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.NATGatewaysApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
-    nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
-    nat_gateway_rule_id = 'nat_gateway_rule_id_example' # str | The unique ID of the NAT Gateway rule.
-    nat_gateway_rule = ionoscloud.NatGatewayRulePut() # NatGatewayRulePut | The modified NAT Gateway rule.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    try:
-        # Modify NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_put(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v6',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.NATGatewaysApi(api_client)
@@ -1869,13 +1094,10 @@ with ionoscloud.ApiClient(configuration) as api_client:
     nat_gateway_id = 'nat_gateway_id_example' # str | The unique ID of the NAT Gateway.
     nat_gateway_rule_id = 'nat_gateway_rule_id_example' # str | The unique ID of the NAT Gateway rule.
     nat_gateway_rule = ionoscloud.NatGatewayRulePut() # NatGatewayRulePut | The modified NAT Gateway rule.
-    pretty = True # bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to True)
-    depth = 0 # int | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     try:
         # Modify NAT Gateway rules
-        api_response = api_instance.datacenters_natgateways_rules_put(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_natgateways_rules_put(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling NATGatewaysApi.datacenters_natgateways_rules_put: %s\n' % e)
 ```
@@ -1890,11 +1112,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **nat_gateway_rule** | [**NatGatewayRulePut**](NatGatewayRulePut.md)| The modified NAT Gateway rule. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
-| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]  |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
 
 ### Return type
 
-[**NatGatewayRule**](NatGatewayRule.md)
+[**NatGatewayRule**](../models/NatGatewayRule.md)
 
 ### Authorization
 

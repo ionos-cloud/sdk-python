@@ -33,7 +33,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -69,7 +69,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -194,7 +194,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -230,7 +230,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -353,7 +353,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -387,7 +387,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -505,7 +505,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -541,7 +541,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -668,7 +668,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -706,7 +706,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -840,7 +840,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -878,7 +878,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1010,7 +1010,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1046,7 +1046,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1175,7 +1175,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1215,7 +1215,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1358,7 +1358,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1398,7 +1398,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1539,7 +1539,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1577,7 +1577,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1713,7 +1713,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1753,7 +1753,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1894,7 +1894,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -1932,7 +1932,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2072,7 +2072,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2112,7 +2112,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2255,7 +2255,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2291,7 +2291,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2422,7 +2422,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
@@ -2460,7 +2460,7 @@ class KubernetesApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param x_contract_number: Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+        :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
