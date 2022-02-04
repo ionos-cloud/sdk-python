@@ -60,17 +60,25 @@ The username and password or the authentication token can be manually specified 
 
 ```python
 configuration = ionoscloud.Configuration(
-    username = 'YOUR_USERNAME',
-    password = 'YOUR_PASSWORD'
+    username='YOUR_USERNAME',
+    password='YOUR_PASSWORD',
+    api_key='YOUR_API_KEY',
 )
 client = ionoscloud.ApiClient(configuration)
 ```
 
-Environment variables can also be used; the SDK uses the following variables:
+Environment variables can also be used. This is an example of how one would do that:
 
-* IONOS\_USERNAME - to specify the username used to login
-* IONOS\_PASSWORD - to specify the password
-* IONOS\_TOKEN - if an authentication token is being used
+```python
+import os
+
+configuration = ionoscloud.Configuration(
+    username=os.environ.get('IONOS_USERNAME'),
+    password=os.environ.get('IONOS_PASSWORD'),
+    api_key=os.environ.get('IONOS_TOKEN'),
+)
+client = ionoscloud.ApiClient(configuration)
+```
 
 **Warning**: Make sure to follow the Information Security Best Practices when using credentials within your code or storing them in a file.
 
@@ -90,6 +98,22 @@ Many of the _List_ or _Get_ operations will accept an optional _depth_ argument.
 ### Pretty
 
 The operations will also accept an optional _pretty_ argument. Setting this to a value of `true` or `false` controls whether the response is pretty-printed \(with indentation and new lines\). By default, the SDK sets the _pretty_ argument to `true`.
+
+### Changing the base URL
+
+Base URL for the HTTP operation can be changed in the following way:
+
+```python
+import os
+
+configuration = ionoscloud.Configuration(
+    username=os.environ.get('IONOS_USERNAME'),
+    password=os.environ.get('IONOS_PASSWORD'),
+    host=os.environ.get('IONOS_API_URL'),
+    server_index=None,
+)
+client = ionoscloud.ApiClient(configuration)
+```
 
 ## Feature Reference
 
