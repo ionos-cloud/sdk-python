@@ -170,7 +170,7 @@ class FirewallRules(object):
     def items(self):
         """Gets the items of this FirewallRules.  # noqa: E501
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :return: The items of this FirewallRules.  # noqa: E501
         :rtype: list[FirewallRule]
@@ -181,7 +181,7 @@ class FirewallRules(object):
     def items(self, items):
         """Sets the items of this FirewallRules.
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :param items: The items of this FirewallRules.  # noqa: E501
         :type items: list[FirewallRule]

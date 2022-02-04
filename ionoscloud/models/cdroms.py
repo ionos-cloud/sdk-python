@@ -170,7 +170,7 @@ class Cdroms(object):
     def items(self):
         """Gets the items of this Cdroms.  # noqa: E501
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :return: The items of this Cdroms.  # noqa: E501
         :rtype: list[Image]
@@ -181,7 +181,7 @@ class Cdroms(object):
     def items(self, items):
         """Sets the items of this Cdroms.
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :param items: The items of this Cdroms.  # noqa: E501
         :type items: list[Image]

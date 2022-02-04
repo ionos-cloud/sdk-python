@@ -80,7 +80,7 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
     def client_timeout(self):
         """Gets the client_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
 
-        ClientTimeout is expressed in milliseconds. This inactivity timeout applies when the client is expected to acknowledge or send data. If unset the default of 50 seconds will be used.  # noqa: E501
+        The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).  # noqa: E501
 
         :return: The client_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
         :rtype: int
@@ -91,7 +91,7 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
     def client_timeout(self, client_timeout):
         """Sets the client_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.
 
-        ClientTimeout is expressed in milliseconds. This inactivity timeout applies when the client is expected to acknowledge or send data. If unset the default of 50 seconds will be used.  # noqa: E501
+        The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).  # noqa: E501
 
         :param client_timeout: The client_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
         :type client_timeout: int
@@ -103,7 +103,7 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
     def connect_timeout(self):
         """Gets the connect_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
 
-        It specifies the maximum time (in milliseconds) to wait for a connection attempt to a target VM to succeed. If unset, the default of 5 seconds will be used.  # noqa: E501
+        The maximum time in milliseconds to wait for a connection attempt to a target to succeed; default is 5000 (five seconds).  # noqa: E501
 
         :return: The connect_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
         :rtype: int
@@ -114,7 +114,7 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
     def connect_timeout(self, connect_timeout):
         """Sets the connect_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.
 
-        It specifies the maximum time (in milliseconds) to wait for a connection attempt to a target VM to succeed. If unset, the default of 5 seconds will be used.  # noqa: E501
+        The maximum time in milliseconds to wait for a connection attempt to a target to succeed; default is 5000 (five seconds).  # noqa: E501
 
         :param connect_timeout: The connect_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
         :type connect_timeout: int
@@ -126,7 +126,7 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
     def target_timeout(self):
         """Gets the target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
 
-        TargetTimeout specifies the maximum inactivity time (in milliseconds) on the target VM side. If unset, the default of 50 seconds will be used.  # noqa: E501
+        The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).  # noqa: E501
 
         :return: The target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
         :rtype: int
@@ -137,7 +137,7 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
     def target_timeout(self, target_timeout):
         """Sets the target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.
 
-        TargetTimeout specifies the maximum inactivity time (in milliseconds) on the target VM side. If unset, the default of 50 seconds will be used.  # noqa: E501
+        The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).  # noqa: E501
 
         :param target_timeout: The target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
         :type target_timeout: int
@@ -149,7 +149,7 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
     def retries(self):
         """Gets the retries of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
 
-        Retries specifies the number of retries to perform on a target VM after a connection failure. If unset, the default value of 3 will be used. (valid range: [0, 65535])  # noqa: E501
+        The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535 and default is three reconnection attempts.  # noqa: E501
 
         :return: The retries of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
         :rtype: int
@@ -160,7 +160,7 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
     def retries(self, retries):
         """Sets the retries of this NetworkLoadBalancerForwardingRuleHealthCheck.
 
-        Retries specifies the number of retries to perform on a target VM after a connection failure. If unset, the default value of 3 will be used. (valid range: [0, 65535])  # noqa: E501
+        The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535 and default is three reconnection attempts.  # noqa: E501
 
         :param retries: The retries of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
         :type retries: int

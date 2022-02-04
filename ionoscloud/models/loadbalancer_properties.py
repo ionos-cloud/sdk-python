@@ -63,8 +63,7 @@ class LoadbalancerProperties(object):
 
         if name is not None:
             self.name = name
-        if ip is not None:
-            self.ip = ip
+        self.ip = ip
         if dhcp is not None:
             self.dhcp = dhcp
 

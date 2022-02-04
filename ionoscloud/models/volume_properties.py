@@ -73,6 +73,8 @@ class VolumeProperties(object):
         'backupunit_id': 'str',
 
         'user_data': 'str',
+
+        'boot_server': 'str',
     }
 
     attribute_map = {
@@ -116,9 +118,11 @@ class VolumeProperties(object):
         'backupunit_id': 'backupunitId',
 
         'user_data': 'userData',
+
+        'boot_server': 'bootServer',
     }
 
-    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, pci_slot=None, backupunit_id=None, user_data=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, pci_slot=None, backupunit_id=None, user_data=None, boot_server=None, local_vars_configuration=None):  # noqa: E501
         """VolumeProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -144,6 +148,7 @@ class VolumeProperties(object):
         self._pci_slot = None
         self._backupunit_id = None
         self._user_data = None
+        self._boot_server = None
         self.discriminator = None
 
         if name is not None:
@@ -185,6 +190,8 @@ class VolumeProperties(object):
             self.backupunit_id = backupunit_id
         if user_data is not None:
             self.user_data = user_data
+        if boot_server is not None:
+            self.boot_server = boot_server
 
 
     @property
@@ -387,7 +394,7 @@ class VolumeProperties(object):
     def bus(self):
         """Gets the bus of this VolumeProperties.  # noqa: E501
 
-        The bus type of the volume. Default is VIRTIO  # noqa: E501
+        The bus type for this volume; default is VIRTIO.  # noqa: E501
 
         :return: The bus of this VolumeProperties.  # noqa: E501
         :rtype: str
@@ -398,7 +405,7 @@ class VolumeProperties(object):
     def bus(self, bus):
         """Sets the bus of this VolumeProperties.
 
-        The bus type of the volume. Default is VIRTIO  # noqa: E501
+        The bus type for this volume; default is VIRTIO.  # noqa: E501
 
         :param bus: The bus of this VolumeProperties.  # noqa: E501
         :type bus: str
@@ -432,7 +439,7 @@ class VolumeProperties(object):
         :param licence_type: The licence_type of this VolumeProperties.  # noqa: E501
         :type licence_type: str
         """
-        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "LINUX", "OTHER"]  # noqa: E501
+        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "WINDOWS2022", "LINUX", "OTHER"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and licence_type not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `licence_type` ({0}), must be one of {1}"  # noqa: E501
@@ -670,6 +677,29 @@ class VolumeProperties(object):
         """
 
         self._user_data = user_data
+
+    @property
+    def boot_server(self):
+        """Gets the boot_server of this VolumeProperties.  # noqa: E501
+
+        The UUID of the attached server.  # noqa: E501
+
+        :return: The boot_server of this VolumeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._boot_server
+
+    @boot_server.setter
+    def boot_server(self, boot_server):
+        """Sets the boot_server of this VolumeProperties.
+
+        The UUID of the attached server.  # noqa: E501
+
+        :param boot_server: The boot_server of this VolumeProperties.  # noqa: E501
+        :type boot_server: str
+        """
+
+        self._boot_server = boot_server
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

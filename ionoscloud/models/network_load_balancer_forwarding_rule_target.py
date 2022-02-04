@@ -77,7 +77,7 @@ class NetworkLoadBalancerForwardingRuleTarget(object):
     def ip(self):
         """Gets the ip of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
 
-        IP of a balanced target VM  # noqa: E501
+        The IP of the balanced target VM.  # noqa: E501
 
         :return: The ip of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
         :rtype: str
@@ -88,7 +88,7 @@ class NetworkLoadBalancerForwardingRuleTarget(object):
     def ip(self, ip):
         """Sets the ip of this NetworkLoadBalancerForwardingRuleTarget.
 
-        IP of a balanced target VM  # noqa: E501
+        The IP of the balanced target VM.  # noqa: E501
 
         :param ip: The ip of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
         :type ip: str
@@ -102,7 +102,7 @@ class NetworkLoadBalancerForwardingRuleTarget(object):
     def port(self):
         """Gets the port of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
 
-        Port of the balanced target service. (range: 1 to 65535)  # noqa: E501
+        The port of the balanced target service; valid range is 1 to 65535.  # noqa: E501
 
         :return: The port of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
         :rtype: int
@@ -113,7 +113,7 @@ class NetworkLoadBalancerForwardingRuleTarget(object):
     def port(self, port):
         """Sets the port of this NetworkLoadBalancerForwardingRuleTarget.
 
-        Port of the balanced target service. (range: 1 to 65535)  # noqa: E501
+        The port of the balanced target service; valid range is 1 to 65535.  # noqa: E501
 
         :param port: The port of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
         :type port: int
@@ -127,7 +127,7 @@ class NetworkLoadBalancerForwardingRuleTarget(object):
     def weight(self):
         """Gets the weight of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
 
-        Weight parameter is used to adjust the target VM's weight relative to other target VMs. All target VMs will receive a load proportional to their weight relative to the sum of all weights, so the higher the weight, the higher the load. The default weight is 1, and the maximal value is 256. A value of 0 means the target VM will not participate in load-balancing but will still accept persistent connections. If this parameter is used to distribute the load according to target VM's capacity, it is recommended to start with values which can both grow and shrink, for instance between 10 and 100 to leave enough room above and below for later adjustments.  # noqa: E501
+        Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1. Targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best to assign weights in the middle of the range to leave room for later adjustments.  # noqa: E501
 
         :return: The weight of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
         :rtype: int
@@ -138,7 +138,7 @@ class NetworkLoadBalancerForwardingRuleTarget(object):
     def weight(self, weight):
         """Sets the weight of this NetworkLoadBalancerForwardingRuleTarget.
 
-        Weight parameter is used to adjust the target VM's weight relative to other target VMs. All target VMs will receive a load proportional to their weight relative to the sum of all weights, so the higher the weight, the higher the load. The default weight is 1, and the maximal value is 256. A value of 0 means the target VM will not participate in load-balancing but will still accept persistent connections. If this parameter is used to distribute the load according to target VM's capacity, it is recommended to start with values which can both grow and shrink, for instance between 10 and 100 to leave enough room above and below for later adjustments.  # noqa: E501
+        Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1. Targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best to assign weights in the middle of the range to leave room for later adjustments.  # noqa: E501
 
         :param weight: The weight of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
         :type weight: int

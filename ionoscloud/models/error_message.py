@@ -89,7 +89,7 @@ class ErrorMessage(object):
     def message(self):
         """Gets the message of this ErrorMessage.  # noqa: E501
 
-        Human-readable message.  # noqa: E501
+        A human-readable message.  # noqa: E501
 
         :return: The message of this ErrorMessage.  # noqa: E501
         :rtype: str
@@ -100,7 +100,7 @@ class ErrorMessage(object):
     def message(self, message):
         """Sets the message of this ErrorMessage.
 
-        Human-readable message.  # noqa: E501
+        A human-readable message.  # noqa: E501
 
         :param message: The message of this ErrorMessage.  # noqa: E501
         :type message: str

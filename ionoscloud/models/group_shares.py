@@ -149,7 +149,7 @@ class GroupShares(object):
     def items(self):
         """Gets the items of this GroupShares.  # noqa: E501
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :return: The items of this GroupShares.  # noqa: E501
         :rtype: list[GroupShare]
@@ -160,7 +160,7 @@ class GroupShares(object):
     def items(self, items):
         """Sets the items of this GroupShares.
 
-        Array of items in that collection.  # noqa: E501
+        Array of items in the collection.  # noqa: E501
 
         :param items: The items of this GroupShares.  # noqa: E501
         :type items: list[GroupShare]

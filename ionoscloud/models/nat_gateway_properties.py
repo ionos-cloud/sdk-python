@@ -121,7 +121,7 @@ class NatGatewayProperties(object):
     def lans(self):
         """Gets the lans of this NatGatewayProperties.  # noqa: E501
 
-        Collection of LANs connected to the NAT Gateway. IPs must contain valid subnet mask. If user will not provide any IP then system will generate an IP with /24 subnet.  # noqa: E501
+        Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
 
         :return: The lans of this NatGatewayProperties.  # noqa: E501
         :rtype: list[NatGatewayLanProperties]
@@ -132,7 +132,7 @@ class NatGatewayProperties(object):
     def lans(self, lans):
         """Sets the lans of this NatGatewayProperties.
 
-        Collection of LANs connected to the NAT Gateway. IPs must contain valid subnet mask. If user will not provide any IP then system will generate an IP with /24 subnet.  # noqa: E501
+        Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
 
         :param lans: The lans of this NatGatewayProperties.  # noqa: E501
         :type lans: list[NatGatewayLanProperties]

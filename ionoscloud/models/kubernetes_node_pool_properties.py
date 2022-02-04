@@ -67,6 +67,8 @@ class KubernetesNodePoolProperties(object):
         'public_ips': 'list[str]',
 
         'available_upgrade_versions': 'list[str]',
+
+        'gateway_ip': 'str',
     }
 
     attribute_map = {
@@ -104,9 +106,11 @@ class KubernetesNodePoolProperties(object):
         'public_ips': 'publicIps',
 
         'available_upgrade_versions': 'availableUpgradeVersions',
+
+        'gateway_ip': 'gatewayIp',
     }
 
-    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, public_ips=None, available_upgrade_versions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, public_ips=None, available_upgrade_versions=None, gateway_ip=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -129,6 +133,7 @@ class KubernetesNodePoolProperties(object):
         self._annotations = None
         self._public_ips = None
         self._available_upgrade_versions = None
+        self._gateway_ip = None
         self.discriminator = None
 
         self.name = name
@@ -156,6 +161,8 @@ class KubernetesNodePoolProperties(object):
             self.public_ips = public_ips
         if available_upgrade_versions is not None:
             self.available_upgrade_versions = available_upgrade_versions
+        if gateway_ip is not None:
+            self.gateway_ip = gateway_ip
 
 
     @property
@@ -533,7 +540,7 @@ class KubernetesNodePoolProperties(object):
     def public_ips(self):
         """Gets the public_ips of this KubernetesNodePoolProperties.  # noqa: E501
 
-        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.  # noqa: E501
+        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than maximum number possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.  # noqa: E501
 
         :return: The public_ips of this KubernetesNodePoolProperties.  # noqa: E501
         :rtype: list[str]
@@ -544,7 +551,7 @@ class KubernetesNodePoolProperties(object):
     def public_ips(self, public_ips):
         """Sets the public_ips of this KubernetesNodePoolProperties.
 
-        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.  # noqa: E501
+        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than maximum number possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.  # noqa: E501
 
         :param public_ips: The public_ips of this KubernetesNodePoolProperties.  # noqa: E501
         :type public_ips: list[str]
@@ -574,6 +581,29 @@ class KubernetesNodePoolProperties(object):
         """
 
         self._available_upgrade_versions = available_upgrade_versions
+
+    @property
+    def gateway_ip(self):
+        """Gets the gateway_ip of this KubernetesNodePoolProperties.  # noqa: E501
+
+        Public IP address for the gateway performing source NAT for the node pool's nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.  # noqa: E501
+
+        :return: The gateway_ip of this KubernetesNodePoolProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._gateway_ip
+
+    @gateway_ip.setter
+    def gateway_ip(self, gateway_ip):
+        """Sets the gateway_ip of this KubernetesNodePoolProperties.
+
+        Public IP address for the gateway performing source NAT for the node pool's nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.  # noqa: E501
+
+        :param gateway_ip: The gateway_ip of this KubernetesNodePoolProperties.  # noqa: E501
+        :type gateway_ip: str
+        """
+
+        self._gateway_ip = gateway_ip
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -155,7 +155,7 @@ class KubernetesClusterPropertiesForPut(object):
     def api_subnet_allow_list(self):
         """Gets the api_subnet_allow_list of this KubernetesClusterPropertiesForPut.  # noqa: E501
 
-        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
+        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
 
         :return: The api_subnet_allow_list of this KubernetesClusterPropertiesForPut.  # noqa: E501
         :rtype: list[str]
@@ -166,7 +166,7 @@ class KubernetesClusterPropertiesForPut(object):
     def api_subnet_allow_list(self, api_subnet_allow_list):
         """Sets the api_subnet_allow_list of this KubernetesClusterPropertiesForPut.
 
-        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
+        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
 
         :param api_subnet_allow_list: The api_subnet_allow_list of this KubernetesClusterPropertiesForPut.  # noqa: E501
         :type api_subnet_allow_list: list[str]
