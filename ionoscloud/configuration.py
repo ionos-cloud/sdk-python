@@ -36,11 +36,11 @@ class Configuration(object):
     Do not edit the class manually.
 
     :param host: Base url
-    :param api_key: Dict to store API key(s).
+    :param token: Dict to store API key(s).
       Each entry in the dict specifies an API key.
       The dict key is the name of the security scheme in the OAS specification.
       The dict value is the API key secret.
-    :param api_key_prefix: Dict to store API prefix (e.g. Bearer)
+    :param token_prefix: Dict to store API prefix (e.g. Bearer)
       The dict key is the name of the security scheme in the OAS specification.
       The dict value is an API key prefix when generating the auth data.
     :param username: Username for HTTP basic authentication
@@ -93,8 +93,8 @@ class Configuration(object):
     You can programmatically set the cookie:
 
 conf = ionoscloud.Configuration(
-    api_key={'cookieAuth': 'abc123'}
-    api_key_prefix={'cookieAuth': 'JSESSIONID'}
+    token='AuthToken'
+    token_prefix='Bearer'
 )
 
     The following cookie will be added to the HTTP request:
@@ -120,7 +120,7 @@ conf = ionoscloud.Configuration(
     _default = None
 
     def __init__(self, host=None,
-                 api_key=None, api_key_prefix=None,
+                 token=None, token_prefix=None,
                  username=None, password=None,
                  discard_unknown_keys=False,
                  disabled_client_side_validations="",
@@ -144,17 +144,17 @@ conf = ionoscloud.Configuration(
         """Temp file folder for downloading files
         """
         # Authentication Settings
-        self.api_key = {}
-        if api_key:
-            self.api_key = api_key
+        self.token = {}
+        if token:
+            self.token = token
         """dict to store API key(s)
         """
-        self.api_key_prefix = {}
-        if api_key_prefix:
-            self.api_key_prefix = api_key_prefix
+        self.token_prefix = {}
+        if token_prefix:
+            self.token_prefix = token_prefix
         """dict to store API prefix (e.g. Bearer)
         """
-        self.refresh_api_key_hook = None
+        self.refresh_token_hook = None
         """function hook to refresh API key if expired
         """
         self.username = username
@@ -366,22 +366,16 @@ conf = ionoscloud.Configuration(
         self.__logger_format = value
         self.logger_formatter = logging.Formatter(self.__logger_format)
 
-    def get_api_key_with_prefix(self, identifier, alias=None):
+    def get_token_with_prefix(self):
         """Gets API key (with prefix if set).
-
-        :param identifier: The identifier of apiKey.
-        :param alias: The alternative identifier of apiKey.
         :return: The token for api key authentication.
         """
-        if self.refresh_api_key_hook is not None:
-            self.refresh_api_key_hook(self)
-        key = self.api_key.get(identifier, self.api_key.get(alias) if alias is not None else None)
-        if key:
-            prefix = self.api_key_prefix.get(identifier)
-            if prefix:
-                return "%s %s" % (prefix, key)
-            else:
-                return key
+        if not self.token_prefix:
+            self.token_prefix = 'Bearer'
+        if self.refresh_token_hook is not None:
+            self.refresh_token_hook(self)
+        return "%s %s" % (self.token_prefix, self.token)
+
 
     def get_basic_auth_token(self):
         """Gets HTTP basic authentication header (string).
@@ -411,14 +405,12 @@ conf = ionoscloud.Configuration(
                 'key': 'Authorization',
                 'value': self.get_basic_auth_token()
             }
-        if 'Token Authentication' in self.api_key:
+        if self.token:
             auth['Token Authentication'] = {
-                'type': 'api_key',
+                'type': 'token',
                 'in': 'header',
                 'key': 'Authorization',
-                'value': self.get_api_key_with_prefix(
-                    'Token Authentication',
-                ),
+                'value': self.get_token_with_prefix(),
             }
         return auth
 
@@ -431,7 +423,7 @@ conf = ionoscloud.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 6.0\n"\
-               "SDK Package Version: v6.0.1".\
+               "SDK Package Version: v6.0.2".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
