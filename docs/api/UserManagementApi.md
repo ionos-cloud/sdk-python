@@ -45,71 +45,29 @@ Delete a group
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | The unique ID of the group
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Delete a Group
-        api_response = api_instance.um_groups_delete(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Group
-        api_response = api_instance.um_groups_delete(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_delete(group_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_delete: %s\n' % e)
 ```
@@ -145,71 +103,29 @@ You can retrieve a group by using the group ID. This value can be found in the r
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | The unique ID of the group
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a Group
-        api_response = api_instance.um_groups_find_by_id(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_find_by_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Group
-        api_response = api_instance.um_groups_find_by_id(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_find_by_id(group_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_find_by_id: %s\n' % e)
 ```
@@ -225,7 +141,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -245,69 +161,28 @@ You can retrieve a complete list of all groups that you have access to
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # List All Groups.
-        api_response = api_instance.um_groups_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List All Groups.
-        api_response = api_instance.um_groups_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_get()
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_get: %s\n' % e)
 ```
@@ -322,7 +197,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Groups**](Groups.md)
+[**Groups**](../models/Groups.md)
 
 ### Authorization
 
@@ -342,71 +217,29 @@ You can use this POST method to create a group
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group = ionoscloud.Group() # Group | Group to be created
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Create a Group
-        api_response = api_instance.um_groups_post(group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group = ionoscloud.Group() # Group | Group to be created
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Group
-        api_response = api_instance.um_groups_post(group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_post(group)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_post: %s\n' % e)
 ```
@@ -422,7 +255,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -442,73 +275,30 @@ You can use this method to update properties of the group.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | The unique ID of the group
-    group = ionoscloud.Group() # Group | Modified properties of the Group
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Modify a group
-        api_response = api_instance.um_groups_put(group_id, group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
     group = ionoscloud.Group() # Group | Modified properties of the Group
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a group
-        api_response = api_instance.um_groups_put(group_id, group, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_put(group_id, group)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_put: %s\n' % e)
 ```
@@ -525,7 +315,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -543,71 +333,29 @@ Retrieve resources assigned to a group
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | The unique ID of the group
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve resources assigned to a group
-        api_response = api_instance.um_groups_resources_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_resources_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | The unique ID of the group
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve resources assigned to a group
-        api_response = api_instance.um_groups_resources_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_resources_get(group_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_resources_get: %s\n' % e)
 ```
@@ -623,7 +371,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**ResourceGroups**](ResourceGroups.md)
+[**ResourceGroups**](../models/ResourceGroups.md)
 
 ### Authorization
 
@@ -643,73 +391,30 @@ This will remove a resource from a group
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Remove a resource from a group
-        api_response = api_instance.um_groups_shares_delete(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_shares_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
     resource_id = 'resource_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove a resource from a group
-        api_response = api_instance.um_groups_shares_delete(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_shares_delete(group_id, resource_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_shares_delete: %s\n' % e)
 ```
@@ -746,73 +451,30 @@ This will retrieve the properties of a group share.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a group share
-        api_response = api_instance.um_groups_shares_find_by_resource_id(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_shares_find_by_resource_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
     resource_id = 'resource_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a group share
-        api_response = api_instance.um_groups_shares_find_by_resource_id(group_id, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_shares_find_by_resource_id(group_id, resource_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_shares_find_by_resource_id: %s\n' % e)
 ```
@@ -829,7 +491,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -849,71 +511,29 @@ You can retrieve a list of all resources along with their permissions of the gro
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # List Group Shares 
-        api_response = api_instance.um_groups_shares_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_shares_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Group Shares 
-        api_response = api_instance.um_groups_shares_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_shares_get(group_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_shares_get: %s\n' % e)
 ```
@@ -929,7 +549,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**GroupShares**](GroupShares.md)
+[**GroupShares**](../models/GroupShares.md)
 
 ### Authorization
 
@@ -949,75 +569,31 @@ This will add a resource to the group.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    resource = ionoscloud.GroupShare() # GroupShare | Resource to be added
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Add a resource to a group
-        api_response = api_instance.um_groups_shares_post(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_shares_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
     resource_id = 'resource_id_example' # str | 
     resource = ionoscloud.GroupShare() # GroupShare | Resource to be added
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Add a resource to a group
-        api_response = api_instance.um_groups_shares_post(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_shares_post(group_id, resource_id, resource)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_shares_post: %s\n' % e)
 ```
@@ -1035,7 +611,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -1055,75 +631,31 @@ You can use update resource permissions of a group. If empty body will be provid
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | 
-    resource_id = 'resource_id_example' # str | 
-    resource = ionoscloud.GroupShare() # GroupShare | Modified Resource
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Modify resource permissions of a group
-        api_response = api_instance.um_groups_shares_put(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_shares_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
     resource_id = 'resource_id_example' # str | 
     resource = ionoscloud.GroupShare() # GroupShare | Modified Resource
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify resource permissions of a group
-        api_response = api_instance.um_groups_shares_put(group_id, resource_id, resource, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_shares_put(group_id, resource_id, resource)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_shares_put: %s\n' % e)
 ```
@@ -1141,7 +673,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -1161,73 +693,30 @@ This will remove a user from a group
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | 
-    user_id = 'user_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Remove a user from a group
-        api_response = api_instance.um_groups_users_delete(group_id, user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_users_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
     user_id = 'user_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Remove a user from a group
-        api_response = api_instance.um_groups_users_delete(group_id, user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_users_delete(group_id, user_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_users_delete: %s\n' % e)
 ```
@@ -1264,71 +753,29 @@ You can retrieve a list of users who are members of the group
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # List Group Members 
-        api_response = api_instance.um_groups_users_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_users_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List Group Members 
-        api_response = api_instance.um_groups_users_get(group_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_users_get(group_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_users_get: %s\n' % e)
 ```
@@ -1344,7 +791,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**GroupMembers**](GroupMembers.md)
+[**GroupMembers**](../models/GroupMembers.md)
 
 ### Authorization
 
@@ -1364,73 +811,30 @@ This will attach a pre-existing user to a group.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    group_id = 'group_id_example' # str | 
-    user = ionoscloud.User() # User | User to be added
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Add a user to a group
-        api_response = api_instance.um_groups_users_post(group_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_groups_users_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     group_id = 'group_id_example' # str | 
     user = ionoscloud.User() # User | User to be added
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Add a user to a group
-        api_response = api_instance.um_groups_users_post(group_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_groups_users_post(group_id, user)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_groups_users_post: %s\n' % e)
 ```
@@ -1447,7 +851,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**User**](User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -1467,71 +871,29 @@ You can retrieve a list of resources by using the type. Allowed values are { dat
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    resource_type = 'resource_type_example' # str | The resource Type
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a list of Resources by type.
-        api_response = api_instance.um_resources_find_by_type(resource_type, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_resources_find_by_type: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     resource_type = 'resource_type_example' # str | The resource Type
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a list of Resources by type.
-        api_response = api_instance.um_resources_find_by_type(resource_type, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_resources_find_by_type(resource_type)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_resources_find_by_type: %s\n' % e)
 ```
@@ -1547,7 +909,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Resources**](Resources.md)
+[**Resources**](../models/Resources.md)
 
 ### Authorization
 
@@ -1567,73 +929,30 @@ You can retrieve a resource by using the type and its uuid. Allowed values for t
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    resource_type = 'resource_type_example' # str | The resource Type
-    resource_id = 'resource_id_example' # str | The resource Uuid
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a Resource by type.
-        api_response = api_instance.um_resources_find_by_type_and_id(resource_type, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_resources_find_by_type_and_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     resource_type = 'resource_type_example' # str | The resource Type
     resource_id = 'resource_id_example' # str | The resource Uuid
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Resource by type.
-        api_response = api_instance.um_resources_find_by_type_and_id(resource_type, resource_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_resources_find_by_type_and_id(resource_type, resource_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_resources_find_by_type_and_id: %s\n' % e)
 ```
@@ -1650,7 +969,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Resource**](Resource.md)
+[**Resource**](../models/Resource.md)
 
 ### Authorization
 
@@ -1670,69 +989,28 @@ You can retrieve a complete list of all resources that you have access to
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # List All Resources.
-        api_response = api_instance.um_resources_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_resources_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # List All Resources.
-        api_response = api_instance.um_resources_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_resources_get()
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_resources_get: %s\n' % e)
 ```
@@ -1747,7 +1025,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Resources**](Resources.md)
+[**Resources**](../models/Resources.md)
 
 ### Authorization
 
@@ -1767,71 +1045,29 @@ Delete a user
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Delete a User
-        api_response = api_instance.um_users_delete(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a User
-        api_response = api_instance.um_users_delete(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_delete(user_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_delete: %s\n' % e)
 ```
@@ -1867,71 +1103,29 @@ You can retrieve user details by using the users ID. This value can be found in 
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a User
-        api_response = api_instance.um_users_find_by_id(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_find_by_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User
-        api_response = api_instance.um_users_find_by_id(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_find_by_id(user_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_find_by_id: %s\n' % e)
 ```
@@ -1947,7 +1141,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**User**](User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -1967,73 +1161,28 @@ You can retrieve a complete list of users under your account
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-    limit = 100 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 100)
-    try:
-        # List all Users 
-        api_response = api_instance.um_users_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-    limit = 100 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 100)
     try:
         # List all Users 
-        api_response = api_instance.um_users_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
+        api_response = api_instance.um_users_get()
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_get: %s\n' % e)
 ```
@@ -2050,7 +1199,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Users**](Users.md)
+[**Users**](../models/Users.md)
 
 ### Authorization
 
@@ -2070,71 +1219,29 @@ You can retrieve group resources of user by using the users ID. This value can b
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a User's group resources
-        api_response = api_instance.um_users_groups_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_groups_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's group resources
-        api_response = api_instance.um_users_groups_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_groups_get(user_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_groups_get: %s\n' % e)
 ```
@@ -2150,7 +1257,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**ResourceGroups**](ResourceGroups.md)
+[**ResourceGroups**](../models/ResourceGroups.md)
 
 ### Authorization
 
@@ -2170,71 +1277,29 @@ You can retrieve resources owned by using the users ID. This value can be found 
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a User's own resources
-        api_response = api_instance.um_users_owns_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_owns_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's own resources
-        api_response = api_instance.um_users_owns_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_owns_get(user_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_owns_get: %s\n' % e)
 ```
@@ -2250,7 +1315,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**ResourcesUsers**](ResourcesUsers.md)
+[**ResourcesUsers**](../models/ResourcesUsers.md)
 
 ### Authorization
 
@@ -2270,71 +1335,29 @@ You can use this POST method to create a user
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user = ionoscloud.UserPost() # UserPost | User to be created
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Create a user
-        api_response = api_instance.um_users_post(user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user = ionoscloud.UserPost() # UserPost | User to be created
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a user
-        api_response = api_instance.um_users_post(user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_post(user)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_post: %s\n' % e)
 ```
@@ -2350,7 +1373,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**User**](User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -2370,73 +1393,30 @@ You can use update attributes of a User
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | 
-    user = ionoscloud.UserPut() # UserPut | Modified user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Modify a user
-        api_response = api_instance.um_users_put(user_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | 
     user = ionoscloud.UserPut() # UserPut | Modified user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a user
-        api_response = api_instance.um_users_put(user_id, user, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_put(user_id, user)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_put: %s\n' % e)
 ```
@@ -2453,7 +1433,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**User**](User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -2473,73 +1453,30 @@ Delete a S3 key
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Delete a S3 key
-        api_response = api_instance.um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_s3keys_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
     key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a S3 key
-        api_response = api_instance.um_users_s3keys_delete(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_s3keys_delete(user_id, key_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_s3keys_delete: %s\n' % e)
 ```
@@ -2576,73 +1513,30 @@ You can retrieve S3 key belonging to the given User. This user Id can be found i
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve given S3 key belonging to the given User
-        api_response = api_instance.um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_s3keys_find_by_key_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
     key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve given S3 key belonging to the given User
-        api_response = api_instance.um_users_s3keys_find_by_key_id(user_id, key_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_s3keys_find_by_key_id(user_id, key_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_s3keys_find_by_key_id: %s\n' % e)
 ```
@@ -2659,7 +1553,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -2679,71 +1573,29 @@ You can retrieve S3 keys owned by a user by using the users ID. This user Id can
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a User's S3 keys
-        api_response = api_instance.um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_s3keys_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a User's S3 keys
-        api_response = api_instance.um_users_s3keys_get(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_s3keys_get(user_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_s3keys_get: %s\n' % e)
 ```
@@ -2759,7 +1611,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**S3Keys**](S3Keys.md)
+[**S3Keys**](../models/S3Keys.md)
 
 ### Authorization
 
@@ -2779,71 +1631,29 @@ Creates a S3 key for the given user. This user Id can be found in the response b
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Create a S3 key for the given user
-        api_response = api_instance.um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_s3keys_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a S3 key for the given user
-        api_response = api_instance.um_users_s3keys_post(user_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_s3keys_post(user_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_s3keys_post: %s\n' % e)
 ```
@@ -2859,7 +1669,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -2879,75 +1689,31 @@ You can enable or disable a given S3 key.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | 
-    key_id = 'key_id_example' # str | The unique access key ID of the S3 key
-    s3_key = ionoscloud.S3Key() # S3Key | Modified S3 key
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Modify a S3 key having the given key id
-        api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_s3keys_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | 
     key_id = 'key_id_example' # str | The unique access key ID of the S3 key
     s3_key = ionoscloud.S3Key() # S3Key | Modified S3 key
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a S3 key having the given key id
-        api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_s3keys_put(user_id, key_id, s3_key)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_s3keys_put: %s\n' % e)
 ```
@@ -2965,7 +1731,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -2985,69 +1751,29 @@ You can retrieve S3 object storage single signon URL for the given user. This us
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.UserManagementApi(api_client)
-    user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve S3 object storage single signon URL for the given user
-        api_response = api_instance.um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling UserManagementApi.um_users_s3ssourl_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.UserManagementApi(api_client)
     user_id = 'user_id_example' # str | The unique ID of the user
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve S3 object storage single signon URL for the given user
-        api_response = api_instance.um_users_s3ssourl_get(user_id, pretty=pretty, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.um_users_s3ssourl_get(user_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling UserManagementApi.um_users_s3ssourl_get: %s\n' % e)
 ```
@@ -3062,7 +1788,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
+[**S3ObjectStorageSSO**](../models/S3ObjectStorageSSO.md)
 
 ### Authorization
 

@@ -524,7 +524,7 @@ class ImageProperties(object):
         """
         if self.local_vars_configuration.client_side_validation and licence_type is None:  # noqa: E501
             raise ValueError("Invalid value for `licence_type`, must not be `None`")  # noqa: E501
-        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "LINUX", "OTHER"]  # noqa: E501
+        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "WINDOWS2022", "LINUX", "OTHER"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and licence_type not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `licence_type` ({0}), must be one of {1}"  # noqa: E501

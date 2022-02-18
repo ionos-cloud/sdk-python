@@ -91,7 +91,8 @@ class KubernetesNodePoolPropertiesForPut(object):
         self._public_ips = None
         self.discriminator = None
 
-        self.name = name
+        if name is not None:
+            self.name = name
         self.node_count = node_count
         if k8s_version is not None:
             self.k8s_version = k8s_version
@@ -129,8 +130,6 @@ class KubernetesNodePoolPropertiesForPut(object):
         :param name: The name of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
         :type name: str
         """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

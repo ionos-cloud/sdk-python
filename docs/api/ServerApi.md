@@ -33,75 +33,31 @@ This will detach a CD-ROM from the server
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    cdrom_id = 'cdrom_id_example' # str | The unique ID of the CD-ROM
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Detach a CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_delete(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_cdroms_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
     cdrom_id = 'cdrom_id_example' # str | The unique ID of the CD-ROM
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Detach a CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_delete(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_cdroms_delete(datacenter_id, server_id, cdrom_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_cdroms_delete: %s\n' % e)
 ```
@@ -139,75 +95,31 @@ You can retrieve a specific CD-ROM attached to the server
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    cdrom_id = 'cdrom_id_example' # str | The unique ID of the CD-ROM
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve an attached CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_find_by_id(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_cdroms_find_by_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
     cdrom_id = 'cdrom_id_example' # str | The unique ID of the CD-ROM
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve an attached CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_find_by_id(datacenter_id, server_id, cdrom_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_cdroms_find_by_id(datacenter_id, server_id, cdrom_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_cdroms_find_by_id: %s\n' % e)
 ```
@@ -225,7 +137,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
@@ -245,77 +157,30 @@ You can retrieve a list of CD-ROMs attached to the server.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
-    try:
-        # List attached CD-ROMs 
-        api_response = api_instance.datacenters_servers_cdroms_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_cdroms_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
     try:
         # List attached CD-ROMs 
-        api_response = api_instance.datacenters_servers_cdroms_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_cdroms_get(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_cdroms_get: %s\n' % e)
 ```
@@ -334,7 +199,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Cdroms**](Cdroms.md)
+[**Cdroms**](../models/Cdroms.md)
 
 ### Authorization
 
@@ -354,75 +219,31 @@ You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    cdrom = ionoscloud.Image() # Image | CD-ROM to be attached
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Attach a CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_post(datacenter_id, server_id, cdrom, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_cdroms_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
     cdrom = ionoscloud.Image() # Image | CD-ROM to be attached
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Attach a CD-ROM
-        api_response = api_instance.datacenters_servers_cdroms_post(datacenter_id, server_id, cdrom, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_cdroms_post(datacenter_id, server_id, cdrom)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_cdroms_post: %s\n' % e)
 ```
@@ -440,7 +261,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
@@ -460,73 +281,30 @@ This will remove a server from your datacenter; however, it will not remove the 
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Delete a Server
-        api_response = api_instance.datacenters_servers_delete(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Delete a Server
-        api_response = api_instance.datacenters_servers_delete(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_delete(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_delete: %s\n' % e)
 ```
@@ -563,73 +341,30 @@ Returns information about a server such as its configuration, provisioning statu
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve a Server
-        api_response = api_instance.datacenters_servers_find_by_id(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_find_by_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve a Server
-        api_response = api_instance.datacenters_servers_find_by_id(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_find_by_id(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_find_by_id: %s\n' % e)
 ```
@@ -646,7 +381,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### Authorization
 
@@ -666,77 +401,29 @@ You can retrieve a list of servers within a datacenter
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    upgrade_needed = True # bool | It can be used to filter which servers can be upgraded which can not be upgraded. (optional)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
-    try:
-        # List Servers 
-        api_response = api_instance.datacenters_servers_get(datacenter_id, pretty=pretty, depth=depth, upgrade_needed=upgrade_needed, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_get: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    upgrade_needed = True # bool | It can be used to filter which servers can be upgraded which can not be upgraded. (optional)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
     try:
         # List Servers 
-        api_response = api_instance.datacenters_servers_get(datacenter_id, pretty=pretty, depth=depth, upgrade_needed=upgrade_needed, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_get(datacenter_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_get: %s\n' % e)
 ```
@@ -755,7 +442,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Servers**](Servers.md)
+[**Servers**](../models/Servers.md)
 
 ### Authorization
 
@@ -775,75 +462,31 @@ You can use update attributes of a server
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server_id = 'server_id_example' # str | The unique ID of the server
-    server = ionoscloud.ServerProperties() # ServerProperties | Modified properties of Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Partially modify a Server
-        api_response = api_instance.datacenters_servers_patch(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_patch: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server_id = 'server_id_example' # str | The unique ID of the server
     server = ionoscloud.ServerProperties() # ServerProperties | Modified properties of Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Partially modify a Server
-        api_response = api_instance.datacenters_servers_patch(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_patch(datacenter_id, server_id, server)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_patch: %s\n' % e)
 ```
@@ -861,7 +504,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### Authorization
 
@@ -881,73 +524,30 @@ Creates a server within an existing datacenter. You can configure the boot volum
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server = ionoscloud.Server() # Server | Server to be created
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Create a Server
-        api_response = api_instance.datacenters_servers_post(datacenter_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server = ionoscloud.Server() # Server | Server to be created
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Create a Server
-        api_response = api_instance.datacenters_servers_post(datacenter_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_post(datacenter_id, server)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_post: %s\n' % e)
 ```
@@ -964,7 +564,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### Authorization
 
@@ -984,75 +584,31 @@ Allows to modify the attributes of a Server. From v5 onwards 'allowReboot' attri
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server_id = 'server_id_example' # str | The unique ID of the server
-    server = ionoscloud.Server() # Server | Modified Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Modify a Server
-        api_response = api_instance.datacenters_servers_put(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_put: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server_id = 'server_id_example' # str | The unique ID of the server
     server = ionoscloud.Server() # Server | Modified Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Modify a Server
-        api_response = api_instance.datacenters_servers_put(datacenter_id, server_id, server, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_put(datacenter_id, server_id, server)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_put: %s\n' % e)
 ```
@@ -1070,7 +626,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### Authorization
 
@@ -1090,73 +646,30 @@ This will force a hard reboot of the server. Do not use this method if you want 
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Reboot a Server
-        api_response = api_instance.datacenters_servers_reboot_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_reboot_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Reboot a Server
-        api_response = api_instance.datacenters_servers_reboot_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_reboot_post(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_reboot_post: %s\n' % e)
 ```
@@ -1193,73 +706,30 @@ This will start a server. If the server's public IP was deallocated then a new I
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Start a Server
-        api_response = api_instance.datacenters_servers_start_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_start_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Start a Server
-        api_response = api_instance.datacenters_servers_start_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_start_post(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_start_post: %s\n' % e)
 ```
@@ -1296,73 +766,30 @@ This will stop a server. The machine will be forcefully powered off, billing wil
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Stop a Server
-        api_response = api_instance.datacenters_servers_stop_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_stop_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Stop a Server
-        api_response = api_instance.datacenters_servers_stop_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_stop_post(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_stop_post: %s\n' % e)
 ```
@@ -1399,73 +826,30 @@ This will upgrade the version of the server, if needed. To verify if there is an
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Upgrade a Server
-        api_response = api_instance.datacenters_servers_upgrade_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_upgrade_post: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Upgrade a Server
-        api_response = api_instance.datacenters_servers_upgrade_post(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_upgrade_post(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_upgrade_post: %s\n' % e)
 ```
@@ -1502,75 +886,31 @@ This will detach the volume from the server. This will not delete the volume fro
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    volume_id = 'volume_id_example' # str | The unique ID of the Volume
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Detach a volume
-        api_response = api_instance.datacenters_servers_volumes_delete(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_volumes_delete: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
     volume_id = 'volume_id_example' # str | The unique ID of the Volume
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Detach a volume
-        api_response = api_instance.datacenters_servers_volumes_delete(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_volumes_delete(datacenter_id, server_id, volume_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_volumes_delete: %s\n' % e)
 ```
@@ -1608,75 +948,31 @@ This will retrieve the properties of an attached volume.
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
-with ionoscloud.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = ionoscloud.ServerApi(api_client)
-    datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
-    server_id = 'server_id_example' # str | The unique ID of the Server
-    volume_id = 'volume_id_example' # str | The unique ID of the Volume
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    try:
-        # Retrieve an attached volume
-        api_response = api_instance.datacenters_servers_volumes_find_by_id(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
-    except ApiException as e:
-        print('Exception when calling ServerApi.datacenters_servers_volumes_find_by_id: %s\n' % e)
-```
 
-* Api Key Authentication (Token Authentication):
-```python
-from __future__ import print_function
-import time
-import ionoscloud
-from ionoscloud.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
-configuration = ionoscloud.Configuration(
-    host = 'https://api.ionos.com/cloudapi/v5',
-)
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure Api Key access token for authorization: Token Authentication
-configuration.api_key = {
-    'Token Authentication': 'YOUR_API_TOKEN',
-}
-# Enter a context with an instance of the API client
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
     volume_id = 'volume_id_example' # str | The unique ID of the Volume
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Retrieve an attached volume
-        api_response = api_instance.datacenters_servers_volumes_find_by_id(datacenter_id, server_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_volumes_find_by_id(datacenter_id, server_id, volume_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_volumes_find_by_id: %s\n' % e)
 ```
@@ -1694,7 +990,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
@@ -1714,39 +1010,30 @@ You can retrieve a list of volumes attached to the server
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
+
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset = 0 # int | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
-    limit = 1000 # int | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
     try:
         # List Attached Volumes
-        api_response = api_instance.datacenters_servers_volumes_get(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, offset=offset, limit=limit)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_volumes_get(datacenter_id, server_id)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_volumes_get: %s\n' % e)
 ```
@@ -1765,7 +1052,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**AttachedVolumes**](AttachedVolumes.md)
+[**AttachedVolumes**](../models/AttachedVolumes.md)
 
 ### Authorization
 
@@ -1785,38 +1072,31 @@ This will attach a pre-existing storage volume to the server. It is also possibl
 
 ### Example
 
-* Basic Authentication (Basic Authentication):
 ```python
 from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
-from pprint import pprint
+
 # Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v5
-# See configuration.py for a list of all supported configuration parameters.
 configuration = ionoscloud.Configuration(
     host = 'https://api.ionos.com/cloudapi/v5',
 )
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples with auth method are provided below
-# Configure HTTP basic authorization: Basic Authentication
+
+# Example of configuring HTTP Basic Authorization
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
-# Enter a context with an instance of the API client
+
 with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ServerApi(api_client)
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the Datacenter
     server_id = 'server_id_example' # str | The unique ID of the Server
     volume = ionoscloud.Volume() # Volume | Volume to be attached (created and attached)
-    pretty = True # bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to True)
-    depth = 0 # int | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    x_contract_number = 56 # int | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
     try:
         # Attach a volume
-        api_response = api_instance.datacenters_servers_volumes_post(datacenter_id, server_id, volume, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
-        pprint(api_response)
+        api_response = api_instance.datacenters_servers_volumes_post(datacenter_id, server_id, volume)
+        print(api_response)
     except ApiException as e:
         print('Exception when calling ServerApi.datacenters_servers_volumes_post: %s\n' % e)
 ```
@@ -1834,7 +1114,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
