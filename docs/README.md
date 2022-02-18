@@ -56,13 +56,13 @@ import ionoscloud
 
 ### Authentication
 
-The username and password or the authentication token can be manually specified when initializing the SDK client:
+The username and password **or** the authentication token can be manually specified when initializing the SDK client:
 
 ```python
 configuration = ionoscloud.Configuration(
     username='YOUR_USERNAME',
     password='YOUR_PASSWORD',
-    api_key='YOUR_API_KEY',
+    token='YOUR_API_KEY',
 )
 client = ionoscloud.ApiClient(configuration)
 ```
@@ -75,7 +75,7 @@ import os
 configuration = ionoscloud.Configuration(
     username=os.environ.get('IONOS_USERNAME'),
     password=os.environ.get('IONOS_PASSWORD'),
-    api_key=os.environ.get('IONOS_TOKEN'),
+    token=os.environ.get('IONOS_TOKEN'),
 )
 client = ionoscloud.ApiClient(configuration)
 ```
