@@ -1056,7 +1056,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
@@ -1118,7 +1118,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication
+Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
