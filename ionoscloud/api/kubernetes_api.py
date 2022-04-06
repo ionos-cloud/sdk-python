@@ -109,7 +109,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -136,7 +137,7 @@ class KubernetesApi(object):
         if 'k8s_cluster_id' in local_var_params:
             path_params['k8sClusterId'] = local_var_params['k8s_cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -270,7 +271,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -297,7 +299,7 @@ class KubernetesApi(object):
         if 'k8s_cluster_id' in local_var_params:
             path_params['k8sClusterId'] = local_var_params['k8s_cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -426,7 +428,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -447,7 +450,7 @@ class KubernetesApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -581,7 +584,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -608,7 +612,7 @@ class KubernetesApi(object):
         if 'k8s_cluster_id' in local_var_params:
             path_params['k8sClusterId'] = local_var_params['k8s_cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -747,7 +751,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -780,7 +785,7 @@ class KubernetesApi(object):
         if 'nodepool_id' in local_var_params:
             path_params['nodepoolId'] = local_var_params['nodepool_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -919,7 +924,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -952,7 +958,7 @@ class KubernetesApi(object):
         if 'nodepool_id' in local_var_params:
             path_params['nodepoolId'] = local_var_params['nodepool_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1086,7 +1092,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1113,7 +1120,7 @@ class KubernetesApi(object):
         if 'k8s_cluster_id' in local_var_params:
             path_params['k8sClusterId'] = local_var_params['k8s_cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1257,7 +1264,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1296,7 +1304,7 @@ class KubernetesApi(object):
         if 'node_id' in local_var_params:
             path_params['nodeId'] = local_var_params['node_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1440,7 +1448,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1479,7 +1488,7 @@ class KubernetesApi(object):
         if 'node_id' in local_var_params:
             path_params['nodeId'] = local_var_params['node_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1618,7 +1627,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1651,7 +1661,7 @@ class KubernetesApi(object):
         if 'nodepool_id' in local_var_params:
             path_params['nodepoolId'] = local_var_params['nodepool_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1795,7 +1805,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1834,7 +1845,7 @@ class KubernetesApi(object):
         if 'node_id' in local_var_params:
             path_params['nodeId'] = local_var_params['node_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1973,7 +1984,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2004,7 +2016,7 @@ class KubernetesApi(object):
         if 'k8s_cluster_id' in local_var_params:
             path_params['k8sClusterId'] = local_var_params['k8s_cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2154,7 +2166,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2191,7 +2204,7 @@ class KubernetesApi(object):
         if 'nodepool_id' in local_var_params:
             path_params['nodepoolId'] = local_var_params['nodepool_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2331,7 +2344,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2356,7 +2370,7 @@ class KubernetesApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2501,7 +2515,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2532,7 +2547,7 @@ class KubernetesApi(object):
         if 'k8s_cluster_id' in local_var_params:
             path_params['k8sClusterId'] = local_var_params['k8s_cluster_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2652,7 +2667,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2669,7 +2685,7 @@ class KubernetesApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 
@@ -2777,7 +2793,8 @@ class KubernetesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2794,7 +2811,7 @@ class KubernetesApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
 
         header_params = {}
 

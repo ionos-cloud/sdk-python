@@ -109,7 +109,8 @@ class RequestsApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -136,7 +137,7 @@ class RequestsApi(object):
         if 'request_id' in local_var_params:
             path_params['requestId'] = local_var_params['request_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -330,7 +331,8 @@ class RequestsApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -357,7 +359,7 @@ class RequestsApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -517,7 +519,8 @@ class RequestsApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -544,7 +547,7 @@ class RequestsApi(object):
         if 'request_id' in local_var_params:
             path_params['requestId'] = local_var_params['request_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501

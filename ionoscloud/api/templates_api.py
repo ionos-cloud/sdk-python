@@ -99,7 +99,8 @@ class TemplatesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -126,7 +127,7 @@ class TemplatesApi(object):
         if 'template_id' in local_var_params:
             path_params['templateId'] = local_var_params['template_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
 
@@ -241,7 +242,8 @@ class TemplatesApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -262,7 +264,7 @@ class TemplatesApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
 

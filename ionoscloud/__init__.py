@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "v6.0.2"
+__version__ = "6.0.3"
 
 # import apis into sdk package
 from ionoscloud.api.backup_units_api import BackupUnitsApi

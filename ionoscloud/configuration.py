@@ -15,6 +15,7 @@ from __future__ import absolute_import
 import copy
 import logging
 import multiprocessing
+import os
 import sys
 import urllib3
 
@@ -211,11 +212,10 @@ conf = ionoscloud.Configuration(
            requests to the same host, which is often the case here.
            cpu_count * 5 is used as default value to increase performance.
         """
-
-        self.proxy = None
+        self.proxy = os.environ.get('IONOS_HTTP_PROXY')
         """Proxy URL
         """
-        self.proxy_headers = None
+        self.proxy_headers = os.environ.get('IONOS_HTTP_PROXY_HEADERS')
         """Proxy headers
         """
         self.safe_chars_for_path_param = '/'
@@ -423,7 +423,7 @@ conf = ionoscloud.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 6.0\n"\
-               "SDK Package Version: v6.0.2".\
+               "SDK Package Version: 6.0.3".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):
