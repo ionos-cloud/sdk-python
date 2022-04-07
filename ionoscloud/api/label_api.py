@@ -114,7 +114,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -147,7 +148,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -286,7 +287,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -319,7 +321,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -463,7 +465,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -496,7 +499,7 @@ class LabelApi(object):
         if 'datacenter_id' in local_var_params:
             path_params['datacenterId'] = local_var_params['datacenter_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -639,7 +642,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -670,7 +674,7 @@ class LabelApi(object):
         if 'datacenter_id' in local_var_params:
             path_params['datacenterId'] = local_var_params['datacenter_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -820,7 +824,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -857,7 +862,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1007,7 +1012,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1046,7 +1052,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1190,7 +1196,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1229,7 +1236,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1378,7 +1385,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1417,7 +1425,7 @@ class LabelApi(object):
         if 'server_id' in local_var_params:
             path_params['serverId'] = local_var_params['server_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1565,7 +1573,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1602,7 +1611,7 @@ class LabelApi(object):
         if 'server_id' in local_var_params:
             path_params['serverId'] = local_var_params['server_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1757,7 +1766,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1800,7 +1810,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1950,7 +1960,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1989,7 +2000,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2133,7 +2144,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2172,7 +2184,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2321,7 +2333,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2360,7 +2373,7 @@ class LabelApi(object):
         if 'volume_id' in local_var_params:
             path_params['volumeId'] = local_var_params['volume_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2508,7 +2521,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2545,7 +2559,7 @@ class LabelApi(object):
         if 'volume_id' in local_var_params:
             path_params['volumeId'] = local_var_params['volume_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2700,7 +2714,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2743,7 +2758,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2888,7 +2903,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2921,7 +2937,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3060,7 +3076,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3093,7 +3110,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3227,7 +3244,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3254,7 +3272,7 @@ class LabelApi(object):
         if 'ipblock_id' in local_var_params:
             path_params['ipblockId'] = local_var_params['ipblock_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3393,7 +3411,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3424,7 +3443,7 @@ class LabelApi(object):
         if 'ipblock_id' in local_var_params:
             path_params['ipblockId'] = local_var_params['ipblock_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3574,7 +3593,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3611,7 +3631,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3751,7 +3771,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3778,7 +3799,7 @@ class LabelApi(object):
         if 'labelurn' in local_var_params:
             path_params['labelurn'] = local_var_params['labelurn']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3907,7 +3928,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3928,7 +3950,7 @@ class LabelApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4067,7 +4089,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4100,7 +4123,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4239,7 +4262,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4272,7 +4296,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4406,7 +4430,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4433,7 +4458,7 @@ class LabelApi(object):
         if 'snapshot_id' in local_var_params:
             path_params['snapshotId'] = local_var_params['snapshot_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4572,7 +4597,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4603,7 +4629,7 @@ class LabelApi(object):
         if 'snapshot_id' in local_var_params:
             path_params['snapshotId'] = local_var_params['snapshot_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4753,7 +4779,8 @@ class LabelApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4790,7 +4817,7 @@ class LabelApi(object):
         if 'key' in local_var_params:
             path_params['key'] = local_var_params['key']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501

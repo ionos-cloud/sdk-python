@@ -109,7 +109,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -136,7 +137,7 @@ class UserManagementApi(object):
         if 'group_id' in local_var_params:
             path_params['groupId'] = local_var_params['group_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -270,7 +271,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -297,7 +299,7 @@ class UserManagementApi(object):
         if 'group_id' in local_var_params:
             path_params['groupId'] = local_var_params['group_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -426,7 +428,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -447,7 +450,7 @@ class UserManagementApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -581,7 +584,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -606,7 +610,7 @@ class UserManagementApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -751,7 +755,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -782,7 +787,7 @@ class UserManagementApi(object):
         if 'group_id' in local_var_params:
             path_params['groupId'] = local_var_params['group_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -920,7 +925,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -947,7 +953,7 @@ class UserManagementApi(object):
         if 'group_id' in local_var_params:
             path_params['groupId'] = local_var_params['group_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1086,7 +1092,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1119,7 +1126,7 @@ class UserManagementApi(object):
         if 'resource_id' in local_var_params:
             path_params['resourceId'] = local_var_params['resource_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1258,7 +1265,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1291,7 +1299,7 @@ class UserManagementApi(object):
         if 'resource_id' in local_var_params:
             path_params['resourceId'] = local_var_params['resource_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1425,7 +1433,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1452,7 +1461,7 @@ class UserManagementApi(object):
         if 'group_id' in local_var_params:
             path_params['groupId'] = local_var_params['group_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1596,7 +1605,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1633,7 +1643,7 @@ class UserManagementApi(object):
         if 'resource_id' in local_var_params:
             path_params['resourceId'] = local_var_params['resource_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1779,7 +1789,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1816,7 +1827,7 @@ class UserManagementApi(object):
         if 'resource_id' in local_var_params:
             path_params['resourceId'] = local_var_params['resource_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -1961,7 +1972,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -1994,7 +2006,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2128,7 +2140,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2155,7 +2168,7 @@ class UserManagementApi(object):
         if 'group_id' in local_var_params:
             path_params['groupId'] = local_var_params['group_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2294,7 +2307,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2325,7 +2339,7 @@ class UserManagementApi(object):
         if 'group_id' in local_var_params:
             path_params['groupId'] = local_var_params['group_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2465,7 +2479,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2492,7 +2507,7 @@ class UserManagementApi(object):
         if 'resource_type' in local_var_params:
             path_params['resourceType'] = local_var_params['resource_type']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2631,7 +2646,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2664,7 +2680,7 @@ class UserManagementApi(object):
         if 'resource_id' in local_var_params:
             path_params['resourceId'] = local_var_params['resource_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2793,7 +2809,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2814,7 +2831,7 @@ class UserManagementApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -2948,7 +2965,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -2975,7 +2993,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3109,7 +3127,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3136,7 +3155,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3275,7 +3294,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3302,7 +3322,7 @@ class UserManagementApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3440,7 +3460,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3467,7 +3488,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3601,7 +3622,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3628,7 +3650,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3762,7 +3784,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3787,7 +3810,7 @@ class UserManagementApi(object):
 
         path_params = {}
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -3932,7 +3955,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -3963,7 +3987,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4108,7 +4132,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4141,7 +4166,7 @@ class UserManagementApi(object):
         if 'key_id' in local_var_params:
             path_params['keyId'] = local_var_params['key_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4280,7 +4305,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4313,7 +4339,7 @@ class UserManagementApi(object):
         if 'key_id' in local_var_params:
             path_params['keyId'] = local_var_params['key_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4447,7 +4473,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4474,7 +4501,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4608,7 +4635,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4635,7 +4663,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4779,7 +4807,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4816,7 +4845,7 @@ class UserManagementApi(object):
         if 'key_id' in local_var_params:
             path_params['keyId'] = local_var_params['key_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
@@ -4951,7 +4980,8 @@ class UserManagementApi(object):
                 '_preload_content',
                 '_request_timeout',
                 '_request_auth',
-                'response_type'
+                'response_type',
+                'query_params'
             ]
         )
 
@@ -4974,7 +5004,7 @@ class UserManagementApi(object):
         if 'user_id' in local_var_params:
             path_params['userId'] = local_var_params['user_id']  # noqa: E501
 
-        query_params = []
+        query_params = list(local_var_params.get('query_params', {}).items())
         if 'pretty' in local_var_params and local_var_params['pretty'] is not None:  # noqa: E501
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
 
