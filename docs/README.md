@@ -82,6 +82,14 @@ client = ionoscloud.ApiClient(configuration)
 
 **Warning**: Make sure to follow the Information Security Best Practices when using credentials within your code or storing them in a file.
 
+
+### HTTP proxies
+
+You can use http proxies by setting the following environment variables:
+- `IONOS_HTTP_PROXY` - proxy URL
+- `IONOS_HTTP_PROXY_HEADERS` - proxy headers
+
+
 ### Depth
 
 Many of the _List_ or _Get_ operations will accept an optional _depth_ argument. Setting this to a value between 0 and 5 affects the amount of data that is returned. The details returned vary depending on the resource being queried, but it generally follows this pattern. By default, the SDK sets the _depth_ argument to the maximum value.
