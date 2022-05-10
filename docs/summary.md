@@ -14,7 +14,7 @@
 * [ImagesApi](api/ImagesApi.md)
 * [KubernetesApi](api/KubernetesApi.md)
 * [LabelsApi](api/LabelsApi.md)
-* [LansApi](api/LansApi.md)
+* [LansApi](api/LANsApi.md)
 * [LoadBalancersApi](api/LoadBalancersApi.md)
 * [LocationsApi](api/LocationsApi.md)
 * [NATGatewaysApi](api/NATGatewaysApi.md)
