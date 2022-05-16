@@ -44,8 +44,6 @@ class KubernetesClusterProperties(object):
 
         'viable_node_pool_versions': 'list[str]',
 
-        'public': 'bool',
-
         'api_subnet_allow_list': 'list[str]',
 
         's3_buckets': 'list[S3Bucket]',
@@ -63,14 +61,12 @@ class KubernetesClusterProperties(object):
 
         'viable_node_pool_versions': 'viableNodePoolVersions',
 
-        'public': 'public',
-
         'api_subnet_allow_list': 'apiSubnetAllowList',
 
         's3_buckets': 's3Buckets',
     }
 
-    def __init__(self, name=None, k8s_version=None, maintenance_window=None, available_upgrade_versions=None, viable_node_pool_versions=None, public=True, api_subnet_allow_list=None, s3_buckets=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, k8s_version=None, maintenance_window=None, available_upgrade_versions=None, viable_node_pool_versions=None, api_subnet_allow_list=None, s3_buckets=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesClusterProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -81,7 +77,6 @@ class KubernetesClusterProperties(object):
         self._maintenance_window = None
         self._available_upgrade_versions = None
         self._viable_node_pool_versions = None
-        self._public = None
         self._api_subnet_allow_list = None
         self._s3_buckets = None
         self.discriminator = None
@@ -95,8 +90,6 @@ class KubernetesClusterProperties(object):
             self.available_upgrade_versions = available_upgrade_versions
         if viable_node_pool_versions is not None:
             self.viable_node_pool_versions = viable_node_pool_versions
-        if public is not None:
-            self.public = public
         if api_subnet_allow_list is not None:
             self.api_subnet_allow_list = api_subnet_allow_list
         if s3_buckets is not None:
@@ -217,29 +210,6 @@ class KubernetesClusterProperties(object):
         """
 
         self._viable_node_pool_versions = viable_node_pool_versions
-
-    @property
-    def public(self):
-        """Gets the public of this KubernetesClusterProperties.  # noqa: E501
-
-        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
-
-        :return: The public of this KubernetesClusterProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._public
-
-    @public.setter
-    def public(self, public):
-        """Sets the public of this KubernetesClusterProperties.
-
-        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
-
-        :param public: The public of this KubernetesClusterProperties.  # noqa: E501
-        :type public: bool
-        """
-
-        self._public = public
 
     @property
     def api_subnet_allow_list(self):

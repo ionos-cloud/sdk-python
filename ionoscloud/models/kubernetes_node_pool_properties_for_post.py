@@ -65,8 +65,6 @@ class KubernetesNodePoolPropertiesForPost(object):
         'annotations': 'dict(str, str)',
 
         'public_ips': 'list[str]',
-
-        'gateway_ip': 'str',
     }
 
     attribute_map = {
@@ -102,11 +100,9 @@ class KubernetesNodePoolPropertiesForPost(object):
         'annotations': 'annotations',
 
         'public_ips': 'publicIps',
-
-        'gateway_ip': 'gatewayIp',
     }
 
-    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, public_ips=None, gateway_ip=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, public_ips=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolPropertiesForPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -128,7 +124,6 @@ class KubernetesNodePoolPropertiesForPost(object):
         self._labels = None
         self._annotations = None
         self._public_ips = None
-        self._gateway_ip = None
         self.discriminator = None
 
         self.name = name
@@ -154,8 +149,6 @@ class KubernetesNodePoolPropertiesForPost(object):
             self.annotations = annotations
         if public_ips is not None:
             self.public_ips = public_ips
-        if gateway_ip is not None:
-            self.gateway_ip = gateway_ip
 
 
     @property
@@ -551,29 +544,6 @@ class KubernetesNodePoolPropertiesForPost(object):
         """
 
         self._public_ips = public_ips
-
-    @property
-    def gateway_ip(self):
-        """Gets the gateway_ip of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        Public IP address for the gateway performing source NAT for the node pool's nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.  # noqa: E501
-
-        :return: The gateway_ip of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: str
-        """
-        return self._gateway_ip
-
-    @gateway_ip.setter
-    def gateway_ip(self, gateway_ip):
-        """Sets the gateway_ip of this KubernetesNodePoolPropertiesForPost.
-
-        Public IP address for the gateway performing source NAT for the node pool's nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.  # noqa: E501
-
-        :param gateway_ip: The gateway_ip of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type gateway_ip: str
-        """
-
-        self._gateway_ip = gateway_ip
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
