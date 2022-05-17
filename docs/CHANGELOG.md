@@ -1,7 +1,17 @@
 # CHANGELOG
 
+## 6.0.4 \(May 17th, 2022\)
+
+### Fixes:
+
+* removed parameter for `KubernetesClusterProperties`, `KubernetesClusterPropertiesForPost` models: `public`
+* removed parameter for `KubernetesNodePoolProperties` model: `gateway_ip`
+
+
 ## 6.0.3 \(April 7th, 2022\)
+
 ### Enhancements:
+
 * added support for filter query parameters on GET requests
 * added support for http proxy (_**IONOS_HTTP_PROXY**_ and _**IONOS_HTTP_PROXY_HEADERS**_ environment variables)
 
