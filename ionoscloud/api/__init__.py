@@ -3,6 +3,7 @@ from __future__ import absolute_import
 # flake8: noqa
 
 # import apis into api package
+from ionoscloud.api.application_load_balancers_api import ApplicationLoadBalancersApi
 from ionoscloud.api.backup_units_api import BackupUnitsApi
 from ionoscloud.api.contract_resources_api import ContractResourcesApi
 from ionoscloud.api.data_centers_api import DataCentersApi
@@ -22,6 +23,7 @@ from ionoscloud.api.private_cross_connects_api import PrivateCrossConnectsApi
 from ionoscloud.api.requests_api import RequestsApi
 from ionoscloud.api.servers_api import ServersApi
 from ionoscloud.api.snapshots_api import SnapshotsApi
+from ionoscloud.api.target_groups_api import TargetGroupsApi
 from ionoscloud.api.templates_api import TemplatesApi
 from ionoscloud.api.user_s3_keys_api import UserS3KeysApi
 from ionoscloud.api.user_management_api import UserManagementApi

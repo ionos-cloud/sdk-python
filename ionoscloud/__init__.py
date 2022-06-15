@@ -14,9 +14,10 @@
 
 from __future__ import absolute_import
 
-__version__ = "6.0.4"
+__version__ = "6.1.0"
 
 # import apis into sdk package
+from ionoscloud.api.application_load_balancers_api import ApplicationLoadBalancersApi
 from ionoscloud.api.backup_units_api import BackupUnitsApi
 from ionoscloud.api.contract_resources_api import ContractResourcesApi
 from ionoscloud.api.data_centers_api import DataCentersApi
@@ -36,6 +37,7 @@ from ionoscloud.api.private_cross_connects_api import PrivateCrossConnectsApi
 from ionoscloud.api.requests_api import RequestsApi
 from ionoscloud.api.servers_api import ServersApi
 from ionoscloud.api.snapshots_api import SnapshotsApi
+from ionoscloud.api.target_groups_api import TargetGroupsApi
 from ionoscloud.api.templates_api import TemplatesApi
 from ionoscloud.api.user_s3_keys_api import UserS3KeysApi
 from ionoscloud.api.user_management_api import UserManagementApi
@@ -52,6 +54,17 @@ from ionoscloud.exceptions import ApiKeyError
 from ionoscloud.exceptions import ApiAttributeError
 from ionoscloud.exceptions import ApiException
 # import models into sdk package
+from ionoscloud.models.application_load_balancer import ApplicationLoadBalancer
+from ionoscloud.models.application_load_balancer_entities import ApplicationLoadBalancerEntities
+from ionoscloud.models.application_load_balancer_forwarding_rule import ApplicationLoadBalancerForwardingRule
+from ionoscloud.models.application_load_balancer_forwarding_rule_properties import ApplicationLoadBalancerForwardingRuleProperties
+from ionoscloud.models.application_load_balancer_forwarding_rule_put import ApplicationLoadBalancerForwardingRulePut
+from ionoscloud.models.application_load_balancer_forwarding_rules import ApplicationLoadBalancerForwardingRules
+from ionoscloud.models.application_load_balancer_http_rule import ApplicationLoadBalancerHttpRule
+from ionoscloud.models.application_load_balancer_http_rule_condition import ApplicationLoadBalancerHttpRuleCondition
+from ionoscloud.models.application_load_balancer_properties import ApplicationLoadBalancerProperties
+from ionoscloud.models.application_load_balancer_put import ApplicationLoadBalancerPut
+from ionoscloud.models.application_load_balancers import ApplicationLoadBalancers
 from ionoscloud.models.attached_volumes import AttachedVolumes
 from ionoscloud.models.backup_unit import BackupUnit
 from ionoscloud.models.backup_unit_properties import BackupUnitProperties
@@ -203,6 +216,13 @@ from ionoscloud.models.servers import Servers
 from ionoscloud.models.snapshot import Snapshot
 from ionoscloud.models.snapshot_properties import SnapshotProperties
 from ionoscloud.models.snapshots import Snapshots
+from ionoscloud.models.target_group import TargetGroup
+from ionoscloud.models.target_group_health_check import TargetGroupHealthCheck
+from ionoscloud.models.target_group_http_health_check import TargetGroupHttpHealthCheck
+from ionoscloud.models.target_group_properties import TargetGroupProperties
+from ionoscloud.models.target_group_put import TargetGroupPut
+from ionoscloud.models.target_group_target import TargetGroupTarget
+from ionoscloud.models.target_groups import TargetGroups
 from ionoscloud.models.target_port_range import TargetPortRange
 from ionoscloud.models.template import Template
 from ionoscloud.models.template_properties import TemplateProperties
