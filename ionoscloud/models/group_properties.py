@@ -59,6 +59,8 @@ class GroupProperties(object):
         'access_and_manage_monitoring': 'bool',
 
         'access_and_manage_certificates': 'bool',
+
+        'manage_dbaas': 'bool',
     }
 
     attribute_map = {
@@ -88,9 +90,11 @@ class GroupProperties(object):
         'access_and_manage_monitoring': 'accessAndManageMonitoring',
 
         'access_and_manage_certificates': 'accessAndManageCertificates',
+
+        'manage_dbaas': 'manageDbaas',
     }
 
-    def __init__(self, name=None, create_data_center=None, create_snapshot=None, reserve_ip=None, access_activity_log=None, create_pcc=None, s3_privilege=None, create_backup_unit=None, create_internet_access=None, create_k8s_cluster=None, create_flow_log=None, access_and_manage_monitoring=None, access_and_manage_certificates=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, create_data_center=None, create_snapshot=None, reserve_ip=None, access_activity_log=None, create_pcc=None, s3_privilege=None, create_backup_unit=None, create_internet_access=None, create_k8s_cluster=None, create_flow_log=None, access_and_manage_monitoring=None, access_and_manage_certificates=None, manage_dbaas=None, local_vars_configuration=None):  # noqa: E501
         """GroupProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -109,6 +113,7 @@ class GroupProperties(object):
         self._create_flow_log = None
         self._access_and_manage_monitoring = None
         self._access_and_manage_certificates = None
+        self._manage_dbaas = None
         self.discriminator = None
 
         if name is not None:
@@ -137,6 +142,8 @@ class GroupProperties(object):
             self.access_and_manage_monitoring = access_and_manage_monitoring
         if access_and_manage_certificates is not None:
             self.access_and_manage_certificates = access_and_manage_certificates
+        if manage_dbaas is not None:
+            self.manage_dbaas = manage_dbaas
 
 
     @property
@@ -437,6 +444,29 @@ class GroupProperties(object):
         """
 
         self._access_and_manage_certificates = access_and_manage_certificates
+
+    @property
+    def manage_dbaas(self):
+        """Gets the manage_dbaas of this GroupProperties.  # noqa: E501
+
+        Privilege for a group to manage DBaaS related functionality.  # noqa: E501
+
+        :return: The manage_dbaas of this GroupProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._manage_dbaas
+
+    @manage_dbaas.setter
+    def manage_dbaas(self, manage_dbaas):
+        """Sets the manage_dbaas of this GroupProperties.
+
+        Privilege for a group to manage DBaaS related functionality.  # noqa: E501
+
+        :param manage_dbaas: The manage_dbaas of this GroupProperties.  # noqa: E501
+        :type manage_dbaas: bool
+        """
+
+        self._manage_dbaas = manage_dbaas
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

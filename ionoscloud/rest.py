@@ -17,6 +17,11 @@ import json
 import logging
 import re
 import ssl
+import base64
+import hashlib
+import sys
+
+import asn1crypto.x509
 
 import certifi
 # python 2 and python 3 compatibility library
@@ -28,6 +33,23 @@ from ionoscloud.exceptions import ApiException, ApiValueError
 
 
 logger = logging.getLogger(__name__)
+
+
+def fingerprint_checking_SSLSocket(_fingerprint):
+    class SSLSocket(ssl.SSLSocket):
+        fingerprint = _fingerprint.replace(':', '').replace(' ', '').lower()
+        def do_handshake(self, *args, **kw):
+            super().do_handshake(*args, **kw)
+            der_bytes = self.getpeercert(True)
+
+            crt_sha1 = hashlib.sha1(der_bytes).hexdigest().lower()
+            crt_sha256 = hashlib.sha256(der_bytes).hexdigest().lower()
+
+            if crt_sha256 != self.fingerprint and crt_sha1 != self.fingerprint:
+                raise RuntimeError(
+                    'remote server presented a certificate which does not match the provided fingerprint',
+                )
+    return SSLSocket
 
 
 class RESTResponse(io.IOBase):
@@ -61,6 +83,15 @@ class RESTClientObject(object):
             cert_reqs = ssl.CERT_REQUIRED
         else:
             cert_reqs = ssl.CERT_NONE
+
+        if configuration.fingerprint is not None:
+            cert_reqs = ssl.CERT_NONE
+             # monkey-patch ssl.SSLSocket
+            if sys.version_info >= (3, 7):
+                ssl.SSLContext.sslsocket_class = fingerprint_checking_SSLSocket(configuration.fingerprint)
+            else:
+                ssl.SSLSocket = fingerprint_checking_SSLSocket(configuration.fingerprint)
+            ssl._create_default_https_context = ssl._create_unverified_context
 
         # ca_certs
         if configuration.ssl_ca_cert:

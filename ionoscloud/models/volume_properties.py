@@ -75,6 +75,8 @@ class VolumeProperties(object):
         'user_data': 'str',
 
         'boot_server': 'str',
+
+        'boot_order': 'str',
     }
 
     attribute_map = {
@@ -120,9 +122,11 @@ class VolumeProperties(object):
         'user_data': 'userData',
 
         'boot_server': 'bootServer',
+
+        'boot_order': 'bootOrder',
     }
 
-    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, pci_slot=None, backupunit_id=None, user_data=None, boot_server=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, pci_slot=None, backupunit_id=None, user_data=None, boot_server=None, boot_order='AUTO', local_vars_configuration=None):  # noqa: E501
         """VolumeProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -149,6 +153,7 @@ class VolumeProperties(object):
         self._backupunit_id = None
         self._user_data = None
         self._boot_server = None
+        self._boot_order = None
         self.discriminator = None
 
         if name is not None:
@@ -192,6 +197,8 @@ class VolumeProperties(object):
             self.user_data = user_data
         if boot_server is not None:
             self.boot_server = boot_server
+        if boot_order is not None:
+            self.boot_order = boot_order
 
 
     @property
@@ -700,6 +707,35 @@ class VolumeProperties(object):
         """
 
         self._boot_server = boot_server
+
+    @property
+    def boot_order(self):
+        """Gets the boot_order of this VolumeProperties.  # noqa: E501
+
+        Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.  # noqa: E501
+
+        :return: The boot_order of this VolumeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._boot_order
+
+    @boot_order.setter
+    def boot_order(self, boot_order):
+        """Sets the boot_order of this VolumeProperties.
+
+        Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.  # noqa: E501
+
+        :param boot_order: The boot_order of this VolumeProperties.  # noqa: E501
+        :type boot_order: str
+        """
+        allowed_values = ["AUTO", "NONE", "PRIMARY"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and boot_order not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `boot_order` ({0}), must be one of {1}"  # noqa: E501
+                .format(boot_order, allowed_values)
+            )
+
+        self._boot_order = boot_order
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

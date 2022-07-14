@@ -786,6 +786,8 @@ class ServersApi(object):
         :type depth: int
         :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
+        :param delete_volumes: If true, all attached storage volumes will also be deleted.
+        :type delete_volumes: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -824,6 +826,8 @@ class ServersApi(object):
         :type depth: int
         :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
+        :param delete_volumes: If true, all attached storage volumes will also be deleted.
+        :type delete_volumes: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -854,7 +858,8 @@ class ServersApi(object):
             'server_id',
             'pretty',
             'depth',
-            'x_contract_number'
+            'x_contract_number',
+            'delete_volumes'
         ]
         all_params.extend(
             [
@@ -902,6 +907,8 @@ class ServersApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
+        if 'delete_volumes' in local_var_params and local_var_params['delete_volumes'] is not None:  # noqa: E501
+            query_params.append(('deleteVolumes', local_var_params['delete_volumes']))  # noqa: E501
 
         header_params = {}
         if 'x_contract_number' in local_var_params:

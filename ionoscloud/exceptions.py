@@ -128,6 +128,7 @@ class ApiException(OpenApiException):
 
         return error_message
 
+
 class ApiTimeout(OpenApiException):
     def __init__(self, message, request_id=None):
         """
@@ -138,6 +139,10 @@ class ApiTimeout(OpenApiException):
         self.message = message
         self.request_id = request_id
 
+    def __str__(self):
+        return self.message
+
+
 class ApiFailedRequest(OpenApiException):
     def __init__(self, message, request_id=None):
         """
@@ -147,6 +152,10 @@ class ApiFailedRequest(OpenApiException):
         """
         self.message = message
         self.request_id = request_id
+
+    def __str__(self):
+        return self.message
+
 
 def render_path(path_to_item):
     """Returns a string representation of a path"""

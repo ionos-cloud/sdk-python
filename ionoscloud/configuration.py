@@ -123,6 +123,7 @@ conf = ionoscloud.Configuration(
     def __init__(self, host=None,
                  token=None, token_prefix=None,
                  username=None, password=None,
+                 fingerprint=None,
                  discard_unknown_keys=False,
                  disabled_client_side_validations="",
                  server_index=None, server_variables=None,
@@ -163,6 +164,9 @@ conf = ionoscloud.Configuration(
         """
         self.password = password
         """Password for HTTP basic authentication
+        """
+        self.fingerprint = fingerprint
+        """API certificate fingerprint
         """
         self.discard_unknown_keys = discard_unknown_keys
         self.disabled_client_side_validations = disabled_client_side_validations
@@ -423,7 +427,7 @@ conf = ionoscloud.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 6.0\n"\
-               "SDK Package Version: 6.1.0".\
+               "SDK Package Version: 6.1.1".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):

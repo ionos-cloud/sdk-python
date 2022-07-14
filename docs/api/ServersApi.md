@@ -276,7 +276,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_servers_delete**
-> datacenters_servers_delete(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+> datacenters_servers_delete(datacenter_id, server_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, delete_volumes=delete_volumes)
 
 Delete servers
 
@@ -320,6 +320,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
+| **delete_volumes** | **bool**| If true, all attached storage volumes will also be deleted. | [optional]  |
 
 ### Return type
 
