@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 6.1.2 \(July 21st, 2022\)
+
+### Fixes:
+
+* added asn1crypto as required module
+
+
 ## 6.1.1 \(July 14th, 2022\)
 
 ### Features
