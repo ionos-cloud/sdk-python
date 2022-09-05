@@ -16,6 +16,6 @@
 | **create_flow_log** | **bool** | Create Flow Logs privilege. | [optional]  |
 | **access_and_manage_monitoring** | **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional]  |
 | **access_and_manage_certificates** | **bool** | Privilege for a group to access and manage certificates. | [optional]  |
-| **manage_dbaas** | **bool** | Privilege for a group to manage DBaaS related functionality. | [optional]  |
+| **manage_d_baa_s** | **bool** | Privilege for a group to manage DBaaS related functionality. | [optional]  |
 
 
