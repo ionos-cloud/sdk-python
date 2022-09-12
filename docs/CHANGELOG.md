@@ -1,5 +1,25 @@
 # CHANGELOG
 
+
+## 6.1.4 \(July 14th, 2022\)
+### Fixes:
+- fix `manage_dbaas` typo in `model_group_properties.py`
+
+## 6.1.3 \(July 14th, 2022\)
+### Known issues:
+- typo in `manage_dbaas` field in `model_group_properties.py` - generated as `manage_d_baa_s`
+
+## 6.1.2 \(July 14th, 2022\)
+### Fixes:
+- fix: added asn1crypto as required module
+
+## 6.1.1 \(July 14th, 2022\)
+### Features
+- added `manage_dbaas` field in `model_group_properties.py` : provides privilege for a group to manage DBaaS related functionality. Admin users already here this enabled by default.
+- added `delete_volumes` to `datacenters_servers_delete`: If true, all attached storage volumes will also be deleted.
+- added `boot_order` to volume properties : Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices. | [optional] [default to 'AUTO'] |
+- added certificate pinning to sdk python. Enabling certificate pinning allows you to bypass normal certificate checking, by supplying a SHA256 or SHA1 fingerprint of the leaf cert to be checked against what the server provides.
+
 ## 6.1.0 \(June 15th, 2022\)
 
 ### Enhancements:
