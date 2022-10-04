@@ -1,5 +1,8 @@
 # Python SDK
 
+**NOTE:
+_Please consider using SDK Python v6 releases that are using IONOS Cloud API Version 6, the latest stable API version. New features and improvements will be integrated in IONOS Cloud API Version 6._**
+
 ## Overview
 
 The IONOS Cloud SDK for Python provides you with access to the IONOS Cloud API. The client library supports both simple and complex requests. It is designed for developers who are building applications in Python. The SDK for Python wraps the IONOS Cloud API. All API operations are performed over SSL and authenticated using your IONOS Cloud portal credentials. The API can be accessed within an instance running in IONOS Cloud or directly over the Internet from any application that can send an HTTPS request and receive an HTTPS response.
