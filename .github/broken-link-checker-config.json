@@ -1,7 +1,7 @@
 {
   "ignorePatterns": [
 	{
-	  "pattern": "^https://mvnrepository.com/artifact/.*"
+	  "pattern": "^https://api.ionos.com/cloudapi/v6.*"
 	}
   ]
 }
