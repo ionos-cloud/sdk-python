@@ -184,7 +184,7 @@ class ImageProperties(object):
     def name(self):
         """Gets the name of this ImageProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        The resource name.  # noqa: E501
 
         :return: The name of this ImageProperties.  # noqa: E501
         :rtype: str
@@ -195,7 +195,7 @@ class ImageProperties(object):
     def name(self, name):
         """Sets the name of this ImageProperties.
 
-        The name of the  resource.  # noqa: E501
+        The resource name.  # noqa: E501
 
         :param name: The name of this ImageProperties.  # noqa: E501
         :type name: str
@@ -230,7 +230,7 @@ class ImageProperties(object):
     def location(self):
         """Gets the location of this ImageProperties.  # noqa: E501
 
-        Location of that image/snapshot.   # noqa: E501
+        The location of this image/snapshot.  # noqa: E501
 
         :return: The location of this ImageProperties.  # noqa: E501
         :rtype: str
@@ -241,7 +241,7 @@ class ImageProperties(object):
     def location(self, location):
         """Sets the location of this ImageProperties.
 
-        Location of that image/snapshot.   # noqa: E501
+        The location of this image/snapshot.  # noqa: E501
 
         :param location: The location of this ImageProperties.  # noqa: E501
         :type location: str
@@ -253,7 +253,7 @@ class ImageProperties(object):
     def size(self):
         """Gets the size of this ImageProperties.  # noqa: E501
 
-        The size of the image in GB.  # noqa: E501
+        The image size in GB.  # noqa: E501
 
         :return: The size of this ImageProperties.  # noqa: E501
         :rtype: float
@@ -264,7 +264,7 @@ class ImageProperties(object):
     def size(self, size):
         """Sets the size of this ImageProperties.
 
-        The size of the image in GB.  # noqa: E501
+        The image size in GB.  # noqa: E501
 
         :param size: The size of this ImageProperties.  # noqa: E501
         :type size: float
@@ -506,7 +506,7 @@ class ImageProperties(object):
     def licence_type(self):
         """Gets the licence_type of this ImageProperties.  # noqa: E501
 
-        OS type for this image.  # noqa: E501
+        The OS type of this image.  # noqa: E501
 
         :return: The licence_type of this ImageProperties.  # noqa: E501
         :rtype: str
@@ -517,7 +517,7 @@ class ImageProperties(object):
     def licence_type(self, licence_type):
         """Sets the licence_type of this ImageProperties.
 
-        OS type for this image.  # noqa: E501
+        The OS type of this image.  # noqa: E501
 
         :param licence_type: The licence_type of this ImageProperties.  # noqa: E501
         :type licence_type: str
@@ -589,7 +589,7 @@ class ImageProperties(object):
     def image_aliases(self):
         """Gets the image_aliases of this ImageProperties.  # noqa: E501
 
-        List of image aliases mapped for this Image  # noqa: E501
+        List of image aliases mapped for this image  # noqa: E501
 
         :return: The image_aliases of this ImageProperties.  # noqa: E501
         :rtype: list[str]
@@ -600,7 +600,7 @@ class ImageProperties(object):
     def image_aliases(self, image_aliases):
         """Sets the image_aliases of this ImageProperties.
 
-        List of image aliases mapped for this Image  # noqa: E501
+        List of image aliases mapped for this image  # noqa: E501
 
         :param image_aliases: The image_aliases of this ImageProperties.  # noqa: E501
         :type image_aliases: list[str]

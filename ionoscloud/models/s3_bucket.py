@@ -58,7 +58,7 @@ class S3Bucket(object):
     def name(self):
         """Gets the name of this S3Bucket.  # noqa: E501
 
-        Name of the S3 bucket  # noqa: E501
+        The name of the S3 bucket.  # noqa: E501
 
         :return: The name of this S3Bucket.  # noqa: E501
         :rtype: str
@@ -69,7 +69,7 @@ class S3Bucket(object):
     def name(self, name):
         """Sets the name of this S3Bucket.
 
-        Name of the S3 bucket  # noqa: E501
+        The name of the S3 bucket.  # noqa: E501
 
         :param name: The name of this S3Bucket.  # noqa: E501
         :type name: str

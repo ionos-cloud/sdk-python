@@ -4,20 +4,20 @@
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **name** | **str** | A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. |  |
-| **datacenter_id** | **str** | A valid ID of the data center, to which the user has access. |  |
-| **node_count** | **int** | The number of nodes that make up the node pool. |  |
-| **cpu_family** | **str** | A valid CPU family name. |  |
-| **cores_count** | **int** | The number of cores for the node. |  |
-| **ram_size** | **int** | The RAM size for the node. Must be set in multiples of 1024 MB, with minimum size is of 2048 MB. |  |
+| **datacenter_id** | **str** | The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located. |  |
+| **node_count** | **int** | The number of worker nodes of the node pool. |  |
+| **cpu_family** | **str** | The CPU type for the nodes. |  |
+| **cores_count** | **int** | The total number of cores for the nodes. |  |
+| **ram_size** | **int** | The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB. |  |
 | **availability_zone** | **str** | The availability zone in which the target VM should be provisioned. |  |
-| **storage_type** | **str** | The type of hardware for the volume. |  |
-| **storage_size** | **int** | The size of the volume in GB. The size should be greater than 10GB. |  |
-| **k8s_version** | **str** | The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions. | [optional]  |
+| **storage_type** | **str** | The storage type for the nodes. |  |
+| **storage_size** | **int** | The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD. |  |
+| **k8s_version** | **str** | The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions. | [optional]  |
 | **maintenance_window** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional]  |
 | **auto_scaling** | [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional]  |
-| **lans** | [**list[KubernetesNodePoolLan]**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes | [optional]  |
-| **labels** | **dict(str, str)** | map of labels attached to node pool. | [optional]  |
-| **annotations** | **dict(str, str)** | map of annotations attached to node pool. | [optional]  |
-| **public_ips** | **list[str]** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt. | [optional]  |
+| **lans** | [**list[KubernetesNodePoolLan]**](KubernetesNodePoolLan.md) | The array of existing private LANs to attach to worker nodes. | [optional]  |
+| **labels** | **dict(str, str)** | The labels attached to the node pool. | [optional]  |
+| **annotations** | **dict(str, str)** | The annotations attached to the node pool. | [optional]  |
+| **public_ips** | **list[str]** | Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool&#39;s data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt. | [optional]  |
 
 

@@ -5,6 +5,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**datacenters_lans_delete**](LANsApi.md#datacenters_lans_delete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete LANs |
+| [**datacenters_lans_enable_ipv6**](LANsApi.md#datacenters_lans_enable_ipv6) | **POST** /datacenters/{datacenterId}/lans/enable-ipv6 | Enable IPv6 in the current Virtual Datacenter |
 | [**datacenters_lans_find_by_id**](LANsApi.md#datacenters_lans_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve LANs |
 | [**datacenters_lans_get**](LANsApi.md#datacenters_lans_get) | **GET** /datacenters/{datacenterId}/lans | List LANs |
 | [**datacenters_lans_nics_find_by_id**](LANsApi.md#datacenters_lans_nics_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve attached NICs |
@@ -73,6 +74,63 @@ Basic Authentication, Token Authentication
 
  - **Content-Type**: Not defined
  - **Accept**: application/json
+
+# **datacenters_lans_enable_ipv6**
+> datacenters_lans_enable_ipv6(datacenter_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
+
+Enable IPv6 in the current Virtual Datacenter
+
+Enable IPv6 for all NICs in the current Virtual Datacenter.
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import ionoscloud
+from ionoscloud.rest import ApiException
+
+# Defining the host is optional and defaults to https://api.ionos.com/cloudapi/v6
+configuration = ionoscloud.Configuration(
+    host = 'https://api.ionos.com/cloudapi/v6',
+)
+
+# Example of configuring HTTP Basic Authorization
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+with ionoscloud.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ionoscloud.LANsApi(api_client)
+    datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
+    try:
+        # Enable IPv6 in the current Virtual Datacenter
+        api_instance.datacenters_lans_enable_ipv6(datacenter_id)
+    except ApiException as e:
+        print('Exception when calling LANsApi.datacenters_lans_enable_ipv6: %s\n' % e)
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenter_id** | **str**| The unique ID of the data center. |  |
+| **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
+| **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: */*
 
 # **datacenters_lans_find_by_id**
 > Lan datacenters_lans_find_by_id(datacenter_id, lan_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
@@ -362,7 +420,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **lan_id** | **str**| The unique ID of the LAN. |  |
-| **nic** | [**Nic**](Nic.md)| The NIC to be attached. |  |
+| **nic** | [**Nic**](../models/Nic.md)| The NIC to be attached. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -424,7 +482,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **lan_id** | **str**| The unique ID of the LAN. |  |
-| **lan** | [**LanProperties**](LanProperties.md)| The properties of the LAN to be updated. |  |
+| **lan** | [**LanProperties**](../models/LanProperties.md)| The properties of the LAN to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -447,7 +505,7 @@ Basic Authentication, Token Authentication
 
 Create LANs
 
-Create a LAN within the data center.
+Creates a LAN within the data center.
 
 ### Example
 
@@ -484,7 +542,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
-| **lan** | [**LanPost**](LanPost.md)| The LAN to create. |  |
+| **lan** | [**LanPost**](../models/LanPost.md)| The LAN to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -546,7 +604,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **lan_id** | **str**| The unique ID of the LAN. |  |
-| **lan** | [**Lan**](Lan.md)| The modified LAN |  |
+| **lan** | [**Lan**](../models/Lan.md)| The modified LAN |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

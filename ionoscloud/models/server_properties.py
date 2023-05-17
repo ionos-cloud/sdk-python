@@ -100,8 +100,10 @@ class ServerProperties(object):
             self.template_uuid = template_uuid
         if name is not None:
             self.name = name
-        self.cores = cores
-        self.ram = ram
+        if cores is not None:
+            self.cores = cores
+        if ram is not None:
+            self.ram = ram
         if availability_zone is not None:
             self.availability_zone = availability_zone
         if vm_state is not None:
@@ -166,7 +168,7 @@ class ServerProperties(object):
     def cores(self):
         """Gets the cores of this ServerProperties.  # noqa: E501
 
-        The total number of cores for the server.  # noqa: E501
+        The total number of cores for the enterprise server.  # noqa: E501
 
         :return: The cores of this ServerProperties.  # noqa: E501
         :rtype: int
@@ -177,13 +179,11 @@ class ServerProperties(object):
     def cores(self, cores):
         """Sets the cores of this ServerProperties.
 
-        The total number of cores for the server.  # noqa: E501
+        The total number of cores for the enterprise server.  # noqa: E501
 
         :param cores: The cores of this ServerProperties.  # noqa: E501
         :type cores: int
         """
-        if self.local_vars_configuration.client_side_validation and cores is None:  # noqa: E501
-            raise ValueError("Invalid value for `cores`, must not be `None`")  # noqa: E501
 
         self._cores = cores
 
@@ -191,7 +191,7 @@ class ServerProperties(object):
     def ram(self):
         """Gets the ram of this ServerProperties.  # noqa: E501
 
-        The memory size for the server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.  # noqa: E501
+        The memory size for the enterprise server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.  # noqa: E501
 
         :return: The ram of this ServerProperties.  # noqa: E501
         :rtype: int
@@ -202,13 +202,11 @@ class ServerProperties(object):
     def ram(self, ram):
         """Sets the ram of this ServerProperties.
 
-        The memory size for the server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.  # noqa: E501
+        The memory size for the enterprise server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.  # noqa: E501
 
         :param ram: The ram of this ServerProperties.  # noqa: E501
         :type ram: int
         """
-        if self.local_vars_configuration.client_side_validation and ram is None:  # noqa: E501
-            raise ValueError("Invalid value for `ram`, must not be `None`")  # noqa: E501
 
         self._ram = ram
 
@@ -316,7 +314,7 @@ class ServerProperties(object):
     def cpu_family(self):
         """Gets the cpu_family of this ServerProperties.  # noqa: E501
 
-        CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource.  # noqa: E501
+        CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE servers.  # noqa: E501
 
         :return: The cpu_family of this ServerProperties.  # noqa: E501
         :rtype: str
@@ -327,7 +325,7 @@ class ServerProperties(object):
     def cpu_family(self, cpu_family):
         """Sets the cpu_family of this ServerProperties.
 
-        CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource.  # noqa: E501
+        CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE servers.  # noqa: E501
 
         :param cpu_family: The cpu_family of this ServerProperties.  # noqa: E501
         :type cpu_family: str
@@ -339,7 +337,7 @@ class ServerProperties(object):
     def type(self):
         """Gets the type of this ServerProperties.  # noqa: E501
 
-        server usages: ENTERPRISE or CUBE  # noqa: E501
+        Server type.  # noqa: E501
 
         :return: The type of this ServerProperties.  # noqa: E501
         :rtype: str
@@ -350,11 +348,17 @@ class ServerProperties(object):
     def type(self, type):
         """Sets the type of this ServerProperties.
 
-        server usages: ENTERPRISE or CUBE  # noqa: E501
+        Server type.  # noqa: E501
 
         :param type: The type of this ServerProperties.  # noqa: E501
         :type type: str
         """
+        allowed_values = ["ENTERPRISE", "CUBE", "VCPU_INSTANCE"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
 
         self._type = type
     def to_dict(self):

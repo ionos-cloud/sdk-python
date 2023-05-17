@@ -80,7 +80,7 @@ class KubernetesClusters(object):
     def id(self):
         """Gets the id of this KubernetesClusters.  # noqa: E501
 
-        A unique representation of the Kubernetes cluster as a resource collection.  # noqa: E501
+        The unique representation of the K8s cluster as a resource collection.  # noqa: E501
 
         :return: The id of this KubernetesClusters.  # noqa: E501
         :rtype: str
@@ -91,7 +91,7 @@ class KubernetesClusters(object):
     def id(self, id):
         """Sets the id of this KubernetesClusters.
 
-        A unique representation of the Kubernetes cluster as a resource collection.  # noqa: E501
+        The unique representation of the K8s cluster as a resource collection.  # noqa: E501
 
         :param id: The id of this KubernetesClusters.  # noqa: E501
         :type id: str
@@ -103,7 +103,7 @@ class KubernetesClusters(object):
     def type(self):
         """Gets the type of this KubernetesClusters.  # noqa: E501
 
-        The type of resource within a collection.  # noqa: E501
+        The resource type within a collection.  # noqa: E501
 
         :return: The type of this KubernetesClusters.  # noqa: E501
         :rtype: str
@@ -114,7 +114,7 @@ class KubernetesClusters(object):
     def type(self, type):
         """Sets the type of this KubernetesClusters.
 
-        The type of resource within a collection.  # noqa: E501
+        The resource type within a collection.  # noqa: E501
 
         :param type: The type of this KubernetesClusters.  # noqa: E501
         :type type: str
@@ -132,7 +132,7 @@ class KubernetesClusters(object):
     def href(self):
         """Gets the href of this KubernetesClusters.  # noqa: E501
 
-        URL to the collection representation (absolute path).  # noqa: E501
+        The URL to the collection representation (absolute path).  # noqa: E501
 
         :return: The href of this KubernetesClusters.  # noqa: E501
         :rtype: str
@@ -143,7 +143,7 @@ class KubernetesClusters(object):
     def href(self, href):
         """Sets the href of this KubernetesClusters.
 
-        URL to the collection representation (absolute path).  # noqa: E501
+        The URL to the collection representation (absolute path).  # noqa: E501
 
         :param href: The href of this KubernetesClusters.  # noqa: E501
         :type href: str
@@ -155,7 +155,7 @@ class KubernetesClusters(object):
     def items(self):
         """Gets the items of this KubernetesClusters.  # noqa: E501
 
-        Array of items in the collection.  # noqa: E501
+        Array of K8s clusters in the collection.  # noqa: E501
 
         :return: The items of this KubernetesClusters.  # noqa: E501
         :rtype: list[KubernetesCluster]
@@ -166,7 +166,7 @@ class KubernetesClusters(object):
     def items(self, items):
         """Sets the items of this KubernetesClusters.
 
-        Array of items in the collection.  # noqa: E501
+        Array of K8s clusters in the collection.  # noqa: E501
 
         :param items: The items of this KubernetesClusters.  # noqa: E501
         :type items: list[KubernetesCluster]

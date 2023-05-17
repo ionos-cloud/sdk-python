@@ -2213,9 +2213,9 @@ class UserManagementApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_groups_users_post(self, group_id, user, **kwargs):  # noqa: E501
-        """Add group members  # noqa: E501
+        """Add a Group Member  # noqa: E501
 
-        Add an existing user to the specified group.   # noqa: E501
+        Adds an existing user to the specified group.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2251,9 +2251,9 @@ class UserManagementApi(object):
         return self.um_groups_users_post_with_http_info(group_id, user, **kwargs)  # noqa: E501
 
     def um_groups_users_post_with_http_info(self, group_id, user, **kwargs):  # noqa: E501
-        """Add group members  # noqa: E501
+        """Add a Group Member  # noqa: E501
 
-        Add an existing user to the specified group.   # noqa: E501
+        Adds an existing user to the specified group.   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

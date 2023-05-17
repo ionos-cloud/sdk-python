@@ -4,15 +4,15 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**contracts_get**](ContractResourcesApi.md#contracts_get) | **GET** /contracts | Retrieve contracts |
+| [**contracts_get**](ContractResourcesApi.md#contracts_get) | **GET** /contracts | Get Contract Information |
 
 
 # **contracts_get**
 > Contracts contracts_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Retrieve contracts
+Get Contract Information
 
-Retrieve the properties of the user's contract. In this version, the resource became a collection.
+Retrieves the properties of the user's contract. This operation allows you to obtain the resource limits and the general contract information.
 
 ### Example
 
@@ -35,7 +35,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.ContractResourcesApi(api_client)
     try:
-        # Retrieve contracts
+        # Get Contract Information
         api_response = api_instance.contracts_get()
         print(api_response)
     except ApiException as e:

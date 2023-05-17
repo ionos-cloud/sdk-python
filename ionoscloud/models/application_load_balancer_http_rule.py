@@ -138,7 +138,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def type(self):
         """Gets the type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        Type of the HTTP rule.  # noqa: E501
+        The HTTP rule type.  # noqa: E501
 
         :return: The type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: str
@@ -149,7 +149,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def type(self, type):
         """Sets the type of this ApplicationLoadBalancerHttpRule.
 
-        Type of the HTTP rule.  # noqa: E501
+        The HTTP rule type.  # noqa: E501
 
         :param type: The type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :type type: str
@@ -169,7 +169,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def target_group(self):
         """Gets the target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        The ID of the target group; mandatory and only valid for FORWARD actions.  # noqa: E501
+        The ID of the target group; this parameter is mandatory and is valid only for 'FORWARD' actions.  # noqa: E501
 
         :return: The target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: str
@@ -180,7 +180,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def target_group(self, target_group):
         """Sets the target_group of this ApplicationLoadBalancerHttpRule.
 
-        The ID of the target group; mandatory and only valid for FORWARD actions.  # noqa: E501
+        The ID of the target group; this parameter is mandatory and is valid only for 'FORWARD' actions.  # noqa: E501
 
         :param target_group: The target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :type target_group: str
@@ -192,7 +192,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def drop_query(self):
         """Gets the drop_query of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        Default is false; valid only for REDIRECT actions.  # noqa: E501
+        Indicates whether the query part of the URI should be dropped and is valid only for 'REDIRECT' actions. Default value is 'FALSE', the redirect URI does not contain any query parameters.  # noqa: E501
 
         :return: The drop_query of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: bool
@@ -203,7 +203,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def drop_query(self, drop_query):
         """Sets the drop_query of this ApplicationLoadBalancerHttpRule.
 
-        Default is false; valid only for REDIRECT actions.  # noqa: E501
+        Indicates whether the query part of the URI should be dropped and is valid only for 'REDIRECT' actions. Default value is 'FALSE', the redirect URI does not contain any query parameters.  # noqa: E501
 
         :param drop_query: The drop_query of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :type drop_query: bool
@@ -215,7 +215,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def location(self):
         """Gets the location of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        The location for redirecting; mandatory and valid only for REDIRECT actions.  # noqa: E501
+        The location for the redirection; this parameter is mandatory and valid only for 'REDIRECT' actions.  # noqa: E501
 
         :return: The location of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: str
@@ -226,7 +226,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def location(self, location):
         """Sets the location of this ApplicationLoadBalancerHttpRule.
 
-        The location for redirecting; mandatory and valid only for REDIRECT actions.  # noqa: E501
+        The location for the redirection; this parameter is mandatory and valid only for 'REDIRECT' actions.  # noqa: E501
 
         :param location: The location of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :type location: str
@@ -238,7 +238,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def status_code(self):
         """Gets the status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        Valid only for REDIRECT and STATIC actions. For REDIRECT actions, default is 301 and possible values are 301, 302, 303, 307, and 308. For STATIC actions, default is 503 and valid range is 200 to 599.  # noqa: E501
+        The status code is for 'REDIRECT' and 'STATIC' actions only.   If the HTTP rule is 'REDIRECT' the valid values are: 301, 302, 303, 307, 308; default value is '301'.  If the HTTP rule is 'STATIC' the valid values are from the range 200-599; default value is '503'.  # noqa: E501
 
         :return: The status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: int
@@ -249,17 +249,11 @@ class ApplicationLoadBalancerHttpRule(object):
     def status_code(self, status_code):
         """Sets the status_code of this ApplicationLoadBalancerHttpRule.
 
-        Valid only for REDIRECT and STATIC actions. For REDIRECT actions, default is 301 and possible values are 301, 302, 303, 307, and 308. For STATIC actions, default is 503 and valid range is 200 to 599.  # noqa: E501
+        The status code is for 'REDIRECT' and 'STATIC' actions only.   If the HTTP rule is 'REDIRECT' the valid values are: 301, 302, 303, 307, 308; default value is '301'.  If the HTTP rule is 'STATIC' the valid values are from the range 200-599; default value is '503'.  # noqa: E501
 
         :param status_code: The status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :type status_code: int
         """
-        allowed_values = [301, 302, 303, 307, 308, 200, 503, 599]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and status_code not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `status_code` ({0}), must be one of {1}"  # noqa: E501
-                .format(status_code, allowed_values)
-            )
 
         self._status_code = status_code
 
@@ -267,7 +261,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def response_message(self):
         """Gets the response_message of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        The response message of the request; mandatory for STATIC actions.  # noqa: E501
+        The response message of the request; this parameter is mandatory for 'STATIC' actions.  # noqa: E501
 
         :return: The response_message of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: str
@@ -278,7 +272,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def response_message(self, response_message):
         """Sets the response_message of this ApplicationLoadBalancerHttpRule.
 
-        The response message of the request; mandatory for STATIC actions.  # noqa: E501
+        The response message of the request; this parameter is mandatory for 'STATIC' actions.  # noqa: E501
 
         :param response_message: The response_message of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :type response_message: str
@@ -290,7 +284,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def content_type(self):
         """Gets the content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        Valid only for STATIC actions.  # noqa: E501
+        Specifies the content type and is valid only for 'STATIC' actions.  # noqa: E501
 
         :return: The content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: str
@@ -301,7 +295,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def content_type(self, content_type):
         """Sets the content_type of this ApplicationLoadBalancerHttpRule.
 
-        Valid only for STATIC actions.  # noqa: E501
+        Specifies the content type and is valid only for 'STATIC' actions.  # noqa: E501
 
         :param content_type: The content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :type content_type: str
@@ -313,7 +307,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def conditions(self):
         """Gets the conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        An array of items in the collection.The action is only performed if each and every condition is met; if no conditions are set, the rule will always be performed.  # noqa: E501
+        An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.  # noqa: E501
 
         :return: The conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: list[ApplicationLoadBalancerHttpRuleCondition]
@@ -324,7 +318,7 @@ class ApplicationLoadBalancerHttpRule(object):
     def conditions(self, conditions):
         """Sets the conditions of this ApplicationLoadBalancerHttpRule.
 
-        An array of items in the collection.The action is only performed if each and every condition is met; if no conditions are set, the rule will always be performed.  # noqa: E501
+        An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.  # noqa: E501
 
         :param conditions: The conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :type conditions: list[ApplicationLoadBalancerHttpRuleCondition]

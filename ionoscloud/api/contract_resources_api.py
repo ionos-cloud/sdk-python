@@ -18,9 +18,9 @@ class ContractResourcesApi(object):
         self.api_client = api_client
 
     def contracts_get(self, **kwargs):  # noqa: E501
-        """Retrieve contracts  # noqa: E501
+        """Get Contract Information  # noqa: E501
 
-        Retrieve the properties of the user's contract. In this version, the resource became a collection.  # noqa: E501
+        Retrieves the properties of the user's contract. This operation allows you to obtain the resource limits and the general contract information.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -52,9 +52,9 @@ class ContractResourcesApi(object):
         return self.contracts_get_with_http_info(**kwargs)  # noqa: E501
 
     def contracts_get_with_http_info(self, **kwargs):  # noqa: E501
-        """Retrieve contracts  # noqa: E501
+        """Get Contract Information  # noqa: E501
 
-        Retrieve the properties of the user's contract. In this version, the resource became a collection.  # noqa: E501
+        Retrieves the properties of the user's contract. This operation allows you to obtain the resource limits and the general contract information.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

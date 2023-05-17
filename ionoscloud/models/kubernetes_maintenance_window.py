@@ -64,7 +64,7 @@ class KubernetesMaintenanceWindow(object):
     def day_of_the_week(self):
         """Gets the day_of_the_week of this KubernetesMaintenanceWindow.  # noqa: E501
 
-        The day of the week for a maintenance window.  # noqa: E501
+        The weekday for a maintenance window.  # noqa: E501
 
         :return: The day_of_the_week of this KubernetesMaintenanceWindow.  # noqa: E501
         :rtype: str
@@ -75,7 +75,7 @@ class KubernetesMaintenanceWindow(object):
     def day_of_the_week(self, day_of_the_week):
         """Sets the day_of_the_week of this KubernetesMaintenanceWindow.
 
-        The day of the week for a maintenance window.  # noqa: E501
+        The weekday for a maintenance window.  # noqa: E501
 
         :param day_of_the_week: The day_of_the_week of this KubernetesMaintenanceWindow.  # noqa: E501
         :type day_of_the_week: str
@@ -95,7 +95,7 @@ class KubernetesMaintenanceWindow(object):
     def time(self):
         """Gets the time of this KubernetesMaintenanceWindow.  # noqa: E501
 
-        The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\"Z\"; HH:mm:ssZ. This time may varies by 15 minutes.  # noqa: E501
+        The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\"Z\"; HH:mm:ssZ. This time may vary by 15 minutes.  # noqa: E501
 
         :return: The time of this KubernetesMaintenanceWindow.  # noqa: E501
         :rtype: str
@@ -106,7 +106,7 @@ class KubernetesMaintenanceWindow(object):
     def time(self, time):
         """Sets the time of this KubernetesMaintenanceWindow.
 
-        The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\"Z\"; HH:mm:ssZ. This time may varies by 15 minutes.  # noqa: E501
+        The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\"Z\"; HH:mm:ssZ. This time may vary by 15 minutes.  # noqa: E501
 
         :param time: The time of this KubernetesMaintenanceWindow.  # noqa: E501
         :type time: str

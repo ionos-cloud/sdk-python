@@ -670,9 +670,9 @@ class ImagesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def images_put(self, image_id, image, **kwargs):  # noqa: E501
-        """Modify images  # noqa: E501
+        """Modify an Image by ID  # noqa: E501
 
-        Modify the properties of the specified image.  # noqa: E501
+        Modifies the properties of the specified image.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -708,9 +708,9 @@ class ImagesApi(object):
         return self.images_put_with_http_info(image_id, image, **kwargs)  # noqa: E501
 
     def images_put_with_http_info(self, image_id, image, **kwargs):  # noqa: E501
-        """Modify images  # noqa: E501
+        """Modify an Image by ID  # noqa: E501
 
-        Modify the properties of the specified image.  # noqa: E501
+        Modifies the properties of the specified image.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

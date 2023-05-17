@@ -34,6 +34,8 @@ class KubernetesNodePoolLan(object):
     """
     openapi_types = {
 
+        'datacenter_id': 'str',
+
         'id': 'int',
 
         'dhcp': 'bool',
@@ -43,6 +45,8 @@ class KubernetesNodePoolLan(object):
 
     attribute_map = {
 
+        'datacenter_id': 'datacenterId',
+
         'id': 'id',
 
         'dhcp': 'dhcp',
@@ -50,17 +54,20 @@ class KubernetesNodePoolLan(object):
         'routes': 'routes',
     }
 
-    def __init__(self, id=None, dhcp=None, routes=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, datacenter_id=None, id=None, dhcp=None, routes=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolLan - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._datacenter_id = None
         self._id = None
         self._dhcp = None
         self._routes = None
         self.discriminator = None
 
+        if datacenter_id is not None:
+            self.datacenter_id = datacenter_id
         self.id = id
         if dhcp is not None:
             self.dhcp = dhcp
@@ -69,10 +76,33 @@ class KubernetesNodePoolLan(object):
 
 
     @property
+    def datacenter_id(self):
+        """Gets the datacenter_id of this KubernetesNodePoolLan.  # noqa: E501
+
+        The datacenter ID, requires system privileges, for internal usage only  # noqa: E501
+
+        :return: The datacenter_id of this KubernetesNodePoolLan.  # noqa: E501
+        :rtype: str
+        """
+        return self._datacenter_id
+
+    @datacenter_id.setter
+    def datacenter_id(self, datacenter_id):
+        """Sets the datacenter_id of this KubernetesNodePoolLan.
+
+        The datacenter ID, requires system privileges, for internal usage only  # noqa: E501
+
+        :param datacenter_id: The datacenter_id of this KubernetesNodePoolLan.  # noqa: E501
+        :type datacenter_id: str
+        """
+
+        self._datacenter_id = datacenter_id
+
+    @property
     def id(self):
         """Gets the id of this KubernetesNodePoolLan.  # noqa: E501
 
-        The LAN ID of an existing LAN at the related datacenter  # noqa: E501
+        The LAN ID of an existing LAN at the related data center  # noqa: E501
 
         :return: The id of this KubernetesNodePoolLan.  # noqa: E501
         :rtype: int
@@ -83,7 +113,7 @@ class KubernetesNodePoolLan(object):
     def id(self, id):
         """Sets the id of this KubernetesNodePoolLan.
 
-        The LAN ID of an existing LAN at the related datacenter  # noqa: E501
+        The LAN ID of an existing LAN at the related data center  # noqa: E501
 
         :param id: The id of this KubernetesNodePoolLan.  # noqa: E501
         :type id: int
@@ -97,7 +127,7 @@ class KubernetesNodePoolLan(object):
     def dhcp(self):
         """Gets the dhcp of this KubernetesNodePoolLan.  # noqa: E501
 
-        Indicates if the Kubernetes node pool LAN will reserve an IP using DHCP.  # noqa: E501
+        Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.  # noqa: E501
 
         :return: The dhcp of this KubernetesNodePoolLan.  # noqa: E501
         :rtype: bool
@@ -108,7 +138,7 @@ class KubernetesNodePoolLan(object):
     def dhcp(self, dhcp):
         """Sets the dhcp of this KubernetesNodePoolLan.
 
-        Indicates if the Kubernetes node pool LAN will reserve an IP using DHCP.  # noqa: E501
+        Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.  # noqa: E501
 
         :param dhcp: The dhcp of this KubernetesNodePoolLan.  # noqa: E501
         :type dhcp: bool
@@ -120,7 +150,7 @@ class KubernetesNodePoolLan(object):
     def routes(self):
         """Gets the routes of this KubernetesNodePoolLan.  # noqa: E501
 
-        array of additional LANs attached to worker nodes  # noqa: E501
+        The array of additional LANs attached to worker nodes.  # noqa: E501
 
         :return: The routes of this KubernetesNodePoolLan.  # noqa: E501
         :rtype: list[KubernetesNodePoolLanRoutes]
@@ -131,7 +161,7 @@ class KubernetesNodePoolLan(object):
     def routes(self, routes):
         """Sets the routes of this KubernetesNodePoolLan.
 
-        array of additional LANs attached to worker nodes  # noqa: E501
+        The array of additional LANs attached to worker nodes.  # noqa: E501
 
         :param routes: The routes of this KubernetesNodePoolLan.  # noqa: E501
         :type routes: list[KubernetesNodePoolLanRoutes]

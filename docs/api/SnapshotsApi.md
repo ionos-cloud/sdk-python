@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**snapshots_find_by_id**](SnapshotsApi.md#snapshots_find_by_id) | **GET** /snapshots/{snapshotId} | Retrieve snapshots by ID |
 | [**snapshots_get**](SnapshotsApi.md#snapshots_get) | **GET** /snapshots | List snapshots |
 | [**snapshots_patch**](SnapshotsApi.md#snapshots_patch) | **PATCH** /snapshots/{snapshotId} | Partially modify snapshots |
-| [**snapshots_put**](SnapshotsApi.md#snapshots_put) | **PUT** /snapshots/{snapshotId} | Modify snapshots |
+| [**snapshots_put**](SnapshotsApi.md#snapshots_put) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot by ID |
 
 
 # **snapshots_delete**
@@ -224,7 +224,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **snapshot_id** | **str**| The unique ID of the snapshot. |  |
-| **snapshot** | [**SnapshotProperties**](SnapshotProperties.md)| The properties of the snapshot to be updated. |  |
+| **snapshot** | [**SnapshotProperties**](../models/SnapshotProperties.md)| The properties of the snapshot to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -245,9 +245,9 @@ Basic Authentication, Token Authentication
 # **snapshots_put**
 > Snapshot snapshots_put(snapshot_id, snapshot, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify snapshots
+Modify a Snapshot by ID
 
-Modify the properties of the specified snapshot.
+Modifies the properties of the specified snapshot.
 
 ### Example
 
@@ -272,7 +272,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     snapshot_id = 'snapshot_id_example' # str | The unique ID of the snapshot.
     snapshot = ionoscloud.Snapshot() # Snapshot | The modified snapshot
     try:
-        # Modify snapshots
+        # Modify a Snapshot by ID
         api_response = api_instance.snapshots_put(snapshot_id, snapshot)
         print(api_response)
     except ApiException as e:
@@ -284,7 +284,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **snapshot_id** | **str**| The unique ID of the snapshot. |  |
-| **snapshot** | [**Snapshot**](Snapshot.md)| The modified snapshot |  |
+| **snapshot** | [**Snapshot**](../models/Snapshot.md)| The modified snapshot |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

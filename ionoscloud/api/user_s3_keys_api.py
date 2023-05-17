@@ -688,9 +688,9 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_put(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
-        """Modify S3 keys by key ID  # noqa: E501
+        """Modify a S3 Key by Key ID  # noqa: E501
 
-        Enable or disable the specified user S3 key.  # noqa: E501
+        Enables or disables the specified user S3 key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -728,9 +728,9 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_put_with_http_info(user_id, key_id, s3_key, **kwargs)  # noqa: E501
 
     def um_users_s3keys_put_with_http_info(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
-        """Modify S3 keys by key ID  # noqa: E501
+        """Modify a S3 Key by Key ID  # noqa: E501
 
-        Enable or disable the specified user S3 key.  # noqa: E501
+        Enables or disables the specified user S3 key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

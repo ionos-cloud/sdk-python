@@ -197,8 +197,7 @@ class VolumeProperties(object):
             self.user_data = user_data
         if boot_server is not None:
             self.boot_server = boot_server
-        if boot_order is not None:
-            self.boot_order = boot_order
+        self.boot_order = boot_order
 
 
     @property
@@ -728,7 +727,7 @@ class VolumeProperties(object):
         :param boot_order: The boot_order of this VolumeProperties.  # noqa: E501
         :type boot_order: str
         """
-        allowed_values = ["AUTO", "NONE", "PRIMARY"]  # noqa: E501
+        allowed_values = [None,"AUTO", "NONE", "PRIMARY"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and boot_order not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `boot_order` ({0}), must be one of {1}"  # noqa: E501

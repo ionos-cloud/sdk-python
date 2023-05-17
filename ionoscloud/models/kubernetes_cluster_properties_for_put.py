@@ -111,7 +111,7 @@ class KubernetesClusterPropertiesForPut(object):
     def k8s_version(self):
         """Gets the k8s_version of this KubernetesClusterPropertiesForPut.  # noqa: E501
 
-        The Kubernetes version the cluster is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.  # noqa: E501
+        The Kubernetes version that the cluster is running. This limits which Kubernetes versions can run in a cluster's node pools. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
 
         :return: The k8s_version of this KubernetesClusterPropertiesForPut.  # noqa: E501
         :rtype: str
@@ -122,7 +122,7 @@ class KubernetesClusterPropertiesForPut(object):
     def k8s_version(self, k8s_version):
         """Sets the k8s_version of this KubernetesClusterPropertiesForPut.
 
-        The Kubernetes version the cluster is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.  # noqa: E501
+        The Kubernetes version that the cluster is running. This limits which Kubernetes versions can run in a cluster's node pools. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
 
         :param k8s_version: The k8s_version of this KubernetesClusterPropertiesForPut.  # noqa: E501
         :type k8s_version: str
@@ -155,7 +155,7 @@ class KubernetesClusterPropertiesForPut(object):
     def api_subnet_allow_list(self):
         """Gets the api_subnet_allow_list of this KubernetesClusterPropertiesForPut.  # noqa: E501
 
-        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
+        Access to the K8s API server is restricted to these CIDRs. Intra-cluster traffic is not affected by this restriction. If no AllowList is specified, access is not limited. If an IP is specified without a subnet mask, the default value is 32 for IPv4 and 128 for IPv6.  # noqa: E501
 
         :return: The api_subnet_allow_list of this KubernetesClusterPropertiesForPut.  # noqa: E501
         :rtype: list[str]
@@ -166,7 +166,7 @@ class KubernetesClusterPropertiesForPut(object):
     def api_subnet_allow_list(self, api_subnet_allow_list):
         """Sets the api_subnet_allow_list of this KubernetesClusterPropertiesForPut.
 
-        Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.  # noqa: E501
+        Access to the K8s API server is restricted to these CIDRs. Intra-cluster traffic is not affected by this restriction. If no AllowList is specified, access is not limited. If an IP is specified without a subnet mask, the default value is 32 for IPv4 and 128 for IPv6.  # noqa: E501
 
         :param api_subnet_allow_list: The api_subnet_allow_list of this KubernetesClusterPropertiesForPut.  # noqa: E501
         :type api_subnet_allow_list: list[str]
@@ -178,7 +178,7 @@ class KubernetesClusterPropertiesForPut(object):
     def s3_buckets(self):
         """Gets the s3_buckets of this KubernetesClusterPropertiesForPut.  # noqa: E501
 
-        List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs  # noqa: E501
+        List of S3 buckets configured for K8s usage. At the moment, it contains only one S3 bucket that is used to store K8s API audit logs.  # noqa: E501
 
         :return: The s3_buckets of this KubernetesClusterPropertiesForPut.  # noqa: E501
         :rtype: list[S3Bucket]
@@ -189,7 +189,7 @@ class KubernetesClusterPropertiesForPut(object):
     def s3_buckets(self, s3_buckets):
         """Sets the s3_buckets of this KubernetesClusterPropertiesForPut.
 
-        List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs  # noqa: E501
+        List of S3 buckets configured for K8s usage. At the moment, it contains only one S3 bucket that is used to store K8s API audit logs.  # noqa: E501
 
         :param s3_buckets: The s3_buckets of this KubernetesClusterPropertiesForPut.  # noqa: E501
         :type s3_buckets: list[S3Bucket]

@@ -18,9 +18,9 @@ class ServersApi(object):
         self.api_client = api_client
 
     def datacenters_servers_cdroms_delete(self, datacenter_id, server_id, cdrom_id, **kwargs):  # noqa: E501
-        """Detach CD-ROMs  # noqa: E501
+        """Detach a CD-ROM by ID  # noqa: E501
 
-        Detach the specified CD-ROM from the server.  # noqa: E501
+        Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -58,9 +58,9 @@ class ServersApi(object):
         return self.datacenters_servers_cdroms_delete_with_http_info(datacenter_id, server_id, cdrom_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_cdroms_delete_with_http_info(self, datacenter_id, server_id, cdrom_id, **kwargs):  # noqa: E501
-        """Detach CD-ROMs  # noqa: E501
+        """Detach a CD-ROM by ID  # noqa: E501
 
-        Detach the specified CD-ROM from the server.  # noqa: E501
+        Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -202,9 +202,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_cdroms_find_by_id(self, datacenter_id, server_id, cdrom_id, **kwargs):  # noqa: E501
-        """Retrieve attached CD-ROMs  # noqa: E501
+        """Get Attached CD-ROM by ID  # noqa: E501
 
-        Retrieve the properties of the CD-ROM, attached to the specified server.  # noqa: E501
+        Retrieves the properties of the CD-ROM attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -242,9 +242,9 @@ class ServersApi(object):
         return self.datacenters_servers_cdroms_find_by_id_with_http_info(datacenter_id, server_id, cdrom_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_cdroms_find_by_id_with_http_info(self, datacenter_id, server_id, cdrom_id, **kwargs):  # noqa: E501
-        """Retrieve attached CD-ROMs  # noqa: E501
+        """Get Attached CD-ROM by ID  # noqa: E501
 
-        Retrieve the properties of the CD-ROM, attached to the specified server.  # noqa: E501
+        Retrieves the properties of the CD-ROM attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -386,9 +386,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_cdroms_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List attached CD-ROMs   # noqa: E501
+        """Get Attached CD-ROMs   # noqa: E501
 
-        List all CD-ROMs, attached to the specified server.  # noqa: E501
+        Lists all CD-ROMs attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -428,9 +428,9 @@ class ServersApi(object):
         return self.datacenters_servers_cdroms_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_cdroms_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List attached CD-ROMs   # noqa: E501
+        """Get Attached CD-ROMs   # noqa: E501
 
-        List all CD-ROMs, attached to the specified server.  # noqa: E501
+        Lists all CD-ROMs attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -579,9 +579,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_cdroms_post(self, datacenter_id, server_id, cdrom, **kwargs):  # noqa: E501
-        """Attach CD-ROMs  # noqa: E501
+        """Attach a CD-ROM  # noqa: E501
 
-        Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server.   # noqa: E501
+        Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -619,9 +619,9 @@ class ServersApi(object):
         return self.datacenters_servers_cdroms_post_with_http_info(datacenter_id, server_id, cdrom, **kwargs)  # noqa: E501
 
     def datacenters_servers_cdroms_post_with_http_info(self, datacenter_id, server_id, cdrom, **kwargs):  # noqa: E501
-        """Attach CD-ROMs  # noqa: E501
+        """Attach a CD-ROM  # noqa: E501
 
-        Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server.   # noqa: E501
+        Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -769,7 +769,7 @@ class ServersApi(object):
     def datacenters_servers_delete(self, datacenter_id, server_id, **kwargs):  # noqa: E501
         """Delete servers  # noqa: E501
 
-        Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.  # noqa: E501
+        Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -809,7 +809,7 @@ class ServersApi(object):
     def datacenters_servers_delete_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
         """Delete servers  # noqa: E501
 
-        Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.  # noqa: E501
+        Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1497,9 +1497,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_post(self, datacenter_id, server, **kwargs):  # noqa: E501
-        """Create servers  # noqa: E501
+        """Create a Server  # noqa: E501
 
-        Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.  # noqa: E501
+        Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1535,9 +1535,9 @@ class ServersApi(object):
         return self.datacenters_servers_post_with_http_info(datacenter_id, server, **kwargs)  # noqa: E501
 
     def datacenters_servers_post_with_http_info(self, datacenter_id, server, **kwargs):  # noqa: E501
-        """Create servers  # noqa: E501
+        """Create a Server  # noqa: E501
 
-        Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.  # noqa: E501
+        Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1674,9 +1674,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_put(self, datacenter_id, server_id, server, **kwargs):  # noqa: E501
-        """Modify servers  # noqa: E501
+        """Modify a Server by ID  # noqa: E501
 
-        Modify the properties of the specified server within the data center.  Starting with v5, the 'allowReboot' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, 'allowReboot' had to be set to 'true'; this is no longer required, the reboot will be performed automatically.  # noqa: E501
+        Modifies the properties of the specified server within the data center.  Starting with v5, the 'allowReboot' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, 'allowReboot' had to be set to 'true'; this is no longer required, the reboot will be performed automatically.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1714,9 +1714,9 @@ class ServersApi(object):
         return self.datacenters_servers_put_with_http_info(datacenter_id, server_id, server, **kwargs)  # noqa: E501
 
     def datacenters_servers_put_with_http_info(self, datacenter_id, server_id, server, **kwargs):  # noqa: E501
-        """Modify servers  # noqa: E501
+        """Modify a Server by ID  # noqa: E501
 
-        Modify the properties of the specified server within the data center.  Starting with v5, the 'allowReboot' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, 'allowReboot' had to be set to 'true'; this is no longer required, the reboot will be performed automatically.  # noqa: E501
+        Modifies the properties of the specified server within the data center.  Starting with v5, the 'allowReboot' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, 'allowReboot' had to be set to 'true'; this is no longer required, the reboot will be performed automatically.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2208,9 +2208,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_resume_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Resume Cubes instances  # noqa: E501
+        """Resume a Cube Server by ID  # noqa: E501
 
-        Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.  # noqa: E501
+        Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the 'Location' HTTP header in the response (see 'Requests' for more information).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2246,9 +2246,9 @@ class ServersApi(object):
         return self.datacenters_servers_resume_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_resume_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Resume Cubes instances  # noqa: E501
+        """Resume a Cube Server by ID  # noqa: E501
 
-        Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.  # noqa: E501
+        Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the 'Location' HTTP header in the response (see 'Requests' for more information).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2381,9 +2381,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_start_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Start servers  # noqa: E501
+        """Start an Enterprise Server by ID  # noqa: E501
 
-        Start the specified server within the data center; if the server's public IP address has been deallocated, a new IP address will be assigned.  # noqa: E501
+        Starts the Enterprise Server specified by its ID.  >Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server's public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the 'Location' HTTP header in the response (see 'Requests' for more information).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2419,9 +2419,9 @@ class ServersApi(object):
         return self.datacenters_servers_start_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_start_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Start servers  # noqa: E501
+        """Start an Enterprise Server by ID  # noqa: E501
 
-        Start the specified server within the data center; if the server's public IP address has been deallocated, a new IP address will be assigned.  # noqa: E501
+        Starts the Enterprise Server specified by its ID.  >Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server's public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the 'Location' HTTP header in the response (see 'Requests' for more information).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2554,9 +2554,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_stop_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Stop VMs  # noqa: E501
+        """Stop an Enterprise Server by ID  # noqa: E501
 
-        Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.  # noqa: E501
+        Stops the Enterprise Server specified by its ID.   >Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the 'Location' HTTP header in the response (see 'Requests' for more information).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2592,9 +2592,9 @@ class ServersApi(object):
         return self.datacenters_servers_stop_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_stop_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Stop VMs  # noqa: E501
+        """Stop an Enterprise Server by ID  # noqa: E501
 
-        Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.  # noqa: E501
+        Stops the Enterprise Server specified by its ID.   >Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the 'Location' HTTP header in the response (see 'Requests' for more information).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2727,9 +2727,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_suspend_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Suspend Cubes instances  # noqa: E501
+        """Suspend a Cube Server by ID  # noqa: E501
 
-        Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.  # noqa: E501
+        Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the 'Location' HTTP header in the response (see 'Requests' for more information).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2765,9 +2765,9 @@ class ServersApi(object):
         return self.datacenters_servers_suspend_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_suspend_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Suspend Cubes instances  # noqa: E501
+        """Suspend a Cube Server by ID  # noqa: E501
 
-        Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.  # noqa: E501
+        Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the 'Location' HTTP header in the response (see 'Requests' for more information).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3073,9 +3073,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_upgrade_post(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Upgrade servers  # noqa: E501
+        """Upgrade a Server by ID  # noqa: E501
 
-        Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  '/datacenters/{datacenterId}/servers?upgradeNeeded=true'  # noqa: E501
+        Upgrades the server version.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3111,9 +3111,9 @@ class ServersApi(object):
         return self.datacenters_servers_upgrade_post_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_upgrade_post_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Upgrade servers  # noqa: E501
+        """Upgrade a Server by ID  # noqa: E501
 
-        Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  '/datacenters/{datacenterId}/servers?upgradeNeeded=true'  # noqa: E501
+        Upgrades the server version.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3246,9 +3246,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_volumes_delete(self, datacenter_id, server_id, volume_id, **kwargs):  # noqa: E501
-        """Detach volumes  # noqa: E501
+        """Detach a Volume by ID  # noqa: E501
 
-        Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.  # noqa: E501
+        Detachs the specified volume from the server.  Note that only the volume's connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3286,9 +3286,9 @@ class ServersApi(object):
         return self.datacenters_servers_volumes_delete_with_http_info(datacenter_id, server_id, volume_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_volumes_delete_with_http_info(self, datacenter_id, server_id, volume_id, **kwargs):  # noqa: E501
-        """Detach volumes  # noqa: E501
+        """Detach a Volume by ID  # noqa: E501
 
-        Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.  # noqa: E501
+        Detachs the specified volume from the server.  Note that only the volume's connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3430,9 +3430,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_volumes_find_by_id(self, datacenter_id, server_id, volume_id, **kwargs):  # noqa: E501
-        """Retrieve attached volumes  # noqa: E501
+        """Get Attached Volume by ID  # noqa: E501
 
-        Retrieve the properties of the volume, attached to the specified server.  # noqa: E501
+        Retrieves the properties of the volume attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3470,9 +3470,9 @@ class ServersApi(object):
         return self.datacenters_servers_volumes_find_by_id_with_http_info(datacenter_id, server_id, volume_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_volumes_find_by_id_with_http_info(self, datacenter_id, server_id, volume_id, **kwargs):  # noqa: E501
-        """Retrieve attached volumes  # noqa: E501
+        """Get Attached Volume by ID  # noqa: E501
 
-        Retrieve the properties of the volume, attached to the specified server.  # noqa: E501
+        Retrieves the properties of the volume attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3614,9 +3614,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_volumes_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List attached volumes  # noqa: E501
+        """Get Attached Volumes  # noqa: E501
 
-        List all volumes, attached to the specified server.  # noqa: E501
+        Lists all volumes attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3656,9 +3656,9 @@ class ServersApi(object):
         return self.datacenters_servers_volumes_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_volumes_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """List attached volumes  # noqa: E501
+        """Get Attached Volumes  # noqa: E501
 
-        List all volumes, attached to the specified server.  # noqa: E501
+        Lists all volumes attached to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3807,9 +3807,9 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_volumes_post(self, datacenter_id, server_id, volume, **kwargs):  # noqa: E501
-        """Attach volumes  # noqa: E501
+        """Attach a Volume to a Server  # noqa: E501
 
-        Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.  # noqa: E501
+        Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see 'Creating a Volume' for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3847,9 +3847,9 @@ class ServersApi(object):
         return self.datacenters_servers_volumes_post_with_http_info(datacenter_id, server_id, volume, **kwargs)  # noqa: E501
 
     def datacenters_servers_volumes_post_with_http_info(self, datacenter_id, server_id, volume, **kwargs):  # noqa: E501
-        """Attach volumes  # noqa: E501
+        """Attach a Volume to a Server  # noqa: E501
 
-        Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.  # noqa: E501
+        Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see 'Creating a Volume' for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

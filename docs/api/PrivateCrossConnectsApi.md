@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**pccs_find_by_id**](PrivateCrossConnectsApi.md#pccs_find_by_id) | **GET** /pccs/{pccId} | Retrieve private Cross-Connects |
 | [**pccs_get**](PrivateCrossConnectsApi.md#pccs_get) | **GET** /pccs | List private Cross-Connects |
 | [**pccs_patch**](PrivateCrossConnectsApi.md#pccs_patch) | **PATCH** /pccs/{pccId} | Partially modify private Cross-Connects |
-| [**pccs_post**](PrivateCrossConnectsApi.md#pccs_post) | **POST** /pccs | Create private Cross-Connects |
+| [**pccs_post**](PrivateCrossConnectsApi.md#pccs_post) | **POST** /pccs | Create a Private Cross-Connect |
 
 
 # **pccs_delete**
@@ -224,7 +224,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **pcc_id** | **str**| The unique ID of the private Cross-Connect. |  |
-| **pcc** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md)| The properties of the private Cross-Connect to be updated. |  |
+| **pcc** | [**PrivateCrossConnectProperties**](../models/PrivateCrossConnectProperties.md)| The properties of the private Cross-Connect to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -245,9 +245,9 @@ Basic Authentication, Token Authentication
 # **pccs_post**
 > PrivateCrossConnect pccs_post(pcc, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Create private Cross-Connects
+Create a Private Cross-Connect
 
-Create a private Cross-Connect.
+Creates a private Cross-Connect.
 
 ### Example
 
@@ -271,7 +271,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     api_instance = ionoscloud.PrivateCrossConnectsApi(api_client)
     pcc = ionoscloud.PrivateCrossConnect() # PrivateCrossConnect | The private Cross-Connect to create.
     try:
-        # Create private Cross-Connects
+        # Create a Private Cross-Connect
         api_response = api_instance.pccs_post(pcc)
         print(api_response)
     except ApiException as e:
@@ -282,7 +282,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pcc** | [**PrivateCrossConnect**](PrivateCrossConnect.md)| The private Cross-Connect to create. |  |
+| **pcc** | [**PrivateCrossConnect**](../models/PrivateCrossConnect.md)| The private Cross-Connect to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

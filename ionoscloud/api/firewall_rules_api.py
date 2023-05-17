@@ -822,9 +822,9 @@ class FirewallRulesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_firewallrules_post(self, datacenter_id, server_id, nic_id, firewallrule, **kwargs):  # noqa: E501
-        """Create firewall rules  # noqa: E501
+        """Create a Firewall Rule  # noqa: E501
 
-        Create a firewall rule for the specified NIC.  # noqa: E501
+        Creates a firewall rule for the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -864,9 +864,9 @@ class FirewallRulesApi(object):
         return self.datacenters_servers_nics_firewallrules_post_with_http_info(datacenter_id, server_id, nic_id, firewallrule, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_firewallrules_post_with_http_info(self, datacenter_id, server_id, nic_id, firewallrule, **kwargs):  # noqa: E501
-        """Create firewall rules  # noqa: E501
+        """Create a Firewall Rule  # noqa: E501
 
-        Create a firewall rule for the specified NIC.  # noqa: E501
+        Creates a firewall rule for the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1021,9 +1021,9 @@ class FirewallRulesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_firewallrules_put(self, datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs):  # noqa: E501
-        """Modify firewall rules  # noqa: E501
+        """Modify a Firewall Rule  # noqa: E501
 
-        Modify the properties of the specified firewall rule.  # noqa: E501
+        Modifies the properties of the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1065,9 +1065,9 @@ class FirewallRulesApi(object):
         return self.datacenters_servers_nics_firewallrules_put_with_http_info(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_firewallrules_put_with_http_info(self, datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, **kwargs):  # noqa: E501
-        """Modify firewall rules  # noqa: E501
+        """Modify a Firewall Rule  # noqa: E501
 
-        Modify the properties of the specified firewall rule.  # noqa: E501
+        Modifies the properties of the specified firewall rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

@@ -7,9 +7,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacenters_delete**](DataCentersApi.md#datacenters_delete) | **DELETE** /datacenters/{datacenterId} | Delete data centers |
 | [**datacenters_find_by_id**](DataCentersApi.md#datacenters_find_by_id) | **GET** /datacenters/{datacenterId} | Retrieve data centers |
 | [**datacenters_get**](DataCentersApi.md#datacenters_get) | **GET** /datacenters | List your data centers |
-| [**datacenters_patch**](DataCentersApi.md#datacenters_patch) | **PATCH** /datacenters/{datacenterId} | Partially modify data centers |
-| [**datacenters_post**](DataCentersApi.md#datacenters_post) | **POST** /datacenters | Create data centers |
-| [**datacenters_put**](DataCentersApi.md#datacenters_put) | **PUT** /datacenters/{datacenterId} | Modify data centers |
+| [**datacenters_patch**](DataCentersApi.md#datacenters_patch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center by ID |
+| [**datacenters_post**](DataCentersApi.md#datacenters_post) | **POST** /datacenters | Create a Data Center |
+| [**datacenters_put**](DataCentersApi.md#datacenters_put) | **PUT** /datacenters/{datacenterId} | Modify a Data Center by ID |
 
 
 # **datacenters_delete**
@@ -188,9 +188,9 @@ Basic Authentication, Token Authentication
 # **datacenters_patch**
 > Datacenter datacenters_patch(datacenter_id, datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Partially modify data centers
+Partially modify a Data Center by ID
 
-Update the properties of the specified data center, rename it, or change the description.
+Updates the properties of the specified data center, rename it, or change the description.
 
 ### Example
 
@@ -215,7 +215,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     datacenter = ionoscloud.DatacenterProperties() # DatacenterProperties | The properties of the data center to be updated.
     try:
-        # Partially modify data centers
+        # Partially modify a Data Center by ID
         api_response = api_instance.datacenters_patch(datacenter_id, datacenter)
         print(api_response)
     except ApiException as e:
@@ -227,7 +227,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
-| **datacenter** | [**DatacenterProperties**](DatacenterProperties.md)| The properties of the data center to be updated. |  |
+| **datacenter** | [**DatacenterProperties**](../models/DatacenterProperties.md)| The properties of the data center to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -248,9 +248,9 @@ Basic Authentication, Token Authentication
 # **datacenters_post**
 > Datacenter datacenters_post(datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Create data centers
+Create a Data Center
 
-Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
 
 ### Example
 
@@ -274,7 +274,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     api_instance = ionoscloud.DataCentersApi(api_client)
     datacenter = ionoscloud.Datacenter() # Datacenter | The data center to create.
     try:
-        # Create data centers
+        # Create a Data Center
         api_response = api_instance.datacenters_post(datacenter)
         print(api_response)
     except ApiException as e:
@@ -285,7 +285,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datacenter** | [**Datacenter**](Datacenter.md)| The data center to create. |  |
+| **datacenter** | [**Datacenter**](../models/Datacenter.md)| The data center to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -306,9 +306,9 @@ Basic Authentication, Token Authentication
 # **datacenters_put**
 > Datacenter datacenters_put(datacenter_id, datacenter, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify data centers
+Modify a Data Center by ID
 
-Modify the properties of the specified data center, rename it, or change the description.
+Modifies the properties of the specified data center, rename it, or change the description.
 
 ### Example
 
@@ -333,7 +333,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     datacenter = ionoscloud.Datacenter() # Datacenter | The modified data center.
     try:
-        # Modify data centers
+        # Modify a Data Center by ID
         api_response = api_instance.datacenters_put(datacenter_id, datacenter)
         print(api_response)
     except ApiException as e:
@@ -345,7 +345,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
-| **datacenter** | [**Datacenter**](Datacenter.md)| The modified data center. |  |
+| **datacenter** | [**Datacenter**](../models/Datacenter.md)| The modified data center. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

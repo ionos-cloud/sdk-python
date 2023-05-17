@@ -4,15 +4,15 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**api_info_get**](Api.md#api_info_get) | **GET** / | Display API information |
+| [**api_info_get**](Api.md#api_info_get) | **GET** / | Get API information |
 
 
 # **api_info_get**
 > Info api_info_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Display API information
+Get API information
 
-Display API information
+Retrieves the API information such as API version.
 
 ### Example
 
@@ -31,7 +31,7 @@ with ionoscloud.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.Api(api_client)
     try:
-        # Display API information
+        # Get API information
         api_response = api_instance.api_info_get()
         print(api_response)
     except ApiException as e:

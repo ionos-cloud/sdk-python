@@ -84,7 +84,7 @@ class ApplicationLoadBalancerProperties(object):
     def name(self):
         """Gets the name of this ApplicationLoadBalancerProperties.  # noqa: E501
 
-        The name of the Application Load Balancer.  # noqa: E501
+        The Application Load Balancer name.  # noqa: E501
 
         :return: The name of this ApplicationLoadBalancerProperties.  # noqa: E501
         :rtype: str
@@ -95,7 +95,7 @@ class ApplicationLoadBalancerProperties(object):
     def name(self, name):
         """Sets the name of this ApplicationLoadBalancerProperties.
 
-        The name of the Application Load Balancer.  # noqa: E501
+        The Application Load Balancer name.  # noqa: E501
 
         :param name: The name of this ApplicationLoadBalancerProperties.  # noqa: E501
         :type name: str
@@ -109,7 +109,7 @@ class ApplicationLoadBalancerProperties(object):
     def listener_lan(self):
         """Gets the listener_lan of this ApplicationLoadBalancerProperties.  # noqa: E501
 
-        ID of the listening (inbound) LAN.  # noqa: E501
+        The ID of the listening (inbound) LAN.  # noqa: E501
 
         :return: The listener_lan of this ApplicationLoadBalancerProperties.  # noqa: E501
         :rtype: int
@@ -120,7 +120,7 @@ class ApplicationLoadBalancerProperties(object):
     def listener_lan(self, listener_lan):
         """Sets the listener_lan of this ApplicationLoadBalancerProperties.
 
-        ID of the listening (inbound) LAN.  # noqa: E501
+        The ID of the listening (inbound) LAN.  # noqa: E501
 
         :param listener_lan: The listener_lan of this ApplicationLoadBalancerProperties.  # noqa: E501
         :type listener_lan: int
@@ -134,7 +134,7 @@ class ApplicationLoadBalancerProperties(object):
     def ips(self):
         """Gets the ips of this ApplicationLoadBalancerProperties.  # noqa: E501
 
-        Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan are customer-reserved public IPs for the public Load Balancers, and private IPs for the private Load Balancers.  # noqa: E501
+        Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the 'listenerLan' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.  # noqa: E501
 
         :return: The ips of this ApplicationLoadBalancerProperties.  # noqa: E501
         :rtype: list[str]
@@ -145,7 +145,7 @@ class ApplicationLoadBalancerProperties(object):
     def ips(self, ips):
         """Sets the ips of this ApplicationLoadBalancerProperties.
 
-        Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan are customer-reserved public IPs for the public Load Balancers, and private IPs for the private Load Balancers.  # noqa: E501
+        Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the 'listenerLan' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.  # noqa: E501
 
         :param ips: The ips of this ApplicationLoadBalancerProperties.  # noqa: E501
         :type ips: list[str]
@@ -157,7 +157,7 @@ class ApplicationLoadBalancerProperties(object):
     def target_lan(self):
         """Gets the target_lan of this ApplicationLoadBalancerProperties.  # noqa: E501
 
-        ID of the balanced private target LAN (outbound).  # noqa: E501
+        The ID of the balanced private target LAN (outbound).  # noqa: E501
 
         :return: The target_lan of this ApplicationLoadBalancerProperties.  # noqa: E501
         :rtype: int
@@ -168,7 +168,7 @@ class ApplicationLoadBalancerProperties(object):
     def target_lan(self, target_lan):
         """Sets the target_lan of this ApplicationLoadBalancerProperties.
 
-        ID of the balanced private target LAN (outbound).  # noqa: E501
+        The ID of the balanced private target LAN (outbound).  # noqa: E501
 
         :param target_lan: The target_lan of this ApplicationLoadBalancerProperties.  # noqa: E501
         :type target_lan: int

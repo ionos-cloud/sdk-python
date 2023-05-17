@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacenters_servers_nics_flowlogs_find_by_id**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Retrieve Flow Logs |
 | [**datacenters_servers_nics_flowlogs_get**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | List Flow Logs |
 | [**datacenters_servers_nics_flowlogs_patch**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Partially modify Flow Logs |
-| [**datacenters_servers_nics_flowlogs_post**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create Flow Logs |
+| [**datacenters_servers_nics_flowlogs_post**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create a Flow Log |
 | [**datacenters_servers_nics_flowlogs_put**](FlowLogsApi.md#datacenters_servers_nics_flowlogs_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Modify Flow Logs |
 
 
@@ -248,7 +248,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **server_id** | **str**| The unique ID of the server. |  |
 | **nic_id** | **str**| The unique ID of the NIC. |  |
 | **flowlog_id** | **str**| The unique ID of the Flow Log. |  |
-| **flowlog** | [**FlowLogProperties**](FlowLogProperties.md)| The Flow Log record to be updated. |  |
+| **flowlog** | [**FlowLogProperties**](../models/FlowLogProperties.md)| The Flow Log record to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 
@@ -268,9 +268,9 @@ Basic Authentication, Token Authentication
 # **datacenters_servers_nics_flowlogs_post**
 > FlowLog datacenters_servers_nics_flowlogs_post(datacenter_id, server_id, nic_id, flowlog, pretty=pretty, depth=depth)
 
-Create Flow Logs
+Create a Flow Log
 
-Add a new Flow Log for the specified NIC.
+Adds a new Flow Log for the specified NIC.
 
 ### Example
 
@@ -297,7 +297,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     nic_id = 'nic_id_example' # str | The unique ID of the NIC.
     flowlog = ionoscloud.FlowLog() # FlowLog | The Flow Log to create.
     try:
-        # Create Flow Logs
+        # Create a Flow Log
         api_response = api_instance.datacenters_servers_nics_flowlogs_post(datacenter_id, server_id, nic_id, flowlog)
         print(api_response)
     except ApiException as e:
@@ -311,7 +311,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **server_id** | **str**| The unique ID of the server. |  |
 | **nic_id** | **str**| The unique ID of the NIC. |  |
-| **flowlog** | [**FlowLog**](FlowLog.md)| The Flow Log to create. |  |
+| **flowlog** | [**FlowLog**](../models/FlowLog.md)| The Flow Log to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 
@@ -376,7 +376,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **server_id** | **str**| The unique ID of the server. |  |
 | **nic_id** | **str**| The unique ID of the NIC. |  |
 | **flowlog_id** | **str**| The unique ID of the Flow Log. |  |
-| **flowlog** | [**FlowLogPut**](FlowLogPut.md)| The modified Flow Log. |  |
+| **flowlog** | [**FlowLogPut**](../models/FlowLogPut.md)| The modified Flow Log. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 

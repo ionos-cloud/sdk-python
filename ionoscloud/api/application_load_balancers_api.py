@@ -18,9 +18,9 @@ class ApplicationLoadBalancersApi(object):
         self.api_client = api_client
 
     def datacenters_applicationloadbalancers_delete(self, datacenter_id, application_load_balancer_id, **kwargs):  # noqa: E501
-        """Delete Application Load Balancers  # noqa: E501
+        """Delete an Application Load Balancer by ID  # noqa: E501
 
-        Remove the specified Application Load Balancer from the data center..  # noqa: E501
+        Removes the specified Application Load Balancer from the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -56,9 +56,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_delete_with_http_info(datacenter_id, application_load_balancer_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_delete_with_http_info(self, datacenter_id, application_load_balancer_id, **kwargs):  # noqa: E501
-        """Delete Application Load Balancers  # noqa: E501
+        """Delete an Application Load Balancer by ID  # noqa: E501
 
-        Remove the specified Application Load Balancer from the data center..  # noqa: E501
+        Removes the specified Application Load Balancer from the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -191,9 +191,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_find_by_application_load_balancer_id(self, datacenter_id, application_load_balancer_id, **kwargs):  # noqa: E501
-        """Retrieve Application Load Balancers  # noqa: E501
+        """Get an Application Load Balancer by ID  # noqa: E501
 
-        Retrieve the properties of the specified Application Load Balancer within the data center.  # noqa: E501
+        Retrieves the properties of the specified Application Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -229,9 +229,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_find_by_application_load_balancer_id_with_http_info(datacenter_id, application_load_balancer_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_find_by_application_load_balancer_id_with_http_info(self, datacenter_id, application_load_balancer_id, **kwargs):  # noqa: E501
-        """Retrieve Application Load Balancers  # noqa: E501
+        """Get an Application Load Balancer by ID  # noqa: E501
 
-        Retrieve the properties of the specified Application Load Balancer within the data center.  # noqa: E501
+        Retrieves the properties of the specified Application Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -364,9 +364,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_flowlogs_delete(self, datacenter_id, application_load_balancer_id, flow_log_id, **kwargs):  # noqa: E501
-        """Delete ALB Flow Logs  # noqa: E501
+        """Delete an ALB Flow Log by ID  # noqa: E501
 
-        Delete the specified Application Load Balancer Flow Log.  # noqa: E501
+        Deletes the Application Load Balancer flow log specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -377,7 +377,7 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log. (required)
+        :param flow_log_id: The unique ID of the flow log. (required)
         :type flow_log_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -404,9 +404,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_flowlogs_delete_with_http_info(datacenter_id, application_load_balancer_id, flow_log_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_flowlogs_delete_with_http_info(self, datacenter_id, application_load_balancer_id, flow_log_id, **kwargs):  # noqa: E501
-        """Delete ALB Flow Logs  # noqa: E501
+        """Delete an ALB Flow Log by ID  # noqa: E501
 
-        Delete the specified Application Load Balancer Flow Log.  # noqa: E501
+        Deletes the Application Load Balancer flow log specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -417,7 +417,7 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log. (required)
+        :param flow_log_id: The unique ID of the flow log. (required)
         :type flow_log_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -548,9 +548,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_flowlogs_find_by_flow_log_id(self, datacenter_id, application_load_balancer_id, flow_log_id, **kwargs):  # noqa: E501
-        """Retrieve ALB Flow Logs  # noqa: E501
+        """Get an ALB Flow Log by ID  # noqa: E501
 
-        Retrieve the specified Application Load Balancer Flow Log.  # noqa: E501
+        Retrieves the Application Load Balancer flow log specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -561,7 +561,7 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log. (required)
+        :param flow_log_id: The unique ID of the flow log. (required)
         :type flow_log_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -588,9 +588,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_flowlogs_find_by_flow_log_id_with_http_info(datacenter_id, application_load_balancer_id, flow_log_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_flowlogs_find_by_flow_log_id_with_http_info(self, datacenter_id, application_load_balancer_id, flow_log_id, **kwargs):  # noqa: E501
-        """Retrieve ALB Flow Logs  # noqa: E501
+        """Get an ALB Flow Log by ID  # noqa: E501
 
-        Retrieve the specified Application Load Balancer Flow Log.  # noqa: E501
+        Retrieves the Application Load Balancer flow log specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -601,7 +601,7 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log. (required)
+        :param flow_log_id: The unique ID of the flow log. (required)
         :type flow_log_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -732,9 +732,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_flowlogs_get(self, datacenter_id, application_load_balancer_id, **kwargs):  # noqa: E501
-        """List ALB Flow Logs  # noqa: E501
+        """Get ALB Flow Logs  # noqa: E501
 
-        List the Flow Logs for the specified Application Load Balancer.  # noqa: E501
+        Retrieves the flow logs for the specified Application Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -770,9 +770,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_flowlogs_get_with_http_info(datacenter_id, application_load_balancer_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_flowlogs_get_with_http_info(self, datacenter_id, application_load_balancer_id, **kwargs):  # noqa: E501
-        """List ALB Flow Logs  # noqa: E501
+        """Get ALB Flow Logs  # noqa: E501
 
-        List the Flow Logs for the specified Application Load Balancer.  # noqa: E501
+        Retrieves the flow logs for the specified Application Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -905,9 +905,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_flowlogs_patch(self, datacenter_id, application_load_balancer_id, flow_log_id, application_load_balancer_flow_log_properties, **kwargs):  # noqa: E501
-        """Partially modify ALB Flow Logs  # noqa: E501
+        """Partially Modify an ALB Flow Log by ID  # noqa: E501
 
-        Update the properties of the specified Application Load Balancer Flow Log.  # noqa: E501
+        Updates the properties of the Application Load Balancer flow log specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -918,9 +918,9 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log. (required)
+        :param flow_log_id: The unique ID of the flow log. (required)
         :type flow_log_id: str
-        :param application_load_balancer_flow_log_properties: The properties of the ALB Flow Log to be updated. (required)
+        :param application_load_balancer_flow_log_properties: The properties of the ALB flow log to be updated. (required)
         :type application_load_balancer_flow_log_properties: FlowLogProperties
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -947,9 +947,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_flowlogs_patch_with_http_info(datacenter_id, application_load_balancer_id, flow_log_id, application_load_balancer_flow_log_properties, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_flowlogs_patch_with_http_info(self, datacenter_id, application_load_balancer_id, flow_log_id, application_load_balancer_flow_log_properties, **kwargs):  # noqa: E501
-        """Partially modify ALB Flow Logs  # noqa: E501
+        """Partially Modify an ALB Flow Log by ID  # noqa: E501
 
-        Update the properties of the specified Application Load Balancer Flow Log.  # noqa: E501
+        Updates the properties of the Application Load Balancer flow log specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -960,9 +960,9 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log. (required)
+        :param flow_log_id: The unique ID of the flow log. (required)
         :type flow_log_id: str
-        :param application_load_balancer_flow_log_properties: The properties of the ALB Flow Log to be updated. (required)
+        :param application_load_balancer_flow_log_properties: The properties of the ALB flow log to be updated. (required)
         :type application_load_balancer_flow_log_properties: FlowLogProperties
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -1100,9 +1100,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_flowlogs_post(self, datacenter_id, application_load_balancer_id, application_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Create ALB Flow Logs  # noqa: E501
+        """Create an ALB Flow Log  # noqa: E501
 
-        Add a new Flow Log for the Application Load Balancer.  # noqa: E501
+        Creates a flow log for the Application Load Balancer specified by ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1113,7 +1113,7 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param application_load_balancer_flow_log: The Flow Log to create. (required)
+        :param application_load_balancer_flow_log: The flow log to create. (required)
         :type application_load_balancer_flow_log: FlowLog
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -1140,9 +1140,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_flowlogs_post_with_http_info(datacenter_id, application_load_balancer_id, application_load_balancer_flow_log, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_flowlogs_post_with_http_info(self, datacenter_id, application_load_balancer_id, application_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Create ALB Flow Logs  # noqa: E501
+        """Create an ALB Flow Log  # noqa: E501
 
-        Add a new Flow Log for the Application Load Balancer.  # noqa: E501
+        Creates a flow log for the Application Load Balancer specified by ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1153,7 +1153,7 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param application_load_balancer_flow_log: The Flow Log to create. (required)
+        :param application_load_balancer_flow_log: The flow log to create. (required)
         :type application_load_balancer_flow_log: FlowLog
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -1288,9 +1288,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_flowlogs_put(self, datacenter_id, application_load_balancer_id, flow_log_id, application_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Modify ALB Flow Logs  # noqa: E501
+        """Modify an ALB Flow Log by ID  # noqa: E501
 
-        Modify the specified Application Load Balancer Flow Log.  # noqa: E501
+        Modifies the Application Load Balancer flow log specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1301,9 +1301,9 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log. (required)
+        :param flow_log_id: The unique ID of the flow log. (required)
         :type flow_log_id: str
-        :param application_load_balancer_flow_log: The modified ALB Flow Log. (required)
+        :param application_load_balancer_flow_log: The modified ALB flow log. (required)
         :type application_load_balancer_flow_log: FlowLogPut
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -1330,9 +1330,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_flowlogs_put_with_http_info(datacenter_id, application_load_balancer_id, flow_log_id, application_load_balancer_flow_log, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_flowlogs_put_with_http_info(self, datacenter_id, application_load_balancer_id, flow_log_id, application_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Modify ALB Flow Logs  # noqa: E501
+        """Modify an ALB Flow Log by ID  # noqa: E501
 
-        Modify the specified Application Load Balancer Flow Log.  # noqa: E501
+        Modifies the Application Load Balancer flow log specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1343,9 +1343,9 @@ class ApplicationLoadBalancersApi(object):
         :type datacenter_id: str
         :param application_load_balancer_id: The unique ID of the Application Load Balancer. (required)
         :type application_load_balancer_id: str
-        :param flow_log_id: The unique ID of the Flow Log. (required)
+        :param flow_log_id: The unique ID of the flow log. (required)
         :type flow_log_id: str
-        :param application_load_balancer_flow_log: The modified ALB Flow Log. (required)
+        :param application_load_balancer_flow_log: The modified ALB flow log. (required)
         :type application_load_balancer_flow_log: FlowLogPut
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -1487,9 +1487,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_forwardingrules_delete(self, datacenter_id, application_load_balancer_id, forwarding_rule_id, **kwargs):  # noqa: E501
-        """Delete ALB forwarding rules  # noqa: E501
+        """Delete an ALB Forwarding Rule by ID  # noqa: E501
 
-        Delete the specified Application Load Balancer forwarding rule.  # noqa: E501
+        Deletes the Application Load Balancer forwarding rule specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1527,9 +1527,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_forwardingrules_delete_with_http_info(datacenter_id, application_load_balancer_id, forwarding_rule_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_forwardingrules_delete_with_http_info(self, datacenter_id, application_load_balancer_id, forwarding_rule_id, **kwargs):  # noqa: E501
-        """Delete ALB forwarding rules  # noqa: E501
+        """Delete an ALB Forwarding Rule by ID  # noqa: E501
 
-        Delete the specified Application Load Balancer forwarding rule.  # noqa: E501
+        Deletes the Application Load Balancer forwarding rule specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1671,9 +1671,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_forwardingrules_find_by_forwarding_rule_id(self, datacenter_id, application_load_balancer_id, forwarding_rule_id, **kwargs):  # noqa: E501
-        """Retrieve ALB forwarding rules  # noqa: E501
+        """Get an ALB Forwarding Rule by ID  # noqa: E501
 
-        Retrieve the specified Application Load Balancer forwarding rule.  # noqa: E501
+        Retrieves the Application Load Balancer forwarding rule specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1711,9 +1711,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_forwardingrules_find_by_forwarding_rule_id_with_http_info(datacenter_id, application_load_balancer_id, forwarding_rule_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_forwardingrules_find_by_forwarding_rule_id_with_http_info(self, datacenter_id, application_load_balancer_id, forwarding_rule_id, **kwargs):  # noqa: E501
-        """Retrieve ALB forwarding rules  # noqa: E501
+        """Get an ALB Forwarding Rule by ID  # noqa: E501
 
-        Retrieve the specified Application Load Balancer forwarding rule.  # noqa: E501
+        Retrieves the Application Load Balancer forwarding rule specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1855,9 +1855,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_forwardingrules_get(self, datacenter_id, application_load_balancer_id, **kwargs):  # noqa: E501
-        """List ALB forwarding rules  # noqa: E501
+        """Get ALB Forwarding Rules  # noqa: E501
 
-        List the forwarding rules for the specified Application Load Balancer.  # noqa: E501
+        Lists the forwarding rules of the specified Application Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1893,9 +1893,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_forwardingrules_get_with_http_info(datacenter_id, application_load_balancer_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_forwardingrules_get_with_http_info(self, datacenter_id, application_load_balancer_id, **kwargs):  # noqa: E501
-        """List ALB forwarding rules  # noqa: E501
+        """Get ALB Forwarding Rules  # noqa: E501
 
-        List the forwarding rules for the specified Application Load Balancer.  # noqa: E501
+        Lists the forwarding rules of the specified Application Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2028,9 +2028,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_forwardingrules_patch(self, datacenter_id, application_load_balancer_id, forwarding_rule_id, application_load_balancer_forwarding_rule_properties, **kwargs):  # noqa: E501
-        """Partially modify ALB forwarding rules  # noqa: E501
+        """Partially modify an ALB Forwarding Rule by ID  # noqa: E501
 
-        Update the properties of the specified Application Load Balancer forwarding rule.  # noqa: E501
+        Updates the properties of the Application Load Balancer forwarding rule specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2070,9 +2070,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_forwardingrules_patch_with_http_info(datacenter_id, application_load_balancer_id, forwarding_rule_id, application_load_balancer_forwarding_rule_properties, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_forwardingrules_patch_with_http_info(self, datacenter_id, application_load_balancer_id, forwarding_rule_id, application_load_balancer_forwarding_rule_properties, **kwargs):  # noqa: E501
-        """Partially modify ALB forwarding rules  # noqa: E501
+        """Partially modify an ALB Forwarding Rule by ID  # noqa: E501
 
-        Update the properties of the specified Application Load Balancer forwarding rule.  # noqa: E501
+        Updates the properties of the Application Load Balancer forwarding rule specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2223,9 +2223,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_forwardingrules_post(self, datacenter_id, application_load_balancer_id, application_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Create ALB forwarding rules  # noqa: E501
+        """Create an ALB Forwarding Rule  # noqa: E501
 
-        Create a forwarding rule for the Application Load Balancer.  # noqa: E501
+        Creates a forwarding rule for the specified Application Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2263,9 +2263,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_forwardingrules_post_with_http_info(datacenter_id, application_load_balancer_id, application_load_balancer_forwarding_rule, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_forwardingrules_post_with_http_info(self, datacenter_id, application_load_balancer_id, application_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Create ALB forwarding rules  # noqa: E501
+        """Create an ALB Forwarding Rule  # noqa: E501
 
-        Create a forwarding rule for the Application Load Balancer.  # noqa: E501
+        Creates a forwarding rule for the specified Application Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2411,9 +2411,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_forwardingrules_put(self, datacenter_id, application_load_balancer_id, forwarding_rule_id, application_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Modify ALB forwarding rules  # noqa: E501
+        """Modify an ALB Forwarding Rule by ID  # noqa: E501
 
-        Modify the specified Application Load Balancer forwarding rule.  # noqa: E501
+        Modifies the Application Load Balancer forwarding rule specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2453,9 +2453,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_forwardingrules_put_with_http_info(datacenter_id, application_load_balancer_id, forwarding_rule_id, application_load_balancer_forwarding_rule, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_forwardingrules_put_with_http_info(self, datacenter_id, application_load_balancer_id, forwarding_rule_id, application_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Modify ALB forwarding rules  # noqa: E501
+        """Modify an ALB Forwarding Rule by ID  # noqa: E501
 
-        Modify the specified Application Load Balancer forwarding rule.  # noqa: E501
+        Modifies the Application Load Balancer forwarding rule specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2610,9 +2610,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_get(self, datacenter_id, **kwargs):  # noqa: E501
-        """List Application Load Balancers  # noqa: E501
+        """Get Application Load Balancers  # noqa: E501
 
-        List all Application Load Balancers within the data center.  # noqa: E501
+        Lists all Application Load Balancers within a data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2650,9 +2650,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_get_with_http_info(datacenter_id, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_get_with_http_info(self, datacenter_id, **kwargs):  # noqa: E501
-        """List Application Load Balancers  # noqa: E501
+        """Get Application Load Balancers  # noqa: E501
 
-        List all Application Load Balancers within the data center.  # noqa: E501
+        Lists all Application Load Balancers within a data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2792,9 +2792,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_patch(self, datacenter_id, application_load_balancer_id, application_load_balancer_properties, **kwargs):  # noqa: E501
-        """Partially modify Application Load Balancers  # noqa: E501
+        """Partially Modify an Application Load Balancer by ID  # noqa: E501
 
-        Update the properties of the specified Application Load Balancer within the data center.  # noqa: E501
+        Updates the properties of the specified Application Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2832,9 +2832,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_patch_with_http_info(datacenter_id, application_load_balancer_id, application_load_balancer_properties, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_patch_with_http_info(self, datacenter_id, application_load_balancer_id, application_load_balancer_properties, **kwargs):  # noqa: E501
-        """Partially modify Application Load Balancers  # noqa: E501
+        """Partially Modify an Application Load Balancer by ID  # noqa: E501
 
-        Update the properties of the specified Application Load Balancer within the data center.  # noqa: E501
+        Updates the properties of the specified Application Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2976,9 +2976,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_post(self, datacenter_id, application_load_balancer, **kwargs):  # noqa: E501
-        """Create Application Load Balancers  # noqa: E501
+        """Create an Application Load Balancer  # noqa: E501
 
-        Create an Application Load Balancer within the datacenter.  # noqa: E501
+        Creates an Application Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3014,9 +3014,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_post_with_http_info(datacenter_id, application_load_balancer, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_post_with_http_info(self, datacenter_id, application_load_balancer, **kwargs):  # noqa: E501
-        """Create Application Load Balancers  # noqa: E501
+        """Create an Application Load Balancer  # noqa: E501
 
-        Create an Application Load Balancer within the datacenter.  # noqa: E501
+        Creates an Application Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3153,9 +3153,9 @@ class ApplicationLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_applicationloadbalancers_put(self, datacenter_id, application_load_balancer_id, application_load_balancer, **kwargs):  # noqa: E501
-        """Modify Application Load Balancers  # noqa: E501
+        """Modify an Application Load Balancer by ID  # noqa: E501
 
-        Modify the properties of the specified Application Load Balancer within the data center.  # noqa: E501
+        Modifies the properties of the specified Application Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3193,9 +3193,9 @@ class ApplicationLoadBalancersApi(object):
         return self.datacenters_applicationloadbalancers_put_with_http_info(datacenter_id, application_load_balancer_id, application_load_balancer, **kwargs)  # noqa: E501
 
     def datacenters_applicationloadbalancers_put_with_http_info(self, datacenter_id, application_load_balancer_id, application_load_balancer, **kwargs):  # noqa: E501
-        """Modify Application Load Balancers  # noqa: E501
+        """Modify an Application Load Balancer by ID  # noqa: E501
 
-        Modify the properties of the specified Application Load Balancer within the data center.  # noqa: E501
+        Modifies the properties of the specified Application Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

@@ -74,7 +74,7 @@ class NicProperties(object):
         'pci_slot': 'pciSlot',
     }
 
-    def __init__(self, name=None, mac=None, ips=None, dhcp=None, lan=None, firewall_active=None, firewall_type=None, device_number=None, pci_slot=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, mac=None, ips=None, dhcp=True, lan=None, firewall_active=None, firewall_type=None, device_number=None, pci_slot=None, local_vars_configuration=None):  # noqa: E501
         """NicProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()

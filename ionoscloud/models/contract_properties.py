@@ -110,7 +110,7 @@ class ContractProperties(object):
     def owner(self):
         """Gets the owner of this ContractProperties.  # noqa: E501
 
-        The owner of the contract.  # noqa: E501
+        The contract owner's user name.  # noqa: E501
 
         :return: The owner of this ContractProperties.  # noqa: E501
         :rtype: str
@@ -121,7 +121,7 @@ class ContractProperties(object):
     def owner(self, owner):
         """Sets the owner of this ContractProperties.
 
-        The owner of the contract.  # noqa: E501
+        The contract owner's user name.  # noqa: E501
 
         :param owner: The owner of this ContractProperties.  # noqa: E501
         :type owner: str
@@ -133,7 +133,7 @@ class ContractProperties(object):
     def status(self):
         """Gets the status of this ContractProperties.  # noqa: E501
 
-        The status of the contract.  # noqa: E501
+        The contract status.  # noqa: E501
 
         :return: The status of this ContractProperties.  # noqa: E501
         :rtype: str
@@ -144,7 +144,7 @@ class ContractProperties(object):
     def status(self, status):
         """Sets the status of this ContractProperties.
 
-        The status of the contract.  # noqa: E501
+        The contract status.  # noqa: E501
 
         :param status: The status of this ContractProperties.  # noqa: E501
         :type status: str

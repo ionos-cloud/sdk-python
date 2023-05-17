@@ -670,9 +670,9 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_post(self, pcc, **kwargs):  # noqa: E501
-        """Create private Cross-Connects  # noqa: E501
+        """Create a Private Cross-Connect  # noqa: E501
 
-        Create a private Cross-Connect.  # noqa: E501
+        Creates a private Cross-Connect.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -706,9 +706,9 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_post_with_http_info(pcc, **kwargs)  # noqa: E501
 
     def pccs_post_with_http_info(self, pcc, **kwargs):  # noqa: E501
-        """Create private Cross-Connects  # noqa: E501
+        """Create a Private Cross-Connect  # noqa: E501
 
-        Create a private Cross-Connect.  # noqa: E501
+        Creates a private Cross-Connect.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

@@ -64,7 +64,7 @@ class KubernetesAutoScaling(object):
     def min_node_count(self):
         """Gets the min_node_count of this KubernetesAutoScaling.  # noqa: E501
 
-        The minimum number of worker nodes that the managed node group can scale in. Should be set together with 'maxNodeCount'. Value for this attribute must be greater than equal to 1 and less than equal to maxNodeCount.  # noqa: E501
+        The minimum number of working nodes that the managed node pool can scale must be >= 1 and >= nodeCount. Required if autoScaling is specified.  # noqa: E501
 
         :return: The min_node_count of this KubernetesAutoScaling.  # noqa: E501
         :rtype: int
@@ -75,7 +75,7 @@ class KubernetesAutoScaling(object):
     def min_node_count(self, min_node_count):
         """Sets the min_node_count of this KubernetesAutoScaling.
 
-        The minimum number of worker nodes that the managed node group can scale in. Should be set together with 'maxNodeCount'. Value for this attribute must be greater than equal to 1 and less than equal to maxNodeCount.  # noqa: E501
+        The minimum number of working nodes that the managed node pool can scale must be >= 1 and >= nodeCount. Required if autoScaling is specified.  # noqa: E501
 
         :param min_node_count: The min_node_count of this KubernetesAutoScaling.  # noqa: E501
         :type min_node_count: int
@@ -89,7 +89,7 @@ class KubernetesAutoScaling(object):
     def max_node_count(self):
         """Gets the max_node_count of this KubernetesAutoScaling.  # noqa: E501
 
-        The maximum number of worker nodes that the managed node pool can scale-out. Should be set together with 'minNodeCount'. Value for this attribute must be greater than equal to 1 and minNodeCount.  # noqa: E501
+        The maximum number of worker nodes that the managed node pool can scale in. Must be >= minNodeCount and must be >= nodeCount. Required if autoScaling is specified.  # noqa: E501
 
         :return: The max_node_count of this KubernetesAutoScaling.  # noqa: E501
         :rtype: int
@@ -100,7 +100,7 @@ class KubernetesAutoScaling(object):
     def max_node_count(self, max_node_count):
         """Sets the max_node_count of this KubernetesAutoScaling.
 
-        The maximum number of worker nodes that the managed node pool can scale-out. Should be set together with 'minNodeCount'. Value for this attribute must be greater than equal to 1 and minNodeCount.  # noqa: E501
+        The maximum number of worker nodes that the managed node pool can scale in. Must be >= minNodeCount and must be >= nodeCount. Required if autoScaling is specified.  # noqa: E501
 
         :param max_node_count: The max_node_count of this KubernetesAutoScaling.  # noqa: E501
         :type max_node_count: int

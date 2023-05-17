@@ -87,7 +87,7 @@ class KubernetesNodeMetadata(object):
     def etag(self):
         """Gets the etag of this KubernetesNodeMetadata.  # noqa: E501
 
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+        The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as 'ETag' response headers to requests that do not use the 'depth' parameter.  # noqa: E501
 
         :return: The etag of this KubernetesNodeMetadata.  # noqa: E501
         :rtype: str
@@ -98,7 +98,7 @@ class KubernetesNodeMetadata(object):
     def etag(self, etag):
         """Sets the etag of this KubernetesNodeMetadata.
 
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+        The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as 'ETag' response headers to requests that do not use the 'depth' parameter.  # noqa: E501
 
         :param etag: The etag of this KubernetesNodeMetadata.  # noqa: E501
         :type etag: str
@@ -110,7 +110,7 @@ class KubernetesNodeMetadata(object):
     def created_date(self):
         """Gets the created_date of this KubernetesNodeMetadata.  # noqa: E501
 
-        The last time the resource was created.  # noqa: E501
+        The date the resource was created.  # noqa: E501
 
         :return: The created_date of this KubernetesNodeMetadata.  # noqa: E501
         :rtype: datetime
@@ -121,7 +121,7 @@ class KubernetesNodeMetadata(object):
     def created_date(self, created_date):
         """Sets the created_date of this KubernetesNodeMetadata.
 
-        The last time the resource was created.  # noqa: E501
+        The date the resource was created.  # noqa: E501
 
         :param created_date: The created_date of this KubernetesNodeMetadata.  # noqa: E501
         :type created_date: datetime
@@ -133,7 +133,7 @@ class KubernetesNodeMetadata(object):
     def last_modified_date(self):
         """Gets the last_modified_date of this KubernetesNodeMetadata.  # noqa: E501
 
-        The last time the resource was modified.  # noqa: E501
+        The date the resource was last modified.  # noqa: E501
 
         :return: The last_modified_date of this KubernetesNodeMetadata.  # noqa: E501
         :rtype: datetime
@@ -144,7 +144,7 @@ class KubernetesNodeMetadata(object):
     def last_modified_date(self, last_modified_date):
         """Sets the last_modified_date of this KubernetesNodeMetadata.
 
-        The last time the resource was modified.  # noqa: E501
+        The date the resource was last modified.  # noqa: E501
 
         :param last_modified_date: The last_modified_date of this KubernetesNodeMetadata.  # noqa: E501
         :type last_modified_date: datetime
@@ -156,7 +156,7 @@ class KubernetesNodeMetadata(object):
     def state(self):
         """Gets the state of this KubernetesNodeMetadata.  # noqa: E501
 
-        State of the resource.  # noqa: E501
+        The resource state.  # noqa: E501
 
         :return: The state of this KubernetesNodeMetadata.  # noqa: E501
         :rtype: str
@@ -167,7 +167,7 @@ class KubernetesNodeMetadata(object):
     def state(self, state):
         """Sets the state of this KubernetesNodeMetadata.
 
-        State of the resource.  # noqa: E501
+        The resource state.  # noqa: E501
 
         :param state: The state of this KubernetesNodeMetadata.  # noqa: E501
         :type state: str
@@ -185,7 +185,7 @@ class KubernetesNodeMetadata(object):
     def last_software_updated_date(self):
         """Gets the last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
 
-        The last time the software was updated on the node.  # noqa: E501
+        The date when the software on the node was last updated.  # noqa: E501
 
         :return: The last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
         :rtype: datetime
@@ -196,7 +196,7 @@ class KubernetesNodeMetadata(object):
     def last_software_updated_date(self, last_software_updated_date):
         """Sets the last_software_updated_date of this KubernetesNodeMetadata.
 
-        The last time the software was updated on the node.  # noqa: E501
+        The date when the software on the node was last updated.  # noqa: E501
 
         :param last_software_updated_date: The last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
         :type last_software_updated_date: datetime

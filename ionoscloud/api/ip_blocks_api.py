@@ -690,9 +690,9 @@ class IPBlocksApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_post(self, ipblock, **kwargs):  # noqa: E501
-        """Reserve IP blocks  # noqa: E501
+        """Reserve a IP Block  # noqa: E501
 
-        Reserve a new IP block.  # noqa: E501
+        Reserves a new IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -726,9 +726,9 @@ class IPBlocksApi(object):
         return self.ipblocks_post_with_http_info(ipblock, **kwargs)  # noqa: E501
 
     def ipblocks_post_with_http_info(self, ipblock, **kwargs):  # noqa: E501
-        """Reserve IP blocks  # noqa: E501
+        """Reserve a IP Block  # noqa: E501
 
-        Reserve a new IP block.  # noqa: E501
+        Reserves a new IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -856,9 +856,9 @@ class IPBlocksApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_put(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
-        """Modify IP blocks  # noqa: E501
+        """Modify a IP Block by ID  # noqa: E501
 
-        Modify the properties of the specified IP block.  # noqa: E501
+        Modifies the properties of the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -894,9 +894,9 @@ class IPBlocksApi(object):
         return self.ipblocks_put_with_http_info(ipblock_id, ipblock, **kwargs)  # noqa: E501
 
     def ipblocks_put_with_http_info(self, ipblock_id, ipblock, **kwargs):  # noqa: E501
-        """Modify IP blocks  # noqa: E501
+        """Modify a IP Block by ID  # noqa: E501
 
-        Modify the properties of the specified IP block.  # noqa: E501
+        Modifies the properties of the specified IP block.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

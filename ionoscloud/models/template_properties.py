@@ -76,7 +76,7 @@ class TemplateProperties(object):
     def name(self):
         """Gets the name of this TemplateProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        The resource name.  # noqa: E501
 
         :return: The name of this TemplateProperties.  # noqa: E501
         :rtype: str
@@ -87,7 +87,7 @@ class TemplateProperties(object):
     def name(self, name):
         """Sets the name of this TemplateProperties.
 
-        The name of the  resource.  # noqa: E501
+        The resource name.  # noqa: E501
 
         :param name: The name of this TemplateProperties.  # noqa: E501
         :type name: str

@@ -8,8 +8,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**ipblocks_find_by_id**](IPBlocksApi.md#ipblocks_find_by_id) | **GET** /ipblocks/{ipblockId} | Retrieve IP blocks |
 | [**ipblocks_get**](IPBlocksApi.md#ipblocks_get) | **GET** /ipblocks | List IP blocks  |
 | [**ipblocks_patch**](IPBlocksApi.md#ipblocks_patch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP blocks |
-| [**ipblocks_post**](IPBlocksApi.md#ipblocks_post) | **POST** /ipblocks | Reserve IP blocks |
-| [**ipblocks_put**](IPBlocksApi.md#ipblocks_put) | **PUT** /ipblocks/{ipblockId} | Modify IP blocks |
+| [**ipblocks_post**](IPBlocksApi.md#ipblocks_post) | **POST** /ipblocks | Reserve a IP Block |
+| [**ipblocks_put**](IPBlocksApi.md#ipblocks_put) | **PUT** /ipblocks/{ipblockId} | Modify a IP Block by ID |
 
 
 # **ipblocks_delete**
@@ -227,7 +227,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ipblock_id** | **str**| The unique ID of the IP block. |  |
-| **ipblock** | [**IpBlockProperties**](IpBlockProperties.md)| The properties of the IP block to be updated. |  |
+| **ipblock** | [**IpBlockProperties**](../models/IpBlockProperties.md)| The properties of the IP block to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -248,9 +248,9 @@ Basic Authentication, Token Authentication
 # **ipblocks_post**
 > IpBlock ipblocks_post(ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Reserve IP blocks
+Reserve a IP Block
 
-Reserve a new IP block.
+Reserves a new IP block.
 
 ### Example
 
@@ -274,7 +274,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     api_instance = ionoscloud.IPBlocksApi(api_client)
     ipblock = ionoscloud.IpBlock() # IpBlock | The IP block to be reserved.
     try:
-        # Reserve IP blocks
+        # Reserve a IP Block
         api_response = api_instance.ipblocks_post(ipblock)
         print(api_response)
     except ApiException as e:
@@ -285,7 +285,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ipblock** | [**IpBlock**](IpBlock.md)| The IP block to be reserved. |  |
+| **ipblock** | [**IpBlock**](../models/IpBlock.md)| The IP block to be reserved. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -306,9 +306,9 @@ Basic Authentication, Token Authentication
 # **ipblocks_put**
 > IpBlock ipblocks_put(ipblock_id, ipblock, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify IP blocks
+Modify a IP Block by ID
 
-Modify the properties of the specified IP block.
+Modifies the properties of the specified IP block.
 
 ### Example
 
@@ -333,7 +333,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     ipblock_id = 'ipblock_id_example' # str | The unique ID of the IP block.
     ipblock = ionoscloud.IpBlock() # IpBlock | The modified IP block.
     try:
-        # Modify IP blocks
+        # Modify a IP Block by ID
         api_response = api_instance.ipblocks_put(ipblock_id, ipblock)
         print(api_response)
     except ApiException as e:
@@ -345,7 +345,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ipblock_id** | **str**| The unique ID of the IP block. |  |
-| **ipblock** | [**IpBlock**](IpBlock.md)| The modified IP block. |  |
+| **ipblock** | [**IpBlock**](../models/IpBlock.md)| The modified IP block. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

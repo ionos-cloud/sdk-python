@@ -122,7 +122,7 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     def protocol(self):
         """Gets the protocol of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Balancing protocol  # noqa: E501
+        The balancing protocol.  # noqa: E501
 
         :return: The protocol of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: str
@@ -133,7 +133,7 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     def protocol(self, protocol):
         """Sets the protocol of this ApplicationLoadBalancerForwardingRuleProperties.
 
-        Balancing protocol  # noqa: E501
+        The balancing protocol.  # noqa: E501
 
         :param protocol: The protocol of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type protocol: str
@@ -153,7 +153,7 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     def listener_ip(self):
         """Gets the listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Listening (inbound) IP  # noqa: E501
+        The listening (inbound) IP.  # noqa: E501
 
         :return: The listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: str
@@ -164,7 +164,7 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     def listener_ip(self, listener_ip):
         """Sets the listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.
 
-        Listening (inbound) IP  # noqa: E501
+        The listening (inbound) IP.  # noqa: E501
 
         :param listener_ip: The listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type listener_ip: str
@@ -178,7 +178,7 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     def listener_port(self):
         """Gets the listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Listening (inbound) port number; valid range is 1 to 65535.  # noqa: E501
+        The listening (inbound) port number; the valid range is 1 to 65535.  # noqa: E501
 
         :return: The listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: int
@@ -189,7 +189,7 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     def listener_port(self, listener_port):
         """Sets the listener_port of this ApplicationLoadBalancerForwardingRuleProperties.
 
-        Listening (inbound) port number; valid range is 1 to 65535.  # noqa: E501
+        The listening (inbound) port number; the valid range is 1 to 65535.  # noqa: E501
 
         :param listener_port: The listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type listener_port: int
@@ -249,7 +249,7 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     def http_rules(self):
         """Gets the http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        An array of items in the collection. The original order of rules is perserved during processing, except for Forward-type rules are processed after the rules with other action defined. The relative order of Forward-type rules is also preserved during the processing.  # noqa: E501
+        An array of items in the collection. The original order of rules is preserved during processing, except that rules of the 'FORWARD' type are processed after the rules with other defined actions. The relative order of the 'FORWARD' type rules is also preserved during the processing.  # noqa: E501
 
         :return: The http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: list[ApplicationLoadBalancerHttpRule]
@@ -260,7 +260,7 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     def http_rules(self, http_rules):
         """Sets the http_rules of this ApplicationLoadBalancerForwardingRuleProperties.
 
-        An array of items in the collection. The original order of rules is perserved during processing, except for Forward-type rules are processed after the rules with other action defined. The relative order of Forward-type rules is also preserved during the processing.  # noqa: E501
+        An array of items in the collection. The original order of rules is preserved during processing, except that rules of the 'FORWARD' type are processed after the rules with other defined actions. The relative order of the 'FORWARD' type rules is also preserved during the processing.  # noqa: E501
 
         :param http_rules: The http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type http_rules: list[ApplicationLoadBalancerHttpRule]

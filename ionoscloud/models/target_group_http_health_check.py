@@ -92,7 +92,7 @@ class TargetGroupHttpHealthCheck(object):
     def path(self):
         """Gets the path of this TargetGroupHttpHealthCheck.  # noqa: E501
 
-        The path (destination URL) for the HTTP health check request; the default is /.  # noqa: E501
+        The destination URL for HTTP the health check; the default is '/'.  # noqa: E501
 
         :return: The path of this TargetGroupHttpHealthCheck.  # noqa: E501
         :rtype: str
@@ -103,7 +103,7 @@ class TargetGroupHttpHealthCheck(object):
     def path(self, path):
         """Sets the path of this TargetGroupHttpHealthCheck.
 
-        The path (destination URL) for the HTTP health check request; the default is /.  # noqa: E501
+        The destination URL for HTTP the health check; the default is '/'.  # noqa: E501
 
         :param path: The path of this TargetGroupHttpHealthCheck.  # noqa: E501
         :type path: str
@@ -115,7 +115,7 @@ class TargetGroupHttpHealthCheck(object):
     def method(self):
         """Gets the method of this TargetGroupHttpHealthCheck.  # noqa: E501
 
-        The method for the HTTP health check.  # noqa: E501
+        The method used for the health check request.  # noqa: E501
 
         :return: The method of this TargetGroupHttpHealthCheck.  # noqa: E501
         :rtype: str
@@ -126,7 +126,7 @@ class TargetGroupHttpHealthCheck(object):
     def method(self, method):
         """Sets the method of this TargetGroupHttpHealthCheck.
 
-        The method for the HTTP health check.  # noqa: E501
+        The method used for the health check request.  # noqa: E501
 
         :param method: The method of this TargetGroupHttpHealthCheck.  # noqa: E501
         :type method: str
@@ -144,7 +144,7 @@ class TargetGroupHttpHealthCheck(object):
     def match_type(self):
         """Gets the match_type of this TargetGroupHttpHealthCheck.  # noqa: E501
 
-          # noqa: E501
+        Specify the target's response type to match ALB's request.  # noqa: E501
 
         :return: The match_type of this TargetGroupHttpHealthCheck.  # noqa: E501
         :rtype: str
@@ -155,7 +155,7 @@ class TargetGroupHttpHealthCheck(object):
     def match_type(self, match_type):
         """Sets the match_type of this TargetGroupHttpHealthCheck.
 
-          # noqa: E501
+        Specify the target's response type to match ALB's request.  # noqa: E501
 
         :param match_type: The match_type of this TargetGroupHttpHealthCheck.  # noqa: E501
         :type match_type: str
@@ -175,7 +175,7 @@ class TargetGroupHttpHealthCheck(object):
     def response(self):
         """Gets the response of this TargetGroupHttpHealthCheck.  # noqa: E501
 
-        The response returned by the request, depending on the match type.  # noqa: E501
+        The response returned by the request. It can be a status code or a response body depending on the definition of 'matchType'.  # noqa: E501
 
         :return: The response of this TargetGroupHttpHealthCheck.  # noqa: E501
         :rtype: str
@@ -186,7 +186,7 @@ class TargetGroupHttpHealthCheck(object):
     def response(self, response):
         """Sets the response of this TargetGroupHttpHealthCheck.
 
-        The response returned by the request, depending on the match type.  # noqa: E501
+        The response returned by the request. It can be a status code or a response body depending on the definition of 'matchType'.  # noqa: E501
 
         :param response: The response of this TargetGroupHttpHealthCheck.  # noqa: E501
         :type response: str
@@ -200,7 +200,7 @@ class TargetGroupHttpHealthCheck(object):
     def regex(self):
         """Gets the regex of this TargetGroupHttpHealthCheck.  # noqa: E501
 
-          # noqa: E501
+        Specifies whether to use a regular expression to parse the response body; the default value is 'FALSE'.  By using regular expressions, you can flexibly customize the expected response from a healthy server.  # noqa: E501
 
         :return: The regex of this TargetGroupHttpHealthCheck.  # noqa: E501
         :rtype: bool
@@ -211,7 +211,7 @@ class TargetGroupHttpHealthCheck(object):
     def regex(self, regex):
         """Sets the regex of this TargetGroupHttpHealthCheck.
 
-          # noqa: E501
+        Specifies whether to use a regular expression to parse the response body; the default value is 'FALSE'.  By using regular expressions, you can flexibly customize the expected response from a healthy server.  # noqa: E501
 
         :param regex: The regex of this TargetGroupHttpHealthCheck.  # noqa: E501
         :type regex: bool
@@ -223,7 +223,7 @@ class TargetGroupHttpHealthCheck(object):
     def negate(self):
         """Gets the negate of this TargetGroupHttpHealthCheck.  # noqa: E501
 
-          # noqa: E501
+        Specifies whether to negate an individual entry; the default value is 'FALSE'.  # noqa: E501
 
         :return: The negate of this TargetGroupHttpHealthCheck.  # noqa: E501
         :rtype: bool
@@ -234,7 +234,7 @@ class TargetGroupHttpHealthCheck(object):
     def negate(self, negate):
         """Sets the negate of this TargetGroupHttpHealthCheck.
 
-          # noqa: E501
+        Specifies whether to negate an individual entry; the default value is 'FALSE'.  # noqa: E501
 
         :param negate: The negate of this TargetGroupHttpHealthCheck.  # noqa: E501
         :type negate: bool

@@ -939,9 +939,9 @@ class VolumesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_post(self, datacenter_id, volume, **kwargs):  # noqa: E501
-        """Create volumes  # noqa: E501
+        """Create a Volume  # noqa: E501
 
-        Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.  # noqa: E501
+        Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -977,9 +977,9 @@ class VolumesApi(object):
         return self.datacenters_volumes_post_with_http_info(datacenter_id, volume, **kwargs)  # noqa: E501
 
     def datacenters_volumes_post_with_http_info(self, datacenter_id, volume, **kwargs):  # noqa: E501
-        """Create volumes  # noqa: E501
+        """Create a Volume  # noqa: E501
 
-        Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.  # noqa: E501
+        Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1116,9 +1116,9 @@ class VolumesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_put(self, datacenter_id, volume_id, volume, **kwargs):  # noqa: E501
-        """Modify volumes  # noqa: E501
+        """Modify a Volume by ID  # noqa: E501
 
-        Modify the properties of the specified volume within the data center.  # noqa: E501
+        Modifies the properties of the specified volume within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1156,9 +1156,9 @@ class VolumesApi(object):
         return self.datacenters_volumes_put_with_http_info(datacenter_id, volume_id, volume, **kwargs)  # noqa: E501
 
     def datacenters_volumes_put_with_http_info(self, datacenter_id, volume_id, volume, **kwargs):  # noqa: E501
-        """Modify volumes  # noqa: E501
+        """Modify a Volume by ID  # noqa: E501
 
-        Modify the properties of the specified volume within the data center.  # noqa: E501
+        Modifies the properties of the specified volume within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

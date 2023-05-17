@@ -4,17 +4,17 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**locations_find_by_region_id**](LocationsApi.md#locations_find_by_region_id) | **GET** /locations/{regionId} | List locations within regions |
-| [**locations_find_by_region_id_and_id**](LocationsApi.md#locations_find_by_region_id_and_id) | **GET** /locations/{regionId}/{locationId} | Retrieve specified locations |
-| [**locations_get**](LocationsApi.md#locations_get) | **GET** /locations | List locations |
+| [**locations_find_by_region_id**](LocationsApi.md#locations_find_by_region_id) | **GET** /locations/{regionId} | Get Locations within a Region |
+| [**locations_find_by_region_id_and_id**](LocationsApi.md#locations_find_by_region_id_and_id) | **GET** /locations/{regionId}/{locationId} | Get Location by ID |
+| [**locations_get**](LocationsApi.md#locations_get) | **GET** /locations | Get Locations |
 
 
 # **locations_find_by_region_id**
 > Locations locations_find_by_region_id(region_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-List locations within regions
+Get Locations within a Region
 
-List locations by the region ID.
+Retrieves the available locations in a region specified by its ID. The 'regionId' consists of the two character identifier of the region (country), e.g., 'de'.
 
 ### Example
 
@@ -38,7 +38,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     api_instance = ionoscloud.LocationsApi(api_client)
     region_id = 'region_id_example' # str | The unique ID of the region.
     try:
-        # List locations within regions
+        # Get Locations within a Region
         api_response = api_instance.locations_find_by_region_id(region_id)
         print(api_response)
     except ApiException as e:
@@ -70,9 +70,9 @@ Basic Authentication, Token Authentication
 # **locations_find_by_region_id_and_id**
 > Location locations_find_by_region_id_and_id(region_id, location_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Retrieve specified locations
+Get Location by ID
 
-Retrieve the properties of the specified location
+Retrieves the information about the location specified by its ID. The 'locationId' consists of the three-digit identifier of the city according to the IATA code.
 
 ### Example
 
@@ -97,7 +97,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     region_id = 'region_id_example' # str | The unique ID of the region.
     location_id = 'location_id_example' # str | The unique ID of the location.
     try:
-        # Retrieve specified locations
+        # Get Location by ID
         api_response = api_instance.locations_find_by_region_id_and_id(region_id, location_id)
         print(api_response)
     except ApiException as e:
@@ -130,9 +130,9 @@ Basic Authentication, Token Authentication
 # **locations_get**
 > Locations locations_get(pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-List locations
+Get Locations
 
-List the available locations for provisioning your virtual data centers.
+Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: 'de')    * a three-character **locationId**, which represents a city. The 'locationId' is typically based on the IATA code of the city's airport (example: 'txl').    >Note that 'locations' are read-only and cannot be changed.
 
 ### Example
 
@@ -155,7 +155,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ionoscloud.LocationsApi(api_client)
     try:
-        # List locations
+        # Get Locations
         api_response = api_instance.locations_get()
         print(api_response)
     except ApiException as e:

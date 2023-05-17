@@ -91,7 +91,7 @@ class TargetGroupProperties(object):
     def name(self):
         """Gets the name of this TargetGroupProperties.  # noqa: E501
 
-        The name of the target group.  # noqa: E501
+        The target group name.  # noqa: E501
 
         :return: The name of this TargetGroupProperties.  # noqa: E501
         :rtype: str
@@ -102,7 +102,7 @@ class TargetGroupProperties(object):
     def name(self, name):
         """Sets the name of this TargetGroupProperties.
 
-        The name of the target group.  # noqa: E501
+        The target group name.  # noqa: E501
 
         :param name: The name of this TargetGroupProperties.  # noqa: E501
         :type name: str
@@ -116,7 +116,7 @@ class TargetGroupProperties(object):
     def algorithm(self):
         """Gets the algorithm of this TargetGroupProperties.  # noqa: E501
 
-        Balancing algorithm  # noqa: E501
+        The balancing algorithm. A balancing algorithm consists of predefined rules with the logic that a load balancer uses to distribute network traffic between servers.  - **Round Robin**: Targets are served alternately according to their weighting.  - **Least Connection**: The target with the least active connection is served.  - **Random**: The targets are served based on a consistent pseudorandom algorithm.  - **Source IP**: It is ensured that the same client IP address reaches the same target.  # noqa: E501
 
         :return: The algorithm of this TargetGroupProperties.  # noqa: E501
         :rtype: str
@@ -127,7 +127,7 @@ class TargetGroupProperties(object):
     def algorithm(self, algorithm):
         """Sets the algorithm of this TargetGroupProperties.
 
-        Balancing algorithm  # noqa: E501
+        The balancing algorithm. A balancing algorithm consists of predefined rules with the logic that a load balancer uses to distribute network traffic between servers.  - **Round Robin**: Targets are served alternately according to their weighting.  - **Least Connection**: The target with the least active connection is served.  - **Random**: The targets are served based on a consistent pseudorandom algorithm.  - **Source IP**: It is ensured that the same client IP address reaches the same target.  # noqa: E501
 
         :param algorithm: The algorithm of this TargetGroupProperties.  # noqa: E501
         :type algorithm: str
@@ -147,7 +147,7 @@ class TargetGroupProperties(object):
     def protocol(self):
         """Gets the protocol of this TargetGroupProperties.  # noqa: E501
 
-        Balancing protocol  # noqa: E501
+        The forwarding protocol. Only the value 'HTTP' is allowed.  # noqa: E501
 
         :return: The protocol of this TargetGroupProperties.  # noqa: E501
         :rtype: str
@@ -158,7 +158,7 @@ class TargetGroupProperties(object):
     def protocol(self, protocol):
         """Sets the protocol of this TargetGroupProperties.
 
-        Balancing protocol  # noqa: E501
+        The forwarding protocol. Only the value 'HTTP' is allowed.  # noqa: E501
 
         :param protocol: The protocol of this TargetGroupProperties.  # noqa: E501
         :type protocol: str

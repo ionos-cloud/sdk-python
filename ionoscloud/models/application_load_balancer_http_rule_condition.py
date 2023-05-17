@@ -85,7 +85,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def type(self):
         """Gets the type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
 
-        Type of the HTTP rule condition.  # noqa: E501
+        The HTTP rule condition type.  # noqa: E501
 
         :return: The type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :rtype: str
@@ -96,7 +96,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def type(self, type):
         """Sets the type of this ApplicationLoadBalancerHttpRuleCondition.
 
-        Type of the HTTP rule condition.  # noqa: E501
+        The HTTP rule condition type.  # noqa: E501
 
         :param type: The type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :type type: str
@@ -116,7 +116,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def condition(self):
         """Gets the condition of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
 
-        Matching rule for the HTTP rule condition attribute; mandatory for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null when type is SOURCE_IP.  # noqa: E501
+        The matching rule for the HTTP rule condition attribute; this parameter is mandatory for 'HEADER', 'PATH', 'QUERY', 'METHOD', 'HOST', and 'COOKIE' types. It must be 'null' if the type is 'SOURCE_IP'.  # noqa: E501
 
         :return: The condition of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :rtype: str
@@ -127,7 +127,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def condition(self, condition):
         """Sets the condition of this ApplicationLoadBalancerHttpRuleCondition.
 
-        Matching rule for the HTTP rule condition attribute; mandatory for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null when type is SOURCE_IP.  # noqa: E501
+        The matching rule for the HTTP rule condition attribute; this parameter is mandatory for 'HEADER', 'PATH', 'QUERY', 'METHOD', 'HOST', and 'COOKIE' types. It must be 'null' if the type is 'SOURCE_IP'.  # noqa: E501
 
         :param condition: The condition of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :type condition: str
@@ -147,7 +147,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def negate(self):
         """Gets the negate of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
 
-        Specifies whether the condition is negated or not; the default is False.  # noqa: E501
+        Specifies whether the condition should be negated; the default value is 'FALSE'.  # noqa: E501
 
         :return: The negate of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :rtype: bool
@@ -158,7 +158,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def negate(self, negate):
         """Sets the negate of this ApplicationLoadBalancerHttpRuleCondition.
 
-        Specifies whether the condition is negated or not; the default is False.  # noqa: E501
+        Specifies whether the condition should be negated; the default value is 'FALSE'.  # noqa: E501
 
         :param negate: The negate of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :type negate: bool
@@ -170,7 +170,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def key(self):
         """Gets the key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
 
-        Must be null when type is PATH, METHOD, HOST, or SOURCE_IP. Key can only be set when type is COOKIES, HEADER, or QUERY.  # noqa: E501
+        The key can only be set when the HTTP rule condition type is 'COOKIES', 'HEADER', or 'QUERY'. For the type 'PATH', 'METHOD', 'HOST', or 'SOURCE_IP' the value must be 'null'.  # noqa: E501
 
         :return: The key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :rtype: str
@@ -181,7 +181,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def key(self, key):
         """Sets the key of this ApplicationLoadBalancerHttpRuleCondition.
 
-        Must be null when type is PATH, METHOD, HOST, or SOURCE_IP. Key can only be set when type is COOKIES, HEADER, or QUERY.  # noqa: E501
+        The key can only be set when the HTTP rule condition type is 'COOKIES', 'HEADER', or 'QUERY'. For the type 'PATH', 'METHOD', 'HOST', or 'SOURCE_IP' the value must be 'null'.  # noqa: E501
 
         :param key: The key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :type key: str
@@ -193,7 +193,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def value(self):
         """Gets the value of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
 
-        Mandatory for conditions CONTAINS, EQUALS, MATCHES, STARTS_WITH, ENDS_WITH; must be null when condition is EXISTS; should be a valid CIDR if provided and if type is SOURCE_IP.  # noqa: E501
+        This parameter is mandatory for the conditions 'CONTAINS', 'EQUALS', 'MATCHES', 'STARTS_WITH', 'ENDS_WITH', or if the type is 'SOURCE_IP'. Specify a valid CIDR. If the condition is 'EXISTS', the value must be 'null'.  # noqa: E501
 
         :return: The value of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :rtype: str
@@ -204,7 +204,7 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     def value(self, value):
         """Sets the value of this ApplicationLoadBalancerHttpRuleCondition.
 
-        Mandatory for conditions CONTAINS, EQUALS, MATCHES, STARTS_WITH, ENDS_WITH; must be null when condition is EXISTS; should be a valid CIDR if provided and if type is SOURCE_IP.  # noqa: E501
+        This parameter is mandatory for the conditions 'CONTAINS', 'EQUALS', 'MATCHES', 'STARTS_WITH', 'ENDS_WITH', or if the type is 'SOURCE_IP'. Specify a valid CIDR. If the condition is 'EXISTS', the value must be 'null'.  # noqa: E501
 
         :param value: The value of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :type value: str

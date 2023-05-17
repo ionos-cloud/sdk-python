@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**images_find_by_id**](ImagesApi.md#images_find_by_id) | **GET** /images/{imageId} | Retrieve images |
 | [**images_get**](ImagesApi.md#images_get) | **GET** /images | List images |
 | [**images_patch**](ImagesApi.md#images_patch) | **PATCH** /images/{imageId} | Partially modify images |
-| [**images_put**](ImagesApi.md#images_put) | **PUT** /images/{imageId} | Modify images |
+| [**images_put**](ImagesApi.md#images_put) | **PUT** /images/{imageId} | Modify an Image by ID |
 
 
 # **images_delete**
@@ -224,7 +224,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **image_id** | **str**| The unique ID of the image. |  |
-| **image** | [**ImageProperties**](ImageProperties.md)| The image properties to be updated. |  |
+| **image** | [**ImageProperties**](../models/ImageProperties.md)| The image properties to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -245,9 +245,9 @@ Basic Authentication, Token Authentication
 # **images_put**
 > Image images_put(image_id, image, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify images
+Modify an Image by ID
 
-Modify the properties of the specified image.
+Modifies the properties of the specified image.
 
 ### Example
 
@@ -272,7 +272,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     image_id = 'image_id_example' # str | The unique ID of the image.
     image = ionoscloud.Image() # Image | The modified image
     try:
-        # Modify images
+        # Modify an Image by ID
         api_response = api_instance.images_put(image_id, image)
         print(api_response)
     except ApiException as e:
@@ -284,7 +284,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **image_id** | **str**| The unique ID of the image. |  |
-| **image** | [**Image**](Image.md)| The modified image |  |
+| **image** | [**Image**](../models/Image.md)| The modified image |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

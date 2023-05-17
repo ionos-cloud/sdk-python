@@ -778,9 +778,9 @@ class NetworkInterfacesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_post(self, datacenter_id, server_id, nic, **kwargs):  # noqa: E501
-        """Create NICs  # noqa: E501
+        """Create a NIC  # noqa: E501
 
-        Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.  # noqa: E501
+        Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -818,9 +818,9 @@ class NetworkInterfacesApi(object):
         return self.datacenters_servers_nics_post_with_http_info(datacenter_id, server_id, nic, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_post_with_http_info(self, datacenter_id, server_id, nic, **kwargs):  # noqa: E501
-        """Create NICs  # noqa: E501
+        """Create a NIC  # noqa: E501
 
-        Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.  # noqa: E501
+        Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

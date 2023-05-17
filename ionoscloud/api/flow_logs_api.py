@@ -794,9 +794,9 @@ class FlowLogsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_nics_flowlogs_post(self, datacenter_id, server_id, nic_id, flowlog, **kwargs):  # noqa: E501
-        """Create Flow Logs  # noqa: E501
+        """Create a Flow Log  # noqa: E501
 
-        Add a new Flow Log for the specified NIC.  # noqa: E501
+        Adds a new Flow Log for the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -834,9 +834,9 @@ class FlowLogsApi(object):
         return self.datacenters_servers_nics_flowlogs_post_with_http_info(datacenter_id, server_id, nic_id, flowlog, **kwargs)  # noqa: E501
 
     def datacenters_servers_nics_flowlogs_post_with_http_info(self, datacenter_id, server_id, nic_id, flowlog, **kwargs):  # noqa: E501
-        """Create Flow Logs  # noqa: E501
+        """Create a Flow Log  # noqa: E501
 
-        Add a new Flow Log for the specified NIC.  # noqa: E501
+        Adds a new Flow Log for the specified NIC.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

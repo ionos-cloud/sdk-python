@@ -18,9 +18,9 @@ class KubernetesApi(object):
         self.api_client = api_client
 
     def k8s_delete(self, k8s_cluster_id, **kwargs):  # noqa: E501
-        """Delete Kubernetes clusters  # noqa: E501
+        """Delete a Kubernetes Cluster by ID  # noqa: E501
 
-        Delete the specified Kubernetes cluster.  # noqa: E501
+        Deletes the K8s cluster specified  by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -54,9 +54,9 @@ class KubernetesApi(object):
         return self.k8s_delete_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
 
     def k8s_delete_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
-        """Delete Kubernetes clusters  # noqa: E501
+        """Delete a Kubernetes Cluster by ID  # noqa: E501
 
-        Delete the specified Kubernetes cluster.  # noqa: E501
+        Deletes the K8s cluster specified  by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -180,16 +180,16 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_find_by_cluster_id(self, k8s_cluster_id, **kwargs):  # noqa: E501
-        """Retrieve Kubernetes clusters  # noqa: E501
+        """Get a Kubernetes Cluster by ID  # noqa: E501
 
-        Retrieve the specified Kubernetes cluster.  # noqa: E501
+        Retrieves the K8s cluster specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.k8s_find_by_cluster_id(k8s_cluster_id, async_req=True)
         >>> result = thread.get()
 
-        :param k8s_cluster_id: The unique ID of the Kubernetes cluster. (required)
+        :param k8s_cluster_id: The unique ID of the K8s cluster to be retrieved. (required)
         :type k8s_cluster_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -216,16 +216,16 @@ class KubernetesApi(object):
         return self.k8s_find_by_cluster_id_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
 
     def k8s_find_by_cluster_id_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
-        """Retrieve Kubernetes clusters  # noqa: E501
+        """Get a Kubernetes Cluster by ID  # noqa: E501
 
-        Retrieve the specified Kubernetes cluster.  # noqa: E501
+        Retrieves the K8s cluster specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.k8s_find_by_cluster_id_with_http_info(k8s_cluster_id, async_req=True)
         >>> result = thread.get()
 
-        :param k8s_cluster_id: The unique ID of the Kubernetes cluster. (required)
+        :param k8s_cluster_id: The unique ID of the K8s cluster to be retrieved. (required)
         :type k8s_cluster_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -342,9 +342,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_get(self, **kwargs):  # noqa: E501
-        """List Kubernetes clusters  # noqa: E501
+        """Get Kubernetes Clusters  # noqa: E501
 
-        List all available Kubernetes clusters.  # noqa: E501
+        Retrieves a list of all K8s clusters provisioned under your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -376,9 +376,9 @@ class KubernetesApi(object):
         return self.k8s_get_with_http_info(**kwargs)  # noqa: E501
 
     def k8s_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Kubernetes clusters  # noqa: E501
+        """Get Kubernetes Clusters  # noqa: E501
 
-        List all available Kubernetes clusters.  # noqa: E501
+        Retrieves a list of all K8s clusters provisioned under your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -493,9 +493,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_kubeconfig_get(self, k8s_cluster_id, **kwargs):  # noqa: E501
-        """Retrieve Kubernetes configuration files  # noqa: E501
+        """Get Kubernetes Configuration File  # noqa: E501
 
-        Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.  # noqa: E501
+        Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, 'application/yaml' is specified.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -529,9 +529,9 @@ class KubernetesApi(object):
         return self.k8s_kubeconfig_get_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
 
     def k8s_kubeconfig_get_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
-        """Retrieve Kubernetes configuration files  # noqa: E501
+        """Get Kubernetes Configuration File  # noqa: E501
 
-        Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.  # noqa: E501
+        Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, 'application/yaml' is specified.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -655,9 +655,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_delete(self, k8s_cluster_id, nodepool_id, **kwargs):  # noqa: E501
-        """Delete Kubernetes node pools  # noqa: E501
+        """Delete a Kubernetes Node Pool by ID  # noqa: E501
 
-        Delete the specified Kubernetes node pool.  # noqa: E501
+        Deletes the K8s node pool specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -693,9 +693,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_delete_with_http_info(k8s_cluster_id, nodepool_id, **kwargs)  # noqa: E501
 
     def k8s_nodepools_delete_with_http_info(self, k8s_cluster_id, nodepool_id, **kwargs):  # noqa: E501
-        """Delete Kubernetes node pools  # noqa: E501
+        """Delete a Kubernetes Node Pool by ID  # noqa: E501
 
-        Delete the specified Kubernetes node pool.  # noqa: E501
+        Deletes the K8s node pool specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -828,9 +828,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_find_by_id(self, k8s_cluster_id, nodepool_id, **kwargs):  # noqa: E501
-        """Retrieve Kubernetes node pools  # noqa: E501
+        """Get a Kubernetes Node Pool by ID  # noqa: E501
 
-        Retrieve the specified Kubernetes node pool.  # noqa: E501
+        Retrieves the K8s node pool specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -866,9 +866,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_find_by_id_with_http_info(k8s_cluster_id, nodepool_id, **kwargs)  # noqa: E501
 
     def k8s_nodepools_find_by_id_with_http_info(self, k8s_cluster_id, nodepool_id, **kwargs):  # noqa: E501
-        """Retrieve Kubernetes node pools  # noqa: E501
+        """Get a Kubernetes Node Pool by ID  # noqa: E501
 
-        Retrieve the specified Kubernetes node pool.  # noqa: E501
+        Retrieves the K8s node pool specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1001,9 +1001,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_get(self, k8s_cluster_id, **kwargs):  # noqa: E501
-        """List Kubernetes node pools  # noqa: E501
+        """Get Kubernetes Node Pools  # noqa: E501
 
-        List all Kubernetes node pools, included the specified Kubernetes cluster.  # noqa: E501
+        Retrieves a list of K8s node pools of a cluster specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1037,9 +1037,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_get_with_http_info(k8s_cluster_id, **kwargs)  # noqa: E501
 
     def k8s_nodepools_get_with_http_info(self, k8s_cluster_id, **kwargs):  # noqa: E501
-        """List Kubernetes node pools  # noqa: E501
+        """Get Kubernetes Node Pools  # noqa: E501
 
-        List all Kubernetes node pools, included the specified Kubernetes cluster.  # noqa: E501
+        Retrieves a list of K8s node pools of a cluster specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1163,9 +1163,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_nodes_delete(self, k8s_cluster_id, nodepool_id, node_id, **kwargs):  # noqa: E501
-        """Delete Kubernetes nodes  # noqa: E501
+        """Delete a Kubernetes Node by ID  # noqa: E501
 
-        Delete the specified Kubernetes node.  # noqa: E501
+        Deletes the K8s node specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1203,9 +1203,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_nodes_delete_with_http_info(k8s_cluster_id, nodepool_id, node_id, **kwargs)  # noqa: E501
 
     def k8s_nodepools_nodes_delete_with_http_info(self, k8s_cluster_id, nodepool_id, node_id, **kwargs):  # noqa: E501
-        """Delete Kubernetes nodes  # noqa: E501
+        """Delete a Kubernetes Node by ID  # noqa: E501
 
-        Delete the specified Kubernetes node.  # noqa: E501
+        Deletes the K8s node specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1347,9 +1347,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_nodes_find_by_id(self, k8s_cluster_id, nodepool_id, node_id, **kwargs):  # noqa: E501
-        """Retrieve Kubernetes nodes  # noqa: E501
+        """Get Kubernetes Node by ID  # noqa: E501
 
-        Retrieve the specified Kubernetes node.  # noqa: E501
+        Retrieves the K8s node specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1387,9 +1387,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_nodes_find_by_id_with_http_info(k8s_cluster_id, nodepool_id, node_id, **kwargs)  # noqa: E501
 
     def k8s_nodepools_nodes_find_by_id_with_http_info(self, k8s_cluster_id, nodepool_id, node_id, **kwargs):  # noqa: E501
-        """Retrieve Kubernetes nodes  # noqa: E501
+        """Get Kubernetes Node by ID  # noqa: E501
 
-        Retrieve the specified Kubernetes node.  # noqa: E501
+        Retrieves the K8s node specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1531,9 +1531,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_nodes_get(self, k8s_cluster_id, nodepool_id, **kwargs):  # noqa: E501
-        """List Kubernetes nodes  # noqa: E501
+        """Get Kubernetes Nodes  # noqa: E501
 
-        List all the nodes, included in the specified Kubernetes node pool.  # noqa: E501
+        Retrieves the list of all K8s nodes of the specified node pool.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1569,9 +1569,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_nodes_get_with_http_info(k8s_cluster_id, nodepool_id, **kwargs)  # noqa: E501
 
     def k8s_nodepools_nodes_get_with_http_info(self, k8s_cluster_id, nodepool_id, **kwargs):  # noqa: E501
-        """List Kubernetes nodes  # noqa: E501
+        """Get Kubernetes Nodes  # noqa: E501
 
-        List all the nodes, included in the specified Kubernetes node pool.  # noqa: E501
+        Retrieves the list of all K8s nodes of the specified node pool.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1704,9 +1704,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_nodes_replace_post(self, k8s_cluster_id, nodepool_id, node_id, **kwargs):  # noqa: E501
-        """Recreate Kubernetes nodes  # noqa: E501
+        """Recreate a Kubernetes Node by ID  # noqa: E501
 
-        Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \"Active\", all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \"Active\" node.  # noqa: E501
+        Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is 'Active,' all the pods from the failed node will be migrated to the new node. The node pool has an additional billable 'active' node during this process.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1744,9 +1744,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_nodes_replace_post_with_http_info(k8s_cluster_id, nodepool_id, node_id, **kwargs)  # noqa: E501
 
     def k8s_nodepools_nodes_replace_post_with_http_info(self, k8s_cluster_id, nodepool_id, node_id, **kwargs):  # noqa: E501
-        """Recreate Kubernetes nodes  # noqa: E501
+        """Recreate a Kubernetes Node by ID  # noqa: E501
 
-        Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \"Active\", all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \"Active\" node.  # noqa: E501
+        Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is 'Active,' all the pods from the failed node will be migrated to the new node. The node pool has an additional billable 'active' node during this process.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1888,9 +1888,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_post(self, k8s_cluster_id, kubernetes_node_pool, **kwargs):  # noqa: E501
-        """Create Kubernetes node pools  # noqa: E501
+        """Create a Kubernetes Node Pool  # noqa: E501
 
-        Create a Kubernetes node pool inside the specified Kubernetes cluster.  # noqa: E501
+        Creates a node pool inside the specified K8s cluster.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1926,9 +1926,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_post_with_http_info(k8s_cluster_id, kubernetes_node_pool, **kwargs)  # noqa: E501
 
     def k8s_nodepools_post_with_http_info(self, k8s_cluster_id, kubernetes_node_pool, **kwargs):  # noqa: E501
-        """Create Kubernetes node pools  # noqa: E501
+        """Create a Kubernetes Node Pool  # noqa: E501
 
-        Create a Kubernetes node pool inside the specified Kubernetes cluster.  # noqa: E501
+        Creates a node pool inside the specified K8s cluster.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2065,9 +2065,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_nodepools_put(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs):  # noqa: E501
-        """Modify Kubernetes node pools  # noqa: E501
+        """Modify a Kubernetes Node Pool by ID  # noqa: E501
 
-        Modify the specified Kubernetes node pool.  # noqa: E501
+        Modifies the K8s node pool specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2105,9 +2105,9 @@ class KubernetesApi(object):
         return self.k8s_nodepools_put_with_http_info(k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs)  # noqa: E501
 
     def k8s_nodepools_put_with_http_info(self, k8s_cluster_id, nodepool_id, kubernetes_node_pool, **kwargs):  # noqa: E501
-        """Modify Kubernetes node pools  # noqa: E501
+        """Modify a Kubernetes Node Pool by ID  # noqa: E501
 
-        Modify the specified Kubernetes node pool.  # noqa: E501
+        Modifies the K8s node pool specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2253,9 +2253,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_post(self, kubernetes_cluster, **kwargs):  # noqa: E501
-        """Create Kubernetes clusters  # noqa: E501
+        """Create a Kubernetes Cluster  # noqa: E501
 
-        Create a Kubernetes cluster.  # noqa: E501
+        Creates a K8s cluster provisioned under your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2289,9 +2289,9 @@ class KubernetesApi(object):
         return self.k8s_post_with_http_info(kubernetes_cluster, **kwargs)  # noqa: E501
 
     def k8s_post_with_http_info(self, kubernetes_cluster, **kwargs):  # noqa: E501
-        """Create Kubernetes clusters  # noqa: E501
+        """Create a Kubernetes Cluster  # noqa: E501
 
-        Create a Kubernetes cluster.  # noqa: E501
+        Creates a K8s cluster provisioned under your account.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2419,9 +2419,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_put(self, k8s_cluster_id, kubernetes_cluster, **kwargs):  # noqa: E501
-        """Modify Kubernetes clusters  # noqa: E501
+        """Modify a Kubernetes Cluster by ID  # noqa: E501
 
-        Modify the specified Kubernetes cluster.  # noqa: E501
+        Modifies the K8s cluster specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2457,9 +2457,9 @@ class KubernetesApi(object):
         return self.k8s_put_with_http_info(k8s_cluster_id, kubernetes_cluster, **kwargs)  # noqa: E501
 
     def k8s_put_with_http_info(self, k8s_cluster_id, kubernetes_cluster, **kwargs):  # noqa: E501
-        """Modify Kubernetes clusters  # noqa: E501
+        """Modify a Kubernetes Cluster by ID  # noqa: E501
 
-        Modify the specified Kubernetes cluster.  # noqa: E501
+        Modifies the K8s cluster specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2596,9 +2596,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_versions_default_get(self, **kwargs):  # noqa: E501
-        """Retrieve current default Kubernetes version  # noqa: E501
+        """Get Default Kubernetes Version  # noqa: E501
 
-        Retrieve current default Kubernetes version for clusters and nodepools.  # noqa: E501
+        Retrieves the current default K8s version to be used by the clusters and node pools.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2624,9 +2624,9 @@ class KubernetesApi(object):
         return self.k8s_versions_default_get_with_http_info(**kwargs)  # noqa: E501
 
     def k8s_versions_default_get_with_http_info(self, **kwargs):  # noqa: E501
-        """Retrieve current default Kubernetes version  # noqa: E501
+        """Get Default Kubernetes Version  # noqa: E501
 
-        Retrieve current default Kubernetes version for clusters and nodepools.  # noqa: E501
+        Retrieves the current default K8s version to be used by the clusters and node pools.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2722,9 +2722,9 @@ class KubernetesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def k8s_versions_get(self, **kwargs):  # noqa: E501
-        """List Kubernetes versions  # noqa: E501
+        """Get Kubernetes Versions  # noqa: E501
 
-        List available Kubernetes versions.  # noqa: E501
+        Lists available K8s versions.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2750,9 +2750,9 @@ class KubernetesApi(object):
         return self.k8s_versions_get_with_http_info(**kwargs)  # noqa: E501
 
     def k8s_versions_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Kubernetes versions  # noqa: E501
+        """Get Kubernetes Versions  # noqa: E501
 
-        List available Kubernetes versions.  # noqa: E501
+        Lists available K8s versions.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

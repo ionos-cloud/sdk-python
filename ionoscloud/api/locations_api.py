@@ -18,9 +18,9 @@ class LocationsApi(object):
         self.api_client = api_client
 
     def locations_find_by_region_id(self, region_id, **kwargs):  # noqa: E501
-        """List locations within regions  # noqa: E501
+        """Get Locations within a Region  # noqa: E501
 
-        List locations by the region ID.  # noqa: E501
+        Retrieves the available locations in a region specified by its ID. The 'regionId' consists of the two character identifier of the region (country), e.g., 'de'.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -54,9 +54,9 @@ class LocationsApi(object):
         return self.locations_find_by_region_id_with_http_info(region_id, **kwargs)  # noqa: E501
 
     def locations_find_by_region_id_with_http_info(self, region_id, **kwargs):  # noqa: E501
-        """List locations within regions  # noqa: E501
+        """Get Locations within a Region  # noqa: E501
 
-        List locations by the region ID.  # noqa: E501
+        Retrieves the available locations in a region specified by its ID. The 'regionId' consists of the two character identifier of the region (country), e.g., 'de'.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -180,9 +180,9 @@ class LocationsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def locations_find_by_region_id_and_id(self, region_id, location_id, **kwargs):  # noqa: E501
-        """Retrieve specified locations  # noqa: E501
+        """Get Location by ID  # noqa: E501
 
-        Retrieve the properties of the specified location  # noqa: E501
+        Retrieves the information about the location specified by its ID. The 'locationId' consists of the three-digit identifier of the city according to the IATA code.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -218,9 +218,9 @@ class LocationsApi(object):
         return self.locations_find_by_region_id_and_id_with_http_info(region_id, location_id, **kwargs)  # noqa: E501
 
     def locations_find_by_region_id_and_id_with_http_info(self, region_id, location_id, **kwargs):  # noqa: E501
-        """Retrieve specified locations  # noqa: E501
+        """Get Location by ID  # noqa: E501
 
-        Retrieve the properties of the specified location  # noqa: E501
+        Retrieves the information about the location specified by its ID. The 'locationId' consists of the three-digit identifier of the city according to the IATA code.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -353,9 +353,9 @@ class LocationsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def locations_get(self, **kwargs):  # noqa: E501
-        """List locations  # noqa: E501
+        """Get Locations  # noqa: E501
 
-        List the available locations for provisioning your virtual data centers.  # noqa: E501
+        Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: 'de')    * a three-character **locationId**, which represents a city. The 'locationId' is typically based on the IATA code of the city's airport (example: 'txl').    >Note that 'locations' are read-only and cannot be changed.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -387,9 +387,9 @@ class LocationsApi(object):
         return self.locations_get_with_http_info(**kwargs)  # noqa: E501
 
     def locations_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List locations  # noqa: E501
+        """Get Locations  # noqa: E501
 
-        List the available locations for provisioning your virtual data centers.  # noqa: E501
+        Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: 'de')    * a three-character **locationId**, which represents a city. The 'locationId' is typically based on the IATA code of the city's airport (example: 'txl').    >Note that 'locations' are read-only and cannot be changed.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

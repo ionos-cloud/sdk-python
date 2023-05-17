@@ -84,7 +84,7 @@ class TargetGroupTarget(object):
     def ip(self):
         """Gets the ip of this TargetGroupTarget.  # noqa: E501
 
-        The IP of the balanced target VM.  # noqa: E501
+        The IP address of the balanced target.  # noqa: E501
 
         :return: The ip of this TargetGroupTarget.  # noqa: E501
         :rtype: str
@@ -95,7 +95,7 @@ class TargetGroupTarget(object):
     def ip(self, ip):
         """Sets the ip of this TargetGroupTarget.
 
-        The IP of the balanced target VM.  # noqa: E501
+        The IP address of the balanced target.  # noqa: E501
 
         :param ip: The ip of this TargetGroupTarget.  # noqa: E501
         :type ip: str
@@ -109,7 +109,7 @@ class TargetGroupTarget(object):
     def port(self):
         """Gets the port of this TargetGroupTarget.  # noqa: E501
 
-        The port of the balanced target service; valid range is 1 to 65535.  # noqa: E501
+        The port of the balanced target service; the valid range is 1 to 65535.  # noqa: E501
 
         :return: The port of this TargetGroupTarget.  # noqa: E501
         :rtype: int
@@ -120,7 +120,7 @@ class TargetGroupTarget(object):
     def port(self, port):
         """Sets the port of this TargetGroupTarget.
 
-        The port of the balanced target service; valid range is 1 to 65535.  # noqa: E501
+        The port of the balanced target service; the valid range is 1 to 65535.  # noqa: E501
 
         :param port: The port of this TargetGroupTarget.  # noqa: E501
         :type port: int
@@ -134,7 +134,7 @@ class TargetGroupTarget(object):
     def weight(self):
         """Gets the weight of this TargetGroupTarget.  # noqa: E501
 
-        Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1; targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best use values in the middle of the range to leave room for later adjustments.  # noqa: E501
+        The traffic is distributed proportionally to target weight, which is the ratio of the total weight of all targets. A target with higher weight receives a larger share of traffic. The valid range is from 0 to 256; the default value is '1'. Targets with a weight of '0' do not participate in load balancing but still accept persistent connections. We recommend using values in the middle range to leave room for later adjustments.  # noqa: E501
 
         :return: The weight of this TargetGroupTarget.  # noqa: E501
         :rtype: int
@@ -145,7 +145,7 @@ class TargetGroupTarget(object):
     def weight(self, weight):
         """Sets the weight of this TargetGroupTarget.
 
-        Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1; targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best use values in the middle of the range to leave room for later adjustments.  # noqa: E501
+        The traffic is distributed proportionally to target weight, which is the ratio of the total weight of all targets. A target with higher weight receives a larger share of traffic. The valid range is from 0 to 256; the default value is '1'. Targets with a weight of '0' do not participate in load balancing but still accept persistent connections. We recommend using values in the middle range to leave room for later adjustments.  # noqa: E501
 
         :param weight: The weight of this TargetGroupTarget.  # noqa: E501
         :type weight: int

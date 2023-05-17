@@ -76,7 +76,7 @@ class FlowLogProperties(object):
     def name(self):
         """Gets the name of this FlowLogProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        The resource name.  # noqa: E501
 
         :return: The name of this FlowLogProperties.  # noqa: E501
         :rtype: str
@@ -87,7 +87,7 @@ class FlowLogProperties(object):
     def name(self, name):
         """Sets the name of this FlowLogProperties.
 
-        The name of the  resource.  # noqa: E501
+        The resource name.  # noqa: E501
 
         :param name: The name of this FlowLogProperties.  # noqa: E501
         :type name: str
@@ -163,7 +163,7 @@ class FlowLogProperties(object):
     def bucket(self):
         """Gets the bucket of this FlowLogProperties.  # noqa: E501
 
-        S3 bucket name of an existing IONOS Cloud S3 bucket.  # noqa: E501
+        The S3 bucket name of an existing IONOS Cloud S3 bucket.  # noqa: E501
 
         :return: The bucket of this FlowLogProperties.  # noqa: E501
         :rtype: str
@@ -174,7 +174,7 @@ class FlowLogProperties(object):
     def bucket(self, bucket):
         """Sets the bucket of this FlowLogProperties.
 
-        S3 bucket name of an existing IONOS Cloud S3 bucket.  # noqa: E501
+        The S3 bucket name of an existing IONOS Cloud S3 bucket.  # noqa: E501
 
         :param bucket: The bucket of this FlowLogProperties.  # noqa: E501
         :type bucket: str

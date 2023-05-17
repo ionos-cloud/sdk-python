@@ -18,9 +18,9 @@ class TargetGroupsApi(object):
         self.api_client = api_client
 
     def target_groups_delete(self, target_group_id, **kwargs):  # noqa: E501
-        """Remove target groups  # noqa: E501
+        """Delete a Target Group by ID  # noqa: E501
 
-        Remove the specified target group.  # noqa: E501
+        Deletes the target group specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -54,9 +54,9 @@ class TargetGroupsApi(object):
         return self.target_groups_delete_with_http_info(target_group_id, **kwargs)  # noqa: E501
 
     def target_groups_delete_with_http_info(self, target_group_id, **kwargs):  # noqa: E501
-        """Remove target groups  # noqa: E501
+        """Delete a Target Group by ID  # noqa: E501
 
-        Remove the specified target group.  # noqa: E501
+        Deletes the target group specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -180,9 +180,9 @@ class TargetGroupsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def targetgroups_find_by_target_group_id(self, target_group_id, **kwargs):  # noqa: E501
-        """Retrieve target groups  # noqa: E501
+        """Get a Target Group by ID  # noqa: E501
 
-        Retrieve the properties of the specified target group.  # noqa: E501
+        Retrieves the properties of the target group specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -216,9 +216,9 @@ class TargetGroupsApi(object):
         return self.targetgroups_find_by_target_group_id_with_http_info(target_group_id, **kwargs)  # noqa: E501
 
     def targetgroups_find_by_target_group_id_with_http_info(self, target_group_id, **kwargs):  # noqa: E501
-        """Retrieve target groups  # noqa: E501
+        """Get a Target Group by ID  # noqa: E501
 
-        Retrieve the properties of the specified target group.  # noqa: E501
+        Retrieves the properties of the target group specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -342,9 +342,9 @@ class TargetGroupsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def targetgroups_get(self, **kwargs):  # noqa: E501
-        """List target groups  # noqa: E501
+        """Get Target Groups  # noqa: E501
 
-        List all target groups.  # noqa: E501
+        Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -380,9 +380,9 @@ class TargetGroupsApi(object):
         return self.targetgroups_get_with_http_info(**kwargs)  # noqa: E501
 
     def targetgroups_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List target groups  # noqa: E501
+        """Get Target Groups  # noqa: E501
 
-        List all target groups.  # noqa: E501
+        Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -513,9 +513,9 @@ class TargetGroupsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def targetgroups_patch(self, target_group_id, target_group_properties, **kwargs):  # noqa: E501
-        """Partially modify target groups  # noqa: E501
+        """Partially Modify a Target Group by ID  # noqa: E501
 
-        Update the properties of the specified target group.  # noqa: E501
+        Updates the properties of the target group specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -551,9 +551,9 @@ class TargetGroupsApi(object):
         return self.targetgroups_patch_with_http_info(target_group_id, target_group_properties, **kwargs)  # noqa: E501
 
     def targetgroups_patch_with_http_info(self, target_group_id, target_group_properties, **kwargs):  # noqa: E501
-        """Partially modify target groups  # noqa: E501
+        """Partially Modify a Target Group by ID  # noqa: E501
 
-        Update the properties of the specified target group.  # noqa: E501
+        Updates the properties of the target group specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -686,9 +686,9 @@ class TargetGroupsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def targetgroups_post(self, target_group, **kwargs):  # noqa: E501
-        """Create target groups  # noqa: E501
+        """Create a Target Group  # noqa: E501
 
-        Create a target group.  # noqa: E501
+        Creates a target group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -722,9 +722,9 @@ class TargetGroupsApi(object):
         return self.targetgroups_post_with_http_info(target_group, **kwargs)  # noqa: E501
 
     def targetgroups_post_with_http_info(self, target_group, **kwargs):  # noqa: E501
-        """Create target groups  # noqa: E501
+        """Create a Target Group  # noqa: E501
 
-        Create a target group.  # noqa: E501
+        Creates a target group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -852,9 +852,9 @@ class TargetGroupsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def targetgroups_put(self, target_group_id, target_group, **kwargs):  # noqa: E501
-        """Modify target groups  # noqa: E501
+        """Modify a Target Group by ID  # noqa: E501
 
-        Modify the properties of the specified target group.  # noqa: E501
+        Modifies the properties of the target group specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -890,9 +890,9 @@ class TargetGroupsApi(object):
         return self.targetgroups_put_with_http_info(target_group_id, target_group, **kwargs)  # noqa: E501
 
     def targetgroups_put_with_http_info(self, target_group_id, target_group, **kwargs):  # noqa: E501
-        """Modify target groups  # noqa: E501
+        """Modify a Target Group by ID  # noqa: E501
 
-        Modify the properties of the specified target group.  # noqa: E501
+        Modifies the properties of the target group specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

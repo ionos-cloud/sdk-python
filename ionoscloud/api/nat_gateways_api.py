@@ -1092,9 +1092,9 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_flowlogs_post(self, datacenter_id, nat_gateway_id, nat_gateway_flow_log, **kwargs):  # noqa: E501
-        """Create NAT Gateway Flow Logs  # noqa: E501
+        """Create a NAT Gateway Flow Log  # noqa: E501
 
-        Add a new Flow Log for the specified NAT Gateway.  # noqa: E501
+        Adds a new Flow Log to the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1130,9 +1130,9 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_flowlogs_post_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_flow_log, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_flowlogs_post_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_flow_log, **kwargs):  # noqa: E501
-        """Create NAT Gateway Flow Logs  # noqa: E501
+        """Create a NAT Gateway Flow Log  # noqa: E501
 
-        Add a new Flow Log for the specified NAT Gateway.  # noqa: E501
+        Adds a new Flow Log to the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1811,9 +1811,9 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_post(self, datacenter_id, nat_gateway, **kwargs):  # noqa: E501
-        """Create NAT Gateways  # noqa: E501
+        """Create a NAT Gateway  # noqa: E501
 
-        Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with 'createInternetAccess' privileges.  # noqa: E501
+        Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with 'createInternetAccess' privileges.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1849,9 +1849,9 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_post_with_http_info(datacenter_id, nat_gateway, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_post_with_http_info(self, datacenter_id, nat_gateway, **kwargs):  # noqa: E501
-        """Create NAT Gateways  # noqa: E501
+        """Create a NAT Gateway  # noqa: E501
 
-        Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with 'createInternetAccess' privileges.  # noqa: E501
+        Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with 'createInternetAccess' privileges.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2717,9 +2717,9 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_patch(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, **kwargs):  # noqa: E501
-        """Partially modify NAT Gateway rules  # noqa: E501
+        """Partially Modify a NAT Gateway Rule by ID  # noqa: E501
 
-        Update the properties of the specified NAT Gateway rule.  # noqa: E501
+        Updates the properties of the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2759,9 +2759,9 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_patch_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_patch_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule_properties, **kwargs):  # noqa: E501
-        """Partially modify NAT Gateway rules  # noqa: E501
+        """Partially Modify a NAT Gateway Rule by ID  # noqa: E501
 
-        Update the properties of the specified NAT Gateway rule.  # noqa: E501
+        Updates the properties of the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2912,9 +2912,9 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_post(self, datacenter_id, nat_gateway_id, nat_gateway_rule, **kwargs):  # noqa: E501
-        """Create NAT Gateway rules  # noqa: E501
+        """Create a NAT Gateway Rule  # noqa: E501
 
-        Create a rule for the specified NAT Gateway.  # noqa: E501
+        Creates a rule for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2952,9 +2952,9 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_post_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_post_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_rule, **kwargs):  # noqa: E501
-        """Create NAT Gateway rules  # noqa: E501
+        """Create a NAT Gateway Rule  # noqa: E501
 
-        Create a rule for the specified NAT Gateway.  # noqa: E501
+        Creates a rule for the specified NAT Gateway.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3100,7 +3100,7 @@ class NATGatewaysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_natgateways_rules_put(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, **kwargs):  # noqa: E501
-        """Modify NAT Gateway rules  # noqa: E501
+        """Modify a NAT Gateway Rule by ID  # noqa: E501
 
         Modify the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -3142,7 +3142,7 @@ class NATGatewaysApi(object):
         return self.datacenters_natgateways_rules_put_with_http_info(datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, **kwargs)  # noqa: E501
 
     def datacenters_natgateways_rules_put_with_http_info(self, datacenter_id, nat_gateway_id, nat_gateway_rule_id, nat_gateway_rule, **kwargs):  # noqa: E501
-        """Modify NAT Gateway rules  # noqa: E501
+        """Modify a NAT Gateway Rule by ID  # noqa: E501
 
         Modify the specified NAT Gateway rule.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

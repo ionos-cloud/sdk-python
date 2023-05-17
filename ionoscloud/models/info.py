@@ -73,7 +73,7 @@ class Info(object):
     def href(self):
         """Gets the href of this Info.  # noqa: E501
 
-        API entry point  # noqa: E501
+        The API entry point.  # noqa: E501
 
         :return: The href of this Info.  # noqa: E501
         :rtype: str
@@ -84,7 +84,7 @@ class Info(object):
     def href(self, href):
         """Sets the href of this Info.
 
-        API entry point  # noqa: E501
+        The API entry point.  # noqa: E501
 
         :param href: The href of this Info.  # noqa: E501
         :type href: str
@@ -96,7 +96,7 @@ class Info(object):
     def name(self):
         """Gets the name of this Info.  # noqa: E501
 
-        Name of the API  # noqa: E501
+        The API name.  # noqa: E501
 
         :return: The name of this Info.  # noqa: E501
         :rtype: str
@@ -107,7 +107,7 @@ class Info(object):
     def name(self, name):
         """Sets the name of this Info.
 
-        Name of the API  # noqa: E501
+        The API name.  # noqa: E501
 
         :param name: The name of this Info.  # noqa: E501
         :type name: str
@@ -119,7 +119,7 @@ class Info(object):
     def version(self):
         """Gets the version of this Info.  # noqa: E501
 
-        Version of the API  # noqa: E501
+        The API version.  # noqa: E501
 
         :return: The version of this Info.  # noqa: E501
         :rtype: str
@@ -130,7 +130,7 @@ class Info(object):
     def version(self, version):
         """Sets the version of this Info.
 
-        Version of the API  # noqa: E501
+        The API version.  # noqa: E501
 
         :param version: The version of this Info.  # noqa: E501
         :type version: str

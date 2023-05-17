@@ -561,7 +561,7 @@ class LoadBalancersApi(object):
     def datacenters_loadbalancers_balancednics_post(self, datacenter_id, loadbalancer_id, nic, **kwargs):  # noqa: E501
         """Attach balanced NICs  # noqa: E501
 
-        Attach an existing NIC to the specified Load Balancer.  # noqa: E501
+        Attachs an existing NIC to the specified Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -601,7 +601,7 @@ class LoadBalancersApi(object):
     def datacenters_loadbalancers_balancednics_post_with_http_info(self, datacenter_id, loadbalancer_id, nic, **kwargs):  # noqa: E501
         """Attach balanced NICs  # noqa: E501
 
-        Attach an existing NIC to the specified Load Balancer.  # noqa: E501
+        Attachs an existing NIC to the specified Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1463,9 +1463,9 @@ class LoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_loadbalancers_post(self, datacenter_id, loadbalancer, **kwargs):  # noqa: E501
-        """Create Load Balancers  # noqa: E501
+        """Create a Load Balancer  # noqa: E501
 
-        Create a Load Balancer within the data center.  # noqa: E501
+        Creates a Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1501,9 +1501,9 @@ class LoadBalancersApi(object):
         return self.datacenters_loadbalancers_post_with_http_info(datacenter_id, loadbalancer, **kwargs)  # noqa: E501
 
     def datacenters_loadbalancers_post_with_http_info(self, datacenter_id, loadbalancer, **kwargs):  # noqa: E501
-        """Create Load Balancers  # noqa: E501
+        """Create a Load Balancer  # noqa: E501
 
-        Create a Load Balancer within the data center.  # noqa: E501
+        Creates a Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1640,9 +1640,9 @@ class LoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_loadbalancers_put(self, datacenter_id, loadbalancer_id, loadbalancer, **kwargs):  # noqa: E501
-        """Modify Load Balancers  # noqa: E501
+        """Modify a Load Balancer by ID  # noqa: E501
 
-        Modify the properties of the specified Load Balancer within the data center.  # noqa: E501
+        Modifies the properties of the specified Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1680,9 +1680,9 @@ class LoadBalancersApi(object):
         return self.datacenters_loadbalancers_put_with_http_info(datacenter_id, loadbalancer_id, loadbalancer, **kwargs)  # noqa: E501
 
     def datacenters_loadbalancers_put_with_http_info(self, datacenter_id, loadbalancer_id, loadbalancer, **kwargs):  # noqa: E501
-        """Modify Load Balancers  # noqa: E501
+        """Modify a Load Balancer by ID  # noqa: E501
 
-        Modify the properties of the specified Load Balancer within the data center.  # noqa: E501
+        Modifies the properties of the specified Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

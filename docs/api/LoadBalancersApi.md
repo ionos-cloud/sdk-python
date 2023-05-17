@@ -12,8 +12,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacenters_loadbalancers_find_by_id**](LoadBalancersApi.md#datacenters_loadbalancers_find_by_id) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve Load Balancers |
 | [**datacenters_loadbalancers_get**](LoadBalancersApi.md#datacenters_loadbalancers_get) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers |
 | [**datacenters_loadbalancers_patch**](LoadBalancersApi.md#datacenters_loadbalancers_patch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify Load Balancers |
-| [**datacenters_loadbalancers_post**](LoadBalancersApi.md#datacenters_loadbalancers_post) | **POST** /datacenters/{datacenterId}/loadbalancers | Create Load Balancers |
-| [**datacenters_loadbalancers_put**](LoadBalancersApi.md#datacenters_loadbalancers_put) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify Load Balancers |
+| [**datacenters_loadbalancers_post**](LoadBalancersApi.md#datacenters_loadbalancers_post) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer |
+| [**datacenters_loadbalancers_put**](LoadBalancersApi.md#datacenters_loadbalancers_put) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer by ID |
 
 
 # **datacenters_loadbalancers_balancednics_delete**
@@ -204,7 +204,7 @@ Basic Authentication, Token Authentication
 
 Attach balanced NICs
 
-Attach an existing NIC to the specified Load Balancer.
+Attachs an existing NIC to the specified Load Balancer.
 
 ### Example
 
@@ -243,7 +243,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **loadbalancer_id** | **str**| The unique ID of the Load Balancer. |  |
-| **nic** | [**Nic**](Nic.md)| The NIC to be attached. |  |
+| **nic** | [**Nic**](../models/Nic.md)| The NIC to be attached. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -484,7 +484,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **loadbalancer_id** | **str**| The unique ID of the Load Balancer. |  |
-| **loadbalancer** | [**LoadbalancerProperties**](LoadbalancerProperties.md)| The properties of the Load Balancer to be updated. |  |
+| **loadbalancer** | [**LoadbalancerProperties**](../models/LoadbalancerProperties.md)| The properties of the Load Balancer to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -505,9 +505,9 @@ Basic Authentication, Token Authentication
 # **datacenters_loadbalancers_post**
 > Loadbalancer datacenters_loadbalancers_post(datacenter_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Create Load Balancers
+Create a Load Balancer
 
-Create a Load Balancer within the data center.
+Creates a Load Balancer within the data center.
 
 ### Example
 
@@ -532,7 +532,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     datacenter_id = 'datacenter_id_example' # str | The unique ID of the data center.
     loadbalancer = ionoscloud.Loadbalancer() # Loadbalancer | The Load Balancer to create.
     try:
-        # Create Load Balancers
+        # Create a Load Balancer
         api_response = api_instance.datacenters_loadbalancers_post(datacenter_id, loadbalancer)
         print(api_response)
     except ApiException as e:
@@ -544,7 +544,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
-| **loadbalancer** | [**Loadbalancer**](Loadbalancer.md)| The Load Balancer to create. |  |
+| **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md)| The Load Balancer to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -565,9 +565,9 @@ Basic Authentication, Token Authentication
 # **datacenters_loadbalancers_put**
 > Loadbalancer datacenters_loadbalancers_put(datacenter_id, loadbalancer_id, loadbalancer, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify Load Balancers
+Modify a Load Balancer by ID
 
-Modify the properties of the specified Load Balancer within the data center.
+Modifies the properties of the specified Load Balancer within the data center.
 
 ### Example
 
@@ -593,7 +593,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     loadbalancer_id = 'loadbalancer_id_example' # str | The unique ID of the Load Balancer.
     loadbalancer = ionoscloud.Loadbalancer() # Loadbalancer | The modified Load Balancer.
     try:
-        # Modify Load Balancers
+        # Modify a Load Balancer by ID
         api_response = api_instance.datacenters_loadbalancers_put(datacenter_id, loadbalancer_id, loadbalancer)
         print(api_response)
     except ApiException as e:
@@ -606,7 +606,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **loadbalancer_id** | **str**| The unique ID of the Load Balancer. |  |
-| **loadbalancer** | [**Loadbalancer**](Loadbalancer.md)| The modified Load Balancer. |  |
+| **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md)| The modified Load Balancer. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

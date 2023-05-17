@@ -18,9 +18,9 @@ class Api(object):
         self.api_client = api_client
 
     def api_info_get(self, **kwargs):  # noqa: E501
-        """Display API information  # noqa: E501
+        """Get API information  # noqa: E501
 
-        Display API information  # noqa: E501
+        Retrieves the API information such as API version.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -52,9 +52,9 @@ class Api(object):
         return self.api_info_get_with_http_info(**kwargs)  # noqa: E501
 
     def api_info_get_with_http_info(self, **kwargs):  # noqa: E501
-        """Display API information  # noqa: E501
+        """Get API information  # noqa: E501
 
-        Display API information  # noqa: E501
+        Retrieves the API information such as API version.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

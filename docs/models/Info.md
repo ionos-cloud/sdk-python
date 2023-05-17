@@ -3,8 +3,8 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **href** | **str** | API entry point | [optional] [readonly]  |
-| **name** | **str** | Name of the API | [optional] [readonly]  |
-| **version** | **str** | Version of the API | [optional] [readonly]  |
+| **href** | **str** | The API entry point. | [optional] [readonly]  |
+| **name** | **str** | The API name. | [optional] [readonly]  |
+| **version** | **str** | The API version. | [optional] [readonly]  |
 
 

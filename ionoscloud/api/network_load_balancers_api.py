@@ -1100,9 +1100,9 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_flowlogs_post(self, datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Create NLB Flow Logs  # noqa: E501
+        """Create a NLB Flow Log  # noqa: E501
 
-        Add a new Flow Log for the Network Load Balancer.  # noqa: E501
+        Adds a new Flow Log for the Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1140,9 +1140,9 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_flowlogs_post_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_flowlogs_post_with_http_info(self, datacenter_id, network_load_balancer_id, network_load_balancer_flow_log, **kwargs):  # noqa: E501
-        """Create NLB Flow Logs  # noqa: E501
+        """Create a NLB Flow Log  # noqa: E501
 
-        Add a new Flow Log for the Network Load Balancer.  # noqa: E501
+        Adds a new Flow Log for the Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2223,9 +2223,9 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_forwardingrules_post(self, datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Create NLB forwarding rules  # noqa: E501
+        """Create a NLB Forwarding Rule  # noqa: E501
 
-        Create a forwarding rule for the specified Network Load Balancer.  # noqa: E501
+        Creates a forwarding rule for the specified Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2263,9 +2263,9 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_forwardingrules_post_with_http_info(datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_forwardingrules_post_with_http_info(self, datacenter_id, network_load_balancer_id, network_load_balancer_forwarding_rule, **kwargs):  # noqa: E501
-        """Create NLB forwarding rules  # noqa: E501
+        """Create a NLB Forwarding Rule  # noqa: E501
 
-        Create a forwarding rule for the specified Network Load Balancer.  # noqa: E501
+        Creates a forwarding rule for the specified Network Load Balancer.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2976,9 +2976,9 @@ class NetworkLoadBalancersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_networkloadbalancers_post(self, datacenter_id, network_load_balancer, **kwargs):  # noqa: E501
-        """Create Network Load Balancers  # noqa: E501
+        """Create a Network Load Balancer  # noqa: E501
 
-        Create a Network Load Balancer within the data center.  # noqa: E501
+        Creates a Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3014,9 +3014,9 @@ class NetworkLoadBalancersApi(object):
         return self.datacenters_networkloadbalancers_post_with_http_info(datacenter_id, network_load_balancer, **kwargs)  # noqa: E501
 
     def datacenters_networkloadbalancers_post_with_http_info(self, datacenter_id, network_load_balancer, **kwargs):  # noqa: E501
-        """Create Network Load Balancers  # noqa: E501
+        """Create a Network Load Balancer  # noqa: E501
 
-        Create a Network Load Balancer within the data center.  # noqa: E501
+        Creates a Network Load Balancer within the data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

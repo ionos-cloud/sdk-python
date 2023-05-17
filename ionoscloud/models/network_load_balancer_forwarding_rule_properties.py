@@ -182,7 +182,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def listener_ip(self):
         """Gets the listener_ip of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Listening (inbound) IP  # noqa: E501
+        Listening (inbound) IP.  # noqa: E501
 
         :return: The listener_ip of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :rtype: str
@@ -193,7 +193,7 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     def listener_ip(self, listener_ip):
         """Sets the listener_ip of this NetworkLoadBalancerForwardingRuleProperties.
 
-        Listening (inbound) IP  # noqa: E501
+        Listening (inbound) IP.  # noqa: E501
 
         :param listener_ip: The listener_ip of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
         :type listener_ip: str

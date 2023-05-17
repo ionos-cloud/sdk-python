@@ -184,7 +184,7 @@ class ResourceLimits(object):
     def cores_per_server(self):
         """Gets the cores_per_server of this ResourceLimits.  # noqa: E501
 
-        The maximum number of cores per server.  # noqa: E501
+        The maximum number of CPU cores per server.  # noqa: E501
 
         :return: The cores_per_server of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -195,7 +195,7 @@ class ResourceLimits(object):
     def cores_per_server(self, cores_per_server):
         """Sets the cores_per_server of this ResourceLimits.
 
-        The maximum number of cores per server.  # noqa: E501
+        The maximum number of CPU cores per server.  # noqa: E501
 
         :param cores_per_server: The cores_per_server of this ResourceLimits.  # noqa: E501
         :type cores_per_server: int
@@ -209,7 +209,7 @@ class ResourceLimits(object):
     def cores_per_contract(self):
         """Gets the cores_per_contract of this ResourceLimits.  # noqa: E501
 
-        The maximum number of cores per contract.  # noqa: E501
+        The maximum number of CPU cores per contract.  # noqa: E501
 
         :return: The cores_per_contract of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -220,7 +220,7 @@ class ResourceLimits(object):
     def cores_per_contract(self, cores_per_contract):
         """Sets the cores_per_contract of this ResourceLimits.
 
-        The maximum number of cores per contract.  # noqa: E501
+        The maximum number of CPU cores per contract.  # noqa: E501
 
         :param cores_per_contract: The cores_per_contract of this ResourceLimits.  # noqa: E501
         :type cores_per_contract: int
@@ -234,7 +234,7 @@ class ResourceLimits(object):
     def cores_provisioned(self):
         """Gets the cores_provisioned of this ResourceLimits.  # noqa: E501
 
-        The number of cores provisioned.  # noqa: E501
+        The number of CPU cores provisioned.  # noqa: E501
 
         :return: The cores_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -245,7 +245,7 @@ class ResourceLimits(object):
     def cores_provisioned(self, cores_provisioned):
         """Sets the cores_provisioned of this ResourceLimits.
 
-        The number of cores provisioned.  # noqa: E501
+        The number of CPU cores provisioned.  # noqa: E501
 
         :param cores_provisioned: The cores_provisioned of this ResourceLimits.  # noqa: E501
         :type cores_provisioned: int
@@ -259,7 +259,7 @@ class ResourceLimits(object):
     def ram_per_server(self):
         """Gets the ram_per_server of this ResourceLimits.  # noqa: E501
 
-        The maximum RAM per server.  # noqa: E501
+        The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.  # noqa: E501
 
         :return: The ram_per_server of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -270,7 +270,7 @@ class ResourceLimits(object):
     def ram_per_server(self, ram_per_server):
         """Sets the ram_per_server of this ResourceLimits.
 
-        The maximum RAM per server.  # noqa: E501
+        The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.  # noqa: E501
 
         :param ram_per_server: The ram_per_server of this ResourceLimits.  # noqa: E501
         :type ram_per_server: int
@@ -284,7 +284,7 @@ class ResourceLimits(object):
     def ram_per_contract(self):
         """Gets the ram_per_contract of this ResourceLimits.  # noqa: E501
 
-        The maximum RAM per contract.  # noqa: E501
+        The maximum amount of RAM (in MB) that can be provisioned under this contract.  # noqa: E501
 
         :return: The ram_per_contract of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -295,7 +295,7 @@ class ResourceLimits(object):
     def ram_per_contract(self, ram_per_contract):
         """Sets the ram_per_contract of this ResourceLimits.
 
-        The maximum RAM per contract.  # noqa: E501
+        The maximum amount of RAM (in MB) that can be provisioned under this contract.  # noqa: E501
 
         :param ram_per_contract: The ram_per_contract of this ResourceLimits.  # noqa: E501
         :type ram_per_contract: int
@@ -309,7 +309,7 @@ class ResourceLimits(object):
     def ram_provisioned(self):
         """Gets the ram_provisioned of this ResourceLimits.  # noqa: E501
 
-        RAM provisioned.  # noqa: E501
+        The amount of RAM (in MB) provisioned under this contract.  # noqa: E501
 
         :return: The ram_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -320,7 +320,7 @@ class ResourceLimits(object):
     def ram_provisioned(self, ram_provisioned):
         """Sets the ram_provisioned of this ResourceLimits.
 
-        RAM provisioned.  # noqa: E501
+        The amount of RAM (in MB) provisioned under this contract.  # noqa: E501
 
         :param ram_provisioned: The ram_provisioned of this ResourceLimits.  # noqa: E501
         :type ram_provisioned: int
@@ -334,7 +334,7 @@ class ResourceLimits(object):
     def hdd_limit_per_volume(self):
         """Gets the hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
 
-        HDD limit per volume.  # noqa: E501
+        The maximum size (in MB) of an idividual hard disk volume.  # noqa: E501
 
         :return: The hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -345,7 +345,7 @@ class ResourceLimits(object):
     def hdd_limit_per_volume(self, hdd_limit_per_volume):
         """Sets the hdd_limit_per_volume of this ResourceLimits.
 
-        HDD limit per volume.  # noqa: E501
+        The maximum size (in MB) of an idividual hard disk volume.  # noqa: E501
 
         :param hdd_limit_per_volume: The hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
         :type hdd_limit_per_volume: int
@@ -359,7 +359,7 @@ class ResourceLimits(object):
     def hdd_limit_per_contract(self):
         """Gets the hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
 
-        HDD limit per contract.  # noqa: E501
+        The maximum amount of disk space (in MB) that can be provided under this contract.  # noqa: E501
 
         :return: The hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -370,7 +370,7 @@ class ResourceLimits(object):
     def hdd_limit_per_contract(self, hdd_limit_per_contract):
         """Sets the hdd_limit_per_contract of this ResourceLimits.
 
-        HDD limit per contract.  # noqa: E501
+        The maximum amount of disk space (in MB) that can be provided under this contract.  # noqa: E501
 
         :param hdd_limit_per_contract: The hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
         :type hdd_limit_per_contract: int
@@ -384,7 +384,7 @@ class ResourceLimits(object):
     def hdd_volume_provisioned(self):
         """Gets the hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
 
-        HDD volume provisioned.  # noqa: E501
+        The amount of hard disk space (in MB) that is currently provisioned.  # noqa: E501
 
         :return: The hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -395,7 +395,7 @@ class ResourceLimits(object):
     def hdd_volume_provisioned(self, hdd_volume_provisioned):
         """Sets the hdd_volume_provisioned of this ResourceLimits.
 
-        HDD volume provisioned.  # noqa: E501
+        The amount of hard disk space (in MB) that is currently provisioned.  # noqa: E501
 
         :param hdd_volume_provisioned: The hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
         :type hdd_volume_provisioned: int
@@ -409,7 +409,7 @@ class ResourceLimits(object):
     def ssd_limit_per_volume(self):
         """Gets the ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
 
-        SSD limit per volume.  # noqa: E501
+        The maximum size (in MB) of an individual solid state disk volume.  # noqa: E501
 
         :return: The ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -420,7 +420,7 @@ class ResourceLimits(object):
     def ssd_limit_per_volume(self, ssd_limit_per_volume):
         """Sets the ssd_limit_per_volume of this ResourceLimits.
 
-        SSD limit per volume.  # noqa: E501
+        The maximum size (in MB) of an individual solid state disk volume.  # noqa: E501
 
         :param ssd_limit_per_volume: The ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
         :type ssd_limit_per_volume: int
@@ -434,7 +434,7 @@ class ResourceLimits(object):
     def ssd_limit_per_contract(self):
         """Gets the ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
 
-        SSD limit per contract.  # noqa: E501
+        The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.  # noqa: E501
 
         :return: The ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -445,7 +445,7 @@ class ResourceLimits(object):
     def ssd_limit_per_contract(self, ssd_limit_per_contract):
         """Sets the ssd_limit_per_contract of this ResourceLimits.
 
-        SSD limit per contract.  # noqa: E501
+        The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.  # noqa: E501
 
         :param ssd_limit_per_contract: The ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
         :type ssd_limit_per_contract: int
@@ -459,7 +459,7 @@ class ResourceLimits(object):
     def ssd_volume_provisioned(self):
         """Gets the ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
 
-        SSD volume provisioned.  # noqa: E501
+        The amount of solid state disk space (in MB) that is currently provisioned.  # noqa: E501
 
         :return: The ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -470,7 +470,7 @@ class ResourceLimits(object):
     def ssd_volume_provisioned(self, ssd_volume_provisioned):
         """Sets the ssd_volume_provisioned of this ResourceLimits.
 
-        SSD volume provisioned.  # noqa: E501
+        The amount of solid state disk space (in MB) that is currently provisioned.  # noqa: E501
 
         :param ssd_volume_provisioned: The ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
         :type ssd_volume_provisioned: int
@@ -484,7 +484,7 @@ class ResourceLimits(object):
     def das_volume_provisioned(self):
         """Gets the das_volume_provisioned of this ResourceLimits.  # noqa: E501
 
-        DAS (Direct Attached Storage) volume provisioned.  # noqa: E501
+        The amount of DAS disk space (in MB) in a Cube server that is currently provisioned.  # noqa: E501
 
         :return: The das_volume_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -495,7 +495,7 @@ class ResourceLimits(object):
     def das_volume_provisioned(self, das_volume_provisioned):
         """Sets the das_volume_provisioned of this ResourceLimits.
 
-        DAS (Direct Attached Storage) volume provisioned.  # noqa: E501
+        The amount of DAS disk space (in MB) in a Cube server that is currently provisioned.  # noqa: E501
 
         :param das_volume_provisioned: The das_volume_provisioned of this ResourceLimits.  # noqa: E501
         :type das_volume_provisioned: int
@@ -509,7 +509,7 @@ class ResourceLimits(object):
     def reservable_ips(self):
         """Gets the reservable_ips of this ResourceLimits.  # noqa: E501
 
-        Total reservable IP limit for the customer.  # noqa: E501
+        The maximum number of static public IP addresses that can be reserved by this customer across contracts.  # noqa: E501
 
         :return: The reservable_ips of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -520,7 +520,7 @@ class ResourceLimits(object):
     def reservable_ips(self, reservable_ips):
         """Sets the reservable_ips of this ResourceLimits.
 
-        Total reservable IP limit for the customer.  # noqa: E501
+        The maximum number of static public IP addresses that can be reserved by this customer across contracts.  # noqa: E501
 
         :param reservable_ips: The reservable_ips of this ResourceLimits.  # noqa: E501
         :type reservable_ips: int
@@ -534,7 +534,7 @@ class ResourceLimits(object):
     def reserved_ips_on_contract(self):
         """Gets the reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
 
-        Reserved ips for the contract.  # noqa: E501
+        The maximum number of static public IP addresses that can be reserved for this contract.  # noqa: E501
 
         :return: The reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -545,7 +545,7 @@ class ResourceLimits(object):
     def reserved_ips_on_contract(self, reserved_ips_on_contract):
         """Sets the reserved_ips_on_contract of this ResourceLimits.
 
-        Reserved ips for the contract.  # noqa: E501
+        The maximum number of static public IP addresses that can be reserved for this contract.  # noqa: E501
 
         :param reserved_ips_on_contract: The reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
         :type reserved_ips_on_contract: int
@@ -559,7 +559,7 @@ class ResourceLimits(object):
     def reserved_ips_in_use(self):
         """Gets the reserved_ips_in_use of this ResourceLimits.  # noqa: E501
 
-        Reserved ips in use.  # noqa: E501
+        The number of static public IP addresses in use.  # noqa: E501
 
         :return: The reserved_ips_in_use of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -570,7 +570,7 @@ class ResourceLimits(object):
     def reserved_ips_in_use(self, reserved_ips_in_use):
         """Sets the reserved_ips_in_use of this ResourceLimits.
 
-        Reserved ips in use.  # noqa: E501
+        The number of static public IP addresses in use.  # noqa: E501
 
         :param reserved_ips_in_use: The reserved_ips_in_use of this ResourceLimits.  # noqa: E501
         :type reserved_ips_in_use: int
@@ -584,7 +584,7 @@ class ResourceLimits(object):
     def k8s_cluster_limit_total(self):
         """Gets the k8s_cluster_limit_total of this ResourceLimits.  # noqa: E501
 
-        K8s clusters total limit.  # noqa: E501
+        The maximum number of Kubernetes clusters that can be created under this contract.  # noqa: E501
 
         :return: The k8s_cluster_limit_total of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -595,7 +595,7 @@ class ResourceLimits(object):
     def k8s_cluster_limit_total(self, k8s_cluster_limit_total):
         """Sets the k8s_cluster_limit_total of this ResourceLimits.
 
-        K8s clusters total limit.  # noqa: E501
+        The maximum number of Kubernetes clusters that can be created under this contract.  # noqa: E501
 
         :param k8s_cluster_limit_total: The k8s_cluster_limit_total of this ResourceLimits.  # noqa: E501
         :type k8s_cluster_limit_total: int
@@ -609,7 +609,7 @@ class ResourceLimits(object):
     def k8s_clusters_provisioned(self):
         """Gets the k8s_clusters_provisioned of this ResourceLimits.  # noqa: E501
 
-        K8s clusters provisioned.  # noqa: E501
+        The amount of Kubernetes clusters that is currently provisioned.  # noqa: E501
 
         :return: The k8s_clusters_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -620,7 +620,7 @@ class ResourceLimits(object):
     def k8s_clusters_provisioned(self, k8s_clusters_provisioned):
         """Sets the k8s_clusters_provisioned of this ResourceLimits.
 
-        K8s clusters provisioned.  # noqa: E501
+        The amount of Kubernetes clusters that is currently provisioned.  # noqa: E501
 
         :param k8s_clusters_provisioned: The k8s_clusters_provisioned of this ResourceLimits.  # noqa: E501
         :type k8s_clusters_provisioned: int
@@ -634,7 +634,7 @@ class ResourceLimits(object):
     def nlb_limit_total(self):
         """Gets the nlb_limit_total of this ResourceLimits.  # noqa: E501
 
-        NLB total limit.  # noqa: E501
+        The NLB total limit.  # noqa: E501
 
         :return: The nlb_limit_total of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -645,7 +645,7 @@ class ResourceLimits(object):
     def nlb_limit_total(self, nlb_limit_total):
         """Sets the nlb_limit_total of this ResourceLimits.
 
-        NLB total limit.  # noqa: E501
+        The NLB total limit.  # noqa: E501
 
         :param nlb_limit_total: The nlb_limit_total of this ResourceLimits.  # noqa: E501
         :type nlb_limit_total: int
@@ -659,7 +659,7 @@ class ResourceLimits(object):
     def nlb_provisioned(self):
         """Gets the nlb_provisioned of this ResourceLimits.  # noqa: E501
 
-        NLBs provisioned.  # noqa: E501
+        The NLBs provisioned.  # noqa: E501
 
         :return: The nlb_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -670,7 +670,7 @@ class ResourceLimits(object):
     def nlb_provisioned(self, nlb_provisioned):
         """Sets the nlb_provisioned of this ResourceLimits.
 
-        NLBs provisioned.  # noqa: E501
+        The NLBs provisioned.  # noqa: E501
 
         :param nlb_provisioned: The nlb_provisioned of this ResourceLimits.  # noqa: E501
         :type nlb_provisioned: int
@@ -684,7 +684,7 @@ class ResourceLimits(object):
     def nat_gateway_limit_total(self):
         """Gets the nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
 
-        NAT Gateway total limit.  # noqa: E501
+        The NAT Gateway total limit.  # noqa: E501
 
         :return: The nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -695,7 +695,7 @@ class ResourceLimits(object):
     def nat_gateway_limit_total(self, nat_gateway_limit_total):
         """Sets the nat_gateway_limit_total of this ResourceLimits.
 
-        NAT Gateway total limit.  # noqa: E501
+        The NAT Gateway total limit.  # noqa: E501
 
         :param nat_gateway_limit_total: The nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
         :type nat_gateway_limit_total: int
@@ -709,7 +709,7 @@ class ResourceLimits(object):
     def nat_gateway_provisioned(self):
         """Gets the nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
 
-        NAT Gateways provisioned.  # noqa: E501
+        The NAT Gateways provisioned.  # noqa: E501
 
         :return: The nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
@@ -720,7 +720,7 @@ class ResourceLimits(object):
     def nat_gateway_provisioned(self, nat_gateway_provisioned):
         """Sets the nat_gateway_provisioned of this ResourceLimits.
 
-        NAT Gateways provisioned.  # noqa: E501
+        The NAT Gateways provisioned.  # noqa: E501
 
         :param nat_gateway_provisioned: The nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
         :type nat_gateway_provisioned: int

@@ -80,7 +80,7 @@ class LocationProperties(object):
     def name(self):
         """Gets the name of this LocationProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        The location name.  # noqa: E501
 
         :return: The name of this LocationProperties.  # noqa: E501
         :rtype: str
@@ -91,7 +91,7 @@ class LocationProperties(object):
     def name(self, name):
         """Sets the name of this LocationProperties.
 
-        The name of the  resource.  # noqa: E501
+        The location name.  # noqa: E501
 
         :param name: The name of this LocationProperties.  # noqa: E501
         :type name: str
@@ -103,7 +103,7 @@ class LocationProperties(object):
     def features(self):
         """Gets the features of this LocationProperties.  # noqa: E501
 
-        List of features supported by the location  # noqa: E501
+        A list of available features in the location.  # noqa: E501
 
         :return: The features of this LocationProperties.  # noqa: E501
         :rtype: list[str]
@@ -114,7 +114,7 @@ class LocationProperties(object):
     def features(self, features):
         """Sets the features of this LocationProperties.
 
-        List of features supported by the location  # noqa: E501
+        A list of available features in the location.  # noqa: E501
 
         :param features: The features of this LocationProperties.  # noqa: E501
         :type features: list[str]
@@ -126,7 +126,7 @@ class LocationProperties(object):
     def image_aliases(self):
         """Gets the image_aliases of this LocationProperties.  # noqa: E501
 
-        List of image aliases available for the location  # noqa: E501
+        A list of image aliases available in the location.  # noqa: E501
 
         :return: The image_aliases of this LocationProperties.  # noqa: E501
         :rtype: list[str]
@@ -137,7 +137,7 @@ class LocationProperties(object):
     def image_aliases(self, image_aliases):
         """Sets the image_aliases of this LocationProperties.
 
-        List of image aliases available for the location  # noqa: E501
+        A list of image aliases available in the location.  # noqa: E501
 
         :param image_aliases: The image_aliases of this LocationProperties.  # noqa: E501
         :type image_aliases: list[str]
@@ -149,7 +149,7 @@ class LocationProperties(object):
     def cpu_architecture(self):
         """Gets the cpu_architecture of this LocationProperties.  # noqa: E501
 
-        Array of features and CPU families available in a location  # noqa: E501
+        A list of available CPU types and related resources available in the location.  # noqa: E501
 
         :return: The cpu_architecture of this LocationProperties.  # noqa: E501
         :rtype: list[CpuArchitectureProperties]
@@ -160,7 +160,7 @@ class LocationProperties(object):
     def cpu_architecture(self, cpu_architecture):
         """Sets the cpu_architecture of this LocationProperties.
 
-        Array of features and CPU families available in a location  # noqa: E501
+        A list of available CPU types and related resources available in the location.  # noqa: E501
 
         :param cpu_architecture: The cpu_architecture of this LocationProperties.  # noqa: E501
         :type cpu_architecture: list[CpuArchitectureProperties]

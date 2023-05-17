@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacenters_servers_nics_find_by_id**](NetworkInterfacesApi.md#datacenters_servers_nics_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve NICs |
 | [**datacenters_servers_nics_get**](NetworkInterfacesApi.md#datacenters_servers_nics_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List NICs |
 | [**datacenters_servers_nics_patch**](NetworkInterfacesApi.md#datacenters_servers_nics_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify NICs |
-| [**datacenters_servers_nics_post**](NetworkInterfacesApi.md#datacenters_servers_nics_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create NICs |
+| [**datacenters_servers_nics_post**](NetworkInterfacesApi.md#datacenters_servers_nics_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a NIC |
 | [**datacenters_servers_nics_put**](NetworkInterfacesApi.md#datacenters_servers_nics_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify NICs |
 
 
@@ -243,7 +243,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **server_id** | **str**| The unique ID of the server. |  |
 | **nic_id** | **str**| The unique ID of the NIC. |  |
-| **nic** | [**NicProperties**](NicProperties.md)| The properties of the NIC to be updated. |  |
+| **nic** | [**NicProperties**](../models/NicProperties.md)| The properties of the NIC to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -264,9 +264,9 @@ Basic Authentication, Token Authentication
 # **datacenters_servers_nics_post**
 > Nic datacenters_servers_nics_post(datacenter_id, server_id, nic, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Create NICs
+Create a NIC
 
-Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
 
 ### Example
 
@@ -292,7 +292,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     server_id = 'server_id_example' # str | The unique ID of the server.
     nic = ionoscloud.Nic() # Nic | The NIC to create.
     try:
-        # Create NICs
+        # Create a NIC
         api_response = api_instance.datacenters_servers_nics_post(datacenter_id, server_id, nic)
         print(api_response)
     except ApiException as e:
@@ -305,7 +305,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **server_id** | **str**| The unique ID of the server. |  |
-| **nic** | [**Nic**](Nic.md)| The NIC to create. |  |
+| **nic** | [**Nic**](../models/Nic.md)| The NIC to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -369,7 +369,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **server_id** | **str**| The unique ID of the server. |  |
 | **nic_id** | **str**| The unique ID of the NIC. |  |
-| **nic** | [**NicPut**](NicPut.md)| The modified NIC |  |
+| **nic** | [**NicPut**](../models/NicPut.md)| The modified NIC |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

@@ -93,7 +93,7 @@ class KubernetesClusterForPost(object):
     def id(self):
         """Gets the id of this KubernetesClusterForPost.  # noqa: E501
 
-        The resource's unique identifier.  # noqa: E501
+        The resource unique identifier.  # noqa: E501
 
         :return: The id of this KubernetesClusterForPost.  # noqa: E501
         :rtype: str
@@ -104,7 +104,7 @@ class KubernetesClusterForPost(object):
     def id(self, id):
         """Sets the id of this KubernetesClusterForPost.
 
-        The resource's unique identifier.  # noqa: E501
+        The resource unique identifier.  # noqa: E501
 
         :param id: The id of this KubernetesClusterForPost.  # noqa: E501
         :type id: str
@@ -116,7 +116,7 @@ class KubernetesClusterForPost(object):
     def type(self):
         """Gets the type of this KubernetesClusterForPost.  # noqa: E501
 
-        The type of object.  # noqa: E501
+        The object type.  # noqa: E501
 
         :return: The type of this KubernetesClusterForPost.  # noqa: E501
         :rtype: str
@@ -127,7 +127,7 @@ class KubernetesClusterForPost(object):
     def type(self, type):
         """Sets the type of this KubernetesClusterForPost.
 
-        The type of object.  # noqa: E501
+        The object type.  # noqa: E501
 
         :param type: The type of this KubernetesClusterForPost.  # noqa: E501
         :type type: str
@@ -145,7 +145,7 @@ class KubernetesClusterForPost(object):
     def href(self):
         """Gets the href of this KubernetesClusterForPost.  # noqa: E501
 
-        URL to the object representation (absolute path).  # noqa: E501
+        The URL to the object representation (absolute path).  # noqa: E501
 
         :return: The href of this KubernetesClusterForPost.  # noqa: E501
         :rtype: str
@@ -156,7 +156,7 @@ class KubernetesClusterForPost(object):
     def href(self, href):
         """Sets the href of this KubernetesClusterForPost.
 
-        URL to the object representation (absolute path).  # noqa: E501
+        The URL to the object representation (absolute path).  # noqa: E501
 
         :param href: The href of this KubernetesClusterForPost.  # noqa: E501
         :type href: str

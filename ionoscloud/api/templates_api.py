@@ -18,16 +18,16 @@ class TemplatesApi(object):
         self.api_client = api_client
 
     def templates_find_by_id(self, template_id, **kwargs):  # noqa: E501
-        """Retrieve Cubes Templates  # noqa: E501
+        """Get Cubes Template by ID  # noqa: E501
 
-        Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.  # noqa: E501
+        Retrieves the properties of the Cubes template specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.templates_find_by_id(template_id, async_req=True)
         >>> result = thread.get()
 
-        :param template_id: The unique Template ID. (required)
+        :param template_id: The unique template ID. (required)
         :type template_id: str
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
@@ -50,16 +50,16 @@ class TemplatesApi(object):
         return self.templates_find_by_id_with_http_info(template_id, **kwargs)  # noqa: E501
 
     def templates_find_by_id_with_http_info(self, template_id, **kwargs):  # noqa: E501
-        """Retrieve Cubes Templates  # noqa: E501
+        """Get Cubes Template by ID  # noqa: E501
 
-        Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.  # noqa: E501
+        Retrieves the properties of the Cubes template specified by its ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.templates_find_by_id_with_http_info(template_id, async_req=True)
         >>> result = thread.get()
 
-        :param template_id: The unique Template ID. (required)
+        :param template_id: The unique template ID. (required)
         :type template_id: str
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
@@ -166,9 +166,9 @@ class TemplatesApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def templates_get(self, **kwargs):  # noqa: E501
-        """List Cubes Templates  # noqa: E501
+        """Get Cubes Templates  # noqa: E501
 
-        List all of the available Cubes Templates.  This operation is only supported for the Cubes.  # noqa: E501
+        Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    >Templates are read-only and cannot be created, modified, or deleted by users.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -196,9 +196,9 @@ class TemplatesApi(object):
         return self.templates_get_with_http_info(**kwargs)  # noqa: E501
 
     def templates_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List Cubes Templates  # noqa: E501
+        """Get Cubes Templates  # noqa: E501
 
-        List all of the available Cubes Templates.  This operation is only supported for the Cubes.  # noqa: E501
+        Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    >Templates are read-only and cannot be created, modified, or deleted by users.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

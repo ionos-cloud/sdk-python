@@ -61,6 +61,12 @@ class GroupProperties(object):
         'access_and_manage_certificates': 'bool',
 
         'manage_dbaas': 'bool',
+
+        'access_and_manage_dns': 'bool',
+
+        'manage_registry': 'bool',
+
+        'manage_dataplatform': 'bool',
     }
 
     attribute_map = {
@@ -92,9 +98,15 @@ class GroupProperties(object):
         'access_and_manage_certificates': 'accessAndManageCertificates',
 
         'manage_dbaas': 'manageDBaaS',
+
+        'access_and_manage_dns': 'accessAndManageDns',
+
+        'manage_registry': 'manageRegistry',
+
+        'manage_dataplatform': 'manageDataplatform',
     }
 
-    def __init__(self, name=None, create_data_center=None, create_snapshot=None, reserve_ip=None, access_activity_log=None, create_pcc=None, s3_privilege=None, create_backup_unit=None, create_internet_access=None, create_k8s_cluster=None, create_flow_log=None, access_and_manage_monitoring=None, access_and_manage_certificates=None, manage_dbaas=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, create_data_center=None, create_snapshot=None, reserve_ip=None, access_activity_log=None, create_pcc=None, s3_privilege=None, create_backup_unit=None, create_internet_access=None, create_k8s_cluster=None, create_flow_log=None, access_and_manage_monitoring=None, access_and_manage_certificates=None, manage_dbaas=None, access_and_manage_dns=None, manage_registry=None, manage_dataplatform=None, local_vars_configuration=None):  # noqa: E501
         """GroupProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -114,6 +126,9 @@ class GroupProperties(object):
         self._access_and_manage_monitoring = None
         self._access_and_manage_certificates = None
         self._manage_dbaas = None
+        self._access_and_manage_dns = None
+        self._manage_registry = None
+        self._manage_dataplatform = None
         self.discriminator = None
 
         if name is not None:
@@ -144,13 +159,19 @@ class GroupProperties(object):
             self.access_and_manage_certificates = access_and_manage_certificates
         if manage_dbaas is not None:
             self.manage_dbaas = manage_dbaas
+        if access_and_manage_dns is not None:
+            self.access_and_manage_dns = access_and_manage_dns
+        if manage_registry is not None:
+            self.manage_registry = manage_registry
+        if manage_dataplatform is not None:
+            self.manage_dataplatform = manage_dataplatform
 
 
     @property
     def name(self):
         """Gets the name of this GroupProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        The name of the resource.  # noqa: E501
 
         :return: The name of this GroupProperties.  # noqa: E501
         :rtype: str
@@ -161,7 +182,7 @@ class GroupProperties(object):
     def name(self, name):
         """Sets the name of this GroupProperties.
 
-        The name of the  resource.  # noqa: E501
+        The name of the resource.  # noqa: E501
 
         :param name: The name of this GroupProperties.  # noqa: E501
         :type name: str
@@ -467,6 +488,75 @@ class GroupProperties(object):
         """
 
         self._manage_dbaas = manage_dbaas
+
+    @property
+    def access_and_manage_dns(self):
+        """Gets the access_and_manage_dns of this GroupProperties.  # noqa: E501
+
+        Privilege for a group to access and manage dns records.  # noqa: E501
+
+        :return: The access_and_manage_dns of this GroupProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._access_and_manage_dns
+
+    @access_and_manage_dns.setter
+    def access_and_manage_dns(self, access_and_manage_dns):
+        """Sets the access_and_manage_dns of this GroupProperties.
+
+        Privilege for a group to access and manage dns records.  # noqa: E501
+
+        :param access_and_manage_dns: The access_and_manage_dns of this GroupProperties.  # noqa: E501
+        :type access_and_manage_dns: bool
+        """
+
+        self._access_and_manage_dns = access_and_manage_dns
+
+    @property
+    def manage_registry(self):
+        """Gets the manage_registry of this GroupProperties.  # noqa: E501
+
+        Privilege for group accessing container registry related functionality.  # noqa: E501
+
+        :return: The manage_registry of this GroupProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._manage_registry
+
+    @manage_registry.setter
+    def manage_registry(self, manage_registry):
+        """Sets the manage_registry of this GroupProperties.
+
+        Privilege for group accessing container registry related functionality.  # noqa: E501
+
+        :param manage_registry: The manage_registry of this GroupProperties.  # noqa: E501
+        :type manage_registry: bool
+        """
+
+        self._manage_registry = manage_registry
+
+    @property
+    def manage_dataplatform(self):
+        """Gets the manage_dataplatform of this GroupProperties.  # noqa: E501
+
+        Privilege for a group to access and manage Data Platform.  # noqa: E501
+
+        :return: The manage_dataplatform of this GroupProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._manage_dataplatform
+
+    @manage_dataplatform.setter
+    def manage_dataplatform(self, manage_dataplatform):
+        """Sets the manage_dataplatform of this GroupProperties.
+
+        Privilege for a group to access and manage Data Platform.  # noqa: E501
+
+        :param manage_dataplatform: The manage_dataplatform of this GroupProperties.  # noqa: E501
+        :type manage_dataplatform: bool
+        """
+
+        self._manage_dataplatform = manage_dataplatform
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

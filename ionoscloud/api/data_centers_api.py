@@ -513,9 +513,9 @@ class DataCentersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_patch(self, datacenter_id, datacenter, **kwargs):  # noqa: E501
-        """Partially modify data centers  # noqa: E501
+        """Partially modify a Data Center by ID  # noqa: E501
 
-        Update the properties of the specified data center, rename it, or change the description.  # noqa: E501
+        Updates the properties of the specified data center, rename it, or change the description.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -551,9 +551,9 @@ class DataCentersApi(object):
         return self.datacenters_patch_with_http_info(datacenter_id, datacenter, **kwargs)  # noqa: E501
 
     def datacenters_patch_with_http_info(self, datacenter_id, datacenter, **kwargs):  # noqa: E501
-        """Partially modify data centers  # noqa: E501
+        """Partially modify a Data Center by ID  # noqa: E501
 
-        Update the properties of the specified data center, rename it, or change the description.  # noqa: E501
+        Updates the properties of the specified data center, rename it, or change the description.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -690,9 +690,9 @@ class DataCentersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_post(self, datacenter, **kwargs):  # noqa: E501
-        """Create data centers  # noqa: E501
+        """Create a Data Center  # noqa: E501
 
-        Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.  # noqa: E501
+        Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -726,9 +726,9 @@ class DataCentersApi(object):
         return self.datacenters_post_with_http_info(datacenter, **kwargs)  # noqa: E501
 
     def datacenters_post_with_http_info(self, datacenter, **kwargs):  # noqa: E501
-        """Create data centers  # noqa: E501
+        """Create a Data Center  # noqa: E501
 
-        Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.  # noqa: E501
+        Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -856,9 +856,9 @@ class DataCentersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_put(self, datacenter_id, datacenter, **kwargs):  # noqa: E501
-        """Modify data centers  # noqa: E501
+        """Modify a Data Center by ID  # noqa: E501
 
-        Modify the properties of the specified data center, rename it, or change the description.  # noqa: E501
+        Modifies the properties of the specified data center, rename it, or change the description.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -894,9 +894,9 @@ class DataCentersApi(object):
         return self.datacenters_put_with_http_info(datacenter_id, datacenter, **kwargs)  # noqa: E501
 
     def datacenters_put_with_http_info(self, datacenter_id, datacenter, **kwargs):  # noqa: E501
-        """Modify data centers  # noqa: E501
+        """Modify a Data Center by ID  # noqa: E501
 
-        Modify the properties of the specified data center, rename it, or change the description.  # noqa: E501
+        Modifies the properties of the specified data center, rename it, or change the description.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

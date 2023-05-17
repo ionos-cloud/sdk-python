@@ -78,7 +78,7 @@ class KubernetesNodeProperties(object):
     def name(self):
         """Gets the name of this KubernetesNodeProperties.  # noqa: E501
 
-        A Kubernetes node name.  # noqa: E501
+        The Kubernetes node name.  # noqa: E501
 
         :return: The name of this KubernetesNodeProperties.  # noqa: E501
         :rtype: str
@@ -89,7 +89,7 @@ class KubernetesNodeProperties(object):
     def name(self, name):
         """Sets the name of this KubernetesNodeProperties.
 
-        A Kubernetes node name.  # noqa: E501
+        The Kubernetes node name.  # noqa: E501
 
         :param name: The name of this KubernetesNodeProperties.  # noqa: E501
         :type name: str
@@ -103,7 +103,7 @@ class KubernetesNodeProperties(object):
     def public_ip(self):
         """Gets the public_ip of this KubernetesNodeProperties.  # noqa: E501
 
-        A valid public IP.  # noqa: E501
+        The public IP associated with the node.  # noqa: E501
 
         :return: The public_ip of this KubernetesNodeProperties.  # noqa: E501
         :rtype: str
@@ -114,7 +114,7 @@ class KubernetesNodeProperties(object):
     def public_ip(self, public_ip):
         """Sets the public_ip of this KubernetesNodeProperties.
 
-        A valid public IP.  # noqa: E501
+        The public IP associated with the node.  # noqa: E501
 
         :param public_ip: The public_ip of this KubernetesNodeProperties.  # noqa: E501
         :type public_ip: str
@@ -126,7 +126,7 @@ class KubernetesNodeProperties(object):
     def private_ip(self):
         """Gets the private_ip of this KubernetesNodeProperties.  # noqa: E501
 
-        A valid private IP.  # noqa: E501
+        The private IP associated with the node.  # noqa: E501
 
         :return: The private_ip of this KubernetesNodeProperties.  # noqa: E501
         :rtype: str
@@ -137,7 +137,7 @@ class KubernetesNodeProperties(object):
     def private_ip(self, private_ip):
         """Sets the private_ip of this KubernetesNodeProperties.
 
-        A valid private IP.  # noqa: E501
+        The private IP associated with the node.  # noqa: E501
 
         :param private_ip: The private_ip of this KubernetesNodeProperties.  # noqa: E501
         :type private_ip: str
@@ -149,7 +149,7 @@ class KubernetesNodeProperties(object):
     def k8s_version(self):
         """Gets the k8s_version of this KubernetesNodeProperties.  # noqa: E501
 
-        The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.  # noqa: E501
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
 
         :return: The k8s_version of this KubernetesNodeProperties.  # noqa: E501
         :rtype: str
@@ -160,7 +160,7 @@ class KubernetesNodeProperties(object):
     def k8s_version(self, k8s_version):
         """Sets the k8s_version of this KubernetesNodeProperties.
 
-        The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.  # noqa: E501
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
 
         :param k8s_version: The k8s_version of this KubernetesNodeProperties.  # noqa: E501
         :type k8s_version: str

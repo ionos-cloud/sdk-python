@@ -8,8 +8,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacenters_servers_nics_firewallrules_find_by_id**](FirewallRulesApi.md#datacenters_servers_nics_firewallrules_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve firewall rules |
 | [**datacenters_servers_nics_firewallrules_get**](FirewallRulesApi.md#datacenters_servers_nics_firewallrules_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List firewall rules |
 | [**datacenters_servers_nics_firewallrules_patch**](FirewallRulesApi.md#datacenters_servers_nics_firewallrules_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify firewall rules |
-| [**datacenters_servers_nics_firewallrules_post**](FirewallRulesApi.md#datacenters_servers_nics_firewallrules_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create firewall rules |
-| [**datacenters_servers_nics_firewallrules_put**](FirewallRulesApi.md#datacenters_servers_nics_firewallrules_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify firewall rules |
+| [**datacenters_servers_nics_firewallrules_post**](FirewallRulesApi.md#datacenters_servers_nics_firewallrules_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule |
+| [**datacenters_servers_nics_firewallrules_put**](FirewallRulesApi.md#datacenters_servers_nics_firewallrules_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule |
 
 
 # **datacenters_servers_nics_firewallrules_delete**
@@ -251,7 +251,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **server_id** | **str**| The unique ID of the server. |  |
 | **nic_id** | **str**| The unique ID of the NIC. |  |
 | **firewallrule_id** | **str**| The unique ID of the firewall rule. |  |
-| **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md)| The properties of the firewall rule to be updated. |  |
+| **firewallrule** | [**FirewallruleProperties**](../models/FirewallruleProperties.md)| The properties of the firewall rule to be updated. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -272,9 +272,9 @@ Basic Authentication, Token Authentication
 # **datacenters_servers_nics_firewallrules_post**
 > FirewallRule datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Create firewall rules
+Create a Firewall Rule
 
-Create a firewall rule for the specified NIC.
+Creates a firewall rule for the specified NIC.
 
 ### Example
 
@@ -301,7 +301,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     nic_id = 'nic_id_example' # str | The unique ID of the NIC.
     firewallrule = ionoscloud.FirewallRule() # FirewallRule | The firewall rule to create.
     try:
-        # Create firewall rules
+        # Create a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_post(datacenter_id, server_id, nic_id, firewallrule)
         print(api_response)
     except ApiException as e:
@@ -315,7 +315,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **datacenter_id** | **str**| The unique ID of the data center. |  |
 | **server_id** | **str**| The unique ID of the server. |  |
 | **nic_id** | **str**| The unique ID of the NIC. |  |
-| **firewallrule** | [**FirewallRule**](FirewallRule.md)| The firewall rule to create. |  |
+| **firewallrule** | [**FirewallRule**](../models/FirewallRule.md)| The firewall rule to create. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
@@ -336,9 +336,9 @@ Basic Authentication, Token Authentication
 # **datacenters_servers_nics_firewallrules_put**
 > FirewallRule datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule, pretty=pretty, depth=depth, x_contract_number=x_contract_number)
 
-Modify firewall rules
+Modify a Firewall Rule
 
-Modify the properties of the specified firewall rule.
+Modifies the properties of the specified firewall rule.
 
 ### Example
 
@@ -366,7 +366,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
     firewallrule_id = 'firewallrule_id_example' # str | The unique ID of the firewall rule.
     firewallrule = ionoscloud.FirewallRule() # FirewallRule | The modified firewall rule.
     try:
-        # Modify firewall rules
+        # Modify a Firewall Rule
         api_response = api_instance.datacenters_servers_nics_firewallrules_put(datacenter_id, server_id, nic_id, firewallrule_id, firewallrule)
         print(api_response)
     except ApiException as e:
@@ -381,7 +381,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **server_id** | **str**| The unique ID of the server. |  |
 | **nic_id** | **str**| The unique ID of the NIC. |  |
 | **firewallrule_id** | **str**| The unique ID of the firewall rule. |  |
-| **firewallrule** | [**FirewallRule**](FirewallRule.md)| The modified firewall rule. |  |
+| **firewallrule** | [**FirewallRule**](../models/FirewallRule.md)| The modified firewall rule. |  |
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |

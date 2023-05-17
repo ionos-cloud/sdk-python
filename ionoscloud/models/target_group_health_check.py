@@ -73,7 +73,7 @@ class TargetGroupHealthCheck(object):
     def check_timeout(self):
         """Gets the check_timeout of this TargetGroupHealthCheck.  # noqa: E501
 
-        The maximum time in milliseconds to wait for a target to respond to a check. For target VMs with 'Check Interval' set, the lesser of the two  values is used once the TCP connection is established.  # noqa: E501
+        The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a 'Check Interval' set, the smaller of the two values is used once the TCP connection is established.  # noqa: E501
 
         :return: The check_timeout of this TargetGroupHealthCheck.  # noqa: E501
         :rtype: int
@@ -84,7 +84,7 @@ class TargetGroupHealthCheck(object):
     def check_timeout(self, check_timeout):
         """Sets the check_timeout of this TargetGroupHealthCheck.
 
-        The maximum time in milliseconds to wait for a target to respond to a check. For target VMs with 'Check Interval' set, the lesser of the two  values is used once the TCP connection is established.  # noqa: E501
+        The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a 'Check Interval' set, the smaller of the two values is used once the TCP connection is established.  # noqa: E501
 
         :param check_timeout: The check_timeout of this TargetGroupHealthCheck.  # noqa: E501
         :type check_timeout: int
@@ -96,7 +96,7 @@ class TargetGroupHealthCheck(object):
     def check_interval(self):
         """Gets the check_interval of this TargetGroupHealthCheck.  # noqa: E501
 
-        The interval in milliseconds between consecutive health checks; default is 2000.  # noqa: E501
+        The interval in milliseconds between consecutive health checks; the default value is '2000'.  # noqa: E501
 
         :return: The check_interval of this TargetGroupHealthCheck.  # noqa: E501
         :rtype: int
@@ -107,7 +107,7 @@ class TargetGroupHealthCheck(object):
     def check_interval(self, check_interval):
         """Sets the check_interval of this TargetGroupHealthCheck.
 
-        The interval in milliseconds between consecutive health checks; default is 2000.  # noqa: E501
+        The interval in milliseconds between consecutive health checks; the default value is '2000'.  # noqa: E501
 
         :param check_interval: The check_interval of this TargetGroupHealthCheck.  # noqa: E501
         :type check_interval: int
@@ -119,7 +119,7 @@ class TargetGroupHealthCheck(object):
     def retries(self):
         """Gets the retries of this TargetGroupHealthCheck.  # noqa: E501
 
-        The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535, and default is three reconnection attempts.  # noqa: E501
+        The maximum number of attempts to reconnect to a target after a connection failure. The valid range is '0 to 65535'; the default value is '3'.  # noqa: E501
 
         :return: The retries of this TargetGroupHealthCheck.  # noqa: E501
         :rtype: int
@@ -130,7 +130,7 @@ class TargetGroupHealthCheck(object):
     def retries(self, retries):
         """Sets the retries of this TargetGroupHealthCheck.
 
-        The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535, and default is three reconnection attempts.  # noqa: E501
+        The maximum number of attempts to reconnect to a target after a connection failure. The valid range is '0 to 65535'; the default value is '3'.  # noqa: E501
 
         :param retries: The retries of this TargetGroupHealthCheck.  # noqa: E501
         :type retries: int

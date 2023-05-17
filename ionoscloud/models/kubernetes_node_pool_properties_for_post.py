@@ -180,7 +180,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def datacenter_id(self):
         """Gets the datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        A valid ID of the data center, to which the user has access.  # noqa: E501
+        The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located.  # noqa: E501
 
         :return: The datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: str
@@ -191,7 +191,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def datacenter_id(self, datacenter_id):
         """Sets the datacenter_id of this KubernetesNodePoolPropertiesForPost.
 
-        A valid ID of the data center, to which the user has access.  # noqa: E501
+        The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located.  # noqa: E501
 
         :param datacenter_id: The datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type datacenter_id: str
@@ -205,7 +205,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def node_count(self):
         """Gets the node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        The number of nodes that make up the node pool.  # noqa: E501
+        The number of worker nodes of the node pool.  # noqa: E501
 
         :return: The node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: int
@@ -216,7 +216,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def node_count(self, node_count):
         """Sets the node_count of this KubernetesNodePoolPropertiesForPost.
 
-        The number of nodes that make up the node pool.  # noqa: E501
+        The number of worker nodes of the node pool.  # noqa: E501
 
         :param node_count: The node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type node_count: int
@@ -230,7 +230,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def cpu_family(self):
         """Gets the cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        A valid CPU family name.  # noqa: E501
+        The CPU type for the nodes.  # noqa: E501
 
         :return: The cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: str
@@ -241,7 +241,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def cpu_family(self, cpu_family):
         """Sets the cpu_family of this KubernetesNodePoolPropertiesForPost.
 
-        A valid CPU family name.  # noqa: E501
+        The CPU type for the nodes.  # noqa: E501
 
         :param cpu_family: The cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type cpu_family: str
@@ -255,7 +255,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def cores_count(self):
         """Gets the cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        The number of cores for the node.  # noqa: E501
+        The total number of cores for the nodes.  # noqa: E501
 
         :return: The cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: int
@@ -266,7 +266,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def cores_count(self, cores_count):
         """Sets the cores_count of this KubernetesNodePoolPropertiesForPost.
 
-        The number of cores for the node.  # noqa: E501
+        The total number of cores for the nodes.  # noqa: E501
 
         :param cores_count: The cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type cores_count: int
@@ -280,7 +280,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def ram_size(self):
         """Gets the ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        The RAM size for the node. Must be set in multiples of 1024 MB, with minimum size is of 2048 MB.  # noqa: E501
+        The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB.  # noqa: E501
 
         :return: The ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: int
@@ -291,7 +291,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def ram_size(self, ram_size):
         """Sets the ram_size of this KubernetesNodePoolPropertiesForPost.
 
-        The RAM size for the node. Must be set in multiples of 1024 MB, with minimum size is of 2048 MB.  # noqa: E501
+        The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB.  # noqa: E501
 
         :param ram_size: The ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type ram_size: int
@@ -336,7 +336,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def storage_type(self):
         """Gets the storage_type of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        The type of hardware for the volume.  # noqa: E501
+        The storage type for the nodes.  # noqa: E501
 
         :return: The storage_type of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: str
@@ -347,7 +347,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def storage_type(self, storage_type):
         """Sets the storage_type of this KubernetesNodePoolPropertiesForPost.
 
-        The type of hardware for the volume.  # noqa: E501
+        The storage type for the nodes.  # noqa: E501
 
         :param storage_type: The storage_type of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type storage_type: str
@@ -367,7 +367,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def storage_size(self):
         """Gets the storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        The size of the volume in GB. The size should be greater than 10GB.  # noqa: E501
+        The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD.  # noqa: E501
 
         :return: The storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: int
@@ -378,7 +378,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def storage_size(self, storage_size):
         """Sets the storage_size of this KubernetesNodePoolPropertiesForPost.
 
-        The size of the volume in GB. The size should be greater than 10GB.  # noqa: E501
+        The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD.  # noqa: E501
 
         :param storage_size: The storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type storage_size: int
@@ -392,7 +392,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def k8s_version(self):
         """Gets the k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.  # noqa: E501
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
 
         :return: The k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: str
@@ -403,7 +403,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def k8s_version(self, k8s_version):
         """Sets the k8s_version of this KubernetesNodePoolPropertiesForPost.
 
-        The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.  # noqa: E501
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
 
         :param k8s_version: The k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type k8s_version: str
@@ -457,7 +457,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def lans(self):
         """Gets the lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        array of additional LANs attached to worker nodes  # noqa: E501
+        The array of existing private LANs to attach to worker nodes.  # noqa: E501
 
         :return: The lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: list[KubernetesNodePoolLan]
@@ -468,7 +468,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def lans(self, lans):
         """Sets the lans of this KubernetesNodePoolPropertiesForPost.
 
-        array of additional LANs attached to worker nodes  # noqa: E501
+        The array of existing private LANs to attach to worker nodes.  # noqa: E501
 
         :param lans: The lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type lans: list[KubernetesNodePoolLan]
@@ -480,7 +480,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def labels(self):
         """Gets the labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        map of labels attached to node pool.  # noqa: E501
+        The labels attached to the node pool.  # noqa: E501
 
         :return: The labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: dict(str, str)
@@ -491,7 +491,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def labels(self, labels):
         """Sets the labels of this KubernetesNodePoolPropertiesForPost.
 
-        map of labels attached to node pool.  # noqa: E501
+        The labels attached to the node pool.  # noqa: E501
 
         :param labels: The labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type labels: dict(str, str)
@@ -503,7 +503,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def annotations(self):
         """Gets the annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        map of annotations attached to node pool.  # noqa: E501
+        The annotations attached to the node pool.  # noqa: E501
 
         :return: The annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: dict(str, str)
@@ -514,7 +514,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def annotations(self, annotations):
         """Sets the annotations of this KubernetesNodePoolPropertiesForPost.
 
-        map of annotations attached to node pool.  # noqa: E501
+        The annotations attached to the node pool.  # noqa: E501
 
         :param annotations: The annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type annotations: dict(str, str)
@@ -526,7 +526,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def public_ips(self):
         """Gets the public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.  # noqa: E501
+        Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool's data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.  # noqa: E501
 
         :return: The public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :rtype: list[str]
@@ -537,7 +537,7 @@ class KubernetesNodePoolPropertiesForPost(object):
     def public_ips(self, public_ips):
         """Sets the public_ips of this KubernetesNodePoolPropertiesForPost.
 
-        Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.  # noqa: E501
+        Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool's data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.  # noqa: E501
 
         :param public_ips: The public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
         :type public_ips: list[str]

@@ -147,7 +147,7 @@ class AttachedVolumes(object):
     def href(self):
         """Gets the href of this AttachedVolumes.  # noqa: E501
 
-        URL to the object representation (absolute path).  # noqa: E501
+        The URL to the object representation (absolute path).  # noqa: E501
 
         :return: The href of this AttachedVolumes.  # noqa: E501
         :rtype: str
@@ -158,7 +158,7 @@ class AttachedVolumes(object):
     def href(self, href):
         """Sets the href of this AttachedVolumes.
 
-        URL to the object representation (absolute path).  # noqa: E501
+        The URL to the object representation (absolute path).  # noqa: E501
 
         :param href: The href of this AttachedVolumes.  # noqa: E501
         :type href: str

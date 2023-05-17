@@ -670,9 +670,9 @@ class SnapshotsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_put(self, snapshot_id, snapshot, **kwargs):  # noqa: E501
-        """Modify snapshots  # noqa: E501
+        """Modify a Snapshot by ID  # noqa: E501
 
-        Modify the properties of the specified snapshot.  # noqa: E501
+        Modifies the properties of the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -708,9 +708,9 @@ class SnapshotsApi(object):
         return self.snapshots_put_with_http_info(snapshot_id, snapshot, **kwargs)  # noqa: E501
 
     def snapshots_put_with_http_info(self, snapshot_id, snapshot, **kwargs):  # noqa: E501
-        """Modify snapshots  # noqa: E501
+        """Modify a Snapshot by ID  # noqa: E501
 
-        Modify the properties of the specified snapshot.  # noqa: E501
+        Modifies the properties of the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

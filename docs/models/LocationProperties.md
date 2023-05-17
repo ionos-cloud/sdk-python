@@ -3,9 +3,9 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **name** | **str** | The name of the  resource. | [optional]  |
-| **features** | **list[str]** | List of features supported by the location | [optional] [readonly]  |
-| **image_aliases** | **list[str]** | List of image aliases available for the location | [optional] [readonly]  |
-| **cpu_architecture** | [**list[CpuArchitectureProperties]**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly]  |
+| **name** | **str** | The location name. | [optional]  |
+| **features** | **list[str]** | A list of available features in the location. | [optional] [readonly]  |
+| **image_aliases** | **list[str]** | A list of image aliases available in the location. | [optional] [readonly]  |
+| **cpu_architecture** | [**list[CpuArchitectureProperties]**](CpuArchitectureProperties.md) | A list of available CPU types and related resources available in the location. | [optional] [readonly]  |
 
 

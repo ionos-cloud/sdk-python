@@ -526,9 +526,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_labels_post(self, datacenter_id, label, **kwargs):  # noqa: E501
-        """Create data center labels  # noqa: E501
+        """Create a Data Center Label  # noqa: E501
 
-        Add a new label to the specified data center.  # noqa: E501
+        Adds a new label to the specified data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -564,9 +564,9 @@ class LabelsApi(object):
         return self.datacenters_labels_post_with_http_info(datacenter_id, label, **kwargs)  # noqa: E501
 
     def datacenters_labels_post_with_http_info(self, datacenter_id, label, **kwargs):  # noqa: E501
-        """Create data center labels  # noqa: E501
+        """Create a Data Center Label  # noqa: E501
 
-        Add a new label to the specified data center.  # noqa: E501
+        Adds a new label to the specified data center.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -703,9 +703,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_labels_put(self, datacenter_id, key, label, **kwargs):  # noqa: E501
-        """Modify data center labels  # noqa: E501
+        """Modify a Data Center Label by Key  # noqa: E501
 
-        Modify the specified data center label.  # noqa: E501
+        Modifies the specified data center label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -743,9 +743,9 @@ class LabelsApi(object):
         return self.datacenters_labels_put_with_http_info(datacenter_id, key, label, **kwargs)  # noqa: E501
 
     def datacenters_labels_put_with_http_info(self, datacenter_id, key, label, **kwargs):  # noqa: E501
-        """Modify data center labels  # noqa: E501
+        """Modify a Data Center Label by Key  # noqa: E501
 
-        Modify the specified data center label.  # noqa: E501
+        Modifies the specified data center label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1432,9 +1432,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_labels_post(self, datacenter_id, server_id, label, **kwargs):  # noqa: E501
-        """Create server labels  # noqa: E501
+        """Create a Server Label  # noqa: E501
 
-        Add a new label to the specified server.  # noqa: E501
+        Adds a new label to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1472,9 +1472,9 @@ class LabelsApi(object):
         return self.datacenters_servers_labels_post_with_http_info(datacenter_id, server_id, label, **kwargs)  # noqa: E501
 
     def datacenters_servers_labels_post_with_http_info(self, datacenter_id, server_id, label, **kwargs):  # noqa: E501
-        """Create server labels  # noqa: E501
+        """Create a Server Label  # noqa: E501
 
-        Add a new label to the specified server.  # noqa: E501
+        Adds a new label to the specified server.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1620,9 +1620,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_labels_put(self, datacenter_id, server_id, key, label, **kwargs):  # noqa: E501
-        """Modify server labels  # noqa: E501
+        """Modify a Server Label  # noqa: E501
 
-        Modify the specified server label.  # noqa: E501
+        Modifies the specified server label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1662,9 +1662,9 @@ class LabelsApi(object):
         return self.datacenters_servers_labels_put_with_http_info(datacenter_id, server_id, key, label, **kwargs)  # noqa: E501
 
     def datacenters_servers_labels_put_with_http_info(self, datacenter_id, server_id, key, label, **kwargs):  # noqa: E501
-        """Modify server labels  # noqa: E501
+        """Modify a Server Label  # noqa: E501
 
-        Modify the specified server label.  # noqa: E501
+        Modifies the specified server label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2360,9 +2360,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_labels_post(self, datacenter_id, volume_id, label, **kwargs):  # noqa: E501
-        """Create volume labels  # noqa: E501
+        """Create a Volume Label  # noqa: E501
 
-        Add a new label to the specified volume.  # noqa: E501
+        Adds a new label to the specified volume.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2400,9 +2400,9 @@ class LabelsApi(object):
         return self.datacenters_volumes_labels_post_with_http_info(datacenter_id, volume_id, label, **kwargs)  # noqa: E501
 
     def datacenters_volumes_labels_post_with_http_info(self, datacenter_id, volume_id, label, **kwargs):  # noqa: E501
-        """Create volume labels  # noqa: E501
+        """Create a Volume Label  # noqa: E501
 
-        Add a new label to the specified volume.  # noqa: E501
+        Adds a new label to the specified volume.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2548,9 +2548,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_volumes_labels_put(self, datacenter_id, volume_id, key, label, **kwargs):  # noqa: E501
-        """Modify volume labels  # noqa: E501
+        """Modify a Volume Label  # noqa: E501
 
-        Modify the specified volume label.  # noqa: E501
+        Modifies the specified volume label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -2590,9 +2590,9 @@ class LabelsApi(object):
         return self.datacenters_volumes_labels_put_with_http_info(datacenter_id, volume_id, key, label, **kwargs)  # noqa: E501
 
     def datacenters_volumes_labels_put_with_http_info(self, datacenter_id, volume_id, key, label, **kwargs):  # noqa: E501
-        """Modify volume labels  # noqa: E501
+        """Modify a Volume Label  # noqa: E501
 
-        Modify the specified volume label.  # noqa: E501
+        Modifies the specified volume label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3432,9 +3432,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def ipblocks_labels_put(self, ipblock_id, key, label, **kwargs):  # noqa: E501
-        """Modify IP block labels  # noqa: E501
+        """Modify a IP Block Label by ID  # noqa: E501
 
-        Modify the specified IP block label.  # noqa: E501
+        Modifies the specified IP block label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -3472,9 +3472,9 @@ class LabelsApi(object):
         return self.ipblocks_labels_put_with_http_info(ipblock_id, key, label, **kwargs)  # noqa: E501
 
     def ipblocks_labels_put_with_http_info(self, ipblock_id, key, label, **kwargs):  # noqa: E501
-        """Modify IP block labels  # noqa: E501
+        """Modify a IP Block Label by ID  # noqa: E501
 
-        Modify the specified IP block label.  # noqa: E501
+        Modifies the specified IP block label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -4441,9 +4441,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_labels_post(self, snapshot_id, label, **kwargs):  # noqa: E501
-        """Create snapshot labels  # noqa: E501
+        """Create a Snapshot Label  # noqa: E501
 
-        Add a new label to the specified snapshot.  # noqa: E501
+        Adds a new label to the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -4479,9 +4479,9 @@ class LabelsApi(object):
         return self.snapshots_labels_post_with_http_info(snapshot_id, label, **kwargs)  # noqa: E501
 
     def snapshots_labels_post_with_http_info(self, snapshot_id, label, **kwargs):  # noqa: E501
-        """Create snapshot labels  # noqa: E501
+        """Create a Snapshot Label  # noqa: E501
 
-        Add a new label to the specified snapshot.  # noqa: E501
+        Adds a new label to the specified snapshot.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -4618,9 +4618,9 @@ class LabelsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def snapshots_labels_put(self, snapshot_id, key, label, **kwargs):  # noqa: E501
-        """Modify snapshot labels  # noqa: E501
+        """Modify a Snapshot Label by ID  # noqa: E501
 
-        Modify the specified snapshot label.  # noqa: E501
+        Modifies the specified snapshot label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -4658,9 +4658,9 @@ class LabelsApi(object):
         return self.snapshots_labels_put_with_http_info(snapshot_id, key, label, **kwargs)  # noqa: E501
 
     def snapshots_labels_put_with_http_info(self, snapshot_id, key, label, **kwargs):  # noqa: E501
-        """Modify snapshot labels  # noqa: E501
+        """Modify a Snapshot Label by ID  # noqa: E501
 
-        Modify the specified snapshot label.  # noqa: E501
+        Modifies the specified snapshot label.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
