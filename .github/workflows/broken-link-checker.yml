@@ -24,6 +24,7 @@ jobs:
       - uses: gaurav-nelson/github-action-markdown-link-check@v1
         with:
           use-verbose-mode: 'yes'
+          config-file: '.github/broken-link-checker-config.json'
 #           check-modified-files-only: 'yes'
           base-branch: 'master'
         if: github.event_name == 'pull_request'
