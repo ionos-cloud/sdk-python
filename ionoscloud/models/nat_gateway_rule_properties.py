@@ -36,62 +36,62 @@ class NatGatewayRuleProperties(object):
 
         'name': 'str',
 
-        'type': 'NatGatewayRuleType',
-
         'protocol': 'NatGatewayRuleProtocol',
-
-        'source_subnet': 'str',
 
         'public_ip': 'str',
 
-        'target_subnet': 'str',
+        'source_subnet': 'str',
 
         'target_port_range': 'TargetPortRange',
+
+        'target_subnet': 'str',
+
+        'type': 'NatGatewayRuleType',
     }
 
     attribute_map = {
 
         'name': 'name',
 
-        'type': 'type',
-
         'protocol': 'protocol',
-
-        'source_subnet': 'sourceSubnet',
 
         'public_ip': 'publicIp',
 
-        'target_subnet': 'targetSubnet',
+        'source_subnet': 'sourceSubnet',
 
         'target_port_range': 'targetPortRange',
+
+        'target_subnet': 'targetSubnet',
+
+        'type': 'type',
     }
 
-    def __init__(self, name=None, type=None, protocol=None, source_subnet=None, public_ip=None, target_subnet=None, target_port_range=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, protocol=None, public_ip=None, source_subnet=None, target_port_range=None, target_subnet=None, type=None, local_vars_configuration=None):  # noqa: E501
         """NatGatewayRuleProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._name = None
-        self._type = None
         self._protocol = None
-        self._source_subnet = None
         self._public_ip = None
-        self._target_subnet = None
+        self._source_subnet = None
         self._target_port_range = None
+        self._target_subnet = None
+        self._type = None
         self.discriminator = None
 
         self.name = name
-        if type is not None:
-            self.type = type
         if protocol is not None:
             self.protocol = protocol
-        self.source_subnet = source_subnet
         self.public_ip = public_ip
-        if target_subnet is not None:
-            self.target_subnet = target_subnet
+        self.source_subnet = source_subnet
         if target_port_range is not None:
             self.target_port_range = target_port_range
+        if target_subnet is not None:
+            self.target_subnet = target_subnet
+        if type is not None:
+            self.type = type
 
 
     @property
@@ -120,29 +120,6 @@ class NatGatewayRuleProperties(object):
         self._name = name
 
     @property
-    def type(self):
-        """Gets the type of this NatGatewayRuleProperties.  # noqa: E501
-
-        Type of the NAT Gateway rule.  # noqa: E501
-
-        :return: The type of this NatGatewayRuleProperties.  # noqa: E501
-        :rtype: NatGatewayRuleType
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this NatGatewayRuleProperties.
-
-        Type of the NAT Gateway rule.  # noqa: E501
-
-        :param type: The type of this NatGatewayRuleProperties.  # noqa: E501
-        :type type: NatGatewayRuleType
-        """
-
-        self._type = type
-
-    @property
     def protocol(self):
         """Gets the protocol of this NatGatewayRuleProperties.  # noqa: E501
 
@@ -164,31 +141,6 @@ class NatGatewayRuleProperties(object):
         """
 
         self._protocol = protocol
-
-    @property
-    def source_subnet(self):
-        """Gets the source_subnet of this NatGatewayRuleProperties.  # noqa: E501
-
-        Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.  # noqa: E501
-
-        :return: The source_subnet of this NatGatewayRuleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_subnet
-
-    @source_subnet.setter
-    def source_subnet(self, source_subnet):
-        """Sets the source_subnet of this NatGatewayRuleProperties.
-
-        Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.  # noqa: E501
-
-        :param source_subnet: The source_subnet of this NatGatewayRuleProperties.  # noqa: E501
-        :type source_subnet: str
-        """
-        if self.local_vars_configuration.client_side_validation and source_subnet is None:  # noqa: E501
-            raise ValueError("Invalid value for `source_subnet`, must not be `None`")  # noqa: E501
-
-        self._source_subnet = source_subnet
 
     @property
     def public_ip(self):
@@ -216,6 +168,52 @@ class NatGatewayRuleProperties(object):
         self._public_ip = public_ip
 
     @property
+    def source_subnet(self):
+        """Gets the source_subnet of this NatGatewayRuleProperties.  # noqa: E501
+
+        Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.  # noqa: E501
+
+        :return: The source_subnet of this NatGatewayRuleProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_subnet
+
+    @source_subnet.setter
+    def source_subnet(self, source_subnet):
+        """Sets the source_subnet of this NatGatewayRuleProperties.
+
+        Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.  # noqa: E501
+
+        :param source_subnet: The source_subnet of this NatGatewayRuleProperties.  # noqa: E501
+        :type source_subnet: str
+        """
+        if self.local_vars_configuration.client_side_validation and source_subnet is None:  # noqa: E501
+            raise ValueError("Invalid value for `source_subnet`, must not be `None`")  # noqa: E501
+
+        self._source_subnet = source_subnet
+
+    @property
+    def target_port_range(self):
+        """Gets the target_port_range of this NatGatewayRuleProperties.  # noqa: E501
+
+
+        :return: The target_port_range of this NatGatewayRuleProperties.  # noqa: E501
+        :rtype: TargetPortRange
+        """
+        return self._target_port_range
+
+    @target_port_range.setter
+    def target_port_range(self, target_port_range):
+        """Sets the target_port_range of this NatGatewayRuleProperties.
+
+
+        :param target_port_range: The target_port_range of this NatGatewayRuleProperties.  # noqa: E501
+        :type target_port_range: TargetPortRange
+        """
+
+        self._target_port_range = target_port_range
+
+    @property
     def target_subnet(self):
         """Gets the target_subnet of this NatGatewayRuleProperties.  # noqa: E501
 
@@ -239,25 +237,27 @@ class NatGatewayRuleProperties(object):
         self._target_subnet = target_subnet
 
     @property
-    def target_port_range(self):
-        """Gets the target_port_range of this NatGatewayRuleProperties.  # noqa: E501
+    def type(self):
+        """Gets the type of this NatGatewayRuleProperties.  # noqa: E501
 
+        Type of the NAT Gateway rule.  # noqa: E501
 
-        :return: The target_port_range of this NatGatewayRuleProperties.  # noqa: E501
-        :rtype: TargetPortRange
+        :return: The type of this NatGatewayRuleProperties.  # noqa: E501
+        :rtype: NatGatewayRuleType
         """
-        return self._target_port_range
+        return self._type
 
-    @target_port_range.setter
-    def target_port_range(self, target_port_range):
-        """Sets the target_port_range of this NatGatewayRuleProperties.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this NatGatewayRuleProperties.
 
+        Type of the NAT Gateway rule.  # noqa: E501
 
-        :param target_port_range: The target_port_range of this NatGatewayRuleProperties.  # noqa: E501
-        :type target_port_range: TargetPortRange
+        :param type: The type of this NatGatewayRuleProperties.  # noqa: E501
+        :type type: NatGatewayRuleType
         """
 
-        self._target_port_range = target_port_range
+        self._type = type
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

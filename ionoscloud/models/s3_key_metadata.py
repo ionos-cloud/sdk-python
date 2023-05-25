@@ -34,56 +34,33 @@ class S3KeyMetadata(object):
     """
     openapi_types = {
 
-        'etag': 'str',
-
         'created_date': 'datetime',
+
+        'etag': 'str',
     }
 
     attribute_map = {
 
-        'etag': 'etag',
-
         'created_date': 'createdDate',
+
+        'etag': 'etag',
     }
 
-    def __init__(self, etag=None, created_date=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, created_date=None, etag=None, local_vars_configuration=None):  # noqa: E501
         """S3KeyMetadata - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._etag = None
         self._created_date = None
+        self._etag = None
         self.discriminator = None
 
-        if etag is not None:
-            self.etag = etag
         if created_date is not None:
             self.created_date = created_date
+        if etag is not None:
+            self.etag = etag
 
-
-    @property
-    def etag(self):
-        """Gets the etag of this S3KeyMetadata.  # noqa: E501
-
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
-
-        :return: The etag of this S3KeyMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._etag
-
-    @etag.setter
-    def etag(self, etag):
-        """Sets the etag of this S3KeyMetadata.
-
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
-
-        :param etag: The etag of this S3KeyMetadata.  # noqa: E501
-        :type etag: str
-        """
-
-        self._etag = etag
 
     @property
     def created_date(self):
@@ -107,6 +84,29 @@ class S3KeyMetadata(object):
         """
 
         self._created_date = created_date
+
+    @property
+    def etag(self):
+        """Gets the etag of this S3KeyMetadata.  # noqa: E501
+
+        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+
+        :return: The etag of this S3KeyMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._etag
+
+    @etag.setter
+    def etag(self, etag):
+        """Sets the etag of this S3KeyMetadata.
+
+        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+
+        :param etag: The etag of this S3KeyMetadata.  # noqa: E501
+        :type etag: str
+        """
+
+        self._etag = etag
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

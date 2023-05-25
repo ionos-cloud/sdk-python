@@ -3,7 +3,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **secret_key** | **str** | Secret of the S3 key. | [optional] [readonly]  |
 | **active** | **bool** | Denotes weather the S3 key is active. | [optional]  |
+| **secret_key** | **str** | Secret of the S3 key. | [optional] [readonly]  |
 
 

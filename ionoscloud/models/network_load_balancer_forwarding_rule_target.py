@@ -34,44 +34,65 @@ class NetworkLoadBalancerForwardingRuleTarget(object):
     """
     openapi_types = {
 
+        'health_check': 'NetworkLoadBalancerForwardingRuleTargetHealthCheck',
+
         'ip': 'str',
 
         'port': 'int',
 
         'weight': 'int',
-
-        'health_check': 'NetworkLoadBalancerForwardingRuleTargetHealthCheck',
     }
 
     attribute_map = {
+
+        'health_check': 'healthCheck',
 
         'ip': 'ip',
 
         'port': 'port',
 
         'weight': 'weight',
-
-        'health_check': 'healthCheck',
     }
 
-    def __init__(self, ip=None, port=None, weight=None, health_check=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, health_check=None, ip=None, port=None, weight=None, local_vars_configuration=None):  # noqa: E501
         """NetworkLoadBalancerForwardingRuleTarget - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._health_check = None
         self._ip = None
         self._port = None
         self._weight = None
-        self._health_check = None
         self.discriminator = None
 
+        if health_check is not None:
+            self.health_check = health_check
         self.ip = ip
         self.port = port
         self.weight = weight
-        if health_check is not None:
-            self.health_check = health_check
 
+
+    @property
+    def health_check(self):
+        """Gets the health_check of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
+
+
+        :return: The health_check of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
+        :rtype: NetworkLoadBalancerForwardingRuleTargetHealthCheck
+        """
+        return self._health_check
+
+    @health_check.setter
+    def health_check(self, health_check):
+        """Sets the health_check of this NetworkLoadBalancerForwardingRuleTarget.
+
+
+        :param health_check: The health_check of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
+        :type health_check: NetworkLoadBalancerForwardingRuleTargetHealthCheck
+        """
+
+        self._health_check = health_check
 
     @property
     def ip(self):
@@ -147,27 +168,6 @@ class NetworkLoadBalancerForwardingRuleTarget(object):
             raise ValueError("Invalid value for `weight`, must not be `None`")  # noqa: E501
 
         self._weight = weight
-
-    @property
-    def health_check(self):
-        """Gets the health_check of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
-
-
-        :return: The health_check of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
-        :rtype: NetworkLoadBalancerForwardingRuleTargetHealthCheck
-        """
-        return self._health_check
-
-    @health_check.setter
-    def health_check(self, health_check):
-        """Sets the health_check of this NetworkLoadBalancerForwardingRuleTarget.
-
-
-        :param health_check: The health_check of this NetworkLoadBalancerForwardingRuleTarget.  # noqa: E501
-        :type health_check: NetworkLoadBalancerForwardingRuleTargetHealthCheck
-        """
-
-        self._health_check = health_check
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

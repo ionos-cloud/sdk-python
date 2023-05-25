@@ -34,56 +34,33 @@ class S3KeyProperties(object):
     """
     openapi_types = {
 
-        'secret_key': 'str',
-
         'active': 'bool',
+
+        'secret_key': 'str',
     }
 
     attribute_map = {
 
-        'secret_key': 'secretKey',
-
         'active': 'active',
+
+        'secret_key': 'secretKey',
     }
 
-    def __init__(self, secret_key=None, active=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, active=None, secret_key=None, local_vars_configuration=None):  # noqa: E501
         """S3KeyProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._secret_key = None
         self._active = None
+        self._secret_key = None
         self.discriminator = None
 
-        if secret_key is not None:
-            self.secret_key = secret_key
         if active is not None:
             self.active = active
+        if secret_key is not None:
+            self.secret_key = secret_key
 
-
-    @property
-    def secret_key(self):
-        """Gets the secret_key of this S3KeyProperties.  # noqa: E501
-
-        Secret of the S3 key.  # noqa: E501
-
-        :return: The secret_key of this S3KeyProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._secret_key
-
-    @secret_key.setter
-    def secret_key(self, secret_key):
-        """Sets the secret_key of this S3KeyProperties.
-
-        Secret of the S3 key.  # noqa: E501
-
-        :param secret_key: The secret_key of this S3KeyProperties.  # noqa: E501
-        :type secret_key: str
-        """
-
-        self._secret_key = secret_key
 
     @property
     def active(self):
@@ -107,6 +84,29 @@ class S3KeyProperties(object):
         """
 
         self._active = active
+
+    @property
+    def secret_key(self):
+        """Gets the secret_key of this S3KeyProperties.  # noqa: E501
+
+        Secret of the S3 key.  # noqa: E501
+
+        :return: The secret_key of this S3KeyProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._secret_key
+
+    @secret_key.setter
+    def secret_key(self, secret_key):
+        """Sets the secret_key of this S3KeyProperties.
+
+        Secret of the S3 key.  # noqa: E501
+
+        :param secret_key: The secret_key of this S3KeyProperties.  # noqa: E501
+        :type secret_key: str
+        """
+
+        self._secret_key = secret_key
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

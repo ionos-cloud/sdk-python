@@ -34,248 +34,171 @@ class VolumeProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
-        'type': 'str',
-
-        'size': 'float',
-
         'availability_zone': 'str',
 
-        'image': 'str',
+        'backupunit_id': 'str',
 
-        'image_password': 'str',
+        'boot_order': 'str',
 
-        'image_alias': 'str',
-
-        'ssh_keys': 'list[str]',
+        'boot_server': 'str',
 
         'bus': 'str',
 
-        'licence_type': 'str',
-
         'cpu_hot_plug': 'bool',
 
-        'ram_hot_plug': 'bool',
-
-        'nic_hot_plug': 'bool',
-
-        'nic_hot_unplug': 'bool',
+        'device_number': 'int',
 
         'disc_virtio_hot_plug': 'bool',
 
         'disc_virtio_hot_unplug': 'bool',
 
-        'device_number': 'int',
+        'image': 'str',
+
+        'image_alias': 'str',
+
+        'image_password': 'str',
+
+        'licence_type': 'str',
+
+        'name': 'str',
+
+        'nic_hot_plug': 'bool',
+
+        'nic_hot_unplug': 'bool',
 
         'pci_slot': 'int',
 
-        'backupunit_id': 'str',
+        'ram_hot_plug': 'bool',
+
+        'size': 'float',
+
+        'ssh_keys': 'list[str]',
+
+        'type': 'str',
 
         'user_data': 'str',
-
-        'boot_server': 'str',
-
-        'boot_order': 'str',
     }
 
     attribute_map = {
 
-        'name': 'name',
-
-        'type': 'type',
-
-        'size': 'size',
-
         'availability_zone': 'availabilityZone',
 
-        'image': 'image',
+        'backupunit_id': 'backupunitId',
 
-        'image_password': 'imagePassword',
+        'boot_order': 'bootOrder',
 
-        'image_alias': 'imageAlias',
-
-        'ssh_keys': 'sshKeys',
+        'boot_server': 'bootServer',
 
         'bus': 'bus',
 
-        'licence_type': 'licenceType',
-
         'cpu_hot_plug': 'cpuHotPlug',
 
-        'ram_hot_plug': 'ramHotPlug',
-
-        'nic_hot_plug': 'nicHotPlug',
-
-        'nic_hot_unplug': 'nicHotUnplug',
+        'device_number': 'deviceNumber',
 
         'disc_virtio_hot_plug': 'discVirtioHotPlug',
 
         'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
 
-        'device_number': 'deviceNumber',
+        'image': 'image',
+
+        'image_alias': 'imageAlias',
+
+        'image_password': 'imagePassword',
+
+        'licence_type': 'licenceType',
+
+        'name': 'name',
+
+        'nic_hot_plug': 'nicHotPlug',
+
+        'nic_hot_unplug': 'nicHotUnplug',
 
         'pci_slot': 'pciSlot',
 
-        'backupunit_id': 'backupunitId',
+        'ram_hot_plug': 'ramHotPlug',
+
+        'size': 'size',
+
+        'ssh_keys': 'sshKeys',
+
+        'type': 'type',
 
         'user_data': 'userData',
-
-        'boot_server': 'bootServer',
-
-        'boot_order': 'bootOrder',
     }
 
-    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, device_number=None, pci_slot=None, backupunit_id=None, user_data=None, boot_server=None, boot_order='AUTO', local_vars_configuration=None):  # noqa: E501
+    def __init__(self, availability_zone=None, backupunit_id=None, boot_order='AUTO', boot_server=None, bus=None, cpu_hot_plug=None, device_number=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, image=None, image_alias=None, image_password=None, licence_type=None, name=None, nic_hot_plug=None, nic_hot_unplug=None, pci_slot=None, ram_hot_plug=None, size=None, ssh_keys=None, type=None, user_data=None, local_vars_configuration=None):  # noqa: E501
         """VolumeProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._type = None
-        self._size = None
         self._availability_zone = None
-        self._image = None
-        self._image_password = None
-        self._image_alias = None
-        self._ssh_keys = None
+        self._backupunit_id = None
+        self._boot_order = None
+        self._boot_server = None
         self._bus = None
-        self._licence_type = None
         self._cpu_hot_plug = None
-        self._ram_hot_plug = None
-        self._nic_hot_plug = None
-        self._nic_hot_unplug = None
+        self._device_number = None
         self._disc_virtio_hot_plug = None
         self._disc_virtio_hot_unplug = None
-        self._device_number = None
+        self._image = None
+        self._image_alias = None
+        self._image_password = None
+        self._licence_type = None
+        self._name = None
+        self._nic_hot_plug = None
+        self._nic_hot_unplug = None
         self._pci_slot = None
-        self._backupunit_id = None
+        self._ram_hot_plug = None
+        self._size = None
+        self._ssh_keys = None
+        self._type = None
         self._user_data = None
-        self._boot_server = None
-        self._boot_order = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if type is not None:
-            self.type = type
-        self.size = size
         if availability_zone is not None:
             self.availability_zone = availability_zone
-        if image is not None:
-            self.image = image
-        if image_password is not None:
-            self.image_password = image_password
-        if image_alias is not None:
-            self.image_alias = image_alias
-        if ssh_keys is not None:
-            self.ssh_keys = ssh_keys
+        if backupunit_id is not None:
+            self.backupunit_id = backupunit_id
+        self.boot_order = boot_order
+        if boot_server is not None:
+            self.boot_server = boot_server
         if bus is not None:
             self.bus = bus
-        if licence_type is not None:
-            self.licence_type = licence_type
         if cpu_hot_plug is not None:
             self.cpu_hot_plug = cpu_hot_plug
-        if ram_hot_plug is not None:
-            self.ram_hot_plug = ram_hot_plug
-        if nic_hot_plug is not None:
-            self.nic_hot_plug = nic_hot_plug
-        if nic_hot_unplug is not None:
-            self.nic_hot_unplug = nic_hot_unplug
+        if device_number is not None:
+            self.device_number = device_number
         if disc_virtio_hot_plug is not None:
             self.disc_virtio_hot_plug = disc_virtio_hot_plug
         if disc_virtio_hot_unplug is not None:
             self.disc_virtio_hot_unplug = disc_virtio_hot_unplug
-        if device_number is not None:
-            self.device_number = device_number
+        if image is not None:
+            self.image = image
+        if image_alias is not None:
+            self.image_alias = image_alias
+        if image_password is not None:
+            self.image_password = image_password
+        if licence_type is not None:
+            self.licence_type = licence_type
+        if name is not None:
+            self.name = name
+        if nic_hot_plug is not None:
+            self.nic_hot_plug = nic_hot_plug
+        if nic_hot_unplug is not None:
+            self.nic_hot_unplug = nic_hot_unplug
         if pci_slot is not None:
             self.pci_slot = pci_slot
-        if backupunit_id is not None:
-            self.backupunit_id = backupunit_id
+        if ram_hot_plug is not None:
+            self.ram_hot_plug = ram_hot_plug
+        self.size = size
+        if ssh_keys is not None:
+            self.ssh_keys = ssh_keys
+        if type is not None:
+            self.type = type
         if user_data is not None:
             self.user_data = user_data
-        if boot_server is not None:
-            self.boot_server = boot_server
-        self.boot_order = boot_order
 
-
-    @property
-    def name(self):
-        """Gets the name of this VolumeProperties.  # noqa: E501
-
-        The name of the  resource.  # noqa: E501
-
-        :return: The name of this VolumeProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this VolumeProperties.
-
-        The name of the  resource.  # noqa: E501
-
-        :param name: The name of this VolumeProperties.  # noqa: E501
-        :type name: str
-        """
-
-        self._name = name
-
-    @property
-    def type(self):
-        """Gets the type of this VolumeProperties.  # noqa: E501
-
-        Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.  # noqa: E501
-
-        :return: The type of this VolumeProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this VolumeProperties.
-
-        Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.  # noqa: E501
-
-        :param type: The type of this VolumeProperties.  # noqa: E501
-        :type type: str
-        """
-        allowed_values = ["HDD", "SSD", "SSD Standard", "SSD Premium", "DAS", "ISO"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
-
-        self._type = type
-
-    @property
-    def size(self):
-        """Gets the size of this VolumeProperties.  # noqa: E501
-
-        The size of the volume in GB.  # noqa: E501
-
-        :return: The size of this VolumeProperties.  # noqa: E501
-        :rtype: float
-        """
-        return self._size
-
-    @size.setter
-    def size(self, size):
-        """Sets the size of this VolumeProperties.
-
-        The size of the volume in GB.  # noqa: E501
-
-        :param size: The size of this VolumeProperties.  # noqa: E501
-        :type size: float
-        """
-        if self.local_vars_configuration.client_side_validation and size is None:  # noqa: E501
-            raise ValueError("Invalid value for `size`, must not be `None`")  # noqa: E501
-
-        self._size = size
 
     @property
     def availability_zone(self):
@@ -307,94 +230,79 @@ class VolumeProperties(object):
         self._availability_zone = availability_zone
 
     @property
-    def image(self):
-        """Gets the image of this VolumeProperties.  # noqa: E501
+    def backupunit_id(self):
+        """Gets the backupunit_id of this VolumeProperties.  # noqa: E501
 
-        Image or snapshot ID to be used as template for this volume.  # noqa: E501
+        The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.  # noqa: E501
 
-        :return: The image of this VolumeProperties.  # noqa: E501
+        :return: The backupunit_id of this VolumeProperties.  # noqa: E501
         :rtype: str
         """
-        return self._image
+        return self._backupunit_id
 
-    @image.setter
-    def image(self, image):
-        """Sets the image of this VolumeProperties.
+    @backupunit_id.setter
+    def backupunit_id(self, backupunit_id):
+        """Sets the backupunit_id of this VolumeProperties.
 
-        Image or snapshot ID to be used as template for this volume.  # noqa: E501
+        The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.  # noqa: E501
 
-        :param image: The image of this VolumeProperties.  # noqa: E501
-        :type image: str
+        :param backupunit_id: The backupunit_id of this VolumeProperties.  # noqa: E501
+        :type backupunit_id: str
         """
 
-        self._image = image
+        self._backupunit_id = backupunit_id
 
     @property
-    def image_password(self):
-        """Gets the image_password of this VolumeProperties.  # noqa: E501
+    def boot_order(self):
+        """Gets the boot_order of this VolumeProperties.  # noqa: E501
 
-        Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.  # noqa: E501
+        Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.  # noqa: E501
 
-        :return: The image_password of this VolumeProperties.  # noqa: E501
+        :return: The boot_order of this VolumeProperties.  # noqa: E501
         :rtype: str
         """
-        return self._image_password
+        return self._boot_order
 
-    @image_password.setter
-    def image_password(self, image_password):
-        """Sets the image_password of this VolumeProperties.
+    @boot_order.setter
+    def boot_order(self, boot_order):
+        """Sets the boot_order of this VolumeProperties.
 
-        Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.  # noqa: E501
+        Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.  # noqa: E501
 
-        :param image_password: The image_password of this VolumeProperties.  # noqa: E501
-        :type image_password: str
+        :param boot_order: The boot_order of this VolumeProperties.  # noqa: E501
+        :type boot_order: str
         """
+        allowed_values = [None,"AUTO", "NONE", "PRIMARY"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and boot_order not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `boot_order` ({0}), must be one of {1}"  # noqa: E501
+                .format(boot_order, allowed_values)
+            )
 
-        self._image_password = image_password
+        self._boot_order = boot_order
 
     @property
-    def image_alias(self):
-        """Gets the image_alias of this VolumeProperties.  # noqa: E501
+    def boot_server(self):
+        """Gets the boot_server of this VolumeProperties.  # noqa: E501
 
+        The UUID of the attached server.  # noqa: E501
 
-        :return: The image_alias of this VolumeProperties.  # noqa: E501
+        :return: The boot_server of this VolumeProperties.  # noqa: E501
         :rtype: str
         """
-        return self._image_alias
+        return self._boot_server
 
-    @image_alias.setter
-    def image_alias(self, image_alias):
-        """Sets the image_alias of this VolumeProperties.
+    @boot_server.setter
+    def boot_server(self, boot_server):
+        """Sets the boot_server of this VolumeProperties.
 
+        The UUID of the attached server.  # noqa: E501
 
-        :param image_alias: The image_alias of this VolumeProperties.  # noqa: E501
-        :type image_alias: str
+        :param boot_server: The boot_server of this VolumeProperties.  # noqa: E501
+        :type boot_server: str
         """
 
-        self._image_alias = image_alias
-
-    @property
-    def ssh_keys(self):
-        """Gets the ssh_keys of this VolumeProperties.  # noqa: E501
-
-        Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.  # noqa: E501
-
-        :return: The ssh_keys of this VolumeProperties.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._ssh_keys
-
-    @ssh_keys.setter
-    def ssh_keys(self, ssh_keys):
-        """Sets the ssh_keys of this VolumeProperties.
-
-        Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.  # noqa: E501
-
-        :param ssh_keys: The ssh_keys of this VolumeProperties.  # noqa: E501
-        :type ssh_keys: list[str]
-        """
-
-        self._ssh_keys = ssh_keys
+        self._boot_server = boot_server
 
     @property
     def bus(self):
@@ -426,35 +334,6 @@ class VolumeProperties(object):
         self._bus = bus
 
     @property
-    def licence_type(self):
-        """Gets the licence_type of this VolumeProperties.  # noqa: E501
-
-        OS type for this volume.  # noqa: E501
-
-        :return: The licence_type of this VolumeProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._licence_type
-
-    @licence_type.setter
-    def licence_type(self, licence_type):
-        """Sets the licence_type of this VolumeProperties.
-
-        OS type for this volume.  # noqa: E501
-
-        :param licence_type: The licence_type of this VolumeProperties.  # noqa: E501
-        :type licence_type: str
-        """
-        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "WINDOWS2022", "LINUX", "OTHER"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and licence_type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `licence_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(licence_type, allowed_values)
-            )
-
-        self._licence_type = licence_type
-
-    @property
     def cpu_hot_plug(self):
         """Gets the cpu_hot_plug of this VolumeProperties.  # noqa: E501
 
@@ -478,73 +357,27 @@ class VolumeProperties(object):
         self._cpu_hot_plug = cpu_hot_plug
 
     @property
-    def ram_hot_plug(self):
-        """Gets the ram_hot_plug of this VolumeProperties.  # noqa: E501
+    def device_number(self):
+        """Gets the device_number of this VolumeProperties.  # noqa: E501
 
-        Hot-plug capable RAM (no reboot required).  # noqa: E501
+        The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.  # noqa: E501
 
-        :return: The ram_hot_plug of this VolumeProperties.  # noqa: E501
-        :rtype: bool
+        :return: The device_number of this VolumeProperties.  # noqa: E501
+        :rtype: int
         """
-        return self._ram_hot_plug
+        return self._device_number
 
-    @ram_hot_plug.setter
-    def ram_hot_plug(self, ram_hot_plug):
-        """Sets the ram_hot_plug of this VolumeProperties.
+    @device_number.setter
+    def device_number(self, device_number):
+        """Sets the device_number of this VolumeProperties.
 
-        Hot-plug capable RAM (no reboot required).  # noqa: E501
+        The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.  # noqa: E501
 
-        :param ram_hot_plug: The ram_hot_plug of this VolumeProperties.  # noqa: E501
-        :type ram_hot_plug: bool
-        """
-
-        self._ram_hot_plug = ram_hot_plug
-
-    @property
-    def nic_hot_plug(self):
-        """Gets the nic_hot_plug of this VolumeProperties.  # noqa: E501
-
-        Hot-plug capable NIC (no reboot required).  # noqa: E501
-
-        :return: The nic_hot_plug of this VolumeProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._nic_hot_plug
-
-    @nic_hot_plug.setter
-    def nic_hot_plug(self, nic_hot_plug):
-        """Sets the nic_hot_plug of this VolumeProperties.
-
-        Hot-plug capable NIC (no reboot required).  # noqa: E501
-
-        :param nic_hot_plug: The nic_hot_plug of this VolumeProperties.  # noqa: E501
-        :type nic_hot_plug: bool
+        :param device_number: The device_number of this VolumeProperties.  # noqa: E501
+        :type device_number: int
         """
 
-        self._nic_hot_plug = nic_hot_plug
-
-    @property
-    def nic_hot_unplug(self):
-        """Gets the nic_hot_unplug of this VolumeProperties.  # noqa: E501
-
-        Hot-unplug capable NIC (no reboot required).  # noqa: E501
-
-        :return: The nic_hot_unplug of this VolumeProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._nic_hot_unplug
-
-    @nic_hot_unplug.setter
-    def nic_hot_unplug(self, nic_hot_unplug):
-        """Sets the nic_hot_unplug of this VolumeProperties.
-
-        Hot-unplug capable NIC (no reboot required).  # noqa: E501
-
-        :param nic_hot_unplug: The nic_hot_unplug of this VolumeProperties.  # noqa: E501
-        :type nic_hot_unplug: bool
-        """
-
-        self._nic_hot_unplug = nic_hot_unplug
+        self._device_number = device_number
 
     @property
     def disc_virtio_hot_plug(self):
@@ -593,27 +426,169 @@ class VolumeProperties(object):
         self._disc_virtio_hot_unplug = disc_virtio_hot_unplug
 
     @property
-    def device_number(self):
-        """Gets the device_number of this VolumeProperties.  # noqa: E501
+    def image(self):
+        """Gets the image of this VolumeProperties.  # noqa: E501
 
-        The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.  # noqa: E501
+        Image or snapshot ID to be used as template for this volume.  # noqa: E501
 
-        :return: The device_number of this VolumeProperties.  # noqa: E501
-        :rtype: int
+        :return: The image of this VolumeProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._device_number
+        return self._image
 
-    @device_number.setter
-    def device_number(self, device_number):
-        """Sets the device_number of this VolumeProperties.
+    @image.setter
+    def image(self, image):
+        """Sets the image of this VolumeProperties.
 
-        The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.  # noqa: E501
+        Image or snapshot ID to be used as template for this volume.  # noqa: E501
 
-        :param device_number: The device_number of this VolumeProperties.  # noqa: E501
-        :type device_number: int
+        :param image: The image of this VolumeProperties.  # noqa: E501
+        :type image: str
         """
 
-        self._device_number = device_number
+        self._image = image
+
+    @property
+    def image_alias(self):
+        """Gets the image_alias of this VolumeProperties.  # noqa: E501
+
+
+        :return: The image_alias of this VolumeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._image_alias
+
+    @image_alias.setter
+    def image_alias(self, image_alias):
+        """Sets the image_alias of this VolumeProperties.
+
+
+        :param image_alias: The image_alias of this VolumeProperties.  # noqa: E501
+        :type image_alias: str
+        """
+
+        self._image_alias = image_alias
+
+    @property
+    def image_password(self):
+        """Gets the image_password of this VolumeProperties.  # noqa: E501
+
+        Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.  # noqa: E501
+
+        :return: The image_password of this VolumeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._image_password
+
+    @image_password.setter
+    def image_password(self, image_password):
+        """Sets the image_password of this VolumeProperties.
+
+        Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.  # noqa: E501
+
+        :param image_password: The image_password of this VolumeProperties.  # noqa: E501
+        :type image_password: str
+        """
+
+        self._image_password = image_password
+
+    @property
+    def licence_type(self):
+        """Gets the licence_type of this VolumeProperties.  # noqa: E501
+
+        OS type for this volume.  # noqa: E501
+
+        :return: The licence_type of this VolumeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._licence_type
+
+    @licence_type.setter
+    def licence_type(self, licence_type):
+        """Sets the licence_type of this VolumeProperties.
+
+        OS type for this volume.  # noqa: E501
+
+        :param licence_type: The licence_type of this VolumeProperties.  # noqa: E501
+        :type licence_type: str
+        """
+        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "WINDOWS2022", "RHEL", "LINUX", "OTHER"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and licence_type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `licence_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(licence_type, allowed_values)
+            )
+
+        self._licence_type = licence_type
+
+    @property
+    def name(self):
+        """Gets the name of this VolumeProperties.  # noqa: E501
+
+        The name of the  resource.  # noqa: E501
+
+        :return: The name of this VolumeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this VolumeProperties.
+
+        The name of the  resource.  # noqa: E501
+
+        :param name: The name of this VolumeProperties.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
+
+    @property
+    def nic_hot_plug(self):
+        """Gets the nic_hot_plug of this VolumeProperties.  # noqa: E501
+
+        Hot-plug capable NIC (no reboot required).  # noqa: E501
+
+        :return: The nic_hot_plug of this VolumeProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._nic_hot_plug
+
+    @nic_hot_plug.setter
+    def nic_hot_plug(self, nic_hot_plug):
+        """Sets the nic_hot_plug of this VolumeProperties.
+
+        Hot-plug capable NIC (no reboot required).  # noqa: E501
+
+        :param nic_hot_plug: The nic_hot_plug of this VolumeProperties.  # noqa: E501
+        :type nic_hot_plug: bool
+        """
+
+        self._nic_hot_plug = nic_hot_plug
+
+    @property
+    def nic_hot_unplug(self):
+        """Gets the nic_hot_unplug of this VolumeProperties.  # noqa: E501
+
+        Hot-unplug capable NIC (no reboot required).  # noqa: E501
+
+        :return: The nic_hot_unplug of this VolumeProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._nic_hot_unplug
+
+    @nic_hot_unplug.setter
+    def nic_hot_unplug(self, nic_hot_unplug):
+        """Sets the nic_hot_unplug of this VolumeProperties.
+
+        Hot-unplug capable NIC (no reboot required).  # noqa: E501
+
+        :param nic_hot_unplug: The nic_hot_unplug of this VolumeProperties.  # noqa: E501
+        :type nic_hot_unplug: bool
+        """
+
+        self._nic_hot_unplug = nic_hot_unplug
 
     @property
     def pci_slot(self):
@@ -639,27 +614,104 @@ class VolumeProperties(object):
         self._pci_slot = pci_slot
 
     @property
-    def backupunit_id(self):
-        """Gets the backupunit_id of this VolumeProperties.  # noqa: E501
+    def ram_hot_plug(self):
+        """Gets the ram_hot_plug of this VolumeProperties.  # noqa: E501
 
-        The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.  # noqa: E501
+        Hot-plug capable RAM (no reboot required).  # noqa: E501
 
-        :return: The backupunit_id of this VolumeProperties.  # noqa: E501
+        :return: The ram_hot_plug of this VolumeProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ram_hot_plug
+
+    @ram_hot_plug.setter
+    def ram_hot_plug(self, ram_hot_plug):
+        """Sets the ram_hot_plug of this VolumeProperties.
+
+        Hot-plug capable RAM (no reboot required).  # noqa: E501
+
+        :param ram_hot_plug: The ram_hot_plug of this VolumeProperties.  # noqa: E501
+        :type ram_hot_plug: bool
+        """
+
+        self._ram_hot_plug = ram_hot_plug
+
+    @property
+    def size(self):
+        """Gets the size of this VolumeProperties.  # noqa: E501
+
+        The size of the volume in GB.  # noqa: E501
+
+        :return: The size of this VolumeProperties.  # noqa: E501
+        :rtype: float
+        """
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        """Sets the size of this VolumeProperties.
+
+        The size of the volume in GB.  # noqa: E501
+
+        :param size: The size of this VolumeProperties.  # noqa: E501
+        :type size: float
+        """
+        if self.local_vars_configuration.client_side_validation and size is None:  # noqa: E501
+            raise ValueError("Invalid value for `size`, must not be `None`")  # noqa: E501
+
+        self._size = size
+
+    @property
+    def ssh_keys(self):
+        """Gets the ssh_keys of this VolumeProperties.  # noqa: E501
+
+        Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.  # noqa: E501
+
+        :return: The ssh_keys of this VolumeProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._ssh_keys
+
+    @ssh_keys.setter
+    def ssh_keys(self, ssh_keys):
+        """Sets the ssh_keys of this VolumeProperties.
+
+        Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.  # noqa: E501
+
+        :param ssh_keys: The ssh_keys of this VolumeProperties.  # noqa: E501
+        :type ssh_keys: list[str]
+        """
+
+        self._ssh_keys = ssh_keys
+
+    @property
+    def type(self):
+        """Gets the type of this VolumeProperties.  # noqa: E501
+
+        Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.  # noqa: E501
+
+        :return: The type of this VolumeProperties.  # noqa: E501
         :rtype: str
         """
-        return self._backupunit_id
+        return self._type
 
-    @backupunit_id.setter
-    def backupunit_id(self, backupunit_id):
-        """Sets the backupunit_id of this VolumeProperties.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this VolumeProperties.
 
-        The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.  # noqa: E501
+        Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.  # noqa: E501
 
-        :param backupunit_id: The backupunit_id of this VolumeProperties.  # noqa: E501
-        :type backupunit_id: str
+        :param type: The type of this VolumeProperties.  # noqa: E501
+        :type type: str
         """
+        allowed_values = ["HDD", "SSD", "SSD Standard", "SSD Premium", "DAS", "ISO"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
 
-        self._backupunit_id = backupunit_id
+        self._type = type
 
     @property
     def user_data(self):
@@ -683,58 +735,6 @@ class VolumeProperties(object):
         """
 
         self._user_data = user_data
-
-    @property
-    def boot_server(self):
-        """Gets the boot_server of this VolumeProperties.  # noqa: E501
-
-        The UUID of the attached server.  # noqa: E501
-
-        :return: The boot_server of this VolumeProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._boot_server
-
-    @boot_server.setter
-    def boot_server(self, boot_server):
-        """Sets the boot_server of this VolumeProperties.
-
-        The UUID of the attached server.  # noqa: E501
-
-        :param boot_server: The boot_server of this VolumeProperties.  # noqa: E501
-        :type boot_server: str
-        """
-
-        self._boot_server = boot_server
-
-    @property
-    def boot_order(self):
-        """Gets the boot_order of this VolumeProperties.  # noqa: E501
-
-        Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.  # noqa: E501
-
-        :return: The boot_order of this VolumeProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._boot_order
-
-    @boot_order.setter
-    def boot_order(self, boot_order):
-        """Sets the boot_order of this VolumeProperties.
-
-        Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.  # noqa: E501
-
-        :param boot_order: The boot_order of this VolumeProperties.  # noqa: E501
-        :type boot_order: str
-        """
-        allowed_values = [None,"AUTO", "NONE", "PRIMARY"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and boot_order not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `boot_order` ({0}), must be one of {1}"  # noqa: E501
-                .format(boot_order, allowed_values)
-            )
-
-        self._boot_order = boot_order
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

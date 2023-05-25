@@ -34,68 +34,112 @@ class LabelResources(object):
     """
     openapi_types = {
 
-        'id': 'str',
-
-        'type': 'str',
+        'links': 'PaginationLinks',
 
         'href': 'str',
 
-        'items': 'list[LabelResource]',
+        'id': 'str',
 
-        'offset': 'float',
+        'items': 'list[LabelResource]',
 
         'limit': 'float',
 
-        'links': 'PaginationLinks',
+        'offset': 'float',
+
+        'type': 'str',
     }
 
     attribute_map = {
 
-        'id': 'id',
-
-        'type': 'type',
+        'links': '_links',
 
         'href': 'href',
 
-        'items': 'items',
+        'id': 'id',
 
-        'offset': 'offset',
+        'items': 'items',
 
         'limit': 'limit',
 
-        'links': '_links',
+        'offset': 'offset',
+
+        'type': 'type',
     }
 
-    def __init__(self, id=None, type=None, href=None, items=None, offset=None, limit=None, links=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, links=None, href=None, id=None, items=None, limit=None, offset=None, type=None, local_vars_configuration=None):  # noqa: E501
         """LabelResources - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
-        self._type = None
-        self._href = None
-        self._items = None
-        self._offset = None
-        self._limit = None
         self._links = None
+        self._href = None
+        self._id = None
+        self._items = None
+        self._limit = None
+        self._offset = None
+        self._type = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if type is not None:
-            self.type = type
-        if href is not None:
-            self.href = href
-        if items is not None:
-            self.items = items
-        if offset is not None:
-            self.offset = offset
-        if limit is not None:
-            self.limit = limit
         if links is not None:
             self.links = links
+        if href is not None:
+            self.href = href
+        if id is not None:
+            self.id = id
+        if items is not None:
+            self.items = items
+        if limit is not None:
+            self.limit = limit
+        if offset is not None:
+            self.offset = offset
+        if type is not None:
+            self.type = type
 
+
+    @property
+    def links(self):
+        """Gets the links of this LabelResources.  # noqa: E501
+
+
+        :return: The links of this LabelResources.  # noqa: E501
+        :rtype: PaginationLinks
+        """
+        return self._links
+
+    @links.setter
+    def links(self, links):
+        """Sets the links of this LabelResources.
+
+
+        :param links: The links of this LabelResources.  # noqa: E501
+        :type links: PaginationLinks
+        """
+
+        self._links = links
+
+    @property
+    def href(self):
+        """Gets the href of this LabelResources.  # noqa: E501
+
+        URL to the collection representation (absolute path).  # noqa: E501
+
+        :return: The href of this LabelResources.  # noqa: E501
+        :rtype: str
+        """
+        return self._href
+
+    @href.setter
+    def href(self, href):
+        """Sets the href of this LabelResources.
+
+        URL to the collection representation (absolute path).  # noqa: E501
+
+        :param href: The href of this LabelResources.  # noqa: E501
+        :type href: str
+        """
+
+        self._href = href
 
     @property
     def id(self):
@@ -119,6 +163,75 @@ class LabelResources(object):
         """
 
         self._id = id
+
+    @property
+    def items(self):
+        """Gets the items of this LabelResources.  # noqa: E501
+
+        Array of items in the collection.  # noqa: E501
+
+        :return: The items of this LabelResources.  # noqa: E501
+        :rtype: list[LabelResource]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this LabelResources.
+
+        Array of items in the collection.  # noqa: E501
+
+        :param items: The items of this LabelResources.  # noqa: E501
+        :type items: list[LabelResource]
+        """
+
+        self._items = items
+
+    @property
+    def limit(self):
+        """Gets the limit of this LabelResources.  # noqa: E501
+
+        The limit (if specified in the request).  # noqa: E501
+
+        :return: The limit of this LabelResources.  # noqa: E501
+        :rtype: float
+        """
+        return self._limit
+
+    @limit.setter
+    def limit(self, limit):
+        """Sets the limit of this LabelResources.
+
+        The limit (if specified in the request).  # noqa: E501
+
+        :param limit: The limit of this LabelResources.  # noqa: E501
+        :type limit: float
+        """
+
+        self._limit = limit
+
+    @property
+    def offset(self):
+        """Gets the offset of this LabelResources.  # noqa: E501
+
+        The offset (if specified in the request).  # noqa: E501
+
+        :return: The offset of this LabelResources.  # noqa: E501
+        :rtype: float
+        """
+        return self._offset
+
+    @offset.setter
+    def offset(self, offset):
+        """Sets the offset of this LabelResources.
+
+        The offset (if specified in the request).  # noqa: E501
+
+        :param offset: The offset of this LabelResources.  # noqa: E501
+        :type offset: float
+        """
+
+        self._offset = offset
 
     @property
     def type(self):
@@ -148,119 +261,6 @@ class LabelResources(object):
             )
 
         self._type = type
-
-    @property
-    def href(self):
-        """Gets the href of this LabelResources.  # noqa: E501
-
-        URL to the collection representation (absolute path).  # noqa: E501
-
-        :return: The href of this LabelResources.  # noqa: E501
-        :rtype: str
-        """
-        return self._href
-
-    @href.setter
-    def href(self, href):
-        """Sets the href of this LabelResources.
-
-        URL to the collection representation (absolute path).  # noqa: E501
-
-        :param href: The href of this LabelResources.  # noqa: E501
-        :type href: str
-        """
-
-        self._href = href
-
-    @property
-    def items(self):
-        """Gets the items of this LabelResources.  # noqa: E501
-
-        Array of items in the collection.  # noqa: E501
-
-        :return: The items of this LabelResources.  # noqa: E501
-        :rtype: list[LabelResource]
-        """
-        return self._items
-
-    @items.setter
-    def items(self, items):
-        """Sets the items of this LabelResources.
-
-        Array of items in the collection.  # noqa: E501
-
-        :param items: The items of this LabelResources.  # noqa: E501
-        :type items: list[LabelResource]
-        """
-
-        self._items = items
-
-    @property
-    def offset(self):
-        """Gets the offset of this LabelResources.  # noqa: E501
-
-        The offset (if specified in the request).  # noqa: E501
-
-        :return: The offset of this LabelResources.  # noqa: E501
-        :rtype: float
-        """
-        return self._offset
-
-    @offset.setter
-    def offset(self, offset):
-        """Sets the offset of this LabelResources.
-
-        The offset (if specified in the request).  # noqa: E501
-
-        :param offset: The offset of this LabelResources.  # noqa: E501
-        :type offset: float
-        """
-
-        self._offset = offset
-
-    @property
-    def limit(self):
-        """Gets the limit of this LabelResources.  # noqa: E501
-
-        The limit (if specified in the request).  # noqa: E501
-
-        :return: The limit of this LabelResources.  # noqa: E501
-        :rtype: float
-        """
-        return self._limit
-
-    @limit.setter
-    def limit(self, limit):
-        """Sets the limit of this LabelResources.
-
-        The limit (if specified in the request).  # noqa: E501
-
-        :param limit: The limit of this LabelResources.  # noqa: E501
-        :type limit: float
-        """
-
-        self._limit = limit
-
-    @property
-    def links(self):
-        """Gets the links of this LabelResources.  # noqa: E501
-
-
-        :return: The links of this LabelResources.  # noqa: E501
-        :rtype: PaginationLinks
-        """
-        return self._links
-
-    @links.setter
-    def links(self, links):
-        """Sets the links of this LabelResources.
-
-
-        :param links: The links of this LabelResources.  # noqa: E501
-        :type links: PaginationLinks
-        """
-
-        self._links = links
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

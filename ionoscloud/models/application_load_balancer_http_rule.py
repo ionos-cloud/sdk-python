@@ -34,159 +34,126 @@ class ApplicationLoadBalancerHttpRule(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'conditions': 'list[ApplicationLoadBalancerHttpRuleCondition]',
 
-        'type': 'str',
-
-        'target_group': 'str',
+        'content_type': 'str',
 
         'drop_query': 'bool',
 
         'location': 'str',
 
-        'status_code': 'int',
+        'name': 'str',
 
         'response_message': 'str',
 
-        'content_type': 'str',
+        'status_code': 'int',
 
-        'conditions': 'list[ApplicationLoadBalancerHttpRuleCondition]',
+        'target_group': 'str',
+
+        'type': 'str',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'conditions': 'conditions',
 
-        'type': 'type',
-
-        'target_group': 'targetGroup',
+        'content_type': 'contentType',
 
         'drop_query': 'dropQuery',
 
         'location': 'location',
 
-        'status_code': 'statusCode',
+        'name': 'name',
 
         'response_message': 'responseMessage',
 
-        'content_type': 'contentType',
+        'status_code': 'statusCode',
 
-        'conditions': 'conditions',
+        'target_group': 'targetGroup',
+
+        'type': 'type',
     }
 
-    def __init__(self, name=None, type=None, target_group=None, drop_query=None, location=None, status_code=None, response_message=None, content_type=None, conditions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, conditions=None, content_type=None, drop_query=None, location=None, name=None, response_message=None, status_code=None, target_group=None, type=None, local_vars_configuration=None):  # noqa: E501
         """ApplicationLoadBalancerHttpRule - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._type = None
-        self._target_group = None
+        self._conditions = None
+        self._content_type = None
         self._drop_query = None
         self._location = None
-        self._status_code = None
+        self._name = None
         self._response_message = None
-        self._content_type = None
-        self._conditions = None
+        self._status_code = None
+        self._target_group = None
+        self._type = None
         self.discriminator = None
 
-        self.name = name
-        self.type = type
-        if target_group is not None:
-            self.target_group = target_group
+        if conditions is not None:
+            self.conditions = conditions
+        if content_type is not None:
+            self.content_type = content_type
         if drop_query is not None:
             self.drop_query = drop_query
         if location is not None:
             self.location = location
-        if status_code is not None:
-            self.status_code = status_code
+        self.name = name
         if response_message is not None:
             self.response_message = response_message
-        if content_type is not None:
-            self.content_type = content_type
-        if conditions is not None:
-            self.conditions = conditions
+        if status_code is not None:
+            self.status_code = status_code
+        if target_group is not None:
+            self.target_group = target_group
+        self.type = type
 
 
     @property
-    def name(self):
-        """Gets the name of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+    def conditions(self):
+        """Gets the conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        The unique name of the Application Load Balancer HTTP rule.  # noqa: E501
+        An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.  # noqa: E501
 
-        :return: The name of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :rtype: str
+        :return: The conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :rtype: list[ApplicationLoadBalancerHttpRuleCondition]
         """
-        return self._name
+        return self._conditions
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this ApplicationLoadBalancerHttpRule.
+    @conditions.setter
+    def conditions(self, conditions):
+        """Sets the conditions of this ApplicationLoadBalancerHttpRule.
 
-        The unique name of the Application Load Balancer HTTP rule.  # noqa: E501
+        An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.  # noqa: E501
 
-        :param name: The name of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :type name: str
+        :param conditions: The conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :type conditions: list[ApplicationLoadBalancerHttpRuleCondition]
         """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._name = name
+        self._conditions = conditions
 
     @property
-    def type(self):
-        """Gets the type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+    def content_type(self):
+        """Gets the content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        The HTTP rule type.  # noqa: E501
+        Specifies the content type and is valid only for 'STATIC' actions.  # noqa: E501
 
-        :return: The type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :return: The content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
         :rtype: str
         """
-        return self._type
+        return self._content_type
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this ApplicationLoadBalancerHttpRule.
+    @content_type.setter
+    def content_type(self, content_type):
+        """Sets the content_type of this ApplicationLoadBalancerHttpRule.
 
-        The HTTP rule type.  # noqa: E501
+        Specifies the content type and is valid only for 'STATIC' actions.  # noqa: E501
 
-        :param type: The type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :type type: str
-        """
-        if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
-        allowed_values = ["FORWARD", "STATIC", "REDIRECT"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
-
-        self._type = type
-
-    @property
-    def target_group(self):
-        """Gets the target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-
-        The ID of the target group; this parameter is mandatory and is valid only for 'FORWARD' actions.  # noqa: E501
-
-        :return: The target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_group
-
-    @target_group.setter
-    def target_group(self, target_group):
-        """Sets the target_group of this ApplicationLoadBalancerHttpRule.
-
-        The ID of the target group; this parameter is mandatory and is valid only for 'FORWARD' actions.  # noqa: E501
-
-        :param target_group: The target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :type target_group: str
+        :param content_type: The content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :type content_type: str
         """
 
-        self._target_group = target_group
+        self._content_type = content_type
 
     @property
     def drop_query(self):
@@ -235,27 +202,29 @@ class ApplicationLoadBalancerHttpRule(object):
         self._location = location
 
     @property
-    def status_code(self):
-        """Gets the status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+    def name(self):
+        """Gets the name of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        The status code is for 'REDIRECT' and 'STATIC' actions only.   If the HTTP rule is 'REDIRECT' the valid values are: 301, 302, 303, 307, 308; default value is '301'.  If the HTTP rule is 'STATIC' the valid values are from the range 200-599; default value is '503'.  # noqa: E501
+        The unique name of the Application Load Balancer HTTP rule.  # noqa: E501
 
-        :return: The status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :rtype: int
+        :return: The name of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :rtype: str
         """
-        return self._status_code
+        return self._name
 
-    @status_code.setter
-    def status_code(self, status_code):
-        """Sets the status_code of this ApplicationLoadBalancerHttpRule.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this ApplicationLoadBalancerHttpRule.
 
-        The status code is for 'REDIRECT' and 'STATIC' actions only.   If the HTTP rule is 'REDIRECT' the valid values are: 301, 302, 303, 307, 308; default value is '301'.  If the HTTP rule is 'STATIC' the valid values are from the range 200-599; default value is '503'.  # noqa: E501
+        The unique name of the Application Load Balancer HTTP rule.  # noqa: E501
 
-        :param status_code: The status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :type status_code: int
+        :param name: The name of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :type name: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._status_code = status_code
+        self._name = name
 
     @property
     def response_message(self):
@@ -281,50 +250,81 @@ class ApplicationLoadBalancerHttpRule(object):
         self._response_message = response_message
 
     @property
-    def content_type(self):
-        """Gets the content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+    def status_code(self):
+        """Gets the status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        Specifies the content type and is valid only for 'STATIC' actions.  # noqa: E501
+        The status code is for 'REDIRECT' and 'STATIC' actions only.   If the HTTP rule is 'REDIRECT' the valid values are: 301, 302, 303, 307, 308; default value is '301'.  If the HTTP rule is 'STATIC' the valid values are from the range 200-599; default value is '503'.  # noqa: E501
 
-        :return: The content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :rtype: str
+        :return: The status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :rtype: int
         """
-        return self._content_type
+        return self._status_code
 
-    @content_type.setter
-    def content_type(self, content_type):
-        """Sets the content_type of this ApplicationLoadBalancerHttpRule.
+    @status_code.setter
+    def status_code(self, status_code):
+        """Sets the status_code of this ApplicationLoadBalancerHttpRule.
 
-        Specifies the content type and is valid only for 'STATIC' actions.  # noqa: E501
+        The status code is for 'REDIRECT' and 'STATIC' actions only.   If the HTTP rule is 'REDIRECT' the valid values are: 301, 302, 303, 307, 308; default value is '301'.  If the HTTP rule is 'STATIC' the valid values are from the range 200-599; default value is '503'.  # noqa: E501
 
-        :param content_type: The content_type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :type content_type: str
+        :param status_code: The status_code of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :type status_code: int
         """
 
-        self._content_type = content_type
+        self._status_code = status_code
 
     @property
-    def conditions(self):
-        """Gets the conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+    def target_group(self):
+        """Gets the target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
 
-        An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.  # noqa: E501
+        The ID of the target group; this parameter is mandatory and is valid only for 'FORWARD' actions.  # noqa: E501
 
-        :return: The conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :rtype: list[ApplicationLoadBalancerHttpRuleCondition]
+        :return: The target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :rtype: str
         """
-        return self._conditions
+        return self._target_group
 
-    @conditions.setter
-    def conditions(self, conditions):
-        """Sets the conditions of this ApplicationLoadBalancerHttpRule.
+    @target_group.setter
+    def target_group(self, target_group):
+        """Sets the target_group of this ApplicationLoadBalancerHttpRule.
 
-        An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.  # noqa: E501
+        The ID of the target group; this parameter is mandatory and is valid only for 'FORWARD' actions.  # noqa: E501
 
-        :param conditions: The conditions of this ApplicationLoadBalancerHttpRule.  # noqa: E501
-        :type conditions: list[ApplicationLoadBalancerHttpRuleCondition]
+        :param target_group: The target_group of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :type target_group: str
         """
 
-        self._conditions = conditions
+        self._target_group = target_group
+
+    @property
+    def type(self):
+        """Gets the type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+
+        The HTTP rule type.  # noqa: E501
+
+        :return: The type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this ApplicationLoadBalancerHttpRule.
+
+        The HTTP rule type.  # noqa: E501
+
+        :param type: The type of this ApplicationLoadBalancerHttpRule.  # noqa: E501
+        :type type: str
+        """
+        if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        allowed_values = ["FORWARD", "STATIC", "REDIRECT"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
+
+        self._type = type
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

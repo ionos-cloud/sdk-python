@@ -34,55 +34,32 @@ class Contract(object):
     """
     openapi_types = {
 
-        'type': 'Type',
-
         'properties': 'ContractProperties',
+
+        'type': 'Type',
     }
 
     attribute_map = {
 
-        'type': 'type',
-
         'properties': 'properties',
+
+        'type': 'type',
     }
 
-    def __init__(self, type=None, properties=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, properties=None, type=None, local_vars_configuration=None):  # noqa: E501
         """Contract - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._type = None
         self._properties = None
+        self._type = None
         self.discriminator = None
 
+        self.properties = properties
         if type is not None:
             self.type = type
-        self.properties = properties
 
-
-    @property
-    def type(self):
-        """Gets the type of this Contract.  # noqa: E501
-
-        The type of the resource.  # noqa: E501
-
-        :return: The type of this Contract.  # noqa: E501
-        :rtype: Type
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this Contract.
-
-        The type of the resource.  # noqa: E501
-
-        :param type: The type of this Contract.  # noqa: E501
-        :type type: Type
-        """
-
-        self._type = type
 
     @property
     def properties(self):
@@ -106,6 +83,29 @@ class Contract(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
+
+    @property
+    def type(self):
+        """Gets the type of this Contract.  # noqa: E501
+
+        The type of the resource.  # noqa: E501
+
+        :return: The type of this Contract.  # noqa: E501
+        :rtype: Type
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Contract.
+
+        The type of the resource.  # noqa: E501
+
+        :param type: The type of this Contract.  # noqa: E501
+        :type type: Type
+        """
+
+        self._type = type
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

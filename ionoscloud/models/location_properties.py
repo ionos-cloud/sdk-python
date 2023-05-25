@@ -34,70 +34,70 @@ class LocationProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'cpu_architecture': 'list[CpuArchitectureProperties]',
 
         'features': 'list[str]',
 
         'image_aliases': 'list[str]',
 
-        'cpu_architecture': 'list[CpuArchitectureProperties]',
+        'name': 'str',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'cpu_architecture': 'cpuArchitecture',
 
         'features': 'features',
 
         'image_aliases': 'imageAliases',
 
-        'cpu_architecture': 'cpuArchitecture',
+        'name': 'name',
     }
 
-    def __init__(self, name=None, features=None, image_aliases=None, cpu_architecture=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cpu_architecture=None, features=None, image_aliases=None, name=None, local_vars_configuration=None):  # noqa: E501
         """LocationProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
+        self._cpu_architecture = None
         self._features = None
         self._image_aliases = None
-        self._cpu_architecture = None
+        self._name = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
+        if cpu_architecture is not None:
+            self.cpu_architecture = cpu_architecture
         if features is not None:
             self.features = features
         if image_aliases is not None:
             self.image_aliases = image_aliases
-        if cpu_architecture is not None:
-            self.cpu_architecture = cpu_architecture
+        if name is not None:
+            self.name = name
 
 
     @property
-    def name(self):
-        """Gets the name of this LocationProperties.  # noqa: E501
+    def cpu_architecture(self):
+        """Gets the cpu_architecture of this LocationProperties.  # noqa: E501
 
-        The location name.  # noqa: E501
+        A list of available CPU types and related resources available in the location.  # noqa: E501
 
-        :return: The name of this LocationProperties.  # noqa: E501
-        :rtype: str
+        :return: The cpu_architecture of this LocationProperties.  # noqa: E501
+        :rtype: list[CpuArchitectureProperties]
         """
-        return self._name
+        return self._cpu_architecture
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this LocationProperties.
+    @cpu_architecture.setter
+    def cpu_architecture(self, cpu_architecture):
+        """Sets the cpu_architecture of this LocationProperties.
 
-        The location name.  # noqa: E501
+        A list of available CPU types and related resources available in the location.  # noqa: E501
 
-        :param name: The name of this LocationProperties.  # noqa: E501
-        :type name: str
+        :param cpu_architecture: The cpu_architecture of this LocationProperties.  # noqa: E501
+        :type cpu_architecture: list[CpuArchitectureProperties]
         """
 
-        self._name = name
+        self._cpu_architecture = cpu_architecture
 
     @property
     def features(self):
@@ -146,27 +146,27 @@ class LocationProperties(object):
         self._image_aliases = image_aliases
 
     @property
-    def cpu_architecture(self):
-        """Gets the cpu_architecture of this LocationProperties.  # noqa: E501
+    def name(self):
+        """Gets the name of this LocationProperties.  # noqa: E501
 
-        A list of available CPU types and related resources available in the location.  # noqa: E501
+        The location name.  # noqa: E501
 
-        :return: The cpu_architecture of this LocationProperties.  # noqa: E501
-        :rtype: list[CpuArchitectureProperties]
+        :return: The name of this LocationProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._cpu_architecture
+        return self._name
 
-    @cpu_architecture.setter
-    def cpu_architecture(self, cpu_architecture):
-        """Sets the cpu_architecture of this LocationProperties.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this LocationProperties.
 
-        A list of available CPU types and related resources available in the location.  # noqa: E501
+        The location name.  # noqa: E501
 
-        :param cpu_architecture: The cpu_architecture of this LocationProperties.  # noqa: E501
-        :type cpu_architecture: list[CpuArchitectureProperties]
+        :param name: The name of this LocationProperties.  # noqa: E501
+        :type name: str
         """
 
-        self._cpu_architecture = cpu_architecture
+        self._name = name
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

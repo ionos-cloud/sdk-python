@@ -38,9 +38,9 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
 
         'connect_timeout': 'int',
 
-        'target_timeout': 'int',
-
         'retries': 'int',
+
+        'target_timeout': 'int',
     }
 
     attribute_map = {
@@ -49,12 +49,12 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
 
         'connect_timeout': 'connectTimeout',
 
-        'target_timeout': 'targetTimeout',
-
         'retries': 'retries',
+
+        'target_timeout': 'targetTimeout',
     }
 
-    def __init__(self, client_timeout=None, connect_timeout=None, target_timeout=None, retries=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, client_timeout=None, connect_timeout=None, retries=None, target_timeout=None, local_vars_configuration=None):  # noqa: E501
         """NetworkLoadBalancerForwardingRuleHealthCheck - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -62,18 +62,18 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
 
         self._client_timeout = None
         self._connect_timeout = None
-        self._target_timeout = None
         self._retries = None
+        self._target_timeout = None
         self.discriminator = None
 
         if client_timeout is not None:
             self.client_timeout = client_timeout
         if connect_timeout is not None:
             self.connect_timeout = connect_timeout
-        if target_timeout is not None:
-            self.target_timeout = target_timeout
         if retries is not None:
             self.retries = retries
+        if target_timeout is not None:
+            self.target_timeout = target_timeout
 
 
     @property
@@ -123,29 +123,6 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
         self._connect_timeout = connect_timeout
 
     @property
-    def target_timeout(self):
-        """Gets the target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
-
-        The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).  # noqa: E501
-
-        :return: The target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
-        :rtype: int
-        """
-        return self._target_timeout
-
-    @target_timeout.setter
-    def target_timeout(self, target_timeout):
-        """Sets the target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.
-
-        The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).  # noqa: E501
-
-        :param target_timeout: The target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
-        :type target_timeout: int
-        """
-
-        self._target_timeout = target_timeout
-
-    @property
     def retries(self):
         """Gets the retries of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
 
@@ -167,6 +144,29 @@ class NetworkLoadBalancerForwardingRuleHealthCheck(object):
         """
 
         self._retries = retries
+
+    @property
+    def target_timeout(self):
+        """Gets the target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
+
+        The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).  # noqa: E501
+
+        :return: The target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
+        :rtype: int
+        """
+        return self._target_timeout
+
+    @target_timeout.setter
+    def target_timeout(self, target_timeout):
+        """Sets the target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.
+
+        The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).  # noqa: E501
+
+        :param target_timeout: The target_timeout of this NetworkLoadBalancerForwardingRuleHealthCheck.  # noqa: E501
+        :type target_timeout: int
+        """
+
+        self._target_timeout = target_timeout
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -34,114 +34,68 @@ class NoStateMetaData(object):
     """
     openapi_types = {
 
-        'etag': 'str',
-
-        'created_date': 'datetime',
-
         'created_by': 'str',
 
         'created_by_user_id': 'str',
 
-        'last_modified_date': 'datetime',
+        'created_date': 'datetime',
+
+        'etag': 'str',
 
         'last_modified_by': 'str',
 
         'last_modified_by_user_id': 'str',
+
+        'last_modified_date': 'datetime',
     }
 
     attribute_map = {
-
-        'etag': 'etag',
-
-        'created_date': 'createdDate',
 
         'created_by': 'createdBy',
 
         'created_by_user_id': 'createdByUserId',
 
-        'last_modified_date': 'lastModifiedDate',
+        'created_date': 'createdDate',
+
+        'etag': 'etag',
 
         'last_modified_by': 'lastModifiedBy',
 
         'last_modified_by_user_id': 'lastModifiedByUserId',
+
+        'last_modified_date': 'lastModifiedDate',
     }
 
-    def __init__(self, etag=None, created_date=None, created_by=None, created_by_user_id=None, last_modified_date=None, last_modified_by=None, last_modified_by_user_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, created_by=None, created_by_user_id=None, created_date=None, etag=None, last_modified_by=None, last_modified_by_user_id=None, last_modified_date=None, local_vars_configuration=None):  # noqa: E501
         """NoStateMetaData - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._etag = None
-        self._created_date = None
         self._created_by = None
         self._created_by_user_id = None
-        self._last_modified_date = None
+        self._created_date = None
+        self._etag = None
         self._last_modified_by = None
         self._last_modified_by_user_id = None
+        self._last_modified_date = None
         self.discriminator = None
 
-        if etag is not None:
-            self.etag = etag
-        if created_date is not None:
-            self.created_date = created_date
         if created_by is not None:
             self.created_by = created_by
         if created_by_user_id is not None:
             self.created_by_user_id = created_by_user_id
-        if last_modified_date is not None:
-            self.last_modified_date = last_modified_date
+        if created_date is not None:
+            self.created_date = created_date
+        if etag is not None:
+            self.etag = etag
         if last_modified_by is not None:
             self.last_modified_by = last_modified_by
         if last_modified_by_user_id is not None:
             self.last_modified_by_user_id = last_modified_by_user_id
+        if last_modified_date is not None:
+            self.last_modified_date = last_modified_date
 
-
-    @property
-    def etag(self):
-        """Gets the etag of this NoStateMetaData.  # noqa: E501
-
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
-
-        :return: The etag of this NoStateMetaData.  # noqa: E501
-        :rtype: str
-        """
-        return self._etag
-
-    @etag.setter
-    def etag(self, etag):
-        """Sets the etag of this NoStateMetaData.
-
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
-
-        :param etag: The etag of this NoStateMetaData.  # noqa: E501
-        :type etag: str
-        """
-
-        self._etag = etag
-
-    @property
-    def created_date(self):
-        """Gets the created_date of this NoStateMetaData.  # noqa: E501
-
-        The time when the resource was created.  # noqa: E501
-
-        :return: The created_date of this NoStateMetaData.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_date
-
-    @created_date.setter
-    def created_date(self, created_date):
-        """Sets the created_date of this NoStateMetaData.
-
-        The time when the resource was created.  # noqa: E501
-
-        :param created_date: The created_date of this NoStateMetaData.  # noqa: E501
-        :type created_date: datetime
-        """
-
-        self._created_date = created_date
 
     @property
     def created_by(self):
@@ -190,27 +144,50 @@ class NoStateMetaData(object):
         self._created_by_user_id = created_by_user_id
 
     @property
-    def last_modified_date(self):
-        """Gets the last_modified_date of this NoStateMetaData.  # noqa: E501
+    def created_date(self):
+        """Gets the created_date of this NoStateMetaData.  # noqa: E501
 
-        The last time the resource was modified.  # noqa: E501
+        The time when the resource was created.  # noqa: E501
 
-        :return: The last_modified_date of this NoStateMetaData.  # noqa: E501
+        :return: The created_date of this NoStateMetaData.  # noqa: E501
         :rtype: datetime
         """
-        return self._last_modified_date
+        return self._created_date
 
-    @last_modified_date.setter
-    def last_modified_date(self, last_modified_date):
-        """Sets the last_modified_date of this NoStateMetaData.
+    @created_date.setter
+    def created_date(self, created_date):
+        """Sets the created_date of this NoStateMetaData.
 
-        The last time the resource was modified.  # noqa: E501
+        The time when the resource was created.  # noqa: E501
 
-        :param last_modified_date: The last_modified_date of this NoStateMetaData.  # noqa: E501
-        :type last_modified_date: datetime
+        :param created_date: The created_date of this NoStateMetaData.  # noqa: E501
+        :type created_date: datetime
         """
 
-        self._last_modified_date = last_modified_date
+        self._created_date = created_date
+
+    @property
+    def etag(self):
+        """Gets the etag of this NoStateMetaData.  # noqa: E501
+
+        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+
+        :return: The etag of this NoStateMetaData.  # noqa: E501
+        :rtype: str
+        """
+        return self._etag
+
+    @etag.setter
+    def etag(self, etag):
+        """Sets the etag of this NoStateMetaData.
+
+        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+
+        :param etag: The etag of this NoStateMetaData.  # noqa: E501
+        :type etag: str
+        """
+
+        self._etag = etag
 
     @property
     def last_modified_by(self):
@@ -257,6 +234,29 @@ class NoStateMetaData(object):
         """
 
         self._last_modified_by_user_id = last_modified_by_user_id
+
+    @property
+    def last_modified_date(self):
+        """Gets the last_modified_date of this NoStateMetaData.  # noqa: E501
+
+        The last time the resource was modified.  # noqa: E501
+
+        :return: The last_modified_date of this NoStateMetaData.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._last_modified_date
+
+    @last_modified_date.setter
+    def last_modified_date(self, last_modified_date):
+        """Sets the last_modified_date of this NoStateMetaData.
+
+        The last time the resource was modified.  # noqa: E501
+
+        :param last_modified_date: The last_modified_date of this NoStateMetaData.  # noqa: E501
+        :type last_modified_date: datetime
+        """
+
+        self._last_modified_date = last_modified_date
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

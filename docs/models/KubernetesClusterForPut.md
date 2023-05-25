@@ -3,11 +3,11 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly]  |
-| **type** | **str** | The type of object. | [optional] [readonly]  |
+| **entities** | [**KubernetesClusterEntities**](KubernetesClusterEntities.md) |  | [optional]  |
 | **href** | **str** | URL to the object representation (absolute path). | [optional] [readonly]  |
+| **id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly]  |
 | **metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional]  |
 | **properties** | [**KubernetesClusterPropertiesForPut**](KubernetesClusterPropertiesForPut.md) |  |  |
-| **entities** | [**KubernetesClusterEntities**](KubernetesClusterEntities.md) |  | [optional]  |
+| **type** | **str** | The type of object. | [optional] [readonly]  |
 
 

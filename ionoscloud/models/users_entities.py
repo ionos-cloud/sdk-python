@@ -34,54 +34,33 @@ class UsersEntities(object):
     """
     openapi_types = {
 
-        'owns': 'ResourcesUsers',
-
         'groups': 'GroupUsers',
+
+        'owns': 'ResourcesUsers',
     }
 
     attribute_map = {
 
-        'owns': 'owns',
-
         'groups': 'groups',
+
+        'owns': 'owns',
     }
 
-    def __init__(self, owns=None, groups=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, groups=None, owns=None, local_vars_configuration=None):  # noqa: E501
         """UsersEntities - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._owns = None
         self._groups = None
+        self._owns = None
         self.discriminator = None
 
-        if owns is not None:
-            self.owns = owns
         if groups is not None:
             self.groups = groups
+        if owns is not None:
+            self.owns = owns
 
-
-    @property
-    def owns(self):
-        """Gets the owns of this UsersEntities.  # noqa: E501
-
-
-        :return: The owns of this UsersEntities.  # noqa: E501
-        :rtype: ResourcesUsers
-        """
-        return self._owns
-
-    @owns.setter
-    def owns(self, owns):
-        """Sets the owns of this UsersEntities.
-
-
-        :param owns: The owns of this UsersEntities.  # noqa: E501
-        :type owns: ResourcesUsers
-        """
-
-        self._owns = owns
 
     @property
     def groups(self):
@@ -103,6 +82,27 @@ class UsersEntities(object):
         """
 
         self._groups = groups
+
+    @property
+    def owns(self):
+        """Gets the owns of this UsersEntities.  # noqa: E501
+
+
+        :return: The owns of this UsersEntities.  # noqa: E501
+        :rtype: ResourcesUsers
+        """
+        return self._owns
+
+    @owns.setter
+    def owns(self, owns):
+        """Sets the owns of this UsersEntities.
+
+
+        :param owns: The owns of this UsersEntities.  # noqa: E501
+        :type owns: ResourcesUsers
+        """
+
+        self._owns = owns
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

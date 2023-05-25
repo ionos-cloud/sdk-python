@@ -3,11 +3,11 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly]  |
-| **type** | [**Type**](Type.md) | The type of object that has been created. | [optional]  |
+| **entities** | [**DataCenterEntities**](DataCenterEntities.md) |  | [optional]  |
 | **href** | **str** | URL to the object representation (absolute path). | [optional] [readonly]  |
+| **id** | **str** | The resource&#39;s unique identifier. | [optional] [readonly]  |
 | **metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional]  |
 | **properties** | [**DatacenterProperties**](DatacenterProperties.md) |  |  |
-| **entities** | [**DataCenterEntities**](DataCenterEntities.md) |  | [optional]  |
+| **type** | [**Type**](Type.md) | The type of object that has been created. | [optional]  |
 
 

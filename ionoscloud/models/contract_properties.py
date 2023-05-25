@@ -38,11 +38,11 @@ class ContractProperties(object):
 
         'owner': 'str',
 
-        'status': 'str',
-
         'reg_domain': 'str',
 
         'resource_limits': 'ResourceLimits',
+
+        'status': 'str',
     }
 
     attribute_map = {
@@ -51,14 +51,14 @@ class ContractProperties(object):
 
         'owner': 'owner',
 
-        'status': 'status',
-
         'reg_domain': 'regDomain',
 
         'resource_limits': 'resourceLimits',
+
+        'status': 'status',
     }
 
-    def __init__(self, contract_number=None, owner=None, status=None, reg_domain=None, resource_limits=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, contract_number=None, owner=None, reg_domain=None, resource_limits=None, status=None, local_vars_configuration=None):  # noqa: E501
         """ContractProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,21 +66,21 @@ class ContractProperties(object):
 
         self._contract_number = None
         self._owner = None
-        self._status = None
         self._reg_domain = None
         self._resource_limits = None
+        self._status = None
         self.discriminator = None
 
         if contract_number is not None:
             self.contract_number = contract_number
         if owner is not None:
             self.owner = owner
-        if status is not None:
-            self.status = status
         if reg_domain is not None:
             self.reg_domain = reg_domain
         if resource_limits is not None:
             self.resource_limits = resource_limits
+        if status is not None:
+            self.status = status
 
 
     @property
@@ -130,29 +130,6 @@ class ContractProperties(object):
         self._owner = owner
 
     @property
-    def status(self):
-        """Gets the status of this ContractProperties.  # noqa: E501
-
-        The contract status.  # noqa: E501
-
-        :return: The status of this ContractProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """Sets the status of this ContractProperties.
-
-        The contract status.  # noqa: E501
-
-        :param status: The status of this ContractProperties.  # noqa: E501
-        :type status: str
-        """
-
-        self._status = status
-
-    @property
     def reg_domain(self):
         """Gets the reg_domain of this ContractProperties.  # noqa: E501
 
@@ -195,6 +172,29 @@ class ContractProperties(object):
         """
 
         self._resource_limits = resource_limits
+
+    @property
+    def status(self):
+        """Gets the status of this ContractProperties.  # noqa: E501
+
+        The contract status.  # noqa: E501
+
+        :return: The status of this ContractProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """Sets the status of this ContractProperties.
+
+        The contract status.  # noqa: E501
+
+        :param status: The status of this ContractProperties.  # noqa: E501
+        :type status: str
+        """
+
+        self._status = status
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

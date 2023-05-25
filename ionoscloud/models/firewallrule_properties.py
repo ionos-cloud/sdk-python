@@ -34,242 +34,89 @@ class FirewallruleProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
-        'protocol': 'str',
-
-        'source_mac': 'str',
-
-        'ip_version': 'str',
-
-        'source_ip': 'str',
-
-        'target_ip': 'str',
-
         'icmp_code': 'int',
 
         'icmp_type': 'int',
 
-        'port_range_start': 'int',
+        'ip_version': 'str',
+
+        'name': 'str',
 
         'port_range_end': 'int',
+
+        'port_range_start': 'int',
+
+        'protocol': 'str',
+
+        'source_ip': 'str',
+
+        'source_mac': 'str',
+
+        'target_ip': 'str',
 
         'type': 'str',
     }
 
     attribute_map = {
 
-        'name': 'name',
-
-        'protocol': 'protocol',
-
-        'source_mac': 'sourceMac',
-
-        'ip_version': 'ipVersion',
-
-        'source_ip': 'sourceIp',
-
-        'target_ip': 'targetIp',
-
         'icmp_code': 'icmpCode',
 
         'icmp_type': 'icmpType',
 
-        'port_range_start': 'portRangeStart',
+        'ip_version': 'ipVersion',
+
+        'name': 'name',
 
         'port_range_end': 'portRangeEnd',
+
+        'port_range_start': 'portRangeStart',
+
+        'protocol': 'protocol',
+
+        'source_ip': 'sourceIp',
+
+        'source_mac': 'sourceMac',
+
+        'target_ip': 'targetIp',
 
         'type': 'type',
     }
 
-    def __init__(self, name=None, protocol=None, source_mac=None, ip_version=None, source_ip=None, target_ip=None, icmp_code=None, icmp_type=None, port_range_start=None, port_range_end=None, type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, icmp_code=None, icmp_type=None, ip_version=None, name=None, port_range_end=None, port_range_start=None, protocol=None, source_ip=None, source_mac=None, target_ip=None, type=None, local_vars_configuration=None):  # noqa: E501
         """FirewallruleProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._protocol = None
-        self._source_mac = None
-        self._ip_version = None
-        self._source_ip = None
-        self._target_ip = None
         self._icmp_code = None
         self._icmp_type = None
-        self._port_range_start = None
+        self._ip_version = None
+        self._name = None
         self._port_range_end = None
+        self._port_range_start = None
+        self._protocol = None
+        self._source_ip = None
+        self._source_mac = None
+        self._target_ip = None
         self._type = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        self.protocol = protocol
-        self.source_mac = source_mac
-        if ip_version is not None:
-            self.ip_version = ip_version
-        self.source_ip = source_ip
-        self.target_ip = target_ip
         self.icmp_code = icmp_code
         self.icmp_type = icmp_type
-        if port_range_start is not None:
-            self.port_range_start = port_range_start
+        self.ip_version = ip_version
+        if name is not None:
+            self.name = name
         if port_range_end is not None:
             self.port_range_end = port_range_end
+        if port_range_start is not None:
+            self.port_range_start = port_range_start
+        self.protocol = protocol
+        self.source_ip = source_ip
+        self.source_mac = source_mac
+        self.target_ip = target_ip
         if type is not None:
             self.type = type
 
-
-    @property
-    def name(self):
-        """Gets the name of this FirewallruleProperties.  # noqa: E501
-
-        The name of the  resource.  # noqa: E501
-
-        :return: The name of this FirewallruleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this FirewallruleProperties.
-
-        The name of the  resource.  # noqa: E501
-
-        :param name: The name of this FirewallruleProperties.  # noqa: E501
-        :type name: str
-        """
-
-        self._name = name
-
-    @property
-    def protocol(self):
-        """Gets the protocol of this FirewallruleProperties.  # noqa: E501
-
-        The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).  # noqa: E501
-
-        :return: The protocol of this FirewallruleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._protocol
-
-    @protocol.setter
-    def protocol(self, protocol):
-        """Sets the protocol of this FirewallruleProperties.
-
-        The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).  # noqa: E501
-
-        :param protocol: The protocol of this FirewallruleProperties.  # noqa: E501
-        :type protocol: str
-        """
-        if self.local_vars_configuration.client_side_validation and protocol is None:  # noqa: E501
-            raise ValueError("Invalid value for `protocol`, must not be `None`")  # noqa: E501
-        allowed_values = ["TCP", "UDP", "ICMP", "ICMPv6", "ANY"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and protocol not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `protocol` ({0}), must be one of {1}"  # noqa: E501
-                .format(protocol, allowed_values)
-            )
-
-        self._protocol = protocol
-
-    @property
-    def source_mac(self):
-        """Gets the source_mac of this FirewallruleProperties.  # noqa: E501
-
-        Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address.  # noqa: E501
-
-        :return: The source_mac of this FirewallruleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_mac
-
-    @source_mac.setter
-    def source_mac(self, source_mac):
-        """Sets the source_mac of this FirewallruleProperties.
-
-        Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address.  # noqa: E501
-
-        :param source_mac: The source_mac of this FirewallruleProperties.  # noqa: E501
-        :type source_mac: str
-        """
-
-        self._source_mac = source_mac
-
-    @property
-    def ip_version(self):
-        """Gets the ip_version of this FirewallruleProperties.  # noqa: E501
-
-        The IP version for this rule. If sourceIp or targetIp are specified, you can omit this value - the IP version will then be deduced from the IP address(es) used; if you specify it anyway, it must match the specified IP address(es). If neither sourceIp nor targetIp are specified, this rule allows traffic only for the specified IP version. If neither sourceIp, targetIp nor ipVersion are specified, this rule will only allow IPv4 traffic.  # noqa: E501
-
-        :return: The ip_version of this FirewallruleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._ip_version
-
-    @ip_version.setter
-    def ip_version(self, ip_version):
-        """Sets the ip_version of this FirewallruleProperties.
-
-        The IP version for this rule. If sourceIp or targetIp are specified, you can omit this value - the IP version will then be deduced from the IP address(es) used; if you specify it anyway, it must match the specified IP address(es). If neither sourceIp nor targetIp are specified, this rule allows traffic only for the specified IP version. If neither sourceIp, targetIp nor ipVersion are specified, this rule will only allow IPv4 traffic.  # noqa: E501
-
-        :param ip_version: The ip_version of this FirewallruleProperties.  # noqa: E501
-        :type ip_version: str
-        """
-        allowed_values = ["IPv4", "IPv6"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and ip_version not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `ip_version` ({0}), must be one of {1}"  # noqa: E501
-                .format(ip_version, allowed_values)
-            )
-
-        self._ip_version = ip_version
-
-    @property
-    def source_ip(self):
-        """Gets the source_ip of this FirewallruleProperties.  # noqa: E501
-
-        Only traffic originating from the respective IP address (or CIDR block) is allowed. Value null allows traffic from any IP address (according to the selected ipVersion).  # noqa: E501
-
-        :return: The source_ip of this FirewallruleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._source_ip
-
-    @source_ip.setter
-    def source_ip(self, source_ip):
-        """Sets the source_ip of this FirewallruleProperties.
-
-        Only traffic originating from the respective IP address (or CIDR block) is allowed. Value null allows traffic from any IP address (according to the selected ipVersion).  # noqa: E501
-
-        :param source_ip: The source_ip of this FirewallruleProperties.  # noqa: E501
-        :type source_ip: str
-        """
-
-        self._source_ip = source_ip
-
-    @property
-    def target_ip(self):
-        """Gets the target_ip of this FirewallruleProperties.  # noqa: E501
-
-        If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address (or CIDR block) of the NIC is allowed. Value null allows traffic to any target IP address (according to the selected ipVersion).  # noqa: E501
-
-        :return: The target_ip of this FirewallruleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._target_ip
-
-    @target_ip.setter
-    def target_ip(self, target_ip):
-        """Sets the target_ip of this FirewallruleProperties.
-
-        If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address (or CIDR block) of the NIC is allowed. Value null allows traffic to any target IP address (according to the selected ipVersion).  # noqa: E501
-
-        :param target_ip: The target_ip of this FirewallruleProperties.  # noqa: E501
-        :type target_ip: str
-        """
-
-        self._target_ip = target_ip
 
     @property
     def icmp_code(self):
@@ -330,33 +177,56 @@ class FirewallruleProperties(object):
         self._icmp_type = icmp_type
 
     @property
-    def port_range_start(self):
-        """Gets the port_range_start of this FirewallruleProperties.  # noqa: E501
+    def ip_version(self):
+        """Gets the ip_version of this FirewallruleProperties.  # noqa: E501
 
-        Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports.  # noqa: E501
+        The IP version for this rule. If sourceIp or targetIp are specified, you can omit this value - the IP version will then be deduced from the IP address(es) used; if you specify it anyway, it must match the specified IP address(es). If neither sourceIp nor targetIp are specified, this rule allows traffic only for the specified IP version. If neither sourceIp, targetIp nor ipVersion are specified, this rule will only allow IPv4 traffic.  # noqa: E501
 
-        :return: The port_range_start of this FirewallruleProperties.  # noqa: E501
-        :rtype: int
+        :return: The ip_version of this FirewallruleProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._port_range_start
+        return self._ip_version
 
-    @port_range_start.setter
-    def port_range_start(self, port_range_start):
-        """Sets the port_range_start of this FirewallruleProperties.
+    @ip_version.setter
+    def ip_version(self, ip_version):
+        """Sets the ip_version of this FirewallruleProperties.
 
-        Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports.  # noqa: E501
+        The IP version for this rule. If sourceIp or targetIp are specified, you can omit this value - the IP version will then be deduced from the IP address(es) used; if you specify it anyway, it must match the specified IP address(es). If neither sourceIp nor targetIp are specified, this rule allows traffic only for the specified IP version. If neither sourceIp, targetIp nor ipVersion are specified, this rule will only allow IPv4 traffic.  # noqa: E501
 
-        :param port_range_start: The port_range_start of this FirewallruleProperties.  # noqa: E501
-        :type port_range_start: int
+        :param ip_version: The ip_version of this FirewallruleProperties.  # noqa: E501
+        :type ip_version: str
         """
-        if (self.local_vars_configuration.client_side_validation and
-                port_range_start is not None and port_range_start > 65534):  # noqa: E501
-            raise ValueError("Invalid value for `port_range_start`, must be a value less than or equal to `65534`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                port_range_start is not None and port_range_start < 1):  # noqa: E501
-            raise ValueError("Invalid value for `port_range_start`, must be a value greater than or equal to `1`")  # noqa: E501
+        allowed_values = [None,"IPv4", "IPv6"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and ip_version not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `ip_version` ({0}), must be one of {1}"  # noqa: E501
+                .format(ip_version, allowed_values)
+            )
 
-        self._port_range_start = port_range_start
+        self._ip_version = ip_version
+
+    @property
+    def name(self):
+        """Gets the name of this FirewallruleProperties.  # noqa: E501
+
+        The name of the  resource.  # noqa: E501
+
+        :return: The name of this FirewallruleProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this FirewallruleProperties.
+
+        The name of the  resource.  # noqa: E501
+
+        :param name: The name of this FirewallruleProperties.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
 
     @property
     def port_range_end(self):
@@ -386,6 +256,135 @@ class FirewallruleProperties(object):
             raise ValueError("Invalid value for `port_range_end`, must be a value greater than or equal to `1`")  # noqa: E501
 
         self._port_range_end = port_range_end
+
+    @property
+    def port_range_start(self):
+        """Gets the port_range_start of this FirewallruleProperties.  # noqa: E501
+
+        Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports.  # noqa: E501
+
+        :return: The port_range_start of this FirewallruleProperties.  # noqa: E501
+        :rtype: int
+        """
+        return self._port_range_start
+
+    @port_range_start.setter
+    def port_range_start(self, port_range_start):
+        """Sets the port_range_start of this FirewallruleProperties.
+
+        Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports.  # noqa: E501
+
+        :param port_range_start: The port_range_start of this FirewallruleProperties.  # noqa: E501
+        :type port_range_start: int
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                port_range_start is not None and port_range_start > 65534):  # noqa: E501
+            raise ValueError("Invalid value for `port_range_start`, must be a value less than or equal to `65534`")  # noqa: E501
+        if (self.local_vars_configuration.client_side_validation and
+                port_range_start is not None and port_range_start < 1):  # noqa: E501
+            raise ValueError("Invalid value for `port_range_start`, must be a value greater than or equal to `1`")  # noqa: E501
+
+        self._port_range_start = port_range_start
+
+    @property
+    def protocol(self):
+        """Gets the protocol of this FirewallruleProperties.  # noqa: E501
+
+        The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).  # noqa: E501
+
+        :return: The protocol of this FirewallruleProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._protocol
+
+    @protocol.setter
+    def protocol(self, protocol):
+        """Sets the protocol of this FirewallruleProperties.
+
+        The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).  # noqa: E501
+
+        :param protocol: The protocol of this FirewallruleProperties.  # noqa: E501
+        :type protocol: str
+        """
+        if self.local_vars_configuration.client_side_validation and protocol is None:  # noqa: E501
+            raise ValueError("Invalid value for `protocol`, must not be `None`")  # noqa: E501
+        allowed_values = ["TCP", "UDP", "ICMP", "ICMPv6", "ANY"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and protocol not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `protocol` ({0}), must be one of {1}"  # noqa: E501
+                .format(protocol, allowed_values)
+            )
+
+        self._protocol = protocol
+
+    @property
+    def source_ip(self):
+        """Gets the source_ip of this FirewallruleProperties.  # noqa: E501
+
+        Only traffic originating from the respective IP address (or CIDR block) is allowed. Value null allows traffic from any IP address (according to the selected ipVersion).  # noqa: E501
+
+        :return: The source_ip of this FirewallruleProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_ip
+
+    @source_ip.setter
+    def source_ip(self, source_ip):
+        """Sets the source_ip of this FirewallruleProperties.
+
+        Only traffic originating from the respective IP address (or CIDR block) is allowed. Value null allows traffic from any IP address (according to the selected ipVersion).  # noqa: E501
+
+        :param source_ip: The source_ip of this FirewallruleProperties.  # noqa: E501
+        :type source_ip: str
+        """
+
+        self._source_ip = source_ip
+
+    @property
+    def source_mac(self):
+        """Gets the source_mac of this FirewallruleProperties.  # noqa: E501
+
+        Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address.  # noqa: E501
+
+        :return: The source_mac of this FirewallruleProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._source_mac
+
+    @source_mac.setter
+    def source_mac(self, source_mac):
+        """Sets the source_mac of this FirewallruleProperties.
+
+        Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address.  # noqa: E501
+
+        :param source_mac: The source_mac of this FirewallruleProperties.  # noqa: E501
+        :type source_mac: str
+        """
+
+        self._source_mac = source_mac
+
+    @property
+    def target_ip(self):
+        """Gets the target_ip of this FirewallruleProperties.  # noqa: E501
+
+        If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address (or CIDR block) of the NIC is allowed. Value null allows traffic to any target IP address (according to the selected ipVersion).  # noqa: E501
+
+        :return: The target_ip of this FirewallruleProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._target_ip
+
+    @target_ip.setter
+    def target_ip(self, target_ip):
+        """Sets the target_ip of this FirewallruleProperties.
+
+        If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address (or CIDR block) of the NIC is allowed. Value null allows traffic to any target IP address (according to the selected ipVersion).  # noqa: E501
+
+        :param target_ip: The target_ip of this FirewallruleProperties.  # noqa: E501
+        :type target_ip: str
+        """
+
+        self._target_ip = target_ip
 
     @property
     def type(self):

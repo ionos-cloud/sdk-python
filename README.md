@@ -227,7 +227,6 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | KubernetesApi | [**k8s_versions_default_get**](docs/api/KubernetesApi.md#k8s_versions_default_get) | **GET** /k8s/versions/default | Get Default Kubernetes Version |
 | KubernetesApi | [**k8s_versions_get**](docs/api/KubernetesApi.md#k8s_versions_get) | **GET** /k8s/versions | Get Kubernetes Versions |
 | LANsApi | [**datacenters_lans_delete**](docs/api/LANsApi.md#datacenters_lans_delete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete LANs |
-| LANsApi | [**datacenters_lans_enable_ipv6**](docs/api/LANsApi.md#datacenters_lans_enable_ipv6) | **POST** /datacenters/{datacenterId}/lans/enable-ipv6 | Enable IPv6 in the current Virtual Datacenter |
 | LANsApi | [**datacenters_lans_find_by_id**](docs/api/LANsApi.md#datacenters_lans_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve LANs |
 | LANsApi | [**datacenters_lans_get**](docs/api/LANsApi.md#datacenters_lans_get) | **GET** /datacenters/{datacenterId}/lans | List LANs |
 | LANsApi | [**datacenters_lans_nics_find_by_id**](docs/api/LANsApi.md#datacenters_lans_nics_find_by_id) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve attached NICs |

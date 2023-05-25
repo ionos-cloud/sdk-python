@@ -34,93 +34,47 @@ class Contracts(object):
     """
     openapi_types = {
 
-        'id': 'str',
-
-        'type': 'Type',
-
         'href': 'str',
 
+        'id': 'str',
+
         'items': 'list[Contract]',
+
+        'type': 'Type',
     }
 
     attribute_map = {
 
-        'id': 'id',
-
-        'type': 'type',
-
         'href': 'href',
 
+        'id': 'id',
+
         'items': 'items',
+
+        'type': 'type',
     }
 
-    def __init__(self, id=None, type=None, href=None, items=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, href=None, id=None, items=None, type=None, local_vars_configuration=None):  # noqa: E501
         """Contracts - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
-        self._type = None
         self._href = None
+        self._id = None
         self._items = None
+        self._type = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if type is not None:
-            self.type = type
         if href is not None:
             self.href = href
+        if id is not None:
+            self.id = id
         if items is not None:
             self.items = items
+        if type is not None:
+            self.type = type
 
-
-    @property
-    def id(self):
-        """Gets the id of this Contracts.  # noqa: E501
-
-        The resource's unique identifier.  # noqa: E501
-
-        :return: The id of this Contracts.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Contracts.
-
-        The resource's unique identifier.  # noqa: E501
-
-        :param id: The id of this Contracts.  # noqa: E501
-        :type id: str
-        """
-
-        self._id = id
-
-    @property
-    def type(self):
-        """Gets the type of this Contracts.  # noqa: E501
-
-        The type of object that has been created.  # noqa: E501
-
-        :return: The type of this Contracts.  # noqa: E501
-        :rtype: Type
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this Contracts.
-
-        The type of object that has been created.  # noqa: E501
-
-        :param type: The type of this Contracts.  # noqa: E501
-        :type type: Type
-        """
-
-        self._type = type
 
     @property
     def href(self):
@@ -146,6 +100,29 @@ class Contracts(object):
         self._href = href
 
     @property
+    def id(self):
+        """Gets the id of this Contracts.  # noqa: E501
+
+        The resource's unique identifier.  # noqa: E501
+
+        :return: The id of this Contracts.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Contracts.
+
+        The resource's unique identifier.  # noqa: E501
+
+        :param id: The id of this Contracts.  # noqa: E501
+        :type id: str
+        """
+
+        self._id = id
+
+    @property
     def items(self):
         """Gets the items of this Contracts.  # noqa: E501
 
@@ -167,6 +144,29 @@ class Contracts(object):
         """
 
         self._items = items
+
+    @property
+    def type(self):
+        """Gets the type of this Contracts.  # noqa: E501
+
+        The type of object that has been created.  # noqa: E501
+
+        :return: The type of this Contracts.  # noqa: E501
+        :rtype: Type
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Contracts.
+
+        The type of object that has been created.  # noqa: E501
+
+        :param type: The type of this Contracts.  # noqa: E501
+        :type type: Type
+        """
+
+        self._type = type
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

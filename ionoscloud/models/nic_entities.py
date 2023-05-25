@@ -34,54 +34,33 @@ class NicEntities(object):
     """
     openapi_types = {
 
-        'flowlogs': 'FlowLogs',
-
         'firewallrules': 'FirewallRules',
+
+        'flowlogs': 'FlowLogs',
     }
 
     attribute_map = {
 
-        'flowlogs': 'flowlogs',
-
         'firewallrules': 'firewallrules',
+
+        'flowlogs': 'flowlogs',
     }
 
-    def __init__(self, flowlogs=None, firewallrules=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, firewallrules=None, flowlogs=None, local_vars_configuration=None):  # noqa: E501
         """NicEntities - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._flowlogs = None
         self._firewallrules = None
+        self._flowlogs = None
         self.discriminator = None
 
-        if flowlogs is not None:
-            self.flowlogs = flowlogs
         if firewallrules is not None:
             self.firewallrules = firewallrules
+        if flowlogs is not None:
+            self.flowlogs = flowlogs
 
-
-    @property
-    def flowlogs(self):
-        """Gets the flowlogs of this NicEntities.  # noqa: E501
-
-
-        :return: The flowlogs of this NicEntities.  # noqa: E501
-        :rtype: FlowLogs
-        """
-        return self._flowlogs
-
-    @flowlogs.setter
-    def flowlogs(self, flowlogs):
-        """Sets the flowlogs of this NicEntities.
-
-
-        :param flowlogs: The flowlogs of this NicEntities.  # noqa: E501
-        :type flowlogs: FlowLogs
-        """
-
-        self._flowlogs = flowlogs
 
     @property
     def firewallrules(self):
@@ -103,6 +82,27 @@ class NicEntities(object):
         """
 
         self._firewallrules = firewallrules
+
+    @property
+    def flowlogs(self):
+        """Gets the flowlogs of this NicEntities.  # noqa: E501
+
+
+        :return: The flowlogs of this NicEntities.  # noqa: E501
+        :rtype: FlowLogs
+        """
+        return self._flowlogs
+
+    @flowlogs.setter
+    def flowlogs(self, flowlogs):
+        """Sets the flowlogs of this NicEntities.
+
+
+        :param flowlogs: The flowlogs of this NicEntities.  # noqa: E501
+        :type flowlogs: FlowLogs
+        """
+
+        self._flowlogs = flowlogs
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

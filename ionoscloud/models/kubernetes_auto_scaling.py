@@ -34,56 +34,31 @@ class KubernetesAutoScaling(object):
     """
     openapi_types = {
 
-        'min_node_count': 'int',
-
         'max_node_count': 'int',
+
+        'min_node_count': 'int',
     }
 
     attribute_map = {
 
-        'min_node_count': 'minNodeCount',
-
         'max_node_count': 'maxNodeCount',
+
+        'min_node_count': 'minNodeCount',
     }
 
-    def __init__(self, min_node_count=None, max_node_count=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, max_node_count=None, min_node_count=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesAutoScaling - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._min_node_count = None
         self._max_node_count = None
+        self._min_node_count = None
         self.discriminator = None
 
-        self.min_node_count = min_node_count
         self.max_node_count = max_node_count
+        self.min_node_count = min_node_count
 
-
-    @property
-    def min_node_count(self):
-        """Gets the min_node_count of this KubernetesAutoScaling.  # noqa: E501
-
-        The minimum number of working nodes that the managed node pool can scale must be >= 1 and >= nodeCount. Required if autoScaling is specified.  # noqa: E501
-
-        :return: The min_node_count of this KubernetesAutoScaling.  # noqa: E501
-        :rtype: int
-        """
-        return self._min_node_count
-
-    @min_node_count.setter
-    def min_node_count(self, min_node_count):
-        """Sets the min_node_count of this KubernetesAutoScaling.
-
-        The minimum number of working nodes that the managed node pool can scale must be >= 1 and >= nodeCount. Required if autoScaling is specified.  # noqa: E501
-
-        :param min_node_count: The min_node_count of this KubernetesAutoScaling.  # noqa: E501
-        :type min_node_count: int
-        """
-        if self.local_vars_configuration.client_side_validation and min_node_count is None:  # noqa: E501
-            raise ValueError("Invalid value for `min_node_count`, must not be `None`")  # noqa: E501
-
-        self._min_node_count = min_node_count
 
     @property
     def max_node_count(self):
@@ -109,6 +84,31 @@ class KubernetesAutoScaling(object):
             raise ValueError("Invalid value for `max_node_count`, must not be `None`")  # noqa: E501
 
         self._max_node_count = max_node_count
+
+    @property
+    def min_node_count(self):
+        """Gets the min_node_count of this KubernetesAutoScaling.  # noqa: E501
+
+        The minimum number of working nodes that the managed node pool can scale must be >= 1 and >= nodeCount. Required if autoScaling is specified.  # noqa: E501
+
+        :return: The min_node_count of this KubernetesAutoScaling.  # noqa: E501
+        :rtype: int
+        """
+        return self._min_node_count
+
+    @min_node_count.setter
+    def min_node_count(self, min_node_count):
+        """Sets the min_node_count of this KubernetesAutoScaling.
+
+        The minimum number of working nodes that the managed node pool can scale must be >= 1 and >= nodeCount. Required if autoScaling is specified.  # noqa: E501
+
+        :param min_node_count: The min_node_count of this KubernetesAutoScaling.  # noqa: E501
+        :type min_node_count: int
+        """
+        if self.local_vars_configuration.client_side_validation and min_node_count is None:  # noqa: E501
+            raise ValueError("Invalid value for `min_node_count`, must not be `None`")  # noqa: E501
+
+        self._min_node_count = min_node_count
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

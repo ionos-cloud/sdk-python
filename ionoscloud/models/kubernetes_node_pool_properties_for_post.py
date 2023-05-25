@@ -34,272 +34,166 @@ class KubernetesNodePoolPropertiesForPost(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
-        'datacenter_id': 'str',
-
-        'node_count': 'int',
-
-        'cpu_family': 'str',
-
-        'cores_count': 'int',
-
-        'ram_size': 'int',
-
-        'availability_zone': 'str',
-
-        'storage_type': 'str',
-
-        'storage_size': 'int',
-
-        'k8s_version': 'str',
-
-        'maintenance_window': 'KubernetesMaintenanceWindow',
+        'annotations': 'dict(str, str)',
 
         'auto_scaling': 'KubernetesAutoScaling',
 
-        'lans': 'list[KubernetesNodePoolLan]',
+        'availability_zone': 'str',
+
+        'cores_count': 'int',
+
+        'cpu_family': 'str',
+
+        'datacenter_id': 'str',
+
+        'k8s_version': 'str',
 
         'labels': 'dict(str, str)',
 
-        'annotations': 'dict(str, str)',
+        'lans': 'list[KubernetesNodePoolLan]',
+
+        'maintenance_window': 'KubernetesMaintenanceWindow',
+
+        'name': 'str',
+
+        'node_count': 'int',
 
         'public_ips': 'list[str]',
+
+        'ram_size': 'int',
+
+        'storage_size': 'int',
+
+        'storage_type': 'str',
     }
 
     attribute_map = {
 
-        'name': 'name',
-
-        'datacenter_id': 'datacenterId',
-
-        'node_count': 'nodeCount',
-
-        'cpu_family': 'cpuFamily',
-
-        'cores_count': 'coresCount',
-
-        'ram_size': 'ramSize',
-
-        'availability_zone': 'availabilityZone',
-
-        'storage_type': 'storageType',
-
-        'storage_size': 'storageSize',
-
-        'k8s_version': 'k8sVersion',
-
-        'maintenance_window': 'maintenanceWindow',
+        'annotations': 'annotations',
 
         'auto_scaling': 'autoScaling',
 
-        'lans': 'lans',
+        'availability_zone': 'availabilityZone',
+
+        'cores_count': 'coresCount',
+
+        'cpu_family': 'cpuFamily',
+
+        'datacenter_id': 'datacenterId',
+
+        'k8s_version': 'k8sVersion',
 
         'labels': 'labels',
 
-        'annotations': 'annotations',
+        'lans': 'lans',
+
+        'maintenance_window': 'maintenanceWindow',
+
+        'name': 'name',
+
+        'node_count': 'nodeCount',
 
         'public_ips': 'publicIps',
+
+        'ram_size': 'ramSize',
+
+        'storage_size': 'storageSize',
+
+        'storage_type': 'storageType',
     }
 
-    def __init__(self, name=None, datacenter_id=None, node_count=None, cpu_family=None, cores_count=None, ram_size=None, availability_zone=None, storage_type=None, storage_size=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, public_ips=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, annotations=None, auto_scaling=None, availability_zone=None, cores_count=None, cpu_family=None, datacenter_id=None, k8s_version=None, labels=None, lans=None, maintenance_window=None, name=None, node_count=None, public_ips=None, ram_size=None, storage_size=None, storage_type=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolPropertiesForPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._datacenter_id = None
-        self._node_count = None
-        self._cpu_family = None
-        self._cores_count = None
-        self._ram_size = None
-        self._availability_zone = None
-        self._storage_type = None
-        self._storage_size = None
-        self._k8s_version = None
-        self._maintenance_window = None
-        self._auto_scaling = None
-        self._lans = None
-        self._labels = None
         self._annotations = None
+        self._auto_scaling = None
+        self._availability_zone = None
+        self._cores_count = None
+        self._cpu_family = None
+        self._datacenter_id = None
+        self._k8s_version = None
+        self._labels = None
+        self._lans = None
+        self._maintenance_window = None
+        self._name = None
+        self._node_count = None
         self._public_ips = None
+        self._ram_size = None
+        self._storage_size = None
+        self._storage_type = None
         self.discriminator = None
 
-        self.name = name
-        self.datacenter_id = datacenter_id
-        self.node_count = node_count
-        self.cpu_family = cpu_family
-        self.cores_count = cores_count
-        self.ram_size = ram_size
-        self.availability_zone = availability_zone
-        self.storage_type = storage_type
-        self.storage_size = storage_size
-        if k8s_version is not None:
-            self.k8s_version = k8s_version
-        if maintenance_window is not None:
-            self.maintenance_window = maintenance_window
-        if auto_scaling is not None:
-            self.auto_scaling = auto_scaling
-        if lans is not None:
-            self.lans = lans
-        if labels is not None:
-            self.labels = labels
         if annotations is not None:
             self.annotations = annotations
+        if auto_scaling is not None:
+            self.auto_scaling = auto_scaling
+        self.availability_zone = availability_zone
+        self.cores_count = cores_count
+        self.cpu_family = cpu_family
+        self.datacenter_id = datacenter_id
+        if k8s_version is not None:
+            self.k8s_version = k8s_version
+        if labels is not None:
+            self.labels = labels
+        if lans is not None:
+            self.lans = lans
+        if maintenance_window is not None:
+            self.maintenance_window = maintenance_window
+        self.name = name
+        self.node_count = node_count
         if public_ips is not None:
             self.public_ips = public_ips
+        self.ram_size = ram_size
+        self.storage_size = storage_size
+        self.storage_type = storage_type
 
 
     @property
-    def name(self):
-        """Gets the name of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+    def annotations(self):
+        """Gets the annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.  # noqa: E501
+        The annotations attached to the node pool.  # noqa: E501
 
-        :return: The name of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: str
+        :return: The annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: dict(str, str)
         """
-        return self._name
+        return self._annotations
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this KubernetesNodePoolPropertiesForPost.
+    @annotations.setter
+    def annotations(self, annotations):
+        """Sets the annotations of this KubernetesNodePoolPropertiesForPost.
 
-        A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.  # noqa: E501
+        The annotations attached to the node pool.  # noqa: E501
 
-        :param name: The name of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type name: str
+        :param annotations: The annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type annotations: dict(str, str)
         """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._name = name
+        self._annotations = annotations
 
     @property
-    def datacenter_id(self):
-        """Gets the datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+    def auto_scaling(self):
+        """Gets the auto_scaling of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
-        The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located.  # noqa: E501
 
-        :return: The datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: str
+        :return: The auto_scaling of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: KubernetesAutoScaling
         """
-        return self._datacenter_id
+        return self._auto_scaling
 
-    @datacenter_id.setter
-    def datacenter_id(self, datacenter_id):
-        """Sets the datacenter_id of this KubernetesNodePoolPropertiesForPost.
+    @auto_scaling.setter
+    def auto_scaling(self, auto_scaling):
+        """Sets the auto_scaling of this KubernetesNodePoolPropertiesForPost.
 
-        The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located.  # noqa: E501
 
-        :param datacenter_id: The datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type datacenter_id: str
+        :param auto_scaling: The auto_scaling of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type auto_scaling: KubernetesAutoScaling
         """
-        if self.local_vars_configuration.client_side_validation and datacenter_id is None:  # noqa: E501
-            raise ValueError("Invalid value for `datacenter_id`, must not be `None`")  # noqa: E501
 
-        self._datacenter_id = datacenter_id
-
-    @property
-    def node_count(self):
-        """Gets the node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The number of worker nodes of the node pool.  # noqa: E501
-
-        :return: The node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: int
-        """
-        return self._node_count
-
-    @node_count.setter
-    def node_count(self, node_count):
-        """Sets the node_count of this KubernetesNodePoolPropertiesForPost.
-
-        The number of worker nodes of the node pool.  # noqa: E501
-
-        :param node_count: The node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type node_count: int
-        """
-        if self.local_vars_configuration.client_side_validation and node_count is None:  # noqa: E501
-            raise ValueError("Invalid value for `node_count`, must not be `None`")  # noqa: E501
-
-        self._node_count = node_count
-
-    @property
-    def cpu_family(self):
-        """Gets the cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The CPU type for the nodes.  # noqa: E501
-
-        :return: The cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: str
-        """
-        return self._cpu_family
-
-    @cpu_family.setter
-    def cpu_family(self, cpu_family):
-        """Sets the cpu_family of this KubernetesNodePoolPropertiesForPost.
-
-        The CPU type for the nodes.  # noqa: E501
-
-        :param cpu_family: The cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type cpu_family: str
-        """
-        if self.local_vars_configuration.client_side_validation and cpu_family is None:  # noqa: E501
-            raise ValueError("Invalid value for `cpu_family`, must not be `None`")  # noqa: E501
-
-        self._cpu_family = cpu_family
-
-    @property
-    def cores_count(self):
-        """Gets the cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The total number of cores for the nodes.  # noqa: E501
-
-        :return: The cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: int
-        """
-        return self._cores_count
-
-    @cores_count.setter
-    def cores_count(self, cores_count):
-        """Sets the cores_count of this KubernetesNodePoolPropertiesForPost.
-
-        The total number of cores for the nodes.  # noqa: E501
-
-        :param cores_count: The cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type cores_count: int
-        """
-        if self.local_vars_configuration.client_side_validation and cores_count is None:  # noqa: E501
-            raise ValueError("Invalid value for `cores_count`, must not be `None`")  # noqa: E501
-
-        self._cores_count = cores_count
-
-    @property
-    def ram_size(self):
-        """Gets the ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB.  # noqa: E501
-
-        :return: The ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: int
-        """
-        return self._ram_size
-
-    @ram_size.setter
-    def ram_size(self, ram_size):
-        """Sets the ram_size of this KubernetesNodePoolPropertiesForPost.
-
-        The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB.  # noqa: E501
-
-        :param ram_size: The ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type ram_size: int
-        """
-        if self.local_vars_configuration.client_side_validation and ram_size is None:  # noqa: E501
-            raise ValueError("Invalid value for `ram_size`, must not be `None`")  # noqa: E501
-
-        self._ram_size = ram_size
+        self._auto_scaling = auto_scaling
 
     @property
     def availability_zone(self):
@@ -333,6 +227,294 @@ class KubernetesNodePoolPropertiesForPost(object):
         self._availability_zone = availability_zone
 
     @property
+    def cores_count(self):
+        """Gets the cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The total number of cores for the nodes.  # noqa: E501
+
+        :return: The cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: int
+        """
+        return self._cores_count
+
+    @cores_count.setter
+    def cores_count(self, cores_count):
+        """Sets the cores_count of this KubernetesNodePoolPropertiesForPost.
+
+        The total number of cores for the nodes.  # noqa: E501
+
+        :param cores_count: The cores_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type cores_count: int
+        """
+        if self.local_vars_configuration.client_side_validation and cores_count is None:  # noqa: E501
+            raise ValueError("Invalid value for `cores_count`, must not be `None`")  # noqa: E501
+
+        self._cores_count = cores_count
+
+    @property
+    def cpu_family(self):
+        """Gets the cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The CPU type for the nodes.  # noqa: E501
+
+        :return: The cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._cpu_family
+
+    @cpu_family.setter
+    def cpu_family(self, cpu_family):
+        """Sets the cpu_family of this KubernetesNodePoolPropertiesForPost.
+
+        The CPU type for the nodes.  # noqa: E501
+
+        :param cpu_family: The cpu_family of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type cpu_family: str
+        """
+        if self.local_vars_configuration.client_side_validation and cpu_family is None:  # noqa: E501
+            raise ValueError("Invalid value for `cpu_family`, must not be `None`")  # noqa: E501
+
+        self._cpu_family = cpu_family
+
+    @property
+    def datacenter_id(self):
+        """Gets the datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located.  # noqa: E501
+
+        :return: The datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._datacenter_id
+
+    @datacenter_id.setter
+    def datacenter_id(self, datacenter_id):
+        """Sets the datacenter_id of this KubernetesNodePoolPropertiesForPost.
+
+        The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located.  # noqa: E501
+
+        :param datacenter_id: The datacenter_id of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type datacenter_id: str
+        """
+        if self.local_vars_configuration.client_side_validation and datacenter_id is None:  # noqa: E501
+            raise ValueError("Invalid value for `datacenter_id`, must not be `None`")  # noqa: E501
+
+        self._datacenter_id = datacenter_id
+
+    @property
+    def k8s_version(self):
+        """Gets the k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
+
+        :return: The k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_version
+
+    @k8s_version.setter
+    def k8s_version(self, k8s_version):
+        """Sets the k8s_version of this KubernetesNodePoolPropertiesForPost.
+
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
+
+        :param k8s_version: The k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type k8s_version: str
+        """
+
+        self._k8s_version = k8s_version
+
+    @property
+    def labels(self):
+        """Gets the labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The labels attached to the node pool.  # noqa: E501
+
+        :return: The labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: dict(str, str)
+        """
+        return self._labels
+
+    @labels.setter
+    def labels(self, labels):
+        """Sets the labels of this KubernetesNodePoolPropertiesForPost.
+
+        The labels attached to the node pool.  # noqa: E501
+
+        :param labels: The labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type labels: dict(str, str)
+        """
+
+        self._labels = labels
+
+    @property
+    def lans(self):
+        """Gets the lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The array of existing private LANs to attach to worker nodes.  # noqa: E501
+
+        :return: The lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: list[KubernetesNodePoolLan]
+        """
+        return self._lans
+
+    @lans.setter
+    def lans(self, lans):
+        """Sets the lans of this KubernetesNodePoolPropertiesForPost.
+
+        The array of existing private LANs to attach to worker nodes.  # noqa: E501
+
+        :param lans: The lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type lans: list[KubernetesNodePoolLan]
+        """
+
+        self._lans = lans
+
+    @property
+    def maintenance_window(self):
+        """Gets the maintenance_window of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+
+        :return: The maintenance_window of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: KubernetesMaintenanceWindow
+        """
+        return self._maintenance_window
+
+    @maintenance_window.setter
+    def maintenance_window(self, maintenance_window):
+        """Sets the maintenance_window of this KubernetesNodePoolPropertiesForPost.
+
+
+        :param maintenance_window: The maintenance_window of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type maintenance_window: KubernetesMaintenanceWindow
+        """
+
+        self._maintenance_window = maintenance_window
+
+    @property
+    def name(self):
+        """Gets the name of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.  # noqa: E501
+
+        :return: The name of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this KubernetesNodePoolPropertiesForPost.
+
+        A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.  # noqa: E501
+
+        :param name: The name of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type name: str
+        """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def node_count(self):
+        """Gets the node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The number of worker nodes of the node pool.  # noqa: E501
+
+        :return: The node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: int
+        """
+        return self._node_count
+
+    @node_count.setter
+    def node_count(self, node_count):
+        """Sets the node_count of this KubernetesNodePoolPropertiesForPost.
+
+        The number of worker nodes of the node pool.  # noqa: E501
+
+        :param node_count: The node_count of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type node_count: int
+        """
+        if self.local_vars_configuration.client_side_validation and node_count is None:  # noqa: E501
+            raise ValueError("Invalid value for `node_count`, must not be `None`")  # noqa: E501
+
+        self._node_count = node_count
+
+    @property
+    def public_ips(self):
+        """Gets the public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool's data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.  # noqa: E501
+
+        :return: The public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._public_ips
+
+    @public_ips.setter
+    def public_ips(self, public_ips):
+        """Sets the public_ips of this KubernetesNodePoolPropertiesForPost.
+
+        Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool's data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.  # noqa: E501
+
+        :param public_ips: The public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type public_ips: list[str]
+        """
+
+        self._public_ips = public_ips
+
+    @property
+    def ram_size(self):
+        """Gets the ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB.  # noqa: E501
+
+        :return: The ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: int
+        """
+        return self._ram_size
+
+    @ram_size.setter
+    def ram_size(self, ram_size):
+        """Sets the ram_size of this KubernetesNodePoolPropertiesForPost.
+
+        The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB.  # noqa: E501
+
+        :param ram_size: The ram_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type ram_size: int
+        """
+        if self.local_vars_configuration.client_side_validation and ram_size is None:  # noqa: E501
+            raise ValueError("Invalid value for `ram_size`, must not be `None`")  # noqa: E501
+
+        self._ram_size = ram_size
+
+    @property
+    def storage_size(self):
+        """Gets the storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+
+        The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD.  # noqa: E501
+
+        :return: The storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :rtype: int
+        """
+        return self._storage_size
+
+    @storage_size.setter
+    def storage_size(self, storage_size):
+        """Sets the storage_size of this KubernetesNodePoolPropertiesForPost.
+
+        The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD.  # noqa: E501
+
+        :param storage_size: The storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
+        :type storage_size: int
+        """
+        if self.local_vars_configuration.client_side_validation and storage_size is None:  # noqa: E501
+            raise ValueError("Invalid value for `storage_size`, must not be `None`")  # noqa: E501
+
+        self._storage_size = storage_size
+
+    @property
     def storage_type(self):
         """Gets the storage_type of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
 
@@ -362,188 +544,6 @@ class KubernetesNodePoolPropertiesForPost(object):
             )
 
         self._storage_type = storage_type
-
-    @property
-    def storage_size(self):
-        """Gets the storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD.  # noqa: E501
-
-        :return: The storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: int
-        """
-        return self._storage_size
-
-    @storage_size.setter
-    def storage_size(self, storage_size):
-        """Sets the storage_size of this KubernetesNodePoolPropertiesForPost.
-
-        The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD.  # noqa: E501
-
-        :param storage_size: The storage_size of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type storage_size: int
-        """
-        if self.local_vars_configuration.client_side_validation and storage_size is None:  # noqa: E501
-            raise ValueError("Invalid value for `storage_size`, must not be `None`")  # noqa: E501
-
-        self._storage_size = storage_size
-
-    @property
-    def k8s_version(self):
-        """Gets the k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
-
-        :return: The k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: str
-        """
-        return self._k8s_version
-
-    @k8s_version.setter
-    def k8s_version(self, k8s_version):
-        """Sets the k8s_version of this KubernetesNodePoolPropertiesForPost.
-
-        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
-
-        :param k8s_version: The k8s_version of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type k8s_version: str
-        """
-
-        self._k8s_version = k8s_version
-
-    @property
-    def maintenance_window(self):
-        """Gets the maintenance_window of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-
-        :return: The maintenance_window of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: KubernetesMaintenanceWindow
-        """
-        return self._maintenance_window
-
-    @maintenance_window.setter
-    def maintenance_window(self, maintenance_window):
-        """Sets the maintenance_window of this KubernetesNodePoolPropertiesForPost.
-
-
-        :param maintenance_window: The maintenance_window of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type maintenance_window: KubernetesMaintenanceWindow
-        """
-
-        self._maintenance_window = maintenance_window
-
-    @property
-    def auto_scaling(self):
-        """Gets the auto_scaling of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-
-        :return: The auto_scaling of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: KubernetesAutoScaling
-        """
-        return self._auto_scaling
-
-    @auto_scaling.setter
-    def auto_scaling(self, auto_scaling):
-        """Sets the auto_scaling of this KubernetesNodePoolPropertiesForPost.
-
-
-        :param auto_scaling: The auto_scaling of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type auto_scaling: KubernetesAutoScaling
-        """
-
-        self._auto_scaling = auto_scaling
-
-    @property
-    def lans(self):
-        """Gets the lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The array of existing private LANs to attach to worker nodes.  # noqa: E501
-
-        :return: The lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: list[KubernetesNodePoolLan]
-        """
-        return self._lans
-
-    @lans.setter
-    def lans(self, lans):
-        """Sets the lans of this KubernetesNodePoolPropertiesForPost.
-
-        The array of existing private LANs to attach to worker nodes.  # noqa: E501
-
-        :param lans: The lans of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type lans: list[KubernetesNodePoolLan]
-        """
-
-        self._lans = lans
-
-    @property
-    def labels(self):
-        """Gets the labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The labels attached to the node pool.  # noqa: E501
-
-        :return: The labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: dict(str, str)
-        """
-        return self._labels
-
-    @labels.setter
-    def labels(self, labels):
-        """Sets the labels of this KubernetesNodePoolPropertiesForPost.
-
-        The labels attached to the node pool.  # noqa: E501
-
-        :param labels: The labels of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type labels: dict(str, str)
-        """
-
-        self._labels = labels
-
-    @property
-    def annotations(self):
-        """Gets the annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        The annotations attached to the node pool.  # noqa: E501
-
-        :return: The annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: dict(str, str)
-        """
-        return self._annotations
-
-    @annotations.setter
-    def annotations(self, annotations):
-        """Sets the annotations of this KubernetesNodePoolPropertiesForPost.
-
-        The annotations attached to the node pool.  # noqa: E501
-
-        :param annotations: The annotations of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type annotations: dict(str, str)
-        """
-
-        self._annotations = annotations
-
-    @property
-    def public_ips(self):
-        """Gets the public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-
-        Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool's data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.  # noqa: E501
-
-        :return: The public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._public_ips
-
-    @public_ips.setter
-    def public_ips(self, public_ips):
-        """Sets the public_ips of this KubernetesNodePoolPropertiesForPost.
-
-        Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool's data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.  # noqa: E501
-
-        :param public_ips: The public_ips of this KubernetesNodePoolPropertiesForPost.  # noqa: E501
-        :type public_ips: list[str]
-        """
-
-        self._public_ips = public_ips
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -34,83 +34,52 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
     """
     openapi_types = {
 
-        'type': 'str',
-
         'condition': 'str',
+
+        'key': 'str',
 
         'negate': 'bool',
 
-        'key': 'str',
+        'type': 'str',
 
         'value': 'str',
     }
 
     attribute_map = {
 
-        'type': 'type',
-
         'condition': 'condition',
+
+        'key': 'key',
 
         'negate': 'negate',
 
-        'key': 'key',
+        'type': 'type',
 
         'value': 'value',
     }
 
-    def __init__(self, type=None, condition=None, negate=None, key=None, value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, condition=None, key=None, negate=None, type=None, value=None, local_vars_configuration=None):  # noqa: E501
         """ApplicationLoadBalancerHttpRuleCondition - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._type = None
         self._condition = None
-        self._negate = None
         self._key = None
+        self._negate = None
+        self._type = None
         self._value = None
         self.discriminator = None
 
-        self.type = type
         self.condition = condition
-        if negate is not None:
-            self.negate = negate
         if key is not None:
             self.key = key
+        if negate is not None:
+            self.negate = negate
+        self.type = type
         if value is not None:
             self.value = value
 
-
-    @property
-    def type(self):
-        """Gets the type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
-
-        The HTTP rule condition type.  # noqa: E501
-
-        :return: The type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this ApplicationLoadBalancerHttpRuleCondition.
-
-        The HTTP rule condition type.  # noqa: E501
-
-        :param type: The type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
-        :type type: str
-        """
-        if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
-        allowed_values = ["HEADER", "PATH", "QUERY", "METHOD", "HOST", "COOKIE", "SOURCE_IP"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
-
-        self._type = type
 
     @property
     def condition(self):
@@ -144,6 +113,29 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
         self._condition = condition
 
     @property
+    def key(self):
+        """Gets the key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
+
+        The key can only be set when the HTTP rule condition type is 'COOKIES', 'HEADER', or 'QUERY'. For the type 'PATH', 'METHOD', 'HOST', or 'SOURCE_IP' the value must be 'null'.  # noqa: E501
+
+        :return: The key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
+        :rtype: str
+        """
+        return self._key
+
+    @key.setter
+    def key(self, key):
+        """Sets the key of this ApplicationLoadBalancerHttpRuleCondition.
+
+        The key can only be set when the HTTP rule condition type is 'COOKIES', 'HEADER', or 'QUERY'. For the type 'PATH', 'METHOD', 'HOST', or 'SOURCE_IP' the value must be 'null'.  # noqa: E501
+
+        :param key: The key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
+        :type key: str
+        """
+
+        self._key = key
+
+    @property
     def negate(self):
         """Gets the negate of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
 
@@ -167,27 +159,35 @@ class ApplicationLoadBalancerHttpRuleCondition(object):
         self._negate = negate
 
     @property
-    def key(self):
-        """Gets the key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
+    def type(self):
+        """Gets the type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
 
-        The key can only be set when the HTTP rule condition type is 'COOKIES', 'HEADER', or 'QUERY'. For the type 'PATH', 'METHOD', 'HOST', or 'SOURCE_IP' the value must be 'null'.  # noqa: E501
+        The HTTP rule condition type.  # noqa: E501
 
-        :return: The key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
+        :return: The type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
         :rtype: str
         """
-        return self._key
+        return self._type
 
-    @key.setter
-    def key(self, key):
-        """Sets the key of this ApplicationLoadBalancerHttpRuleCondition.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this ApplicationLoadBalancerHttpRuleCondition.
 
-        The key can only be set when the HTTP rule condition type is 'COOKIES', 'HEADER', or 'QUERY'. For the type 'PATH', 'METHOD', 'HOST', or 'SOURCE_IP' the value must be 'null'.  # noqa: E501
+        The HTTP rule condition type.  # noqa: E501
 
-        :param key: The key of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
-        :type key: str
+        :param type: The type of this ApplicationLoadBalancerHttpRuleCondition.  # noqa: E501
+        :type type: str
         """
+        if self.local_vars_configuration.client_side_validation and type is None:  # noqa: E501
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        allowed_values = ["HEADER", "PATH", "QUERY", "METHOD", "HOST", "COOKIE", "SOURCE_IP"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
 
-        self._key = key
+        self._type = type
 
     @property
     def value(self):

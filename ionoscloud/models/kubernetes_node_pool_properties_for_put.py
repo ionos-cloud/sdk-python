@@ -34,81 +34,215 @@ class KubernetesNodePoolPropertiesForPut(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
-        'node_count': 'int',
-
-        'k8s_version': 'str',
-
-        'maintenance_window': 'KubernetesMaintenanceWindow',
+        'annotations': 'dict(str, str)',
 
         'auto_scaling': 'KubernetesAutoScaling',
 
-        'lans': 'list[KubernetesNodePoolLan]',
+        'k8s_version': 'str',
 
         'labels': 'dict(str, str)',
 
-        'annotations': 'dict(str, str)',
+        'lans': 'list[KubernetesNodePoolLan]',
+
+        'maintenance_window': 'KubernetesMaintenanceWindow',
+
+        'name': 'str',
+
+        'node_count': 'int',
 
         'public_ips': 'list[str]',
     }
 
     attribute_map = {
 
+        'annotations': 'annotations',
+
+        'auto_scaling': 'autoScaling',
+
+        'k8s_version': 'k8sVersion',
+
+        'labels': 'labels',
+
+        'lans': 'lans',
+
+        'maintenance_window': 'maintenanceWindow',
+
         'name': 'name',
 
         'node_count': 'nodeCount',
 
-        'k8s_version': 'k8sVersion',
-
-        'maintenance_window': 'maintenanceWindow',
-
-        'auto_scaling': 'autoScaling',
-
-        'lans': 'lans',
-
-        'labels': 'labels',
-
-        'annotations': 'annotations',
-
         'public_ips': 'publicIps',
     }
 
-    def __init__(self, name=None, node_count=None, k8s_version=None, maintenance_window=None, auto_scaling=None, lans=None, labels=None, annotations=None, public_ips=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, annotations=None, auto_scaling=None, k8s_version=None, labels=None, lans=None, maintenance_window=None, name=None, node_count=None, public_ips=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolPropertiesForPut - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._annotations = None
+        self._auto_scaling = None
+        self._k8s_version = None
+        self._labels = None
+        self._lans = None
+        self._maintenance_window = None
         self._name = None
         self._node_count = None
-        self._k8s_version = None
-        self._maintenance_window = None
-        self._auto_scaling = None
-        self._lans = None
-        self._labels = None
-        self._annotations = None
         self._public_ips = None
         self.discriminator = None
 
+        if annotations is not None:
+            self.annotations = annotations
+        if auto_scaling is not None:
+            self.auto_scaling = auto_scaling
+        if k8s_version is not None:
+            self.k8s_version = k8s_version
+        if labels is not None:
+            self.labels = labels
+        if lans is not None:
+            self.lans = lans
+        if maintenance_window is not None:
+            self.maintenance_window = maintenance_window
         if name is not None:
             self.name = name
         self.node_count = node_count
-        if k8s_version is not None:
-            self.k8s_version = k8s_version
-        if maintenance_window is not None:
-            self.maintenance_window = maintenance_window
-        if auto_scaling is not None:
-            self.auto_scaling = auto_scaling
-        if lans is not None:
-            self.lans = lans
-        if labels is not None:
-            self.labels = labels
-        if annotations is not None:
-            self.annotations = annotations
         if public_ips is not None:
             self.public_ips = public_ips
 
+
+    @property
+    def annotations(self):
+        """Gets the annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+        The annotations attached to the node pool.  # noqa: E501
+
+        :return: The annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: dict(str, str)
+        """
+        return self._annotations
+
+    @annotations.setter
+    def annotations(self, annotations):
+        """Sets the annotations of this KubernetesNodePoolPropertiesForPut.
+
+        The annotations attached to the node pool.  # noqa: E501
+
+        :param annotations: The annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type annotations: dict(str, str)
+        """
+
+        self._annotations = annotations
+
+    @property
+    def auto_scaling(self):
+        """Gets the auto_scaling of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+
+        :return: The auto_scaling of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: KubernetesAutoScaling
+        """
+        return self._auto_scaling
+
+    @auto_scaling.setter
+    def auto_scaling(self, auto_scaling):
+        """Sets the auto_scaling of this KubernetesNodePoolPropertiesForPut.
+
+
+        :param auto_scaling: The auto_scaling of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type auto_scaling: KubernetesAutoScaling
+        """
+
+        self._auto_scaling = auto_scaling
+
+    @property
+    def k8s_version(self):
+        """Gets the k8s_version of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
+
+        :return: The k8s_version of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_version
+
+    @k8s_version.setter
+    def k8s_version(self, k8s_version):
+        """Sets the k8s_version of this KubernetesNodePoolPropertiesForPut.
+
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
+
+        :param k8s_version: The k8s_version of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type k8s_version: str
+        """
+
+        self._k8s_version = k8s_version
+
+    @property
+    def labels(self):
+        """Gets the labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+        The labels attached to the node pool.  # noqa: E501
+
+        :return: The labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: dict(str, str)
+        """
+        return self._labels
+
+    @labels.setter
+    def labels(self, labels):
+        """Sets the labels of this KubernetesNodePoolPropertiesForPut.
+
+        The labels attached to the node pool.  # noqa: E501
+
+        :param labels: The labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type labels: dict(str, str)
+        """
+
+        self._labels = labels
+
+    @property
+    def lans(self):
+        """Gets the lans of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+        The array of existing private LANs to attach to worker nodes.  # noqa: E501
+
+        :return: The lans of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: list[KubernetesNodePoolLan]
+        """
+        return self._lans
+
+    @lans.setter
+    def lans(self, lans):
+        """Sets the lans of this KubernetesNodePoolPropertiesForPut.
+
+        The array of existing private LANs to attach to worker nodes.  # noqa: E501
+
+        :param lans: The lans of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type lans: list[KubernetesNodePoolLan]
+        """
+
+        self._lans = lans
+
+    @property
+    def maintenance_window(self):
+        """Gets the maintenance_window of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+
+
+        :return: The maintenance_window of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :rtype: KubernetesMaintenanceWindow
+        """
+        return self._maintenance_window
+
+    @maintenance_window.setter
+    def maintenance_window(self, maintenance_window):
+        """Sets the maintenance_window of this KubernetesNodePoolPropertiesForPut.
+
+
+        :param maintenance_window: The maintenance_window of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
+        :type maintenance_window: KubernetesMaintenanceWindow
+        """
+
+        self._maintenance_window = maintenance_window
 
     @property
     def name(self):
@@ -157,140 +291,6 @@ class KubernetesNodePoolPropertiesForPut(object):
             raise ValueError("Invalid value for `node_count`, must not be `None`")  # noqa: E501
 
         self._node_count = node_count
-
-    @property
-    def k8s_version(self):
-        """Gets the k8s_version of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-
-        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
-
-        :return: The k8s_version of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :rtype: str
-        """
-        return self._k8s_version
-
-    @k8s_version.setter
-    def k8s_version(self, k8s_version):
-        """Sets the k8s_version of this KubernetesNodePoolPropertiesForPut.
-
-        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
-
-        :param k8s_version: The k8s_version of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :type k8s_version: str
-        """
-
-        self._k8s_version = k8s_version
-
-    @property
-    def maintenance_window(self):
-        """Gets the maintenance_window of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-
-
-        :return: The maintenance_window of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :rtype: KubernetesMaintenanceWindow
-        """
-        return self._maintenance_window
-
-    @maintenance_window.setter
-    def maintenance_window(self, maintenance_window):
-        """Sets the maintenance_window of this KubernetesNodePoolPropertiesForPut.
-
-
-        :param maintenance_window: The maintenance_window of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :type maintenance_window: KubernetesMaintenanceWindow
-        """
-
-        self._maintenance_window = maintenance_window
-
-    @property
-    def auto_scaling(self):
-        """Gets the auto_scaling of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-
-
-        :return: The auto_scaling of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :rtype: KubernetesAutoScaling
-        """
-        return self._auto_scaling
-
-    @auto_scaling.setter
-    def auto_scaling(self, auto_scaling):
-        """Sets the auto_scaling of this KubernetesNodePoolPropertiesForPut.
-
-
-        :param auto_scaling: The auto_scaling of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :type auto_scaling: KubernetesAutoScaling
-        """
-
-        self._auto_scaling = auto_scaling
-
-    @property
-    def lans(self):
-        """Gets the lans of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-
-        The array of existing private LANs to attach to worker nodes.  # noqa: E501
-
-        :return: The lans of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :rtype: list[KubernetesNodePoolLan]
-        """
-        return self._lans
-
-    @lans.setter
-    def lans(self, lans):
-        """Sets the lans of this KubernetesNodePoolPropertiesForPut.
-
-        The array of existing private LANs to attach to worker nodes.  # noqa: E501
-
-        :param lans: The lans of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :type lans: list[KubernetesNodePoolLan]
-        """
-
-        self._lans = lans
-
-    @property
-    def labels(self):
-        """Gets the labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-
-        The labels attached to the node pool.  # noqa: E501
-
-        :return: The labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :rtype: dict(str, str)
-        """
-        return self._labels
-
-    @labels.setter
-    def labels(self, labels):
-        """Sets the labels of this KubernetesNodePoolPropertiesForPut.
-
-        The labels attached to the node pool.  # noqa: E501
-
-        :param labels: The labels of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :type labels: dict(str, str)
-        """
-
-        self._labels = labels
-
-    @property
-    def annotations(self):
-        """Gets the annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-
-        The annotations attached to the node pool.  # noqa: E501
-
-        :return: The annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :rtype: dict(str, str)
-        """
-        return self._annotations
-
-    @annotations.setter
-    def annotations(self, annotations):
-        """Sets the annotations of this KubernetesNodePoolPropertiesForPut.
-
-        The annotations attached to the node pool.  # noqa: E501
-
-        :param annotations: The annotations of this KubernetesNodePoolPropertiesForPut.  # noqa: E501
-        :type annotations: dict(str, str)
-        """
-
-        self._annotations = annotations
 
     @property
     def public_ips(self):

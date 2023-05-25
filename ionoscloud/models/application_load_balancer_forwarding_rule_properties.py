@@ -34,64 +34,160 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'client_timeout': 'int',
 
-        'protocol': 'str',
+        'http_rules': 'list[ApplicationLoadBalancerHttpRule]',
 
         'listener_ip': 'str',
 
         'listener_port': 'int',
 
-        'client_timeout': 'int',
+        'name': 'str',
+
+        'protocol': 'str',
 
         'server_certificates': 'list[str]',
-
-        'http_rules': 'list[ApplicationLoadBalancerHttpRule]',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'client_timeout': 'clientTimeout',
 
-        'protocol': 'protocol',
+        'http_rules': 'httpRules',
 
         'listener_ip': 'listenerIp',
 
         'listener_port': 'listenerPort',
 
-        'client_timeout': 'clientTimeout',
+        'name': 'name',
+
+        'protocol': 'protocol',
 
         'server_certificates': 'serverCertificates',
-
-        'http_rules': 'httpRules',
     }
 
-    def __init__(self, name=None, protocol=None, listener_ip=None, listener_port=None, client_timeout=None, server_certificates=None, http_rules=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, client_timeout=None, http_rules=None, listener_ip=None, listener_port=None, name=None, protocol=None, server_certificates=None, local_vars_configuration=None):  # noqa: E501
         """ApplicationLoadBalancerForwardingRuleProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._protocol = None
+        self._client_timeout = None
+        self._http_rules = None
         self._listener_ip = None
         self._listener_port = None
-        self._client_timeout = None
+        self._name = None
+        self._protocol = None
         self._server_certificates = None
-        self._http_rules = None
         self.discriminator = None
 
-        self.name = name
-        self.protocol = protocol
-        self.listener_ip = listener_ip
-        self.listener_port = listener_port
         if client_timeout is not None:
             self.client_timeout = client_timeout
-        if server_certificates is not None:
-            self.server_certificates = server_certificates
         if http_rules is not None:
             self.http_rules = http_rules
+        self.listener_ip = listener_ip
+        self.listener_port = listener_port
+        self.name = name
+        self.protocol = protocol
+        if server_certificates is not None:
+            self.server_certificates = server_certificates
 
+
+    @property
+    def client_timeout(self):
+        """Gets the client_timeout of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+
+        The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).  # noqa: E501
+
+        :return: The client_timeout of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :rtype: int
+        """
+        return self._client_timeout
+
+    @client_timeout.setter
+    def client_timeout(self, client_timeout):
+        """Sets the client_timeout of this ApplicationLoadBalancerForwardingRuleProperties.
+
+        The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).  # noqa: E501
+
+        :param client_timeout: The client_timeout of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :type client_timeout: int
+        """
+
+        self._client_timeout = client_timeout
+
+    @property
+    def http_rules(self):
+        """Gets the http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+
+        An array of items in the collection. The original order of rules is preserved during processing, except that rules of the 'FORWARD' type are processed after the rules with other defined actions. The relative order of the 'FORWARD' type rules is also preserved during the processing.  # noqa: E501
+
+        :return: The http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :rtype: list[ApplicationLoadBalancerHttpRule]
+        """
+        return self._http_rules
+
+    @http_rules.setter
+    def http_rules(self, http_rules):
+        """Sets the http_rules of this ApplicationLoadBalancerForwardingRuleProperties.
+
+        An array of items in the collection. The original order of rules is preserved during processing, except that rules of the 'FORWARD' type are processed after the rules with other defined actions. The relative order of the 'FORWARD' type rules is also preserved during the processing.  # noqa: E501
+
+        :param http_rules: The http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :type http_rules: list[ApplicationLoadBalancerHttpRule]
+        """
+
+        self._http_rules = http_rules
+
+    @property
+    def listener_ip(self):
+        """Gets the listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+
+        The listening (inbound) IP.  # noqa: E501
+
+        :return: The listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._listener_ip
+
+    @listener_ip.setter
+    def listener_ip(self, listener_ip):
+        """Sets the listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.
+
+        The listening (inbound) IP.  # noqa: E501
+
+        :param listener_ip: The listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :type listener_ip: str
+        """
+        if self.local_vars_configuration.client_side_validation and listener_ip is None:  # noqa: E501
+            raise ValueError("Invalid value for `listener_ip`, must not be `None`")  # noqa: E501
+
+        self._listener_ip = listener_ip
+
+    @property
+    def listener_port(self):
+        """Gets the listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+
+        The listening (inbound) port number; the valid range is 1 to 65535.  # noqa: E501
+
+        :return: The listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :rtype: int
+        """
+        return self._listener_port
+
+    @listener_port.setter
+    def listener_port(self, listener_port):
+        """Sets the listener_port of this ApplicationLoadBalancerForwardingRuleProperties.
+
+        The listening (inbound) port number; the valid range is 1 to 65535.  # noqa: E501
+
+        :param listener_port: The listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :type listener_port: int
+        """
+        if self.local_vars_configuration.client_side_validation and listener_port is None:  # noqa: E501
+            raise ValueError("Invalid value for `listener_port`, must not be `None`")  # noqa: E501
+
+        self._listener_port = listener_port
 
     @property
     def name(self):
@@ -150,79 +246,6 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
         self._protocol = protocol
 
     @property
-    def listener_ip(self):
-        """Gets the listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-
-        The listening (inbound) IP.  # noqa: E501
-
-        :return: The listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._listener_ip
-
-    @listener_ip.setter
-    def listener_ip(self, listener_ip):
-        """Sets the listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.
-
-        The listening (inbound) IP.  # noqa: E501
-
-        :param listener_ip: The listener_ip of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :type listener_ip: str
-        """
-        if self.local_vars_configuration.client_side_validation and listener_ip is None:  # noqa: E501
-            raise ValueError("Invalid value for `listener_ip`, must not be `None`")  # noqa: E501
-
-        self._listener_ip = listener_ip
-
-    @property
-    def listener_port(self):
-        """Gets the listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-
-        The listening (inbound) port number; the valid range is 1 to 65535.  # noqa: E501
-
-        :return: The listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :rtype: int
-        """
-        return self._listener_port
-
-    @listener_port.setter
-    def listener_port(self, listener_port):
-        """Sets the listener_port of this ApplicationLoadBalancerForwardingRuleProperties.
-
-        The listening (inbound) port number; the valid range is 1 to 65535.  # noqa: E501
-
-        :param listener_port: The listener_port of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :type listener_port: int
-        """
-        if self.local_vars_configuration.client_side_validation and listener_port is None:  # noqa: E501
-            raise ValueError("Invalid value for `listener_port`, must not be `None`")  # noqa: E501
-
-        self._listener_port = listener_port
-
-    @property
-    def client_timeout(self):
-        """Gets the client_timeout of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-
-        The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).  # noqa: E501
-
-        :return: The client_timeout of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :rtype: int
-        """
-        return self._client_timeout
-
-    @client_timeout.setter
-    def client_timeout(self, client_timeout):
-        """Sets the client_timeout of this ApplicationLoadBalancerForwardingRuleProperties.
-
-        The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).  # noqa: E501
-
-        :param client_timeout: The client_timeout of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :type client_timeout: int
-        """
-
-        self._client_timeout = client_timeout
-
-    @property
     def server_certificates(self):
         """Gets the server_certificates of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
 
@@ -244,29 +267,6 @@ class ApplicationLoadBalancerForwardingRuleProperties(object):
         """
 
         self._server_certificates = server_certificates
-
-    @property
-    def http_rules(self):
-        """Gets the http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-
-        An array of items in the collection. The original order of rules is preserved during processing, except that rules of the 'FORWARD' type are processed after the rules with other defined actions. The relative order of the 'FORWARD' type rules is also preserved during the processing.  # noqa: E501
-
-        :return: The http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :rtype: list[ApplicationLoadBalancerHttpRule]
-        """
-        return self._http_rules
-
-    @http_rules.setter
-    def http_rules(self, http_rules):
-        """Sets the http_rules of this ApplicationLoadBalancerForwardingRuleProperties.
-
-        An array of items in the collection. The original order of rules is preserved during processing, except that rules of the 'FORWARD' type are processed after the rules with other defined actions. The relative order of the 'FORWARD' type rules is also preserved during the processing.  # noqa: E501
-
-        :param http_rules: The http_rules of this ApplicationLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :type http_rules: list[ApplicationLoadBalancerHttpRule]
-        """
-
-        self._http_rules = http_rules
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

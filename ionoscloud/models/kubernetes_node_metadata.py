@@ -34,77 +34,54 @@ class KubernetesNodeMetadata(object):
     """
     openapi_types = {
 
-        'etag': 'str',
-
         'created_date': 'datetime',
+
+        'etag': 'str',
 
         'last_modified_date': 'datetime',
 
-        'state': 'str',
-
         'last_software_updated_date': 'datetime',
+
+        'state': 'str',
     }
 
     attribute_map = {
 
-        'etag': 'etag',
-
         'created_date': 'createdDate',
+
+        'etag': 'etag',
 
         'last_modified_date': 'lastModifiedDate',
 
-        'state': 'state',
-
         'last_software_updated_date': 'lastSoftwareUpdatedDate',
+
+        'state': 'state',
     }
 
-    def __init__(self, etag=None, created_date=None, last_modified_date=None, state=None, last_software_updated_date=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, created_date=None, etag=None, last_modified_date=None, last_software_updated_date=None, state=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodeMetadata - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._etag = None
         self._created_date = None
+        self._etag = None
         self._last_modified_date = None
-        self._state = None
         self._last_software_updated_date = None
+        self._state = None
         self.discriminator = None
 
-        if etag is not None:
-            self.etag = etag
         if created_date is not None:
             self.created_date = created_date
+        if etag is not None:
+            self.etag = etag
         if last_modified_date is not None:
             self.last_modified_date = last_modified_date
-        if state is not None:
-            self.state = state
         if last_software_updated_date is not None:
             self.last_software_updated_date = last_software_updated_date
+        if state is not None:
+            self.state = state
 
-
-    @property
-    def etag(self):
-        """Gets the etag of this KubernetesNodeMetadata.  # noqa: E501
-
-        The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as 'ETag' response headers to requests that do not use the 'depth' parameter.  # noqa: E501
-
-        :return: The etag of this KubernetesNodeMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._etag
-
-    @etag.setter
-    def etag(self, etag):
-        """Sets the etag of this KubernetesNodeMetadata.
-
-        The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as 'ETag' response headers to requests that do not use the 'depth' parameter.  # noqa: E501
-
-        :param etag: The etag of this KubernetesNodeMetadata.  # noqa: E501
-        :type etag: str
-        """
-
-        self._etag = etag
 
     @property
     def created_date(self):
@@ -130,6 +107,29 @@ class KubernetesNodeMetadata(object):
         self._created_date = created_date
 
     @property
+    def etag(self):
+        """Gets the etag of this KubernetesNodeMetadata.  # noqa: E501
+
+        The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as 'ETag' response headers to requests that do not use the 'depth' parameter.  # noqa: E501
+
+        :return: The etag of this KubernetesNodeMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._etag
+
+    @etag.setter
+    def etag(self, etag):
+        """Sets the etag of this KubernetesNodeMetadata.
+
+        The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as 'ETag' response headers to requests that do not use the 'depth' parameter.  # noqa: E501
+
+        :param etag: The etag of this KubernetesNodeMetadata.  # noqa: E501
+        :type etag: str
+        """
+
+        self._etag = etag
+
+    @property
     def last_modified_date(self):
         """Gets the last_modified_date of this KubernetesNodeMetadata.  # noqa: E501
 
@@ -151,6 +151,29 @@ class KubernetesNodeMetadata(object):
         """
 
         self._last_modified_date = last_modified_date
+
+    @property
+    def last_software_updated_date(self):
+        """Gets the last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
+
+        The date when the software on the node was last updated.  # noqa: E501
+
+        :return: The last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._last_software_updated_date
+
+    @last_software_updated_date.setter
+    def last_software_updated_date(self, last_software_updated_date):
+        """Sets the last_software_updated_date of this KubernetesNodeMetadata.
+
+        The date when the software on the node was last updated.  # noqa: E501
+
+        :param last_software_updated_date: The last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
+        :type last_software_updated_date: datetime
+        """
+
+        self._last_software_updated_date = last_software_updated_date
 
     @property
     def state(self):
@@ -180,29 +203,6 @@ class KubernetesNodeMetadata(object):
             )
 
         self._state = state
-
-    @property
-    def last_software_updated_date(self):
-        """Gets the last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
-
-        The date when the software on the node was last updated.  # noqa: E501
-
-        :return: The last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._last_software_updated_date
-
-    @last_software_updated_date.setter
-    def last_software_updated_date(self, last_software_updated_date):
-        """Sets the last_software_updated_date of this KubernetesNodeMetadata.
-
-        The date when the software on the node was last updated.  # noqa: E501
-
-        :param last_software_updated_date: The last_software_updated_date of this KubernetesNodeMetadata.  # noqa: E501
-        :type last_software_updated_date: datetime
-        """
-
-        self._last_software_updated_date = last_software_updated_date
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

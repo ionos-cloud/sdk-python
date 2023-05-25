@@ -34,111 +34,88 @@ class Requests(object):
     """
     openapi_types = {
 
-        'id': 'str',
-
-        'type': 'Type',
+        'links': 'PaginationLinks',
 
         'href': 'str',
 
-        'items': 'list[Request]',
+        'id': 'str',
 
-        'offset': 'float',
+        'items': 'list[Request]',
 
         'limit': 'float',
 
-        'links': 'PaginationLinks',
+        'offset': 'float',
+
+        'type': 'Type',
     }
 
     attribute_map = {
 
-        'id': 'id',
-
-        'type': 'type',
+        'links': '_links',
 
         'href': 'href',
 
-        'items': 'items',
+        'id': 'id',
 
-        'offset': 'offset',
+        'items': 'items',
 
         'limit': 'limit',
 
-        'links': '_links',
+        'offset': 'offset',
+
+        'type': 'type',
     }
 
-    def __init__(self, id=None, type=None, href=None, items=None, offset=None, limit=None, links=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, links=None, href=None, id=None, items=None, limit=None, offset=None, type=None, local_vars_configuration=None):  # noqa: E501
         """Requests - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
-        self._type = None
-        self._href = None
-        self._items = None
-        self._offset = None
-        self._limit = None
         self._links = None
+        self._href = None
+        self._id = None
+        self._items = None
+        self._limit = None
+        self._offset = None
+        self._type = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if type is not None:
-            self.type = type
+        self.links = links
         if href is not None:
             self.href = href
+        if id is not None:
+            self.id = id
         if items is not None:
             self.items = items
-        self.offset = offset
         self.limit = limit
-        self.links = links
+        self.offset = offset
+        if type is not None:
+            self.type = type
 
 
     @property
-    def id(self):
-        """Gets the id of this Requests.  # noqa: E501
+    def links(self):
+        """Gets the links of this Requests.  # noqa: E501
 
-        The resource's unique identifier.  # noqa: E501
 
-        :return: The id of this Requests.  # noqa: E501
-        :rtype: str
+        :return: The links of this Requests.  # noqa: E501
+        :rtype: PaginationLinks
         """
-        return self._id
+        return self._links
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Requests.
+    @links.setter
+    def links(self, links):
+        """Sets the links of this Requests.
 
-        The resource's unique identifier.  # noqa: E501
 
-        :param id: The id of this Requests.  # noqa: E501
-        :type id: str
+        :param links: The links of this Requests.  # noqa: E501
+        :type links: PaginationLinks
         """
+        if self.local_vars_configuration.client_side_validation and links is None:  # noqa: E501
+            raise ValueError("Invalid value for `links`, must not be `None`")  # noqa: E501
 
-        self._id = id
-
-    @property
-    def type(self):
-        """Gets the type of this Requests.  # noqa: E501
-
-        The type of object that has been created.  # noqa: E501
-
-        :return: The type of this Requests.  # noqa: E501
-        :rtype: Type
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this Requests.
-
-        The type of object that has been created.  # noqa: E501
-
-        :param type: The type of this Requests.  # noqa: E501
-        :type type: Type
-        """
-
-        self._type = type
+        self._links = links
 
     @property
     def href(self):
@@ -164,6 +141,29 @@ class Requests(object):
         self._href = href
 
     @property
+    def id(self):
+        """Gets the id of this Requests.  # noqa: E501
+
+        The resource's unique identifier.  # noqa: E501
+
+        :return: The id of this Requests.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Requests.
+
+        The resource's unique identifier.  # noqa: E501
+
+        :param id: The id of this Requests.  # noqa: E501
+        :type id: str
+        """
+
+        self._id = id
+
+    @property
     def items(self):
         """Gets the items of this Requests.  # noqa: E501
 
@@ -185,31 +185,6 @@ class Requests(object):
         """
 
         self._items = items
-
-    @property
-    def offset(self):
-        """Gets the offset of this Requests.  # noqa: E501
-
-        The offset, specified in the request (if not is specified, 0 is used by default).  # noqa: E501
-
-        :return: The offset of this Requests.  # noqa: E501
-        :rtype: float
-        """
-        return self._offset
-
-    @offset.setter
-    def offset(self, offset):
-        """Sets the offset of this Requests.
-
-        The offset, specified in the request (if not is specified, 0 is used by default).  # noqa: E501
-
-        :param offset: The offset of this Requests.  # noqa: E501
-        :type offset: float
-        """
-        if self.local_vars_configuration.client_side_validation and offset is None:  # noqa: E501
-            raise ValueError("Invalid value for `offset`, must not be `None`")  # noqa: E501
-
-        self._offset = offset
 
     @property
     def limit(self):
@@ -237,27 +212,52 @@ class Requests(object):
         self._limit = limit
 
     @property
-    def links(self):
-        """Gets the links of this Requests.  # noqa: E501
+    def offset(self):
+        """Gets the offset of this Requests.  # noqa: E501
 
+        The offset, specified in the request (if not is specified, 0 is used by default).  # noqa: E501
 
-        :return: The links of this Requests.  # noqa: E501
-        :rtype: PaginationLinks
+        :return: The offset of this Requests.  # noqa: E501
+        :rtype: float
         """
-        return self._links
+        return self._offset
 
-    @links.setter
-    def links(self, links):
-        """Sets the links of this Requests.
+    @offset.setter
+    def offset(self, offset):
+        """Sets the offset of this Requests.
 
+        The offset, specified in the request (if not is specified, 0 is used by default).  # noqa: E501
 
-        :param links: The links of this Requests.  # noqa: E501
-        :type links: PaginationLinks
+        :param offset: The offset of this Requests.  # noqa: E501
+        :type offset: float
         """
-        if self.local_vars_configuration.client_side_validation and links is None:  # noqa: E501
-            raise ValueError("Invalid value for `links`, must not be `None`")  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and offset is None:  # noqa: E501
+            raise ValueError("Invalid value for `offset`, must not be `None`")  # noqa: E501
 
-        self._links = links
+        self._offset = offset
+
+    @property
+    def type(self):
+        """Gets the type of this Requests.  # noqa: E501
+
+        The type of object that has been created.  # noqa: E501
+
+        :return: The type of this Requests.  # noqa: E501
+        :rtype: Type
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Requests.
+
+        The type of object that has been created.  # noqa: E501
+
+        :param type: The type of this Requests.  # noqa: E501
+        :type type: Type
+        """
+
+        self._type = type
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

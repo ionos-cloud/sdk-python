@@ -34,243 +34,180 @@ class ImageProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
-        'description': 'str',
-
-        'location': 'str',
-
-        'size': 'float',
+        'cloud_init': 'str',
 
         'cpu_hot_plug': 'bool',
 
         'cpu_hot_unplug': 'bool',
 
-        'ram_hot_plug': 'bool',
-
-        'ram_hot_unplug': 'bool',
-
-        'nic_hot_plug': 'bool',
-
-        'nic_hot_unplug': 'bool',
-
-        'disc_virtio_hot_plug': 'bool',
-
-        'disc_virtio_hot_unplug': 'bool',
+        'description': 'str',
 
         'disc_scsi_hot_plug': 'bool',
 
         'disc_scsi_hot_unplug': 'bool',
 
-        'licence_type': 'str',
+        'disc_virtio_hot_plug': 'bool',
 
-        'image_type': 'str',
-
-        'public': 'bool',
+        'disc_virtio_hot_unplug': 'bool',
 
         'image_aliases': 'list[str]',
 
-        'cloud_init': 'str',
+        'image_type': 'str',
+
+        'licence_type': 'str',
+
+        'location': 'str',
+
+        'name': 'str',
+
+        'nic_hot_plug': 'bool',
+
+        'nic_hot_unplug': 'bool',
+
+        'public': 'bool',
+
+        'ram_hot_plug': 'bool',
+
+        'ram_hot_unplug': 'bool',
+
+        'size': 'float',
     }
 
     attribute_map = {
 
-        'name': 'name',
-
-        'description': 'description',
-
-        'location': 'location',
-
-        'size': 'size',
+        'cloud_init': 'cloudInit',
 
         'cpu_hot_plug': 'cpuHotPlug',
 
         'cpu_hot_unplug': 'cpuHotUnplug',
 
-        'ram_hot_plug': 'ramHotPlug',
-
-        'ram_hot_unplug': 'ramHotUnplug',
-
-        'nic_hot_plug': 'nicHotPlug',
-
-        'nic_hot_unplug': 'nicHotUnplug',
-
-        'disc_virtio_hot_plug': 'discVirtioHotPlug',
-
-        'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
+        'description': 'description',
 
         'disc_scsi_hot_plug': 'discScsiHotPlug',
 
         'disc_scsi_hot_unplug': 'discScsiHotUnplug',
 
-        'licence_type': 'licenceType',
+        'disc_virtio_hot_plug': 'discVirtioHotPlug',
 
-        'image_type': 'imageType',
-
-        'public': 'public',
+        'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
 
         'image_aliases': 'imageAliases',
 
-        'cloud_init': 'cloudInit',
+        'image_type': 'imageType',
+
+        'licence_type': 'licenceType',
+
+        'location': 'location',
+
+        'name': 'name',
+
+        'nic_hot_plug': 'nicHotPlug',
+
+        'nic_hot_unplug': 'nicHotUnplug',
+
+        'public': 'public',
+
+        'ram_hot_plug': 'ramHotPlug',
+
+        'ram_hot_unplug': 'ramHotUnplug',
+
+        'size': 'size',
     }
 
-    def __init__(self, name=None, description=None, location=None, size=None, cpu_hot_plug=None, cpu_hot_unplug=None, ram_hot_plug=None, ram_hot_unplug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, disc_scsi_hot_plug=None, disc_scsi_hot_unplug=None, licence_type=None, image_type=None, public=None, image_aliases=None, cloud_init=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cloud_init=None, cpu_hot_plug=None, cpu_hot_unplug=None, description=None, disc_scsi_hot_plug=None, disc_scsi_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, image_aliases=None, image_type=None, licence_type=None, location=None, name=None, nic_hot_plug=None, nic_hot_unplug=None, public=None, ram_hot_plug=None, ram_hot_unplug=None, size=None, local_vars_configuration=None):  # noqa: E501
         """ImageProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._description = None
-        self._location = None
-        self._size = None
+        self._cloud_init = None
         self._cpu_hot_plug = None
         self._cpu_hot_unplug = None
-        self._ram_hot_plug = None
-        self._ram_hot_unplug = None
-        self._nic_hot_plug = None
-        self._nic_hot_unplug = None
-        self._disc_virtio_hot_plug = None
-        self._disc_virtio_hot_unplug = None
+        self._description = None
         self._disc_scsi_hot_plug = None
         self._disc_scsi_hot_unplug = None
-        self._licence_type = None
-        self._image_type = None
-        self._public = None
+        self._disc_virtio_hot_plug = None
+        self._disc_virtio_hot_unplug = None
         self._image_aliases = None
-        self._cloud_init = None
+        self._image_type = None
+        self._licence_type = None
+        self._location = None
+        self._name = None
+        self._nic_hot_plug = None
+        self._nic_hot_unplug = None
+        self._public = None
+        self._ram_hot_plug = None
+        self._ram_hot_unplug = None
+        self._size = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
-        if location is not None:
-            self.location = location
-        if size is not None:
-            self.size = size
+        if cloud_init is not None:
+            self.cloud_init = cloud_init
         if cpu_hot_plug is not None:
             self.cpu_hot_plug = cpu_hot_plug
         if cpu_hot_unplug is not None:
             self.cpu_hot_unplug = cpu_hot_unplug
-        if ram_hot_plug is not None:
-            self.ram_hot_plug = ram_hot_plug
-        if ram_hot_unplug is not None:
-            self.ram_hot_unplug = ram_hot_unplug
-        if nic_hot_plug is not None:
-            self.nic_hot_plug = nic_hot_plug
-        if nic_hot_unplug is not None:
-            self.nic_hot_unplug = nic_hot_unplug
-        if disc_virtio_hot_plug is not None:
-            self.disc_virtio_hot_plug = disc_virtio_hot_plug
-        if disc_virtio_hot_unplug is not None:
-            self.disc_virtio_hot_unplug = disc_virtio_hot_unplug
+        if description is not None:
+            self.description = description
         if disc_scsi_hot_plug is not None:
             self.disc_scsi_hot_plug = disc_scsi_hot_plug
         if disc_scsi_hot_unplug is not None:
             self.disc_scsi_hot_unplug = disc_scsi_hot_unplug
-        self.licence_type = licence_type
-        if image_type is not None:
-            self.image_type = image_type
-        if public is not None:
-            self.public = public
+        if disc_virtio_hot_plug is not None:
+            self.disc_virtio_hot_plug = disc_virtio_hot_plug
+        if disc_virtio_hot_unplug is not None:
+            self.disc_virtio_hot_unplug = disc_virtio_hot_unplug
         if image_aliases is not None:
             self.image_aliases = image_aliases
-        if cloud_init is not None:
-            self.cloud_init = cloud_init
+        if image_type is not None:
+            self.image_type = image_type
+        self.licence_type = licence_type
+        if location is not None:
+            self.location = location
+        if name is not None:
+            self.name = name
+        if nic_hot_plug is not None:
+            self.nic_hot_plug = nic_hot_plug
+        if nic_hot_unplug is not None:
+            self.nic_hot_unplug = nic_hot_unplug
+        if public is not None:
+            self.public = public
+        if ram_hot_plug is not None:
+            self.ram_hot_plug = ram_hot_plug
+        if ram_hot_unplug is not None:
+            self.ram_hot_unplug = ram_hot_unplug
+        if size is not None:
+            self.size = size
 
 
     @property
-    def name(self):
-        """Gets the name of this ImageProperties.  # noqa: E501
+    def cloud_init(self):
+        """Gets the cloud_init of this ImageProperties.  # noqa: E501
 
-        The resource name.  # noqa: E501
+        Cloud init compatibility.  # noqa: E501
 
-        :return: The name of this ImageProperties.  # noqa: E501
+        :return: The cloud_init of this ImageProperties.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._cloud_init
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this ImageProperties.
+    @cloud_init.setter
+    def cloud_init(self, cloud_init):
+        """Sets the cloud_init of this ImageProperties.
 
-        The resource name.  # noqa: E501
+        Cloud init compatibility.  # noqa: E501
 
-        :param name: The name of this ImageProperties.  # noqa: E501
-        :type name: str
+        :param cloud_init: The cloud_init of this ImageProperties.  # noqa: E501
+        :type cloud_init: str
         """
+        allowed_values = ["NONE", "V1"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and cloud_init not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `cloud_init` ({0}), must be one of {1}"  # noqa: E501
+                .format(cloud_init, allowed_values)
+            )
 
-        self._name = name
-
-    @property
-    def description(self):
-        """Gets the description of this ImageProperties.  # noqa: E501
-
-        Human-readable description.  # noqa: E501
-
-        :return: The description of this ImageProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this ImageProperties.
-
-        Human-readable description.  # noqa: E501
-
-        :param description: The description of this ImageProperties.  # noqa: E501
-        :type description: str
-        """
-
-        self._description = description
-
-    @property
-    def location(self):
-        """Gets the location of this ImageProperties.  # noqa: E501
-
-        The location of this image/snapshot.  # noqa: E501
-
-        :return: The location of this ImageProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._location
-
-    @location.setter
-    def location(self, location):
-        """Sets the location of this ImageProperties.
-
-        The location of this image/snapshot.  # noqa: E501
-
-        :param location: The location of this ImageProperties.  # noqa: E501
-        :type location: str
-        """
-
-        self._location = location
-
-    @property
-    def size(self):
-        """Gets the size of this ImageProperties.  # noqa: E501
-
-        The image size in GB.  # noqa: E501
-
-        :return: The size of this ImageProperties.  # noqa: E501
-        :rtype: float
-        """
-        return self._size
-
-    @size.setter
-    def size(self, size):
-        """Sets the size of this ImageProperties.
-
-        The image size in GB.  # noqa: E501
-
-        :param size: The size of this ImageProperties.  # noqa: E501
-        :type size: float
-        """
-
-        self._size = size
+        self._cloud_init = cloud_init
 
     @property
     def cpu_hot_plug(self):
@@ -319,142 +256,27 @@ class ImageProperties(object):
         self._cpu_hot_unplug = cpu_hot_unplug
 
     @property
-    def ram_hot_plug(self):
-        """Gets the ram_hot_plug of this ImageProperties.  # noqa: E501
+    def description(self):
+        """Gets the description of this ImageProperties.  # noqa: E501
 
-        Hot-plug capable RAM (no reboot required).  # noqa: E501
+        Human-readable description.  # noqa: E501
 
-        :return: The ram_hot_plug of this ImageProperties.  # noqa: E501
-        :rtype: bool
+        :return: The description of this ImageProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._ram_hot_plug
+        return self._description
 
-    @ram_hot_plug.setter
-    def ram_hot_plug(self, ram_hot_plug):
-        """Sets the ram_hot_plug of this ImageProperties.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this ImageProperties.
 
-        Hot-plug capable RAM (no reboot required).  # noqa: E501
+        Human-readable description.  # noqa: E501
 
-        :param ram_hot_plug: The ram_hot_plug of this ImageProperties.  # noqa: E501
-        :type ram_hot_plug: bool
-        """
-
-        self._ram_hot_plug = ram_hot_plug
-
-    @property
-    def ram_hot_unplug(self):
-        """Gets the ram_hot_unplug of this ImageProperties.  # noqa: E501
-
-        Hot-unplug capable RAM (no reboot required).  # noqa: E501
-
-        :return: The ram_hot_unplug of this ImageProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._ram_hot_unplug
-
-    @ram_hot_unplug.setter
-    def ram_hot_unplug(self, ram_hot_unplug):
-        """Sets the ram_hot_unplug of this ImageProperties.
-
-        Hot-unplug capable RAM (no reboot required).  # noqa: E501
-
-        :param ram_hot_unplug: The ram_hot_unplug of this ImageProperties.  # noqa: E501
-        :type ram_hot_unplug: bool
+        :param description: The description of this ImageProperties.  # noqa: E501
+        :type description: str
         """
 
-        self._ram_hot_unplug = ram_hot_unplug
-
-    @property
-    def nic_hot_plug(self):
-        """Gets the nic_hot_plug of this ImageProperties.  # noqa: E501
-
-        Hot-plug capable NIC (no reboot required).  # noqa: E501
-
-        :return: The nic_hot_plug of this ImageProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._nic_hot_plug
-
-    @nic_hot_plug.setter
-    def nic_hot_plug(self, nic_hot_plug):
-        """Sets the nic_hot_plug of this ImageProperties.
-
-        Hot-plug capable NIC (no reboot required).  # noqa: E501
-
-        :param nic_hot_plug: The nic_hot_plug of this ImageProperties.  # noqa: E501
-        :type nic_hot_plug: bool
-        """
-
-        self._nic_hot_plug = nic_hot_plug
-
-    @property
-    def nic_hot_unplug(self):
-        """Gets the nic_hot_unplug of this ImageProperties.  # noqa: E501
-
-        Hot-unplug capable NIC (no reboot required).  # noqa: E501
-
-        :return: The nic_hot_unplug of this ImageProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._nic_hot_unplug
-
-    @nic_hot_unplug.setter
-    def nic_hot_unplug(self, nic_hot_unplug):
-        """Sets the nic_hot_unplug of this ImageProperties.
-
-        Hot-unplug capable NIC (no reboot required).  # noqa: E501
-
-        :param nic_hot_unplug: The nic_hot_unplug of this ImageProperties.  # noqa: E501
-        :type nic_hot_unplug: bool
-        """
-
-        self._nic_hot_unplug = nic_hot_unplug
-
-    @property
-    def disc_virtio_hot_plug(self):
-        """Gets the disc_virtio_hot_plug of this ImageProperties.  # noqa: E501
-
-        Hot-plug capable Virt-IO drive (no reboot required).  # noqa: E501
-
-        :return: The disc_virtio_hot_plug of this ImageProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._disc_virtio_hot_plug
-
-    @disc_virtio_hot_plug.setter
-    def disc_virtio_hot_plug(self, disc_virtio_hot_plug):
-        """Sets the disc_virtio_hot_plug of this ImageProperties.
-
-        Hot-plug capable Virt-IO drive (no reboot required).  # noqa: E501
-
-        :param disc_virtio_hot_plug: The disc_virtio_hot_plug of this ImageProperties.  # noqa: E501
-        :type disc_virtio_hot_plug: bool
-        """
-
-        self._disc_virtio_hot_plug = disc_virtio_hot_plug
-
-    @property
-    def disc_virtio_hot_unplug(self):
-        """Gets the disc_virtio_hot_unplug of this ImageProperties.  # noqa: E501
-
-        Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.  # noqa: E501
-
-        :return: The disc_virtio_hot_unplug of this ImageProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._disc_virtio_hot_unplug
-
-    @disc_virtio_hot_unplug.setter
-    def disc_virtio_hot_unplug(self, disc_virtio_hot_unplug):
-        """Sets the disc_virtio_hot_unplug of this ImageProperties.
-
-        Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.  # noqa: E501
-
-        :param disc_virtio_hot_unplug: The disc_virtio_hot_unplug of this ImageProperties.  # noqa: E501
-        :type disc_virtio_hot_unplug: bool
-        """
-
-        self._disc_virtio_hot_unplug = disc_virtio_hot_unplug
+        self._description = description
 
     @property
     def disc_scsi_hot_plug(self):
@@ -503,35 +325,73 @@ class ImageProperties(object):
         self._disc_scsi_hot_unplug = disc_scsi_hot_unplug
 
     @property
-    def licence_type(self):
-        """Gets the licence_type of this ImageProperties.  # noqa: E501
+    def disc_virtio_hot_plug(self):
+        """Gets the disc_virtio_hot_plug of this ImageProperties.  # noqa: E501
 
-        The OS type of this image.  # noqa: E501
+        Hot-plug capable Virt-IO drive (no reboot required).  # noqa: E501
 
-        :return: The licence_type of this ImageProperties.  # noqa: E501
-        :rtype: str
+        :return: The disc_virtio_hot_plug of this ImageProperties.  # noqa: E501
+        :rtype: bool
         """
-        return self._licence_type
+        return self._disc_virtio_hot_plug
 
-    @licence_type.setter
-    def licence_type(self, licence_type):
-        """Sets the licence_type of this ImageProperties.
+    @disc_virtio_hot_plug.setter
+    def disc_virtio_hot_plug(self, disc_virtio_hot_plug):
+        """Sets the disc_virtio_hot_plug of this ImageProperties.
 
-        The OS type of this image.  # noqa: E501
+        Hot-plug capable Virt-IO drive (no reboot required).  # noqa: E501
 
-        :param licence_type: The licence_type of this ImageProperties.  # noqa: E501
-        :type licence_type: str
+        :param disc_virtio_hot_plug: The disc_virtio_hot_plug of this ImageProperties.  # noqa: E501
+        :type disc_virtio_hot_plug: bool
         """
-        if self.local_vars_configuration.client_side_validation and licence_type is None:  # noqa: E501
-            raise ValueError("Invalid value for `licence_type`, must not be `None`")  # noqa: E501
-        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "WINDOWS2022", "LINUX", "OTHER"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and licence_type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `licence_type` ({0}), must be one of {1}"  # noqa: E501
-                .format(licence_type, allowed_values)
-            )
 
-        self._licence_type = licence_type
+        self._disc_virtio_hot_plug = disc_virtio_hot_plug
+
+    @property
+    def disc_virtio_hot_unplug(self):
+        """Gets the disc_virtio_hot_unplug of this ImageProperties.  # noqa: E501
+
+        Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.  # noqa: E501
+
+        :return: The disc_virtio_hot_unplug of this ImageProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._disc_virtio_hot_unplug
+
+    @disc_virtio_hot_unplug.setter
+    def disc_virtio_hot_unplug(self, disc_virtio_hot_unplug):
+        """Sets the disc_virtio_hot_unplug of this ImageProperties.
+
+        Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.  # noqa: E501
+
+        :param disc_virtio_hot_unplug: The disc_virtio_hot_unplug of this ImageProperties.  # noqa: E501
+        :type disc_virtio_hot_unplug: bool
+        """
+
+        self._disc_virtio_hot_unplug = disc_virtio_hot_unplug
+
+    @property
+    def image_aliases(self):
+        """Gets the image_aliases of this ImageProperties.  # noqa: E501
+
+        List of image aliases mapped for this image  # noqa: E501
+
+        :return: The image_aliases of this ImageProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._image_aliases
+
+    @image_aliases.setter
+    def image_aliases(self, image_aliases):
+        """Sets the image_aliases of this ImageProperties.
+
+        List of image aliases mapped for this image  # noqa: E501
+
+        :param image_aliases: The image_aliases of this ImageProperties.  # noqa: E501
+        :type image_aliases: list[str]
+        """
+
+        self._image_aliases = image_aliases
 
     @property
     def image_type(self):
@@ -563,6 +423,129 @@ class ImageProperties(object):
         self._image_type = image_type
 
     @property
+    def licence_type(self):
+        """Gets the licence_type of this ImageProperties.  # noqa: E501
+
+        The OS type of this image.  # noqa: E501
+
+        :return: The licence_type of this ImageProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._licence_type
+
+    @licence_type.setter
+    def licence_type(self, licence_type):
+        """Sets the licence_type of this ImageProperties.
+
+        The OS type of this image.  # noqa: E501
+
+        :param licence_type: The licence_type of this ImageProperties.  # noqa: E501
+        :type licence_type: str
+        """
+        if self.local_vars_configuration.client_side_validation and licence_type is None:  # noqa: E501
+            raise ValueError("Invalid value for `licence_type`, must not be `None`")  # noqa: E501
+        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "WINDOWS2022", "RHEL", "LINUX", "OTHER"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and licence_type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `licence_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(licence_type, allowed_values)
+            )
+
+        self._licence_type = licence_type
+
+    @property
+    def location(self):
+        """Gets the location of this ImageProperties.  # noqa: E501
+
+        The location of this image/snapshot.  # noqa: E501
+
+        :return: The location of this ImageProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._location
+
+    @location.setter
+    def location(self, location):
+        """Sets the location of this ImageProperties.
+
+        The location of this image/snapshot.  # noqa: E501
+
+        :param location: The location of this ImageProperties.  # noqa: E501
+        :type location: str
+        """
+
+        self._location = location
+
+    @property
+    def name(self):
+        """Gets the name of this ImageProperties.  # noqa: E501
+
+        The resource name.  # noqa: E501
+
+        :return: The name of this ImageProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this ImageProperties.
+
+        The resource name.  # noqa: E501
+
+        :param name: The name of this ImageProperties.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
+
+    @property
+    def nic_hot_plug(self):
+        """Gets the nic_hot_plug of this ImageProperties.  # noqa: E501
+
+        Hot-plug capable NIC (no reboot required).  # noqa: E501
+
+        :return: The nic_hot_plug of this ImageProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._nic_hot_plug
+
+    @nic_hot_plug.setter
+    def nic_hot_plug(self, nic_hot_plug):
+        """Sets the nic_hot_plug of this ImageProperties.
+
+        Hot-plug capable NIC (no reboot required).  # noqa: E501
+
+        :param nic_hot_plug: The nic_hot_plug of this ImageProperties.  # noqa: E501
+        :type nic_hot_plug: bool
+        """
+
+        self._nic_hot_plug = nic_hot_plug
+
+    @property
+    def nic_hot_unplug(self):
+        """Gets the nic_hot_unplug of this ImageProperties.  # noqa: E501
+
+        Hot-unplug capable NIC (no reboot required).  # noqa: E501
+
+        :return: The nic_hot_unplug of this ImageProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._nic_hot_unplug
+
+    @nic_hot_unplug.setter
+    def nic_hot_unplug(self, nic_hot_unplug):
+        """Sets the nic_hot_unplug of this ImageProperties.
+
+        Hot-unplug capable NIC (no reboot required).  # noqa: E501
+
+        :param nic_hot_unplug: The nic_hot_unplug of this ImageProperties.  # noqa: E501
+        :type nic_hot_unplug: bool
+        """
+
+        self._nic_hot_unplug = nic_hot_unplug
+
+    @property
     def public(self):
         """Gets the public of this ImageProperties.  # noqa: E501
 
@@ -586,56 +569,73 @@ class ImageProperties(object):
         self._public = public
 
     @property
-    def image_aliases(self):
-        """Gets the image_aliases of this ImageProperties.  # noqa: E501
+    def ram_hot_plug(self):
+        """Gets the ram_hot_plug of this ImageProperties.  # noqa: E501
 
-        List of image aliases mapped for this image  # noqa: E501
+        Hot-plug capable RAM (no reboot required).  # noqa: E501
 
-        :return: The image_aliases of this ImageProperties.  # noqa: E501
-        :rtype: list[str]
+        :return: The ram_hot_plug of this ImageProperties.  # noqa: E501
+        :rtype: bool
         """
-        return self._image_aliases
+        return self._ram_hot_plug
 
-    @image_aliases.setter
-    def image_aliases(self, image_aliases):
-        """Sets the image_aliases of this ImageProperties.
+    @ram_hot_plug.setter
+    def ram_hot_plug(self, ram_hot_plug):
+        """Sets the ram_hot_plug of this ImageProperties.
 
-        List of image aliases mapped for this image  # noqa: E501
+        Hot-plug capable RAM (no reboot required).  # noqa: E501
 
-        :param image_aliases: The image_aliases of this ImageProperties.  # noqa: E501
-        :type image_aliases: list[str]
+        :param ram_hot_plug: The ram_hot_plug of this ImageProperties.  # noqa: E501
+        :type ram_hot_plug: bool
         """
 
-        self._image_aliases = image_aliases
+        self._ram_hot_plug = ram_hot_plug
 
     @property
-    def cloud_init(self):
-        """Gets the cloud_init of this ImageProperties.  # noqa: E501
+    def ram_hot_unplug(self):
+        """Gets the ram_hot_unplug of this ImageProperties.  # noqa: E501
 
-        Cloud init compatibility.  # noqa: E501
+        Hot-unplug capable RAM (no reboot required).  # noqa: E501
 
-        :return: The cloud_init of this ImageProperties.  # noqa: E501
-        :rtype: str
+        :return: The ram_hot_unplug of this ImageProperties.  # noqa: E501
+        :rtype: bool
         """
-        return self._cloud_init
+        return self._ram_hot_unplug
 
-    @cloud_init.setter
-    def cloud_init(self, cloud_init):
-        """Sets the cloud_init of this ImageProperties.
+    @ram_hot_unplug.setter
+    def ram_hot_unplug(self, ram_hot_unplug):
+        """Sets the ram_hot_unplug of this ImageProperties.
 
-        Cloud init compatibility.  # noqa: E501
+        Hot-unplug capable RAM (no reboot required).  # noqa: E501
 
-        :param cloud_init: The cloud_init of this ImageProperties.  # noqa: E501
-        :type cloud_init: str
+        :param ram_hot_unplug: The ram_hot_unplug of this ImageProperties.  # noqa: E501
+        :type ram_hot_unplug: bool
         """
-        allowed_values = ["NONE", "V1"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and cloud_init not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `cloud_init` ({0}), must be one of {1}"  # noqa: E501
-                .format(cloud_init, allowed_values)
-            )
 
-        self._cloud_init = cloud_init
+        self._ram_hot_unplug = ram_hot_unplug
+
+    @property
+    def size(self):
+        """Gets the size of this ImageProperties.  # noqa: E501
+
+        The image size in GB.  # noqa: E501
+
+        :return: The size of this ImageProperties.  # noqa: E501
+        :rtype: float
+        """
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        """Sets the size of this ImageProperties.
+
+        The image size in GB.  # noqa: E501
+
+        :param size: The size of this ImageProperties.  # noqa: E501
+        :type size: float
+        """
+
+        self._size = size
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -34,176 +34,151 @@ class ResourceLimits(object):
     """
     openapi_types = {
 
-        'cores_per_server': 'int',
-
         'cores_per_contract': 'int',
+
+        'cores_per_server': 'int',
 
         'cores_provisioned': 'int',
 
-        'ram_per_server': 'int',
-
-        'ram_per_contract': 'int',
-
-        'ram_provisioned': 'int',
-
-        'hdd_limit_per_volume': 'int',
+        'das_volume_provisioned': 'int',
 
         'hdd_limit_per_contract': 'int',
 
+        'hdd_limit_per_volume': 'int',
+
         'hdd_volume_provisioned': 'int',
-
-        'ssd_limit_per_volume': 'int',
-
-        'ssd_limit_per_contract': 'int',
-
-        'ssd_volume_provisioned': 'int',
-
-        'das_volume_provisioned': 'int',
-
-        'reservable_ips': 'int',
-
-        'reserved_ips_on_contract': 'int',
-
-        'reserved_ips_in_use': 'int',
 
         'k8s_cluster_limit_total': 'int',
 
         'k8s_clusters_provisioned': 'int',
 
+        'nat_gateway_limit_total': 'int',
+
+        'nat_gateway_provisioned': 'int',
+
         'nlb_limit_total': 'int',
 
         'nlb_provisioned': 'int',
 
-        'nat_gateway_limit_total': 'int',
+        'ram_per_contract': 'int',
 
-        'nat_gateway_provisioned': 'int',
+        'ram_per_server': 'int',
+
+        'ram_provisioned': 'int',
+
+        'reservable_ips': 'int',
+
+        'reserved_ips_in_use': 'int',
+
+        'reserved_ips_on_contract': 'int',
+
+        'ssd_limit_per_contract': 'int',
+
+        'ssd_limit_per_volume': 'int',
+
+        'ssd_volume_provisioned': 'int',
     }
 
     attribute_map = {
 
-        'cores_per_server': 'coresPerServer',
-
         'cores_per_contract': 'coresPerContract',
+
+        'cores_per_server': 'coresPerServer',
 
         'cores_provisioned': 'coresProvisioned',
 
-        'ram_per_server': 'ramPerServer',
-
-        'ram_per_contract': 'ramPerContract',
-
-        'ram_provisioned': 'ramProvisioned',
-
-        'hdd_limit_per_volume': 'hddLimitPerVolume',
+        'das_volume_provisioned': 'dasVolumeProvisioned',
 
         'hdd_limit_per_contract': 'hddLimitPerContract',
 
+        'hdd_limit_per_volume': 'hddLimitPerVolume',
+
         'hdd_volume_provisioned': 'hddVolumeProvisioned',
-
-        'ssd_limit_per_volume': 'ssdLimitPerVolume',
-
-        'ssd_limit_per_contract': 'ssdLimitPerContract',
-
-        'ssd_volume_provisioned': 'ssdVolumeProvisioned',
-
-        'das_volume_provisioned': 'dasVolumeProvisioned',
-
-        'reservable_ips': 'reservableIps',
-
-        'reserved_ips_on_contract': 'reservedIpsOnContract',
-
-        'reserved_ips_in_use': 'reservedIpsInUse',
 
         'k8s_cluster_limit_total': 'k8sClusterLimitTotal',
 
         'k8s_clusters_provisioned': 'k8sClustersProvisioned',
 
+        'nat_gateway_limit_total': 'natGatewayLimitTotal',
+
+        'nat_gateway_provisioned': 'natGatewayProvisioned',
+
         'nlb_limit_total': 'nlbLimitTotal',
 
         'nlb_provisioned': 'nlbProvisioned',
 
-        'nat_gateway_limit_total': 'natGatewayLimitTotal',
+        'ram_per_contract': 'ramPerContract',
 
-        'nat_gateway_provisioned': 'natGatewayProvisioned',
+        'ram_per_server': 'ramPerServer',
+
+        'ram_provisioned': 'ramProvisioned',
+
+        'reservable_ips': 'reservableIps',
+
+        'reserved_ips_in_use': 'reservedIpsInUse',
+
+        'reserved_ips_on_contract': 'reservedIpsOnContract',
+
+        'ssd_limit_per_contract': 'ssdLimitPerContract',
+
+        'ssd_limit_per_volume': 'ssdLimitPerVolume',
+
+        'ssd_volume_provisioned': 'ssdVolumeProvisioned',
     }
 
-    def __init__(self, cores_per_server=None, cores_per_contract=None, cores_provisioned=None, ram_per_server=None, ram_per_contract=None, ram_provisioned=None, hdd_limit_per_volume=None, hdd_limit_per_contract=None, hdd_volume_provisioned=None, ssd_limit_per_volume=None, ssd_limit_per_contract=None, ssd_volume_provisioned=None, das_volume_provisioned=None, reservable_ips=None, reserved_ips_on_contract=None, reserved_ips_in_use=None, k8s_cluster_limit_total=None, k8s_clusters_provisioned=None, nlb_limit_total=None, nlb_provisioned=None, nat_gateway_limit_total=None, nat_gateway_provisioned=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cores_per_contract=None, cores_per_server=None, cores_provisioned=None, das_volume_provisioned=None, hdd_limit_per_contract=None, hdd_limit_per_volume=None, hdd_volume_provisioned=None, k8s_cluster_limit_total=None, k8s_clusters_provisioned=None, nat_gateway_limit_total=None, nat_gateway_provisioned=None, nlb_limit_total=None, nlb_provisioned=None, ram_per_contract=None, ram_per_server=None, ram_provisioned=None, reservable_ips=None, reserved_ips_in_use=None, reserved_ips_on_contract=None, ssd_limit_per_contract=None, ssd_limit_per_volume=None, ssd_volume_provisioned=None, local_vars_configuration=None):  # noqa: E501
         """ResourceLimits - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._cores_per_server = None
         self._cores_per_contract = None
+        self._cores_per_server = None
         self._cores_provisioned = None
-        self._ram_per_server = None
-        self._ram_per_contract = None
-        self._ram_provisioned = None
-        self._hdd_limit_per_volume = None
-        self._hdd_limit_per_contract = None
-        self._hdd_volume_provisioned = None
-        self._ssd_limit_per_volume = None
-        self._ssd_limit_per_contract = None
-        self._ssd_volume_provisioned = None
         self._das_volume_provisioned = None
-        self._reservable_ips = None
-        self._reserved_ips_on_contract = None
-        self._reserved_ips_in_use = None
+        self._hdd_limit_per_contract = None
+        self._hdd_limit_per_volume = None
+        self._hdd_volume_provisioned = None
         self._k8s_cluster_limit_total = None
         self._k8s_clusters_provisioned = None
-        self._nlb_limit_total = None
-        self._nlb_provisioned = None
         self._nat_gateway_limit_total = None
         self._nat_gateway_provisioned = None
+        self._nlb_limit_total = None
+        self._nlb_provisioned = None
+        self._ram_per_contract = None
+        self._ram_per_server = None
+        self._ram_provisioned = None
+        self._reservable_ips = None
+        self._reserved_ips_in_use = None
+        self._reserved_ips_on_contract = None
+        self._ssd_limit_per_contract = None
+        self._ssd_limit_per_volume = None
+        self._ssd_volume_provisioned = None
         self.discriminator = None
 
-        self.cores_per_server = cores_per_server
         self.cores_per_contract = cores_per_contract
+        self.cores_per_server = cores_per_server
         self.cores_provisioned = cores_provisioned
-        self.ram_per_server = ram_per_server
-        self.ram_per_contract = ram_per_contract
-        self.ram_provisioned = ram_provisioned
-        self.hdd_limit_per_volume = hdd_limit_per_volume
-        self.hdd_limit_per_contract = hdd_limit_per_contract
-        self.hdd_volume_provisioned = hdd_volume_provisioned
-        self.ssd_limit_per_volume = ssd_limit_per_volume
-        self.ssd_limit_per_contract = ssd_limit_per_contract
-        self.ssd_volume_provisioned = ssd_volume_provisioned
         self.das_volume_provisioned = das_volume_provisioned
-        self.reservable_ips = reservable_ips
-        self.reserved_ips_on_contract = reserved_ips_on_contract
-        self.reserved_ips_in_use = reserved_ips_in_use
+        self.hdd_limit_per_contract = hdd_limit_per_contract
+        self.hdd_limit_per_volume = hdd_limit_per_volume
+        self.hdd_volume_provisioned = hdd_volume_provisioned
         self.k8s_cluster_limit_total = k8s_cluster_limit_total
         self.k8s_clusters_provisioned = k8s_clusters_provisioned
-        self.nlb_limit_total = nlb_limit_total
-        self.nlb_provisioned = nlb_provisioned
         self.nat_gateway_limit_total = nat_gateway_limit_total
         self.nat_gateway_provisioned = nat_gateway_provisioned
+        self.nlb_limit_total = nlb_limit_total
+        self.nlb_provisioned = nlb_provisioned
+        self.ram_per_contract = ram_per_contract
+        self.ram_per_server = ram_per_server
+        self.ram_provisioned = ram_provisioned
+        self.reservable_ips = reservable_ips
+        self.reserved_ips_in_use = reserved_ips_in_use
+        self.reserved_ips_on_contract = reserved_ips_on_contract
+        self.ssd_limit_per_contract = ssd_limit_per_contract
+        self.ssd_limit_per_volume = ssd_limit_per_volume
+        self.ssd_volume_provisioned = ssd_volume_provisioned
 
-
-    @property
-    def cores_per_server(self):
-        """Gets the cores_per_server of this ResourceLimits.  # noqa: E501
-
-        The maximum number of CPU cores per server.  # noqa: E501
-
-        :return: The cores_per_server of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._cores_per_server
-
-    @cores_per_server.setter
-    def cores_per_server(self, cores_per_server):
-        """Sets the cores_per_server of this ResourceLimits.
-
-        The maximum number of CPU cores per server.  # noqa: E501
-
-        :param cores_per_server: The cores_per_server of this ResourceLimits.  # noqa: E501
-        :type cores_per_server: int
-        """
-        if self.local_vars_configuration.client_side_validation and cores_per_server is None:  # noqa: E501
-            raise ValueError("Invalid value for `cores_per_server`, must not be `None`")  # noqa: E501
-
-        self._cores_per_server = cores_per_server
 
     @property
     def cores_per_contract(self):
@@ -231,6 +206,31 @@ class ResourceLimits(object):
         self._cores_per_contract = cores_per_contract
 
     @property
+    def cores_per_server(self):
+        """Gets the cores_per_server of this ResourceLimits.  # noqa: E501
+
+        The maximum number of CPU cores per server.  # noqa: E501
+
+        :return: The cores_per_server of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._cores_per_server
+
+    @cores_per_server.setter
+    def cores_per_server(self, cores_per_server):
+        """Sets the cores_per_server of this ResourceLimits.
+
+        The maximum number of CPU cores per server.  # noqa: E501
+
+        :param cores_per_server: The cores_per_server of this ResourceLimits.  # noqa: E501
+        :type cores_per_server: int
+        """
+        if self.local_vars_configuration.client_side_validation and cores_per_server is None:  # noqa: E501
+            raise ValueError("Invalid value for `cores_per_server`, must not be `None`")  # noqa: E501
+
+        self._cores_per_server = cores_per_server
+
+    @property
     def cores_provisioned(self):
         """Gets the cores_provisioned of this ResourceLimits.  # noqa: E501
 
@@ -254,231 +254,6 @@ class ResourceLimits(object):
             raise ValueError("Invalid value for `cores_provisioned`, must not be `None`")  # noqa: E501
 
         self._cores_provisioned = cores_provisioned
-
-    @property
-    def ram_per_server(self):
-        """Gets the ram_per_server of this ResourceLimits.  # noqa: E501
-
-        The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.  # noqa: E501
-
-        :return: The ram_per_server of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._ram_per_server
-
-    @ram_per_server.setter
-    def ram_per_server(self, ram_per_server):
-        """Sets the ram_per_server of this ResourceLimits.
-
-        The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.  # noqa: E501
-
-        :param ram_per_server: The ram_per_server of this ResourceLimits.  # noqa: E501
-        :type ram_per_server: int
-        """
-        if self.local_vars_configuration.client_side_validation and ram_per_server is None:  # noqa: E501
-            raise ValueError("Invalid value for `ram_per_server`, must not be `None`")  # noqa: E501
-
-        self._ram_per_server = ram_per_server
-
-    @property
-    def ram_per_contract(self):
-        """Gets the ram_per_contract of this ResourceLimits.  # noqa: E501
-
-        The maximum amount of RAM (in MB) that can be provisioned under this contract.  # noqa: E501
-
-        :return: The ram_per_contract of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._ram_per_contract
-
-    @ram_per_contract.setter
-    def ram_per_contract(self, ram_per_contract):
-        """Sets the ram_per_contract of this ResourceLimits.
-
-        The maximum amount of RAM (in MB) that can be provisioned under this contract.  # noqa: E501
-
-        :param ram_per_contract: The ram_per_contract of this ResourceLimits.  # noqa: E501
-        :type ram_per_contract: int
-        """
-        if self.local_vars_configuration.client_side_validation and ram_per_contract is None:  # noqa: E501
-            raise ValueError("Invalid value for `ram_per_contract`, must not be `None`")  # noqa: E501
-
-        self._ram_per_contract = ram_per_contract
-
-    @property
-    def ram_provisioned(self):
-        """Gets the ram_provisioned of this ResourceLimits.  # noqa: E501
-
-        The amount of RAM (in MB) provisioned under this contract.  # noqa: E501
-
-        :return: The ram_provisioned of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._ram_provisioned
-
-    @ram_provisioned.setter
-    def ram_provisioned(self, ram_provisioned):
-        """Sets the ram_provisioned of this ResourceLimits.
-
-        The amount of RAM (in MB) provisioned under this contract.  # noqa: E501
-
-        :param ram_provisioned: The ram_provisioned of this ResourceLimits.  # noqa: E501
-        :type ram_provisioned: int
-        """
-        if self.local_vars_configuration.client_side_validation and ram_provisioned is None:  # noqa: E501
-            raise ValueError("Invalid value for `ram_provisioned`, must not be `None`")  # noqa: E501
-
-        self._ram_provisioned = ram_provisioned
-
-    @property
-    def hdd_limit_per_volume(self):
-        """Gets the hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
-
-        The maximum size (in MB) of an idividual hard disk volume.  # noqa: E501
-
-        :return: The hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._hdd_limit_per_volume
-
-    @hdd_limit_per_volume.setter
-    def hdd_limit_per_volume(self, hdd_limit_per_volume):
-        """Sets the hdd_limit_per_volume of this ResourceLimits.
-
-        The maximum size (in MB) of an idividual hard disk volume.  # noqa: E501
-
-        :param hdd_limit_per_volume: The hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
-        :type hdd_limit_per_volume: int
-        """
-        if self.local_vars_configuration.client_side_validation and hdd_limit_per_volume is None:  # noqa: E501
-            raise ValueError("Invalid value for `hdd_limit_per_volume`, must not be `None`")  # noqa: E501
-
-        self._hdd_limit_per_volume = hdd_limit_per_volume
-
-    @property
-    def hdd_limit_per_contract(self):
-        """Gets the hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
-
-        The maximum amount of disk space (in MB) that can be provided under this contract.  # noqa: E501
-
-        :return: The hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._hdd_limit_per_contract
-
-    @hdd_limit_per_contract.setter
-    def hdd_limit_per_contract(self, hdd_limit_per_contract):
-        """Sets the hdd_limit_per_contract of this ResourceLimits.
-
-        The maximum amount of disk space (in MB) that can be provided under this contract.  # noqa: E501
-
-        :param hdd_limit_per_contract: The hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
-        :type hdd_limit_per_contract: int
-        """
-        if self.local_vars_configuration.client_side_validation and hdd_limit_per_contract is None:  # noqa: E501
-            raise ValueError("Invalid value for `hdd_limit_per_contract`, must not be `None`")  # noqa: E501
-
-        self._hdd_limit_per_contract = hdd_limit_per_contract
-
-    @property
-    def hdd_volume_provisioned(self):
-        """Gets the hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
-
-        The amount of hard disk space (in MB) that is currently provisioned.  # noqa: E501
-
-        :return: The hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._hdd_volume_provisioned
-
-    @hdd_volume_provisioned.setter
-    def hdd_volume_provisioned(self, hdd_volume_provisioned):
-        """Sets the hdd_volume_provisioned of this ResourceLimits.
-
-        The amount of hard disk space (in MB) that is currently provisioned.  # noqa: E501
-
-        :param hdd_volume_provisioned: The hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
-        :type hdd_volume_provisioned: int
-        """
-        if self.local_vars_configuration.client_side_validation and hdd_volume_provisioned is None:  # noqa: E501
-            raise ValueError("Invalid value for `hdd_volume_provisioned`, must not be `None`")  # noqa: E501
-
-        self._hdd_volume_provisioned = hdd_volume_provisioned
-
-    @property
-    def ssd_limit_per_volume(self):
-        """Gets the ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
-
-        The maximum size (in MB) of an individual solid state disk volume.  # noqa: E501
-
-        :return: The ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._ssd_limit_per_volume
-
-    @ssd_limit_per_volume.setter
-    def ssd_limit_per_volume(self, ssd_limit_per_volume):
-        """Sets the ssd_limit_per_volume of this ResourceLimits.
-
-        The maximum size (in MB) of an individual solid state disk volume.  # noqa: E501
-
-        :param ssd_limit_per_volume: The ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
-        :type ssd_limit_per_volume: int
-        """
-        if self.local_vars_configuration.client_side_validation and ssd_limit_per_volume is None:  # noqa: E501
-            raise ValueError("Invalid value for `ssd_limit_per_volume`, must not be `None`")  # noqa: E501
-
-        self._ssd_limit_per_volume = ssd_limit_per_volume
-
-    @property
-    def ssd_limit_per_contract(self):
-        """Gets the ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
-
-        The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.  # noqa: E501
-
-        :return: The ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._ssd_limit_per_contract
-
-    @ssd_limit_per_contract.setter
-    def ssd_limit_per_contract(self, ssd_limit_per_contract):
-        """Sets the ssd_limit_per_contract of this ResourceLimits.
-
-        The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.  # noqa: E501
-
-        :param ssd_limit_per_contract: The ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
-        :type ssd_limit_per_contract: int
-        """
-        if self.local_vars_configuration.client_side_validation and ssd_limit_per_contract is None:  # noqa: E501
-            raise ValueError("Invalid value for `ssd_limit_per_contract`, must not be `None`")  # noqa: E501
-
-        self._ssd_limit_per_contract = ssd_limit_per_contract
-
-    @property
-    def ssd_volume_provisioned(self):
-        """Gets the ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
-
-        The amount of solid state disk space (in MB) that is currently provisioned.  # noqa: E501
-
-        :return: The ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
-        :rtype: int
-        """
-        return self._ssd_volume_provisioned
-
-    @ssd_volume_provisioned.setter
-    def ssd_volume_provisioned(self, ssd_volume_provisioned):
-        """Sets the ssd_volume_provisioned of this ResourceLimits.
-
-        The amount of solid state disk space (in MB) that is currently provisioned.  # noqa: E501
-
-        :param ssd_volume_provisioned: The ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
-        :type ssd_volume_provisioned: int
-        """
-        if self.local_vars_configuration.client_side_validation and ssd_volume_provisioned is None:  # noqa: E501
-            raise ValueError("Invalid value for `ssd_volume_provisioned`, must not be `None`")  # noqa: E501
-
-        self._ssd_volume_provisioned = ssd_volume_provisioned
 
     @property
     def das_volume_provisioned(self):
@@ -506,79 +281,79 @@ class ResourceLimits(object):
         self._das_volume_provisioned = das_volume_provisioned
 
     @property
-    def reservable_ips(self):
-        """Gets the reservable_ips of this ResourceLimits.  # noqa: E501
+    def hdd_limit_per_contract(self):
+        """Gets the hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
 
-        The maximum number of static public IP addresses that can be reserved by this customer across contracts.  # noqa: E501
+        The maximum amount of disk space (in MB) that can be provided under this contract.  # noqa: E501
 
-        :return: The reservable_ips of this ResourceLimits.  # noqa: E501
+        :return: The hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
         :rtype: int
         """
-        return self._reservable_ips
+        return self._hdd_limit_per_contract
 
-    @reservable_ips.setter
-    def reservable_ips(self, reservable_ips):
-        """Sets the reservable_ips of this ResourceLimits.
+    @hdd_limit_per_contract.setter
+    def hdd_limit_per_contract(self, hdd_limit_per_contract):
+        """Sets the hdd_limit_per_contract of this ResourceLimits.
 
-        The maximum number of static public IP addresses that can be reserved by this customer across contracts.  # noqa: E501
+        The maximum amount of disk space (in MB) that can be provided under this contract.  # noqa: E501
 
-        :param reservable_ips: The reservable_ips of this ResourceLimits.  # noqa: E501
-        :type reservable_ips: int
+        :param hdd_limit_per_contract: The hdd_limit_per_contract of this ResourceLimits.  # noqa: E501
+        :type hdd_limit_per_contract: int
         """
-        if self.local_vars_configuration.client_side_validation and reservable_ips is None:  # noqa: E501
-            raise ValueError("Invalid value for `reservable_ips`, must not be `None`")  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and hdd_limit_per_contract is None:  # noqa: E501
+            raise ValueError("Invalid value for `hdd_limit_per_contract`, must not be `None`")  # noqa: E501
 
-        self._reservable_ips = reservable_ips
+        self._hdd_limit_per_contract = hdd_limit_per_contract
 
     @property
-    def reserved_ips_on_contract(self):
-        """Gets the reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
+    def hdd_limit_per_volume(self):
+        """Gets the hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
 
-        The maximum number of static public IP addresses that can be reserved for this contract.  # noqa: E501
+        The maximum size (in MB) of an idividual hard disk volume.  # noqa: E501
 
-        :return: The reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
+        :return: The hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
         :rtype: int
         """
-        return self._reserved_ips_on_contract
+        return self._hdd_limit_per_volume
 
-    @reserved_ips_on_contract.setter
-    def reserved_ips_on_contract(self, reserved_ips_on_contract):
-        """Sets the reserved_ips_on_contract of this ResourceLimits.
+    @hdd_limit_per_volume.setter
+    def hdd_limit_per_volume(self, hdd_limit_per_volume):
+        """Sets the hdd_limit_per_volume of this ResourceLimits.
 
-        The maximum number of static public IP addresses that can be reserved for this contract.  # noqa: E501
+        The maximum size (in MB) of an idividual hard disk volume.  # noqa: E501
 
-        :param reserved_ips_on_contract: The reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
-        :type reserved_ips_on_contract: int
+        :param hdd_limit_per_volume: The hdd_limit_per_volume of this ResourceLimits.  # noqa: E501
+        :type hdd_limit_per_volume: int
         """
-        if self.local_vars_configuration.client_side_validation and reserved_ips_on_contract is None:  # noqa: E501
-            raise ValueError("Invalid value for `reserved_ips_on_contract`, must not be `None`")  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and hdd_limit_per_volume is None:  # noqa: E501
+            raise ValueError("Invalid value for `hdd_limit_per_volume`, must not be `None`")  # noqa: E501
 
-        self._reserved_ips_on_contract = reserved_ips_on_contract
+        self._hdd_limit_per_volume = hdd_limit_per_volume
 
     @property
-    def reserved_ips_in_use(self):
-        """Gets the reserved_ips_in_use of this ResourceLimits.  # noqa: E501
+    def hdd_volume_provisioned(self):
+        """Gets the hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
 
-        The number of static public IP addresses in use.  # noqa: E501
+        The amount of hard disk space (in MB) that is currently provisioned.  # noqa: E501
 
-        :return: The reserved_ips_in_use of this ResourceLimits.  # noqa: E501
+        :return: The hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
         :rtype: int
         """
-        return self._reserved_ips_in_use
+        return self._hdd_volume_provisioned
 
-    @reserved_ips_in_use.setter
-    def reserved_ips_in_use(self, reserved_ips_in_use):
-        """Sets the reserved_ips_in_use of this ResourceLimits.
+    @hdd_volume_provisioned.setter
+    def hdd_volume_provisioned(self, hdd_volume_provisioned):
+        """Sets the hdd_volume_provisioned of this ResourceLimits.
 
-        The number of static public IP addresses in use.  # noqa: E501
+        The amount of hard disk space (in MB) that is currently provisioned.  # noqa: E501
 
-        :param reserved_ips_in_use: The reserved_ips_in_use of this ResourceLimits.  # noqa: E501
-        :type reserved_ips_in_use: int
+        :param hdd_volume_provisioned: The hdd_volume_provisioned of this ResourceLimits.  # noqa: E501
+        :type hdd_volume_provisioned: int
         """
-        if self.local_vars_configuration.client_side_validation and reserved_ips_in_use is None:  # noqa: E501
-            raise ValueError("Invalid value for `reserved_ips_in_use`, must not be `None`")  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and hdd_volume_provisioned is None:  # noqa: E501
+            raise ValueError("Invalid value for `hdd_volume_provisioned`, must not be `None`")  # noqa: E501
 
-        self._reserved_ips_in_use = reserved_ips_in_use
+        self._hdd_volume_provisioned = hdd_volume_provisioned
 
     @property
     def k8s_cluster_limit_total(self):
@@ -631,6 +406,56 @@ class ResourceLimits(object):
         self._k8s_clusters_provisioned = k8s_clusters_provisioned
 
     @property
+    def nat_gateway_limit_total(self):
+        """Gets the nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
+
+        The NAT Gateway total limit.  # noqa: E501
+
+        :return: The nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._nat_gateway_limit_total
+
+    @nat_gateway_limit_total.setter
+    def nat_gateway_limit_total(self, nat_gateway_limit_total):
+        """Sets the nat_gateway_limit_total of this ResourceLimits.
+
+        The NAT Gateway total limit.  # noqa: E501
+
+        :param nat_gateway_limit_total: The nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
+        :type nat_gateway_limit_total: int
+        """
+        if self.local_vars_configuration.client_side_validation and nat_gateway_limit_total is None:  # noqa: E501
+            raise ValueError("Invalid value for `nat_gateway_limit_total`, must not be `None`")  # noqa: E501
+
+        self._nat_gateway_limit_total = nat_gateway_limit_total
+
+    @property
+    def nat_gateway_provisioned(self):
+        """Gets the nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
+
+        The NAT Gateways provisioned.  # noqa: E501
+
+        :return: The nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._nat_gateway_provisioned
+
+    @nat_gateway_provisioned.setter
+    def nat_gateway_provisioned(self, nat_gateway_provisioned):
+        """Sets the nat_gateway_provisioned of this ResourceLimits.
+
+        The NAT Gateways provisioned.  # noqa: E501
+
+        :param nat_gateway_provisioned: The nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
+        :type nat_gateway_provisioned: int
+        """
+        if self.local_vars_configuration.client_side_validation and nat_gateway_provisioned is None:  # noqa: E501
+            raise ValueError("Invalid value for `nat_gateway_provisioned`, must not be `None`")  # noqa: E501
+
+        self._nat_gateway_provisioned = nat_gateway_provisioned
+
+    @property
     def nlb_limit_total(self):
         """Gets the nlb_limit_total of this ResourceLimits.  # noqa: E501
 
@@ -681,54 +506,229 @@ class ResourceLimits(object):
         self._nlb_provisioned = nlb_provisioned
 
     @property
-    def nat_gateway_limit_total(self):
-        """Gets the nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
+    def ram_per_contract(self):
+        """Gets the ram_per_contract of this ResourceLimits.  # noqa: E501
 
-        The NAT Gateway total limit.  # noqa: E501
+        The maximum amount of RAM (in MB) that can be provisioned under this contract.  # noqa: E501
 
-        :return: The nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
+        :return: The ram_per_contract of this ResourceLimits.  # noqa: E501
         :rtype: int
         """
-        return self._nat_gateway_limit_total
+        return self._ram_per_contract
 
-    @nat_gateway_limit_total.setter
-    def nat_gateway_limit_total(self, nat_gateway_limit_total):
-        """Sets the nat_gateway_limit_total of this ResourceLimits.
+    @ram_per_contract.setter
+    def ram_per_contract(self, ram_per_contract):
+        """Sets the ram_per_contract of this ResourceLimits.
 
-        The NAT Gateway total limit.  # noqa: E501
+        The maximum amount of RAM (in MB) that can be provisioned under this contract.  # noqa: E501
 
-        :param nat_gateway_limit_total: The nat_gateway_limit_total of this ResourceLimits.  # noqa: E501
-        :type nat_gateway_limit_total: int
+        :param ram_per_contract: The ram_per_contract of this ResourceLimits.  # noqa: E501
+        :type ram_per_contract: int
         """
-        if self.local_vars_configuration.client_side_validation and nat_gateway_limit_total is None:  # noqa: E501
-            raise ValueError("Invalid value for `nat_gateway_limit_total`, must not be `None`")  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and ram_per_contract is None:  # noqa: E501
+            raise ValueError("Invalid value for `ram_per_contract`, must not be `None`")  # noqa: E501
 
-        self._nat_gateway_limit_total = nat_gateway_limit_total
+        self._ram_per_contract = ram_per_contract
 
     @property
-    def nat_gateway_provisioned(self):
-        """Gets the nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
+    def ram_per_server(self):
+        """Gets the ram_per_server of this ResourceLimits.  # noqa: E501
 
-        The NAT Gateways provisioned.  # noqa: E501
+        The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.  # noqa: E501
 
-        :return: The nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
+        :return: The ram_per_server of this ResourceLimits.  # noqa: E501
         :rtype: int
         """
-        return self._nat_gateway_provisioned
+        return self._ram_per_server
 
-    @nat_gateway_provisioned.setter
-    def nat_gateway_provisioned(self, nat_gateway_provisioned):
-        """Sets the nat_gateway_provisioned of this ResourceLimits.
+    @ram_per_server.setter
+    def ram_per_server(self, ram_per_server):
+        """Sets the ram_per_server of this ResourceLimits.
 
-        The NAT Gateways provisioned.  # noqa: E501
+        The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.  # noqa: E501
 
-        :param nat_gateway_provisioned: The nat_gateway_provisioned of this ResourceLimits.  # noqa: E501
-        :type nat_gateway_provisioned: int
+        :param ram_per_server: The ram_per_server of this ResourceLimits.  # noqa: E501
+        :type ram_per_server: int
         """
-        if self.local_vars_configuration.client_side_validation and nat_gateway_provisioned is None:  # noqa: E501
-            raise ValueError("Invalid value for `nat_gateway_provisioned`, must not be `None`")  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and ram_per_server is None:  # noqa: E501
+            raise ValueError("Invalid value for `ram_per_server`, must not be `None`")  # noqa: E501
 
-        self._nat_gateway_provisioned = nat_gateway_provisioned
+        self._ram_per_server = ram_per_server
+
+    @property
+    def ram_provisioned(self):
+        """Gets the ram_provisioned of this ResourceLimits.  # noqa: E501
+
+        The amount of RAM (in MB) provisioned under this contract.  # noqa: E501
+
+        :return: The ram_provisioned of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._ram_provisioned
+
+    @ram_provisioned.setter
+    def ram_provisioned(self, ram_provisioned):
+        """Sets the ram_provisioned of this ResourceLimits.
+
+        The amount of RAM (in MB) provisioned under this contract.  # noqa: E501
+
+        :param ram_provisioned: The ram_provisioned of this ResourceLimits.  # noqa: E501
+        :type ram_provisioned: int
+        """
+        if self.local_vars_configuration.client_side_validation and ram_provisioned is None:  # noqa: E501
+            raise ValueError("Invalid value for `ram_provisioned`, must not be `None`")  # noqa: E501
+
+        self._ram_provisioned = ram_provisioned
+
+    @property
+    def reservable_ips(self):
+        """Gets the reservable_ips of this ResourceLimits.  # noqa: E501
+
+        The maximum number of static public IP addresses that can be reserved by this customer across contracts.  # noqa: E501
+
+        :return: The reservable_ips of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._reservable_ips
+
+    @reservable_ips.setter
+    def reservable_ips(self, reservable_ips):
+        """Sets the reservable_ips of this ResourceLimits.
+
+        The maximum number of static public IP addresses that can be reserved by this customer across contracts.  # noqa: E501
+
+        :param reservable_ips: The reservable_ips of this ResourceLimits.  # noqa: E501
+        :type reservable_ips: int
+        """
+        if self.local_vars_configuration.client_side_validation and reservable_ips is None:  # noqa: E501
+            raise ValueError("Invalid value for `reservable_ips`, must not be `None`")  # noqa: E501
+
+        self._reservable_ips = reservable_ips
+
+    @property
+    def reserved_ips_in_use(self):
+        """Gets the reserved_ips_in_use of this ResourceLimits.  # noqa: E501
+
+        The number of static public IP addresses in use.  # noqa: E501
+
+        :return: The reserved_ips_in_use of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_ips_in_use
+
+    @reserved_ips_in_use.setter
+    def reserved_ips_in_use(self, reserved_ips_in_use):
+        """Sets the reserved_ips_in_use of this ResourceLimits.
+
+        The number of static public IP addresses in use.  # noqa: E501
+
+        :param reserved_ips_in_use: The reserved_ips_in_use of this ResourceLimits.  # noqa: E501
+        :type reserved_ips_in_use: int
+        """
+        if self.local_vars_configuration.client_side_validation and reserved_ips_in_use is None:  # noqa: E501
+            raise ValueError("Invalid value for `reserved_ips_in_use`, must not be `None`")  # noqa: E501
+
+        self._reserved_ips_in_use = reserved_ips_in_use
+
+    @property
+    def reserved_ips_on_contract(self):
+        """Gets the reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
+
+        The maximum number of static public IP addresses that can be reserved for this contract.  # noqa: E501
+
+        :return: The reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._reserved_ips_on_contract
+
+    @reserved_ips_on_contract.setter
+    def reserved_ips_on_contract(self, reserved_ips_on_contract):
+        """Sets the reserved_ips_on_contract of this ResourceLimits.
+
+        The maximum number of static public IP addresses that can be reserved for this contract.  # noqa: E501
+
+        :param reserved_ips_on_contract: The reserved_ips_on_contract of this ResourceLimits.  # noqa: E501
+        :type reserved_ips_on_contract: int
+        """
+        if self.local_vars_configuration.client_side_validation and reserved_ips_on_contract is None:  # noqa: E501
+            raise ValueError("Invalid value for `reserved_ips_on_contract`, must not be `None`")  # noqa: E501
+
+        self._reserved_ips_on_contract = reserved_ips_on_contract
+
+    @property
+    def ssd_limit_per_contract(self):
+        """Gets the ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
+
+        The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.  # noqa: E501
+
+        :return: The ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._ssd_limit_per_contract
+
+    @ssd_limit_per_contract.setter
+    def ssd_limit_per_contract(self, ssd_limit_per_contract):
+        """Sets the ssd_limit_per_contract of this ResourceLimits.
+
+        The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.  # noqa: E501
+
+        :param ssd_limit_per_contract: The ssd_limit_per_contract of this ResourceLimits.  # noqa: E501
+        :type ssd_limit_per_contract: int
+        """
+        if self.local_vars_configuration.client_side_validation and ssd_limit_per_contract is None:  # noqa: E501
+            raise ValueError("Invalid value for `ssd_limit_per_contract`, must not be `None`")  # noqa: E501
+
+        self._ssd_limit_per_contract = ssd_limit_per_contract
+
+    @property
+    def ssd_limit_per_volume(self):
+        """Gets the ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
+
+        The maximum size (in MB) of an individual solid state disk volume.  # noqa: E501
+
+        :return: The ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._ssd_limit_per_volume
+
+    @ssd_limit_per_volume.setter
+    def ssd_limit_per_volume(self, ssd_limit_per_volume):
+        """Sets the ssd_limit_per_volume of this ResourceLimits.
+
+        The maximum size (in MB) of an individual solid state disk volume.  # noqa: E501
+
+        :param ssd_limit_per_volume: The ssd_limit_per_volume of this ResourceLimits.  # noqa: E501
+        :type ssd_limit_per_volume: int
+        """
+        if self.local_vars_configuration.client_side_validation and ssd_limit_per_volume is None:  # noqa: E501
+            raise ValueError("Invalid value for `ssd_limit_per_volume`, must not be `None`")  # noqa: E501
+
+        self._ssd_limit_per_volume = ssd_limit_per_volume
+
+    @property
+    def ssd_volume_provisioned(self):
+        """Gets the ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
+
+        The amount of solid state disk space (in MB) that is currently provisioned.  # noqa: E501
+
+        :return: The ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
+        :rtype: int
+        """
+        return self._ssd_volume_provisioned
+
+    @ssd_volume_provisioned.setter
+    def ssd_volume_provisioned(self, ssd_volume_provisioned):
+        """Sets the ssd_volume_provisioned of this ResourceLimits.
+
+        The amount of solid state disk space (in MB) that is currently provisioned.  # noqa: E501
+
+        :param ssd_volume_provisioned: The ssd_volume_provisioned of this ResourceLimits.  # noqa: E501
+        :type ssd_volume_provisioned: int
+        """
+        if self.local_vars_configuration.client_side_validation and ssd_volume_provisioned is None:  # noqa: E501
+            raise ValueError("Invalid value for `ssd_volume_provisioned`, must not be `None`")  # noqa: E501
+
+        self._ssd_volume_provisioned = ssd_volume_provisioned
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

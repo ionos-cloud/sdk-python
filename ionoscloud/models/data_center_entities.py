@@ -34,61 +34,145 @@ class DataCenterEntities(object):
     """
     openapi_types = {
 
-        'servers': 'Servers',
-
-        'volumes': 'Volumes',
+        'lans': 'Lans',
 
         'loadbalancers': 'Loadbalancers',
 
-        'lans': 'Lans',
+        'natgateways': 'NatGateways',
 
         'networkloadbalancers': 'NetworkLoadBalancers',
 
-        'natgateways': 'NatGateways',
+        'servers': 'Servers',
+
+        'volumes': 'Volumes',
     }
 
     attribute_map = {
 
-        'servers': 'servers',
-
-        'volumes': 'volumes',
+        'lans': 'lans',
 
         'loadbalancers': 'loadbalancers',
 
-        'lans': 'lans',
+        'natgateways': 'natgateways',
 
         'networkloadbalancers': 'networkloadbalancers',
 
-        'natgateways': 'natgateways',
+        'servers': 'servers',
+
+        'volumes': 'volumes',
     }
 
-    def __init__(self, servers=None, volumes=None, loadbalancers=None, lans=None, networkloadbalancers=None, natgateways=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, lans=None, loadbalancers=None, natgateways=None, networkloadbalancers=None, servers=None, volumes=None, local_vars_configuration=None):  # noqa: E501
         """DataCenterEntities - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._lans = None
+        self._loadbalancers = None
+        self._natgateways = None
+        self._networkloadbalancers = None
         self._servers = None
         self._volumes = None
-        self._loadbalancers = None
-        self._lans = None
-        self._networkloadbalancers = None
-        self._natgateways = None
         self.discriminator = None
 
+        if lans is not None:
+            self.lans = lans
+        if loadbalancers is not None:
+            self.loadbalancers = loadbalancers
+        if natgateways is not None:
+            self.natgateways = natgateways
+        if networkloadbalancers is not None:
+            self.networkloadbalancers = networkloadbalancers
         if servers is not None:
             self.servers = servers
         if volumes is not None:
             self.volumes = volumes
-        if loadbalancers is not None:
-            self.loadbalancers = loadbalancers
-        if lans is not None:
-            self.lans = lans
-        if networkloadbalancers is not None:
-            self.networkloadbalancers = networkloadbalancers
-        if natgateways is not None:
-            self.natgateways = natgateways
 
+
+    @property
+    def lans(self):
+        """Gets the lans of this DataCenterEntities.  # noqa: E501
+
+
+        :return: The lans of this DataCenterEntities.  # noqa: E501
+        :rtype: Lans
+        """
+        return self._lans
+
+    @lans.setter
+    def lans(self, lans):
+        """Sets the lans of this DataCenterEntities.
+
+
+        :param lans: The lans of this DataCenterEntities.  # noqa: E501
+        :type lans: Lans
+        """
+
+        self._lans = lans
+
+    @property
+    def loadbalancers(self):
+        """Gets the loadbalancers of this DataCenterEntities.  # noqa: E501
+
+
+        :return: The loadbalancers of this DataCenterEntities.  # noqa: E501
+        :rtype: Loadbalancers
+        """
+        return self._loadbalancers
+
+    @loadbalancers.setter
+    def loadbalancers(self, loadbalancers):
+        """Sets the loadbalancers of this DataCenterEntities.
+
+
+        :param loadbalancers: The loadbalancers of this DataCenterEntities.  # noqa: E501
+        :type loadbalancers: Loadbalancers
+        """
+
+        self._loadbalancers = loadbalancers
+
+    @property
+    def natgateways(self):
+        """Gets the natgateways of this DataCenterEntities.  # noqa: E501
+
+
+        :return: The natgateways of this DataCenterEntities.  # noqa: E501
+        :rtype: NatGateways
+        """
+        return self._natgateways
+
+    @natgateways.setter
+    def natgateways(self, natgateways):
+        """Sets the natgateways of this DataCenterEntities.
+
+
+        :param natgateways: The natgateways of this DataCenterEntities.  # noqa: E501
+        :type natgateways: NatGateways
+        """
+
+        self._natgateways = natgateways
+
+    @property
+    def networkloadbalancers(self):
+        """Gets the networkloadbalancers of this DataCenterEntities.  # noqa: E501
+
+
+        :return: The networkloadbalancers of this DataCenterEntities.  # noqa: E501
+        :rtype: NetworkLoadBalancers
+        """
+        return self._networkloadbalancers
+
+    @networkloadbalancers.setter
+    def networkloadbalancers(self, networkloadbalancers):
+        """Sets the networkloadbalancers of this DataCenterEntities.
+
+
+        :param networkloadbalancers: The networkloadbalancers of this DataCenterEntities.  # noqa: E501
+        :type networkloadbalancers: NetworkLoadBalancers
+        """
+
+        self._networkloadbalancers = networkloadbalancers
 
     @property
     def servers(self):
@@ -131,90 +215,6 @@ class DataCenterEntities(object):
         """
 
         self._volumes = volumes
-
-    @property
-    def loadbalancers(self):
-        """Gets the loadbalancers of this DataCenterEntities.  # noqa: E501
-
-
-        :return: The loadbalancers of this DataCenterEntities.  # noqa: E501
-        :rtype: Loadbalancers
-        """
-        return self._loadbalancers
-
-    @loadbalancers.setter
-    def loadbalancers(self, loadbalancers):
-        """Sets the loadbalancers of this DataCenterEntities.
-
-
-        :param loadbalancers: The loadbalancers of this DataCenterEntities.  # noqa: E501
-        :type loadbalancers: Loadbalancers
-        """
-
-        self._loadbalancers = loadbalancers
-
-    @property
-    def lans(self):
-        """Gets the lans of this DataCenterEntities.  # noqa: E501
-
-
-        :return: The lans of this DataCenterEntities.  # noqa: E501
-        :rtype: Lans
-        """
-        return self._lans
-
-    @lans.setter
-    def lans(self, lans):
-        """Sets the lans of this DataCenterEntities.
-
-
-        :param lans: The lans of this DataCenterEntities.  # noqa: E501
-        :type lans: Lans
-        """
-
-        self._lans = lans
-
-    @property
-    def networkloadbalancers(self):
-        """Gets the networkloadbalancers of this DataCenterEntities.  # noqa: E501
-
-
-        :return: The networkloadbalancers of this DataCenterEntities.  # noqa: E501
-        :rtype: NetworkLoadBalancers
-        """
-        return self._networkloadbalancers
-
-    @networkloadbalancers.setter
-    def networkloadbalancers(self, networkloadbalancers):
-        """Sets the networkloadbalancers of this DataCenterEntities.
-
-
-        :param networkloadbalancers: The networkloadbalancers of this DataCenterEntities.  # noqa: E501
-        :type networkloadbalancers: NetworkLoadBalancers
-        """
-
-        self._networkloadbalancers = networkloadbalancers
-
-    @property
-    def natgateways(self):
-        """Gets the natgateways of this DataCenterEntities.  # noqa: E501
-
-
-        :return: The natgateways of this DataCenterEntities.  # noqa: E501
-        :rtype: NatGateways
-        """
-        return self._natgateways
-
-    @natgateways.setter
-    def natgateways(self, natgateways):
-        """Sets the natgateways of this DataCenterEntities.
-
-
-        :param natgateways: The natgateways of this DataCenterEntities.  # noqa: E501
-        :type natgateways: NatGateways
-        """
-
-        self._natgateways = natgateways
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

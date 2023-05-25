@@ -34,47 +34,70 @@ class BackupUnits(object):
     """
     openapi_types = {
 
-        'id': 'str',
-
-        'type': 'str',
-
         'href': 'str',
 
+        'id': 'str',
+
         'items': 'list[BackupUnit]',
+
+        'type': 'str',
     }
 
     attribute_map = {
 
-        'id': 'id',
-
-        'type': 'type',
-
         'href': 'href',
 
+        'id': 'id',
+
         'items': 'items',
+
+        'type': 'type',
     }
 
-    def __init__(self, id=None, type=None, href=None, items=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, href=None, id=None, items=None, type=None, local_vars_configuration=None):  # noqa: E501
         """BackupUnits - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
-        self._type = None
         self._href = None
+        self._id = None
         self._items = None
+        self._type = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if type is not None:
-            self.type = type
         if href is not None:
             self.href = href
+        if id is not None:
+            self.id = id
         if items is not None:
             self.items = items
+        if type is not None:
+            self.type = type
 
+
+    @property
+    def href(self):
+        """Gets the href of this BackupUnits.  # noqa: E501
+
+        URL to the object representation (absolute path).  # noqa: E501
+
+        :return: The href of this BackupUnits.  # noqa: E501
+        :rtype: str
+        """
+        return self._href
+
+    @href.setter
+    def href(self, href):
+        """Sets the href of this BackupUnits.
+
+        URL to the object representation (absolute path).  # noqa: E501
+
+        :param href: The href of this BackupUnits.  # noqa: E501
+        :type href: str
+        """
+
+        self._href = href
 
     @property
     def id(self):
@@ -98,6 +121,29 @@ class BackupUnits(object):
         """
 
         self._id = id
+
+    @property
+    def items(self):
+        """Gets the items of this BackupUnits.  # noqa: E501
+
+        Array of items in the collection.  # noqa: E501
+
+        :return: The items of this BackupUnits.  # noqa: E501
+        :rtype: list[BackupUnit]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this BackupUnits.
+
+        Array of items in the collection.  # noqa: E501
+
+        :param items: The items of this BackupUnits.  # noqa: E501
+        :type items: list[BackupUnit]
+        """
+
+        self._items = items
 
     @property
     def type(self):
@@ -127,52 +173,6 @@ class BackupUnits(object):
             )
 
         self._type = type
-
-    @property
-    def href(self):
-        """Gets the href of this BackupUnits.  # noqa: E501
-
-        URL to the object representation (absolute path).  # noqa: E501
-
-        :return: The href of this BackupUnits.  # noqa: E501
-        :rtype: str
-        """
-        return self._href
-
-    @href.setter
-    def href(self, href):
-        """Sets the href of this BackupUnits.
-
-        URL to the object representation (absolute path).  # noqa: E501
-
-        :param href: The href of this BackupUnits.  # noqa: E501
-        :type href: str
-        """
-
-        self._href = href
-
-    @property
-    def items(self):
-        """Gets the items of this BackupUnits.  # noqa: E501
-
-        Array of items in the collection.  # noqa: E501
-
-        :return: The items of this BackupUnits.  # noqa: E501
-        :rtype: list[BackupUnit]
-        """
-        return self._items
-
-    @items.setter
-    def items(self, items):
-        """Sets the items of this BackupUnits.
-
-        Array of items in the collection.  # noqa: E501
-
-        :param items: The items of this BackupUnits.  # noqa: E501
-        :type items: list[BackupUnit]
-        """
-
-        self._items = items
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

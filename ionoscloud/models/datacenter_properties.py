@@ -34,90 +34,90 @@ class DatacenterProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'cpu_architecture': 'list[CpuArchitectureProperties]',
 
         'description': 'str',
 
+        'features': 'list[str]',
+
         'location': 'str',
 
-        'version': 'int',
-
-        'features': 'list[str]',
+        'name': 'str',
 
         'sec_auth_protection': 'bool',
 
-        'cpu_architecture': 'list[CpuArchitectureProperties]',
+        'version': 'int',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'cpu_architecture': 'cpuArchitecture',
 
         'description': 'description',
 
+        'features': 'features',
+
         'location': 'location',
 
-        'version': 'version',
-
-        'features': 'features',
+        'name': 'name',
 
         'sec_auth_protection': 'secAuthProtection',
 
-        'cpu_architecture': 'cpuArchitecture',
+        'version': 'version',
     }
 
-    def __init__(self, name=None, description=None, location=None, version=None, features=None, sec_auth_protection=None, cpu_architecture=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cpu_architecture=None, description=None, features=None, location=None, name=None, sec_auth_protection=None, version=None, local_vars_configuration=None):  # noqa: E501
         """DatacenterProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._description = None
-        self._location = None
-        self._version = None
-        self._features = None
-        self._sec_auth_protection = None
         self._cpu_architecture = None
+        self._description = None
+        self._features = None
+        self._location = None
+        self._name = None
+        self._sec_auth_protection = None
+        self._version = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
-        self.location = location
-        if version is not None:
-            self.version = version
-        if features is not None:
-            self.features = features
-        if sec_auth_protection is not None:
-            self.sec_auth_protection = sec_auth_protection
         if cpu_architecture is not None:
             self.cpu_architecture = cpu_architecture
+        if description is not None:
+            self.description = description
+        if features is not None:
+            self.features = features
+        self.location = location
+        if name is not None:
+            self.name = name
+        if sec_auth_protection is not None:
+            self.sec_auth_protection = sec_auth_protection
+        if version is not None:
+            self.version = version
 
 
     @property
-    def name(self):
-        """Gets the name of this DatacenterProperties.  # noqa: E501
+    def cpu_architecture(self):
+        """Gets the cpu_architecture of this DatacenterProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        Array of features and CPU families available in a location  # noqa: E501
 
-        :return: The name of this DatacenterProperties.  # noqa: E501
-        :rtype: str
+        :return: The cpu_architecture of this DatacenterProperties.  # noqa: E501
+        :rtype: list[CpuArchitectureProperties]
         """
-        return self._name
+        return self._cpu_architecture
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DatacenterProperties.
+    @cpu_architecture.setter
+    def cpu_architecture(self, cpu_architecture):
+        """Sets the cpu_architecture of this DatacenterProperties.
 
-        The name of the  resource.  # noqa: E501
+        Array of features and CPU families available in a location  # noqa: E501
 
-        :param name: The name of this DatacenterProperties.  # noqa: E501
-        :type name: str
+        :param cpu_architecture: The cpu_architecture of this DatacenterProperties.  # noqa: E501
+        :type cpu_architecture: list[CpuArchitectureProperties]
         """
 
-        self._name = name
+        self._cpu_architecture = cpu_architecture
 
     @property
     def description(self):
@@ -141,6 +141,29 @@ class DatacenterProperties(object):
         """
 
         self._description = description
+
+    @property
+    def features(self):
+        """Gets the features of this DatacenterProperties.  # noqa: E501
+
+        List of features supported by the location where this data center is provisioned.  # noqa: E501
+
+        :return: The features of this DatacenterProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._features
+
+    @features.setter
+    def features(self, features):
+        """Sets the features of this DatacenterProperties.
+
+        List of features supported by the location where this data center is provisioned.  # noqa: E501
+
+        :param features: The features of this DatacenterProperties.  # noqa: E501
+        :type features: list[str]
+        """
+
+        self._features = features
 
     @property
     def location(self):
@@ -168,50 +191,27 @@ class DatacenterProperties(object):
         self._location = location
 
     @property
-    def version(self):
-        """Gets the version of this DatacenterProperties.  # noqa: E501
+    def name(self):
+        """Gets the name of this DatacenterProperties.  # noqa: E501
 
-        The version of the data center; incremented with every change.  # noqa: E501
+        The name of the  resource.  # noqa: E501
 
-        :return: The version of this DatacenterProperties.  # noqa: E501
-        :rtype: int
+        :return: The name of this DatacenterProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._version
+        return self._name
 
-    @version.setter
-    def version(self, version):
-        """Sets the version of this DatacenterProperties.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DatacenterProperties.
 
-        The version of the data center; incremented with every change.  # noqa: E501
+        The name of the  resource.  # noqa: E501
 
-        :param version: The version of this DatacenterProperties.  # noqa: E501
-        :type version: int
-        """
-
-        self._version = version
-
-    @property
-    def features(self):
-        """Gets the features of this DatacenterProperties.  # noqa: E501
-
-        List of features supported by the location where this data center is provisioned.  # noqa: E501
-
-        :return: The features of this DatacenterProperties.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._features
-
-    @features.setter
-    def features(self, features):
-        """Sets the features of this DatacenterProperties.
-
-        List of features supported by the location where this data center is provisioned.  # noqa: E501
-
-        :param features: The features of this DatacenterProperties.  # noqa: E501
-        :type features: list[str]
+        :param name: The name of this DatacenterProperties.  # noqa: E501
+        :type name: str
         """
 
-        self._features = features
+        self._name = name
 
     @property
     def sec_auth_protection(self):
@@ -237,27 +237,27 @@ class DatacenterProperties(object):
         self._sec_auth_protection = sec_auth_protection
 
     @property
-    def cpu_architecture(self):
-        """Gets the cpu_architecture of this DatacenterProperties.  # noqa: E501
+    def version(self):
+        """Gets the version of this DatacenterProperties.  # noqa: E501
 
-        Array of features and CPU families available in a location  # noqa: E501
+        The version of the data center; incremented with every change.  # noqa: E501
 
-        :return: The cpu_architecture of this DatacenterProperties.  # noqa: E501
-        :rtype: list[CpuArchitectureProperties]
+        :return: The version of this DatacenterProperties.  # noqa: E501
+        :rtype: int
         """
-        return self._cpu_architecture
+        return self._version
 
-    @cpu_architecture.setter
-    def cpu_architecture(self, cpu_architecture):
-        """Sets the cpu_architecture of this DatacenterProperties.
+    @version.setter
+    def version(self, version):
+        """Sets the version of this DatacenterProperties.
 
-        Array of features and CPU families available in a location  # noqa: E501
+        The version of the data center; incremented with every change.  # noqa: E501
 
-        :param cpu_architecture: The cpu_architecture of this DatacenterProperties.  # noqa: E501
-        :type cpu_architecture: list[CpuArchitectureProperties]
+        :param version: The version of this DatacenterProperties.  # noqa: E501
+        :type version: int
         """
 
-        self._cpu_architecture = cpu_architecture
+        self._version = version
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

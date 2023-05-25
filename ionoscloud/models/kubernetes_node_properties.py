@@ -34,45 +34,70 @@ class KubernetesNodeProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'k8s_version': 'str',
 
-        'public_ip': 'str',
+        'name': 'str',
 
         'private_ip': 'str',
 
-        'k8s_version': 'str',
+        'public_ip': 'str',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'k8s_version': 'k8sVersion',
 
-        'public_ip': 'publicIP',
+        'name': 'name',
 
         'private_ip': 'privateIP',
 
-        'k8s_version': 'k8sVersion',
+        'public_ip': 'publicIP',
     }
 
-    def __init__(self, name=None, public_ip=None, private_ip=None, k8s_version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, k8s_version=None, name=None, private_ip=None, public_ip=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodeProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._public_ip = None
-        self._private_ip = None
         self._k8s_version = None
+        self._name = None
+        self._private_ip = None
+        self._public_ip = None
         self.discriminator = None
 
+        self.k8s_version = k8s_version
         self.name = name
-        if public_ip is not None:
-            self.public_ip = public_ip
         if private_ip is not None:
             self.private_ip = private_ip
-        self.k8s_version = k8s_version
+        if public_ip is not None:
+            self.public_ip = public_ip
 
+
+    @property
+    def k8s_version(self):
+        """Gets the k8s_version of this KubernetesNodeProperties.  # noqa: E501
+
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
+
+        :return: The k8s_version of this KubernetesNodeProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._k8s_version
+
+    @k8s_version.setter
+    def k8s_version(self, k8s_version):
+        """Sets the k8s_version of this KubernetesNodeProperties.
+
+        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
+
+        :param k8s_version: The k8s_version of this KubernetesNodeProperties.  # noqa: E501
+        :type k8s_version: str
+        """
+        if self.local_vars_configuration.client_side_validation and k8s_version is None:  # noqa: E501
+            raise ValueError("Invalid value for `k8s_version`, must not be `None`")  # noqa: E501
+
+        self._k8s_version = k8s_version
 
     @property
     def name(self):
@@ -100,29 +125,6 @@ class KubernetesNodeProperties(object):
         self._name = name
 
     @property
-    def public_ip(self):
-        """Gets the public_ip of this KubernetesNodeProperties.  # noqa: E501
-
-        The public IP associated with the node.  # noqa: E501
-
-        :return: The public_ip of this KubernetesNodeProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._public_ip
-
-    @public_ip.setter
-    def public_ip(self, public_ip):
-        """Sets the public_ip of this KubernetesNodeProperties.
-
-        The public IP associated with the node.  # noqa: E501
-
-        :param public_ip: The public_ip of this KubernetesNodeProperties.  # noqa: E501
-        :type public_ip: str
-        """
-
-        self._public_ip = public_ip
-
-    @property
     def private_ip(self):
         """Gets the private_ip of this KubernetesNodeProperties.  # noqa: E501
 
@@ -146,29 +148,27 @@ class KubernetesNodeProperties(object):
         self._private_ip = private_ip
 
     @property
-    def k8s_version(self):
-        """Gets the k8s_version of this KubernetesNodeProperties.  # noqa: E501
+    def public_ip(self):
+        """Gets the public_ip of this KubernetesNodeProperties.  # noqa: E501
 
-        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
+        The public IP associated with the node.  # noqa: E501
 
-        :return: The k8s_version of this KubernetesNodeProperties.  # noqa: E501
+        :return: The public_ip of this KubernetesNodeProperties.  # noqa: E501
         :rtype: str
         """
-        return self._k8s_version
+        return self._public_ip
 
-    @k8s_version.setter
-    def k8s_version(self, k8s_version):
-        """Sets the k8s_version of this KubernetesNodeProperties.
+    @public_ip.setter
+    def public_ip(self, public_ip):
+        """Sets the public_ip of this KubernetesNodeProperties.
 
-        The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.  # noqa: E501
+        The public IP associated with the node.  # noqa: E501
 
-        :param k8s_version: The k8s_version of this KubernetesNodeProperties.  # noqa: E501
-        :type k8s_version: str
+        :param public_ip: The public_ip of this KubernetesNodeProperties.  # noqa: E501
+        :type public_ip: str
         """
-        if self.local_vars_configuration.client_side_validation and k8s_version is None:  # noqa: E501
-            raise ValueError("Invalid value for `k8s_version`, must not be `None`")  # noqa: E501
 
-        self._k8s_version = k8s_version
+        self._public_ip = public_ip
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -34,52 +34,75 @@ class IpBlockProperties(object):
     """
     openapi_types = {
 
+        'ip_consumers': 'list[IpConsumer]',
+
         'ips': 'list[str]',
 
         'location': 'str',
 
-        'size': 'int',
-
         'name': 'str',
 
-        'ip_consumers': 'list[IpConsumer]',
+        'size': 'int',
     }
 
     attribute_map = {
+
+        'ip_consumers': 'ipConsumers',
 
         'ips': 'ips',
 
         'location': 'location',
 
-        'size': 'size',
-
         'name': 'name',
 
-        'ip_consumers': 'ipConsumers',
+        'size': 'size',
     }
 
-    def __init__(self, ips=None, location=None, size=None, name=None, ip_consumers=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, ip_consumers=None, ips=None, location=None, name=None, size=None, local_vars_configuration=None):  # noqa: E501
         """IpBlockProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._ip_consumers = None
         self._ips = None
         self._location = None
-        self._size = None
         self._name = None
-        self._ip_consumers = None
+        self._size = None
         self.discriminator = None
 
+        if ip_consumers is not None:
+            self.ip_consumers = ip_consumers
         if ips is not None:
             self.ips = ips
         self.location = location
-        self.size = size
         if name is not None:
             self.name = name
-        if ip_consumers is not None:
-            self.ip_consumers = ip_consumers
+        self.size = size
 
+
+    @property
+    def ip_consumers(self):
+        """Gets the ip_consumers of this IpBlockProperties.  # noqa: E501
+
+        Read-Only attribute. Lists consumption detail for an individual IP  # noqa: E501
+
+        :return: The ip_consumers of this IpBlockProperties.  # noqa: E501
+        :rtype: list[IpConsumer]
+        """
+        return self._ip_consumers
+
+    @ip_consumers.setter
+    def ip_consumers(self, ip_consumers):
+        """Sets the ip_consumers of this IpBlockProperties.
+
+        Read-Only attribute. Lists consumption detail for an individual IP  # noqa: E501
+
+        :param ip_consumers: The ip_consumers of this IpBlockProperties.  # noqa: E501
+        :type ip_consumers: list[IpConsumer]
+        """
+
+        self._ip_consumers = ip_consumers
 
     @property
     def ips(self):
@@ -130,31 +153,6 @@ class IpBlockProperties(object):
         self._location = location
 
     @property
-    def size(self):
-        """Gets the size of this IpBlockProperties.  # noqa: E501
-
-        The size of the IP block.  # noqa: E501
-
-        :return: The size of this IpBlockProperties.  # noqa: E501
-        :rtype: int
-        """
-        return self._size
-
-    @size.setter
-    def size(self, size):
-        """Sets the size of this IpBlockProperties.
-
-        The size of the IP block.  # noqa: E501
-
-        :param size: The size of this IpBlockProperties.  # noqa: E501
-        :type size: int
-        """
-        if self.local_vars_configuration.client_side_validation and size is None:  # noqa: E501
-            raise ValueError("Invalid value for `size`, must not be `None`")  # noqa: E501
-
-        self._size = size
-
-    @property
     def name(self):
         """Gets the name of this IpBlockProperties.  # noqa: E501
 
@@ -178,27 +176,29 @@ class IpBlockProperties(object):
         self._name = name
 
     @property
-    def ip_consumers(self):
-        """Gets the ip_consumers of this IpBlockProperties.  # noqa: E501
+    def size(self):
+        """Gets the size of this IpBlockProperties.  # noqa: E501
 
-        Read-Only attribute. Lists consumption detail for an individual IP  # noqa: E501
+        The size of the IP block.  # noqa: E501
 
-        :return: The ip_consumers of this IpBlockProperties.  # noqa: E501
-        :rtype: list[IpConsumer]
+        :return: The size of this IpBlockProperties.  # noqa: E501
+        :rtype: int
         """
-        return self._ip_consumers
+        return self._size
 
-    @ip_consumers.setter
-    def ip_consumers(self, ip_consumers):
-        """Sets the ip_consumers of this IpBlockProperties.
+    @size.setter
+    def size(self, size):
+        """Sets the size of this IpBlockProperties.
 
-        Read-Only attribute. Lists consumption detail for an individual IP  # noqa: E501
+        The size of the IP block.  # noqa: E501
 
-        :param ip_consumers: The ip_consumers of this IpBlockProperties.  # noqa: E501
-        :type ip_consumers: list[IpConsumer]
+        :param size: The size of this IpBlockProperties.  # noqa: E501
+        :type size: int
         """
+        if self.local_vars_configuration.client_side_validation and size is None:  # noqa: E501
+            raise ValueError("Invalid value for `size`, must not be `None`")  # noqa: E501
 
-        self._ip_consumers = ip_consumers
+        self._size = size
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

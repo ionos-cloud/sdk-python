@@ -34,54 +34,33 @@ class RequestTarget(object):
     """
     openapi_types = {
 
-        'target': 'ResourceReference',
-
         'status': 'str',
+
+        'target': 'ResourceReference',
     }
 
     attribute_map = {
 
-        'target': 'target',
-
         'status': 'status',
+
+        'target': 'target',
     }
 
-    def __init__(self, target=None, status=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, status=None, target=None, local_vars_configuration=None):  # noqa: E501
         """RequestTarget - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._target = None
         self._status = None
+        self._target = None
         self.discriminator = None
 
-        if target is not None:
-            self.target = target
         if status is not None:
             self.status = status
+        if target is not None:
+            self.target = target
 
-
-    @property
-    def target(self):
-        """Gets the target of this RequestTarget.  # noqa: E501
-
-
-        :return: The target of this RequestTarget.  # noqa: E501
-        :rtype: ResourceReference
-        """
-        return self._target
-
-    @target.setter
-    def target(self, target):
-        """Sets the target of this RequestTarget.
-
-
-        :param target: The target of this RequestTarget.  # noqa: E501
-        :type target: ResourceReference
-        """
-
-        self._target = target
 
     @property
     def status(self):
@@ -109,6 +88,27 @@ class RequestTarget(object):
             )
 
         self._status = status
+
+    @property
+    def target(self):
+        """Gets the target of this RequestTarget.  # noqa: E501
+
+
+        :return: The target of this RequestTarget.  # noqa: E501
+        :rtype: ResourceReference
+        """
+        return self._target
+
+    @target.setter
+    def target(self, target):
+        """Sets the target of this RequestTarget.
+
+
+        :param target: The target of this RequestTarget.  # noqa: E501
+        :type target: ResourceReference
+        """
+
+        self._target = target
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

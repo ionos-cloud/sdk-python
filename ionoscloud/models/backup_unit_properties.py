@@ -34,39 +34,62 @@ class BackupUnitProperties(object):
     """
     openapi_types = {
 
+        'email': 'str',
+
         'name': 'str',
 
         'password': 'str',
-
-        'email': 'str',
     }
 
     attribute_map = {
 
+        'email': 'email',
+
         'name': 'name',
 
         'password': 'password',
-
-        'email': 'email',
     }
 
-    def __init__(self, name=None, password=None, email=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, email=None, name=None, password=None, local_vars_configuration=None):  # noqa: E501
         """BackupUnitProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._email = None
         self._name = None
         self._password = None
-        self._email = None
         self.discriminator = None
 
+        if email is not None:
+            self.email = email
         self.name = name
         if password is not None:
             self.password = password
-        if email is not None:
-            self.email = email
 
+
+    @property
+    def email(self):
+        """Gets the email of this BackupUnitProperties.  # noqa: E501
+
+        The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.  # noqa: E501
+
+        :return: The email of this BackupUnitProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this BackupUnitProperties.
+
+        The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.  # noqa: E501
+
+        :param email: The email of this BackupUnitProperties.  # noqa: E501
+        :type email: str
+        """
+
+        self._email = email
 
     @property
     def name(self):
@@ -115,29 +138,6 @@ class BackupUnitProperties(object):
         """
 
         self._password = password
-
-    @property
-    def email(self):
-        """Gets the email of this BackupUnitProperties.  # noqa: E501
-
-        The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.  # noqa: E501
-
-        :return: The email of this BackupUnitProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this BackupUnitProperties.
-
-        The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.  # noqa: E501
-
-        :param email: The email of this BackupUnitProperties.  # noqa: E501
-        :type email: str
-        """
-
-        self._email = email
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

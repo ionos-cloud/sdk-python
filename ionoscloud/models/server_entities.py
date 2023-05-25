@@ -36,37 +36,37 @@ class ServerEntities(object):
 
         'cdroms': 'Cdroms',
 
-        'volumes': 'AttachedVolumes',
-
         'nics': 'Nics',
+
+        'volumes': 'AttachedVolumes',
     }
 
     attribute_map = {
 
         'cdroms': 'cdroms',
 
-        'volumes': 'volumes',
-
         'nics': 'nics',
+
+        'volumes': 'volumes',
     }
 
-    def __init__(self, cdroms=None, volumes=None, nics=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cdroms=None, nics=None, volumes=None, local_vars_configuration=None):  # noqa: E501
         """ServerEntities - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._cdroms = None
-        self._volumes = None
         self._nics = None
+        self._volumes = None
         self.discriminator = None
 
         if cdroms is not None:
             self.cdroms = cdroms
-        if volumes is not None:
-            self.volumes = volumes
         if nics is not None:
             self.nics = nics
+        if volumes is not None:
+            self.volumes = volumes
 
 
     @property
@@ -91,27 +91,6 @@ class ServerEntities(object):
         self._cdroms = cdroms
 
     @property
-    def volumes(self):
-        """Gets the volumes of this ServerEntities.  # noqa: E501
-
-
-        :return: The volumes of this ServerEntities.  # noqa: E501
-        :rtype: AttachedVolumes
-        """
-        return self._volumes
-
-    @volumes.setter
-    def volumes(self, volumes):
-        """Sets the volumes of this ServerEntities.
-
-
-        :param volumes: The volumes of this ServerEntities.  # noqa: E501
-        :type volumes: AttachedVolumes
-        """
-
-        self._volumes = volumes
-
-    @property
     def nics(self):
         """Gets the nics of this ServerEntities.  # noqa: E501
 
@@ -131,6 +110,27 @@ class ServerEntities(object):
         """
 
         self._nics = nics
+
+    @property
+    def volumes(self):
+        """Gets the volumes of this ServerEntities.  # noqa: E501
+
+
+        :return: The volumes of this ServerEntities.  # noqa: E501
+        :rtype: AttachedVolumes
+        """
+        return self._volumes
+
+    @volumes.setter
+    def volumes(self, volumes):
+        """Sets the volumes of this ServerEntities.
+
+
+        :param volumes: The volumes of this ServerEntities.  # noqa: E501
+        :type volumes: AttachedVolumes
+        """
+
+        self._volumes = volumes
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

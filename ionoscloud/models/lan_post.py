@@ -34,106 +34,81 @@ class LanPost(object):
     """
     openapi_types = {
 
-        'id': 'str',
-
-        'type': 'Type',
+        'entities': 'LanEntities',
 
         'href': 'str',
 
+        'id': 'str',
+
         'metadata': 'DatacenterElementMetadata',
 
-        'entities': 'LanEntities',
-
         'properties': 'LanPropertiesPost',
+
+        'type': 'Type',
     }
 
     attribute_map = {
 
-        'id': 'id',
-
-        'type': 'type',
+        'entities': 'entities',
 
         'href': 'href',
 
+        'id': 'id',
+
         'metadata': 'metadata',
 
-        'entities': 'entities',
-
         'properties': 'properties',
+
+        'type': 'type',
     }
 
-    def __init__(self, id=None, type=None, href=None, metadata=None, entities=None, properties=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, entities=None, href=None, id=None, metadata=None, properties=None, type=None, local_vars_configuration=None):  # noqa: E501
         """LanPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
-        self._type = None
-        self._href = None
-        self._metadata = None
         self._entities = None
+        self._href = None
+        self._id = None
+        self._metadata = None
         self._properties = None
+        self._type = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if type is not None:
-            self.type = type
-        if href is not None:
-            self.href = href
-        if metadata is not None:
-            self.metadata = metadata
         if entities is not None:
             self.entities = entities
+        if href is not None:
+            self.href = href
+        if id is not None:
+            self.id = id
+        if metadata is not None:
+            self.metadata = metadata
         self.properties = properties
+        if type is not None:
+            self.type = type
 
 
     @property
-    def id(self):
-        """Gets the id of this LanPost.  # noqa: E501
+    def entities(self):
+        """Gets the entities of this LanPost.  # noqa: E501
 
-        The resource's unique identifier.  # noqa: E501
 
-        :return: The id of this LanPost.  # noqa: E501
-        :rtype: str
+        :return: The entities of this LanPost.  # noqa: E501
+        :rtype: LanEntities
         """
-        return self._id
+        return self._entities
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this LanPost.
+    @entities.setter
+    def entities(self, entities):
+        """Sets the entities of this LanPost.
 
-        The resource's unique identifier.  # noqa: E501
 
-        :param id: The id of this LanPost.  # noqa: E501
-        :type id: str
+        :param entities: The entities of this LanPost.  # noqa: E501
+        :type entities: LanEntities
         """
 
-        self._id = id
-
-    @property
-    def type(self):
-        """Gets the type of this LanPost.  # noqa: E501
-
-        The type of object that has been created.  # noqa: E501
-
-        :return: The type of this LanPost.  # noqa: E501
-        :rtype: Type
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this LanPost.
-
-        The type of object that has been created.  # noqa: E501
-
-        :param type: The type of this LanPost.  # noqa: E501
-        :type type: Type
-        """
-
-        self._type = type
+        self._entities = entities
 
     @property
     def href(self):
@@ -159,6 +134,29 @@ class LanPost(object):
         self._href = href
 
     @property
+    def id(self):
+        """Gets the id of this LanPost.  # noqa: E501
+
+        The resource's unique identifier.  # noqa: E501
+
+        :return: The id of this LanPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this LanPost.
+
+        The resource's unique identifier.  # noqa: E501
+
+        :param id: The id of this LanPost.  # noqa: E501
+        :type id: str
+        """
+
+        self._id = id
+
+    @property
     def metadata(self):
         """Gets the metadata of this LanPost.  # noqa: E501
 
@@ -178,27 +176,6 @@ class LanPost(object):
         """
 
         self._metadata = metadata
-
-    @property
-    def entities(self):
-        """Gets the entities of this LanPost.  # noqa: E501
-
-
-        :return: The entities of this LanPost.  # noqa: E501
-        :rtype: LanEntities
-        """
-        return self._entities
-
-    @entities.setter
-    def entities(self, entities):
-        """Sets the entities of this LanPost.
-
-
-        :param entities: The entities of this LanPost.  # noqa: E501
-        :type entities: LanEntities
-        """
-
-        self._entities = entities
 
     @property
     def properties(self):
@@ -222,6 +199,29 @@ class LanPost(object):
             raise ValueError("Invalid value for `properties`, must not be `None`")  # noqa: E501
 
         self._properties = properties
+
+    @property
+    def type(self):
+        """Gets the type of this LanPost.  # noqa: E501
+
+        The type of object that has been created.  # noqa: E501
+
+        :return: The type of this LanPost.  # noqa: E501
+        :rtype: Type
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this LanPost.
+
+        The type of object that has been created.  # noqa: E501
+
+        :param type: The type of this LanPost.  # noqa: E501
+        :type type: Type
+        """
+
+        self._type = type
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

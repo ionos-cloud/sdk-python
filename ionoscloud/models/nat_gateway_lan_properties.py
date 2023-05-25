@@ -34,32 +34,55 @@ class NatGatewayLanProperties(object):
     """
     openapi_types = {
 
-        'id': 'int',
-
         'gateway_ips': 'list[str]',
+
+        'id': 'int',
     }
 
     attribute_map = {
 
-        'id': 'id',
-
         'gateway_ips': 'gatewayIps',
+
+        'id': 'id',
     }
 
-    def __init__(self, id=None, gateway_ips=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, gateway_ips=None, id=None, local_vars_configuration=None):  # noqa: E501
         """NatGatewayLanProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
         self._gateway_ips = None
+        self._id = None
         self.discriminator = None
 
-        self.id = id
         if gateway_ips is not None:
             self.gateway_ips = gateway_ips
+        self.id = id
 
+
+    @property
+    def gateway_ips(self):
+        """Gets the gateway_ips of this NatGatewayLanProperties.  # noqa: E501
+
+        Collection of gateway IP addresses of the NAT Gateway. Will be auto-generated if not provided. Should ideally be an IP belonging to the same subnet as the LAN  # noqa: E501
+
+        :return: The gateway_ips of this NatGatewayLanProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._gateway_ips
+
+    @gateway_ips.setter
+    def gateway_ips(self, gateway_ips):
+        """Sets the gateway_ips of this NatGatewayLanProperties.
+
+        Collection of gateway IP addresses of the NAT Gateway. Will be auto-generated if not provided. Should ideally be an IP belonging to the same subnet as the LAN  # noqa: E501
+
+        :param gateway_ips: The gateway_ips of this NatGatewayLanProperties.  # noqa: E501
+        :type gateway_ips: list[str]
+        """
+
+        self._gateway_ips = gateway_ips
 
     @property
     def id(self):
@@ -85,29 +108,6 @@ class NatGatewayLanProperties(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
-
-    @property
-    def gateway_ips(self):
-        """Gets the gateway_ips of this NatGatewayLanProperties.  # noqa: E501
-
-        Collection of gateway IP addresses of the NAT Gateway. Will be auto-generated if not provided. Should ideally be an IP belonging to the same subnet as the LAN  # noqa: E501
-
-        :return: The gateway_ips of this NatGatewayLanProperties.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._gateway_ips
-
-    @gateway_ips.setter
-    def gateway_ips(self, gateway_ips):
-        """Sets the gateway_ips of this NatGatewayLanProperties.
-
-        Collection of gateway IP addresses of the NAT Gateway. Will be auto-generated if not provided. Should ideally be an IP belonging to the same subnet as the LAN  # noqa: E501
-
-        :param gateway_ips: The gateway_ips of this NatGatewayLanProperties.  # noqa: E501
-        :type gateway_ips: list[str]
-        """
-
-        self._gateway_ips = gateway_ips
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

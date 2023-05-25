@@ -34,38 +34,61 @@ class NatGatewayProperties(object):
     """
     openapi_types = {
 
+        'lans': 'list[NatGatewayLanProperties]',
+
         'name': 'str',
 
         'public_ips': 'list[str]',
-
-        'lans': 'list[NatGatewayLanProperties]',
     }
 
     attribute_map = {
 
+        'lans': 'lans',
+
         'name': 'name',
 
         'public_ips': 'publicIps',
-
-        'lans': 'lans',
     }
 
-    def __init__(self, name=None, public_ips=None, lans=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, lans=None, name=None, public_ips=None, local_vars_configuration=None):  # noqa: E501
         """NatGatewayProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._lans = None
         self._name = None
         self._public_ips = None
-        self._lans = None
         self.discriminator = None
 
-        self.name = name
-        self.public_ips = public_ips
         if lans is not None:
             self.lans = lans
+        self.name = name
+        self.public_ips = public_ips
 
+
+    @property
+    def lans(self):
+        """Gets the lans of this NatGatewayProperties.  # noqa: E501
+
+        Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
+
+        :return: The lans of this NatGatewayProperties.  # noqa: E501
+        :rtype: list[NatGatewayLanProperties]
+        """
+        return self._lans
+
+    @lans.setter
+    def lans(self, lans):
+        """Sets the lans of this NatGatewayProperties.
+
+        Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
+
+        :param lans: The lans of this NatGatewayProperties.  # noqa: E501
+        :type lans: list[NatGatewayLanProperties]
+        """
+
+        self._lans = lans
 
     @property
     def name(self):
@@ -116,29 +139,6 @@ class NatGatewayProperties(object):
             raise ValueError("Invalid value for `public_ips`, must not be `None`")  # noqa: E501
 
         self._public_ips = public_ips
-
-    @property
-    def lans(self):
-        """Gets the lans of this NatGatewayProperties.  # noqa: E501
-
-        Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
-
-        :return: The lans of this NatGatewayProperties.  # noqa: E501
-        :rtype: list[NatGatewayLanProperties]
-        """
-        return self._lans
-
-    @lans.setter
-    def lans(self, lans):
-        """Sets the lans of this NatGatewayProperties.
-
-        Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
-
-        :param lans: The lans of this NatGatewayProperties.  # noqa: E501
-        :type lans: list[NatGatewayLanProperties]
-        """
-
-        self._lans = lans
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

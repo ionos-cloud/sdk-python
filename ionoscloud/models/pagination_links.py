@@ -34,40 +34,63 @@ class PaginationLinks(object):
     """
     openapi_types = {
 
+        'next': 'str',
+
         'prev': 'str',
 
         '_self': 'str',
-
-        'next': 'str',
     }
 
     attribute_map = {
 
+        'next': 'next',
+
         'prev': 'prev',
 
         '_self': 'self',
-
-        'next': 'next',
     }
 
-    def __init__(self, prev=None, _self=None, next=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, next=None, prev=None, _self=None, local_vars_configuration=None):  # noqa: E501
         """PaginationLinks - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._next = None
         self._prev = None
         self.__self = None
-        self._next = None
         self.discriminator = None
 
+        if next is not None:
+            self.next = next
         if prev is not None:
             self.prev = prev
         if _self is not None:
             self._self = _self
-        if next is not None:
-            self.next = next
 
+
+    @property
+    def next(self):
+        """Gets the next of this PaginationLinks.  # noqa: E501
+
+        URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements.  # noqa: E501
+
+        :return: The next of this PaginationLinks.  # noqa: E501
+        :rtype: str
+        """
+        return self._next
+
+    @next.setter
+    def next(self, next):
+        """Sets the next of this PaginationLinks.
+
+        URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements.  # noqa: E501
+
+        :param next: The next of this PaginationLinks.  # noqa: E501
+        :type next: str
+        """
+
+        self._next = next
 
     @property
     def prev(self):
@@ -114,29 +137,6 @@ class PaginationLinks(object):
         """
 
         self.__self = _self
-
-    @property
-    def next(self):
-        """Gets the next of this PaginationLinks.  # noqa: E501
-
-        URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements.  # noqa: E501
-
-        :return: The next of this PaginationLinks.  # noqa: E501
-        :rtype: str
-        """
-        return self._next
-
-    @next.setter
-    def next(self, next):
-        """Sets the next of this PaginationLinks.
-
-        URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements.  # noqa: E501
-
-        :param next: The next of this PaginationLinks.  # noqa: E501
-        :type next: str
-        """
-
-        self._next = next
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

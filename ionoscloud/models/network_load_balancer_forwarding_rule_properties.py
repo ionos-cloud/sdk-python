@@ -34,87 +34,62 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
         'algorithm': 'str',
 
-        'protocol': 'str',
+        'health_check': 'NetworkLoadBalancerForwardingRuleHealthCheck',
 
         'listener_ip': 'str',
 
         'listener_port': 'int',
 
-        'health_check': 'NetworkLoadBalancerForwardingRuleHealthCheck',
+        'name': 'str',
+
+        'protocol': 'str',
 
         'targets': 'list[NetworkLoadBalancerForwardingRuleTarget]',
     }
 
     attribute_map = {
 
-        'name': 'name',
-
         'algorithm': 'algorithm',
 
-        'protocol': 'protocol',
+        'health_check': 'healthCheck',
 
         'listener_ip': 'listenerIp',
 
         'listener_port': 'listenerPort',
 
-        'health_check': 'healthCheck',
+        'name': 'name',
+
+        'protocol': 'protocol',
 
         'targets': 'targets',
     }
 
-    def __init__(self, name=None, algorithm=None, protocol=None, listener_ip=None, listener_port=None, health_check=None, targets=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, algorithm=None, health_check=None, listener_ip=None, listener_port=None, name=None, protocol=None, targets=None, local_vars_configuration=None):  # noqa: E501
         """NetworkLoadBalancerForwardingRuleProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
         self._algorithm = None
-        self._protocol = None
+        self._health_check = None
         self._listener_ip = None
         self._listener_port = None
-        self._health_check = None
+        self._name = None
+        self._protocol = None
         self._targets = None
         self.discriminator = None
 
-        self.name = name
         self.algorithm = algorithm
-        self.protocol = protocol
-        self.listener_ip = listener_ip
-        self.listener_port = listener_port
         if health_check is not None:
             self.health_check = health_check
+        self.listener_ip = listener_ip
+        self.listener_port = listener_port
+        self.name = name
+        self.protocol = protocol
         self.targets = targets
 
-
-    @property
-    def name(self):
-        """Gets the name of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
-
-        The name of the Network Load Balancer forwarding rule.  # noqa: E501
-
-        :return: The name of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this NetworkLoadBalancerForwardingRuleProperties.
-
-        The name of the Network Load Balancer forwarding rule.  # noqa: E501
-
-        :param name: The name of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :type name: str
-        """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
 
     @property
     def algorithm(self):
@@ -148,35 +123,25 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
         self._algorithm = algorithm
 
     @property
-    def protocol(self):
-        """Gets the protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+    def health_check(self):
+        """Gets the health_check of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
 
-        Balancing protocol  # noqa: E501
 
-        :return: The protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :rtype: str
+        :return: The health_check of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :rtype: NetworkLoadBalancerForwardingRuleHealthCheck
         """
-        return self._protocol
+        return self._health_check
 
-    @protocol.setter
-    def protocol(self, protocol):
-        """Sets the protocol of this NetworkLoadBalancerForwardingRuleProperties.
+    @health_check.setter
+    def health_check(self, health_check):
+        """Sets the health_check of this NetworkLoadBalancerForwardingRuleProperties.
 
-        Balancing protocol  # noqa: E501
 
-        :param protocol: The protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :type protocol: str
+        :param health_check: The health_check of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :type health_check: NetworkLoadBalancerForwardingRuleHealthCheck
         """
-        if self.local_vars_configuration.client_side_validation and protocol is None:  # noqa: E501
-            raise ValueError("Invalid value for `protocol`, must not be `None`")  # noqa: E501
-        allowed_values = ["HTTP", "TCP"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and protocol not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `protocol` ({0}), must be one of {1}"  # noqa: E501
-                .format(protocol, allowed_values)
-            )
 
-        self._protocol = protocol
+        self._health_check = health_check
 
     @property
     def listener_ip(self):
@@ -229,25 +194,60 @@ class NetworkLoadBalancerForwardingRuleProperties(object):
         self._listener_port = listener_port
 
     @property
-    def health_check(self):
-        """Gets the health_check of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+    def name(self):
+        """Gets the name of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
 
+        The name of the Network Load Balancer forwarding rule.  # noqa: E501
 
-        :return: The health_check of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :rtype: NetworkLoadBalancerForwardingRuleHealthCheck
+        :return: The name of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._health_check
+        return self._name
 
-    @health_check.setter
-    def health_check(self, health_check):
-        """Sets the health_check of this NetworkLoadBalancerForwardingRuleProperties.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this NetworkLoadBalancerForwardingRuleProperties.
 
+        The name of the Network Load Balancer forwarding rule.  # noqa: E501
 
-        :param health_check: The health_check of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
-        :type health_check: NetworkLoadBalancerForwardingRuleHealthCheck
+        :param name: The name of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :type name: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._health_check = health_check
+        self._name = name
+
+    @property
+    def protocol(self):
+        """Gets the protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+
+        Balancing protocol  # noqa: E501
+
+        :return: The protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._protocol
+
+    @protocol.setter
+    def protocol(self, protocol):
+        """Sets the protocol of this NetworkLoadBalancerForwardingRuleProperties.
+
+        Balancing protocol  # noqa: E501
+
+        :param protocol: The protocol of this NetworkLoadBalancerForwardingRuleProperties.  # noqa: E501
+        :type protocol: str
+        """
+        if self.local_vars_configuration.client_side_validation and protocol is None:  # noqa: E501
+            raise ValueError("Invalid value for `protocol`, must not be `None`")  # noqa: E501
+        allowed_values = ["HTTP", "TCP"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and protocol not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `protocol` ({0}), must be one of {1}"  # noqa: E501
+                .format(protocol, allowed_values)
+            )
+
+        self._protocol = protocol
 
     @property
     def targets(self):

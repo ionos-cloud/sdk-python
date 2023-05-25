@@ -34,47 +34,91 @@ class RequestStatusMetadata(object):
     """
     openapi_types = {
 
-        'status': 'str',
+        'etag': 'str',
 
         'message': 'str',
 
-        'etag': 'str',
+        'status': 'str',
 
         'targets': 'list[RequestTarget]',
     }
 
     attribute_map = {
 
-        'status': 'status',
+        'etag': 'etag',
 
         'message': 'message',
 
-        'etag': 'etag',
+        'status': 'status',
 
         'targets': 'targets',
     }
 
-    def __init__(self, status=None, message=None, etag=None, targets=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, etag=None, message=None, status=None, targets=None, local_vars_configuration=None):  # noqa: E501
         """RequestStatusMetadata - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._status = None
-        self._message = None
         self._etag = None
+        self._message = None
+        self._status = None
         self._targets = None
         self.discriminator = None
 
-        if status is not None:
-            self.status = status
-        if message is not None:
-            self.message = message
         if etag is not None:
             self.etag = etag
+        if message is not None:
+            self.message = message
+        if status is not None:
+            self.status = status
         if targets is not None:
             self.targets = targets
 
+
+    @property
+    def etag(self):
+        """Gets the etag of this RequestStatusMetadata.  # noqa: E501
+
+        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+
+        :return: The etag of this RequestStatusMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._etag
+
+    @etag.setter
+    def etag(self, etag):
+        """Sets the etag of this RequestStatusMetadata.
+
+        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+
+        :param etag: The etag of this RequestStatusMetadata.  # noqa: E501
+        :type etag: str
+        """
+
+        self._etag = etag
+
+    @property
+    def message(self):
+        """Gets the message of this RequestStatusMetadata.  # noqa: E501
+
+
+        :return: The message of this RequestStatusMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._message
+
+    @message.setter
+    def message(self, message):
+        """Sets the message of this RequestStatusMetadata.
+
+
+        :param message: The message of this RequestStatusMetadata.  # noqa: E501
+        :type message: str
+        """
+
+        self._message = message
 
     @property
     def status(self):
@@ -102,50 +146,6 @@ class RequestStatusMetadata(object):
             )
 
         self._status = status
-
-    @property
-    def message(self):
-        """Gets the message of this RequestStatusMetadata.  # noqa: E501
-
-
-        :return: The message of this RequestStatusMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """Sets the message of this RequestStatusMetadata.
-
-
-        :param message: The message of this RequestStatusMetadata.  # noqa: E501
-        :type message: str
-        """
-
-        self._message = message
-
-    @property
-    def etag(self):
-        """Gets the etag of this RequestStatusMetadata.  # noqa: E501
-
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
-
-        :return: The etag of this RequestStatusMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._etag
-
-    @etag.setter
-    def etag(self, etag):
-        """Sets the etag of this RequestStatusMetadata.
-
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
-
-        :param etag: The etag of this RequestStatusMetadata.  # noqa: E501
-        :type etag: str
-        """
-
-        self._etag = etag
 
     @property
     def targets(self):

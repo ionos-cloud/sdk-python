@@ -34,230 +34,138 @@ class GroupProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'access_activity_log': 'bool',
+
+        'access_and_manage_certificates': 'bool',
+
+        'access_and_manage_dns': 'bool',
+
+        'access_and_manage_monitoring': 'bool',
+
+        'create_backup_unit': 'bool',
 
         'create_data_center': 'bool',
 
-        'create_snapshot': 'bool',
-
-        'reserve_ip': 'bool',
-
-        'access_activity_log': 'bool',
-
-        'create_pcc': 'bool',
-
-        's3_privilege': 'bool',
-
-        'create_backup_unit': 'bool',
+        'create_flow_log': 'bool',
 
         'create_internet_access': 'bool',
 
         'create_k8s_cluster': 'bool',
 
-        'create_flow_log': 'bool',
+        'create_pcc': 'bool',
 
-        'access_and_manage_monitoring': 'bool',
-
-        'access_and_manage_certificates': 'bool',
+        'create_snapshot': 'bool',
 
         'manage_dbaas': 'bool',
 
-        'access_and_manage_dns': 'bool',
+        'manage_dataplatform': 'bool',
 
         'manage_registry': 'bool',
 
-        'manage_dataplatform': 'bool',
+        'name': 'str',
+
+        'reserve_ip': 'bool',
+
+        's3_privilege': 'bool',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'access_activity_log': 'accessActivityLog',
+
+        'access_and_manage_certificates': 'accessAndManageCertificates',
+
+        'access_and_manage_dns': 'accessAndManageDns',
+
+        'access_and_manage_monitoring': 'accessAndManageMonitoring',
+
+        'create_backup_unit': 'createBackupUnit',
 
         'create_data_center': 'createDataCenter',
 
-        'create_snapshot': 'createSnapshot',
-
-        'reserve_ip': 'reserveIp',
-
-        'access_activity_log': 'accessActivityLog',
-
-        'create_pcc': 'createPcc',
-
-        's3_privilege': 's3Privilege',
-
-        'create_backup_unit': 'createBackupUnit',
+        'create_flow_log': 'createFlowLog',
 
         'create_internet_access': 'createInternetAccess',
 
         'create_k8s_cluster': 'createK8sCluster',
 
-        'create_flow_log': 'createFlowLog',
+        'create_pcc': 'createPcc',
 
-        'access_and_manage_monitoring': 'accessAndManageMonitoring',
-
-        'access_and_manage_certificates': 'accessAndManageCertificates',
+        'create_snapshot': 'createSnapshot',
 
         'manage_dbaas': 'manageDBaaS',
 
-        'access_and_manage_dns': 'accessAndManageDns',
+        'manage_dataplatform': 'manageDataplatform',
 
         'manage_registry': 'manageRegistry',
 
-        'manage_dataplatform': 'manageDataplatform',
+        'name': 'name',
+
+        'reserve_ip': 'reserveIp',
+
+        's3_privilege': 's3Privilege',
     }
 
-    def __init__(self, name=None, create_data_center=None, create_snapshot=None, reserve_ip=None, access_activity_log=None, create_pcc=None, s3_privilege=None, create_backup_unit=None, create_internet_access=None, create_k8s_cluster=None, create_flow_log=None, access_and_manage_monitoring=None, access_and_manage_certificates=None, manage_dbaas=None, access_and_manage_dns=None, manage_registry=None, manage_dataplatform=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, access_activity_log=None, access_and_manage_certificates=None, access_and_manage_dns=None, access_and_manage_monitoring=None, create_backup_unit=None, create_data_center=None, create_flow_log=None, create_internet_access=None, create_k8s_cluster=None, create_pcc=None, create_snapshot=None, manage_dbaas=None, manage_dataplatform=None, manage_registry=None, name=None, reserve_ip=None, s3_privilege=None, local_vars_configuration=None):  # noqa: E501
         """GroupProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._create_data_center = None
-        self._create_snapshot = None
-        self._reserve_ip = None
         self._access_activity_log = None
-        self._create_pcc = None
-        self._s3_privilege = None
+        self._access_and_manage_certificates = None
+        self._access_and_manage_dns = None
+        self._access_and_manage_monitoring = None
         self._create_backup_unit = None
+        self._create_data_center = None
+        self._create_flow_log = None
         self._create_internet_access = None
         self._create_k8s_cluster = None
-        self._create_flow_log = None
-        self._access_and_manage_monitoring = None
-        self._access_and_manage_certificates = None
+        self._create_pcc = None
+        self._create_snapshot = None
         self._manage_dbaas = None
-        self._access_and_manage_dns = None
-        self._manage_registry = None
         self._manage_dataplatform = None
+        self._manage_registry = None
+        self._name = None
+        self._reserve_ip = None
+        self._s3_privilege = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if create_data_center is not None:
-            self.create_data_center = create_data_center
-        if create_snapshot is not None:
-            self.create_snapshot = create_snapshot
-        if reserve_ip is not None:
-            self.reserve_ip = reserve_ip
         if access_activity_log is not None:
             self.access_activity_log = access_activity_log
-        if create_pcc is not None:
-            self.create_pcc = create_pcc
-        if s3_privilege is not None:
-            self.s3_privilege = s3_privilege
+        if access_and_manage_certificates is not None:
+            self.access_and_manage_certificates = access_and_manage_certificates
+        if access_and_manage_dns is not None:
+            self.access_and_manage_dns = access_and_manage_dns
+        if access_and_manage_monitoring is not None:
+            self.access_and_manage_monitoring = access_and_manage_monitoring
         if create_backup_unit is not None:
             self.create_backup_unit = create_backup_unit
+        if create_data_center is not None:
+            self.create_data_center = create_data_center
+        if create_flow_log is not None:
+            self.create_flow_log = create_flow_log
         if create_internet_access is not None:
             self.create_internet_access = create_internet_access
         if create_k8s_cluster is not None:
             self.create_k8s_cluster = create_k8s_cluster
-        if create_flow_log is not None:
-            self.create_flow_log = create_flow_log
-        if access_and_manage_monitoring is not None:
-            self.access_and_manage_monitoring = access_and_manage_monitoring
-        if access_and_manage_certificates is not None:
-            self.access_and_manage_certificates = access_and_manage_certificates
+        if create_pcc is not None:
+            self.create_pcc = create_pcc
+        if create_snapshot is not None:
+            self.create_snapshot = create_snapshot
         if manage_dbaas is not None:
             self.manage_dbaas = manage_dbaas
-        if access_and_manage_dns is not None:
-            self.access_and_manage_dns = access_and_manage_dns
-        if manage_registry is not None:
-            self.manage_registry = manage_registry
         if manage_dataplatform is not None:
             self.manage_dataplatform = manage_dataplatform
+        if manage_registry is not None:
+            self.manage_registry = manage_registry
+        if name is not None:
+            self.name = name
+        if reserve_ip is not None:
+            self.reserve_ip = reserve_ip
+        if s3_privilege is not None:
+            self.s3_privilege = s3_privilege
 
-
-    @property
-    def name(self):
-        """Gets the name of this GroupProperties.  # noqa: E501
-
-        The name of the resource.  # noqa: E501
-
-        :return: The name of this GroupProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this GroupProperties.
-
-        The name of the resource.  # noqa: E501
-
-        :param name: The name of this GroupProperties.  # noqa: E501
-        :type name: str
-        """
-
-        self._name = name
-
-    @property
-    def create_data_center(self):
-        """Gets the create_data_center of this GroupProperties.  # noqa: E501
-
-        Create data center privilege.  # noqa: E501
-
-        :return: The create_data_center of this GroupProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._create_data_center
-
-    @create_data_center.setter
-    def create_data_center(self, create_data_center):
-        """Sets the create_data_center of this GroupProperties.
-
-        Create data center privilege.  # noqa: E501
-
-        :param create_data_center: The create_data_center of this GroupProperties.  # noqa: E501
-        :type create_data_center: bool
-        """
-
-        self._create_data_center = create_data_center
-
-    @property
-    def create_snapshot(self):
-        """Gets the create_snapshot of this GroupProperties.  # noqa: E501
-
-        Create snapshot privilege.  # noqa: E501
-
-        :return: The create_snapshot of this GroupProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._create_snapshot
-
-    @create_snapshot.setter
-    def create_snapshot(self, create_snapshot):
-        """Sets the create_snapshot of this GroupProperties.
-
-        Create snapshot privilege.  # noqa: E501
-
-        :param create_snapshot: The create_snapshot of this GroupProperties.  # noqa: E501
-        :type create_snapshot: bool
-        """
-
-        self._create_snapshot = create_snapshot
-
-    @property
-    def reserve_ip(self):
-        """Gets the reserve_ip of this GroupProperties.  # noqa: E501
-
-        Reserve IP block privilege.  # noqa: E501
-
-        :return: The reserve_ip of this GroupProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._reserve_ip
-
-    @reserve_ip.setter
-    def reserve_ip(self, reserve_ip):
-        """Sets the reserve_ip of this GroupProperties.
-
-        Reserve IP block privilege.  # noqa: E501
-
-        :param reserve_ip: The reserve_ip of this GroupProperties.  # noqa: E501
-        :type reserve_ip: bool
-        """
-
-        self._reserve_ip = reserve_ip
 
     @property
     def access_activity_log(self):
@@ -283,50 +191,73 @@ class GroupProperties(object):
         self._access_activity_log = access_activity_log
 
     @property
-    def create_pcc(self):
-        """Gets the create_pcc of this GroupProperties.  # noqa: E501
+    def access_and_manage_certificates(self):
+        """Gets the access_and_manage_certificates of this GroupProperties.  # noqa: E501
 
-        Create pcc privilege.  # noqa: E501
+        Privilege for a group to access and manage certificates.  # noqa: E501
 
-        :return: The create_pcc of this GroupProperties.  # noqa: E501
+        :return: The access_and_manage_certificates of this GroupProperties.  # noqa: E501
         :rtype: bool
         """
-        return self._create_pcc
+        return self._access_and_manage_certificates
 
-    @create_pcc.setter
-    def create_pcc(self, create_pcc):
-        """Sets the create_pcc of this GroupProperties.
+    @access_and_manage_certificates.setter
+    def access_and_manage_certificates(self, access_and_manage_certificates):
+        """Sets the access_and_manage_certificates of this GroupProperties.
 
-        Create pcc privilege.  # noqa: E501
+        Privilege for a group to access and manage certificates.  # noqa: E501
 
-        :param create_pcc: The create_pcc of this GroupProperties.  # noqa: E501
-        :type create_pcc: bool
+        :param access_and_manage_certificates: The access_and_manage_certificates of this GroupProperties.  # noqa: E501
+        :type access_and_manage_certificates: bool
         """
 
-        self._create_pcc = create_pcc
+        self._access_and_manage_certificates = access_and_manage_certificates
 
     @property
-    def s3_privilege(self):
-        """Gets the s3_privilege of this GroupProperties.  # noqa: E501
+    def access_and_manage_dns(self):
+        """Gets the access_and_manage_dns of this GroupProperties.  # noqa: E501
 
-        S3 privilege.  # noqa: E501
+        Privilege for a group to access and manage dns records.  # noqa: E501
 
-        :return: The s3_privilege of this GroupProperties.  # noqa: E501
+        :return: The access_and_manage_dns of this GroupProperties.  # noqa: E501
         :rtype: bool
         """
-        return self._s3_privilege
+        return self._access_and_manage_dns
 
-    @s3_privilege.setter
-    def s3_privilege(self, s3_privilege):
-        """Sets the s3_privilege of this GroupProperties.
+    @access_and_manage_dns.setter
+    def access_and_manage_dns(self, access_and_manage_dns):
+        """Sets the access_and_manage_dns of this GroupProperties.
 
-        S3 privilege.  # noqa: E501
+        Privilege for a group to access and manage dns records.  # noqa: E501
 
-        :param s3_privilege: The s3_privilege of this GroupProperties.  # noqa: E501
-        :type s3_privilege: bool
+        :param access_and_manage_dns: The access_and_manage_dns of this GroupProperties.  # noqa: E501
+        :type access_and_manage_dns: bool
         """
 
-        self._s3_privilege = s3_privilege
+        self._access_and_manage_dns = access_and_manage_dns
+
+    @property
+    def access_and_manage_monitoring(self):
+        """Gets the access_and_manage_monitoring of this GroupProperties.  # noqa: E501
+
+        Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).  # noqa: E501
+
+        :return: The access_and_manage_monitoring of this GroupProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._access_and_manage_monitoring
+
+    @access_and_manage_monitoring.setter
+    def access_and_manage_monitoring(self, access_and_manage_monitoring):
+        """Sets the access_and_manage_monitoring of this GroupProperties.
+
+        Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).  # noqa: E501
+
+        :param access_and_manage_monitoring: The access_and_manage_monitoring of this GroupProperties.  # noqa: E501
+        :type access_and_manage_monitoring: bool
+        """
+
+        self._access_and_manage_monitoring = access_and_manage_monitoring
 
     @property
     def create_backup_unit(self):
@@ -350,6 +281,52 @@ class GroupProperties(object):
         """
 
         self._create_backup_unit = create_backup_unit
+
+    @property
+    def create_data_center(self):
+        """Gets the create_data_center of this GroupProperties.  # noqa: E501
+
+        Create data center privilege.  # noqa: E501
+
+        :return: The create_data_center of this GroupProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._create_data_center
+
+    @create_data_center.setter
+    def create_data_center(self, create_data_center):
+        """Sets the create_data_center of this GroupProperties.
+
+        Create data center privilege.  # noqa: E501
+
+        :param create_data_center: The create_data_center of this GroupProperties.  # noqa: E501
+        :type create_data_center: bool
+        """
+
+        self._create_data_center = create_data_center
+
+    @property
+    def create_flow_log(self):
+        """Gets the create_flow_log of this GroupProperties.  # noqa: E501
+
+        Create Flow Logs privilege.  # noqa: E501
+
+        :return: The create_flow_log of this GroupProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._create_flow_log
+
+    @create_flow_log.setter
+    def create_flow_log(self, create_flow_log):
+        """Sets the create_flow_log of this GroupProperties.
+
+        Create Flow Logs privilege.  # noqa: E501
+
+        :param create_flow_log: The create_flow_log of this GroupProperties.  # noqa: E501
+        :type create_flow_log: bool
+        """
+
+        self._create_flow_log = create_flow_log
 
     @property
     def create_internet_access(self):
@@ -398,73 +375,50 @@ class GroupProperties(object):
         self._create_k8s_cluster = create_k8s_cluster
 
     @property
-    def create_flow_log(self):
-        """Gets the create_flow_log of this GroupProperties.  # noqa: E501
+    def create_pcc(self):
+        """Gets the create_pcc of this GroupProperties.  # noqa: E501
 
-        Create Flow Logs privilege.  # noqa: E501
+        Create pcc privilege.  # noqa: E501
 
-        :return: The create_flow_log of this GroupProperties.  # noqa: E501
+        :return: The create_pcc of this GroupProperties.  # noqa: E501
         :rtype: bool
         """
-        return self._create_flow_log
+        return self._create_pcc
 
-    @create_flow_log.setter
-    def create_flow_log(self, create_flow_log):
-        """Sets the create_flow_log of this GroupProperties.
+    @create_pcc.setter
+    def create_pcc(self, create_pcc):
+        """Sets the create_pcc of this GroupProperties.
 
-        Create Flow Logs privilege.  # noqa: E501
+        Create pcc privilege.  # noqa: E501
 
-        :param create_flow_log: The create_flow_log of this GroupProperties.  # noqa: E501
-        :type create_flow_log: bool
+        :param create_pcc: The create_pcc of this GroupProperties.  # noqa: E501
+        :type create_pcc: bool
         """
 
-        self._create_flow_log = create_flow_log
+        self._create_pcc = create_pcc
 
     @property
-    def access_and_manage_monitoring(self):
-        """Gets the access_and_manage_monitoring of this GroupProperties.  # noqa: E501
+    def create_snapshot(self):
+        """Gets the create_snapshot of this GroupProperties.  # noqa: E501
 
-        Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).  # noqa: E501
+        Create snapshot privilege.  # noqa: E501
 
-        :return: The access_and_manage_monitoring of this GroupProperties.  # noqa: E501
+        :return: The create_snapshot of this GroupProperties.  # noqa: E501
         :rtype: bool
         """
-        return self._access_and_manage_monitoring
+        return self._create_snapshot
 
-    @access_and_manage_monitoring.setter
-    def access_and_manage_monitoring(self, access_and_manage_monitoring):
-        """Sets the access_and_manage_monitoring of this GroupProperties.
+    @create_snapshot.setter
+    def create_snapshot(self, create_snapshot):
+        """Sets the create_snapshot of this GroupProperties.
 
-        Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).  # noqa: E501
+        Create snapshot privilege.  # noqa: E501
 
-        :param access_and_manage_monitoring: The access_and_manage_monitoring of this GroupProperties.  # noqa: E501
-        :type access_and_manage_monitoring: bool
+        :param create_snapshot: The create_snapshot of this GroupProperties.  # noqa: E501
+        :type create_snapshot: bool
         """
 
-        self._access_and_manage_monitoring = access_and_manage_monitoring
-
-    @property
-    def access_and_manage_certificates(self):
-        """Gets the access_and_manage_certificates of this GroupProperties.  # noqa: E501
-
-        Privilege for a group to access and manage certificates.  # noqa: E501
-
-        :return: The access_and_manage_certificates of this GroupProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._access_and_manage_certificates
-
-    @access_and_manage_certificates.setter
-    def access_and_manage_certificates(self, access_and_manage_certificates):
-        """Sets the access_and_manage_certificates of this GroupProperties.
-
-        Privilege for a group to access and manage certificates.  # noqa: E501
-
-        :param access_and_manage_certificates: The access_and_manage_certificates of this GroupProperties.  # noqa: E501
-        :type access_and_manage_certificates: bool
-        """
-
-        self._access_and_manage_certificates = access_and_manage_certificates
+        self._create_snapshot = create_snapshot
 
     @property
     def manage_dbaas(self):
@@ -490,27 +444,27 @@ class GroupProperties(object):
         self._manage_dbaas = manage_dbaas
 
     @property
-    def access_and_manage_dns(self):
-        """Gets the access_and_manage_dns of this GroupProperties.  # noqa: E501
+    def manage_dataplatform(self):
+        """Gets the manage_dataplatform of this GroupProperties.  # noqa: E501
 
-        Privilege for a group to access and manage dns records.  # noqa: E501
+        Privilege for a group to access and manage the Data Platform.  # noqa: E501
 
-        :return: The access_and_manage_dns of this GroupProperties.  # noqa: E501
+        :return: The manage_dataplatform of this GroupProperties.  # noqa: E501
         :rtype: bool
         """
-        return self._access_and_manage_dns
+        return self._manage_dataplatform
 
-    @access_and_manage_dns.setter
-    def access_and_manage_dns(self, access_and_manage_dns):
-        """Sets the access_and_manage_dns of this GroupProperties.
+    @manage_dataplatform.setter
+    def manage_dataplatform(self, manage_dataplatform):
+        """Sets the manage_dataplatform of this GroupProperties.
 
-        Privilege for a group to access and manage dns records.  # noqa: E501
+        Privilege for a group to access and manage the Data Platform.  # noqa: E501
 
-        :param access_and_manage_dns: The access_and_manage_dns of this GroupProperties.  # noqa: E501
-        :type access_and_manage_dns: bool
+        :param manage_dataplatform: The manage_dataplatform of this GroupProperties.  # noqa: E501
+        :type manage_dataplatform: bool
         """
 
-        self._access_and_manage_dns = access_and_manage_dns
+        self._manage_dataplatform = manage_dataplatform
 
     @property
     def manage_registry(self):
@@ -536,27 +490,73 @@ class GroupProperties(object):
         self._manage_registry = manage_registry
 
     @property
-    def manage_dataplatform(self):
-        """Gets the manage_dataplatform of this GroupProperties.  # noqa: E501
+    def name(self):
+        """Gets the name of this GroupProperties.  # noqa: E501
 
-        Privilege for a group to access and manage Data Platform.  # noqa: E501
+        The name of the resource.  # noqa: E501
 
-        :return: The manage_dataplatform of this GroupProperties.  # noqa: E501
+        :return: The name of this GroupProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this GroupProperties.
+
+        The name of the resource.  # noqa: E501
+
+        :param name: The name of this GroupProperties.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
+
+    @property
+    def reserve_ip(self):
+        """Gets the reserve_ip of this GroupProperties.  # noqa: E501
+
+        Reserve IP block privilege.  # noqa: E501
+
+        :return: The reserve_ip of this GroupProperties.  # noqa: E501
         :rtype: bool
         """
-        return self._manage_dataplatform
+        return self._reserve_ip
 
-    @manage_dataplatform.setter
-    def manage_dataplatform(self, manage_dataplatform):
-        """Sets the manage_dataplatform of this GroupProperties.
+    @reserve_ip.setter
+    def reserve_ip(self, reserve_ip):
+        """Sets the reserve_ip of this GroupProperties.
 
-        Privilege for a group to access and manage Data Platform.  # noqa: E501
+        Reserve IP block privilege.  # noqa: E501
 
-        :param manage_dataplatform: The manage_dataplatform of this GroupProperties.  # noqa: E501
-        :type manage_dataplatform: bool
+        :param reserve_ip: The reserve_ip of this GroupProperties.  # noqa: E501
+        :type reserve_ip: bool
         """
 
-        self._manage_dataplatform = manage_dataplatform
+        self._reserve_ip = reserve_ip
+
+    @property
+    def s3_privilege(self):
+        """Gets the s3_privilege of this GroupProperties.  # noqa: E501
+
+        S3 privilege.  # noqa: E501
+
+        :return: The s3_privilege of this GroupProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._s3_privilege
+
+    @s3_privilege.setter
+    def s3_privilege(self, s3_privilege):
+        """Sets the s3_privilege of this GroupProperties.
+
+        S3 privilege.  # noqa: E501
+
+        :param s3_privilege: The s3_privilege of this GroupProperties.  # noqa: E501
+        :type s3_privilege: bool
+        """
+
+        self._s3_privilege = s3_privilege
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -34,70 +34,70 @@ class PrivateCrossConnectProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'connectable_datacenters': 'list[ConnectableDatacenter]',
 
         'description': 'str',
 
-        'peers': 'list[Peer]',
+        'name': 'str',
 
-        'connectable_datacenters': 'list[ConnectableDatacenter]',
+        'peers': 'list[Peer]',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'connectable_datacenters': 'connectableDatacenters',
 
         'description': 'description',
 
-        'peers': 'peers',
+        'name': 'name',
 
-        'connectable_datacenters': 'connectableDatacenters',
+        'peers': 'peers',
     }
 
-    def __init__(self, name=None, description=None, peers=None, connectable_datacenters=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, connectable_datacenters=None, description=None, name=None, peers=None, local_vars_configuration=None):  # noqa: E501
         """PrivateCrossConnectProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._description = None
-        self._peers = None
         self._connectable_datacenters = None
+        self._description = None
+        self._name = None
+        self._peers = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
-        if peers is not None:
-            self.peers = peers
         if connectable_datacenters is not None:
             self.connectable_datacenters = connectable_datacenters
+        if description is not None:
+            self.description = description
+        if name is not None:
+            self.name = name
+        if peers is not None:
+            self.peers = peers
 
 
     @property
-    def name(self):
-        """Gets the name of this PrivateCrossConnectProperties.  # noqa: E501
+    def connectable_datacenters(self):
+        """Gets the connectable_datacenters of this PrivateCrossConnectProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.  # noqa: E501
 
-        :return: The name of this PrivateCrossConnectProperties.  # noqa: E501
-        :rtype: str
+        :return: The connectable_datacenters of this PrivateCrossConnectProperties.  # noqa: E501
+        :rtype: list[ConnectableDatacenter]
         """
-        return self._name
+        return self._connectable_datacenters
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this PrivateCrossConnectProperties.
+    @connectable_datacenters.setter
+    def connectable_datacenters(self, connectable_datacenters):
+        """Sets the connectable_datacenters of this PrivateCrossConnectProperties.
 
-        The name of the  resource.  # noqa: E501
+        Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.  # noqa: E501
 
-        :param name: The name of this PrivateCrossConnectProperties.  # noqa: E501
-        :type name: str
+        :param connectable_datacenters: The connectable_datacenters of this PrivateCrossConnectProperties.  # noqa: E501
+        :type connectable_datacenters: list[ConnectableDatacenter]
         """
 
-        self._name = name
+        self._connectable_datacenters = connectable_datacenters
 
     @property
     def description(self):
@@ -123,6 +123,29 @@ class PrivateCrossConnectProperties(object):
         self._description = description
 
     @property
+    def name(self):
+        """Gets the name of this PrivateCrossConnectProperties.  # noqa: E501
+
+        The name of the  resource.  # noqa: E501
+
+        :return: The name of this PrivateCrossConnectProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this PrivateCrossConnectProperties.
+
+        The name of the  resource.  # noqa: E501
+
+        :param name: The name of this PrivateCrossConnectProperties.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
+
+    @property
     def peers(self):
         """Gets the peers of this PrivateCrossConnectProperties.  # noqa: E501
 
@@ -144,29 +167,6 @@ class PrivateCrossConnectProperties(object):
         """
 
         self._peers = peers
-
-    @property
-    def connectable_datacenters(self):
-        """Gets the connectable_datacenters of this PrivateCrossConnectProperties.  # noqa: E501
-
-        Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.  # noqa: E501
-
-        :return: The connectable_datacenters of this PrivateCrossConnectProperties.  # noqa: E501
-        :rtype: list[ConnectableDatacenter]
-        """
-        return self._connectable_datacenters
-
-    @connectable_datacenters.setter
-    def connectable_datacenters(self, connectable_datacenters):
-        """Sets the connectable_datacenters of this PrivateCrossConnectProperties.
-
-        Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.  # noqa: E501
-
-        :param connectable_datacenters: The connectable_datacenters of this PrivateCrossConnectProperties.  # noqa: E501
-        :type connectable_datacenters: list[ConnectableDatacenter]
-        """
-
-        self._connectable_datacenters = connectable_datacenters
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

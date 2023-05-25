@@ -34,56 +34,33 @@ class KubernetesNodePoolLanRoutes(object):
     """
     openapi_types = {
 
-        'network': 'str',
-
         'gateway_ip': 'str',
+
+        'network': 'str',
     }
 
     attribute_map = {
 
-        'network': 'network',
-
         'gateway_ip': 'gatewayIp',
+
+        'network': 'network',
     }
 
-    def __init__(self, network=None, gateway_ip=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, gateway_ip=None, network=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolLanRoutes - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._network = None
         self._gateway_ip = None
+        self._network = None
         self.discriminator = None
 
-        if network is not None:
-            self.network = network
         if gateway_ip is not None:
             self.gateway_ip = gateway_ip
+        if network is not None:
+            self.network = network
 
-
-    @property
-    def network(self):
-        """Gets the network of this KubernetesNodePoolLanRoutes.  # noqa: E501
-
-        IPv4 or IPv6 CIDR to be routed via the interface.  # noqa: E501
-
-        :return: The network of this KubernetesNodePoolLanRoutes.  # noqa: E501
-        :rtype: str
-        """
-        return self._network
-
-    @network.setter
-    def network(self, network):
-        """Sets the network of this KubernetesNodePoolLanRoutes.
-
-        IPv4 or IPv6 CIDR to be routed via the interface.  # noqa: E501
-
-        :param network: The network of this KubernetesNodePoolLanRoutes.  # noqa: E501
-        :type network: str
-        """
-
-        self._network = network
 
     @property
     def gateway_ip(self):
@@ -107,6 +84,29 @@ class KubernetesNodePoolLanRoutes(object):
         """
 
         self._gateway_ip = gateway_ip
+
+    @property
+    def network(self):
+        """Gets the network of this KubernetesNodePoolLanRoutes.  # noqa: E501
+
+        IPv4 or IPv6 CIDR to be routed via the interface.  # noqa: E501
+
+        :return: The network of this KubernetesNodePoolLanRoutes.  # noqa: E501
+        :rtype: str
+        """
+        return self._network
+
+    @network.setter
+    def network(self, network):
+        """Sets the network of this KubernetesNodePoolLanRoutes.
+
+        IPv4 or IPv6 CIDR to be routed via the interface.  # noqa: E501
+
+        :param network: The network of this KubernetesNodePoolLanRoutes.  # noqa: E501
+        :type network: str
+        """
+
+        self._network = network
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

@@ -34,68 +34,43 @@ class FlowLogProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
         'action': 'str',
+
+        'bucket': 'str',
 
         'direction': 'str',
 
-        'bucket': 'str',
+        'name': 'str',
     }
 
     attribute_map = {
 
-        'name': 'name',
-
         'action': 'action',
+
+        'bucket': 'bucket',
 
         'direction': 'direction',
 
-        'bucket': 'bucket',
+        'name': 'name',
     }
 
-    def __init__(self, name=None, action=None, direction=None, bucket=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, action=None, bucket=None, direction=None, name=None, local_vars_configuration=None):  # noqa: E501
         """FlowLogProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
         self._action = None
-        self._direction = None
         self._bucket = None
+        self._direction = None
+        self._name = None
         self.discriminator = None
 
-        self.name = name
         self.action = action
-        self.direction = direction
         self.bucket = bucket
+        self.direction = direction
+        self.name = name
 
-
-    @property
-    def name(self):
-        """Gets the name of this FlowLogProperties.  # noqa: E501
-
-        The resource name.  # noqa: E501
-
-        :return: The name of this FlowLogProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this FlowLogProperties.
-
-        The resource name.  # noqa: E501
-
-        :param name: The name of this FlowLogProperties.  # noqa: E501
-        :type name: str
-        """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
 
     @property
     def action(self):
@@ -129,6 +104,31 @@ class FlowLogProperties(object):
         self._action = action
 
     @property
+    def bucket(self):
+        """Gets the bucket of this FlowLogProperties.  # noqa: E501
+
+        The S3 bucket name of an existing IONOS Cloud S3 bucket.  # noqa: E501
+
+        :return: The bucket of this FlowLogProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._bucket
+
+    @bucket.setter
+    def bucket(self, bucket):
+        """Sets the bucket of this FlowLogProperties.
+
+        The S3 bucket name of an existing IONOS Cloud S3 bucket.  # noqa: E501
+
+        :param bucket: The bucket of this FlowLogProperties.  # noqa: E501
+        :type bucket: str
+        """
+        if self.local_vars_configuration.client_side_validation and bucket is None:  # noqa: E501
+            raise ValueError("Invalid value for `bucket`, must not be `None`")  # noqa: E501
+
+        self._bucket = bucket
+
+    @property
     def direction(self):
         """Gets the direction of this FlowLogProperties.  # noqa: E501
 
@@ -160,29 +160,29 @@ class FlowLogProperties(object):
         self._direction = direction
 
     @property
-    def bucket(self):
-        """Gets the bucket of this FlowLogProperties.  # noqa: E501
+    def name(self):
+        """Gets the name of this FlowLogProperties.  # noqa: E501
 
-        The S3 bucket name of an existing IONOS Cloud S3 bucket.  # noqa: E501
+        The resource name.  # noqa: E501
 
-        :return: The bucket of this FlowLogProperties.  # noqa: E501
+        :return: The name of this FlowLogProperties.  # noqa: E501
         :rtype: str
         """
-        return self._bucket
+        return self._name
 
-    @bucket.setter
-    def bucket(self, bucket):
-        """Sets the bucket of this FlowLogProperties.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this FlowLogProperties.
 
-        The S3 bucket name of an existing IONOS Cloud S3 bucket.  # noqa: E501
+        The resource name.  # noqa: E501
 
-        :param bucket: The bucket of this FlowLogProperties.  # noqa: E501
-        :type bucket: str
+        :param name: The name of this FlowLogProperties.  # noqa: E501
+        :type name: str
         """
-        if self.local_vars_configuration.client_side_validation and bucket is None:  # noqa: E501
-            raise ValueError("Invalid value for `bucket`, must not be `None`")  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._bucket = bucket
+        self._name = name
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

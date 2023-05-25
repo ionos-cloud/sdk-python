@@ -34,54 +34,33 @@ class GroupEntities(object):
     """
     openapi_types = {
 
-        'users': 'GroupMembers',
-
         'resources': 'ResourceGroups',
+
+        'users': 'GroupMembers',
     }
 
     attribute_map = {
 
-        'users': 'users',
-
         'resources': 'resources',
+
+        'users': 'users',
     }
 
-    def __init__(self, users=None, resources=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, resources=None, users=None, local_vars_configuration=None):  # noqa: E501
         """GroupEntities - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._users = None
         self._resources = None
+        self._users = None
         self.discriminator = None
 
-        if users is not None:
-            self.users = users
         if resources is not None:
             self.resources = resources
+        if users is not None:
+            self.users = users
 
-
-    @property
-    def users(self):
-        """Gets the users of this GroupEntities.  # noqa: E501
-
-
-        :return: The users of this GroupEntities.  # noqa: E501
-        :rtype: GroupMembers
-        """
-        return self._users
-
-    @users.setter
-    def users(self, users):
-        """Sets the users of this GroupEntities.
-
-
-        :param users: The users of this GroupEntities.  # noqa: E501
-        :type users: GroupMembers
-        """
-
-        self._users = users
 
     @property
     def resources(self):
@@ -103,6 +82,27 @@ class GroupEntities(object):
         """
 
         self._resources = resources
+
+    @property
+    def users(self):
+        """Gets the users of this GroupEntities.  # noqa: E501
+
+
+        :return: The users of this GroupEntities.  # noqa: E501
+        :rtype: GroupMembers
+        """
+        return self._users
+
+    @users.setter
+    def users(self, users):
+        """Sets the users of this GroupEntities.
+
+
+        :param users: The users of this GroupEntities.  # noqa: E501
+        :type users: GroupMembers
+        """
+
+        self._users = users
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

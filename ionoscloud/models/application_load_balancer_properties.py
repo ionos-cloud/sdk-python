@@ -34,76 +34,97 @@ class ApplicationLoadBalancerProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'ips': 'list[str]',
+
+        'lb_private_ips': 'list[str]',
 
         'listener_lan': 'int',
 
-        'ips': 'list[str]',
+        'name': 'str',
 
         'target_lan': 'int',
-
-        'lb_private_ips': 'list[str]',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'ips': 'ips',
+
+        'lb_private_ips': 'lbPrivateIps',
 
         'listener_lan': 'listenerLan',
 
-        'ips': 'ips',
+        'name': 'name',
 
         'target_lan': 'targetLan',
-
-        'lb_private_ips': 'lbPrivateIps',
     }
 
-    def __init__(self, name=None, listener_lan=None, ips=None, target_lan=None, lb_private_ips=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, ips=None, lb_private_ips=None, listener_lan=None, name=None, target_lan=None, local_vars_configuration=None):  # noqa: E501
         """ApplicationLoadBalancerProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._listener_lan = None
         self._ips = None
-        self._target_lan = None
         self._lb_private_ips = None
+        self._listener_lan = None
+        self._name = None
+        self._target_lan = None
         self.discriminator = None
 
-        self.name = name
-        self.listener_lan = listener_lan
         if ips is not None:
             self.ips = ips
-        self.target_lan = target_lan
         if lb_private_ips is not None:
             self.lb_private_ips = lb_private_ips
+        self.listener_lan = listener_lan
+        self.name = name
+        self.target_lan = target_lan
 
 
     @property
-    def name(self):
-        """Gets the name of this ApplicationLoadBalancerProperties.  # noqa: E501
+    def ips(self):
+        """Gets the ips of this ApplicationLoadBalancerProperties.  # noqa: E501
 
-        The Application Load Balancer name.  # noqa: E501
+        Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the 'listenerLan' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.  # noqa: E501
 
-        :return: The name of this ApplicationLoadBalancerProperties.  # noqa: E501
-        :rtype: str
+        :return: The ips of this ApplicationLoadBalancerProperties.  # noqa: E501
+        :rtype: list[str]
         """
-        return self._name
+        return self._ips
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this ApplicationLoadBalancerProperties.
+    @ips.setter
+    def ips(self, ips):
+        """Sets the ips of this ApplicationLoadBalancerProperties.
 
-        The Application Load Balancer name.  # noqa: E501
+        Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the 'listenerLan' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.  # noqa: E501
 
-        :param name: The name of this ApplicationLoadBalancerProperties.  # noqa: E501
-        :type name: str
+        :param ips: The ips of this ApplicationLoadBalancerProperties.  # noqa: E501
+        :type ips: list[str]
         """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._name = name
+        self._ips = ips
+
+    @property
+    def lb_private_ips(self):
+        """Gets the lb_private_ips of this ApplicationLoadBalancerProperties.  # noqa: E501
+
+        Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
+
+        :return: The lb_private_ips of this ApplicationLoadBalancerProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._lb_private_ips
+
+    @lb_private_ips.setter
+    def lb_private_ips(self, lb_private_ips):
+        """Sets the lb_private_ips of this ApplicationLoadBalancerProperties.
+
+        Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
+
+        :param lb_private_ips: The lb_private_ips of this ApplicationLoadBalancerProperties.  # noqa: E501
+        :type lb_private_ips: list[str]
+        """
+
+        self._lb_private_ips = lb_private_ips
 
     @property
     def listener_lan(self):
@@ -131,27 +152,29 @@ class ApplicationLoadBalancerProperties(object):
         self._listener_lan = listener_lan
 
     @property
-    def ips(self):
-        """Gets the ips of this ApplicationLoadBalancerProperties.  # noqa: E501
+    def name(self):
+        """Gets the name of this ApplicationLoadBalancerProperties.  # noqa: E501
 
-        Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the 'listenerLan' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.  # noqa: E501
+        The Application Load Balancer name.  # noqa: E501
 
-        :return: The ips of this ApplicationLoadBalancerProperties.  # noqa: E501
-        :rtype: list[str]
+        :return: The name of this ApplicationLoadBalancerProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._ips
+        return self._name
 
-    @ips.setter
-    def ips(self, ips):
-        """Sets the ips of this ApplicationLoadBalancerProperties.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this ApplicationLoadBalancerProperties.
 
-        Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the 'listenerLan' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.  # noqa: E501
+        The Application Load Balancer name.  # noqa: E501
 
-        :param ips: The ips of this ApplicationLoadBalancerProperties.  # noqa: E501
-        :type ips: list[str]
+        :param name: The name of this ApplicationLoadBalancerProperties.  # noqa: E501
+        :type name: str
         """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._ips = ips
+        self._name = name
 
     @property
     def target_lan(self):
@@ -177,29 +200,6 @@ class ApplicationLoadBalancerProperties(object):
             raise ValueError("Invalid value for `target_lan`, must not be `None`")  # noqa: E501
 
         self._target_lan = target_lan
-
-    @property
-    def lb_private_ips(self):
-        """Gets the lb_private_ips of this ApplicationLoadBalancerProperties.  # noqa: E501
-
-        Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
-
-        :return: The lb_private_ips of this ApplicationLoadBalancerProperties.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._lb_private_ips
-
-    @lb_private_ips.setter
-    def lb_private_ips(self, lb_private_ips):
-        """Sets the lb_private_ips of this ApplicationLoadBalancerProperties.
-
-        Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.  # noqa: E501
-
-        :param lb_private_ips: The lb_private_ips of this ApplicationLoadBalancerProperties.  # noqa: E501
-        :type lb_private_ips: list[str]
-        """
-
-        self._lb_private_ips = lb_private_ips
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

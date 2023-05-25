@@ -36,9 +36,9 @@ class KubernetesNodePoolLan(object):
 
         'datacenter_id': 'str',
 
-        'id': 'int',
-
         'dhcp': 'bool',
+
+        'id': 'int',
 
         'routes': 'list[KubernetesNodePoolLanRoutes]',
     }
@@ -47,30 +47,30 @@ class KubernetesNodePoolLan(object):
 
         'datacenter_id': 'datacenterId',
 
-        'id': 'id',
-
         'dhcp': 'dhcp',
+
+        'id': 'id',
 
         'routes': 'routes',
     }
 
-    def __init__(self, datacenter_id=None, id=None, dhcp=None, routes=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, datacenter_id=None, dhcp=None, id=None, routes=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesNodePoolLan - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._datacenter_id = None
-        self._id = None
         self._dhcp = None
+        self._id = None
         self._routes = None
         self.discriminator = None
 
         if datacenter_id is not None:
             self.datacenter_id = datacenter_id
-        self.id = id
         if dhcp is not None:
             self.dhcp = dhcp
+        self.id = id
         if routes is not None:
             self.routes = routes
 
@@ -99,6 +99,29 @@ class KubernetesNodePoolLan(object):
         self._datacenter_id = datacenter_id
 
     @property
+    def dhcp(self):
+        """Gets the dhcp of this KubernetesNodePoolLan.  # noqa: E501
+
+        Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.  # noqa: E501
+
+        :return: The dhcp of this KubernetesNodePoolLan.  # noqa: E501
+        :rtype: bool
+        """
+        return self._dhcp
+
+    @dhcp.setter
+    def dhcp(self, dhcp):
+        """Sets the dhcp of this KubernetesNodePoolLan.
+
+        Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.  # noqa: E501
+
+        :param dhcp: The dhcp of this KubernetesNodePoolLan.  # noqa: E501
+        :type dhcp: bool
+        """
+
+        self._dhcp = dhcp
+
+    @property
     def id(self):
         """Gets the id of this KubernetesNodePoolLan.  # noqa: E501
 
@@ -122,29 +145,6 @@ class KubernetesNodePoolLan(object):
             raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
-
-    @property
-    def dhcp(self):
-        """Gets the dhcp of this KubernetesNodePoolLan.  # noqa: E501
-
-        Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.  # noqa: E501
-
-        :return: The dhcp of this KubernetesNodePoolLan.  # noqa: E501
-        :rtype: bool
-        """
-        return self._dhcp
-
-    @dhcp.setter
-    def dhcp(self, dhcp):
-        """Sets the dhcp of this KubernetesNodePoolLan.
-
-        Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.  # noqa: E501
-
-        :param dhcp: The dhcp of this KubernetesNodePoolLan.  # noqa: E501
-        :type dhcp: bool
-        """
-
-        self._dhcp = dhcp
 
     @property
     def routes(self):

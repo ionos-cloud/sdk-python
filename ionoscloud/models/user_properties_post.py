@@ -34,144 +34,98 @@ class UserPropertiesPost(object):
     """
     openapi_types = {
 
-        'firstname': 'str',
-
-        'lastname': 'str',
-
-        'email': 'str',
+        'active': 'bool',
 
         'administrator': 'bool',
 
+        'email': 'str',
+
+        'firstname': 'str',
+
         'force_sec_auth': 'bool',
 
-        'sec_auth_active': 'bool',
+        'lastname': 'str',
 
         'password': 'str',
 
-        'active': 'bool',
+        'sec_auth_active': 'bool',
     }
 
     attribute_map = {
 
-        'firstname': 'firstname',
-
-        'lastname': 'lastname',
-
-        'email': 'email',
+        'active': 'active',
 
         'administrator': 'administrator',
 
+        'email': 'email',
+
+        'firstname': 'firstname',
+
         'force_sec_auth': 'forceSecAuth',
 
-        'sec_auth_active': 'secAuthActive',
+        'lastname': 'lastname',
 
         'password': 'password',
 
-        'active': 'active',
+        'sec_auth_active': 'secAuthActive',
     }
 
-    def __init__(self, firstname=None, lastname=None, email=None, administrator=None, force_sec_auth=None, sec_auth_active=None, password=None, active=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, active=None, administrator=None, email=None, firstname=None, force_sec_auth=None, lastname=None, password=None, sec_auth_active=None, local_vars_configuration=None):  # noqa: E501
         """UserPropertiesPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._firstname = None
-        self._lastname = None
-        self._email = None
-        self._administrator = None
-        self._force_sec_auth = None
-        self._sec_auth_active = None
-        self._password = None
         self._active = None
+        self._administrator = None
+        self._email = None
+        self._firstname = None
+        self._force_sec_auth = None
+        self._lastname = None
+        self._password = None
+        self._sec_auth_active = None
         self.discriminator = None
 
-        if firstname is not None:
-            self.firstname = firstname
-        if lastname is not None:
-            self.lastname = lastname
-        if email is not None:
-            self.email = email
-        if administrator is not None:
-            self.administrator = administrator
-        if force_sec_auth is not None:
-            self.force_sec_auth = force_sec_auth
-        if sec_auth_active is not None:
-            self.sec_auth_active = sec_auth_active
-        if password is not None:
-            self.password = password
         if active is not None:
             self.active = active
+        if administrator is not None:
+            self.administrator = administrator
+        if email is not None:
+            self.email = email
+        if firstname is not None:
+            self.firstname = firstname
+        if force_sec_auth is not None:
+            self.force_sec_auth = force_sec_auth
+        if lastname is not None:
+            self.lastname = lastname
+        if password is not None:
+            self.password = password
+        if sec_auth_active is not None:
+            self.sec_auth_active = sec_auth_active
 
 
     @property
-    def firstname(self):
-        """Gets the firstname of this UserPropertiesPost.  # noqa: E501
+    def active(self):
+        """Gets the active of this UserPropertiesPost.  # noqa: E501
 
-        The first name of the user.  # noqa: E501
+        Indicates if the user is active.  # noqa: E501
 
-        :return: The firstname of this UserPropertiesPost.  # noqa: E501
-        :rtype: str
+        :return: The active of this UserPropertiesPost.  # noqa: E501
+        :rtype: bool
         """
-        return self._firstname
+        return self._active
 
-    @firstname.setter
-    def firstname(self, firstname):
-        """Sets the firstname of this UserPropertiesPost.
+    @active.setter
+    def active(self, active):
+        """Sets the active of this UserPropertiesPost.
 
-        The first name of the user.  # noqa: E501
+        Indicates if the user is active.  # noqa: E501
 
-        :param firstname: The firstname of this UserPropertiesPost.  # noqa: E501
-        :type firstname: str
-        """
-
-        self._firstname = firstname
-
-    @property
-    def lastname(self):
-        """Gets the lastname of this UserPropertiesPost.  # noqa: E501
-
-        The last name of the user.  # noqa: E501
-
-        :return: The lastname of this UserPropertiesPost.  # noqa: E501
-        :rtype: str
-        """
-        return self._lastname
-
-    @lastname.setter
-    def lastname(self, lastname):
-        """Sets the lastname of this UserPropertiesPost.
-
-        The last name of the user.  # noqa: E501
-
-        :param lastname: The lastname of this UserPropertiesPost.  # noqa: E501
-        :type lastname: str
+        :param active: The active of this UserPropertiesPost.  # noqa: E501
+        :type active: bool
         """
 
-        self._lastname = lastname
-
-    @property
-    def email(self):
-        """Gets the email of this UserPropertiesPost.  # noqa: E501
-
-        The email address of the user.  # noqa: E501
-
-        :return: The email of this UserPropertiesPost.  # noqa: E501
-        :rtype: str
-        """
-        return self._email
-
-    @email.setter
-    def email(self, email):
-        """Sets the email of this UserPropertiesPost.
-
-        The email address of the user.  # noqa: E501
-
-        :param email: The email of this UserPropertiesPost.  # noqa: E501
-        :type email: str
-        """
-
-        self._email = email
+        self._active = active
 
     @property
     def administrator(self):
@@ -197,6 +151,52 @@ class UserPropertiesPost(object):
         self._administrator = administrator
 
     @property
+    def email(self):
+        """Gets the email of this UserPropertiesPost.  # noqa: E501
+
+        The email address of the user.  # noqa: E501
+
+        :return: The email of this UserPropertiesPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this UserPropertiesPost.
+
+        The email address of the user.  # noqa: E501
+
+        :param email: The email of this UserPropertiesPost.  # noqa: E501
+        :type email: str
+        """
+
+        self._email = email
+
+    @property
+    def firstname(self):
+        """Gets the firstname of this UserPropertiesPost.  # noqa: E501
+
+        The first name of the user.  # noqa: E501
+
+        :return: The firstname of this UserPropertiesPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._firstname
+
+    @firstname.setter
+    def firstname(self, firstname):
+        """Sets the firstname of this UserPropertiesPost.
+
+        The first name of the user.  # noqa: E501
+
+        :param firstname: The firstname of this UserPropertiesPost.  # noqa: E501
+        :type firstname: str
+        """
+
+        self._firstname = firstname
+
+    @property
     def force_sec_auth(self):
         """Gets the force_sec_auth of this UserPropertiesPost.  # noqa: E501
 
@@ -220,27 +220,27 @@ class UserPropertiesPost(object):
         self._force_sec_auth = force_sec_auth
 
     @property
-    def sec_auth_active(self):
-        """Gets the sec_auth_active of this UserPropertiesPost.  # noqa: E501
+    def lastname(self):
+        """Gets the lastname of this UserPropertiesPost.  # noqa: E501
 
-        Indicates if secure authentication is active for the user.  # noqa: E501
+        The last name of the user.  # noqa: E501
 
-        :return: The sec_auth_active of this UserPropertiesPost.  # noqa: E501
-        :rtype: bool
+        :return: The lastname of this UserPropertiesPost.  # noqa: E501
+        :rtype: str
         """
-        return self._sec_auth_active
+        return self._lastname
 
-    @sec_auth_active.setter
-    def sec_auth_active(self, sec_auth_active):
-        """Sets the sec_auth_active of this UserPropertiesPost.
+    @lastname.setter
+    def lastname(self, lastname):
+        """Sets the lastname of this UserPropertiesPost.
 
-        Indicates if secure authentication is active for the user.  # noqa: E501
+        The last name of the user.  # noqa: E501
 
-        :param sec_auth_active: The sec_auth_active of this UserPropertiesPost.  # noqa: E501
-        :type sec_auth_active: bool
+        :param lastname: The lastname of this UserPropertiesPost.  # noqa: E501
+        :type lastname: str
         """
 
-        self._sec_auth_active = sec_auth_active
+        self._lastname = lastname
 
     @property
     def password(self):
@@ -266,27 +266,27 @@ class UserPropertiesPost(object):
         self._password = password
 
     @property
-    def active(self):
-        """Gets the active of this UserPropertiesPost.  # noqa: E501
+    def sec_auth_active(self):
+        """Gets the sec_auth_active of this UserPropertiesPost.  # noqa: E501
 
-        Indicates if the user is active.  # noqa: E501
+        Indicates if secure authentication is active for the user.  # noqa: E501
 
-        :return: The active of this UserPropertiesPost.  # noqa: E501
+        :return: The sec_auth_active of this UserPropertiesPost.  # noqa: E501
         :rtype: bool
         """
-        return self._active
+        return self._sec_auth_active
 
-    @active.setter
-    def active(self, active):
-        """Sets the active of this UserPropertiesPost.
+    @sec_auth_active.setter
+    def sec_auth_active(self, sec_auth_active):
+        """Sets the sec_auth_active of this UserPropertiesPost.
 
-        Indicates if the user is active.  # noqa: E501
+        Indicates if secure authentication is active for the user.  # noqa: E501
 
-        :param active: The active of this UserPropertiesPost.  # noqa: E501
-        :type active: bool
+        :param sec_auth_active: The sec_auth_active of this UserPropertiesPost.  # noqa: E501
+        :type sec_auth_active: bool
         """
 
-        self._active = active
+        self._sec_auth_active = sec_auth_active
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

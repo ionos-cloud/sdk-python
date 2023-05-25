@@ -34,246 +34,131 @@ class SnapshotProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
-        'description': 'str',
-
-        'location': 'str',
-
-        'size': 'float',
-
-        'sec_auth_protection': 'bool',
-
         'cpu_hot_plug': 'bool',
 
         'cpu_hot_unplug': 'bool',
 
-        'ram_hot_plug': 'bool',
-
-        'ram_hot_unplug': 'bool',
-
-        'nic_hot_plug': 'bool',
-
-        'nic_hot_unplug': 'bool',
-
-        'disc_virtio_hot_plug': 'bool',
-
-        'disc_virtio_hot_unplug': 'bool',
+        'description': 'str',
 
         'disc_scsi_hot_plug': 'bool',
 
         'disc_scsi_hot_unplug': 'bool',
 
+        'disc_virtio_hot_plug': 'bool',
+
+        'disc_virtio_hot_unplug': 'bool',
+
         'licence_type': 'str',
+
+        'location': 'str',
+
+        'name': 'str',
+
+        'nic_hot_plug': 'bool',
+
+        'nic_hot_unplug': 'bool',
+
+        'ram_hot_plug': 'bool',
+
+        'ram_hot_unplug': 'bool',
+
+        'sec_auth_protection': 'bool',
+
+        'size': 'float',
     }
 
     attribute_map = {
-
-        'name': 'name',
-
-        'description': 'description',
-
-        'location': 'location',
-
-        'size': 'size',
-
-        'sec_auth_protection': 'secAuthProtection',
 
         'cpu_hot_plug': 'cpuHotPlug',
 
         'cpu_hot_unplug': 'cpuHotUnplug',
 
-        'ram_hot_plug': 'ramHotPlug',
-
-        'ram_hot_unplug': 'ramHotUnplug',
-
-        'nic_hot_plug': 'nicHotPlug',
-
-        'nic_hot_unplug': 'nicHotUnplug',
-
-        'disc_virtio_hot_plug': 'discVirtioHotPlug',
-
-        'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
+        'description': 'description',
 
         'disc_scsi_hot_plug': 'discScsiHotPlug',
 
         'disc_scsi_hot_unplug': 'discScsiHotUnplug',
 
+        'disc_virtio_hot_plug': 'discVirtioHotPlug',
+
+        'disc_virtio_hot_unplug': 'discVirtioHotUnplug',
+
         'licence_type': 'licenceType',
+
+        'location': 'location',
+
+        'name': 'name',
+
+        'nic_hot_plug': 'nicHotPlug',
+
+        'nic_hot_unplug': 'nicHotUnplug',
+
+        'ram_hot_plug': 'ramHotPlug',
+
+        'ram_hot_unplug': 'ramHotUnplug',
+
+        'sec_auth_protection': 'secAuthProtection',
+
+        'size': 'size',
     }
 
-    def __init__(self, name=None, description=None, location=None, size=None, sec_auth_protection=None, cpu_hot_plug=None, cpu_hot_unplug=None, ram_hot_plug=None, ram_hot_unplug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, disc_scsi_hot_plug=None, disc_scsi_hot_unplug=None, licence_type=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cpu_hot_plug=None, cpu_hot_unplug=None, description=None, disc_scsi_hot_plug=None, disc_scsi_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, licence_type=None, location=None, name=None, nic_hot_plug=None, nic_hot_unplug=None, ram_hot_plug=None, ram_hot_unplug=None, sec_auth_protection=None, size=None, local_vars_configuration=None):  # noqa: E501
         """SnapshotProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._description = None
-        self._location = None
-        self._size = None
-        self._sec_auth_protection = None
         self._cpu_hot_plug = None
         self._cpu_hot_unplug = None
-        self._ram_hot_plug = None
-        self._ram_hot_unplug = None
-        self._nic_hot_plug = None
-        self._nic_hot_unplug = None
-        self._disc_virtio_hot_plug = None
-        self._disc_virtio_hot_unplug = None
+        self._description = None
         self._disc_scsi_hot_plug = None
         self._disc_scsi_hot_unplug = None
+        self._disc_virtio_hot_plug = None
+        self._disc_virtio_hot_unplug = None
         self._licence_type = None
+        self._location = None
+        self._name = None
+        self._nic_hot_plug = None
+        self._nic_hot_unplug = None
+        self._ram_hot_plug = None
+        self._ram_hot_unplug = None
+        self._sec_auth_protection = None
+        self._size = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
-        if location is not None:
-            self.location = location
-        if size is not None:
-            self.size = size
-        if sec_auth_protection is not None:
-            self.sec_auth_protection = sec_auth_protection
         if cpu_hot_plug is not None:
             self.cpu_hot_plug = cpu_hot_plug
         if cpu_hot_unplug is not None:
             self.cpu_hot_unplug = cpu_hot_unplug
-        if ram_hot_plug is not None:
-            self.ram_hot_plug = ram_hot_plug
-        if ram_hot_unplug is not None:
-            self.ram_hot_unplug = ram_hot_unplug
-        if nic_hot_plug is not None:
-            self.nic_hot_plug = nic_hot_plug
-        if nic_hot_unplug is not None:
-            self.nic_hot_unplug = nic_hot_unplug
-        if disc_virtio_hot_plug is not None:
-            self.disc_virtio_hot_plug = disc_virtio_hot_plug
-        if disc_virtio_hot_unplug is not None:
-            self.disc_virtio_hot_unplug = disc_virtio_hot_unplug
+        if description is not None:
+            self.description = description
         if disc_scsi_hot_plug is not None:
             self.disc_scsi_hot_plug = disc_scsi_hot_plug
         if disc_scsi_hot_unplug is not None:
             self.disc_scsi_hot_unplug = disc_scsi_hot_unplug
+        if disc_virtio_hot_plug is not None:
+            self.disc_virtio_hot_plug = disc_virtio_hot_plug
+        if disc_virtio_hot_unplug is not None:
+            self.disc_virtio_hot_unplug = disc_virtio_hot_unplug
         if licence_type is not None:
             self.licence_type = licence_type
+        if location is not None:
+            self.location = location
+        if name is not None:
+            self.name = name
+        if nic_hot_plug is not None:
+            self.nic_hot_plug = nic_hot_plug
+        if nic_hot_unplug is not None:
+            self.nic_hot_unplug = nic_hot_unplug
+        if ram_hot_plug is not None:
+            self.ram_hot_plug = ram_hot_plug
+        if ram_hot_unplug is not None:
+            self.ram_hot_unplug = ram_hot_unplug
+        if sec_auth_protection is not None:
+            self.sec_auth_protection = sec_auth_protection
+        if size is not None:
+            self.size = size
 
-
-    @property
-    def name(self):
-        """Gets the name of this SnapshotProperties.  # noqa: E501
-
-        The name of the  resource.  # noqa: E501
-
-        :return: The name of this SnapshotProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this SnapshotProperties.
-
-        The name of the  resource.  # noqa: E501
-
-        :param name: The name of this SnapshotProperties.  # noqa: E501
-        :type name: str
-        """
-
-        self._name = name
-
-    @property
-    def description(self):
-        """Gets the description of this SnapshotProperties.  # noqa: E501
-
-        Human-readable description.  # noqa: E501
-
-        :return: The description of this SnapshotProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this SnapshotProperties.
-
-        Human-readable description.  # noqa: E501
-
-        :param description: The description of this SnapshotProperties.  # noqa: E501
-        :type description: str
-        """
-
-        self._description = description
-
-    @property
-    def location(self):
-        """Gets the location of this SnapshotProperties.  # noqa: E501
-
-        Location of that image/snapshot.   # noqa: E501
-
-        :return: The location of this SnapshotProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._location
-
-    @location.setter
-    def location(self, location):
-        """Sets the location of this SnapshotProperties.
-
-        Location of that image/snapshot.   # noqa: E501
-
-        :param location: The location of this SnapshotProperties.  # noqa: E501
-        :type location: str
-        """
-
-        self._location = location
-
-    @property
-    def size(self):
-        """Gets the size of this SnapshotProperties.  # noqa: E501
-
-        The size of the image in GB.  # noqa: E501
-
-        :return: The size of this SnapshotProperties.  # noqa: E501
-        :rtype: float
-        """
-        return self._size
-
-    @size.setter
-    def size(self, size):
-        """Sets the size of this SnapshotProperties.
-
-        The size of the image in GB.  # noqa: E501
-
-        :param size: The size of this SnapshotProperties.  # noqa: E501
-        :type size: float
-        """
-
-        self._size = size
-
-    @property
-    def sec_auth_protection(self):
-        """Gets the sec_auth_protection of this SnapshotProperties.  # noqa: E501
-
-        Boolean value representing if the snapshot requires extra protection, such as two-step verification.  # noqa: E501
-
-        :return: The sec_auth_protection of this SnapshotProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._sec_auth_protection
-
-    @sec_auth_protection.setter
-    def sec_auth_protection(self, sec_auth_protection):
-        """Sets the sec_auth_protection of this SnapshotProperties.
-
-        Boolean value representing if the snapshot requires extra protection, such as two-step verification.  # noqa: E501
-
-        :param sec_auth_protection: The sec_auth_protection of this SnapshotProperties.  # noqa: E501
-        :type sec_auth_protection: bool
-        """
-
-        self._sec_auth_protection = sec_auth_protection
 
     @property
     def cpu_hot_plug(self):
@@ -322,142 +207,27 @@ class SnapshotProperties(object):
         self._cpu_hot_unplug = cpu_hot_unplug
 
     @property
-    def ram_hot_plug(self):
-        """Gets the ram_hot_plug of this SnapshotProperties.  # noqa: E501
+    def description(self):
+        """Gets the description of this SnapshotProperties.  # noqa: E501
 
-        Hot-plug capable RAM (no reboot required).  # noqa: E501
+        Human-readable description.  # noqa: E501
 
-        :return: The ram_hot_plug of this SnapshotProperties.  # noqa: E501
-        :rtype: bool
+        :return: The description of this SnapshotProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._ram_hot_plug
+        return self._description
 
-    @ram_hot_plug.setter
-    def ram_hot_plug(self, ram_hot_plug):
-        """Sets the ram_hot_plug of this SnapshotProperties.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this SnapshotProperties.
 
-        Hot-plug capable RAM (no reboot required).  # noqa: E501
+        Human-readable description.  # noqa: E501
 
-        :param ram_hot_plug: The ram_hot_plug of this SnapshotProperties.  # noqa: E501
-        :type ram_hot_plug: bool
-        """
-
-        self._ram_hot_plug = ram_hot_plug
-
-    @property
-    def ram_hot_unplug(self):
-        """Gets the ram_hot_unplug of this SnapshotProperties.  # noqa: E501
-
-        Hot-unplug capable RAM (no reboot required).  # noqa: E501
-
-        :return: The ram_hot_unplug of this SnapshotProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._ram_hot_unplug
-
-    @ram_hot_unplug.setter
-    def ram_hot_unplug(self, ram_hot_unplug):
-        """Sets the ram_hot_unplug of this SnapshotProperties.
-
-        Hot-unplug capable RAM (no reboot required).  # noqa: E501
-
-        :param ram_hot_unplug: The ram_hot_unplug of this SnapshotProperties.  # noqa: E501
-        :type ram_hot_unplug: bool
+        :param description: The description of this SnapshotProperties.  # noqa: E501
+        :type description: str
         """
 
-        self._ram_hot_unplug = ram_hot_unplug
-
-    @property
-    def nic_hot_plug(self):
-        """Gets the nic_hot_plug of this SnapshotProperties.  # noqa: E501
-
-        Hot-plug capable NIC (no reboot required).  # noqa: E501
-
-        :return: The nic_hot_plug of this SnapshotProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._nic_hot_plug
-
-    @nic_hot_plug.setter
-    def nic_hot_plug(self, nic_hot_plug):
-        """Sets the nic_hot_plug of this SnapshotProperties.
-
-        Hot-plug capable NIC (no reboot required).  # noqa: E501
-
-        :param nic_hot_plug: The nic_hot_plug of this SnapshotProperties.  # noqa: E501
-        :type nic_hot_plug: bool
-        """
-
-        self._nic_hot_plug = nic_hot_plug
-
-    @property
-    def nic_hot_unplug(self):
-        """Gets the nic_hot_unplug of this SnapshotProperties.  # noqa: E501
-
-        Hot-unplug capable NIC (no reboot required).  # noqa: E501
-
-        :return: The nic_hot_unplug of this SnapshotProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._nic_hot_unplug
-
-    @nic_hot_unplug.setter
-    def nic_hot_unplug(self, nic_hot_unplug):
-        """Sets the nic_hot_unplug of this SnapshotProperties.
-
-        Hot-unplug capable NIC (no reboot required).  # noqa: E501
-
-        :param nic_hot_unplug: The nic_hot_unplug of this SnapshotProperties.  # noqa: E501
-        :type nic_hot_unplug: bool
-        """
-
-        self._nic_hot_unplug = nic_hot_unplug
-
-    @property
-    def disc_virtio_hot_plug(self):
-        """Gets the disc_virtio_hot_plug of this SnapshotProperties.  # noqa: E501
-
-        Hot-plug capable Virt-IO drive (no reboot required).  # noqa: E501
-
-        :return: The disc_virtio_hot_plug of this SnapshotProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._disc_virtio_hot_plug
-
-    @disc_virtio_hot_plug.setter
-    def disc_virtio_hot_plug(self, disc_virtio_hot_plug):
-        """Sets the disc_virtio_hot_plug of this SnapshotProperties.
-
-        Hot-plug capable Virt-IO drive (no reboot required).  # noqa: E501
-
-        :param disc_virtio_hot_plug: The disc_virtio_hot_plug of this SnapshotProperties.  # noqa: E501
-        :type disc_virtio_hot_plug: bool
-        """
-
-        self._disc_virtio_hot_plug = disc_virtio_hot_plug
-
-    @property
-    def disc_virtio_hot_unplug(self):
-        """Gets the disc_virtio_hot_unplug of this SnapshotProperties.  # noqa: E501
-
-        Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.  # noqa: E501
-
-        :return: The disc_virtio_hot_unplug of this SnapshotProperties.  # noqa: E501
-        :rtype: bool
-        """
-        return self._disc_virtio_hot_unplug
-
-    @disc_virtio_hot_unplug.setter
-    def disc_virtio_hot_unplug(self, disc_virtio_hot_unplug):
-        """Sets the disc_virtio_hot_unplug of this SnapshotProperties.
-
-        Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.  # noqa: E501
-
-        :param disc_virtio_hot_unplug: The disc_virtio_hot_unplug of this SnapshotProperties.  # noqa: E501
-        :type disc_virtio_hot_unplug: bool
-        """
-
-        self._disc_virtio_hot_unplug = disc_virtio_hot_unplug
+        self._description = description
 
     @property
     def disc_scsi_hot_plug(self):
@@ -506,6 +276,52 @@ class SnapshotProperties(object):
         self._disc_scsi_hot_unplug = disc_scsi_hot_unplug
 
     @property
+    def disc_virtio_hot_plug(self):
+        """Gets the disc_virtio_hot_plug of this SnapshotProperties.  # noqa: E501
+
+        Hot-plug capable Virt-IO drive (no reboot required).  # noqa: E501
+
+        :return: The disc_virtio_hot_plug of this SnapshotProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._disc_virtio_hot_plug
+
+    @disc_virtio_hot_plug.setter
+    def disc_virtio_hot_plug(self, disc_virtio_hot_plug):
+        """Sets the disc_virtio_hot_plug of this SnapshotProperties.
+
+        Hot-plug capable Virt-IO drive (no reboot required).  # noqa: E501
+
+        :param disc_virtio_hot_plug: The disc_virtio_hot_plug of this SnapshotProperties.  # noqa: E501
+        :type disc_virtio_hot_plug: bool
+        """
+
+        self._disc_virtio_hot_plug = disc_virtio_hot_plug
+
+    @property
+    def disc_virtio_hot_unplug(self):
+        """Gets the disc_virtio_hot_unplug of this SnapshotProperties.  # noqa: E501
+
+        Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.  # noqa: E501
+
+        :return: The disc_virtio_hot_unplug of this SnapshotProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._disc_virtio_hot_unplug
+
+    @disc_virtio_hot_unplug.setter
+    def disc_virtio_hot_unplug(self, disc_virtio_hot_unplug):
+        """Sets the disc_virtio_hot_unplug of this SnapshotProperties.
+
+        Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.  # noqa: E501
+
+        :param disc_virtio_hot_unplug: The disc_virtio_hot_unplug of this SnapshotProperties.  # noqa: E501
+        :type disc_virtio_hot_unplug: bool
+        """
+
+        self._disc_virtio_hot_unplug = disc_virtio_hot_unplug
+
+    @property
     def licence_type(self):
         """Gets the licence_type of this SnapshotProperties.  # noqa: E501
 
@@ -525,7 +341,7 @@ class SnapshotProperties(object):
         :param licence_type: The licence_type of this SnapshotProperties.  # noqa: E501
         :type licence_type: str
         """
-        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "WINDOWS2022", "LINUX", "OTHER"]  # noqa: E501
+        allowed_values = ["UNKNOWN", "WINDOWS", "WINDOWS2016", "WINDOWS2022", "RHEL", "LINUX", "OTHER"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and licence_type not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `licence_type` ({0}), must be one of {1}"  # noqa: E501
@@ -533,6 +349,190 @@ class SnapshotProperties(object):
             )
 
         self._licence_type = licence_type
+
+    @property
+    def location(self):
+        """Gets the location of this SnapshotProperties.  # noqa: E501
+
+        Location of that image/snapshot.   # noqa: E501
+
+        :return: The location of this SnapshotProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._location
+
+    @location.setter
+    def location(self, location):
+        """Sets the location of this SnapshotProperties.
+
+        Location of that image/snapshot.   # noqa: E501
+
+        :param location: The location of this SnapshotProperties.  # noqa: E501
+        :type location: str
+        """
+
+        self._location = location
+
+    @property
+    def name(self):
+        """Gets the name of this SnapshotProperties.  # noqa: E501
+
+        The name of the  resource.  # noqa: E501
+
+        :return: The name of this SnapshotProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this SnapshotProperties.
+
+        The name of the  resource.  # noqa: E501
+
+        :param name: The name of this SnapshotProperties.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
+
+    @property
+    def nic_hot_plug(self):
+        """Gets the nic_hot_plug of this SnapshotProperties.  # noqa: E501
+
+        Hot-plug capable NIC (no reboot required).  # noqa: E501
+
+        :return: The nic_hot_plug of this SnapshotProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._nic_hot_plug
+
+    @nic_hot_plug.setter
+    def nic_hot_plug(self, nic_hot_plug):
+        """Sets the nic_hot_plug of this SnapshotProperties.
+
+        Hot-plug capable NIC (no reboot required).  # noqa: E501
+
+        :param nic_hot_plug: The nic_hot_plug of this SnapshotProperties.  # noqa: E501
+        :type nic_hot_plug: bool
+        """
+
+        self._nic_hot_plug = nic_hot_plug
+
+    @property
+    def nic_hot_unplug(self):
+        """Gets the nic_hot_unplug of this SnapshotProperties.  # noqa: E501
+
+        Hot-unplug capable NIC (no reboot required).  # noqa: E501
+
+        :return: The nic_hot_unplug of this SnapshotProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._nic_hot_unplug
+
+    @nic_hot_unplug.setter
+    def nic_hot_unplug(self, nic_hot_unplug):
+        """Sets the nic_hot_unplug of this SnapshotProperties.
+
+        Hot-unplug capable NIC (no reboot required).  # noqa: E501
+
+        :param nic_hot_unplug: The nic_hot_unplug of this SnapshotProperties.  # noqa: E501
+        :type nic_hot_unplug: bool
+        """
+
+        self._nic_hot_unplug = nic_hot_unplug
+
+    @property
+    def ram_hot_plug(self):
+        """Gets the ram_hot_plug of this SnapshotProperties.  # noqa: E501
+
+        Hot-plug capable RAM (no reboot required).  # noqa: E501
+
+        :return: The ram_hot_plug of this SnapshotProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ram_hot_plug
+
+    @ram_hot_plug.setter
+    def ram_hot_plug(self, ram_hot_plug):
+        """Sets the ram_hot_plug of this SnapshotProperties.
+
+        Hot-plug capable RAM (no reboot required).  # noqa: E501
+
+        :param ram_hot_plug: The ram_hot_plug of this SnapshotProperties.  # noqa: E501
+        :type ram_hot_plug: bool
+        """
+
+        self._ram_hot_plug = ram_hot_plug
+
+    @property
+    def ram_hot_unplug(self):
+        """Gets the ram_hot_unplug of this SnapshotProperties.  # noqa: E501
+
+        Hot-unplug capable RAM (no reboot required).  # noqa: E501
+
+        :return: The ram_hot_unplug of this SnapshotProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ram_hot_unplug
+
+    @ram_hot_unplug.setter
+    def ram_hot_unplug(self, ram_hot_unplug):
+        """Sets the ram_hot_unplug of this SnapshotProperties.
+
+        Hot-unplug capable RAM (no reboot required).  # noqa: E501
+
+        :param ram_hot_unplug: The ram_hot_unplug of this SnapshotProperties.  # noqa: E501
+        :type ram_hot_unplug: bool
+        """
+
+        self._ram_hot_unplug = ram_hot_unplug
+
+    @property
+    def sec_auth_protection(self):
+        """Gets the sec_auth_protection of this SnapshotProperties.  # noqa: E501
+
+        Boolean value representing if the snapshot requires extra protection, such as two-step verification.  # noqa: E501
+
+        :return: The sec_auth_protection of this SnapshotProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._sec_auth_protection
+
+    @sec_auth_protection.setter
+    def sec_auth_protection(self, sec_auth_protection):
+        """Sets the sec_auth_protection of this SnapshotProperties.
+
+        Boolean value representing if the snapshot requires extra protection, such as two-step verification.  # noqa: E501
+
+        :param sec_auth_protection: The sec_auth_protection of this SnapshotProperties.  # noqa: E501
+        :type sec_auth_protection: bool
+        """
+
+        self._sec_auth_protection = sec_auth_protection
+
+    @property
+    def size(self):
+        """Gets the size of this SnapshotProperties.  # noqa: E501
+
+        The size of the image in GB.  # noqa: E501
+
+        :return: The size of this SnapshotProperties.  # noqa: E501
+        :rtype: float
+        """
+        return self._size
+
+    @size.setter
+    def size(self, size):
+        """Sets the size of this SnapshotProperties.
+
+        The size of the image in GB.  # noqa: E501
+
+        :param size: The size of this SnapshotProperties.  # noqa: E501
+        :type size: float
+        """
+
+        self._size = size
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

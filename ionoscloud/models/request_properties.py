@@ -34,68 +34,68 @@ class RequestProperties(object):
     """
     openapi_types = {
 
-        'method': 'str',
+        'body': 'str',
 
         'headers': 'dict(str, str)',
 
-        'body': 'str',
+        'method': 'str',
 
         'url': 'str',
     }
 
     attribute_map = {
 
-        'method': 'method',
+        'body': 'body',
 
         'headers': 'headers',
 
-        'body': 'body',
+        'method': 'method',
 
         'url': 'url',
     }
 
-    def __init__(self, method=None, headers=None, body=None, url=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, body=None, headers=None, method=None, url=None, local_vars_configuration=None):  # noqa: E501
         """RequestProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._method = None
-        self._headers = None
         self._body = None
+        self._headers = None
+        self._method = None
         self._url = None
         self.discriminator = None
 
-        if method is not None:
-            self.method = method
-        if headers is not None:
-            self.headers = headers
         if body is not None:
             self.body = body
+        if headers is not None:
+            self.headers = headers
+        if method is not None:
+            self.method = method
         if url is not None:
             self.url = url
 
 
     @property
-    def method(self):
-        """Gets the method of this RequestProperties.  # noqa: E501
+    def body(self):
+        """Gets the body of this RequestProperties.  # noqa: E501
 
 
-        :return: The method of this RequestProperties.  # noqa: E501
+        :return: The body of this RequestProperties.  # noqa: E501
         :rtype: str
         """
-        return self._method
+        return self._body
 
-    @method.setter
-    def method(self, method):
-        """Sets the method of this RequestProperties.
+    @body.setter
+    def body(self, body):
+        """Sets the body of this RequestProperties.
 
 
-        :param method: The method of this RequestProperties.  # noqa: E501
-        :type method: str
+        :param body: The body of this RequestProperties.  # noqa: E501
+        :type body: str
         """
 
-        self._method = method
+        self._body = body
 
     @property
     def headers(self):
@@ -119,25 +119,25 @@ class RequestProperties(object):
         self._headers = headers
 
     @property
-    def body(self):
-        """Gets the body of this RequestProperties.  # noqa: E501
+    def method(self):
+        """Gets the method of this RequestProperties.  # noqa: E501
 
 
-        :return: The body of this RequestProperties.  # noqa: E501
+        :return: The method of this RequestProperties.  # noqa: E501
         :rtype: str
         """
-        return self._body
+        return self._method
 
-    @body.setter
-    def body(self, body):
-        """Sets the body of this RequestProperties.
+    @method.setter
+    def method(self, method):
+        """Sets the method of this RequestProperties.
 
 
-        :param body: The body of this RequestProperties.  # noqa: E501
-        :type body: str
+        :param method: The method of this RequestProperties.  # noqa: E501
+        :type method: str
         """
 
-        self._body = body
+        self._method = method
 
     @property
     def url(self):

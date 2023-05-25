@@ -34,63 +34,40 @@ class TargetGroupHealthCheck(object):
     """
     openapi_types = {
 
-        'check_timeout': 'int',
-
         'check_interval': 'int',
+
+        'check_timeout': 'int',
 
         'retries': 'int',
     }
 
     attribute_map = {
 
-        'check_timeout': 'checkTimeout',
-
         'check_interval': 'checkInterval',
+
+        'check_timeout': 'checkTimeout',
 
         'retries': 'retries',
     }
 
-    def __init__(self, check_timeout=None, check_interval=None, retries=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, check_interval=None, check_timeout=None, retries=None, local_vars_configuration=None):  # noqa: E501
         """TargetGroupHealthCheck - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._check_timeout = None
         self._check_interval = None
+        self._check_timeout = None
         self._retries = None
         self.discriminator = None
 
-        if check_timeout is not None:
-            self.check_timeout = check_timeout
         if check_interval is not None:
             self.check_interval = check_interval
+        if check_timeout is not None:
+            self.check_timeout = check_timeout
         if retries is not None:
             self.retries = retries
 
-
-    @property
-    def check_timeout(self):
-        """Gets the check_timeout of this TargetGroupHealthCheck.  # noqa: E501
-
-        The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a 'Check Interval' set, the smaller of the two values is used once the TCP connection is established.  # noqa: E501
-
-        :return: The check_timeout of this TargetGroupHealthCheck.  # noqa: E501
-        :rtype: int
-        """
-        return self._check_timeout
-
-    @check_timeout.setter
-    def check_timeout(self, check_timeout):
-        """Sets the check_timeout of this TargetGroupHealthCheck.
-
-        The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a 'Check Interval' set, the smaller of the two values is used once the TCP connection is established.  # noqa: E501
-
-        :param check_timeout: The check_timeout of this TargetGroupHealthCheck.  # noqa: E501
-        :type check_timeout: int
-        """
-
-        self._check_timeout = check_timeout
 
     @property
     def check_interval(self):
@@ -114,6 +91,29 @@ class TargetGroupHealthCheck(object):
         """
 
         self._check_interval = check_interval
+
+    @property
+    def check_timeout(self):
+        """Gets the check_timeout of this TargetGroupHealthCheck.  # noqa: E501
+
+        The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a 'Check Interval' set, the smaller of the two values is used once the TCP connection is established.  # noqa: E501
+
+        :return: The check_timeout of this TargetGroupHealthCheck.  # noqa: E501
+        :rtype: int
+        """
+        return self._check_timeout
+
+    @check_timeout.setter
+    def check_timeout(self, check_timeout):
+        """Sets the check_timeout of this TargetGroupHealthCheck.
+
+        The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a 'Check Interval' set, the smaller of the two values is used once the TCP connection is established.  # noqa: E501
+
+        :param check_timeout: The check_timeout of this TargetGroupHealthCheck.  # noqa: E501
+        :type check_timeout: int
+        """
+
+        self._check_timeout = check_timeout
 
     @property
     def retries(self):

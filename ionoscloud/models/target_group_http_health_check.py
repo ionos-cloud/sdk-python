@@ -34,111 +34,59 @@ class TargetGroupHttpHealthCheck(object):
     """
     openapi_types = {
 
-        'path': 'str',
+        'match_type': 'str',
 
         'method': 'str',
 
-        'match_type': 'str',
+        'negate': 'bool',
 
-        'response': 'str',
+        'path': 'str',
 
         'regex': 'bool',
 
-        'negate': 'bool',
+        'response': 'str',
     }
 
     attribute_map = {
 
-        'path': 'path',
+        'match_type': 'matchType',
 
         'method': 'method',
 
-        'match_type': 'matchType',
+        'negate': 'negate',
 
-        'response': 'response',
+        'path': 'path',
 
         'regex': 'regex',
 
-        'negate': 'negate',
+        'response': 'response',
     }
 
-    def __init__(self, path=None, method=None, match_type=None, response=None, regex=None, negate=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, match_type=None, method=None, negate=None, path=None, regex=None, response=None, local_vars_configuration=None):  # noqa: E501
         """TargetGroupHttpHealthCheck - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._path = None
-        self._method = None
         self._match_type = None
-        self._response = None
-        self._regex = None
+        self._method = None
         self._negate = None
+        self._path = None
+        self._regex = None
+        self._response = None
         self.discriminator = None
 
-        if path is not None:
-            self.path = path
+        self.match_type = match_type
         if method is not None:
             self.method = method
-        self.match_type = match_type
-        self.response = response
-        if regex is not None:
-            self.regex = regex
         if negate is not None:
             self.negate = negate
+        if path is not None:
+            self.path = path
+        if regex is not None:
+            self.regex = regex
+        self.response = response
 
-
-    @property
-    def path(self):
-        """Gets the path of this TargetGroupHttpHealthCheck.  # noqa: E501
-
-        The destination URL for HTTP the health check; the default is '/'.  # noqa: E501
-
-        :return: The path of this TargetGroupHttpHealthCheck.  # noqa: E501
-        :rtype: str
-        """
-        return self._path
-
-    @path.setter
-    def path(self, path):
-        """Sets the path of this TargetGroupHttpHealthCheck.
-
-        The destination URL for HTTP the health check; the default is '/'.  # noqa: E501
-
-        :param path: The path of this TargetGroupHttpHealthCheck.  # noqa: E501
-        :type path: str
-        """
-
-        self._path = path
-
-    @property
-    def method(self):
-        """Gets the method of this TargetGroupHttpHealthCheck.  # noqa: E501
-
-        The method used for the health check request.  # noqa: E501
-
-        :return: The method of this TargetGroupHttpHealthCheck.  # noqa: E501
-        :rtype: str
-        """
-        return self._method
-
-    @method.setter
-    def method(self, method):
-        """Sets the method of this TargetGroupHttpHealthCheck.
-
-        The method used for the health check request.  # noqa: E501
-
-        :param method: The method of this TargetGroupHttpHealthCheck.  # noqa: E501
-        :type method: str
-        """
-        allowed_values = ["HEAD", "PUT", "POST", "GET", "TRACE", "PATCH", "OPTIONS"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and method not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `method` ({0}), must be one of {1}"  # noqa: E501
-                .format(method, allowed_values)
-            )
-
-        self._method = method
 
     @property
     def match_type(self):
@@ -172,29 +120,79 @@ class TargetGroupHttpHealthCheck(object):
         self._match_type = match_type
 
     @property
-    def response(self):
-        """Gets the response of this TargetGroupHttpHealthCheck.  # noqa: E501
+    def method(self):
+        """Gets the method of this TargetGroupHttpHealthCheck.  # noqa: E501
 
-        The response returned by the request. It can be a status code or a response body depending on the definition of 'matchType'.  # noqa: E501
+        The method used for the health check request.  # noqa: E501
 
-        :return: The response of this TargetGroupHttpHealthCheck.  # noqa: E501
+        :return: The method of this TargetGroupHttpHealthCheck.  # noqa: E501
         :rtype: str
         """
-        return self._response
+        return self._method
 
-    @response.setter
-    def response(self, response):
-        """Sets the response of this TargetGroupHttpHealthCheck.
+    @method.setter
+    def method(self, method):
+        """Sets the method of this TargetGroupHttpHealthCheck.
 
-        The response returned by the request. It can be a status code or a response body depending on the definition of 'matchType'.  # noqa: E501
+        The method used for the health check request.  # noqa: E501
 
-        :param response: The response of this TargetGroupHttpHealthCheck.  # noqa: E501
-        :type response: str
+        :param method: The method of this TargetGroupHttpHealthCheck.  # noqa: E501
+        :type method: str
         """
-        if self.local_vars_configuration.client_side_validation and response is None:  # noqa: E501
-            raise ValueError("Invalid value for `response`, must not be `None`")  # noqa: E501
+        allowed_values = ["HEAD", "PUT", "POST", "GET", "TRACE", "PATCH", "OPTIONS"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and method not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `method` ({0}), must be one of {1}"  # noqa: E501
+                .format(method, allowed_values)
+            )
 
-        self._response = response
+        self._method = method
+
+    @property
+    def negate(self):
+        """Gets the negate of this TargetGroupHttpHealthCheck.  # noqa: E501
+
+        Specifies whether to negate an individual entry; the default value is 'FALSE'.  # noqa: E501
+
+        :return: The negate of this TargetGroupHttpHealthCheck.  # noqa: E501
+        :rtype: bool
+        """
+        return self._negate
+
+    @negate.setter
+    def negate(self, negate):
+        """Sets the negate of this TargetGroupHttpHealthCheck.
+
+        Specifies whether to negate an individual entry; the default value is 'FALSE'.  # noqa: E501
+
+        :param negate: The negate of this TargetGroupHttpHealthCheck.  # noqa: E501
+        :type negate: bool
+        """
+
+        self._negate = negate
+
+    @property
+    def path(self):
+        """Gets the path of this TargetGroupHttpHealthCheck.  # noqa: E501
+
+        The destination URL for HTTP the health check; the default is '/'.  # noqa: E501
+
+        :return: The path of this TargetGroupHttpHealthCheck.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this TargetGroupHttpHealthCheck.
+
+        The destination URL for HTTP the health check; the default is '/'.  # noqa: E501
+
+        :param path: The path of this TargetGroupHttpHealthCheck.  # noqa: E501
+        :type path: str
+        """
+
+        self._path = path
 
     @property
     def regex(self):
@@ -220,27 +218,29 @@ class TargetGroupHttpHealthCheck(object):
         self._regex = regex
 
     @property
-    def negate(self):
-        """Gets the negate of this TargetGroupHttpHealthCheck.  # noqa: E501
+    def response(self):
+        """Gets the response of this TargetGroupHttpHealthCheck.  # noqa: E501
 
-        Specifies whether to negate an individual entry; the default value is 'FALSE'.  # noqa: E501
+        The response returned by the request. It can be a status code or a response body depending on the definition of 'matchType'.  # noqa: E501
 
-        :return: The negate of this TargetGroupHttpHealthCheck.  # noqa: E501
-        :rtype: bool
+        :return: The response of this TargetGroupHttpHealthCheck.  # noqa: E501
+        :rtype: str
         """
-        return self._negate
+        return self._response
 
-    @negate.setter
-    def negate(self, negate):
-        """Sets the negate of this TargetGroupHttpHealthCheck.
+    @response.setter
+    def response(self, response):
+        """Sets the response of this TargetGroupHttpHealthCheck.
 
-        Specifies whether to negate an individual entry; the default value is 'FALSE'.  # noqa: E501
+        The response returned by the request. It can be a status code or a response body depending on the definition of 'matchType'.  # noqa: E501
 
-        :param negate: The negate of this TargetGroupHttpHealthCheck.  # noqa: E501
-        :type negate: bool
+        :param response: The response of this TargetGroupHttpHealthCheck.  # noqa: E501
+        :type response: str
         """
+        if self.local_vars_configuration.client_side_validation and response is None:  # noqa: E501
+            raise ValueError("Invalid value for `response`, must not be `None`")  # noqa: E501
 
-        self._negate = negate
+        self._response = response
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

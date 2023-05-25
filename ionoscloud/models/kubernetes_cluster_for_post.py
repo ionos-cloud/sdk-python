@@ -34,112 +34,81 @@ class KubernetesClusterForPost(object):
     """
     openapi_types = {
 
-        'id': 'str',
-
-        'type': 'str',
+        'entities': 'KubernetesClusterEntities',
 
         'href': 'str',
+
+        'id': 'str',
 
         'metadata': 'DatacenterElementMetadata',
 
         'properties': 'KubernetesClusterPropertiesForPost',
 
-        'entities': 'KubernetesClusterEntities',
+        'type': 'str',
     }
 
     attribute_map = {
 
-        'id': 'id',
-
-        'type': 'type',
+        'entities': 'entities',
 
         'href': 'href',
+
+        'id': 'id',
 
         'metadata': 'metadata',
 
         'properties': 'properties',
 
-        'entities': 'entities',
+        'type': 'type',
     }
 
-    def __init__(self, id=None, type=None, href=None, metadata=None, properties=None, entities=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, entities=None, href=None, id=None, metadata=None, properties=None, type=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesClusterForPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
-        self._type = None
+        self._entities = None
         self._href = None
+        self._id = None
         self._metadata = None
         self._properties = None
-        self._entities = None
+        self._type = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if type is not None:
-            self.type = type
+        if entities is not None:
+            self.entities = entities
         if href is not None:
             self.href = href
+        if id is not None:
+            self.id = id
         if metadata is not None:
             self.metadata = metadata
         self.properties = properties
-        if entities is not None:
-            self.entities = entities
+        if type is not None:
+            self.type = type
 
 
     @property
-    def id(self):
-        """Gets the id of this KubernetesClusterForPost.  # noqa: E501
+    def entities(self):
+        """Gets the entities of this KubernetesClusterForPost.  # noqa: E501
 
-        The resource unique identifier.  # noqa: E501
 
-        :return: The id of this KubernetesClusterForPost.  # noqa: E501
-        :rtype: str
+        :return: The entities of this KubernetesClusterForPost.  # noqa: E501
+        :rtype: KubernetesClusterEntities
         """
-        return self._id
+        return self._entities
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this KubernetesClusterForPost.
+    @entities.setter
+    def entities(self, entities):
+        """Sets the entities of this KubernetesClusterForPost.
 
-        The resource unique identifier.  # noqa: E501
 
-        :param id: The id of this KubernetesClusterForPost.  # noqa: E501
-        :type id: str
+        :param entities: The entities of this KubernetesClusterForPost.  # noqa: E501
+        :type entities: KubernetesClusterEntities
         """
 
-        self._id = id
-
-    @property
-    def type(self):
-        """Gets the type of this KubernetesClusterForPost.  # noqa: E501
-
-        The object type.  # noqa: E501
-
-        :return: The type of this KubernetesClusterForPost.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this KubernetesClusterForPost.
-
-        The object type.  # noqa: E501
-
-        :param type: The type of this KubernetesClusterForPost.  # noqa: E501
-        :type type: str
-        """
-        allowed_values = ["k8s"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
-                .format(type, allowed_values)
-            )
-
-        self._type = type
+        self._entities = entities
 
     @property
     def href(self):
@@ -163,6 +132,29 @@ class KubernetesClusterForPost(object):
         """
 
         self._href = href
+
+    @property
+    def id(self):
+        """Gets the id of this KubernetesClusterForPost.  # noqa: E501
+
+        The resource unique identifier.  # noqa: E501
+
+        :return: The id of this KubernetesClusterForPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this KubernetesClusterForPost.
+
+        The resource unique identifier.  # noqa: E501
+
+        :param id: The id of this KubernetesClusterForPost.  # noqa: E501
+        :type id: str
+        """
+
+        self._id = id
 
     @property
     def metadata(self):
@@ -209,25 +201,33 @@ class KubernetesClusterForPost(object):
         self._properties = properties
 
     @property
-    def entities(self):
-        """Gets the entities of this KubernetesClusterForPost.  # noqa: E501
+    def type(self):
+        """Gets the type of this KubernetesClusterForPost.  # noqa: E501
 
+        The object type.  # noqa: E501
 
-        :return: The entities of this KubernetesClusterForPost.  # noqa: E501
-        :rtype: KubernetesClusterEntities
+        :return: The type of this KubernetesClusterForPost.  # noqa: E501
+        :rtype: str
         """
-        return self._entities
+        return self._type
 
-    @entities.setter
-    def entities(self, entities):
-        """Sets the entities of this KubernetesClusterForPost.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this KubernetesClusterForPost.
 
+        The object type.  # noqa: E501
 
-        :param entities: The entities of this KubernetesClusterForPost.  # noqa: E501
-        :type entities: KubernetesClusterEntities
+        :param type: The type of this KubernetesClusterForPost.  # noqa: E501
+        :type type: str
         """
+        allowed_values = ["k8s"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
 
-        self._entities = entities
+        self._type = type
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

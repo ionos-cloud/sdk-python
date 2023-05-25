@@ -34,56 +34,33 @@ class TargetPortRange(object):
     """
     openapi_types = {
 
-        'start': 'int',
-
         'end': 'int',
+
+        'start': 'int',
     }
 
     attribute_map = {
 
-        'start': 'start',
-
         'end': 'end',
+
+        'start': 'start',
     }
 
-    def __init__(self, start=None, end=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, end=None, start=None, local_vars_configuration=None):  # noqa: E501
         """TargetPortRange - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._start = None
         self._end = None
+        self._start = None
         self.discriminator = None
 
-        if start is not None:
-            self.start = start
         if end is not None:
             self.end = end
+        if start is not None:
+            self.start = start
 
-
-    @property
-    def start(self):
-        """Gets the start of this TargetPortRange.  # noqa: E501
-
-        Target port range start associated with the NAT Gateway rule.  # noqa: E501
-
-        :return: The start of this TargetPortRange.  # noqa: E501
-        :rtype: int
-        """
-        return self._start
-
-    @start.setter
-    def start(self, start):
-        """Sets the start of this TargetPortRange.
-
-        Target port range start associated with the NAT Gateway rule.  # noqa: E501
-
-        :param start: The start of this TargetPortRange.  # noqa: E501
-        :type start: int
-        """
-
-        self._start = start
 
     @property
     def end(self):
@@ -107,6 +84,29 @@ class TargetPortRange(object):
         """
 
         self._end = end
+
+    @property
+    def start(self):
+        """Gets the start of this TargetPortRange.  # noqa: E501
+
+        Target port range start associated with the NAT Gateway rule.  # noqa: E501
+
+        :return: The start of this TargetPortRange.  # noqa: E501
+        :rtype: int
+        """
+        return self._start
+
+    @start.setter
+    def start(self, start):
+        """Sets the start of this TargetPortRange.
+
+        Target port range start associated with the NAT Gateway rule.  # noqa: E501
+
+        :param start: The start of this TargetPortRange.  # noqa: E501
+        :type start: int
+        """
+
+        self._start = start
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

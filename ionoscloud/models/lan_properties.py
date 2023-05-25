@@ -34,9 +34,9 @@ class LanProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
         'ip_failover': 'list[IPFailover]',
+
+        'name': 'str',
 
         'pcc': 'str',
 
@@ -45,59 +45,36 @@ class LanProperties(object):
 
     attribute_map = {
 
-        'name': 'name',
-
         'ip_failover': 'ipFailover',
+
+        'name': 'name',
 
         'pcc': 'pcc',
 
         'public': 'public',
     }
 
-    def __init__(self, name=None, ip_failover=None, pcc=None, public=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, ip_failover=None, name=None, pcc=None, public=None, local_vars_configuration=None):  # noqa: E501
         """LanProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
         self._ip_failover = None
+        self._name = None
         self._pcc = None
         self._public = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
         if ip_failover is not None:
             self.ip_failover = ip_failover
+        if name is not None:
+            self.name = name
         if pcc is not None:
             self.pcc = pcc
         if public is not None:
             self.public = public
 
-
-    @property
-    def name(self):
-        """Gets the name of this LanProperties.  # noqa: E501
-
-        The name of the  resource.  # noqa: E501
-
-        :return: The name of this LanProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this LanProperties.
-
-        The name of the  resource.  # noqa: E501
-
-        :param name: The name of this LanProperties.  # noqa: E501
-        :type name: str
-        """
-
-        self._name = name
 
     @property
     def ip_failover(self):
@@ -121,6 +98,29 @@ class LanProperties(object):
         """
 
         self._ip_failover = ip_failover
+
+    @property
+    def name(self):
+        """Gets the name of this LanProperties.  # noqa: E501
+
+        The name of the  resource.  # noqa: E501
+
+        :return: The name of this LanProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this LanProperties.
+
+        The name of the  resource.  # noqa: E501
+
+        :param name: The name of this LanProperties.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
 
     @property
     def pcc(self):

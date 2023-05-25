@@ -34,51 +34,74 @@ class TargetGroupTarget(object):
     """
     openapi_types = {
 
+        'health_check_enabled': 'bool',
+
         'ip': 'str',
+
+        'maintenance_enabled': 'bool',
 
         'port': 'int',
 
         'weight': 'int',
-
-        'health_check_enabled': 'bool',
-
-        'maintenance_enabled': 'bool',
     }
 
     attribute_map = {
 
+        'health_check_enabled': 'healthCheckEnabled',
+
         'ip': 'ip',
+
+        'maintenance_enabled': 'maintenanceEnabled',
 
         'port': 'port',
 
         'weight': 'weight',
-
-        'health_check_enabled': 'healthCheckEnabled',
-
-        'maintenance_enabled': 'maintenanceEnabled',
     }
 
-    def __init__(self, ip=None, port=None, weight=None, health_check_enabled=None, maintenance_enabled=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, health_check_enabled=None, ip=None, maintenance_enabled=None, port=None, weight=None, local_vars_configuration=None):  # noqa: E501
         """TargetGroupTarget - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._health_check_enabled = None
         self._ip = None
+        self._maintenance_enabled = None
         self._port = None
         self._weight = None
-        self._health_check_enabled = None
-        self._maintenance_enabled = None
         self.discriminator = None
 
-        self.ip = ip
-        self.port = port
-        self.weight = weight
         if health_check_enabled is not None:
             self.health_check_enabled = health_check_enabled
+        self.ip = ip
         if maintenance_enabled is not None:
             self.maintenance_enabled = maintenance_enabled
+        self.port = port
+        self.weight = weight
 
+
+    @property
+    def health_check_enabled(self):
+        """Gets the health_check_enabled of this TargetGroupTarget.  # noqa: E501
+
+        When the health check is enabled, the target is available only when it accepts regular TCP or HTTP connection attempts for state checking. The state check consists of one connection attempt with the target's address and port. The default value is 'TRUE'.  # noqa: E501
+
+        :return: The health_check_enabled of this TargetGroupTarget.  # noqa: E501
+        :rtype: bool
+        """
+        return self._health_check_enabled
+
+    @health_check_enabled.setter
+    def health_check_enabled(self, health_check_enabled):
+        """Sets the health_check_enabled of this TargetGroupTarget.
+
+        When the health check is enabled, the target is available only when it accepts regular TCP or HTTP connection attempts for state checking. The state check consists of one connection attempt with the target's address and port. The default value is 'TRUE'.  # noqa: E501
+
+        :param health_check_enabled: The health_check_enabled of this TargetGroupTarget.  # noqa: E501
+        :type health_check_enabled: bool
+        """
+
+        self._health_check_enabled = health_check_enabled
 
     @property
     def ip(self):
@@ -104,6 +127,29 @@ class TargetGroupTarget(object):
             raise ValueError("Invalid value for `ip`, must not be `None`")  # noqa: E501
 
         self._ip = ip
+
+    @property
+    def maintenance_enabled(self):
+        """Gets the maintenance_enabled of this TargetGroupTarget.  # noqa: E501
+
+        When the maintenance mode is enabled, the target is prevented from receiving traffic; the default value is 'FALSE'.  # noqa: E501
+
+        :return: The maintenance_enabled of this TargetGroupTarget.  # noqa: E501
+        :rtype: bool
+        """
+        return self._maintenance_enabled
+
+    @maintenance_enabled.setter
+    def maintenance_enabled(self, maintenance_enabled):
+        """Sets the maintenance_enabled of this TargetGroupTarget.
+
+        When the maintenance mode is enabled, the target is prevented from receiving traffic; the default value is 'FALSE'.  # noqa: E501
+
+        :param maintenance_enabled: The maintenance_enabled of this TargetGroupTarget.  # noqa: E501
+        :type maintenance_enabled: bool
+        """
+
+        self._maintenance_enabled = maintenance_enabled
 
     @property
     def port(self):
@@ -154,52 +200,6 @@ class TargetGroupTarget(object):
             raise ValueError("Invalid value for `weight`, must not be `None`")  # noqa: E501
 
         self._weight = weight
-
-    @property
-    def health_check_enabled(self):
-        """Gets the health_check_enabled of this TargetGroupTarget.  # noqa: E501
-
-        When the health check is enabled, the target is available only when it accepts regular TCP or HTTP connection attempts for state checking. The state check consists of one connection attempt with the target's address and port. The default value is 'TRUE'.  # noqa: E501
-
-        :return: The health_check_enabled of this TargetGroupTarget.  # noqa: E501
-        :rtype: bool
-        """
-        return self._health_check_enabled
-
-    @health_check_enabled.setter
-    def health_check_enabled(self, health_check_enabled):
-        """Sets the health_check_enabled of this TargetGroupTarget.
-
-        When the health check is enabled, the target is available only when it accepts regular TCP or HTTP connection attempts for state checking. The state check consists of one connection attempt with the target's address and port. The default value is 'TRUE'.  # noqa: E501
-
-        :param health_check_enabled: The health_check_enabled of this TargetGroupTarget.  # noqa: E501
-        :type health_check_enabled: bool
-        """
-
-        self._health_check_enabled = health_check_enabled
-
-    @property
-    def maintenance_enabled(self):
-        """Gets the maintenance_enabled of this TargetGroupTarget.  # noqa: E501
-
-        When the maintenance mode is enabled, the target is prevented from receiving traffic; the default value is 'FALSE'.  # noqa: E501
-
-        :return: The maintenance_enabled of this TargetGroupTarget.  # noqa: E501
-        :rtype: bool
-        """
-        return self._maintenance_enabled
-
-    @maintenance_enabled.setter
-    def maintenance_enabled(self, maintenance_enabled):
-        """Sets the maintenance_enabled of this TargetGroupTarget.
-
-        When the maintenance mode is enabled, the target is prevented from receiving traffic; the default value is 'FALSE'.  # noqa: E501
-
-        :param maintenance_enabled: The maintenance_enabled of this TargetGroupTarget.  # noqa: E501
-        :type maintenance_enabled: bool
-        """
-
-        self._maintenance_enabled = maintenance_enabled
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

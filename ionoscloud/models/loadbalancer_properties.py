@@ -34,62 +34,62 @@ class LoadbalancerProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
+        'dhcp': 'bool',
 
         'ip': 'str',
 
-        'dhcp': 'bool',
+        'name': 'str',
     }
 
     attribute_map = {
 
-        'name': 'name',
+        'dhcp': 'dhcp',
 
         'ip': 'ip',
 
-        'dhcp': 'dhcp',
+        'name': 'name',
     }
 
-    def __init__(self, name=None, ip=None, dhcp=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, dhcp=None, ip=None, name=None, local_vars_configuration=None):  # noqa: E501
         """LoadbalancerProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._ip = None
         self._dhcp = None
+        self._ip = None
+        self._name = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        self.ip = ip
         if dhcp is not None:
             self.dhcp = dhcp
+        self.ip = ip
+        if name is not None:
+            self.name = name
 
 
     @property
-    def name(self):
-        """Gets the name of this LoadbalancerProperties.  # noqa: E501
+    def dhcp(self):
+        """Gets the dhcp of this LoadbalancerProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        Indicates if the loadbalancer will reserve an IP using DHCP.  # noqa: E501
 
-        :return: The name of this LoadbalancerProperties.  # noqa: E501
-        :rtype: str
+        :return: The dhcp of this LoadbalancerProperties.  # noqa: E501
+        :rtype: bool
         """
-        return self._name
+        return self._dhcp
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this LoadbalancerProperties.
+    @dhcp.setter
+    def dhcp(self, dhcp):
+        """Sets the dhcp of this LoadbalancerProperties.
 
-        The name of the  resource.  # noqa: E501
+        Indicates if the loadbalancer will reserve an IP using DHCP.  # noqa: E501
 
-        :param name: The name of this LoadbalancerProperties.  # noqa: E501
-        :type name: str
+        :param dhcp: The dhcp of this LoadbalancerProperties.  # noqa: E501
+        :type dhcp: bool
         """
 
-        self._name = name
+        self._dhcp = dhcp
 
     @property
     def ip(self):
@@ -115,27 +115,27 @@ class LoadbalancerProperties(object):
         self._ip = ip
 
     @property
-    def dhcp(self):
-        """Gets the dhcp of this LoadbalancerProperties.  # noqa: E501
+    def name(self):
+        """Gets the name of this LoadbalancerProperties.  # noqa: E501
 
-        Indicates if the loadbalancer will reserve an IP using DHCP.  # noqa: E501
+        The name of the  resource.  # noqa: E501
 
-        :return: The dhcp of this LoadbalancerProperties.  # noqa: E501
-        :rtype: bool
+        :return: The name of this LoadbalancerProperties.  # noqa: E501
+        :rtype: str
         """
-        return self._dhcp
+        return self._name
 
-    @dhcp.setter
-    def dhcp(self, dhcp):
-        """Sets the dhcp of this LoadbalancerProperties.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this LoadbalancerProperties.
 
-        Indicates if the loadbalancer will reserve an IP using DHCP.  # noqa: E501
+        The name of the  resource.  # noqa: E501
 
-        :param dhcp: The dhcp of this LoadbalancerProperties.  # noqa: E501
-        :type dhcp: bool
+        :param name: The name of this LoadbalancerProperties.  # noqa: E501
+        :type name: str
         """
 
-        self._dhcp = dhcp
+        self._name = name
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

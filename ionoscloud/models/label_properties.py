@@ -36,51 +36,51 @@ class LabelProperties(object):
 
         'key': 'str',
 
-        'value': 'str',
+        'resource_href': 'str',
 
         'resource_id': 'str',
 
         'resource_type': 'str',
 
-        'resource_href': 'str',
+        'value': 'str',
     }
 
     attribute_map = {
 
         'key': 'key',
 
-        'value': 'value',
+        'resource_href': 'resourceHref',
 
         'resource_id': 'resourceId',
 
         'resource_type': 'resourceType',
 
-        'resource_href': 'resourceHref',
+        'value': 'value',
     }
 
-    def __init__(self, key=None, value=None, resource_id=None, resource_type=None, resource_href=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, key=None, resource_href=None, resource_id=None, resource_type=None, value=None, local_vars_configuration=None):  # noqa: E501
         """LabelProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._key = None
-        self._value = None
+        self._resource_href = None
         self._resource_id = None
         self._resource_type = None
-        self._resource_href = None
+        self._value = None
         self.discriminator = None
 
         if key is not None:
             self.key = key
-        if value is not None:
-            self.value = value
+        if resource_href is not None:
+            self.resource_href = resource_href
         if resource_id is not None:
             self.resource_id = resource_id
         if resource_type is not None:
             self.resource_type = resource_type
-        if resource_href is not None:
-            self.resource_href = resource_href
+        if value is not None:
+            self.value = value
 
 
     @property
@@ -107,27 +107,27 @@ class LabelProperties(object):
         self._key = key
 
     @property
-    def value(self):
-        """Gets the value of this LabelProperties.  # noqa: E501
+    def resource_href(self):
+        """Gets the resource_href of this LabelProperties.  # noqa: E501
 
-        A label value  # noqa: E501
+        URL to the Resource (absolute path) on which the label is applied.  # noqa: E501
 
-        :return: The value of this LabelProperties.  # noqa: E501
+        :return: The resource_href of this LabelProperties.  # noqa: E501
         :rtype: str
         """
-        return self._value
+        return self._resource_href
 
-    @value.setter
-    def value(self, value):
-        """Sets the value of this LabelProperties.
+    @resource_href.setter
+    def resource_href(self, resource_href):
+        """Sets the resource_href of this LabelProperties.
 
-        A label value  # noqa: E501
+        URL to the Resource (absolute path) on which the label is applied.  # noqa: E501
 
-        :param value: The value of this LabelProperties.  # noqa: E501
-        :type value: str
+        :param resource_href: The resource_href of this LabelProperties.  # noqa: E501
+        :type resource_href: str
         """
 
-        self._value = value
+        self._resource_href = resource_href
 
     @property
     def resource_id(self):
@@ -176,27 +176,27 @@ class LabelProperties(object):
         self._resource_type = resource_type
 
     @property
-    def resource_href(self):
-        """Gets the resource_href of this LabelProperties.  # noqa: E501
+    def value(self):
+        """Gets the value of this LabelProperties.  # noqa: E501
 
-        URL to the Resource (absolute path) on which the label is applied.  # noqa: E501
+        A label value  # noqa: E501
 
-        :return: The resource_href of this LabelProperties.  # noqa: E501
+        :return: The value of this LabelProperties.  # noqa: E501
         :rtype: str
         """
-        return self._resource_href
+        return self._value
 
-    @resource_href.setter
-    def resource_href(self, resource_href):
-        """Sets the resource_href of this LabelProperties.
+    @value.setter
+    def value(self, value):
+        """Sets the value of this LabelProperties.
 
-        URL to the Resource (absolute path) on which the label is applied.  # noqa: E501
+        A label value  # noqa: E501
 
-        :param resource_href: The resource_href of this LabelProperties.  # noqa: E501
-        :type resource_href: str
+        :param value: The value of this LabelProperties.  # noqa: E501
+        :type value: str
         """
 
-        self._resource_href = resource_href
+        self._value = value
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

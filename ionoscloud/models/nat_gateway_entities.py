@@ -34,54 +34,33 @@ class NatGatewayEntities(object):
     """
     openapi_types = {
 
-        'rules': 'NatGatewayRules',
-
         'flowlogs': 'FlowLogs',
+
+        'rules': 'NatGatewayRules',
     }
 
     attribute_map = {
 
-        'rules': 'rules',
-
         'flowlogs': 'flowlogs',
+
+        'rules': 'rules',
     }
 
-    def __init__(self, rules=None, flowlogs=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, flowlogs=None, rules=None, local_vars_configuration=None):  # noqa: E501
         """NatGatewayEntities - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._rules = None
         self._flowlogs = None
+        self._rules = None
         self.discriminator = None
 
-        if rules is not None:
-            self.rules = rules
         if flowlogs is not None:
             self.flowlogs = flowlogs
+        if rules is not None:
+            self.rules = rules
 
-
-    @property
-    def rules(self):
-        """Gets the rules of this NatGatewayEntities.  # noqa: E501
-
-
-        :return: The rules of this NatGatewayEntities.  # noqa: E501
-        :rtype: NatGatewayRules
-        """
-        return self._rules
-
-    @rules.setter
-    def rules(self, rules):
-        """Sets the rules of this NatGatewayEntities.
-
-
-        :param rules: The rules of this NatGatewayEntities.  # noqa: E501
-        :type rules: NatGatewayRules
-        """
-
-        self._rules = rules
 
     @property
     def flowlogs(self):
@@ -103,6 +82,27 @@ class NatGatewayEntities(object):
         """
 
         self._flowlogs = flowlogs
+
+    @property
+    def rules(self):
+        """Gets the rules of this NatGatewayEntities.  # noqa: E501
+
+
+        :return: The rules of this NatGatewayEntities.  # noqa: E501
+        :rtype: NatGatewayRules
+        """
+        return self._rules
+
+    @rules.setter
+    def rules(self, rules):
+        """Sets the rules of this NatGatewayEntities.
+
+
+        :param rules: The rules of this NatGatewayEntities.  # noqa: E501
+        :type rules: NatGatewayRules
+        """
+
+        self._rules = rules
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

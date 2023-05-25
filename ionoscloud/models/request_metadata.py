@@ -34,9 +34,9 @@ class RequestMetadata(object):
     """
     openapi_types = {
 
-        'created_date': 'datetime',
-
         'created_by': 'str',
+
+        'created_date': 'datetime',
 
         'etag': 'str',
 
@@ -45,59 +45,36 @@ class RequestMetadata(object):
 
     attribute_map = {
 
-        'created_date': 'createdDate',
-
         'created_by': 'createdBy',
+
+        'created_date': 'createdDate',
 
         'etag': 'etag',
 
         'request_status': 'requestStatus',
     }
 
-    def __init__(self, created_date=None, created_by=None, etag=None, request_status=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, created_by=None, created_date=None, etag=None, request_status=None, local_vars_configuration=None):  # noqa: E501
         """RequestMetadata - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._created_date = None
         self._created_by = None
+        self._created_date = None
         self._etag = None
         self._request_status = None
         self.discriminator = None
 
-        if created_date is not None:
-            self.created_date = created_date
         if created_by is not None:
             self.created_by = created_by
+        if created_date is not None:
+            self.created_date = created_date
         if etag is not None:
             self.etag = etag
         if request_status is not None:
             self.request_status = request_status
 
-
-    @property
-    def created_date(self):
-        """Gets the created_date of this RequestMetadata.  # noqa: E501
-
-        The last time the resource was created.  # noqa: E501
-
-        :return: The created_date of this RequestMetadata.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._created_date
-
-    @created_date.setter
-    def created_date(self, created_date):
-        """Sets the created_date of this RequestMetadata.
-
-        The last time the resource was created.  # noqa: E501
-
-        :param created_date: The created_date of this RequestMetadata.  # noqa: E501
-        :type created_date: datetime
-        """
-
-        self._created_date = created_date
 
     @property
     def created_by(self):
@@ -121,6 +98,29 @@ class RequestMetadata(object):
         """
 
         self._created_by = created_by
+
+    @property
+    def created_date(self):
+        """Gets the created_date of this RequestMetadata.  # noqa: E501
+
+        The last time the resource was created.  # noqa: E501
+
+        :return: The created_date of this RequestMetadata.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_date
+
+    @created_date.setter
+    def created_date(self, created_date):
+        """Sets the created_date of this RequestMetadata.
+
+        The last time the resource was created.  # noqa: E501
+
+        :param created_date: The created_date of this RequestMetadata.  # noqa: E501
+        :type created_date: datetime
+        """
+
+        self._created_date = created_date
 
     @property
     def etag(self):

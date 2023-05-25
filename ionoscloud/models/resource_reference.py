@@ -34,39 +34,62 @@ class ResourceReference(object):
     """
     openapi_types = {
 
+        'href': 'str',
+
         'id': 'str',
 
         'type': 'Type',
-
-        'href': 'str',
     }
 
     attribute_map = {
 
+        'href': 'href',
+
         'id': 'id',
 
         'type': 'type',
-
-        'href': 'href',
     }
 
-    def __init__(self, id=None, type=None, href=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, href=None, id=None, type=None, local_vars_configuration=None):  # noqa: E501
         """ResourceReference - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._href = None
         self._id = None
         self._type = None
-        self._href = None
         self.discriminator = None
 
+        if href is not None:
+            self.href = href
         self.id = id
         if type is not None:
             self.type = type
-        if href is not None:
-            self.href = href
 
+
+    @property
+    def href(self):
+        """Gets the href of this ResourceReference.  # noqa: E501
+
+        URL to the object representation (absolute path).  # noqa: E501
+
+        :return: The href of this ResourceReference.  # noqa: E501
+        :rtype: str
+        """
+        return self._href
+
+    @href.setter
+    def href(self, href):
+        """Sets the href of this ResourceReference.
+
+        URL to the object representation (absolute path).  # noqa: E501
+
+        :param href: The href of this ResourceReference.  # noqa: E501
+        :type href: str
+        """
+
+        self._href = href
 
     @property
     def id(self):
@@ -115,29 +138,6 @@ class ResourceReference(object):
         """
 
         self._type = type
-
-    @property
-    def href(self):
-        """Gets the href of this ResourceReference.  # noqa: E501
-
-        URL to the object representation (absolute path).  # noqa: E501
-
-        :return: The href of this ResourceReference.  # noqa: E501
-        :rtype: str
-        """
-        return self._href
-
-    @href.setter
-    def href(self, href):
-        """Sets the href of this ResourceReference.
-
-        URL to the object representation (absolute path).  # noqa: E501
-
-        :param href: The href of this ResourceReference.  # noqa: E501
-        :type href: str
-        """
-
-        self._href = href
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

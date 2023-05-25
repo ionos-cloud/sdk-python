@@ -34,83 +34,58 @@ class TargetGroupProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
         'algorithm': 'str',
-
-        'protocol': 'str',
-
-        'targets': 'list[TargetGroupTarget]',
 
         'health_check': 'TargetGroupHealthCheck',
 
         'http_health_check': 'TargetGroupHttpHealthCheck',
+
+        'name': 'str',
+
+        'protocol': 'str',
+
+        'targets': 'list[TargetGroupTarget]',
     }
 
     attribute_map = {
 
-        'name': 'name',
-
         'algorithm': 'algorithm',
-
-        'protocol': 'protocol',
-
-        'targets': 'targets',
 
         'health_check': 'healthCheck',
 
         'http_health_check': 'httpHealthCheck',
+
+        'name': 'name',
+
+        'protocol': 'protocol',
+
+        'targets': 'targets',
     }
 
-    def __init__(self, name=None, algorithm=None, protocol=None, targets=None, health_check=None, http_health_check=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, algorithm=None, health_check=None, http_health_check=None, name=None, protocol=None, targets=None, local_vars_configuration=None):  # noqa: E501
         """TargetGroupProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
         self._algorithm = None
-        self._protocol = None
-        self._targets = None
         self._health_check = None
         self._http_health_check = None
+        self._name = None
+        self._protocol = None
+        self._targets = None
         self.discriminator = None
 
-        self.name = name
         self.algorithm = algorithm
-        self.protocol = protocol
-        if targets is not None:
-            self.targets = targets
         if health_check is not None:
             self.health_check = health_check
         if http_health_check is not None:
             self.http_health_check = http_health_check
+        self.name = name
+        self.protocol = protocol
+        if targets is not None:
+            self.targets = targets
 
-
-    @property
-    def name(self):
-        """Gets the name of this TargetGroupProperties.  # noqa: E501
-
-        The target group name.  # noqa: E501
-
-        :return: The name of this TargetGroupProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this TargetGroupProperties.
-
-        The target group name.  # noqa: E501
-
-        :param name: The name of this TargetGroupProperties.  # noqa: E501
-        :type name: str
-        """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
 
     @property
     def algorithm(self):
@@ -142,6 +117,73 @@ class TargetGroupProperties(object):
             )
 
         self._algorithm = algorithm
+
+    @property
+    def health_check(self):
+        """Gets the health_check of this TargetGroupProperties.  # noqa: E501
+
+
+        :return: The health_check of this TargetGroupProperties.  # noqa: E501
+        :rtype: TargetGroupHealthCheck
+        """
+        return self._health_check
+
+    @health_check.setter
+    def health_check(self, health_check):
+        """Sets the health_check of this TargetGroupProperties.
+
+
+        :param health_check: The health_check of this TargetGroupProperties.  # noqa: E501
+        :type health_check: TargetGroupHealthCheck
+        """
+
+        self._health_check = health_check
+
+    @property
+    def http_health_check(self):
+        """Gets the http_health_check of this TargetGroupProperties.  # noqa: E501
+
+
+        :return: The http_health_check of this TargetGroupProperties.  # noqa: E501
+        :rtype: TargetGroupHttpHealthCheck
+        """
+        return self._http_health_check
+
+    @http_health_check.setter
+    def http_health_check(self, http_health_check):
+        """Sets the http_health_check of this TargetGroupProperties.
+
+
+        :param http_health_check: The http_health_check of this TargetGroupProperties.  # noqa: E501
+        :type http_health_check: TargetGroupHttpHealthCheck
+        """
+
+        self._http_health_check = http_health_check
+
+    @property
+    def name(self):
+        """Gets the name of this TargetGroupProperties.  # noqa: E501
+
+        The target group name.  # noqa: E501
+
+        :return: The name of this TargetGroupProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this TargetGroupProperties.
+
+        The target group name.  # noqa: E501
+
+        :param name: The name of this TargetGroupProperties.  # noqa: E501
+        :type name: str
+        """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     @property
     def protocol(self):
@@ -196,48 +238,6 @@ class TargetGroupProperties(object):
         """
 
         self._targets = targets
-
-    @property
-    def health_check(self):
-        """Gets the health_check of this TargetGroupProperties.  # noqa: E501
-
-
-        :return: The health_check of this TargetGroupProperties.  # noqa: E501
-        :rtype: TargetGroupHealthCheck
-        """
-        return self._health_check
-
-    @health_check.setter
-    def health_check(self, health_check):
-        """Sets the health_check of this TargetGroupProperties.
-
-
-        :param health_check: The health_check of this TargetGroupProperties.  # noqa: E501
-        :type health_check: TargetGroupHealthCheck
-        """
-
-        self._health_check = health_check
-
-    @property
-    def http_health_check(self):
-        """Gets the http_health_check of this TargetGroupProperties.  # noqa: E501
-
-
-        :return: The http_health_check of this TargetGroupProperties.  # noqa: E501
-        :rtype: TargetGroupHttpHealthCheck
-        """
-        return self._http_health_check
-
-    @http_health_check.setter
-    def http_health_check(self, http_health_check):
-        """Sets the http_health_check of this TargetGroupProperties.
-
-
-        :param http_health_check: The http_health_check of this TargetGroupProperties.  # noqa: E501
-        :type http_health_check: TargetGroupHttpHealthCheck
-        """
-
-        self._http_health_check = http_health_check
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

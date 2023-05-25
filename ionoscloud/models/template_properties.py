@@ -34,9 +34,9 @@ class TemplateProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
         'cores': 'float',
+
+        'name': 'str',
 
         'ram': 'float',
 
@@ -45,57 +45,32 @@ class TemplateProperties(object):
 
     attribute_map = {
 
-        'name': 'name',
-
         'cores': 'cores',
+
+        'name': 'name',
 
         'ram': 'ram',
 
         'storage_size': 'storageSize',
     }
 
-    def __init__(self, name=None, cores=None, ram=None, storage_size=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cores=None, name=None, ram=None, storage_size=None, local_vars_configuration=None):  # noqa: E501
         """TemplateProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
         self._cores = None
+        self._name = None
         self._ram = None
         self._storage_size = None
         self.discriminator = None
 
-        self.name = name
         self.cores = cores
+        self.name = name
         self.ram = ram
         self.storage_size = storage_size
 
-
-    @property
-    def name(self):
-        """Gets the name of this TemplateProperties.  # noqa: E501
-
-        The resource name.  # noqa: E501
-
-        :return: The name of this TemplateProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this TemplateProperties.
-
-        The resource name.  # noqa: E501
-
-        :param name: The name of this TemplateProperties.  # noqa: E501
-        :type name: str
-        """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
 
     @property
     def cores(self):
@@ -121,6 +96,31 @@ class TemplateProperties(object):
             raise ValueError("Invalid value for `cores`, must not be `None`")  # noqa: E501
 
         self._cores = cores
+
+    @property
+    def name(self):
+        """Gets the name of this TemplateProperties.  # noqa: E501
+
+        The resource name.  # noqa: E501
+
+        :return: The name of this TemplateProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this TemplateProperties.
+
+        The resource name.  # noqa: E501
+
+        :param name: The name of this TemplateProperties.  # noqa: E501
+        :type name: str
+        """
+        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     @property
     def ram(self):

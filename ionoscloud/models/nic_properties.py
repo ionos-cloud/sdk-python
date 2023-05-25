@@ -34,149 +34,103 @@ class NicProperties(object):
     """
     openapi_types = {
 
-        'name': 'str',
-
-        'mac': 'str',
-
-        'ips': 'list[str]',
+        'device_number': 'int',
 
         'dhcp': 'bool',
-
-        'lan': 'int',
 
         'firewall_active': 'bool',
 
         'firewall_type': 'str',
 
-        'device_number': 'int',
+        'ips': 'list[str]',
+
+        'lan': 'int',
+
+        'mac': 'str',
+
+        'name': 'str',
 
         'pci_slot': 'int',
     }
 
     attribute_map = {
 
-        'name': 'name',
-
-        'mac': 'mac',
-
-        'ips': 'ips',
+        'device_number': 'deviceNumber',
 
         'dhcp': 'dhcp',
-
-        'lan': 'lan',
 
         'firewall_active': 'firewallActive',
 
         'firewall_type': 'firewallType',
 
-        'device_number': 'deviceNumber',
+        'ips': 'ips',
+
+        'lan': 'lan',
+
+        'mac': 'mac',
+
+        'name': 'name',
 
         'pci_slot': 'pciSlot',
     }
 
-    def __init__(self, name=None, mac=None, ips=None, dhcp=True, lan=None, firewall_active=None, firewall_type=None, device_number=None, pci_slot=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, device_number=None, dhcp=True, firewall_active=None, firewall_type=None, ips=None, lan=None, mac=None, name=None, pci_slot=None, local_vars_configuration=None):  # noqa: E501
         """NicProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
-        self._mac = None
-        self._ips = None
+        self._device_number = None
         self._dhcp = None
-        self._lan = None
         self._firewall_active = None
         self._firewall_type = None
-        self._device_number = None
+        self._ips = None
+        self._lan = None
+        self._mac = None
+        self._name = None
         self._pci_slot = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
-        if mac is not None:
-            self.mac = mac
-        self.ips = ips
+        if device_number is not None:
+            self.device_number = device_number
         if dhcp is not None:
             self.dhcp = dhcp
-        self.lan = lan
         if firewall_active is not None:
             self.firewall_active = firewall_active
         if firewall_type is not None:
             self.firewall_type = firewall_type
-        if device_number is not None:
-            self.device_number = device_number
+        self.ips = ips
+        self.lan = lan
+        if mac is not None:
+            self.mac = mac
+        if name is not None:
+            self.name = name
         if pci_slot is not None:
             self.pci_slot = pci_slot
 
 
     @property
-    def name(self):
-        """Gets the name of this NicProperties.  # noqa: E501
+    def device_number(self):
+        """Gets the device_number of this NicProperties.  # noqa: E501
 
-        The name of the  resource.  # noqa: E501
+        The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.  # noqa: E501
 
-        :return: The name of this NicProperties.  # noqa: E501
-        :rtype: str
+        :return: The device_number of this NicProperties.  # noqa: E501
+        :rtype: int
         """
-        return self._name
+        return self._device_number
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this NicProperties.
+    @device_number.setter
+    def device_number(self, device_number):
+        """Sets the device_number of this NicProperties.
 
-        The name of the  resource.  # noqa: E501
+        The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.  # noqa: E501
 
-        :param name: The name of this NicProperties.  # noqa: E501
-        :type name: str
-        """
-
-        self._name = name
-
-    @property
-    def mac(self):
-        """Gets the mac of this NicProperties.  # noqa: E501
-
-        The MAC address of the NIC.  # noqa: E501
-
-        :return: The mac of this NicProperties.  # noqa: E501
-        :rtype: str
-        """
-        return self._mac
-
-    @mac.setter
-    def mac(self, mac):
-        """Sets the mac of this NicProperties.
-
-        The MAC address of the NIC.  # noqa: E501
-
-        :param mac: The mac of this NicProperties.  # noqa: E501
-        :type mac: str
+        :param device_number: The device_number of this NicProperties.  # noqa: E501
+        :type device_number: int
         """
 
-        self._mac = mac
-
-    @property
-    def ips(self):
-        """Gets the ips of this NicProperties.  # noqa: E501
-
-        Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.  # noqa: E501
-
-        :return: The ips of this NicProperties.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._ips
-
-    @ips.setter
-    def ips(self, ips):
-        """Sets the ips of this NicProperties.
-
-        Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.  # noqa: E501
-
-        :param ips: The ips of this NicProperties.  # noqa: E501
-        :type ips: list[str]
-        """
-
-        self._ips = ips
+        self._device_number = device_number
 
     @property
     def dhcp(self):
@@ -200,31 +154,6 @@ class NicProperties(object):
         """
 
         self._dhcp = dhcp
-
-    @property
-    def lan(self):
-        """Gets the lan of this NicProperties.  # noqa: E501
-
-        The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.  # noqa: E501
-
-        :return: The lan of this NicProperties.  # noqa: E501
-        :rtype: int
-        """
-        return self._lan
-
-    @lan.setter
-    def lan(self, lan):
-        """Sets the lan of this NicProperties.
-
-        The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.  # noqa: E501
-
-        :param lan: The lan of this NicProperties.  # noqa: E501
-        :type lan: int
-        """
-        if self.local_vars_configuration.client_side_validation and lan is None:  # noqa: E501
-            raise ValueError("Invalid value for `lan`, must not be `None`")  # noqa: E501
-
-        self._lan = lan
 
     @property
     def firewall_active(self):
@@ -279,27 +208,98 @@ class NicProperties(object):
         self._firewall_type = firewall_type
 
     @property
-    def device_number(self):
-        """Gets the device_number of this NicProperties.  # noqa: E501
+    def ips(self):
+        """Gets the ips of this NicProperties.  # noqa: E501
 
-        The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.  # noqa: E501
+        Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.  # noqa: E501
 
-        :return: The device_number of this NicProperties.  # noqa: E501
+        :return: The ips of this NicProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._ips
+
+    @ips.setter
+    def ips(self, ips):
+        """Sets the ips of this NicProperties.
+
+        Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.  # noqa: E501
+
+        :param ips: The ips of this NicProperties.  # noqa: E501
+        :type ips: list[str]
+        """
+
+        self._ips = ips
+
+    @property
+    def lan(self):
+        """Gets the lan of this NicProperties.  # noqa: E501
+
+        The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.  # noqa: E501
+
+        :return: The lan of this NicProperties.  # noqa: E501
         :rtype: int
         """
-        return self._device_number
+        return self._lan
 
-    @device_number.setter
-    def device_number(self, device_number):
-        """Sets the device_number of this NicProperties.
+    @lan.setter
+    def lan(self, lan):
+        """Sets the lan of this NicProperties.
 
-        The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.  # noqa: E501
+        The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.  # noqa: E501
 
-        :param device_number: The device_number of this NicProperties.  # noqa: E501
-        :type device_number: int
+        :param lan: The lan of this NicProperties.  # noqa: E501
+        :type lan: int
+        """
+        if self.local_vars_configuration.client_side_validation and lan is None:  # noqa: E501
+            raise ValueError("Invalid value for `lan`, must not be `None`")  # noqa: E501
+
+        self._lan = lan
+
+    @property
+    def mac(self):
+        """Gets the mac of this NicProperties.  # noqa: E501
+
+        The MAC address of the NIC.  # noqa: E501
+
+        :return: The mac of this NicProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._mac
+
+    @mac.setter
+    def mac(self, mac):
+        """Sets the mac of this NicProperties.
+
+        The MAC address of the NIC.  # noqa: E501
+
+        :param mac: The mac of this NicProperties.  # noqa: E501
+        :type mac: str
         """
 
-        self._device_number = device_number
+        self._mac = mac
+
+    @property
+    def name(self):
+        """Gets the name of this NicProperties.  # noqa: E501
+
+        The name of the  resource.  # noqa: E501
+
+        :return: The name of this NicProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this NicProperties.
+
+        The name of the  resource.  # noqa: E501
+
+        :param name: The name of this NicProperties.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
 
     @property
     def pci_slot(self):

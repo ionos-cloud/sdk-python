@@ -34,63 +34,40 @@ class UserMetadata(object):
     """
     openapi_types = {
 
-        'etag': 'str',
-
         'created_date': 'datetime',
+
+        'etag': 'str',
 
         'last_login': 'datetime',
     }
 
     attribute_map = {
 
-        'etag': 'etag',
-
         'created_date': 'createdDate',
+
+        'etag': 'etag',
 
         'last_login': 'lastLogin',
     }
 
-    def __init__(self, etag=None, created_date=None, last_login=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, created_date=None, etag=None, last_login=None, local_vars_configuration=None):  # noqa: E501
         """UserMetadata - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._etag = None
         self._created_date = None
+        self._etag = None
         self._last_login = None
         self.discriminator = None
 
-        if etag is not None:
-            self.etag = etag
         if created_date is not None:
             self.created_date = created_date
+        if etag is not None:
+            self.etag = etag
         if last_login is not None:
             self.last_login = last_login
 
-
-    @property
-    def etag(self):
-        """Gets the etag of this UserMetadata.  # noqa: E501
-
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
-
-        :return: The etag of this UserMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._etag
-
-    @etag.setter
-    def etag(self, etag):
-        """Sets the etag of this UserMetadata.
-
-        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
-
-        :param etag: The etag of this UserMetadata.  # noqa: E501
-        :type etag: str
-        """
-
-        self._etag = etag
 
     @property
     def created_date(self):
@@ -114,6 +91,29 @@ class UserMetadata(object):
         """
 
         self._created_date = created_date
+
+    @property
+    def etag(self):
+        """Gets the etag of this UserMetadata.  # noqa: E501
+
+        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+
+        :return: The etag of this UserMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._etag
+
+    @etag.setter
+    def etag(self, etag):
+        """Sets the etag of this UserMetadata.
+
+        Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter.   # noqa: E501
+
+        :param etag: The etag of this UserMetadata.  # noqa: E501
+        :type etag: str
+        """
+
+        self._etag = etag
 
     @property
     def last_login(self):

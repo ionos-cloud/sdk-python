@@ -34,96 +34,54 @@ class Peer(object):
     """
     openapi_types = {
 
-        'id': 'str',
-
-        'name': 'str',
-
         'datacenter_id': 'str',
 
         'datacenter_name': 'str',
 
+        'id': 'str',
+
         'location': 'str',
+
+        'name': 'str',
     }
 
     attribute_map = {
-
-        'id': 'id',
-
-        'name': 'name',
 
         'datacenter_id': 'datacenterId',
 
         'datacenter_name': 'datacenterName',
 
+        'id': 'id',
+
         'location': 'location',
+
+        'name': 'name',
     }
 
-    def __init__(self, id=None, name=None, datacenter_id=None, datacenter_name=None, location=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, datacenter_id=None, datacenter_name=None, id=None, location=None, name=None, local_vars_configuration=None):  # noqa: E501
         """Peer - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._id = None
-        self._name = None
         self._datacenter_id = None
         self._datacenter_name = None
+        self._id = None
         self._location = None
+        self._name = None
         self.discriminator = None
 
-        if id is not None:
-            self.id = id
-        if name is not None:
-            self.name = name
         if datacenter_id is not None:
             self.datacenter_id = datacenter_id
         if datacenter_name is not None:
             self.datacenter_name = datacenter_name
+        if id is not None:
+            self.id = id
         if location is not None:
             self.location = location
+        if name is not None:
+            self.name = name
 
-
-    @property
-    def id(self):
-        """Gets the id of this Peer.  # noqa: E501
-
-
-        :return: The id of this Peer.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Peer.
-
-
-        :param id: The id of this Peer.  # noqa: E501
-        :type id: str
-        """
-
-        self._id = id
-
-    @property
-    def name(self):
-        """Gets the name of this Peer.  # noqa: E501
-
-
-        :return: The name of this Peer.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this Peer.
-
-
-        :param name: The name of this Peer.  # noqa: E501
-        :type name: str
-        """
-
-        self._name = name
 
     @property
     def datacenter_id(self):
@@ -168,6 +126,27 @@ class Peer(object):
         self._datacenter_name = datacenter_name
 
     @property
+    def id(self):
+        """Gets the id of this Peer.  # noqa: E501
+
+
+        :return: The id of this Peer.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Peer.
+
+
+        :param id: The id of this Peer.  # noqa: E501
+        :type id: str
+        """
+
+        self._id = id
+
+    @property
     def location(self):
         """Gets the location of this Peer.  # noqa: E501
 
@@ -187,6 +166,27 @@ class Peer(object):
         """
 
         self._location = location
+
+    @property
+    def name(self):
+        """Gets the name of this Peer.  # noqa: E501
+
+
+        :return: The name of this Peer.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Peer.
+
+
+        :param name: The name of this Peer.  # noqa: E501
+        :type name: str
+        """
+
+        self._name = name
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}
