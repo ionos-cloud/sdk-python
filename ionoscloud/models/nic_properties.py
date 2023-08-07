@@ -38,11 +38,17 @@ class NicProperties(object):
 
         'dhcp': 'bool',
 
+        'dhcpv6': 'bool',
+
         'firewall_active': 'bool',
 
         'firewall_type': 'str',
 
         'ips': 'list[str]',
+
+        'ipv6_cidr_block': 'str',
+
+        'ipv6_ips': 'list[str]',
 
         'lan': 'int',
 
@@ -59,11 +65,17 @@ class NicProperties(object):
 
         'dhcp': 'dhcp',
 
+        'dhcpv6': 'dhcpv6',
+
         'firewall_active': 'firewallActive',
 
         'firewall_type': 'firewallType',
 
         'ips': 'ips',
+
+        'ipv6_cidr_block': 'ipv6CidrBlock',
+
+        'ipv6_ips': 'ipv6Ips',
 
         'lan': 'lan',
 
@@ -74,7 +86,7 @@ class NicProperties(object):
         'pci_slot': 'pciSlot',
     }
 
-    def __init__(self, device_number=None, dhcp=True, firewall_active=None, firewall_type=None, ips=None, lan=None, mac=None, name=None, pci_slot=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, device_number=None, dhcp=True, dhcpv6=None, firewall_active=None, firewall_type=None, ips=None, ipv6_cidr_block=None, ipv6_ips=None, lan=None, mac=None, name=None, pci_slot=None, local_vars_configuration=None):  # noqa: E501
         """NicProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -82,9 +94,12 @@ class NicProperties(object):
 
         self._device_number = None
         self._dhcp = None
+        self._dhcpv6 = None
         self._firewall_active = None
         self._firewall_type = None
         self._ips = None
+        self._ipv6_cidr_block = None
+        self._ipv6_ips = None
         self._lan = None
         self._mac = None
         self._name = None
@@ -95,11 +110,14 @@ class NicProperties(object):
             self.device_number = device_number
         if dhcp is not None:
             self.dhcp = dhcp
+        self.dhcpv6 = dhcpv6
         if firewall_active is not None:
             self.firewall_active = firewall_active
         if firewall_type is not None:
             self.firewall_type = firewall_type
         self.ips = ips
+        self.ipv6_cidr_block = ipv6_cidr_block
+        self.ipv6_ips = ipv6_ips
         self.lan = lan
         if mac is not None:
             self.mac = mac
@@ -154,6 +172,29 @@ class NicProperties(object):
         """
 
         self._dhcp = dhcp
+
+    @property
+    def dhcpv6(self):
+        """Gets the dhcpv6 of this NicProperties.  # noqa: E501
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] Indicates if the NIC will receive an IPv6 using DHCP. It can be set to 'true' or 'false' only if this NIC is connected to an IPv6 enabled LAN.  # noqa: E501
+
+        :return: The dhcpv6 of this NicProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._dhcpv6
+
+    @dhcpv6.setter
+    def dhcpv6(self, dhcpv6):
+        """Sets the dhcpv6 of this NicProperties.
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] Indicates if the NIC will receive an IPv6 using DHCP. It can be set to 'true' or 'false' only if this NIC is connected to an IPv6 enabled LAN.  # noqa: E501
+
+        :param dhcpv6: The dhcpv6 of this NicProperties.  # noqa: E501
+        :type dhcpv6: bool
+        """
+
+        self._dhcpv6 = dhcpv6
 
     @property
     def firewall_active(self):
@@ -229,6 +270,52 @@ class NicProperties(object):
         """
 
         self._ips = ips
+
+    @property
+    def ipv6_cidr_block(self):
+        """Gets the ipv6_cidr_block of this NicProperties.  # noqa: E501
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property 'null' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.  # noqa: E501
+
+        :return: The ipv6_cidr_block of this NicProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._ipv6_cidr_block
+
+    @ipv6_cidr_block.setter
+    def ipv6_cidr_block(self, ipv6_cidr_block):
+        """Sets the ipv6_cidr_block of this NicProperties.
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property 'null' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.  # noqa: E501
+
+        :param ipv6_cidr_block: The ipv6_cidr_block of this NicProperties.  # noqa: E501
+        :type ipv6_cidr_block: str
+        """
+
+        self._ipv6_cidr_block = ipv6_cidr_block
+
+    @property
+    def ipv6_ips(self):
+        """Gets the ipv6_ips of this NicProperties.  # noqa: E501
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property 'null' when adding a NIC, when changing the NIC's IPv6 CIDR block, when changing the LAN's IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property 'null' while not changing the CIDR block, the IPv6 IP addresses won't be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.  # noqa: E501
+
+        :return: The ipv6_ips of this NicProperties.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._ipv6_ips
+
+    @ipv6_ips.setter
+    def ipv6_ips(self, ipv6_ips):
+        """Sets the ipv6_ips of this NicProperties.
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property 'null' when adding a NIC, when changing the NIC's IPv6 CIDR block, when changing the LAN's IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property 'null' while not changing the CIDR block, the IPv6 IP addresses won't be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.  # noqa: E501
+
+        :param ipv6_ips: The ipv6_ips of this NicProperties.  # noqa: E501
+        :type ipv6_ips: list[str]
+        """
+
+        self._ipv6_ips = ipv6_ips
 
     @property
     def lan(self):

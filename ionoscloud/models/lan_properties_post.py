@@ -36,6 +36,8 @@ class LanPropertiesPost(object):
 
         'ip_failover': 'list[IPFailover]',
 
+        'ipv6_cidr_block': 'str',
+
         'name': 'str',
 
         'pcc': 'str',
@@ -47,6 +49,8 @@ class LanPropertiesPost(object):
 
         'ip_failover': 'ipFailover',
 
+        'ipv6_cidr_block': 'ipv6CidrBlock',
+
         'name': 'name',
 
         'pcc': 'pcc',
@@ -54,13 +58,14 @@ class LanPropertiesPost(object):
         'public': 'public',
     }
 
-    def __init__(self, ip_failover=None, name=None, pcc=None, public=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, ip_failover=None, ipv6_cidr_block=None, name=None, pcc=None, public=None, local_vars_configuration=None):  # noqa: E501
         """LanPropertiesPost - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._ip_failover = None
+        self._ipv6_cidr_block = None
         self._name = None
         self._pcc = None
         self._public = None
@@ -68,6 +73,7 @@ class LanPropertiesPost(object):
 
         if ip_failover is not None:
             self.ip_failover = ip_failover
+        self.ipv6_cidr_block = ipv6_cidr_block
         if name is not None:
             self.name = name
         if pcc is not None:
@@ -98,6 +104,29 @@ class LanPropertiesPost(object):
         """
 
         self._ip_failover = ip_failover
+
+    @property
+    def ipv6_cidr_block(self):
+        """Gets the ipv6_cidr_block of this LanPropertiesPost.  # noqa: E501
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] For a GET request, this value is either 'null' or contains the LAN's /64 IPv6 CIDR block if this LAN is IPv6-enabled. For POST/PUT/PATCH requests, 'AUTO' will result in enabling this LAN for IPv6 and automatically assign a /64 IPv6 CIDR block to this LAN. If you choose the IPv6 CIDR block on your own, then you must provide a /64 block, which is inside the IPv6 CIDR block of the virtual datacenter and unique inside all LANs from this virtual datacenter. If you enable IPv6 on a LAN with NICs, those NICs will get a /80 IPv6 CIDR block and one IPv6 address assigned to each automatically, unless you specify them explicitly on the NICs. A virtual data center is limited to a maximum of 256 IPv6-enabled LANs.  # noqa: E501
+
+        :return: The ipv6_cidr_block of this LanPropertiesPost.  # noqa: E501
+        :rtype: str
+        """
+        return self._ipv6_cidr_block
+
+    @ipv6_cidr_block.setter
+    def ipv6_cidr_block(self, ipv6_cidr_block):
+        """Sets the ipv6_cidr_block of this LanPropertiesPost.
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] For a GET request, this value is either 'null' or contains the LAN's /64 IPv6 CIDR block if this LAN is IPv6-enabled. For POST/PUT/PATCH requests, 'AUTO' will result in enabling this LAN for IPv6 and automatically assign a /64 IPv6 CIDR block to this LAN. If you choose the IPv6 CIDR block on your own, then you must provide a /64 block, which is inside the IPv6 CIDR block of the virtual datacenter and unique inside all LANs from this virtual datacenter. If you enable IPv6 on a LAN with NICs, those NICs will get a /80 IPv6 CIDR block and one IPv6 address assigned to each automatically, unless you specify them explicitly on the NICs. A virtual data center is limited to a maximum of 256 IPv6-enabled LANs.  # noqa: E501
+
+        :param ipv6_cidr_block: The ipv6_cidr_block of this LanPropertiesPost.  # noqa: E501
+        :type ipv6_cidr_block: str
+        """
+
+        self._ipv6_cidr_block = ipv6_cidr_block
 
     @property
     def name(self):

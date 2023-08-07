@@ -40,6 +40,8 @@ class DatacenterProperties(object):
 
         'features': 'list[str]',
 
+        'ipv6_cidr_block': 'str',
+
         'location': 'str',
 
         'name': 'str',
@@ -57,6 +59,8 @@ class DatacenterProperties(object):
 
         'features': 'features',
 
+        'ipv6_cidr_block': 'ipv6CidrBlock',
+
         'location': 'location',
 
         'name': 'name',
@@ -66,7 +70,7 @@ class DatacenterProperties(object):
         'version': 'version',
     }
 
-    def __init__(self, cpu_architecture=None, description=None, features=None, location=None, name=None, sec_auth_protection=None, version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, cpu_architecture=None, description=None, features=None, ipv6_cidr_block=None, location=None, name=None, sec_auth_protection=None, version=None, local_vars_configuration=None):  # noqa: E501
         """DatacenterProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -75,6 +79,7 @@ class DatacenterProperties(object):
         self._cpu_architecture = None
         self._description = None
         self._features = None
+        self._ipv6_cidr_block = None
         self._location = None
         self._name = None
         self._sec_auth_protection = None
@@ -87,6 +92,7 @@ class DatacenterProperties(object):
             self.description = description
         if features is not None:
             self.features = features
+        self.ipv6_cidr_block = ipv6_cidr_block
         self.location = location
         if name is not None:
             self.name = name
@@ -164,6 +170,29 @@ class DatacenterProperties(object):
         """
 
         self._features = features
+
+    @property
+    def ipv6_cidr_block(self):
+        """Gets the ipv6_cidr_block of this DatacenterProperties.  # noqa: E501
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.  # noqa: E501
+
+        :return: The ipv6_cidr_block of this DatacenterProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._ipv6_cidr_block
+
+    @ipv6_cidr_block.setter
+    def ipv6_cidr_block(self, ipv6_cidr_block):
+        """Sets the ipv6_cidr_block of this DatacenterProperties.
+
+        [The IPv6 feature is in beta phase and not ready for production usage.] This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.  # noqa: E501
+
+        :param ipv6_cidr_block: The ipv6_cidr_block of this DatacenterProperties.  # noqa: E501
+        :type ipv6_cidr_block: str
+        """
+
+        self._ipv6_cidr_block = ipv6_cidr_block
 
     @property
     def location(self):

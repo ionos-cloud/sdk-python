@@ -113,7 +113,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'ionos-cloud-sdk-python/6.1.6'
+        self.user_agent = 'ionos-cloud-sdk-python/6.1.7'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
@@ -860,10 +860,13 @@ class ApiClient(object):
 
             current_time = time.time()
             if timeout and current_time > timeout:
-                raise ApiTimeout(
-                    message='Timed out waiting for request {0}.'.format(resp['requestId']),
-                    request_id=resp['requestId']
-                )
+                if type(resp) == dict and resp.get('requestId'):
+                    raise ApiTimeout(
+                        message='Timed out waiting for request {0}.'.format(resp['requestId']),
+                        request_id=resp['requestId'],
+                    )
+                else:
+                    raise ApiTimeout(message='Timeout reached')
 
             if current_time > next_increase:
                 wait_period *= 2

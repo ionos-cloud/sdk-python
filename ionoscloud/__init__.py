@@ -14,7 +14,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "6.1.6"
+__version__ = "6.1.7"
 
 # import apis into sdk package
 from ionoscloud.api.application_load_balancers_api import ApplicationLoadBalancersApi
