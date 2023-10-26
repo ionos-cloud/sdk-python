@@ -89,6 +89,15 @@ You can use http proxies by setting the following environment variables:
 - `IONOS_HTTP_PROXY` - proxy URL
 - `IONOS_HTTP_PROXY_HEADERS` - proxy headers
 
+Each line in `IONOS_HTTP_PROXY_HEADERS` represents one header, where the header name and value is separated by a colon. Newline characters within a value need to be escaped. See this example:
+```
+Connection: Keep-Alive
+User-Info: MyID
+User-Group: my long\nheader value
+```
+
+
+
 ### Depth
 
 Many of the _List_ or _Get_ operations will accept an optional _depth_ argument. Setting this to a value between 0 and 5 affects the amount of data that is returned. The details returned vary depending on the resource being queried, but it generally follows this pattern. By default, the SDK sets the _depth_ argument to the maximum value.
