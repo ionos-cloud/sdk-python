@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## 6.1.8
+### Features:
+Added support for **Private Kubernetes Clusters**:
+- New parameters on `KubernetesClusterProperties` and `KubernetesClusterPropertiesForPost`: `location`, `nat_gateway_ip`, `node_subnet` and `public`
+
+### Fixes:
+- Fixed wrong parsing of `IONOS_HTTP_PROXY_HEADERS`.
+
+## 6.1.7
+### Features:
+Added support for **IPv6**:
+
+- New parameter on `DatacenterProperties`: `ipv6_cidr_block`
+- New parameter on `LanProperties` and `LanPropertiesPost`: `ipv6_cidr_block`
+- New parameters on `NicProperties`: `dhcpv6`, `ipv6_cidr_block` and `ipv6_ips`
+
+More details about IPv6 configuration can be found [here](https://docs.ionos.com/cloud/compute-engine/networks/ipv6).
+
+### Fixes:
+- Fixed wrong error being shown when timeout is reached inside `wait_for`.
+
+## 6.1.6
+## Features:
+- New licenceType supported: **RHEL**
+
 
 ## 6.1.4 \(July 14th, 2022\)
 ### Fixes:
