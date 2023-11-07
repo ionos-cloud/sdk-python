@@ -40,9 +40,17 @@ class KubernetesClusterProperties(object):
 
         'k8s_version': 'str',
 
+        'location': 'str',
+
         'maintenance_window': 'KubernetesMaintenanceWindow',
 
         'name': 'str',
+
+        'nat_gateway_ip': 'str',
+
+        'node_subnet': 'str',
+
+        'public': 'bool',
 
         's3_buckets': 'list[S3Bucket]',
 
@@ -57,16 +65,24 @@ class KubernetesClusterProperties(object):
 
         'k8s_version': 'k8sVersion',
 
+        'location': 'location',
+
         'maintenance_window': 'maintenanceWindow',
 
         'name': 'name',
+
+        'nat_gateway_ip': 'natGatewayIp',
+
+        'node_subnet': 'nodeSubnet',
+
+        'public': 'public',
 
         's3_buckets': 's3Buckets',
 
         'viable_node_pool_versions': 'viableNodePoolVersions',
     }
 
-    def __init__(self, api_subnet_allow_list=None, available_upgrade_versions=None, k8s_version=None, maintenance_window=None, name=None, s3_buckets=None, viable_node_pool_versions=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, api_subnet_allow_list=None, available_upgrade_versions=None, k8s_version=None, location=None, maintenance_window=None, name=None, nat_gateway_ip=None, node_subnet=None, public=True, s3_buckets=None, viable_node_pool_versions=None, local_vars_configuration=None):  # noqa: E501
         """KubernetesClusterProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -75,8 +91,12 @@ class KubernetesClusterProperties(object):
         self._api_subnet_allow_list = None
         self._available_upgrade_versions = None
         self._k8s_version = None
+        self._location = None
         self._maintenance_window = None
         self._name = None
+        self._nat_gateway_ip = None
+        self._node_subnet = None
+        self._public = None
         self._s3_buckets = None
         self._viable_node_pool_versions = None
         self.discriminator = None
@@ -87,9 +107,17 @@ class KubernetesClusterProperties(object):
             self.available_upgrade_versions = available_upgrade_versions
         if k8s_version is not None:
             self.k8s_version = k8s_version
+        if location is not None:
+            self.location = location
         if maintenance_window is not None:
             self.maintenance_window = maintenance_window
         self.name = name
+        if nat_gateway_ip is not None:
+            self.nat_gateway_ip = nat_gateway_ip
+        if node_subnet is not None:
+            self.node_subnet = node_subnet
+        if public is not None:
+            self.public = public
         if s3_buckets is not None:
             self.s3_buckets = s3_buckets
         if viable_node_pool_versions is not None:
@@ -166,6 +194,29 @@ class KubernetesClusterProperties(object):
         self._k8s_version = k8s_version
 
     @property
+    def location(self):
+        """Gets the location of this KubernetesClusterProperties.  # noqa: E501
+
+        The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.  # noqa: E501
+
+        :return: The location of this KubernetesClusterProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._location
+
+    @location.setter
+    def location(self, location):
+        """Sets the location of this KubernetesClusterProperties.
+
+        The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.  # noqa: E501
+
+        :param location: The location of this KubernetesClusterProperties.  # noqa: E501
+        :type location: str
+        """
+
+        self._location = location
+
+    @property
     def maintenance_window(self):
         """Gets the maintenance_window of this KubernetesClusterProperties.  # noqa: E501
 
@@ -210,6 +261,75 @@ class KubernetesClusterProperties(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def nat_gateway_ip(self):
+        """Gets the nat_gateway_ip of this KubernetesClusterProperties.  # noqa: E501
+
+        The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster's location. This attribute is mandatory if the cluster is private.  # noqa: E501
+
+        :return: The nat_gateway_ip of this KubernetesClusterProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._nat_gateway_ip
+
+    @nat_gateway_ip.setter
+    def nat_gateway_ip(self, nat_gateway_ip):
+        """Sets the nat_gateway_ip of this KubernetesClusterProperties.
+
+        The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster's location. This attribute is mandatory if the cluster is private.  # noqa: E501
+
+        :param nat_gateway_ip: The nat_gateway_ip of this KubernetesClusterProperties.  # noqa: E501
+        :type nat_gateway_ip: str
+        """
+
+        self._nat_gateway_ip = nat_gateway_ip
+
+    @property
+    def node_subnet(self):
+        """Gets the node_subnet of this KubernetesClusterProperties.  # noqa: E501
+
+        The node subnet of the cluster, if the cluster is private. This property is optional and immutable. Must be a valid CIDR notation for an IPv4 network prefix of 16 bits length.  # noqa: E501
+
+        :return: The node_subnet of this KubernetesClusterProperties.  # noqa: E501
+        :rtype: str
+        """
+        return self._node_subnet
+
+    @node_subnet.setter
+    def node_subnet(self, node_subnet):
+        """Sets the node_subnet of this KubernetesClusterProperties.
+
+        The node subnet of the cluster, if the cluster is private. This property is optional and immutable. Must be a valid CIDR notation for an IPv4 network prefix of 16 bits length.  # noqa: E501
+
+        :param node_subnet: The node_subnet of this KubernetesClusterProperties.  # noqa: E501
+        :type node_subnet: str
+        """
+
+        self._node_subnet = node_subnet
+
+    @property
+    def public(self):
+        """Gets the public of this KubernetesClusterProperties.  # noqa: E501
+
+        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
+
+        :return: The public of this KubernetesClusterProperties.  # noqa: E501
+        :rtype: bool
+        """
+        return self._public
+
+    @public.setter
+    def public(self, public):
+        """Sets the public of this KubernetesClusterProperties.
+
+        The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.  # noqa: E501
+
+        :param public: The public of this KubernetesClusterProperties.  # noqa: E501
+        :type public: bool
+        """
+
+        self._public = public
 
     @property
     def s3_buckets(self):
