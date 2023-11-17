@@ -6,7 +6,7 @@ Added support for **Private Kubernetes Clusters**:
 - New parameters on `KubernetesClusterProperties` and `KubernetesClusterPropertiesForPost`: `location`, `nat_gateway_ip`, `node_subnet` and `public`
 
 ### Fixes:
-- Fixed wrong parsing of `IONOS_HTTP_PROXY_HEADERS`.
+- Fixed wrong parsing of `IONOS_HTTP_PROXY_HEADERS` by @hegerdes
 
 ## 6.1.7
 ### Features:
