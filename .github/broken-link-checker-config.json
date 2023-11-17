@@ -1,0 +1,7 @@
+{
+  "ignorePatterns": [
+	{
+	  "pattern": "^https://api.ionos.com/cloudapi/v6"
+	}
+  ]
+}
