@@ -113,7 +113,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'ionos-cloud-sdk-python/6.1.8'
+        self.user_agent = 'ionos-cloud-sdk-python/6.1.9'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
@@ -253,7 +253,7 @@ class ApiClient(object):
                         backoff_time = config.max_wait_time
 
                     if config.debug:
-                        logger.debug('HTTP response body ~BEGIN~\n#{}\n~END~\n'.format(response.body))
+                        logger.debug('HTTP response body ~BEGIN~\n#{}\n~END~\n'.format(response_error.body))
 
                     time.sleep(backoff_time)
                 except ProtocolError as protocol_error:

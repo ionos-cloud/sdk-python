@@ -175,7 +175,7 @@ class DatacenterProperties(object):
     def ipv6_cidr_block(self):
         """Gets the ipv6_cidr_block of this DatacenterProperties.  # noqa: E501
 
-        [The IPv6 feature is in beta phase and not ready for production usage.] This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.  # noqa: E501
+        This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.  # noqa: E501
 
         :return: The ipv6_cidr_block of this DatacenterProperties.  # noqa: E501
         :rtype: str
@@ -186,7 +186,7 @@ class DatacenterProperties(object):
     def ipv6_cidr_block(self, ipv6_cidr_block):
         """Sets the ipv6_cidr_block of this DatacenterProperties.
 
-        [The IPv6 feature is in beta phase and not ready for production usage.] This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.  # noqa: E501
+        This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.  # noqa: E501
 
         :param ipv6_cidr_block: The ipv6_cidr_block of this DatacenterProperties.  # noqa: E501
         :type ipv6_cidr_block: str

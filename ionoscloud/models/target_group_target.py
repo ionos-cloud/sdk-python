@@ -43,6 +43,8 @@ class TargetGroupTarget(object):
         'port': 'int',
 
         'weight': 'int',
+
+        'proxy_protocol': 'str',
     }
 
     attribute_map = {
@@ -56,9 +58,11 @@ class TargetGroupTarget(object):
         'port': 'port',
 
         'weight': 'weight',
+
+        'proxy_protocol': 'proxyProtocol',
     }
 
-    def __init__(self, health_check_enabled=None, ip=None, maintenance_enabled=None, port=None, weight=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, health_check_enabled=None, ip=None, maintenance_enabled=None, port=None, weight=None, proxy_protocol='none', local_vars_configuration=None):  # noqa: E501
         """TargetGroupTarget - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,6 +73,7 @@ class TargetGroupTarget(object):
         self._maintenance_enabled = None
         self._port = None
         self._weight = None
+        self._proxy_protocol = None
         self.discriminator = None
 
         if health_check_enabled is not None:
@@ -78,6 +83,8 @@ class TargetGroupTarget(object):
             self.maintenance_enabled = maintenance_enabled
         self.port = port
         self.weight = weight
+        if proxy_protocol is not None:
+            self.proxy_protocol = proxy_protocol
 
 
     @property
@@ -200,6 +207,35 @@ class TargetGroupTarget(object):
             raise ValueError("Invalid value for `weight`, must not be `None`")  # noqa: E501
 
         self._weight = weight
+
+    @property
+    def proxy_protocol(self):
+        """Gets the proxy_protocol of this TargetGroupTarget.  # noqa: E501
+
+        ProxyProtocol is used to set the proxy protocol version.  # noqa: E501
+
+        :return: The proxy_protocol of this TargetGroupTarget.  # noqa: E501
+        :rtype: str
+        """
+        return self._proxy_protocol
+
+    @proxy_protocol.setter
+    def proxy_protocol(self, proxy_protocol):
+        """Sets the proxy_protocol of this TargetGroupTarget.
+
+        ProxyProtocol is used to set the proxy protocol version.  # noqa: E501
+
+        :param proxy_protocol: The proxy_protocol of this TargetGroupTarget.  # noqa: E501
+        :type proxy_protocol: str
+        """
+        allowed_values = ["none", "v1", "v2", "v2ssl"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and proxy_protocol not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `proxy_protocol` ({0}), must be one of {1}"  # noqa: E501
+                .format(proxy_protocol, allowed_values)
+            )
+
+        self._proxy_protocol = proxy_protocol
     def to_dict(self):
         """Returns the model properties as a dict"""
         result = {}

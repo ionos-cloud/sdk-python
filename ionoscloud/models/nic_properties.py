@@ -177,7 +177,7 @@ class NicProperties(object):
     def dhcpv6(self):
         """Gets the dhcpv6 of this NicProperties.  # noqa: E501
 
-        [The IPv6 feature is in beta phase and not ready for production usage.] Indicates if the NIC will receive an IPv6 using DHCP. It can be set to 'true' or 'false' only if this NIC is connected to an IPv6 enabled LAN.  # noqa: E501
+        Indicates if the NIC will receive an IPv6 using DHCP. It can be set to 'true' or 'false' only if this NIC is connected to an IPv6 enabled LAN.  # noqa: E501
 
         :return: The dhcpv6 of this NicProperties.  # noqa: E501
         :rtype: bool
@@ -188,7 +188,7 @@ class NicProperties(object):
     def dhcpv6(self, dhcpv6):
         """Sets the dhcpv6 of this NicProperties.
 
-        [The IPv6 feature is in beta phase and not ready for production usage.] Indicates if the NIC will receive an IPv6 using DHCP. It can be set to 'true' or 'false' only if this NIC is connected to an IPv6 enabled LAN.  # noqa: E501
+        Indicates if the NIC will receive an IPv6 using DHCP. It can be set to 'true' or 'false' only if this NIC is connected to an IPv6 enabled LAN.  # noqa: E501
 
         :param dhcpv6: The dhcpv6 of this NicProperties.  # noqa: E501
         :type dhcpv6: bool
@@ -275,7 +275,7 @@ class NicProperties(object):
     def ipv6_cidr_block(self):
         """Gets the ipv6_cidr_block of this NicProperties.  # noqa: E501
 
-        [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property 'null' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.  # noqa: E501
+        If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property 'null' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.  # noqa: E501
 
         :return: The ipv6_cidr_block of this NicProperties.  # noqa: E501
         :rtype: str
@@ -286,7 +286,7 @@ class NicProperties(object):
     def ipv6_cidr_block(self, ipv6_cidr_block):
         """Sets the ipv6_cidr_block of this NicProperties.
 
-        [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property 'null' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.  # noqa: E501
+        If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property 'null' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.  # noqa: E501
 
         :param ipv6_cidr_block: The ipv6_cidr_block of this NicProperties.  # noqa: E501
         :type ipv6_cidr_block: str
@@ -298,7 +298,7 @@ class NicProperties(object):
     def ipv6_ips(self):
         """Gets the ipv6_ips of this NicProperties.  # noqa: E501
 
-        [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property 'null' when adding a NIC, when changing the NIC's IPv6 CIDR block, when changing the LAN's IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property 'null' while not changing the CIDR block, the IPv6 IP addresses won't be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.  # noqa: E501
+        If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property 'null' when adding a NIC, when changing the NIC's IPv6 CIDR block, when changing the LAN's IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property 'null' while not changing the CIDR block, the IPv6 IP addresses won't be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.  # noqa: E501
 
         :return: The ipv6_ips of this NicProperties.  # noqa: E501
         :rtype: list[str]
@@ -309,7 +309,7 @@ class NicProperties(object):
     def ipv6_ips(self, ipv6_ips):
         """Sets the ipv6_ips of this NicProperties.
 
-        [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property 'null' when adding a NIC, when changing the NIC's IPv6 CIDR block, when changing the LAN's IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property 'null' while not changing the CIDR block, the IPv6 IP addresses won't be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.  # noqa: E501
+        If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property 'null' when adding a NIC, when changing the NIC's IPv6 CIDR block, when changing the LAN's IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property 'null' while not changing the CIDR block, the IPv6 IP addresses won't be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.  # noqa: E501
 
         :param ipv6_ips: The ipv6_ips of this NicProperties.  # noqa: E501
         :type ipv6_ips: list[str]
