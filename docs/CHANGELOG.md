@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 6.1.9
+### Features:
+- Added `proxy_protocol` property to `NetworkLoadBalancerForwardingRuleTarget`, `NetworkLoadBalancerForwardingRuleTarget` and `TargetGroupTarget`
+
 ## 6.1.8
 ### Features:
 Added support for **Private Kubernetes Clusters**:
