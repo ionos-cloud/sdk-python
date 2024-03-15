@@ -19,7 +19,6 @@ Retrieves the available locations in a region specified by its ID. The 'regionId
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -77,7 +76,6 @@ Retrieves the information about the location specified by its ID. The 'locationI
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -137,7 +135,6 @@ Retrieves the available physical locations where you can deploy cloud resources 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

@@ -21,7 +21,6 @@ Remove the specified private Cross-Connect (only if not connected to any data ce
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -78,7 +77,6 @@ Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -136,7 +134,6 @@ List all private Cross-Connects for your account.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -192,7 +189,6 @@ Update the properties of the specified private Cross-Connect.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -252,7 +248,6 @@ Creates a private Cross-Connect.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

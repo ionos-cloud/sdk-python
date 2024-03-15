@@ -17,7 +17,6 @@ Retrieves the properties of the user's contract. This operation allows you to ob
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

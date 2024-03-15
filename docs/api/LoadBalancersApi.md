@@ -26,7 +26,6 @@ Detach the specified NIC from the Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -87,7 +86,6 @@ Retrieve the properties of the specified NIC, attached to the Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -149,7 +147,6 @@ List all NICs, attached to the specified Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -209,7 +206,6 @@ Attachs an existing NIC to the specified Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -271,7 +267,6 @@ Remove the specified Load Balancer from the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -330,7 +325,6 @@ Retrieve the properties of the specified Load Balancer within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -390,7 +384,6 @@ List all the Load Balancers within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -450,7 +443,6 @@ Update the properties of the specified Load Balancer within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -512,7 +504,6 @@ Creates a Load Balancer within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -572,7 +563,6 @@ Modifies the properties of the specified Load Balancer within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

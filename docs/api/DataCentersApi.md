@@ -22,7 +22,6 @@ Delete the specified data center and all the elements it contains. This method i
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -79,7 +78,6 @@ Retrieve data centers by resource ID. This value is in the response body when th
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -137,7 +135,6 @@ List the data centers for your account. Default limit is the first 100 items; us
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -195,7 +192,6 @@ Updates the properties of the specified data center, rename it, or change the de
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -255,7 +251,6 @@ Creates new data centers, and data centers that already contain elements, such a
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -313,7 +308,6 @@ Modifies the properties of the specified data center, rename it, or change the d
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
