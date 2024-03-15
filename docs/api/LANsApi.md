@@ -25,7 +25,6 @@ Delete the specified LAN within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -84,7 +83,6 @@ Retrieve the properties of the specified LAN within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -144,7 +142,6 @@ List all LANs within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -204,7 +201,6 @@ Retrieve the properties of the NIC, attached to the specified LAN.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -266,7 +262,6 @@ List all NICs, attached to the specified LAN.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -328,7 +323,6 @@ Attach an existing NIC to the specified LAN.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -390,7 +384,6 @@ Update the properties of the specified LAN within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -452,7 +445,6 @@ Creates a LAN within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -512,7 +504,6 @@ Modify the properties of the specified LAN within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

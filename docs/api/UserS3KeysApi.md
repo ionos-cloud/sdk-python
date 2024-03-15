@@ -22,7 +22,6 @@ Delete the specified user S3 key.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -81,7 +80,6 @@ Retrieve the specified user S3 key. The user ID is in the response body when the
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -141,7 +139,6 @@ List S3 keys by user ID. The user ID is in the response body when the user is cr
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -199,7 +196,6 @@ Create an S3 key for the specified user. The user ID is in the response body whe
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -257,7 +253,6 @@ Enables or disables the specified user S3 key.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -319,7 +314,6 @@ Retrieve S3 Object Storage single sign-on URLs for the the specified user. The u
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

@@ -23,7 +23,6 @@ Remove the specified backup unit.  This process will delete: 1) The backup plans
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -80,7 +79,6 @@ Retrieve the properties of the specified backup unit.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -138,7 +136,6 @@ List all available backup units.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -194,7 +191,6 @@ Update the properties of the specified backup unit.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -254,7 +250,6 @@ Create a backup unit. Backup units are resources, same as storage volumes or sna
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -312,7 +307,6 @@ Modify the properties of the specified backup unit.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -372,7 +366,6 @@ Retrieve a single sign-on URL for the specified backup unit.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

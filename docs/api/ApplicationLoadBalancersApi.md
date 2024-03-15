@@ -34,7 +34,6 @@ Removes the specified Application Load Balancer from the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -93,7 +92,6 @@ Retrieves the properties of the specified Application Load Balancer within the d
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -153,7 +151,6 @@ Deletes the Application Load Balancer flow log specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -214,7 +211,6 @@ Retrieves the Application Load Balancer flow log specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -276,7 +272,6 @@ Retrieves the flow logs for the specified Application Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -336,7 +331,6 @@ Updates the properties of the Application Load Balancer flow log specified by it
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -400,7 +394,6 @@ Creates a flow log for the Application Load Balancer specified by ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -462,7 +455,6 @@ Modifies the Application Load Balancer flow log specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -526,7 +518,6 @@ Deletes the Application Load Balancer forwarding rule specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -587,7 +578,6 @@ Retrieves the Application Load Balancer forwarding rule specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -649,7 +639,6 @@ Lists the forwarding rules of the specified Application Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -709,7 +698,6 @@ Updates the properties of the Application Load Balancer forwarding rule specifie
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -773,7 +761,6 @@ Creates a forwarding rule for the specified Application Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -835,7 +822,6 @@ Modifies the Application Load Balancer forwarding rule specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -899,7 +885,6 @@ Lists all Application Load Balancers within a data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -959,7 +944,6 @@ Updates the properties of the specified Application Load Balancer within the dat
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1021,7 +1005,6 @@ Creates an Application Load Balancer within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1081,7 +1064,6 @@ Modifies the properties of the specified Application Load Balancer within the da
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
