@@ -167,7 +167,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -340,7 +340,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancer'
         if 'response_type' in kwargs:
@@ -524,7 +524,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -708,7 +708,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'FlowLog'
         if 'response_type' in kwargs:
@@ -881,7 +881,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'FlowLogs'
         if 'response_type' in kwargs:
@@ -1076,7 +1076,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'FlowLog'
         if 'response_type' in kwargs:
@@ -1264,7 +1264,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'FlowLog'
         if 'response_type' in kwargs:
@@ -1463,7 +1463,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'FlowLog'
         if 'response_type' in kwargs:
@@ -1647,7 +1647,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -1831,7 +1831,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancerForwardingRule'
         if 'response_type' in kwargs:
@@ -2004,7 +2004,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancerForwardingRules'
         if 'response_type' in kwargs:
@@ -2199,7 +2199,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancerForwardingRule'
         if 'response_type' in kwargs:
@@ -2387,7 +2387,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancerForwardingRule'
         if 'response_type' in kwargs:
@@ -2586,7 +2586,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancerForwardingRule'
         if 'response_type' in kwargs:
@@ -2768,7 +2768,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancers'
         if 'response_type' in kwargs:
@@ -2952,7 +2952,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancer'
         if 'response_type' in kwargs:
@@ -3129,7 +3129,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancer'
         if 'response_type' in kwargs:
@@ -3317,7 +3317,7 @@ class ApplicationLoadBalancersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'ApplicationLoadBalancer'
         if 'response_type' in kwargs:

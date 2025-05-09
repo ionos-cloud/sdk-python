@@ -15,7 +15,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 
 # **datacenters_volumes_create_snapshot_post**
-> Snapshot datacenters_volumes_create_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, name=name, description=description, sec_auth_protection=sec_auth_protection, licence_type=licence_type)
+> Snapshot datacenters_volumes_create_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, snapshot=snapshot)
 
 Create volume snapshots
 
@@ -60,10 +60,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
-| **name** | **str**| Snapshot name | [optional]  |
-| **description** | **str**| Snapshot description | [optional]  |
-| **sec_auth_protection** | **bool**| Flag for enabling extra protection for this snapshot, such as two-step verification. | [optional]  |
-| **licence_type** | **str**| The OS type for this snapshot. | [optional]  |
+| **snapshot** | [**CreateSnapshot**](../models/CreateSnapshot.md)| The payload of the snapshot. | [optional]  |
 
 ### Return type
 
@@ -71,11 +68,11 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 # **datacenters_volumes_delete**
@@ -130,7 +127,7 @@ void (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -190,7 +187,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -250,7 +247,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -312,7 +309,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -372,7 +369,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -434,7 +431,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -442,7 +439,7 @@ Basic Authentication, Token Authentication
  - **Accept**: application/json
 
 # **datacenters_volumes_restore_snapshot_post**
-> datacenters_volumes_restore_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, snapshot_id=snapshot_id)
+> datacenters_volumes_restore_snapshot_post(datacenter_id, volume_id, pretty=pretty, depth=depth, x_contract_number=x_contract_number, restore_snapshot=restore_snapshot)
 
 Restore volume snapshots
 
@@ -486,7 +483,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 | **pretty** | **bool**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to True] |
 | **depth** | **int**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0] |
 | **x_contract_number** | **int**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]  |
-| **snapshot_id** | **str**| The unique ID of the snapshot. | [optional]  |
+| **restore_snapshot** | [**RestoreSnapshot**](../models/RestoreSnapshot.md)| The payload used to restore a snapshot. | [optional]  |
 
 ### Return type
 
@@ -494,10 +491,10 @@ void (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

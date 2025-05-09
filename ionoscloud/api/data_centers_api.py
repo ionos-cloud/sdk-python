@@ -156,7 +156,7 @@ class DataCentersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -318,7 +318,7 @@ class DataCentersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Datacenter'
         if 'response_type' in kwargs:
@@ -489,7 +489,7 @@ class DataCentersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Datacenters'
         if 'response_type' in kwargs:
@@ -525,7 +525,7 @@ class DataCentersApi(object):
         :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
         :param datacenter: The properties of the data center to be updated. (required)
-        :type datacenter: DatacenterProperties
+        :type datacenter: DatacenterPropertiesPut
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
@@ -563,7 +563,7 @@ class DataCentersApi(object):
         :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
         :param datacenter: The properties of the data center to be updated. (required)
-        :type datacenter: DatacenterProperties
+        :type datacenter: DatacenterPropertiesPut
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
@@ -666,7 +666,7 @@ class DataCentersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Datacenter'
         if 'response_type' in kwargs:
@@ -700,7 +700,7 @@ class DataCentersApi(object):
         >>> result = thread.get()
 
         :param datacenter: The data center to create. (required)
-        :type datacenter: Datacenter
+        :type datacenter: DatacenterPost
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
@@ -736,7 +736,7 @@ class DataCentersApi(object):
         >>> result = thread.get()
 
         :param datacenter: The data center to create. (required)
-        :type datacenter: Datacenter
+        :type datacenter: DatacenterPost
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
@@ -832,7 +832,7 @@ class DataCentersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Datacenter'
         if 'response_type' in kwargs:
@@ -868,7 +868,7 @@ class DataCentersApi(object):
         :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
         :param datacenter: The modified data center. (required)
-        :type datacenter: Datacenter
+        :type datacenter: DatacenterPut
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
@@ -906,7 +906,7 @@ class DataCentersApi(object):
         :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
         :param datacenter: The modified data center. (required)
-        :type datacenter: Datacenter
+        :type datacenter: DatacenterPut
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
@@ -1009,7 +1009,7 @@ class DataCentersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Datacenter'
         if 'response_type' in kwargs:

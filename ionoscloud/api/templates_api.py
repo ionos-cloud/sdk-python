@@ -142,7 +142,7 @@ class TemplatesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Template'
         if 'response_type' in kwargs:
@@ -279,7 +279,7 @@ class TemplatesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Templates'
         if 'response_type' in kwargs:

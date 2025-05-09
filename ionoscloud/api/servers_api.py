@@ -178,7 +178,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -362,7 +362,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:
@@ -555,7 +555,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Cdroms'
         if 'response_type' in kwargs:
@@ -743,7 +743,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:
@@ -923,7 +923,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -1096,7 +1096,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Server'
         if 'response_type' in kwargs:
@@ -1135,8 +1135,6 @@ class ServersApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param upgrade_needed: Filter servers that can or that cannot be upgraded.
-        :type upgrade_needed: bool
         :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param offset: The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
@@ -1177,8 +1175,6 @@ class ServersApi(object):
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
         :type depth: int
-        :param upgrade_needed: Filter servers that can or that cannot be upgraded.
-        :type upgrade_needed: bool
         :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
         :param offset: The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
@@ -1214,7 +1210,6 @@ class ServersApi(object):
             'datacenter_id',
             'pretty',
             'depth',
-            'upgrade_needed',
             'x_contract_number',
             'offset',
             'limit'
@@ -1265,8 +1260,6 @@ class ServersApi(object):
             query_params.append(('pretty', local_var_params['pretty']))  # noqa: E501
         if 'depth' in local_var_params and local_var_params['depth'] is not None:  # noqa: E501
             query_params.append(('depth', local_var_params['depth']))  # noqa: E501
-        if 'upgrade_needed' in local_var_params and local_var_params['upgrade_needed'] is not None:  # noqa: E501
-            query_params.append(('upgradeNeeded', local_var_params['upgrade_needed']))  # noqa: E501
         if 'offset' in local_var_params and local_var_params['offset'] is not None:  # noqa: E501
             query_params.append(('offset', local_var_params['offset']))  # noqa: E501
         if 'limit' in local_var_params and local_var_params['limit'] is not None:  # noqa: E501
@@ -1285,7 +1278,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Servers'
         if 'response_type' in kwargs:
@@ -1473,7 +1466,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Server'
         if 'response_type' in kwargs:
@@ -1650,7 +1643,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Server'
         if 'response_type' in kwargs:
@@ -1838,7 +1831,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Server'
         if 'response_type' in kwargs:
@@ -2011,7 +2004,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -2184,7 +2177,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'RemoteConsoleUrl'
         if 'response_type' in kwargs:
@@ -2357,7 +2350,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -2530,7 +2523,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -2703,7 +2696,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -2876,7 +2869,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -2900,7 +2893,7 @@ class ServersApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def datacenters_servers_token_get(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Get JASON Web Token  # noqa: E501
+        """Get JSON Web Token  # noqa: E501
 
         Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server's console).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -2938,7 +2931,7 @@ class ServersApi(object):
         return self.datacenters_servers_token_get_with_http_info(datacenter_id, server_id, **kwargs)  # noqa: E501
 
     def datacenters_servers_token_get_with_http_info(self, datacenter_id, server_id, **kwargs):  # noqa: E501
-        """Get JASON Web Token  # noqa: E501
+        """Get JSON Web Token  # noqa: E501
 
         Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server's console).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -3049,7 +3042,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Token'
         if 'response_type' in kwargs:
@@ -3222,7 +3215,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -3406,7 +3399,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -3590,7 +3583,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -3783,7 +3776,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'AttachedVolumes'
         if 'response_type' in kwargs:
@@ -3971,7 +3964,7 @@ class ServersApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:

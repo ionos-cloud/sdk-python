@@ -18,9 +18,9 @@ class UserS3KeysApi(object):
         self.api_client = api_client
 
     def um_users_s3keys_delete(self, user_id, key_id, **kwargs):  # noqa: E501
-        """Delete S3 keys  # noqa: E501
+        """Delete Object storage keys  # noqa: E501
 
-        Delete the specified user S3 key.  # noqa: E501
+        Delete the specified user Object storage key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -29,7 +29,7 @@ class UserS3KeysApi(object):
 
         :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique ID of the S3 key. (required)
+        :param key_id: The unique ID of the Object storage key. (required)
         :type key_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -56,9 +56,9 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_delete_with_http_info(user_id, key_id, **kwargs)  # noqa: E501
 
     def um_users_s3keys_delete_with_http_info(self, user_id, key_id, **kwargs):  # noqa: E501
-        """Delete S3 keys  # noqa: E501
+        """Delete Object storage keys  # noqa: E501
 
-        Delete the specified user S3 key.  # noqa: E501
+        Delete the specified user Object storage key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -67,7 +67,7 @@ class UserS3KeysApi(object):
 
         :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique ID of the S3 key. (required)
+        :param key_id: The unique ID of the Object storage key. (required)
         :type key_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -167,7 +167,7 @@ class UserS3KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -191,9 +191,9 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_find_by_key_id(self, user_id, key_id, **kwargs):  # noqa: E501
-        """Retrieve user S3 keys by key ID  # noqa: E501
+        """Retrieve user Object storage keys by key ID  # noqa: E501
 
-        Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.  # noqa: E501
+        Retrieve the specified user Object storage key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the Object storage key is created, and in the list of all user Object storage keys, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -202,7 +202,7 @@ class UserS3KeysApi(object):
 
         :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique ID of the S3 key. (required)
+        :param key_id: The unique ID of the Object storage key. (required)
         :type key_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -229,9 +229,9 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_find_by_key_id_with_http_info(user_id, key_id, **kwargs)  # noqa: E501
 
     def um_users_s3keys_find_by_key_id_with_http_info(self, user_id, key_id, **kwargs):  # noqa: E501
-        """Retrieve user S3 keys by key ID  # noqa: E501
+        """Retrieve user Object storage keys by key ID  # noqa: E501
 
-        Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.  # noqa: E501
+        Retrieve the specified user Object storage key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the Object storage key is created, and in the list of all user Object storage keys, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -240,7 +240,7 @@ class UserS3KeysApi(object):
 
         :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique ID of the S3 key. (required)
+        :param key_id: The unique ID of the Object storage key. (required)
         :type key_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -340,7 +340,7 @@ class UserS3KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'S3Key'
         if 'response_type' in kwargs:
@@ -364,9 +364,9 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_get(self, user_id, **kwargs):  # noqa: E501
-        """List user S3 keys  # noqa: E501
+        """List user Object storage keys  # noqa: E501
 
-        List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
+        List Object storage keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -400,9 +400,9 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_get_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_s3keys_get_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """List user S3 keys  # noqa: E501
+        """List user Object storage keys  # noqa: E501
 
-        List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
+        List Object storage keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -502,7 +502,7 @@ class UserS3KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'S3Keys'
         if 'response_type' in kwargs:
@@ -526,9 +526,9 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_post(self, user_id, **kwargs):  # noqa: E501
-        """Create user S3 keys  # noqa: E501
+        """Create user Object storage keys  # noqa: E501
 
-        Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.  # noqa: E501
+        Create an Object storage key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -562,9 +562,9 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_post_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_s3keys_post_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Create user S3 keys  # noqa: E501
+        """Create user Object storage keys  # noqa: E501
 
-        Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.  # noqa: E501
+        Create an Object storage key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -664,7 +664,7 @@ class UserS3KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'S3Key'
         if 'response_type' in kwargs:
@@ -688,9 +688,9 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3keys_put(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
-        """Modify a S3 Key by Key ID  # noqa: E501
+        """Modify a Object storage Key by Key ID  # noqa: E501
 
-        Enables or disables the specified user S3 key.  # noqa: E501
+        Enables or disables the specified user Object storage key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -699,9 +699,9 @@ class UserS3KeysApi(object):
 
         :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique ID of the S3 key. (required)
+        :param key_id: The unique ID of the Object storage key. (required)
         :type key_id: str
-        :param s3_key: The modified S3 key. (required)
+        :param s3_key: The modified Object storage key. (required)
         :type s3_key: S3Key
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -728,9 +728,9 @@ class UserS3KeysApi(object):
         return self.um_users_s3keys_put_with_http_info(user_id, key_id, s3_key, **kwargs)  # noqa: E501
 
     def um_users_s3keys_put_with_http_info(self, user_id, key_id, s3_key, **kwargs):  # noqa: E501
-        """Modify a S3 Key by Key ID  # noqa: E501
+        """Modify a Object storage Key by Key ID  # noqa: E501
 
-        Enables or disables the specified user S3 key.  # noqa: E501
+        Enables or disables the specified user Object storage key.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -739,9 +739,9 @@ class UserS3KeysApi(object):
 
         :param user_id: The unique ID of the user. (required)
         :type user_id: str
-        :param key_id: The unique ID of the S3 key. (required)
+        :param key_id: The unique ID of the Object storage key. (required)
         :type key_id: str
-        :param s3_key: The modified S3 key. (required)
+        :param s3_key: The modified Object storage key. (required)
         :type s3_key: S3Key
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -852,7 +852,7 @@ class UserS3KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'S3Key'
         if 'response_type' in kwargs:
@@ -876,9 +876,9 @@ class UserS3KeysApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def um_users_s3ssourl_get(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve S3 single sign-on URLs  # noqa: E501
+        """Retrieve Object storage single sign-on URLs  # noqa: E501
 
-        Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
+        Retrieve Ionos Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -910,9 +910,9 @@ class UserS3KeysApi(object):
         return self.um_users_s3ssourl_get_with_http_info(user_id, **kwargs)  # noqa: E501
 
     def um_users_s3ssourl_get_with_http_info(self, user_id, **kwargs):  # noqa: E501
-        """Retrieve S3 single sign-on URLs  # noqa: E501
+        """Retrieve Object storage single sign-on URLs  # noqa: E501
 
-        Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
+        Retrieve Ionos Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -1003,7 +1003,7 @@ class UserS3KeysApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'S3ObjectStorageSSO'
         if 'response_type' in kwargs:

@@ -167,7 +167,7 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -340,7 +340,7 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Lan'
         if 'response_type' in kwargs:
@@ -522,7 +522,7 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Lans'
         if 'response_type' in kwargs:
@@ -706,7 +706,7 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Nic'
         if 'response_type' in kwargs:
@@ -899,7 +899,7 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'LanNics'
         if 'response_type' in kwargs:
@@ -1087,7 +1087,7 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Nic'
         if 'response_type' in kwargs:
@@ -1275,7 +1275,7 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Lan'
         if 'response_type' in kwargs:
@@ -1311,7 +1311,7 @@ class LANsApi(object):
         :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
         :param lan: The LAN to create. (required)
-        :type lan: LanPost
+        :type lan: Lan
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
@@ -1331,7 +1331,7 @@ class LANsApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: LanPost
+        :rtype: Lan
         """
         kwargs['_return_http_data_only'] = True
         return self.datacenters_lans_post_with_http_info(datacenter_id, lan, **kwargs)  # noqa: E501
@@ -1349,7 +1349,7 @@ class LANsApi(object):
         :param datacenter_id: The unique ID of the data center. (required)
         :type datacenter_id: str
         :param lan: The LAN to create. (required)
-        :type lan: LanPost
+        :type lan: Lan
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
         :param depth: Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
@@ -1376,7 +1376,7 @@ class LANsApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(LanPost, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(Lan, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -1452,9 +1452,9 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
-        response_type = 'LanPost'
+        response_type = 'Lan'
         if 'response_type' in kwargs:
             response_type = kwargs['response_type']
 
@@ -1640,7 +1640,7 @@ class LANsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Lan'
         if 'response_type' in kwargs:

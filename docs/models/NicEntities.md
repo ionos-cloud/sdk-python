@@ -3,7 +3,8 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **firewallrules** | [**FirewallRules**](FirewallRules.md) |  | [optional]  |
 | **flowlogs** | [**FlowLogs**](FlowLogs.md) |  | [optional]  |
+| **firewallrules** | [**FirewallRules**](FirewallRules.md) |  | [optional]  |
+| **securitygroups** | [**SecurityGroups**](SecurityGroups.md) |  | [optional]  |
 
 

@@ -156,7 +156,7 @@ class BackupUnitsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -318,7 +318,7 @@ class BackupUnitsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'BackupUnit'
         if 'response_type' in kwargs:
@@ -469,7 +469,7 @@ class BackupUnitsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'BackupUnits'
         if 'response_type' in kwargs:
@@ -646,7 +646,7 @@ class BackupUnitsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'BackupUnit'
         if 'response_type' in kwargs:
@@ -672,7 +672,7 @@ class BackupUnitsApi(object):
     def backupunits_post(self, backup_unit, **kwargs):  # noqa: E501
         """Create backup units  # noqa: E501
 
-        Create a backup unit. Backup units are resources, same as storage volumes or snapshots; they can be shared through groups in User management.   # noqa: E501
+        Create a backup unit. Backup units are resources, same as storage volumes or snapshots; they can be shared through groups in User management.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -708,7 +708,7 @@ class BackupUnitsApi(object):
     def backupunits_post_with_http_info(self, backup_unit, **kwargs):  # noqa: E501
         """Create backup units  # noqa: E501
 
-        Create a backup unit. Backup units are resources, same as storage volumes or snapshots; they can be shared through groups in User management.   # noqa: E501
+        Create a backup unit. Backup units are resources, same as storage volumes or snapshots; they can be shared through groups in User management.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -812,7 +812,7 @@ class BackupUnitsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'BackupUnit'
         if 'response_type' in kwargs:
@@ -989,7 +989,7 @@ class BackupUnitsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'BackupUnit'
         if 'response_type' in kwargs:
@@ -1140,7 +1140,7 @@ class BackupUnitsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'BackupUnitSSO'
         if 'response_type' in kwargs:

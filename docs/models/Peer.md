@@ -3,10 +3,10 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **datacenter_id** | **str** |  | [optional]  |
-| **datacenter_name** | **str** |  | [optional]  |
-| **id** | **str** |  | [optional]  |
-| **location** | **str** |  | [optional]  |
-| **name** | **str** |  | [optional]  |
+| **id** | **str** | Identifier of the LAN connected to the Cross Connect. | [optional]  |
+| **name** | **str** | Name of the LAN connected to the Cross Connect. | [optional]  |
+| **datacenter_id** | **str** | Identifier of the virtual data center connected to the Cross Connect. | [optional]  |
+| **datacenter_name** | **str** | Name of the virtual data center connected to the Cross Connect. | [optional]  |
+| **location** | **str** | Location of the virtual data center connected to the Cross Connect. | [optional]  |
 
 

@@ -156,7 +156,7 @@ class ImagesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -318,7 +318,7 @@ class ImagesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:
@@ -344,7 +344,7 @@ class ImagesApi(object):
     def images_get(self, **kwargs):  # noqa: E501
         """List images  # noqa: E501
 
-        List all the images within the data center.  # noqa: E501
+        List all the images in the current contract.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -378,7 +378,7 @@ class ImagesApi(object):
     def images_get_with_http_info(self, **kwargs):  # noqa: E501
         """List images  # noqa: E501
 
-        List all the images within the data center.  # noqa: E501
+        List all the images in the current contract.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -469,7 +469,7 @@ class ImagesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Images'
         if 'response_type' in kwargs:
@@ -646,7 +646,7 @@ class ImagesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:
@@ -823,7 +823,7 @@ class ImagesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Image'
         if 'response_type' in kwargs:

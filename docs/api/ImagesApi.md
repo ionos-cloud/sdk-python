@@ -61,7 +61,7 @@ void (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -119,7 +119,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -131,7 +131,7 @@ Basic Authentication, Token Authentication
 
 List images
 
-List all the images within the data center.
+List all the images in the current contract.
 
 ### Example
 
@@ -175,7 +175,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -235,7 +235,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -295,7 +295,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 

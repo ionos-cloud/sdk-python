@@ -37,14 +37,8 @@ class VolumesApi(object):
         :type depth: int
         :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
-        :param name: Snapshot name
-        :type name: str
-        :param description: Snapshot description
-        :type description: str
-        :param sec_auth_protection: Flag for enabling extra protection for this snapshot, such as two-step verification.
-        :type sec_auth_protection: bool
-        :param licence_type: The OS type for this snapshot.
-        :type licence_type: str
+        :param snapshot: The payload of the snapshot.
+        :type snapshot: CreateSnapshot
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -83,14 +77,8 @@ class VolumesApi(object):
         :type depth: int
         :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
-        :param name: Snapshot name
-        :type name: str
-        :param description: Snapshot description
-        :type description: str
-        :param sec_auth_protection: Flag for enabling extra protection for this snapshot, such as two-step verification.
-        :type sec_auth_protection: bool
-        :param licence_type: The OS type for this snapshot.
-        :type licence_type: str
+        :param snapshot: The payload of the snapshot.
+        :type snapshot: CreateSnapshot
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -122,10 +110,7 @@ class VolumesApi(object):
             'pretty',
             'depth',
             'x_contract_number',
-            'name',
-            'description',
-            'sec_auth_protection',
-            'licence_type'
+            'snapshot'
         ]
         all_params.extend(
             [
@@ -180,26 +165,20 @@ class VolumesApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'name' in local_var_params:
-            form_params.append(('name', local_var_params['name']))  # noqa: E501
-        if 'description' in local_var_params:
-            form_params.append(('description', local_var_params['description']))  # noqa: E501
-        if 'sec_auth_protection' in local_var_params:
-            form_params.append(('secAuthProtection', local_var_params['sec_auth_protection']))  # noqa: E501
-        if 'licence_type' in local_var_params:
-            form_params.append(('licenceType', local_var_params['licence_type']))  # noqa: E501
 
         body_params = None
+        if 'snapshot' in local_var_params:
+            body_params = local_var_params['snapshot']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/x-www-form-urlencoded'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Snapshot'
         if 'response_type' in kwargs:
@@ -372,7 +351,7 @@ class VolumesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -545,7 +524,7 @@ class VolumesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -727,7 +706,7 @@ class VolumesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Volumes'
         if 'response_type' in kwargs:
@@ -915,7 +894,7 @@ class VolumesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -1092,7 +1071,7 @@ class VolumesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -1280,7 +1259,7 @@ class VolumesApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'Volume'
         if 'response_type' in kwargs:
@@ -1323,8 +1302,8 @@ class VolumesApi(object):
         :type depth: int
         :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
-        :param snapshot_id: The unique ID of the snapshot.
-        :type snapshot_id: str
+        :param restore_snapshot: The payload used to restore a snapshot.
+        :type restore_snapshot: RestoreSnapshot
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1363,8 +1342,8 @@ class VolumesApi(object):
         :type depth: int
         :param x_contract_number: Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
         :type x_contract_number: int
-        :param snapshot_id: The unique ID of the snapshot.
-        :type snapshot_id: str
+        :param restore_snapshot: The payload used to restore a snapshot.
+        :type restore_snapshot: RestoreSnapshot
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -1396,7 +1375,7 @@ class VolumesApi(object):
             'pretty',
             'depth',
             'x_contract_number',
-            'snapshot_id'
+            'restore_snapshot'
         ]
         all_params.extend(
             [
@@ -1451,20 +1430,20 @@ class VolumesApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'snapshot_id' in local_var_params:
-            form_params.append(('snapshotId', local_var_params['snapshot_id']))  # noqa: E501
 
         body_params = None
+        if 'restore_snapshot' in local_var_params:
+            body_params = local_var_params['restore_snapshot']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/x-www-form-urlencoded'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:

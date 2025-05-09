@@ -63,7 +63,7 @@ void (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -121,7 +121,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -177,7 +177,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -237,7 +237,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -249,7 +249,7 @@ Basic Authentication, Token Authentication
 
 Create backup units
 
-Create a backup unit. Backup units are resources, same as storage volumes or snapshots; they can be shared through groups in User management. 
+Create a backup unit. Backup units are resources, same as storage volumes or snapshots; they can be shared through groups in User management.
 
 ### Example
 
@@ -295,7 +295,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -355,7 +355,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -412,7 +412,7 @@ with ionoscloud.ApiClient(configuration) as api_client:
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 

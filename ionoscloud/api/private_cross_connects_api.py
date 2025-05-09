@@ -18,16 +18,16 @@ class PrivateCrossConnectsApi(object):
         self.api_client = api_client
 
     def pccs_delete(self, pcc_id, **kwargs):  # noqa: E501
-        """Delete private Cross-Connects  # noqa: E501
+        """Delete Private Cross-Connects  # noqa: E501
 
-        Remove the specified private Cross-Connect (only if not connected to any data centers).  # noqa: E501
+        Remove the specified Cross Connect. Cross connect can be deleted only if it is not connected to any LANs. For non administrator users a cross connect can be deleted only if you are granted access via the user groups you are member of.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_delete(pcc_id, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private Cross-Connect. (required)
+        :param pcc_id: The unique ID of the Cross Connect. (required)
         :type pcc_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -54,16 +54,16 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_delete_with_http_info(pcc_id, **kwargs)  # noqa: E501
 
     def pccs_delete_with_http_info(self, pcc_id, **kwargs):  # noqa: E501
-        """Delete private Cross-Connects  # noqa: E501
+        """Delete Private Cross-Connects  # noqa: E501
 
-        Remove the specified private Cross-Connect (only if not connected to any data centers).  # noqa: E501
+        Remove the specified Cross Connect. Cross connect can be deleted only if it is not connected to any LANs. For non administrator users a cross connect can be deleted only if you are granted access via the user groups you are member of.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_delete_with_http_info(pcc_id, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private Cross-Connect. (required)
+        :param pcc_id: The unique ID of the Cross Connect. (required)
         :type pcc_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -156,7 +156,7 @@ class PrivateCrossConnectsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = None
         if 'response_type' in kwargs:
@@ -180,16 +180,16 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_find_by_id(self, pcc_id, **kwargs):  # noqa: E501
-        """Retrieve private Cross-Connects  # noqa: E501
+        """Retrieve a Cross Connect  # noqa: E501
 
-        Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the response body when the private Cross-Connect is created, and in the list of private Cross-Connects, returned by GET.  # noqa: E501
+        Retrieve a Cross Connect by the resource ID. Cross Connect ID is in the response body when the Cross Connect is created and in the list of Private Cross-Connects, returned by GET. For contract owner and administrators all Private Cross-Connects in your contract can be retrieved. For non administrator users it only returns the cross connects you are granted access via the user groups you are member of.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_find_by_id(pcc_id, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private Cross-Connect. (required)
+        :param pcc_id: The unique ID of the Cross Connect. (required)
         :type pcc_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -216,16 +216,16 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_find_by_id_with_http_info(pcc_id, **kwargs)  # noqa: E501
 
     def pccs_find_by_id_with_http_info(self, pcc_id, **kwargs):  # noqa: E501
-        """Retrieve private Cross-Connects  # noqa: E501
+        """Retrieve a Cross Connect  # noqa: E501
 
-        Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the response body when the private Cross-Connect is created, and in the list of private Cross-Connects, returned by GET.  # noqa: E501
+        Retrieve a Cross Connect by the resource ID. Cross Connect ID is in the response body when the Cross Connect is created and in the list of Private Cross-Connects, returned by GET. For contract owner and administrators all Private Cross-Connects in your contract can be retrieved. For non administrator users it only returns the cross connects you are granted access via the user groups you are member of.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_find_by_id_with_http_info(pcc_id, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private Cross-Connect. (required)
+        :param pcc_id: The unique ID of the Cross Connect. (required)
         :type pcc_id: str
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -318,7 +318,7 @@ class PrivateCrossConnectsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'PrivateCrossConnect'
         if 'response_type' in kwargs:
@@ -342,9 +342,9 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_get(self, **kwargs):  # noqa: E501
-        """List private Cross-Connects  # noqa: E501
+        """List Private Cross-Connects  # noqa: E501
 
-        List all private Cross-Connects for your account.  # noqa: E501
+        List all Private Cross-Connects. For contract owner and administrators it returns all Private Cross-Connects in your contract. For non administrator users it only returns the Private Cross-Connects you are granted access via the user groups you are member of.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -376,9 +376,9 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_get_with_http_info(**kwargs)  # noqa: E501
 
     def pccs_get_with_http_info(self, **kwargs):  # noqa: E501
-        """List private Cross-Connects  # noqa: E501
+        """List Private Cross-Connects  # noqa: E501
 
-        List all private Cross-Connects for your account.  # noqa: E501
+        List all Private Cross-Connects. For contract owner and administrators it returns all Private Cross-Connects in your contract. For non administrator users it only returns the Private Cross-Connects you are granted access via the user groups you are member of.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -469,7 +469,7 @@ class PrivateCrossConnectsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'PrivateCrossConnects'
         if 'response_type' in kwargs:
@@ -493,18 +493,18 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_patch(self, pcc_id, pcc, **kwargs):  # noqa: E501
-        """Partially modify private Cross-Connects  # noqa: E501
+        """Partially modify a Private Cross-Connects  # noqa: E501
 
-        Update the properties of the specified private Cross-Connect.  # noqa: E501
+        Update the properties of the specified Cross Connect.For non administrator users you can only update the Private Cross-Connects you are granted access via the user groups you are member of  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_patch(pcc_id, pcc, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private Cross-Connect. (required)
+        :param pcc_id: The unique ID of the Cross Connect. (required)
         :type pcc_id: str
-        :param pcc: The properties of the private Cross-Connect to be updated. (required)
+        :param pcc: The properties of the Cross Connect to be updated. (required)
         :type pcc: PrivateCrossConnectProperties
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -531,18 +531,18 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_patch_with_http_info(pcc_id, pcc, **kwargs)  # noqa: E501
 
     def pccs_patch_with_http_info(self, pcc_id, pcc, **kwargs):  # noqa: E501
-        """Partially modify private Cross-Connects  # noqa: E501
+        """Partially modify a Private Cross-Connects  # noqa: E501
 
-        Update the properties of the specified private Cross-Connect.  # noqa: E501
+        Update the properties of the specified Cross Connect.For non administrator users you can only update the Private Cross-Connects you are granted access via the user groups you are member of  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_patch_with_http_info(pcc_id, pcc, async_req=True)
         >>> result = thread.get()
 
-        :param pcc_id: The unique ID of the private Cross-Connect. (required)
+        :param pcc_id: The unique ID of the Cross Connect. (required)
         :type pcc_id: str
-        :param pcc: The properties of the private Cross-Connect to be updated. (required)
+        :param pcc: The properties of the Cross Connect to be updated. (required)
         :type pcc: PrivateCrossConnectProperties
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -646,7 +646,7 @@ class PrivateCrossConnectsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'PrivateCrossConnect'
         if 'response_type' in kwargs:
@@ -670,16 +670,16 @@ class PrivateCrossConnectsApi(object):
             _request_auth=local_var_params.get('_request_auth'))
 
     def pccs_post(self, pcc, **kwargs):  # noqa: E501
-        """Create a Private Cross-Connect  # noqa: E501
+        """Create a Cross Connect  # noqa: E501
 
-        Creates a private Cross-Connect.  # noqa: E501
+        Creates a Cross-Connect. Only contract owners, administrators and users with createPcc user privilege can create a cross connect. Please note that connecting a LAN to a cross connect is to be done via the /lan endpoint.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_post(pcc, async_req=True)
         >>> result = thread.get()
 
-        :param pcc: The private Cross-Connect to create. (required)
+        :param pcc: The Cross Connect to create. (required)
         :type pcc: PrivateCrossConnect
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -706,16 +706,16 @@ class PrivateCrossConnectsApi(object):
         return self.pccs_post_with_http_info(pcc, **kwargs)  # noqa: E501
 
     def pccs_post_with_http_info(self, pcc, **kwargs):  # noqa: E501
-        """Create a Private Cross-Connect  # noqa: E501
+        """Create a Cross Connect  # noqa: E501
 
-        Creates a private Cross-Connect.  # noqa: E501
+        Creates a Cross-Connect. Only contract owners, administrators and users with createPcc user privilege can create a cross connect. Please note that connecting a LAN to a cross connect is to be done via the /lan endpoint.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
         >>> thread = api.pccs_post_with_http_info(pcc, async_req=True)
         >>> result = thread.get()
 
-        :param pcc: The private Cross-Connect to create. (required)
+        :param pcc: The Cross Connect to create. (required)
         :type pcc: PrivateCrossConnect
         :param pretty: Controls whether the response is pretty-printed (with indentations and new lines).
         :type pretty: bool
@@ -812,7 +812,7 @@ class PrivateCrossConnectsApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['Basic Authentication', 'Token Authentication']  # noqa: E501
+        auth_settings = ['BasicAuthentication', 'TokenAuthentication']  # noqa: E501
 
         response_type = 'PrivateCrossConnect'
         if 'response_type' in kwargs:

@@ -21,6 +21,7 @@ from ionoscloud.api.network_load_balancers_api import NetworkLoadBalancersApi
 from ionoscloud.api.network_interfaces_api import NetworkInterfacesApi
 from ionoscloud.api.private_cross_connects_api import PrivateCrossConnectsApi
 from ionoscloud.api.requests_api import RequestsApi
+from ionoscloud.api.security_groups_api import SecurityGroupsApi
 from ionoscloud.api.servers_api import ServersApi
 from ionoscloud.api.snapshots_api import SnapshotsApi
 from ionoscloud.api.target_groups_api import TargetGroupsApi

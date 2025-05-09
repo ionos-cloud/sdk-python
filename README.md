@@ -14,6 +14,7 @@
 
 # Python API client for ionoscloud
 
+
 IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool. 
 
  Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
@@ -69,13 +70,22 @@ import ionoscloud
 
 ### Authentication
 
+All available server URLs are:
+
+- *https://api.ionos.com/cloudapi/v6* - No description provided
+
+By default, *https://api.ionos.com/cloudapi/v6* is used, however this can be overriden at authentication, either
+by setting the `IONOS_API_URL` environment variable or by specifying the `host` parameter when
+initializing the sdk client.
+
 The username and password **or** the authentication token can be manually specified when initializing the SDK client:
 
 ```python
 configuration = ionoscloud.Configuration(
                 username='YOUR_USERNAME',
                 password='YOUR_PASSWORD',
-                token='YOUR_TOKEN'
+                token='YOUR_TOKEN',
+                host='API_URL'
                 )
 client = ionoscloud.ApiClient(configuration)
 ```
@@ -88,7 +98,8 @@ import os
 configuration = ionoscloud.Configuration(
                 username=os.environ.get('IONOS_USERNAME'),
                 password=os.environ.get('IONOS_PASSWORD'),
-                token=os.environ.get('IONOS_TOKEN')
+                token=os.environ.get('IONOS_TOKEN'),
+                host=os.environ.get('IONOS_API_URL'),
                 )
 client = ionoscloud.ApiClient(configuration)
 ```
@@ -258,6 +269,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | LabelsApi | [**datacenters_volumes_labels_get**](docs/api/LabelsApi.md#datacenters_volumes_labels_get) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List volume labels |
 | LabelsApi | [**datacenters_volumes_labels_post**](docs/api/LabelsApi.md#datacenters_volumes_labels_post) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create a Volume Label |
 | LabelsApi | [**datacenters_volumes_labels_put**](docs/api/LabelsApi.md#datacenters_volumes_labels_put) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Volume Label |
+| LabelsApi | [**images_labels_delete**](docs/api/LabelsApi.md#images_labels_delete) | **DELETE** /images/{imageId}/labels/{key} | Delete image label |
+| LabelsApi | [**images_labels_find_by_key**](docs/api/LabelsApi.md#images_labels_find_by_key) | **GET** /images/{imageId}/labels/{key} | Retrieve image labels |
+| LabelsApi | [**images_labels_get**](docs/api/LabelsApi.md#images_labels_get) | **GET** /images/{imageId}/labels | List image labels |
+| LabelsApi | [**images_labels_post**](docs/api/LabelsApi.md#images_labels_post) | **POST** /images/{imageId}/labels | Create an Image Label |
+| LabelsApi | [**images_labels_put**](docs/api/LabelsApi.md#images_labels_put) | **PUT** /images/{imageId}/labels/{key} | Modify an Image Label by Key |
 | LabelsApi | [**ipblocks_labels_delete**](docs/api/LabelsApi.md#ipblocks_labels_delete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete IP block labels |
 | LabelsApi | [**ipblocks_labels_find_by_key**](docs/api/LabelsApi.md#ipblocks_labels_find_by_key) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve IP block labels |
 | LabelsApi | [**ipblocks_labels_get**](docs/api/LabelsApi.md#ipblocks_labels_get) | **GET** /ipblocks/{ipblockId}/labels | List IP block labels |
@@ -325,14 +341,28 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | NetworkInterfacesApi | [**datacenters_servers_nics_patch**](docs/api/NetworkInterfacesApi.md#datacenters_servers_nics_patch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify NICs |
 | NetworkInterfacesApi | [**datacenters_servers_nics_post**](docs/api/NetworkInterfacesApi.md#datacenters_servers_nics_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a NIC |
 | NetworkInterfacesApi | [**datacenters_servers_nics_put**](docs/api/NetworkInterfacesApi.md#datacenters_servers_nics_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify NICs |
-| PrivateCrossConnectsApi | [**pccs_delete**](docs/api/PrivateCrossConnectsApi.md#pccs_delete) | **DELETE** /pccs/{pccId} | Delete private Cross-Connects |
-| PrivateCrossConnectsApi | [**pccs_find_by_id**](docs/api/PrivateCrossConnectsApi.md#pccs_find_by_id) | **GET** /pccs/{pccId} | Retrieve private Cross-Connects |
-| PrivateCrossConnectsApi | [**pccs_get**](docs/api/PrivateCrossConnectsApi.md#pccs_get) | **GET** /pccs | List private Cross-Connects |
-| PrivateCrossConnectsApi | [**pccs_patch**](docs/api/PrivateCrossConnectsApi.md#pccs_patch) | **PATCH** /pccs/{pccId} | Partially modify private Cross-Connects |
-| PrivateCrossConnectsApi | [**pccs_post**](docs/api/PrivateCrossConnectsApi.md#pccs_post) | **POST** /pccs | Create a Private Cross-Connect |
+| PrivateCrossConnectsApi | [**pccs_delete**](docs/api/PrivateCrossConnectsApi.md#pccs_delete) | **DELETE** /pccs/{pccId} | Delete Private Cross-Connects |
+| PrivateCrossConnectsApi | [**pccs_find_by_id**](docs/api/PrivateCrossConnectsApi.md#pccs_find_by_id) | **GET** /pccs/{pccId} | Retrieve a Cross Connect |
+| PrivateCrossConnectsApi | [**pccs_get**](docs/api/PrivateCrossConnectsApi.md#pccs_get) | **GET** /pccs | List Private Cross-Connects |
+| PrivateCrossConnectsApi | [**pccs_patch**](docs/api/PrivateCrossConnectsApi.md#pccs_patch) | **PATCH** /pccs/{pccId} | Partially modify a Private Cross-Connects |
+| PrivateCrossConnectsApi | [**pccs_post**](docs/api/PrivateCrossConnectsApi.md#pccs_post) | **POST** /pccs | Create a Cross Connect |
 | RequestsApi | [**requests_find_by_id**](docs/api/RequestsApi.md#requests_find_by_id) | **GET** /requests/{requestId} | Retrieve requests |
 | RequestsApi | [**requests_get**](docs/api/RequestsApi.md#requests_get) | **GET** /requests | List requests |
 | RequestsApi | [**requests_status_get**](docs/api/RequestsApi.md#requests_status_get) | **GET** /requests/{requestId}/status | Retrieve request status |
+| SecurityGroupsApi | [**datacenters_securitygroups_delete**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_delete) | **DELETE** /datacenters/{datacenterId}/securitygroups/{securityGroupId} | Delete a Security Group |
+| SecurityGroupsApi | [**datacenters_securitygroups_find_by_id**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_find_by_id) | **GET** /datacenters/{datacenterId}/securitygroups/{securityGroupId} | Retrieve a Security Group |
+| SecurityGroupsApi | [**datacenters_securitygroups_firewallrules_delete**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_firewallrules_delete) | **DELETE** /datacenters/{datacenterId}/securitygroups/{securityGroupId}/rules/{ruleId} | Remove a Firewall Rule from a Security Group |
+| SecurityGroupsApi | [**datacenters_securitygroups_firewallrules_post**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_firewallrules_post) | **POST** /datacenters/{datacenterId}/securitygroups/{securityGroupId}/rules | Create Firewall rule to a Security Group |
+| SecurityGroupsApi | [**datacenters_securitygroups_get**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_get) | **GET** /datacenters/{datacenterId}/securitygroups | List Security Groups |
+| SecurityGroupsApi | [**datacenters_securitygroups_patch**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_patch) | **PATCH** /datacenters/{datacenterId}/securitygroups/{securityGroupId} | Partially modify Security Group |
+| SecurityGroupsApi | [**datacenters_securitygroups_post**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_post) | **POST** /datacenters/{datacenterId}/securitygroups | Create a Security Group |
+| SecurityGroupsApi | [**datacenters_securitygroups_put**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_put) | **PUT** /datacenters/{datacenterId}/securitygroups/{securityGroupId} | Modify Security Group |
+| SecurityGroupsApi | [**datacenters_securitygroups_rules_find_by_id**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_rules_find_by_id) | **GET** /datacenters/{datacenterId}/securitygroups/{securityGroupId}/rules/{ruleId} | Retrieve security group rule by id |
+| SecurityGroupsApi | [**datacenters_securitygroups_rules_get**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_rules_get) | **GET** /datacenters/{datacenterId}/securitygroups/{securityGroupId}/rules | List Security Group rules |
+| SecurityGroupsApi | [**datacenters_securitygroups_rules_patch**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_rules_patch) | **PATCH** /datacenters/{datacenterId}/securitygroups/{securityGroupId}/rules/{ruleId} | Partially modify Security Group Rules |
+| SecurityGroupsApi | [**datacenters_securitygroups_rules_put**](docs/api/SecurityGroupsApi.md#datacenters_securitygroups_rules_put) | **PUT** /datacenters/{datacenterId}/securitygroups/{securityGroupId}/rules/{ruleId} | Modify a Security Group Rule |
+| SecurityGroupsApi | [**datacenters_servers_nics_securitygroups_put**](docs/api/SecurityGroupsApi.md#datacenters_servers_nics_securitygroups_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/securitygroups | Attach a list of Security Groups to a NIC |
+| SecurityGroupsApi | [**datacenters_servers_securitygroups_put**](docs/api/SecurityGroupsApi.md#datacenters_servers_securitygroups_put) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/securitygroups | Attach a list of Security Groups to a Server |
 | ServersApi | [**datacenters_servers_cdroms_delete**](docs/api/ServersApi.md#datacenters_servers_cdroms_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM by ID |
 | ServersApi | [**datacenters_servers_cdroms_find_by_id**](docs/api/ServersApi.md#datacenters_servers_cdroms_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Get Attached CD-ROM by ID |
 | ServersApi | [**datacenters_servers_cdroms_get**](docs/api/ServersApi.md#datacenters_servers_cdroms_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Get Attached CD-ROMs  |
@@ -349,7 +379,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | ServersApi | [**datacenters_servers_start_post**](docs/api/ServersApi.md#datacenters_servers_start_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start an Enterprise Server by ID |
 | ServersApi | [**datacenters_servers_stop_post**](docs/api/ServersApi.md#datacenters_servers_stop_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop an Enterprise Server by ID |
 | ServersApi | [**datacenters_servers_suspend_post**](docs/api/ServersApi.md#datacenters_servers_suspend_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend a Cube Server by ID |
-| ServersApi | [**datacenters_servers_token_get**](docs/api/ServersApi.md#datacenters_servers_token_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/token | Get JASON Web Token |
+| ServersApi | [**datacenters_servers_token_get**](docs/api/ServersApi.md#datacenters_servers_token_get) | **GET** /datacenters/{datacenterId}/servers/{serverId}/token | Get JSON Web Token |
 | ServersApi | [**datacenters_servers_upgrade_post**](docs/api/ServersApi.md#datacenters_servers_upgrade_post) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server by ID |
 | ServersApi | [**datacenters_servers_volumes_delete**](docs/api/ServersApi.md#datacenters_servers_volumes_delete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a Volume by ID |
 | ServersApi | [**datacenters_servers_volumes_find_by_id**](docs/api/ServersApi.md#datacenters_servers_volumes_find_by_id) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Get Attached Volume by ID |
@@ -368,12 +398,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | TargetGroupsApi | [**targetgroups_put**](docs/api/TargetGroupsApi.md#targetgroups_put) | **PUT** /targetgroups/{targetGroupId} | Modify a Target Group by ID |
 | TemplatesApi | [**templates_find_by_id**](docs/api/TemplatesApi.md#templates_find_by_id) | **GET** /templates/{templateId} | Get Cubes Template by ID |
 | TemplatesApi | [**templates_get**](docs/api/TemplatesApi.md#templates_get) | **GET** /templates | Get Cubes Templates |
-| UserS3KeysApi | [**um_users_s3keys_delete**](docs/api/UserS3KeysApi.md#um_users_s3keys_delete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete S3 keys |
-| UserS3KeysApi | [**um_users_s3keys_find_by_key_id**](docs/api/UserS3KeysApi.md#um_users_s3keys_find_by_key_id) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve user S3 keys by key ID |
-| UserS3KeysApi | [**um_users_s3keys_get**](docs/api/UserS3KeysApi.md#um_users_s3keys_get) | **GET** /um/users/{userId}/s3keys | List user S3 keys |
-| UserS3KeysApi | [**um_users_s3keys_post**](docs/api/UserS3KeysApi.md#um_users_s3keys_post) | **POST** /um/users/{userId}/s3keys | Create user S3 keys |
-| UserS3KeysApi | [**um_users_s3keys_put**](docs/api/UserS3KeysApi.md#um_users_s3keys_put) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 Key by Key ID |
-| UserS3KeysApi | [**um_users_s3ssourl_get**](docs/api/UserS3KeysApi.md#um_users_s3ssourl_get) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 single sign-on URLs |
+| UserS3KeysApi | [**um_users_s3keys_delete**](docs/api/UserS3KeysApi.md#um_users_s3keys_delete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete Object storage keys |
+| UserS3KeysApi | [**um_users_s3keys_find_by_key_id**](docs/api/UserS3KeysApi.md#um_users_s3keys_find_by_key_id) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve user Object storage keys by key ID |
+| UserS3KeysApi | [**um_users_s3keys_get**](docs/api/UserS3KeysApi.md#um_users_s3keys_get) | **GET** /um/users/{userId}/s3keys | List user Object storage keys |
+| UserS3KeysApi | [**um_users_s3keys_post**](docs/api/UserS3KeysApi.md#um_users_s3keys_post) | **POST** /um/users/{userId}/s3keys | Create user Object storage keys |
+| UserS3KeysApi | [**um_users_s3keys_put**](docs/api/UserS3KeysApi.md#um_users_s3keys_put) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a Object storage Key by Key ID |
+| UserS3KeysApi | [**um_users_s3ssourl_get**](docs/api/UserS3KeysApi.md#um_users_s3ssourl_get) | **GET** /um/users/{userId}/s3ssourl | Retrieve Object storage single sign-on URLs |
 | UserManagementApi | [**um_groups_delete**](docs/api/UserManagementApi.md#um_groups_delete) | **DELETE** /um/groups/{groupId} | Delete groups |
 | UserManagementApi | [**um_groups_find_by_id**](docs/api/UserManagementApi.md#um_groups_find_by_id) | **GET** /um/groups/{groupId} | Retrieve groups |
 | UserManagementApi | [**um_groups_get**](docs/api/UserManagementApi.md#um_groups_get) | **GET** /um/groups | List all groups |
@@ -439,10 +469,16 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
  - [ContractProperties](docs/models/ContractProperties)
  - [Contracts](docs/models/Contracts)
  - [CpuArchitectureProperties](docs/models/CpuArchitectureProperties)
+ - [CreateSnapshot](docs/models/CreateSnapshot)
+ - [CreateSnapshotProperties](docs/models/CreateSnapshotProperties)
  - [DataCenterEntities](docs/models/DataCenterEntities)
  - [Datacenter](docs/models/Datacenter)
  - [DatacenterElementMetadata](docs/models/DatacenterElementMetadata)
+ - [DatacenterPost](docs/models/DatacenterPost)
  - [DatacenterProperties](docs/models/DatacenterProperties)
+ - [DatacenterPropertiesPost](docs/models/DatacenterPropertiesPost)
+ - [DatacenterPropertiesPut](docs/models/DatacenterPropertiesPut)
+ - [DatacenterPut](docs/models/DatacenterPut)
  - [Datacenters](docs/models/Datacenters)
  - [Error](docs/models/Error)
  - [ErrorMessage](docs/models/ErrorMessage)
@@ -491,6 +527,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
  - [KubernetesNodePoolProperties](docs/models/KubernetesNodePoolProperties)
  - [KubernetesNodePoolPropertiesForPost](docs/models/KubernetesNodePoolPropertiesForPost)
  - [KubernetesNodePoolPropertiesForPut](docs/models/KubernetesNodePoolPropertiesForPut)
+ - [KubernetesNodePoolServerType](docs/models/KubernetesNodePoolServerType)
  - [KubernetesNodePools](docs/models/KubernetesNodePools)
  - [KubernetesNodeProperties](docs/models/KubernetesNodeProperties)
  - [KubernetesNodes](docs/models/KubernetesNodes)
@@ -503,10 +540,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
  - [Lan](docs/models/Lan)
  - [LanEntities](docs/models/LanEntities)
  - [LanNics](docs/models/LanNics)
- - [LanPost](docs/models/LanPost)
  - [LanProperties](docs/models/LanProperties)
- - [LanPropertiesPost](docs/models/LanPropertiesPost)
  - [Lans](docs/models/Lans)
+ - [ListOfIds](docs/models/ListOfIds)
  - [Loadbalancer](docs/models/Loadbalancer)
  - [LoadbalancerEntities](docs/models/LoadbalancerEntities)
  - [LoadbalancerProperties](docs/models/LoadbalancerProperties)
@@ -565,12 +601,20 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
  - [ResourceReference](docs/models/ResourceReference)
  - [Resources](docs/models/Resources)
  - [ResourcesUsers](docs/models/ResourcesUsers)
+ - [RestoreSnapshot](docs/models/RestoreSnapshot)
+ - [RestoreSnapshotProperties](docs/models/RestoreSnapshotProperties)
  - [S3Bucket](docs/models/S3Bucket)
  - [S3Key](docs/models/S3Key)
  - [S3KeyMetadata](docs/models/S3KeyMetadata)
  - [S3KeyProperties](docs/models/S3KeyProperties)
  - [S3Keys](docs/models/S3Keys)
  - [S3ObjectStorageSSO](docs/models/S3ObjectStorageSSO)
+ - [SecurityGroup](docs/models/SecurityGroup)
+ - [SecurityGroupEntities](docs/models/SecurityGroupEntities)
+ - [SecurityGroupEntitiesRequest](docs/models/SecurityGroupEntitiesRequest)
+ - [SecurityGroupProperties](docs/models/SecurityGroupProperties)
+ - [SecurityGroupRequest](docs/models/SecurityGroupRequest)
+ - [SecurityGroups](docs/models/SecurityGroups)
  - [Server](docs/models/Server)
  - [ServerEntities](docs/models/ServerEntities)
  - [ServerProperties](docs/models/ServerProperties)
@@ -592,6 +636,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
  - [Token](docs/models/Token)
  - [Type](docs/models/Type)
  - [User](docs/models/User)
+ - [UserGroupPost](docs/models/UserGroupPost)
  - [UserMetadata](docs/models/UserMetadata)
  - [UserPost](docs/models/UserPost)
  - [UserProperties](docs/models/UserProperties)

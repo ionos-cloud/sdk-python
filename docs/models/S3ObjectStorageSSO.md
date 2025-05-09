@@ -3,6 +3,6 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **sso_url** | **str** | The S3 object storage single sign on url | [optional] [readonly]  |
+| **sso_url** | **str** | The Ionos object storage single sign on url | [optional] [readonly]  |
 
 
