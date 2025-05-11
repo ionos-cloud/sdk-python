@@ -34,7 +34,6 @@ Remove the specified Network Load Balancer from the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -93,7 +92,6 @@ Retrieve the properties of the specified Network Load Balancer within the data c
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -153,7 +151,6 @@ Delete the specified Network Load Balancer Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -214,7 +211,6 @@ Retrieve the specified Network Load Balancer Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -276,7 +272,6 @@ List all the Flow Logs for the specified Network Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -336,7 +331,6 @@ Update the properties of the specified Network Load Balancer Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -400,7 +394,6 @@ Adds a new Flow Log for the Network Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -462,7 +455,6 @@ Modify the specified Network Load Balancer Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -526,7 +518,6 @@ Delete the specified Network Load Balancer forwarding rule.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -587,7 +578,6 @@ Retrieve the specified Network Load Balance forwarding rule.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -649,7 +639,6 @@ List the forwarding rules for the specified Network Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -709,7 +698,6 @@ Update the properties of the specified Network Load Balancer forwarding rule.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -773,7 +761,6 @@ Creates a forwarding rule for the specified Network Load Balancer.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -835,7 +822,6 @@ Modify the specified Network Load Balancer forwarding rule.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -899,7 +885,6 @@ List all the Network Load Balancers within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -959,7 +944,6 @@ Update the properties of the specified Network Load Balancer within the data cen
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1021,7 +1005,6 @@ Creates a Network Load Balancer within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1081,7 +1064,6 @@ Modify the properties of the specified Network Load Balancer within the data cen
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

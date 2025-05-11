@@ -22,7 +22,6 @@ Deletes the target group specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -79,7 +78,6 @@ Retrieves the properties of the target group specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -137,7 +135,6 @@ Lists target groups.  A target group is a set of one or more registered targets.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -195,7 +192,6 @@ Updates the properties of the target group specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -255,7 +251,6 @@ Creates a target group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -313,7 +308,6 @@ Modifies the properties of the target group specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

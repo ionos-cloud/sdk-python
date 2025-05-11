@@ -11,7 +11,6 @@
 """
 
 
-from __future__ import absolute_import
 
 # import models into model package
 from ionoscloud.models.application_load_balancer import ApplicationLoadBalancer

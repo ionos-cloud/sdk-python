@@ -24,7 +24,6 @@ Create a snapshot of the specified volume within the data center; this snapshot 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -85,7 +84,6 @@ Delete the specified volume within the data center. Use with caution, the volume
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -144,7 +142,6 @@ Retrieve the properties of the specified volume within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -204,7 +201,6 @@ List all the volumes within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -264,7 +260,6 @@ Update the properties of the specified storage volume within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -326,7 +321,6 @@ Creates a storage volume within the specified data center. The volume will not b
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -386,7 +380,6 @@ Modifies the properties of the specified volume within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -448,7 +441,6 @@ Restore a snapshot for the specified volume within the data center. A snapshot i
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

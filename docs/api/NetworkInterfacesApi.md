@@ -22,7 +22,6 @@ Remove the specified NIC.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -83,7 +82,6 @@ Retrieve the properties of the specified NIC.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -145,7 +143,6 @@ List all NICs, attached to the specified server.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -207,7 +204,6 @@ Update the properties of the specified NIC.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -271,7 +267,6 @@ Adds a NIC to the specified server. The combined total of NICs and attached volu
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -333,7 +328,6 @@ Modify the properties of the specified NIC.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
