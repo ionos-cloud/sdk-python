@@ -86,7 +86,7 @@ class ServerProperties(object):
         'nic_multi_queue': 'nicMultiQueue',
     }
 
-    def __init__(self, template_uuid=None, name=None, hostname=None, cores=None, ram=None, availability_zone=None, vm_state=None, boot_cdrom=None, boot_volume=None, cpu_family=None, type=None, nic_multi_queue=False, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, template_uuid=None, name=None, hostname=None, cores=None, ram=None, availability_zone=None, vm_state=None, boot_cdrom=None, boot_volume=None, cpu_family=None, type=None, nic_multi_queue=None, local_vars_configuration=None):  # noqa: E501
         """ServerProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
