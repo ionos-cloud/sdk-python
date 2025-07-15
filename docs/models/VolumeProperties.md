@@ -13,7 +13,7 @@
 | **ssh_keys** | **list[str]** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. | [optional]  |
 | **bus** | **str** | The bus type for this volume; default is VIRTIO. | [optional]  |
 | **licence_type** | **str** | OS type for this volume. | [optional]  |
-| **application_type** | **str** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional] [default to 'UNKNOWN'] |
+| **application_type** | **str** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional]  |
 | **cpu_hot_plug** | **bool** | Hot-plug capable CPU (no reboot required). | [optional]  |
 | **ram_hot_plug** | **bool** | Hot-plug capable RAM (no reboot required). | [optional]  |
 | **nic_hot_plug** | **bool** | Hot-plug capable NIC (no reboot required). | [optional]  |

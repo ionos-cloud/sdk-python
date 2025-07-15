@@ -114,7 +114,7 @@ class SnapshotProperties(object):
         'application_type': 'applicationType',
     }
 
-    def __init__(self, name=None, description=None, location=None, size=None, sec_auth_protection=None, cpu_hot_plug=None, cpu_hot_unplug=None, ram_hot_plug=None, ram_hot_unplug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, disc_scsi_hot_plug=None, expose_serial=False, require_legacy_bios=True, disc_scsi_hot_unplug=None, licence_type=None, application_type='UNKNOWN', local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, description=None, location=None, size=None, sec_auth_protection=None, cpu_hot_plug=None, cpu_hot_unplug=None, ram_hot_plug=None, ram_hot_unplug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, disc_scsi_hot_plug=None, expose_serial=False, require_legacy_bios=True, disc_scsi_hot_unplug=None, licence_type=None, application_type=None, local_vars_configuration=None):  # noqa: E501
         """SnapshotProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()

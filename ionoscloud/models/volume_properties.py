@@ -138,7 +138,7 @@ class VolumeProperties(object):
         'boot_order': 'bootOrder',
     }
 
-    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, application_type='UNKNOWN', cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, expose_serial=False, require_legacy_bios=True, device_number=None, pci_slot=None, backupunit_id=None, user_data=None, boot_server=None, boot_order='AUTO', local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, type=None, size=None, availability_zone=None, image=None, image_password=None, image_alias=None, ssh_keys=None, bus=None, licence_type=None, application_type=None, cpu_hot_plug=None, ram_hot_plug=None, nic_hot_plug=None, nic_hot_unplug=None, disc_virtio_hot_plug=None, disc_virtio_hot_unplug=None, expose_serial=False, require_legacy_bios=True, device_number=None, pci_slot=None, backupunit_id=None, user_data=None, boot_server=None, boot_order='AUTO', local_vars_configuration=None):  # noqa: E501
         """VolumeProperties - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()

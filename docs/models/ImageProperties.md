@@ -20,7 +20,7 @@
 | **expose_serial** | **bool** | If set to &#x60;true&#x60; will expose the serial id of the disk attached to the server. If set to &#x60;false&#x60; will not expose the serial id. Some operating systems or software solutions require the serial id to be exposed to work properly. Exposing the serial  can influence licensed software (e.g. Windows) behavior | [optional] [default to False] |
 | **require_legacy_bios** | **bool** | Indicates if the image requires the legacy BIOS for compatibility or specific needs. | [optional] [default to True] |
 | **licence_type** | **str** | The OS type of this image. |  |
-| **application_type** | **str** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional] [default to 'UNKNOWN'] |
+| **application_type** | **str** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional]  |
 | **image_type** | **str** | The image type. | [optional] [readonly]  |
 | **public** | **bool** | Indicates whether the image is part of a public repository. | [optional] [readonly]  |
 | **image_aliases** | **list[str]** | List of image aliases mapped for this image | [optional] [readonly]  |
