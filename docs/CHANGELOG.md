@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## 6.1.13
+### Changes
+- reduce default wait time for wait_for_completion and wait_for, and added a max wait time parameter
+
+###Fixes
+- check that the body is not None before applying decode #8 
+
+## 6.1.12
+### Changes
+Changes
+- remove default value for application_type in image, snapshot and volume models
+
+## 6.1.11
+### Fixes:
+- Removed default value from nicMultiQueue
+
 ## 6.1.9
 ### Features:
 - Added `proxy_protocol` property to `NetworkLoadBalancerForwardingRuleTarget`, `NetworkLoadBalancerForwardingRuleTarget` and `TargetGroupTarget`
