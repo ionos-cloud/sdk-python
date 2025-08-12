@@ -113,7 +113,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'ionos-cloud-sdk-python/6.1.12'
+        self.user_agent = 'ionos-cloud-sdk-python/6.1.13'
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
@@ -266,7 +266,7 @@ class ApiClient(object):
                     time.sleep(config.wait_time)
 
         except ApiException as e:
-            e.body = e.body.decode('utf-8') if six.PY3 else e.body
+            e.body = e.body.decode('utf-8') if e.body is not None and six.PY3 else e.body
             e.url = url
             raise e
 
@@ -770,7 +770,7 @@ class ApiClient(object):
                 instance = self.__deserialize(data, klass_name)
         return instance
 
-    def wait_for_completion(self, request_id, timeout=3600, initial_wait=5, scaleup=10):
+    def wait_for_completion(self, request_id, timeout=3600, initial_wait=1, scaleup=10, max_wait=60):
         """
         Poll resource request status until resource is provisioned.
 
@@ -785,6 +785,9 @@ class ApiClient(object):
 
         :param      scaleup: Double polling interval every scaleup steps, which will be doubled.
         :type       scaleup: ``int``
+
+        :param      max_wait: Maximum polling interval in seconds.
+        :type       max_wait: ``int``
 
         """
         if not request_id:
@@ -812,7 +815,7 @@ class ApiClient(object):
                     request_id=request_id
                 )
 
-            if current_time > next_increase:
+            if wait_period < max_wait and current_time > next_increase:
                 wait_period *= 2
                 next_increase = time.time() + wait_period * scaleup
                 scaleup *= 2
@@ -822,7 +825,7 @@ class ApiClient(object):
             time.sleep(wait_period)
 
     @staticmethod
-    def wait_for(fn_check, fn_request, timeout=3600, initial_wait=5, scaleup=10, console_print=None):
+    def wait_for(fn_check, fn_request, timeout=3600, initial_wait=1, scaleup=10, max_wait=60, console_print=None):
         """
         Poll resource request status until resource is provisioned.
 
@@ -840,6 +843,9 @@ class ApiClient(object):
 
         :param      scaleup: Double polling interval every scaleup steps, which will be doubled.
         :type       scaleup: ``int``
+
+        :param      max_wait: Maximum polling interval in seconds.
+        :type       max_wait: ``int``
 
         """
         logger = logging.getLogger(__name__)
@@ -868,7 +874,7 @@ class ApiClient(object):
                 else:
                     raise ApiTimeout(message='Timeout reached')
 
-            if current_time > next_increase:
+            if wait_period < max_wait and current_time > next_increase:
                 wait_period *= 2
                 next_increase = time.time() + wait_period * scaleup
                 scaleup *= 2
