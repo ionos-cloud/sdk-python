@@ -66,6 +66,15 @@ Then import the package:
 import ionoscloud
 ```
 
+### Debian based distros
+
+Install via `apt`.
+
+```bash
+apt update
+apt install python3-ionoscloud
+```
+
 > **_NOTE:_**  The Python SDK does not support Python 2. It only supports Python >= 3.5.
 
 ### Authentication
