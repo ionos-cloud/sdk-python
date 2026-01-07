@@ -34,7 +34,6 @@ Remove the specified NAT Gateway from the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -93,7 +92,6 @@ Retrieve the properties of the specified NAT Gateway within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -153,7 +151,6 @@ Delete the specified NAT Gateway Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -213,7 +210,6 @@ Retrieve the specified NAT Gateway Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -274,7 +270,6 @@ List all the Flow Logs for the specified NAT Gateway.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -335,7 +330,6 @@ Update the properties of the specified NAT Gateway Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -398,7 +392,6 @@ Adds a new Flow Log to the specified NAT Gateway.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -459,7 +452,6 @@ Modify the specified NAT Gateway Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -522,7 +514,6 @@ List all NAT Gateways within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -580,7 +571,6 @@ Update the properties of the specified NAT Gateway within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -642,7 +632,6 @@ Creates a NAT Gateway within the data center.  This operation is restricted to c
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -702,7 +691,6 @@ Modify the properties of the specified NAT Gateway within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -764,7 +752,6 @@ Delete the specified NAT Gateway rule.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -825,7 +812,6 @@ Retrieve the properties of the specified NAT Gateway rule.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -887,7 +873,6 @@ List all rules for the specified NAT Gateway.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -947,7 +932,6 @@ Updates the properties of the specified NAT Gateway rule.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1011,7 +995,6 @@ Creates a rule for the specified NAT Gateway.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1073,7 +1056,6 @@ Modify the specified NAT Gateway rule.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

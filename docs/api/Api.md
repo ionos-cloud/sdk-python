@@ -17,7 +17,6 @@ Retrieves the API information such as API version.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

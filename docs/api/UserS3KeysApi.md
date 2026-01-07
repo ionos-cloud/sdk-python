@@ -22,7 +22,6 @@ Delete the specified user Object storage key.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -81,7 +80,6 @@ Retrieve the specified user Object storage key. The user ID is in the response b
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -141,7 +139,6 @@ List Object storage keys by user ID. The user ID is in the response body when th
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -199,7 +196,6 @@ Create an Object storage key for the specified user. The user ID is in the respo
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -257,7 +253,6 @@ Enables or disables the specified user Object storage key.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -319,7 +314,6 @@ Retrieve Ionos Object Storage single sign-on URLs for the the specified user. Th
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

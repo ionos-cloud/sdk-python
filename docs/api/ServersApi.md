@@ -38,7 +38,6 @@ Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -99,7 +98,6 @@ Retrieves the properties of the CD-ROM attached to the specified server.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -161,7 +159,6 @@ Lists all CD-ROMs attached to the specified server.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -223,7 +220,6 @@ Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -285,7 +281,6 @@ Delete the specified server in your data center. The attached storage volumes wi
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -345,7 +340,6 @@ Retrieve information about the specified server within the data center, such as 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -405,7 +399,6 @@ List all servers within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -465,7 +458,6 @@ Update the properties of the specified server within the data center.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -527,7 +519,6 @@ Creates a server within the specified data center. You can also use this request
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -587,7 +578,6 @@ Modifies the properties of the specified server within the data center.  Startin
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -649,7 +639,6 @@ Force a hard reboot of the specified server within the data center. Don't use th
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -708,7 +697,6 @@ Retrieve a link with a JSON Web Token for accessing the server's Remote Console.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -768,7 +756,6 @@ Resumes a suspended Cube Server specified by its ID.  Since the suspended instan
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -827,7 +814,6 @@ Starts the Enterprise Server specified by its ID.  >Note that you cannot use thi
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -886,7 +872,6 @@ Stops the Enterprise Server specified by its ID.   >Note that you cannot use thi
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -945,7 +930,6 @@ Suspends the specified Cubes instance within the data center.   The instance is 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1004,7 +988,6 @@ Retrieve a JSON Web Token from the server for use in login operations (such as a
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1064,7 +1047,6 @@ Upgrades the server version.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1123,7 +1105,6 @@ Detachs the specified volume from the server.  Note that only the volume's conne
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1184,7 +1165,6 @@ Retrieves the properties of the volume attached to the specified server.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1246,7 +1226,6 @@ Lists all volumes attached to the specified server.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1308,7 +1287,6 @@ Attachs an existing storage volume to the specified server.  You can attach an e
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

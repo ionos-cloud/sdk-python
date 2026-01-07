@@ -33,7 +33,6 @@ Deletes the K8s cluster specified  by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -90,7 +89,6 @@ Retrieves the K8s cluster specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -148,7 +146,6 @@ Retrieves a list of all K8s clusters provisioned under your account.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -204,7 +201,6 @@ Retrieves the configuration file for the specified K8s cluster. You can define t
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -262,7 +258,6 @@ Deletes the K8s node pool specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -321,7 +316,6 @@ Retrieves the K8s node pool specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -381,7 +375,6 @@ Retrieves a list of K8s node pools of a cluster specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -439,7 +432,6 @@ Deletes the K8s node specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -500,7 +492,6 @@ Retrieves the K8s node specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -562,7 +553,6 @@ Retrieves the list of all K8s nodes of the specified node pool.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -622,7 +612,6 @@ Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -683,7 +672,6 @@ Creates a node pool inside the specified K8s cluster.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -743,7 +731,6 @@ Modifies the K8s node pool specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -805,7 +792,6 @@ Creates a K8s cluster provisioned under your account.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -863,7 +849,6 @@ Modifies the K8s cluster specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -923,7 +908,6 @@ Retrieves the current default K8s version to be used by the clusters and node po
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -974,7 +958,6 @@ Lists available K8s versions.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

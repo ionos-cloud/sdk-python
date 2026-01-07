@@ -22,7 +22,6 @@ Delete the specified Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -84,7 +83,6 @@ Retrieve the properties of the specified Flow Log.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -147,7 +145,6 @@ List all the Flow Logs for the specified NIC.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -210,7 +207,6 @@ Update the specified Flow Log record.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -275,7 +271,6 @@ Adds a new Flow Log for the specified NIC.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -338,7 +333,6 @@ Modify the specified Flow Log record.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

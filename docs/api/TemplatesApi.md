@@ -18,7 +18,6 @@ Retrieves the properties of the Cubes template specified by its ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -74,7 +73,6 @@ Retrieves all available templates.  Templates provide a pre-defined configuratio
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

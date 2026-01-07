@@ -21,7 +21,6 @@ Remove the specified Cross Connect. Cross connect can be deleted only if it is n
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -78,7 +77,6 @@ Retrieve a Cross Connect by the resource ID. Cross Connect ID is in the response
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -136,7 +134,6 @@ List all Private Cross-Connects. For contract owner and administrators it return
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -192,7 +189,6 @@ Update the properties of the specified Cross Connect.For non administrator users
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -252,7 +248,6 @@ Creates a Cross-Connect. Only contract owners, administrators and users with cre
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException

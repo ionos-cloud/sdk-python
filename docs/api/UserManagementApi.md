@@ -40,7 +40,6 @@ Remove the specified group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -97,7 +96,6 @@ Retrieve a group by the group ID. This value is in the response body when the gr
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -155,7 +153,6 @@ List all the available user groups.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -211,7 +208,6 @@ Create a group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -269,7 +265,6 @@ Modify the properties of the specified group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -329,7 +324,6 @@ List the resources assigned to the group, by group ID.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -387,7 +381,6 @@ Remove the specified share from the group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -446,7 +439,6 @@ Retrieve the properties of the specified group share.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -506,7 +498,6 @@ List all shares and share privileges for the specified group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -564,7 +555,6 @@ Add the specified share to the group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -626,7 +616,6 @@ Modify share permissions for the specified group. With an empty body, no updates
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -688,7 +677,6 @@ Remove the specified user from the group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -747,7 +735,6 @@ List all members of the specified user group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -805,7 +792,6 @@ Adds an existing user to the specified group.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -865,7 +851,6 @@ List all resources of the specified type.  Resource types are: {datacenter, snap
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -923,7 +908,6 @@ Retrieve a resource by the resource type and resource ID.  Resource types are: {
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -983,7 +967,6 @@ List all the available resources.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1039,7 +1022,6 @@ Delete the specified user.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1096,7 +1078,6 @@ Retrieve user properties by user ID. The user ID is in the response body when th
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1154,7 +1135,6 @@ List all the users in your account.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1212,7 +1192,6 @@ Retrieve group resources of the user by user ID. The user ID is in the response 
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1270,7 +1249,6 @@ Retrieve own resources of the user by user ID. The user ID is in the response bo
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1328,7 +1306,6 @@ Create a user.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
@@ -1386,7 +1363,6 @@ Modify the properties of the specified user.
 ### Example
 
 ```python
-from __future__ import print_function
 import time
 import ionoscloud
 from ionoscloud.rest import ApiException
